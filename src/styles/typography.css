@@ -1,0 +1,24 @@
+/*
+ * Typography scale
+ * -----------------------------------------------------------------------
+ * Per docs/03 - Design System Specification.md.
+ * Font weight utilities are provided by Tailwind directly (font-light,
+ * font-normal, font-medium, font-semibold, font-bold); this file only
+ * defines the custom scale steps not covered by Tailwind's defaults.
+ *
+ * These are intentionally minimal until real content/brand direction is
+ * confirmed — components should prefer the Heading/Text primitives in
+ * components/typography rather than raw classes.
+ */
+
+.text-display {
+  font-size: clamp(2.5rem, 4vw + 1rem, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.text-caption {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
