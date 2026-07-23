@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "siteName": "Mustafa Academy",
+    "tagline": "Success Path Mentors"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "Our Story",
+    "programs": "Programs",
+    "testimonials": "Testimonials",
+    "services": "Services",
+    "challenges": "Common Challenges",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "bookFreeSession": "Book a Free Session"
+  },
+  "hero": {
+    "eyebrow": "A simple approach that puts your child's studies at ease",
+    "heading": "Improve your child's academic achievement and performance",
+    "subheading": "We provide one-to-one tutoring to help your child excel.",
+    "ctaPrimary": "Book a Free Session",
+    "ctaSecondary": "Explore Our Programs",
+    "stats": [
+      { "value": 500, "suffix": "+", "label": "Successful Students" },
+      { "value": 98, "suffix": "%", "label": "Parent Satisfaction" },
+      { "value": 50, "suffix": "+", "label": "Specialized Tutors" }
+    ],
+          "socialProof": "Join {count} learners already growing with us",
+  "rating": {
+    "value": "4.9",
+    "count": "2,000+ reviews"
+  },
+  "achievement": {
+    "label": "Course completion rate"
+  },
+  "imageAlt": "Students collaborating in a classroom at Success path Mentors"
+  
+  },
+  "programs": {
+    "heading": "Ideal Programs",
+    "subheading": "We offer specialized learning programs tailored to every student's needs",
+    "items": [
+      { "title": "Canadian Curriculum Students", "description": "Academic support fully aligned with the Canadian curriculum." },
+      { "title": "American Curriculum Students", "description": "Academic support fully aligned with the American curriculum." },
+      { "title": "French Curriculum Students", "description": "Academic support fully aligned with the French curriculum." },
+      { "title": "Quran & Arabic Language Programs", "description": "Free programs for learning the Quran and Arabic language." },
+      { "title": "Programs for Teens Who Left School", "description": "Free, dedicated support to help teens get back on an academic path." },
+      { "title": "Specialized Programs", "description": "IELTS, TOEFL, SAT, GMAT prep, and language learning for adults." }
+    ]
+  },
+  "testimonials": {
+    "heading": "Student & Parent Testimonials",
+    "subheading": "Our goal is to walk with students every step of the way"
+  },
+  "steps": {
+    "heading": "Five simple steps toward a stronger, better future",
+    "items": [
+      { "number": 1, "title": "Personalized Learning Plan", "description": "We design a customized learning plan that fits your child's learning style and academic goals." },
+      { "number": 2, "title": "A Schedule That Fits", "description": "Once the plan is set, we arrange session times that work for both the student and the family." },
+      { "number": 3, "title": "Homework After Every Session", "description": "We give simple, purposeful homework after each lesson to reinforce learning, with follow-up and correction alongside the student." },
+      { "number": 4, "title": "Regular Progress Reports", "description": "We send detailed weekly reports on your child's progress, with recommendations for continuous improvement." },
+      { "number": 5, "title": "Flexible Scheduling", "description": "We offer times that fit your schedule and your child's, so you can arrange sessions easily without stress." }
+    ]
+  },
+  "services": {
+    "heading": "At Mustafa Academy",
+    "subheading": "We provide a comprehensive range of services to support the student's learning journey",
+    "items": [
+      { "title": "Private 1-on-1 Online Sessions", "description": "Every student gets a private session with a specialized tutor who explains at their pace and follows through step by step to the best results." },
+      { "title": "American & Canadian Curriculum", "description": "We explain the curriculum in a way that helps students understand ideas from multiple angles, preparing them for any exam format or assessment change without stress." },
+      { "title": "Detailed Reports", "description": "We provide clear, simple reports showing your child's real level — what they're excelling at and what needs focus — with an improvement plan you can follow with confidence." },
+      { "title": "Homework After Every Session", "description": "Every session is followed by simple homework to reinforce understanding, with follow-up and correction to help the student improve session after session." },
+      { "title": "Exam Preparation", "description": "We prepare students for exams intelligently, with practical training on different question formats and understanding that helps them walk into exams confident, not confused." },
+      { "title": "Flexible Scheduling", "description": "We offer times that fit your schedule and your child's, so you can arrange sessions easily without stress." }
+    ]
+  },
+  "challenges": {
+    "heading": "Are you facing these challenges with your child?",
+    "subheading": "We understand your concern... and we have the solution",
+    "watchVideo": "Watch Video",
+    "items": [
+      { "title": "Struggling to understand homework?", "description": "There's too much homework and it's hard to follow, and they need someone to review it before exams." },
+      { "title": "No results despite private lessons?", "description": "You've paid a lot before, but your child's improvement isn't clear." },
+      { "title": "Is your child distracted and unable to focus?", "description": "Can't complete their studying or focus for long periods, which is affecting their academic level." }
+    ]
+  },
+  "pricing": {
+    "heading": "Pricing Plans",
+    "note": "* For inquiries, please contact us via WhatsApp",
+    "cta": "Book a Trial Session",
+    "perMonth": "/month",
+    "plans": [
+      {
+        "grade": "Grades 1-9",
+        "price": 110,
+        "features": ["Private 1:1 online session", "Weekly session", "1-hour session", "4 sessions per month", "Special sibling discount", "Homework after every session", "Regular reports"]
+      },
+      {
+        "grade": "Grades 10-12",
+        "price": 120,
+        "features": ["Private 1:1 online session", "Weekly session", "1-hour session", "4 sessions per month", "Special sibling discount", "Homework after each session", "Regular reports"]
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Frequently Asked Questions",
+    "subheading": "Answers to the most common questions parents ask about our educational services",
+    "items": [
+      { "question": "Can I change my child's tutor?", "answer": "" },
+      { "question": "Can I reschedule or cancel a session?", "answer": "" },
+      { "question": "What happens after I book a demo?", "answer": "" },
+      { "question": "Do you offer a money-back guarantee?", "answer": "" }
+    ],
+    "stillHaveQuestions": "Didn't find your answer?",
+    "supportText": "Reach out to us directly and we'll respond within a few hours. Our team is ready to help.",
+    "contactUs": "Contact Us"
+  },
+  "trustBadges": {
+    "moneyBack": "Money-Back Guarantee",
+    "fastReply": "Fast Reply",
+    "contactUs": "Contact Us"
+  },
+  "contact": {
+    "heading": "Contact Us",
+    "subheading": "If you have questions about your child's level or want to start with an assessment session, leave your details in the form and we'll reach out soon. The Mustafa Academy team is ready to answer every question and guide you to the right plan for your child, step by step.",
+    "form": {
+      "parentName": "Parent's Name",
+      "whatsapp": "WhatsApp Number",
+      "email": "Email Address",
+      "childAge": "Child's Age",
+      "country": "Country",
+      "countryOptions": ["United States", "Canada"],
+      "state": "State / Province",
+      "subject": "Subject You Need Help With",
+      "subjectOptions": ["English", "French", "Math", "Physics", "Science", "Chemistry", "Biology", "Other Subject"],
+      "teachingLanguage": "Preferred Teaching Language",
+      "teachingLanguageOptions": ["English", "French"],
+      "notes": "Write any notes here...",
+      "submit": "Submit"
+    }
+  },
+  "closingCta": {
+    "heading": "Together, We Build Success",
+    "subheading": "Don't put off a decision that could change your child's level for the better",
+    "cta": "Enroll Your Child Now"
+  },
+  "footer": {
+    "description": "Mustafa Academy is a specialized educational platform offering online private tutoring and academic support for students from grade 1 through grade 12, aligned with the Canadian and American curricula.",
+    "followUs": "Follow us on social media",
+    "quickLinks": "Quick Links",
+    "subjectsOffered": "Subjects We Cover",
+    "subjects": ["Mathematics", "English", "Science", "French"],
+    "gradeRange": "Grade 1 – Grade 12",
+    "rightsReserved": "All rights reserved"
+  }
+}
