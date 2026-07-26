@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { ButtonLink } from '@/components/ui/button';
+import { ButtonLink } from '../ui/button';
 import { LocaleSwitcher } from './locale-switcher';
 import type { SubjectCategory } from './subjects-menu';
 

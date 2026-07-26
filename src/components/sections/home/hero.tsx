@@ -1,6 +1,6 @@
 // components/sections/hero.tsx  — Server Component
 import { getTranslations } from 'next-intl/server';
-import { ButtonLink } from '@/components/ui/button';
+import { ButtonLink } from '../../ui/button';
 import { Container } from '@/components/ui/container';
 import { Reveal } from '@/components/motion/reveal';
 import { StatCounter } from './stat-counter';

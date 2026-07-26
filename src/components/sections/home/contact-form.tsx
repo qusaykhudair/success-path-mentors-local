@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 import { CheckCircle2 } from 'lucide-react';
 import { contactFormSchema, type ContactFormValues } from '@/lib/validations/contact';
 import { submitLead } from '@/app/[locale]/actions/submit-lead';
-import { Button } from '@/components/ui/button';
+import { Button } from '../../ui/button';
 import { cn } from '@/lib/utils';
 
 const inputStyles =

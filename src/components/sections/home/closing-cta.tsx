@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { buttonVariants } from '@/components/ui/button';
+import { buttonVariants } from '../../ui/button';
 import { Section } from '@/components/ui/section';
 
 export async function ClosingCta() {
