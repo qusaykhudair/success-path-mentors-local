@@ -1,30 +1,94 @@
-import { setRequestLocale } from "next-intl/server";
-import { getTranslations } from "next-intl/server";
-import type { Locale } from "@/i18n/routing";
-import { buildMetadata } from "@/shared/seo/build-metadata";
+import type { Metadata } from 'next';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { routing } from '@/i18n/routing';
+import { SITE_URL } from '@/lib/constants';
+import { Hero } from '@/components/sections/home/hero';
+import { Programs } from '@/components/sections/home/programs';
+import { Testimonials } from '@/components/sections/home/testimonials';
+import { Steps } from '@/components/sections/home/steps';
+import { Services } from '@/components/sections/home/services';
+import { Challenges } from '@/components/sections/home/challenges';
+import { Pricing } from '@/components/sections/home/pricing';
+import { Faq } from '@/components/sections/home/faq';
+import {
+  SITE,
+  ORGANIZATION,
+} from '@/lib/constants';
 
-import { HeroSection } from "@/features/home/sections/HeroSection";
-import { HomeStats } from "@/features/home/sections/HomeStats";
-import { SubjectsOverview } from "@/features/home/sections/SubjectsOverview";
-import { ServicesOverview } from "@/features/home/sections/ServicesOverview";
-import { WhyChooseUs } from "@/features/about/sections/WhyChooseUs";
-import { TestimonialsCarousel } from "@/features/home/sections/TestimonialsCarousel";
-import { HomeCta } from "@/features/home/sections/HomeCta";
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
-}) {
+}): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "metadata" });
-  
-  return buildMetadata({
-    title: t("defaultTitle"),
-    description: t("defaultDescription"),
-    path: "/",
-    locale: locale as Locale,
-  });
+
+
+  const url = `${SITE_URL}/${locale}`;
+const ogImage = `${SITE_URL}${SITE.ogImage}`;
+const tMeta = await getTranslations({
+  locale,
+  namespace: 'meta',
+});
+
+const tSeo = await getTranslations({
+  locale,
+  namespace: 'seo.home',
+});
+
+const title = tSeo('title');
+const description = tSeo('description');
+const keywords = tSeo('keywords')
+  .split(',')
+  .map((keyword) => keyword.trim());
+
+return {
+  title,
+  description,
+
+  keywords,
+
+  alternates: {
+    canonical: url,
+    languages: {
+      ...Object.fromEntries(
+        routing.locales.map((l) => [l, `${SITE_URL}/${l}`])
+      ),
+      'x-default': `${SITE_URL}/${routing.defaultLocale}`,
+    },
+  },
+
+  openGraph: {
+    title,
+    description,
+    url,
+    siteName: tMeta('siteName'),
+    locale: locale === 'ar' ? 'ar_EG' : 'en_US',
+    type: 'website',
+
+    images: [
+      {
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: title,
+      },
+    ],
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+
+    title,
+
+    description,
+
+    images: [ogImage],
+  },
+};
 }
 
 export default async function HomePage({
@@ -33,17 +97,43 @@ export default async function HomePage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  setRequestLocale(locale as Locale);
+  setRequestLocale(locale);
+
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'EducationalOrganization',
+
+  name: ORGANIZATION.name,
+
+  legalName: ORGANIZATION.legalName,
+
+  logo: ORGANIZATION.logo,
+
+  description: SITE.description,
+
+  sameAs: ORGANIZATION.sameAs,
+};
 
   return (
     <>
-      <HeroSection />
-      <HomeStats />
-      <SubjectsOverview />
-      <ServicesOverview />
-      <WhyChooseUs />
-      <TestimonialsCarousel />
-      <HomeCta />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main id="main-content">
+        <Hero />
+        <Programs />
+        <Testimonials />
+        <Steps />
+        <Services />
+        <Challenges />
+        <Pricing />
+        <Faq />
+        {/* <Contact /> */}
+          {/* <TrustBadges /> */}
+        {/* <ClosingCta /> */}
+      </main>
     </>
   );
 }

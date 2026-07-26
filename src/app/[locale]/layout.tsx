@@ -1,77 +1,57 @@
-import type { Metadata, Viewport } from "next";
-import { notFound } from "next/navigation";
-import { hasLocale } from "next-intl";
-import { getMessages, getTimeZone, setRequestLocale } from "next-intl/server";
-import { routing, type Locale } from "@/i18n/routing";
-import { getDirection } from "@/i18n/direction";
-import { AppProviders } from "@/providers/AppProviders";
-import { MainLayout } from "@/layouts/MainLayout";
-import { JsonLd } from "@/components/common/JsonLd";
-import { organizationSchema, websiteSchema } from "@/shared/seo/json-ld";
-import { siteConfig } from "@/config/site";
-import { seoConfig } from "@/config/seo";
-import "@fontsource/tajawal/300.css";
-import "@fontsource/tajawal/400.css";
-import "@fontsource/tajawal/500.css";
-import "@fontsource/tajawal/700.css";
-import "@/styles/globals.css";
+import type { Metadata } from 'next';
+import { Tajawal } from 'next/font/google';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import type { ReactNode } from 'react';
+import { routing, localeDirection, type Locale } from '@/i18n/routing';
+import { SITE_URL, ORGANIZATION } from '@/lib/constants';
+import { SiteHeader } from '@/components/layout/site-header';
+import { SiteFooter } from '@/components/layout/site-footer';
+import '../globals.css';
 
-/**
- * Font
- * -----------------------------------------------------------------------
- * Per docs/Overview.md the stack calls for `next/font/local` (i.e. a
- * self-hosted Tajawal), and no font files were included in the supplied
- * documentation. `next/font/google` was tried first but requires a live
- * fetch to fonts.googleapis.com at build time, which fails in offline/
- * sandboxed environments — the exact opposite of "local".
- *
- * This uses `@fontsource/tajawal` instead: it ships the same Tajawal
- * woff2 files self-hosted in node_modules, with correct per-weight,
- * per-subset (latin/arabic) unicode-range declarations already authored
- * — something next/font/local's API can't replicate when combining two
- * subsets under one variable. True zero-network self-hosting.
- */
+const tajawal = Tajawal({
+  subsets: ['arabic', 'latin'],
+  weight: ['300', '400', '500', '700', '800', '900'],
+  variable: '--font-tajawal',
+  display: 'swap',
+});
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f6f7f9" },
-    { media: "(prefers-color-scheme: dark)", color: "#16213e" },
-  ],
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'meta' });
 
-/**
- * Site-wide metadata defaults. Per docs/04 - SEO Strategy Specification.md
- * every *page* must still override title/description/canonical via
- * src/shared/seo/build-metadata.ts — this is only the global fallback
- * (icons, manifest, OG/Twitter/robots defaults) applied before that.
- */
-export async function generateMetadata(): Promise<Metadata> {
+  const languages = Object.fromEntries(
+    routing.locales.map((l) => [l, `${SITE_URL}/${l}`])
+  );
+
   return {
-    metadataBase: new URL(siteConfig.url),
+    metadataBase: new URL(SITE_URL),
     title: {
-      default: seoConfig.defaultTitle,
-      template: seoConfig.titleTemplate,
+      default: `${t('siteName')} | ${t('tagline')}`,
+      template: `%s | ${t('siteName')}`,
     },
-    description: seoConfig.defaultDescription,
-    manifest: "/manifest.webmanifest",
-    icons: {
-      icon: "/favicon.ico",
+    alternates: {
+      canonical: `${SITE_URL}/${locale}`,
+      languages: { ...languages, 'x-default': `${SITE_URL}/${routing.defaultLocale}` },
     },
     openGraph: {
-      type: seoConfig.ogType,
-      siteName: siteConfig.name,
-      images: [seoConfig.ogImage],
+      siteName: t('siteName'),
+      locale: locale === 'ar' ? 'ar_EG' : 'en_US',
+      type: 'website',
+      url: `${SITE_URL}/${locale}`,
     },
     twitter: {
-      card: seoConfig.twitterCard,
+      card: 'summary_large_image',
     },
-    robots: seoConfig.robots,
   };
 }
 
@@ -79,31 +59,61 @@ export default async function LocaleLayout({
   children,
   params,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
 
-  if (!hasLocale(routing.locales, locale)) {
+  if (!(routing.locales as readonly string[]).includes(locale)) {
     notFound();
   }
 
-  // Enables static rendering for this locale (next-intl requirement).
+  // Enables static rendering for this locale's server components
   setRequestLocale(locale);
 
   const messages = await getMessages();
-  const timeZone = await getTimeZone();
+  const dir = localeDirection[locale as Locale];
+
+  const organizationJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'EducationalOrganization',
+    name: ORGANIZATION.name,
+    legalName: ORGANIZATION.legalName,
+    url: `${SITE_URL}/${locale}`,
+    logo: ORGANIZATION.logo,
+    sameAs: ORGANIZATION.sameAs,
+  };
+
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: ORGANIZATION.name,
+    url: `${SITE_URL}/${locale}`,
+    inLanguage: locale,
+  };
 
   return (
-    <html lang={locale} dir={getDirection(locale as Locale)} suppressHydrationWarning>
-      <body className="font-sans antialiased">
-        {/* Site-wide structured data — page-specific schemas (FAQPage,
-            BreadcrumbList, Article, etc.) are added per-page in later
-            phases via the same <JsonLd> component. */}
-        <JsonLd data={[organizationSchema(), websiteSchema()]} />
-        <AppProviders locale={locale} timeZone={timeZone} messages={messages}>
-          <MainLayout>{children}</MainLayout>
-        </AppProviders>
+    <html lang={locale} dir={dir} className={tajawal.variable}>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <NextIntlClientProvider messages={messages}>
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-4 focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-white"
+          >
+            Skip to content
+          </a>
+          <SiteHeader />
+          <main id="main-content">{children}</main>
+          <SiteFooter />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

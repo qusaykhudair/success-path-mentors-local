@@ -1,53 +1,69 @@
-import type { MetadataRoute } from "next";
-import { siteConfig } from "@/config/site";
-import { routing } from "@/i18n/routing";
-import { subjects } from "@/data/subjects";
-import { services } from "@/data/services";
-import { locations } from "@/data/locations";
+import type { MetadataRoute } from 'next';
+import { routing } from '@/i18n/routing';
+import { SITE_URL } from '@/lib/constants';
 
 /**
- * Per docs/04 - SEO Strategy Specification.md: sitemap must include all
- * static pages plus programmatic subject/service/location/blog pages,
- * for every supported locale, and must exclude 404/private routes.
+ * -----------------------------------------------------------------------------
+ * Static sitemap routes
+ * -----------------------------------------------------------------------------
  *
- * Subject/service/location entries are generated from the data layer
- * (src/data/*), so this file needs no changes once that content is
- * populated in later phases — it will simply be empty until then.
+ * Add all public routes here as the project grows.
+ *
+ * Future sections:
+ *
+ * Services
+ *  - /about
+ *  - /contact
+ *  - /our-tutors
+ *  - /pricing
+ *
+ * Subjects
+ *  - /math-tutoring
+ *  - /english-tutoring
+ *  - /science-tutoring
+ *  - /french-tutoring
+ *
+ * Grade Levels
+ *  - /elementary
+ *  - /middle-school
+ *  - /high-school
+ *
+ * Service Areas
+ *  - /toronto
+ *  - /milton
+ *  - /gta
+ *  - /new-york
+ *
+ * Resources
+ *  - /blog
+ *  - /faq
+ *  - /success-stories
+ *
+ * NOTE:
+ * Dynamic content (Blog, Articles, Tutors, Programs...)
+ * should eventually be generated automatically from the database
+ * or CMS instead of being hardcoded.
+ * -----------------------------------------------------------------------------
  */
 
 const staticPaths = [
-  "",
-  "/about",
-  "/subjects",
-  "/services",
-  "/locations",
-  "/blog",
-  "/faq",
-  "/contact",
-  "/become-tutor",
-  "/privacy",
-  "/terms",
+  '',
 ];
 
-function localizedEntries(path: string): MetadataRoute.Sitemap {
-  return routing.locales.map((locale) => ({
-    url: `${siteConfig.url}/${locale}${path}`,
+export default function sitemap(): MetadataRoute.Sitemap {
+  return staticPaths.map((path) => ({
+    url: `${SITE_URL}/${routing.defaultLocale}${path}`,
     lastModified: new Date(),
+    changeFrequency: path === '' ? 'weekly' : 'monthly',
+    priority: path === '' ? 1.0 : 0.7,
+
     alternates: {
       languages: Object.fromEntries(
-        routing.locales.map((l) => [l, `${siteConfig.url}/${l}${path}`]),
+        routing.locales.map((locale) => [
+          locale,
+          `${SITE_URL}/${locale}${path}`,
+        ])
       ),
     },
   }));
-}
-
-export default function sitemap(): MetadataRoute.Sitemap {
-  const staticEntries = staticPaths.flatMap(localizedEntries);
-  const subjectEntries = subjects.flatMap((s) => localizedEntries(`/subjects/${s.slug}`));
-  const serviceEntries = services.flatMap((s) => localizedEntries(`/services/${s.slug}`));
-  const locationEntries = locations.flatMap((l) =>
-    localizedEntries(`/locations/${l.slug}`),
-  );
-
-  return [...staticEntries, ...subjectEntries, ...serviceEntries, ...locationEntries];
 }

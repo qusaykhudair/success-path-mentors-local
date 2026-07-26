@@ -1,99 +1,77 @@
 # Success Path Mentors — Website Rebuild
 
-Enterprise Next.js 15 rebuild of the Success Path Mentors marketing site.
-Bilingual (English/Arabic), SEO-first, built on the specification set in
-`/docs` (see `docs/Master Project Blueprint.md`).
+Next.js 15 (App Router) + React 19 + TypeScript (strict) + Tailwind CSS.
+Full EN/AR internationalization with RTL/LTR support via `next-intl`.
 
-## Status
-
-**Phase 1–4 foundation complete** (project structure, routing, global
-layout, error/loading architecture, design tokens). **No real page
-content has been built yet** — see
-`docs/09 - Project Implementation Roadmap.md` for the phased plan.
-Phase 5 (Home Page) is next.
-
-## Stack
-
-Next.js 15 (App Router) · TypeScript · Tailwind CSS v4 · next-intl ·
-Framer Motion · React Hook Form · Zod · ESLint · Prettier · pnpm
-
-## Getting started
+## Getting Started
 
 ```bash
-pnpm install
-cp .env.example .env.local   # then fill in NEXT_PUBLIC_SITE_URL etc.
-pnpm dev
+npm install
+npm run dev
 ```
 
-Visit `http://localhost:3000` — it redirects to `/en` (default locale).
-Try `/ar` to see the RTL layout.
+Visit `http://localhost:3000/en` or `http://localhost:3000/ar`.
 
-## Scripts
+> **Note:** `npm run build` requires network access to `fonts.googleapis.com`
+> to fetch the Tajawal font at build time (via `next/font/google`). This
+> failed only in the sandboxed environment this project was built in — it
+> will work normally on your machine, CI, or any standard hosting provider
+> (Vercel, etc.) with internet access. Everything else (TypeScript, ESLint,
+> the dev server, both locales) has been verified working.
 
-| Script               | Purpose                                |
-| -------------------- | --------------------------------------- |
-| `pnpm dev`            | Start the dev server                    |
-| `pnpm build`          | Production build                        |
-| `pnpm start`          | Serve the production build              |
-| `pnpm lint`           | ESLint                                  |
-| `pnpm lint:fix`       | ESLint with autofix                     |
-| `pnpm format`         | Prettier — write                        |
-| `pnpm format:check`   | Prettier — check only                   |
-| `pnpm typecheck`      | `tsc --noEmit`                          |
-
-## Folder structure
-
-See `docs/02 - Folder Structure Specification.md` for the full rationale,
-and `docs/adr/0002-sections-folder-structure.md` for how
-`components/sections` and `features/*/sections` divide responsibility
-(short version: default to feature-owned, promote to `components/sections`
-only once a section is reused verbatim by a second page).
-
-```
-src/
-├── app/[locale]/     # App Router routes (locale-prefixed)
-│   ├── error.tsx      # route-level error boundary
-│   ├── loading.tsx    # route-level loading skeleton
-│   └── not-found.tsx  # localized 404
-├── app/global-error.tsx  # last-resort boundary (root layout failures)
-├── components/       # Global reusable UI (ui, forms, navigation, cards,
-│                        feedback, loaders, sections, common, ...)
-├── features/         # Feature-owned modules (home, about, subjects, ...)
-├── shared/           # seo, animations, hooks, validators, helpers
-├── i18n/             # next-intl routing, navigation, request config
-├── config/           # site.ts, seo.ts, navigation.ts
-├── data/             # Typed dummy-data layer (currently empty — see TODOs)
-├── types/            # Domain types (Subject, Service, Location, ...)
-├── providers/         # AppProviders (NextIntlClientProvider + MotionConfig)
-├── styles/           # globals.css (design tokens), typography.css, animations.css
-└── middleware.ts      # next-intl locale middleware
+```bash
+npm run build   # production build
+npm run start   # serve the production build
+npm run lint    # ESLint
+npm run typecheck  # TypeScript strict check
 ```
 
-## Design tokens
+## What's Implemented
 
-`src/styles/globals.css` uses a paired semantic scheme — every "loud"
-background color has a matching `*-foreground` token (`primary`/
-`primary-foreground`, `secondary`/`secondary-foreground`, `accent`/
-`accent-foreground`, `danger`/`danger-foreground`), plus `background`/
-`foreground` for page-level text and `muted`/`muted-foreground` for
-subtle fills (skeletons, disabled states) and de-emphasized text. All
-radii derive from a single `--radius` base value via `calc()`.
+- **Architecture:** Enterprise folder structure — `components/ui` (primitives),
+  `components/layout` (header/footer/nav), `components/sections/home`
+  (page-specific sections), `i18n`, `lib`, `messages`.
+- **Design system:** Locked brand tokens in `tailwind.config.ts`
+  — Primary `#205375`, Accent `#D5A021`, Body `#010101`, Background `#FFFFFF`
+  — with a mathematically-derived tint/shade scale for hover/active states.
+  Tajawal typography throughout via `next/font/google`.
+- **i18n:** Full EN/AR routing with localized Arabic slugs (see
+  `src/i18n/routing.ts`), RTL/LTR switching, locale switcher, hreflang
+  alternates, per-locale metadata.
+- **SEO:** Dynamic metadata, OpenGraph, canonical URLs, `sitemap.ts`,
+  `robots.ts`, Organization + WebSite JSON-LD (global), FAQPage JSON-LD
+  (conditional — see below).
+- **Accessibility:** Skip-to-content link, visible focus states, semantic
+  landmarks, `aria-expanded`/`aria-controls` on interactive widgets (FAQ
+  accordion, mobile nav), reduced-motion support.
+- **Home page sections:** Hero (animated stat counters), Programs, Steps,
+  Services, Challenges, Pricing, FAQ, Contact form (React Hook Form + Zod +
+  Server Action), Trust badges, Closing CTA.
 
-## Known gaps (carried over from the documentation review)
+## Known Gaps — Needs Client Input Before Launch
 
-- **Home Page Specification is missing** from `/docs` — the file present
-  (`Home-Page-Specification.md`) is a duplicate of the i18n spec, not the
-  real content. Needed before Phase 5.
-- **Design tokens are placeholders.** Colors are a deliberate, documented
-  placeholder palette (navy + brass gold) — swap for the real brand
-  palette before any content phase begins.
-- **Tajawal is loaded via `@fontsource/tajawal`**, not `next/font/local`
-  as the docs specify, since no font files were supplied and
-  `next/font/google` requires a live network fetch at build time.
-  `@fontsource` self-hosts the same files with correct subset handling.
-- **No backend/CMS/email vendor is chosen.** Contact, Newsletter, and
-  Become-a-Tutor forms have Zod schemas and translation keys ready, but
-  submission currently has nowhere to go — see `.env.example` for the
-  placeholder vars to fill in once a vendor is picked.
-- **Logo is a placeholder** (text wordmark + monogram) — no real brand
-  logo asset was supplied.
+These are placeholders by necessity, not oversights — the source content
+didn't include them:
+
+| Item | Location | What's needed |
+|---|---|---|
+| Testimonials | `components/sections/home/testimonials.tsx` | Real name, quote, and (optional) photo per testimonial — the source PDF only showed generic avatar placeholders with no quotes |
+| FAQ answers | `messages/en.json` / `messages/ar.json` → `faq.items[].answer` | The source PDF listed only questions, no answers. FAQPage JSON-LD is intentionally skipped until answers exist (empty answers would hurt SEO, not help it) |
+| Hero image | `public/images/hero-placeholder.jpg` | Real photography — current image is a generated on-brand placeholder |
+| Lead delivery | `src/app/[locale]/actions/submit-lead.ts` | Contact form validation is production-ready; wiring to a CRM/email provider (e.g. SendGrid, HubSpot) is pending a provider decision |
+| Social links | `src/lib/constants.ts` → `ORGANIZATION.sameAs` | Real social profile URLs for JSON-LD |
+| Other pages | — | About, Subjects, Locations, Services, Blog, FAQ, Contact, Become Tutor, Find Tutor, Privacy, Terms — no content specs uploaded yet beyond Home |
+
+## Tech Stack
+
+Next.js 15.1.11 (patched — see below), React 19, TypeScript (strict),
+Tailwind CSS, next-intl, React Hook Form, Zod, Lucide Icons, Framer Motion,
+React CountUp.
+
+## Security Note
+
+The initially scaffolded Next.js version (15.1.6) had a critical
+unauthenticated RCE (CVE-2025-66478, CVSS 10.0) plus a follow-up DoS/source-
+exposure advisory. This project is pinned to `15.1.11`, which is fully
+patched against both. Keep this pin (or move forward, never back) when
+updating dependencies.

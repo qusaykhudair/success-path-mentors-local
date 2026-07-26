@@ -1,362 +1,396 @@
 {
-  "metadata": {
-    "siteName": "Success Path Mentors",
-    "defaultTitle": "Success Path Mentors | Private Tutoring",
-    "defaultDescription": "Success Path Mentors provides expert private tutoring in math, science, languages, and more, online and in-home."
+  "seo": {
+    "home": {
+      "title": "Online Tutoring & Academic Mentorship",
+      "description": "Professional online tutoring platform helping students achieve academic excellence.",
+      "keywords": "online tutoring, math tutoring, science tutoring"
+    }
   },
-  "navigation": {
+  "meta": {
+    "siteName": "Mustafa Academy",
+    "tagline": "Success Path Mentors"
+  },
+  "nav": {
     "home": "Home",
-    "about": "About",
-    "subjects": "Subjects",
+    "about": "Our Story",
+    "programs": "Programs",
+    "testimonials": "Testimonials",
     "services": "Services",
-    "locations": "Locations",
-    "blog": "Blog",
+    "challenges": "Common Challenges",
+    "pricing": "Pricing",
     "faq": "FAQ",
     "contact": "Contact",
-    "becomeTutor": "Become a Tutor",
-    "findTutor": "Find a Tutor",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "bookFreeSession": "Book a Free Session",
+    "whatsappBookingMessage": "Hello, I would like to purchase a free token share 🙌",
+"subjectsMenu": {
+  "trigger": "Subjects",
+  "categories": [
+    { "key": "k5", "label": "K-5 Subjects", "href": "/subjects#k5",
+      "children": [
+        { "label": "Elementary Math", "href": "/subjects#k5-math" },
+        { "label": "Phonics", "href": "/subjects#phonics" },
+        { "label": "Reading", "href": "/subjects#k5-reading" },
+        { "label": "Writing", "href": "/subjects#k5-writing" } ] },
+    { "key": "math", "label": "Math", "href": "/subjects#math",
+      "children": [
+        { "label": "All Math", "href": "/subjects#math" },
+        { "label": "Algebra", "href": "/subjects#algebra" },
+        { "label": "Calculus", "href": "/subjects#calculus" },
+        { "label": "Geometry", "href": "/subjects#geometry" },
+        { "label": "Statistics", "href": "/subjects#statistics" },
+        { "label": "Trigonometry", "href": "/subjects#trigonometry" } ] },
+    { "key": "science", "label": "Science", "href": "/subjects#science",
+      "children": [
+        { "label": "All Science", "href": "/subjects#science" },
+        { "label": "Biology", "href": "/subjects#biology" },
+        { "label": "Chemistry", "href": "/subjects#chemistry" },
+        { "label": "Physics", "href": "/subjects#physics" },
+        { "label": "Physiology", "href": "/subjects#physiology" } ] },
+    { "key": "ap", "label": "AP", "href": "/subjects#ap",
+      "children": [
+        { "label": "AP Biology", "href": "/subjects#ap-biology" },
+        { "label": "AP Calculus", "href": "/subjects#ap-calculus" },
+        { "label": "AP Chemistry", "href": "/subjects#ap-chemistry" },
+        { "label": "AP Physics", "href": "/subjects#ap-physics" },
+        { "label": "AP History", "href": "/subjects#ap-history" } ] },
+    { "key": "testprep", "label": "Test Prep", "href": "/subjects#test-prep",
+      "children": [
+        { "label": "All Test Prep", "href": "/subjects#test-prep" },
+        { "label": "SAT", "href": "/subjects#sat" },
+        { "label": "ACT", "href": "/subjects#act" },
+        { "label": "PSAT", "href": "/subjects#psat" },
+        { "label": "ISEE", "href": "/subjects#isee" } ] },
+    { "key": "gradTestPrep", "label": "Graduate Test Prep", "href": "/subjects#grad-test-prep",
+      "children": [
+        { "label": "GRE", "href": "/subjects#gre" },
+        { "label": "GMAT", "href": "/subjects#gmat" },
+        { "label": "LSAT", "href": "/subjects#lsat" },
+        { "label": "MCAT", "href": "/subjects#mcat" } ] },
+    { "key": "english", "label": "English", "href": "/subjects#english",
+      "children": [
+        { "label": "All English", "href": "/subjects#english" },
+        { "label": "Reading", "href": "/subjects#reading" },
+        { "label": "Writing", "href": "/subjects#writing" },
+        { "label": "Literature", "href": "/subjects#literature" },
+        { "label": "Essay Editing", "href": "/subjects#essay-editing" } ] },
+    { "key": "languages", "label": "Languages", "href": "/subjects#languages",
+      "children": [
+        { "label": "All Languages", "href": "/subjects#languages" },
+        { "label": "Arabic", "href": "/subjects#arabic" },
+        { "label": "French", "href": "/subjects#french" },
+        { "label": "Spanish", "href": "/subjects#spanish" },
+        { "label": "German", "href": "/subjects#german" } ] },
+    { "key": "business", "label": "Business", "href": "/subjects#business",
+      "children": [
+        { "label": "All Business", "href": "/subjects#business" },
+        { "label": "Accounting", "href": "/subjects#accounting" },
+        { "label": "Economics", "href": "/subjects#economics" },
+        { "label": "Finance", "href": "/subjects#finance" },
+        { "label": "Marketing", "href": "/subjects#marketing" } ] },
+    { "key": "tech", "label": "Technology & Coding", "href": "/subjects#tech",
+      "children": [
+        { "label": "All Technology & Coding", "href": "/subjects#tech" },
+        { "label": "Computer Science", "href": "/subjects#computer-science" },
+        { "label": "Python", "href": "/subjects#python" },
+        { "label": "Java", "href": "/subjects#java" },
+        { "label": "SQL", "href": "/subjects#sql" } ] },
+    { "key": "social", "label": "Social Studies", "href": "/subjects#social-studies",
+      "children": [
+        { "label": "All Social Studies", "href": "/subjects#social-studies" },
+        { "label": "History", "href": "/subjects#history" },
+        { "label": "AP History", "href": "/subjects#ap-history-2" },
+        { "label": "AP Human Geography", "href": "/subjects#ap-human-geography" } ] },
+    { "key": "humanities", "label": "Humanities", "href": "/subjects#humanities",
+      "children": [
+        { "label": "Essay Editing", "href": "/subjects#humanities-essay" },
+        { "label": "History", "href": "/subjects#humanities-history" },
+        { "label": "Law", "href": "/subjects#law" },
+        { "label": "Literature", "href": "/subjects#humanities-literature" },
+        { "label": "Theology", "href": "/subjects#theology" } ] },
+    { "key": "learningDiff", "label": "Learning Differences", "href": "/subjects#learning-differences",
+      "children": [
+        { "label": "All Learning Differences", "href": "/subjects#learning-differences" },
+        { "label": "Special Education", "href": "/subjects#special-education" } ] },
+    { "key": "popular", "label": "Popular Subjects", "href": "/subjects#popular",
+      "children": [
+        { "label": "Algebra", "href": "/subjects#algebra" },
+        { "label": "Calculus", "href": "/subjects#calculus" },
+        { "label": "Chemistry", "href": "/subjects#chemistry" },
+        { "label": "Physics", "href": "/subjects#physics" },
+        { "label": "SAT Prep", "href": "/subjects#sat" },
+        { "label": "Spanish", "href": "/subjects#spanish" } ] }
+  ]
+}
   },
-  "megaMenu": {
-    "columnHeadings": {
-      "popularSubjects": "Popular Subjects",
-      "advancedSubjects": "Advanced Subjects",
-      "popularResources": "Popular Resources",
-      "featuredCta": "Featured"
-    },
-    "subjects": {
-      "math": "Math",
-      "english": "English",
-      "french": "French",
-      "science": "Science",
-      "physics": "Physics",
-      "chemistry": "Chemistry",
-      "biology": "Biology",
-      "history": "History",
-      "geography": "Geography"
-    },
-    "resources": {
-      "studyTips": "Study Tips",
-      "homeworkHelp": "Homework Help",
-      "examPreparation": "Exam Preparation",
-      "learningGuides": "Learning Guides"
-    },
-    "services": {
-      "privateTutoring": "Private Tutoring",
-      "onlineTutoring": "Online Tutoring",
-      "inHomeTutoring": "In-home Tutoring",
-      "examPreparationService": "Exam Preparation",
-      "catchUpAssistance": "Catch-up Assistance",
-      "homeworkSupport": "Homework Support",
-      "summerTutoring": "Summer Tutoring",
-      "summerSchool": "Summer School"
-    },
-    "locations": {
-      "toronto": "Toronto",
-      "montreal": "Montreal",
-      "ottawa": "Ottawa",
-      "vancouver": "Vancouver",
-      "calgary": "Calgary",
-      "laval": "Laval"
-    },
-    "cta": {
-      "bookATutor": "Book a Tutor",
-      "browseAllSubjects": "Browse All Subjects",
-      "bookConsultation": "Book Consultation",
-      "viewAllLocations": "View All Locations"
+
+  "notFound": {
+    "heading": "Page not found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "backHome": "Back to home",
+    "contactUs": "Contact us"
+  },
+  "hero": {
+    "eyebrow": "A simple approach that puts your child's studies at ease",
+    "heading": "Improve your child's academic achievement and performance",
+    "subheading": "We provide one-to-one tutoring to help your child excel.",
+    "ctaPrimary": "Book a Free Session",
+    "ctaSecondary": "Explore Our Programs",
+    "stats": [
+      { "value": 500, "suffix": "+", "label": "Successful Students" },
+      { "value": 98, "suffix": "%", "label": "Parent Satisfaction" },
+      { "value": 50, "suffix": "+", "label": "Specialized Tutors" }
+    ],
+          "socialProof": "Join {count} learners already growing with us",
+  "rating": {
+    "value": "4.9",
+    "count": "2,000+ reviews"
+  },
+  "achievement": {
+    "label": "Course completion rate"
+  },
+  "imageAlt": "Students collaborating in a classroom at Success path Mentors",
+"enrollment": {
+  "title": "Get Started — Enroll in Just One Minute",
+  "reassurance": "Your information is 100% secure",
+  "next": "Next",
+  "back": "Back",
+  "submit": "Submit",
+  "submitting": "Submitting...",
+  "successTitle": "Request Received!",
+  "successBody": "We'll contact you on WhatsApp shortly.",
+  "stepOf": "Step #CURRENT# of #TOTAL#",
+  "labels": {
+    "parentName": "Parent's Name",
+    "whatsapp": "WhatsApp Number",
+    "email": "Email Address",
+    "studentAge": "Student's Age",
+    "country": "Country",
+    "province": "State / Province",
+    "subjects": "Subject(s) Needed",
+    "teachingLanguage": "Preferred Teaching Language",
+    "notes": "Additional Notes"
+  },
+  "placeholders": {
+    "parentName": "Enter parent's name",
+    "whatsapp": "Enter WhatsApp number",
+    "email": "Enter email address",
+    "studentAge": "Enter student's age",
+    "province": "Enter state or province",
+    "notes": "Write any additional notes here..."
+  },
+  "errors": {
+    "required": "This field is required.",
+    "email": "Please enter a valid email address.",
+    "age": "Please enter a valid age.",
+    "subjects": "Please select at least one subject."
+  },
+  "countries": [
+    { "value": "usa", "label": "United States" },
+    { "value": "canada", "label": "Canada" }
+  ],
+  "subjectOptions": [
+    { "value": "english", "label": "English" },
+    { "value": "french", "label": "French" },
+    { "value": "math", "label": "Mathematics" },
+    { "value": "physics", "label": "Physics" },
+    { "value": "science", "label": "Science" },
+    { "value": "chemistry", "label": "Chemistry" },
+    { "value": "biology", "label": "Biology" },
+    { "value": "other", "label": "Other Subject" }
+  ],
+  "languages": [
+    { "value": "english", "label": "English" },
+    { "value": "french", "label": "French" }
+  ]
+}
+  
+  },
+  "programs": {
+    "heading": "Ideal Programs",
+    "subheading": "We offer specialized learning programs tailored to every student's needs",
+    "items": [
+      { "title": "Canadian Curriculum Students", "description": "Academic support fully aligned with the Canadian curriculum." },
+      { "title": "American Curriculum Students", "description": "Academic support fully aligned with the American curriculum." },
+      { "title": "French Curriculum Students", "description": "Academic support fully aligned with the French curriculum." },
+      { "title": "Quran & Arabic Language Programs", "description": "Free programs for learning the Quran and Arabic language." },
+      { "title": "Programs for Teens Who Left School", "description": "Free, dedicated support to help teens get back on an academic path." },
+      { "title": "Specialized Programs", "description": "IELTS, TOEFL, SAT, GMAT prep, and language learning for adults." }
+    ],
+    "imageAlt": "A live tutoring session with a mentor at Success Path Mentors",
+"liveLabel": "Live classes",
+"badge": { "value": "500+", "label": "Top students" }
+  },
+  "testimonials": {
+    "heading": "Student & Parent Testimonials",
+    "ratingLabel": "Rating: {rating} out of 5 stars",
+    "items": [
+  {
+    "quote": "My son's academic performance improved significantly in just two months. His tutor is dedicated, supportive, and always follows up on his progress.",
+    "name": "Mohammed's Mother",
+    "role": "Parent — Grade 6",
+    "rating": 5
+  },
+  {
+    "quote": "The lessons are well-structured, the explanations are clear, and my daughter now enjoys mathematics after struggling with it for years.",
+    "name": "Khalid Al-Omari",
+    "role": "Parent — Grade 9",
+    "rating": 5
+  },
+  {
+    "quote": "A truly professional platform with excellent communication through WhatsApp. I highly recommend it to any parent looking for quality education.",
+    "name": "Sarah Ahmed",
+    "role": "Parent — Grade 3",
+    "rating": 5
+  },
+  {
+    "quote": "The tutors are friendly, the lessons are engaging, and learning has become much more enjoyable for me.",
+    "name": "Qusai Khudair",
+    "role": "Student — Grade 5",
+    "rating": 5
+  }
+]
+  },
+  "steps": {
+    "heading": "Five simple steps toward a stronger, better future",
+    "items": [
+      { "number": 1, "title": "Personalized Learning Plan", "description": "We design a customized learning plan that fits your child's learning style and academic goals." },
+      { "number": 2, "title": "A Schedule That Fits", "description": "Once the plan is set, we arrange session times that work for both the student and the family." },
+      { "number": 3, "title": "Homework After Every Session", "description": "We give simple, purposeful homework after each lesson to reinforce learning, with follow-up and correction alongside the student." },
+      { "number": 4, "title": "Regular Progress Reports", "description": "We send detailed weekly reports on your child's progress, with recommendations for continuous improvement." },
+      { "number": 5, "title": "Flexible Scheduling", "description": "We offer times that fit your schedule and your child's, so you can arrange sessions easily without stress." }
+    ]
+  },
+  "services": {
+    "heading": "At Mustafa Academy",
+    "subheading": "We provide a comprehensive range of services to support the student's learning journey",
+    "items": [
+      { "title": "Private 1-on-1 Online Sessions", "description": "Every student gets a private session with a specialized tutor who explains at their pace and follows through step by step to the best results." },
+      { "title": "American & Canadian Curriculum", "description": "We explain the curriculum in a way that helps students understand ideas from multiple angles, preparing them for any exam format or assessment change without stress." },
+      { "title": "Detailed Reports", "description": "We provide clear, simple reports showing your child's real level — what they're excelling at and what needs focus — with an improvement plan you can follow with confidence." },
+      { "title": "Homework After Every Session", "description": "Every session is followed by simple homework to reinforce understanding, with follow-up and correction to help the student improve session after session." },
+      { "title": "Exam Preparation", "description": "We prepare students for exams intelligently, with practical training on different question formats and understanding that helps them walk into exams confident, not confused." },
+      { "title": "Flexible Scheduling", "description": "We offer times that fit your schedule and your child's, so you can arrange sessions easily without stress." }
+    ],
+    "imageAlt": "A tutor giving a lesson to a student at Success Path Mentors",
+"float": {
+  "satisfaction": { "value": "98%", "label": "Parent satisfaction" },
+  "flexible": { "value": "Flexible timing", "label": "Fits your schedule" }
+},
+  "whatsappCta": "Ask on WhatsApp",
+"whatsappMessage": "Hello, I'd like to know more about the tutoring services you offer."
+  },
+  "challenges": {
+    "heading": "Success stories from our members",
+"subheading": "Watch real experiences from parents and students who achieved tangible results with us",
+"watchVideo": "Watch video",
+"close": "Close",
+"items": [
+  {
+    "name": "Um Mohammed",
+    "role": "Parent — Grade 6",
+    "quote": "My son improved dramatically within two months.",
+    "videoType": "youtube",
+    "videoSrc": "JBHnv3JDBP8?si=gv3OdVkmgQDKbVLN"
+  },
+  {
+    "name": "Khaled Al-Omari",
+    "role": "Parent — Grade 9",
+    "quote": "The close follow-up made all the difference for my daughter.",
+    "videoType": "youtube",
+    "videoSrc": "JBHnv3JDBP8?si=gv3OdVkmgQDKbVLN"
+  },
+  {
+    "name": "Sarah Ahmed",
+    "role": "Parent — Grade 3",
+    "quote": "A professional platform with excellent communication.",
+    "videoType": "youtube",
+    "videoSrc": "JBHnv3JDBP8?si=gv3OdVkmgQDKbVLN"
+  }
+]
+  },
+  "pricing": {
+    "heading": "Pricing Plans",
+    "note": "* For inquiries, please contact us via WhatsApp",
+    "cta": "Book a Trial Session",
+    "perMonth": "/month",
+    "plans": [
+      {
+        "grade": "Grades 1-9",
+        "price": 110,
+        "features": ["Private 1:1 online session", "Weekly session", "1-hour session", "4 sessions per month", "Special sibling discount", "Homework after every session", "Regular reports"]
+      },
+      {
+        "grade": "Grades 10-12",
+        "price": 120,
+        "features": ["Private 1:1 online session", "Weekly session", "1-hour session", "4 sessions per month", "Special sibling discount", "Homework after each session", "Regular reports"]
+      }
+    ],
+    "subheading": "Flexible plans to fit every student's needs — start the journey to success today",
+"popularBadge": "Most popular",
+"whatsappMessage": "Hello, I'd like to subscribe to the \"{plan}\" plan. Please share the subscription details.",
+"cta": "Subscribe now"
+  },
+  "faq": {
+    "heading": "Frequently Asked Questions",
+    "subheading": "Answers to the most common questions parents ask about our educational services",
+ "items": [
+  {
+    "question": "Can I request a different tutor if needed?",
+    "answer": "Absolutely. If you feel the assigned tutor is not the right fit for your child, you can request a replacement at any time. We'll match you with another qualified tutor to ensure the best learning experience."
+  },
+  {
+    "question": "Can I reschedule or cancel a lesson?",
+    "answer": "Yes. You can reschedule or cancel your lesson in accordance with our scheduling policy, giving you the flexibility to adapt to your family's needs."
+  },
+  {
+    "question": "What happens after I book a trial lesson?",
+    "answer": "Once your request is submitted, our team will contact you via WhatsApp or email to confirm your details, recommend the most suitable tutor, and schedule your trial lesson at a convenient time."
+  },
+  {
+    "question": "Do you offer a money-back guarantee?",
+    "answer": "Yes. We stand behind the quality of our educational services and offer a money-back guarantee under our terms and conditions to ensure complete confidence and satisfaction."
+  }
+],
+    "stillHaveQuestions": "Didn't find your answer?",
+    "supportText": "Reach out to us directly and we'll respond within a few hours. Our team is ready to help.",
+    "contactUs": "Contact Us"
+  },
+  "trustBadges": {
+    "moneyBack": "Money-Back Guarantee",
+    "fastReply": "Fast Reply",
+    "contactUs": "Contact Us"
+  },
+  "contact": {
+    "heading": "Contact Us",
+    "subheading": "If you have questions about your child's level or want to start with an assessment session, leave your details in the form and we'll reach out soon. The Mustafa Academy team is ready to answer every question and guide you to the right plan for your child, step by step.",
+    "form": {
+      "parentName": "Parent's Name",
+      "whatsapp": "WhatsApp Number",
+      "email": "Email Address",
+      "childAge": "Child's Age",
+      "country": "Country",
+      "countryOptions": ["United States", "Canada"],
+      "state": "State / Province",
+      "subject": "Subject You Need Help With",
+      "subjectOptions": ["English", "French", "Math", "Physics", "Science", "Chemistry", "Biology", "Other Subject"],
+      "teachingLanguage": "Preferred Teaching Language",
+      "teachingLanguageOptions": ["English", "French"],
+      "notes": "Write any notes here...",
+      "submit": "Submit"
     }
   },
-  "search": {
-    "trigger": "Search",
-    "placeholder": "Search pages, subjects, services, locations...",
-    "startTyping": "Start typing to search the site",
-    "noResults": "No results found",
-    "categories": {
-      "pages": "Page",
-      "subjects": "Subject",
-      "services": "Service",
-      "locations": "Location"
-    }
-  },
-  "common": {
-    "learnMore": "Learn more",
-    "getStarted": "Get started",
-    "contactUs": "Contact us",
-    "readMore": "Read more",
-    "viewAll": "View all",
-    "loading": "Loading…",
-    "somethingWentWrong": "Something went wrong",
-    "errorDescription": "An unexpected error occurred. Please try again, or head back to the homepage if the problem continues.",
-    "tryAgain": "Try again",
-    "noResultsFound": "No results found",
-    "pageNotFound": "Page not found",
-    "pageNotFoundDescription": "The page you're looking for doesn't exist or may have moved.",
-    "backHome": "Back to homepage",
-    "back": "Back"
+  "closingCta": {
+    "heading": "Together, We Build Success",
+    "subheading": "Don't put off a decision that could change your child's level for the better",
+    "cta": "Enroll Your Child Now"
   },
   "footer": {
-    "companyDescription": "Personalized tutoring that helps students build confidence and achieve their goals.",
-    "quickLinks": "Quick links",
-    "subjects": "Subjects",
-    "services": "Services",
-    "locations": "Locations",
-    "resources": "Resources",
-    "newsletterTitle": "Stay up to date",
-    "newsletterDescription": "Get study tips and updates from our tutors.",
-    "newsletterPlaceholder": "Enter your email",
-    "newsletterSubmit": "Subscribe",
-    "copyright": "© {year} Success Path Mentors. All rights reserved."
-  },
-  "home": {
-    "hero": {
-      "title": "Personalized tutoring that helps students thrive",
-      "subtitle": "One-on-one support from expert, vetted tutors — online or in-home.",
-      "primaryCta": "Find a tutor",
-      "secondaryCta": "Explore subjects"
-    }
-  },
-  "about": {
-    "hero": {
-      "eyebrow": "About Us",
-      "title": "Helping students learn with confidence",
-      "description": "Success Path Mentors connects students with experienced, vetted tutors for personalized, one-on-one support — online or in-home, across every subject and grade level.",
-      "primaryCta": "Book a free consultation",
-      "secondaryCta": "Become a tutor",
-      "trustIndicators": {
-        "vettedTutors": "Vetted, qualified tutors",
-        "flexibleScheduling": "Flexible scheduling",
-        "personalizedPlans": "Personalized learning plans"
-      }
-    },
-    "ourStory": {
-      "title": "Our story",
-      "description": "How Success Path Mentors got started, and where we're headed.",
-      "pendingMessage": "Our company timeline and milestones are being finalized and will appear here soon."
-    },
-    "mission": {
-      "title": "Our mission",
-      "description": "To give every student access to personalized, high-quality tutoring that builds real academic confidence — matching each learner with a tutor suited to their pace, learning style, and goals."
-    },
-    "vision": {
-      "title": "Our vision",
-      "description": "A future where every student, regardless of background, has a dedicated mentor to help them reach their full academic potential and develop a lifelong love of learning."
-    },
-    "coreValues": {
-      "title": "Our core values",
-      "description": "The principles that guide how we work with students, families, and tutors.",
-      "integrity": {
-        "title": "Integrity",
-        "description": "We're honest with families about what tutoring can realistically achieve, and how."
-      },
-      "innovation": {
-        "title": "Innovation",
-        "description": "We continually refine our matching and teaching methods based on what actually helps students learn."
-      },
-      "excellence": {
-        "title": "Excellence",
-        "description": "We hold our tutors and our own processes to a high standard, every session."
-      },
-      "studentSuccess": {
-        "title": "Student success",
-        "description": "Every decision we make is weighed against one question: does this help the student succeed?"
-      },
-      "continuousLearning": {
-        "title": "Continuous learning",
-        "description": "We believe learning doesn't stop with students — our tutors keep developing their craft too."
-      },
-      "professionalism": {
-        "title": "Professionalism",
-        "description": "Families can expect reliability, clear communication, and respect at every step."
-      }
-    },
-    "whyChooseUs": {
-      "title": "Why families choose us",
-      "description": "What makes tutoring with Success Path Mentors different.",
-      "experiencedTutors": {
-        "title": "Experienced tutors",
-        "description": "Every tutor is vetted for subject expertise and teaching ability before joining."
-      },
-      "flexibleScheduling": {
-        "title": "Flexible scheduling",
-        "description": "Book sessions around your family's schedule, with easy rescheduling when plans change."
-      },
-      "personalizedLearning": {
-        "title": "Personalized learning",
-        "description": "Every learning plan is built around the individual student, not a fixed curriculum."
-      },
-      "affordablePrograms": {
-        "title": "Affordable programs",
-        "description": "Transparent pricing with options to fit different budgets and commitment levels."
-      },
-      "onlineInPerson": {
-        "title": "Online & in-person",
-        "description": "Choose whichever format works best for your student — or mix both."
-      },
-      "progressTracking": {
-        "title": "Progress tracking",
-        "description": "Regular updates so families can see exactly how a student is progressing."
-      }
-    },
-    "methodology": {
-      "title": "Our teaching methodology",
-      "description": "A consistent, five-step process behind every tutoring relationship.",
-      "assessment": {
-        "title": "Assessment",
-        "description": "We start by understanding the student's current level, goals, and learning style."
-      },
-      "planning": {
-        "title": "Planning",
-        "description": "We build a learning plan tailored to the student's needs and pace."
-      },
-      "teaching": {
-        "title": "Teaching",
-        "description": "One-on-one sessions focused on building both skills and confidence."
-      },
-      "evaluation": {
-        "title": "Evaluation",
-        "description": "We regularly check progress against the original goals."
-      },
-      "continuousImprovement": {
-        "title": "Continuous improvement",
-        "description": "The plan adapts as the student grows, so support stays relevant."
-      }
-    },
-    "stats": {
-      "title": "Success Path Mentors by the numbers",
-      "description": "Our impact so far.",
-      "pendingMessage": "Our latest numbers are being verified and will be published here soon."
-    },
-    "team": {
-      "title": "Meet our team",
-      "description": "The people behind Success Path Mentors.",
-      "pendingMessage": "Team profiles are coming soon."
-    },
-    "testimonials": {
-      "title": "What families are saying",
-      "description": "Real feedback from the students and parents we work with.",
-      "pendingMessage": "Testimonials are being collected and will be published here soon."
-    },
-    "faq": {
-      "title": "Frequently asked questions",
-      "description": "Common questions about our tutors, process, subjects, and locations.",
-      "items": {
-        "howAreTutorsSelected": {
-          "question": "How are tutors selected?",
-          "answer": "Every tutor goes through a vetting process that reviews subject expertise and teaching ability before they're matched with students."
-        },
-        "howDoesLearningProcessWork": {
-          "question": "How does the learning process work?",
-          "answer": "We start with an assessment of the student's current level and goals, then build a personalized learning plan and check in regularly to adjust it as needed."
-        },
-        "whichSubjectsAreOffered": {
-          "question": "Which subjects are offered?",
-          "answer": "We cover core academic subjects across grade levels. Visit the Subjects page for the full list."
-        },
-        "whichLocationsAreServed": {
-          "question": "Which locations do you serve?",
-          "answer": "We offer online tutoring everywhere, plus in-home tutoring in select cities. Visit the Locations page for details."
-        }
-      }
-    },
-    "cta": {
-      "title": "Ready to get started?",
-      "description": "Book a free consultation to find the right tutor for your student, or apply to join our team.",
-      "bookConsultation": "Book a free consultation",
-      "becomeTutor": "Become a tutor"
-    }
-  },
-  "statistics": {
-    "students": "Students helped",
-    "tutors": "Expert tutors",
-    "subjects": "Subjects covered",
-    "successRate": "Success rate"
-  },
-  "subjectsPage": {
-    "hero": {
-      "title": "Explore Our Subjects",
-      "description": "Comprehensive tutoring across all major subjects to help students achieve their academic goals."
-    }
-  },
-  "servicesPage": {
-    "hero": {
-      "title": "Our Tutoring Services",
-      "description": "Flexible and personalized tutoring options designed to meet every student's unique needs."
-    }
-  },
-  "locationsPage": {
-    "hero": {
-      "title": "Where We Tutor",
-      "description": "Find expert tutors in your city or connect with them online from anywhere."
-    }
-  },
-  "contactPage": {
-    "hero": {
-      "title": "Contact Us",
-      "description": "Have questions? We're here to help you find the perfect tutoring solution."
-    },
-    "info": {
-      "email": "Email us",
-      "phone": "Call us",
-      "address": "Visit us"
-    }
-  },
-  "becomeTutorPage": {
-    "hero": {
-      "title": "Join Our Team",
-      "description": "Passionate about teaching? Apply to become a Success Path Mentor and make a difference."
-    },
-    "benefits": {
-      "title": "Why tutor with us?",
-      "flexible": "Flexible schedule",
-      "competitive": "Competitive pay",
-      "support": "Continuous support"
-    }
-  },
-  "blogPage": {
-    "hero": {
-      "title": "Our Blog",
-      "description": "Study tips, educational insights, and news from Success Path Mentors."
-    },
-    "comingSoon": "New articles are coming soon!"
-  },
-  "privacy": {
-    "title": "Privacy Policy",
-    "description": "How we protect and handle your personal information.",
-    "content": "Privacy policy content will be published here."
-  },
-  "terms": {
-    "title": "Terms of Service",
-    "description": "The terms and conditions for using our tutoring services.",
-    "content": "Terms of service content will be published here."
-  },
-  "forms": {
-    "contact": {
-      "title": "Get in touch",
-      "nameLabel": "Full name",
-      "emailLabel": "Email address",
-      "phoneLabel": "Phone number",
-      "messageLabel": "Message",
-      "submit": "Send message",
-      "success": "Thanks — we'll be in touch shortly.",
-      "error": "We couldn't send your message. Please try again."
-    },
-    "becomeTutor": {
-      "title": "Apply to become a tutor",
-      "submit": "Submit application",
-      "success": "Thanks for applying — our team will review your application.",
-      "error": "We couldn't submit your application. Please try again."
-    },
-    "newsletter": {
-      "success": "You're subscribed!",
-      "error": "Subscription failed. Please try again."
-    },
-    "validation": {
-      "required": "This field is required",
-      "invalidEmail": "Enter a valid email address",
-      "invalidPhone": "Enter a valid phone number",
-      "minLength": "Must be at least {min} characters",
-      "maxLength": "Must be at most {max} characters"
-    }
+    "description": "Mustafa Academy is a specialized educational platform offering online private tutoring and academic support for students from grade 1 through grade 12, aligned with the Canadian and American curricula.",
+    "followUs": "Follow us on social media",
+    "quickLinks": "Quick Links",
+    "subjectsOffered": "Subjects We Cover",
+    "subjects": ["Mathematics", "English", "Science", "French"],
+    "gradeRange": "Grade 1 – Grade 12",
+    "rightsReserved": "All rights reserved"
   }
 }

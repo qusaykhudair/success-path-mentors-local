@@ -1,0 +1,75 @@
+@import "tw-animate-css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply font-sans;
+  }
+
+  body {
+    @apply font-sans antialiased bg-surface text-ink;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-primary;
+  }
+
+  /* Visible focus states for keyboard navigation (WCAG 2.2 AA) */
+  :focus-visible {
+    outline: 2px solid theme('colors.accent.500');
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: theme('colors.accent.200');
+    color: theme('colors.primary.900');
+  }
+
+  * {
+    @apply border-primary/10;
+  }
+}
+
+@layer utilities {
+  .container-page {
+    @apply mx-auto max-w-container px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes steps-node {
+  0%   { transform: translate(-50%, -50%) scale(0) rotate(-45deg); opacity: 0; }
+  60%  { transform: translate(-50%, -50%) scale(1.15) rotate(0deg); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 1; }
+}
+
+@keyframes steps-drop {
+  0%   { transform: translateY(-2.5rem); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes video-pulse {
+  0%   { transform: scale(1); opacity: 0.6; }
+  70%  { transform: scale(1.4); opacity: 0; }
+  100% { opacity: 0; }
+}
+@keyframes video-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes video-zoom {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}

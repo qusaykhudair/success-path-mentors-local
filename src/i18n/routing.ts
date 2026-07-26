@@ -1,19 +1,40 @@
-import { defineRouting } from "next-intl/routing";
+import { defineRouting } from 'next-intl/routing';
 
-/**
- * Single source of truth for supported locales.
- * Per docs/05 - Internationalization (i18n) Specification.md.
- *
- * No `pathnames` map: English and Arabic use identical URL slugs
- * (docs/05 shows /en/subjects/math-tutoring and /ar/subjects/math-tutoring
- * — same segment, different locale prefix only), so next-intl's
- * per-route pathname typing isn't needed and would only add friction
- * for dynamic routes like /subjects/[slug].
- */
+export const locales = ['en', 'ar'] as const;
+export type Locale = (typeof locales)[number];
+
+export const defaultLocale: Locale = 'en';
+
+export const localeDirection: Record<Locale, 'ltr' | 'rtl'> = {
+  en: 'ltr',
+  ar: 'rtl',
+};
+
+export const localeLabels: Record<Locale, string> = {
+  en: 'English',
+  ar: 'العربية',
+};
+
+const pathnames = {
+  '/': '/',
+  '/about': { en: '/about', ar: '/عن-المنصة' },
+  '/subjects': { en: '/subjects', ar: '/المواد-الدراسية' },
+  '/locations': { en: '/locations', ar: '/المواقع' },
+  '/services': { en: '/services', ar: '/الخدمات' },
+  '/blog': { en: '/blog', ar: '/المدونة' },
+  '/faq': { en: '/faq', ar: '/الأسئلة-الشائعة' },
+  '/contact': { en: '/contact', ar: '/تواصل-معنا' },
+  '/become-tutor': { en: '/become-tutor', ar: '/انضم-كمعلم' },
+  '/find-tutor': { en: '/find-tutor', ar: '/ابحث-عن-معلم' },
+  '/privacy': { en: '/privacy', ar: '/سياسة-الخصوصية' },
+  '/terms': { en: '/terms', ar: '/الشروط-والأحكام' },
+} as const;
+
+export type AppPathname = keyof typeof pathnames;
+
 export const routing = defineRouting({
-  locales: ["en", "ar"],
-  defaultLocale: "en",
-  localePrefix: "always",
+  locales,
+  defaultLocale,
+  localePrefix: 'always', // /en/... and /ar/... — required for clean localized URLs + hreflang
+  pathnames,
 });
-
-export type Locale = (typeof routing.locales)[number];
