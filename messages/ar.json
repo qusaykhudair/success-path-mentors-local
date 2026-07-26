@@ -1,4 +1,11 @@
 {
+  "seo": {
+  "home": {
+    "title": "أكاديمية مصطفى | الدروس الخصوصية عبر الإنترنت لجميع المراحل الدراسية",
+    "description": "أكاديمية مصطفى منصة تعليمية متخصصة تقدم دروسًا خصوصية عبر الإنترنت، وإرشادًا أكاديميًا، وبرامج تعليمية عالية الجودة بإشراف نخبة من المدرسين لمساعدة الطلاب على تحقيق أفضل النتائج.",
+    "keywords": "أكاديمية مصطفى, الدروس الخصوصية عبر الإنترنت, التعليم الإلكتروني, مدرسين خصوصيين, دروس الرياضيات, دروس العلوم, دروس اللغة الإنجليزية, الإرشاد الأكاديمي, التعليم عن بعد, منصة تعليمية"
+  }
+},
   "meta": {
     "siteName": "مصطفى أكاديمي",
     "tagline": "Success Path Mentors"
@@ -13,7 +20,121 @@
     "pricing": "الأسعار",
     "faq": "الأسئلة الشائعة",
     "contact": "تواصل معنا",
-    "bookFreeSession": "احجز حصة مجانية"
+    "bookFreeSession": "احجز حصة مجانية",
+        "whatsappBookingMessage": "مرحبًا، أريد حجز حصة تجريبية مجانية 🙌"
+,
+    "subjectsMenu": {
+  "trigger": "المواد الدراسية",
+  "categories": [
+    {
+      "key": "k5", "label": "المرحلة الابتدائية", "href": "/subjects#k5",
+      "children": [
+        { "label": "رياضيات ابتدائي", "href": "/subjects#k5-math" },
+        { "label": "أساسيات القراءة", "href": "/subjects#k5-phonics" },
+        { "label": "القراءة", "href": "/subjects#k5-reading" },
+        { "label": "الكتابة", "href": "/subjects#k5-writing" }
+      ]
+    },
+    {
+      "key": "math", "label": "الرياضيات", "href": "/subjects#math",
+      "children": [
+        { "label": "كل الرياضيات", "href": "/subjects#math" },
+        { "label": "الجبر", "href": "/subjects#algebra" },
+        { "label": "التفاضل والتكامل", "href": "/subjects#calculus" },
+        { "label": "الهندسة", "href": "/subjects#geometry" },
+        { "label": "الإحصاء", "href": "/subjects#statistics" },
+        { "label": "حساب المثلثات", "href": "/subjects#trigonometry" }
+      ]
+    },
+    {
+      "key": "science", "label": "العلوم", "href": "/subjects#science",
+      "children": [
+        { "label": "كل العلوم", "href": "/subjects#science" },
+        { "label": "الأحياء", "href": "/subjects#biology" },
+        { "label": "الكيمياء", "href": "/subjects#chemistry" },
+        { "label": "الفيزياء", "href": "/subjects#physics" },
+        { "label": "علم وظائف الأعضاء", "href": "/subjects#physiology" }
+      ]
+    },
+    {
+      "key": "ap", "label": "المستوى المتقدم (AP)", "href": "/subjects#ap",
+      "children": [
+        { "label": "أحياء متقدم", "href": "/subjects#ap-biology" },
+        { "label": "تفاضل وتكامل متقدم", "href": "/subjects#ap-calculus" },
+        { "label": "كيمياء متقدم", "href": "/subjects#ap-chemistry" },
+        { "label": "فيزياء متقدم", "href": "/subjects#ap-physics" },
+        { "label": "تاريخ متقدم", "href": "/subjects#ap-history" }
+      ]
+    },
+    {
+      "key": "testprep", "label": "التحضير للاختبارات", "href": "/subjects#test-prep",
+      "children": [
+        { "label": "كل الاختبارات", "href": "/subjects#test-prep" },
+        { "label": "SAT", "href": "/subjects#sat" },
+        { "label": "ACT", "href": "/subjects#act" },
+        { "label": "PSAT", "href": "/subjects#psat" },
+        { "label": "ISEE", "href": "/subjects#isee" }
+      ]
+    },
+    {
+      "key": "english", "label": "اللغة الإنجليزية", "href": "/subjects#english",
+      "children": [
+        { "label": "كل الإنجليزية", "href": "/subjects#english" },
+        { "label": "القراءة", "href": "/subjects#reading" },
+        { "label": "الكتابة", "href": "/subjects#writing" },
+        { "label": "الأدب", "href": "/subjects#literature" },
+        { "label": "تحرير المقالات", "href": "/subjects#essay-editing" }
+      ]
+    },
+    {
+      "key": "languages", "label": "اللغات", "href": "/subjects#languages",
+      "children": [
+        { "label": "كل اللغات", "href": "/subjects#languages" },
+        { "label": "العربية", "href": "/subjects#arabic" },
+        { "label": "الفرنسية", "href": "/subjects#french" },
+        { "label": "الإسبانية", "href": "/subjects#spanish" },
+        { "label": "الألمانية", "href": "/subjects#german" }
+      ]
+    },
+    { "key": "gradTestPrep", "label": "اختبارات الدراسات العليا", "href": "/subjects#grad-test-prep",
+  "children": [
+    { "label": "GRE", "href": "/subjects#gre" }, { "label": "GMAT", "href": "/subjects#gmat" },
+    { "label": "LSAT", "href": "/subjects#lsat" }, { "label": "MCAT", "href": "/subjects#mcat" } ] },
+{ "key": "business", "label": "إدارة الأعمال", "href": "/subjects#business",
+  "children": [
+    { "label": "كل إدارة الأعمال", "href": "/subjects#business" }, { "label": "المحاسبة", "href": "/subjects#accounting" },
+    { "label": "الاقتصاد", "href": "/subjects#economics" }, { "label": "التمويل", "href": "/subjects#finance" },
+    { "label": "التسويق", "href": "/subjects#marketing" } ] },
+{ "key": "tech", "label": "التقنية والبرمجة", "href": "/subjects#tech",
+  "children": [
+    { "label": "كل التقنية والبرمجة", "href": "/subjects#tech" }, { "label": "علوم الحاسب", "href": "/subjects#computer-science" },
+    { "label": "بايثون", "href": "/subjects#python" }, { "label": "جافا", "href": "/subjects#java" },
+    { "label": "SQL", "href": "/subjects#sql" } ] },
+{ "key": "social", "label": "الدراسات الاجتماعية", "href": "/subjects#social-studies",
+  "children": [
+    { "label": "كل الدراسات الاجتماعية", "href": "/subjects#social-studies" }, { "label": "التاريخ", "href": "/subjects#history" },
+    { "label": "تاريخ متقدم", "href": "/subjects#ap-history-2" }, { "label": "الجغرافيا البشرية المتقدمة", "href": "/subjects#ap-human-geography" } ] },
+{ "key": "humanities", "label": "العلوم الإنسانية", "href": "/subjects#humanities",
+  "children": [
+    { "label": "تحرير المقالات", "href": "/subjects#humanities-essay" }, { "label": "التاريخ", "href": "/subjects#humanities-history" },
+    { "label": "القانون", "href": "/subjects#law" }, { "label": "الأدب", "href": "/subjects#humanities-literature" },
+    { "label": "اللاهوت", "href": "/subjects#theology" } ] },
+{ "key": "learningDiff", "label": "صعوبات التعلّم", "href": "/subjects#learning-differences",
+  "children": [
+    { "label": "كل صعوبات التعلّم", "href": "/subjects#learning-differences" }, { "label": "التربية الخاصة", "href": "/subjects#special-education" } ] },
+{ "key": "popular", "label": "المواد الأكثر طلبًا", "href": "/subjects#popular",
+  "children": [
+    { "label": "الجبر", "href": "/subjects#algebra" }, { "label": "التفاضل والتكامل", "href": "/subjects#calculus" },
+    { "label": "الكيمياء", "href": "/subjects#chemistry" }, { "label": "الفيزياء", "href": "/subjects#physics" },
+    { "label": "تحضير SAT", "href": "/subjects#sat" }, { "label": "الإسبانية", "href": "/subjects#spanish" } ] }
+  ]
+}
+  },
+  "notFound": {
+    "heading": "الصفحة غير موجودة",
+    "description": "يبدو إن الرابط اللي دخلت عليه مو موجود أو تم نقله. تأكد من الرابط أو ارجع للصفحة الرئيسية.",
+    "backHome": "العودة للرئيسية",
+    "contactUs": "تواصل معنا"
   },
   "hero": {
     "eyebrow": "شرح بسيط يخلي ابنك مطمن في دراسته",
@@ -34,7 +155,61 @@
   "achievement": {
     "label": "معدل إكمال الدورات"
   },
-  "imageAlt": "طلاب يتعاونون داخل فصل دراسي في منصة Success Path Mentors"
+  "imageAlt": "طلاب يتعاونون داخل فصل دراسي في منصة Success Path Mentors",
+"enrollment": {
+  "title": "ابدأ الآن — سجّل في دقيقة",
+  "reassurance": "بياناتك آمنة 100%",
+  "next": "التالي",
+  "back": "السابق",
+  "submit": "إرسال",
+  "submitting": "جارٍ الإرسال…",
+  "successTitle": "تم استلام طلبك!",
+  "successBody": "سنتواصل معك عبر واتساب قريبًا.",
+"stepOf": "الخطوة #CURRENT# من #TOTAL#",
+  "labels": {
+    "parentName": "اسم ولي الأمر",
+    "whatsapp": "رقم واتساب للتواصل",
+    "email": "البريد الإلكتروني",
+    "studentAge": "عمر الطالب",
+    "country": "الدولة",
+    "province": "المقاطعة / الولاية",
+    "subjects": "المادة الدراسية المطلوبة",
+    "teachingLanguage": "لغة التدريس",
+    "notes": "ملاحظات إضافية"
+  },
+  "placeholders": {
+    "parentName": "اسم ولي الأمر",
+    "whatsapp": "رقم الواتساب",
+    "email": "البريد الإلكتروني",
+    "studentAge": "أدخل العمر",
+    "province": "اسم المقاطعة / الولاية",
+    "notes": "أكتب أي ملاحظات هنا…"
+  },
+  "errors": {
+    "required": "هذا الحقل مطلوب",
+    "email": "بريد إلكتروني غير صحيح",
+    "age": "أدخل عمرًا صحيحًا",
+    "subjects": "اختر مادة واحدة على الأقل"
+  },
+  "countries": [
+    { "value": "usa", "label": "أمريكا" },
+    { "value": "canada", "label": "كندا" }
+  ],
+  "subjectOptions": [
+    { "value": "english", "label": "اللغة الإنجليزية" },
+    { "value": "french", "label": "اللغة الفرنسية" },
+    { "value": "math", "label": "الرياضيات" },
+    { "value": "physics", "label": "الفيزياء" },
+    { "value": "science", "label": "العلوم" },
+    { "value": "chemistry", "label": "الكيمياء" },
+    { "value": "biology", "label": "الأحياء" },
+    { "value": "other", "label": "مادة أخرى" }
+  ],
+  "languages": [
+    { "value": "english", "label": "إنجليزي" },
+    { "value": "french", "label": "فرنسي" }
+  ]
+}
 },
   "programs": {
     "heading": "برامج مثالية",
@@ -46,11 +221,41 @@
       { "title": "برامج القرآن واللغة العربية", "description": "برامج مجانية لتعليم القرآن الكريم واللغة العربية." },
       { "title": "برامج المراهقين الذين تركوا المدارس", "description": "دعم مجاني مخصص لإعادة المسار الأكاديمي." },
       { "title": "برامج متخصصة", "description": "تحضير IELTS، TOEFL، SAT، GMAT، وتعليم اللغة لكبار السن." }
-    ]
+      
+    ],
+    "imageAlt": "جلسة تعليمية مباشرة مع معلّم في منصة Success Path Mentors",
+"liveLabel": "حصص مباشرة",
+"badge": { "value": "+500", "label": "طالب متفوّق" }
   },
   "testimonials": {
     "heading": "شهادات الطلاب والأمهات",
-    "subheading": "هدفنا نمشي مع الطلاب خطوة بخطوة"
+    "ratingLabel": "التقييم {rating} من 5",
+"items": [
+  {
+    "quote": "تحسّن مستوى ابني بشكل ملحوظ خلال شهرين فقط، والمعلّم متابع ومهتم.",
+    "name": "أم محمد",
+    "role": "ولية أمر — الصف السادس",
+    "rating": 5
+  },
+  {
+    "quote": "الحصص منظّمة والشرح واضح، وابنتي أصبحت تحب الرياضيات بعد أن كانت تكرهها.",
+    "name": "خالد العمري",
+    "role": "ولي أمر — الصف التاسع",
+    "rating": 5
+  },
+  {
+    "quote": "منصة احترافية وتواصل ممتاز عبر واتساب، أنصح بها كل والد يبحث عن جودة.",
+    "name": "سارة أحمد",
+    "role": "ولية أمر — الصف الثالث",
+    "rating": 5
+  },
+   {
+    "quote": "منصة احترافية وتواصل ممتاز عبر واتساب",
+    "name": "قصي خضير",
+    "role": "طالب في الصف الخامس",
+    "rating": 5
+  }
+]
   },
   "steps": {
     "heading": "خمس خطوات بسيطة نحو مستقبل أقوى وأفضل",
@@ -72,17 +277,45 @@
       { "title": "واجبات بعد كل جلسة", "description": "بعد كل حصة بيكون فيه واجب بسيط يثبّت الفهم، مع متابعة وتصحيح يساعد الطالب يتحسّن حصة بعد حصة." },
       { "title": "التحضير للاختبارات", "description": "بنجهّز الطالب للاختبارات بطريقة ذكية، تدريب عملي على أشكال أسئلة مختلفة، وفهم يخليه يدخل الامتحان واثق مش متلخبط." },
       { "title": "مواعيد مرنة", "description": "بنوفّر مواعيد تناسب وقتك ووقت ابنك، وتقدر ترتّب الجدول بسهولة من غير لخبطة أو ضغط." }
-    ]
+    ],
+    "imageAlt": "معلّم يقدّم حصة تعليمية لطالب عبر منصة Success Path Mentors",
+"float": {
+  "satisfaction": { "value": "+98%", "label": "رضا أولياء الأمور" },
+  "flexible": { "value": "مواعيد مرنة", "label": "تناسب وقتك" }
+  
+},
+"whatsappCta": "استفسر عبر واتساب",
+"whatsappMessage": "مرحبًا، أرغب في معرفة تفاصيل الخدمات التعليمية التي تقدّمونها."
   },
   "challenges": {
-    "heading": "هل بتواجه التحديات دي مع طفلك؟",
-    "subheading": "إحنا حاسين بقلقك... وعندنا الحل",
-    "watchVideo": "شاهد الفيديو",
-    "items": [
-      { "title": "صعوبة في الفهم والواجبات؟", "description": "الواجبات كتير ومش فاهمها، وبيحتاج حد يراجعه قبل الامتحان." },
-      { "title": "مفيش نتيجة رغم الدروس الخصوصية؟", "description": "دفعت كتير قبل كده بس تحسّن ابنك مش واضح." },
-      { "title": "ابنك مشتت ومش عارف يركز؟", "description": "مش قادر يكمّل مذاكرته أو يركز فترة طويلة، وده مأثّر على مستواه الدراسي." }
-    ]
+    "heading": "قصص نجاح من مشتركينا",
+"subheading": "شاهد تجارب حقيقية لأولياء أمور وطلاب حقّقوا نتائج ملموسة معنا",
+"watchVideo": "شاهد الفيديو",
+"close": "إغلاق",
+"items": [
+  {
+    "name": "أم محمد",
+    "role": "ولية أمر — الصف السادس",
+    "quote": "تحسّن مستوى ابني بشكل كبير خلال شهرين.",
+    "videoType": "youtube",
+    "videoSrc": "JBHnv3JDBP8?si=gv3OdVkmgQDKbVLN"
+  },
+  {
+    "name": "خالد العمري",
+    "role": "ولي أمر — الصف التاسع",
+    "quote": "المتابعة الدقيقة صنعت الفرق مع ابنتي.",
+   
+    "videoType": "youtube",
+    "videoSrc": "https://youtu.be/aNble0vhefs?si=OkTk6_yWtwjgtzjx"
+  },
+  {
+    "name": "سارة أحمد",
+    "role": "ولية أمر — الصف الثالث",
+    "quote": "منصة احترافية وتواصل ممتاز.",
+    "videoType": "youtube",
+    "videoSrc": "JBHnv3JDBP8?si=gv3OdVkmgQDKbVLN"
+  }
+]
   },
   "pricing": {
     "heading": "خطط الأسعار",
@@ -100,17 +333,33 @@
         "price": 120,
         "features": ["جلسة أونلاين فردية 1:1", "حصة اسبوعياً", "حصة مدتها ساعة", "4 حصص في الشهر", "خصم خاص لإخوة", "واجب بعد الحصة", "تقارير دورية"]
       }
-    ]
+    ],
+    "subheading": "باقات مرنة تناسب احتياج كل طالب — ابدأ رحلة التفوّق اليوم",
+    "popularBadge": "الأكثر اختيارًا",
+    "whatsappMessage": "مرحبًا، أرغب في الاشتراك في باقة \"{plan}\". أرجو تزويدي بتفاصيل الاشتراك.",
+    "cta": "اشترك الآن"
   },
   "faq": {
     "heading": "الأسئلة الشائعة",
     "subheading": "إجابات عن أكثر الأسئلة التي يطرحها أولياء الأمور حول خدماتنا التعليمية",
-    "items": [
-      { "question": "هل يمكنني تغيير المعلم؟", "answer": "" },
-      { "question": "هل يمكنني إعادة جدولة الحصة أو إلغاؤها؟", "answer": "" },
-      { "question": "ماذا سيحدث بعد حجز العرض التوضيحي؟", "answer": "" },
-      { "question": "هل تقدمون ضمان استرداد الأموال؟", "answer": "" }
-    ],
+  "items": [
+  {
+    "question": "هل يمكنني تغيير المعلّم إذا لم يكن مناسبًا؟",
+    "answer": "بالتأكيد. إذا شعرت أن المعلّم لا يناسب احتياجات الطالب، يمكنك طلب تغييره في أي وقت، وسنعمل على ترشيح معلّم آخر بما يضمن أفضل تجربة تعليمية."
+  },
+  {
+    "question": "هل يمكنني إعادة جدولة الحصة أو إلغاؤها؟",
+    "answer": "نعم، يمكنك إعادة جدولة الحصة أو إلغاؤها وفق سياسة المنصة، مع توفير مرونة في المواعيد بما يتناسب مع ظروفك."
+  },
+  {
+    "question": "ماذا يحدث بعد حجز الحصة التجريبية؟",
+    "answer": "بعد إرسال طلبك، سيتواصل معك فريقنا عبر واتساب أو البريد الإلكتروني لتأكيد البيانات، ثم يتم اختيار المعلّم المناسب وتحديد موعد الحصة التجريبية بما يناسب جدولك."
+  },
+  {
+    "question": "هل تقدمون ضمان استرداد الأموال؟",
+    "answer": "نعم، نحن نثق بجودة خدماتنا التعليمية، لذلك نوفر ضمان استرداد الأموال وفق الشروط والأحكام المعتمدة لضمان رضا أولياء الأمور والطلاب."
+  }
+],
     "stillHaveQuestions": "لم تجد إجابتك؟",
     "supportText": "تواصل معنا مباشرة وسنرد عليك خلال ساعات قليلة. فريقنا جاهز لمساعدتك.",
     "contactUs": "تواصل معنا"

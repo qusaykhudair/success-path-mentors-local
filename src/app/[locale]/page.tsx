@@ -10,9 +10,10 @@ import { Services } from '@/components/sections/home/services';
 import { Challenges } from '@/components/sections/home/challenges';
 import { Pricing } from '@/components/sections/home/pricing';
 import { Faq } from '@/components/sections/home/faq';
-import { Contact } from '@/components/sections/home/contact';
-import { TrustBadges } from '@/components/sections/home/trust-badges';
-import { ClosingCta } from '@/components/sections/home/closing-cta';
+import {
+  SITE,
+  ORGANIZATION,
+} from '@/lib/constants';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -24,42 +25,70 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'hero' });
-  const tMeta = await getTranslations({ locale, namespace: 'meta' });
+
 
   const url = `${SITE_URL}/${locale}`;
-  const title = t('heading');
-  const description = t('subheading');
-  const ogImage = `${SITE_URL}/og-image.jpg`; // TODO: confirm this asset exists in /public
+const ogImage = `${SITE_URL}${SITE.ogImage}`;
+const tMeta = await getTranslations({
+  locale,
+  namespace: 'meta',
+});
 
-  return {
+const tSeo = await getTranslations({
+  locale,
+  namespace: 'seo.home',
+});
+
+const title = tSeo('title');
+const description = tSeo('description');
+const keywords = tSeo('keywords')
+  .split(',')
+  .map((keyword) => keyword.trim());
+
+return {
+  title,
+  description,
+
+  keywords,
+
+  alternates: {
+    canonical: url,
+    languages: {
+      ...Object.fromEntries(
+        routing.locales.map((l) => [l, `${SITE_URL}/${l}`])
+      ),
+      'x-default': `${SITE_URL}/${routing.defaultLocale}`,
+    },
+  },
+
+  openGraph: {
     title,
     description,
-    alternates: {
-      canonical: url,
-      languages: {
-        ...Object.fromEntries(
-          routing.locales.map((l) => [l, `${SITE_URL}/${l}`])
-        ),
-        'x-default': `${SITE_URL}/${routing.defaultLocale}`,
+    url,
+    siteName: tMeta('siteName'),
+    locale: locale === 'ar' ? 'ar_EG' : 'en_US',
+    type: 'website',
+
+    images: [
+      {
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: title,
       },
-    },
-    openGraph: {
-      title: `${tMeta('siteName')} | ${title}`,
-      description,
-      url,
-      siteName: tMeta('siteName'),
-      locale,
-      type: 'website',
-      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: `${tMeta('siteName')} | ${title}`,
-      description,
-      images: [ogImage],
-    },
-  };
+    ],
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+
+    title,
+
+    description,
+
+    images: [ogImage],
+  },
+};
 }
 
 export default async function HomePage({
@@ -70,23 +99,26 @@ export default async function HomePage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const tMeta = await getTranslations({ locale, namespace: 'meta' });
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'EducationalOrganization',
-    name: tMeta('siteName'),
-    url: `${SITE_URL}/${locale}`,
-    // TODO: replace with real logo path and social profile URLs
-    logo: `${SITE_URL}/logo.png`,
-    sameAs: [],
-  };
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'EducationalOrganization',
+
+  name: ORGANIZATION.name,
+
+  legalName: ORGANIZATION.legalName,
+
+  logo: ORGANIZATION.logo,
+
+  description: SITE.description,
+
+  sameAs: ORGANIZATION.sameAs,
+};
 
   return (
     <>
       <script
         type="application/ld+json"
-        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main id="main-content">
@@ -98,9 +130,9 @@ export default async function HomePage({
         <Challenges />
         <Pricing />
         <Faq />
-        <Contact />
-        <TrustBadges />
-        <ClosingCta />
+        {/* <Contact /> */}
+          {/* <TrustBadges /> */}
+        {/* <ClosingCta /> */}
       </main>
     </>
   );

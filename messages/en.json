@@ -1,4 +1,11 @@
 {
+  "seo": {
+    "home": {
+      "title": "Online Tutoring & Academic Mentorship",
+      "description": "Professional online tutoring platform helping students achieve academic excellence.",
+      "keywords": "online tutoring, math tutoring, science tutoring"
+    }
+  },
   "meta": {
     "siteName": "Mustafa Academy",
     "tagline": "Success Path Mentors"
@@ -13,7 +20,114 @@
     "pricing": "Pricing",
     "faq": "FAQ",
     "contact": "Contact",
-    "bookFreeSession": "Book a Free Session"
+    "bookFreeSession": "Book a Free Session",
+    "whatsappBookingMessage": "Hello, I would like to purchase a free token share 🙌",
+"subjectsMenu": {
+  "trigger": "Subjects",
+  "categories": [
+    { "key": "k5", "label": "K-5 Subjects", "href": "/subjects#k5",
+      "children": [
+        { "label": "Elementary Math", "href": "/subjects#k5-math" },
+        { "label": "Phonics", "href": "/subjects#phonics" },
+        { "label": "Reading", "href": "/subjects#k5-reading" },
+        { "label": "Writing", "href": "/subjects#k5-writing" } ] },
+    { "key": "math", "label": "Math", "href": "/subjects#math",
+      "children": [
+        { "label": "All Math", "href": "/subjects#math" },
+        { "label": "Algebra", "href": "/subjects#algebra" },
+        { "label": "Calculus", "href": "/subjects#calculus" },
+        { "label": "Geometry", "href": "/subjects#geometry" },
+        { "label": "Statistics", "href": "/subjects#statistics" },
+        { "label": "Trigonometry", "href": "/subjects#trigonometry" } ] },
+    { "key": "science", "label": "Science", "href": "/subjects#science",
+      "children": [
+        { "label": "All Science", "href": "/subjects#science" },
+        { "label": "Biology", "href": "/subjects#biology" },
+        { "label": "Chemistry", "href": "/subjects#chemistry" },
+        { "label": "Physics", "href": "/subjects#physics" },
+        { "label": "Physiology", "href": "/subjects#physiology" } ] },
+    { "key": "ap", "label": "AP", "href": "/subjects#ap",
+      "children": [
+        { "label": "AP Biology", "href": "/subjects#ap-biology" },
+        { "label": "AP Calculus", "href": "/subjects#ap-calculus" },
+        { "label": "AP Chemistry", "href": "/subjects#ap-chemistry" },
+        { "label": "AP Physics", "href": "/subjects#ap-physics" },
+        { "label": "AP History", "href": "/subjects#ap-history" } ] },
+    { "key": "testprep", "label": "Test Prep", "href": "/subjects#test-prep",
+      "children": [
+        { "label": "All Test Prep", "href": "/subjects#test-prep" },
+        { "label": "SAT", "href": "/subjects#sat" },
+        { "label": "ACT", "href": "/subjects#act" },
+        { "label": "PSAT", "href": "/subjects#psat" },
+        { "label": "ISEE", "href": "/subjects#isee" } ] },
+    { "key": "gradTestPrep", "label": "Graduate Test Prep", "href": "/subjects#grad-test-prep",
+      "children": [
+        { "label": "GRE", "href": "/subjects#gre" },
+        { "label": "GMAT", "href": "/subjects#gmat" },
+        { "label": "LSAT", "href": "/subjects#lsat" },
+        { "label": "MCAT", "href": "/subjects#mcat" } ] },
+    { "key": "english", "label": "English", "href": "/subjects#english",
+      "children": [
+        { "label": "All English", "href": "/subjects#english" },
+        { "label": "Reading", "href": "/subjects#reading" },
+        { "label": "Writing", "href": "/subjects#writing" },
+        { "label": "Literature", "href": "/subjects#literature" },
+        { "label": "Essay Editing", "href": "/subjects#essay-editing" } ] },
+    { "key": "languages", "label": "Languages", "href": "/subjects#languages",
+      "children": [
+        { "label": "All Languages", "href": "/subjects#languages" },
+        { "label": "Arabic", "href": "/subjects#arabic" },
+        { "label": "French", "href": "/subjects#french" },
+        { "label": "Spanish", "href": "/subjects#spanish" },
+        { "label": "German", "href": "/subjects#german" } ] },
+    { "key": "business", "label": "Business", "href": "/subjects#business",
+      "children": [
+        { "label": "All Business", "href": "/subjects#business" },
+        { "label": "Accounting", "href": "/subjects#accounting" },
+        { "label": "Economics", "href": "/subjects#economics" },
+        { "label": "Finance", "href": "/subjects#finance" },
+        { "label": "Marketing", "href": "/subjects#marketing" } ] },
+    { "key": "tech", "label": "Technology & Coding", "href": "/subjects#tech",
+      "children": [
+        { "label": "All Technology & Coding", "href": "/subjects#tech" },
+        { "label": "Computer Science", "href": "/subjects#computer-science" },
+        { "label": "Python", "href": "/subjects#python" },
+        { "label": "Java", "href": "/subjects#java" },
+        { "label": "SQL", "href": "/subjects#sql" } ] },
+    { "key": "social", "label": "Social Studies", "href": "/subjects#social-studies",
+      "children": [
+        { "label": "All Social Studies", "href": "/subjects#social-studies" },
+        { "label": "History", "href": "/subjects#history" },
+        { "label": "AP History", "href": "/subjects#ap-history-2" },
+        { "label": "AP Human Geography", "href": "/subjects#ap-human-geography" } ] },
+    { "key": "humanities", "label": "Humanities", "href": "/subjects#humanities",
+      "children": [
+        { "label": "Essay Editing", "href": "/subjects#humanities-essay" },
+        { "label": "History", "href": "/subjects#humanities-history" },
+        { "label": "Law", "href": "/subjects#law" },
+        { "label": "Literature", "href": "/subjects#humanities-literature" },
+        { "label": "Theology", "href": "/subjects#theology" } ] },
+    { "key": "learningDiff", "label": "Learning Differences", "href": "/subjects#learning-differences",
+      "children": [
+        { "label": "All Learning Differences", "href": "/subjects#learning-differences" },
+        { "label": "Special Education", "href": "/subjects#special-education" } ] },
+    { "key": "popular", "label": "Popular Subjects", "href": "/subjects#popular",
+      "children": [
+        { "label": "Algebra", "href": "/subjects#algebra" },
+        { "label": "Calculus", "href": "/subjects#calculus" },
+        { "label": "Chemistry", "href": "/subjects#chemistry" },
+        { "label": "Physics", "href": "/subjects#physics" },
+        { "label": "SAT Prep", "href": "/subjects#sat" },
+        { "label": "Spanish", "href": "/subjects#spanish" } ] }
+  ]
+}
+  },
+
+  "notFound": {
+    "heading": "Page not found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "backHome": "Back to home",
+    "contactUs": "Contact us"
   },
   "hero": {
     "eyebrow": "A simple approach that puts your child's studies at ease",
@@ -34,7 +148,61 @@
   "achievement": {
     "label": "Course completion rate"
   },
-  "imageAlt": "Students collaborating in a classroom at Success path Mentors"
+  "imageAlt": "Students collaborating in a classroom at Success path Mentors",
+"enrollment": {
+  "title": "Get Started — Enroll in Just One Minute",
+  "reassurance": "Your information is 100% secure",
+  "next": "Next",
+  "back": "Back",
+  "submit": "Submit",
+  "submitting": "Submitting...",
+  "successTitle": "Request Received!",
+  "successBody": "We'll contact you on WhatsApp shortly.",
+  "stepOf": "Step #CURRENT# of #TOTAL#",
+  "labels": {
+    "parentName": "Parent's Name",
+    "whatsapp": "WhatsApp Number",
+    "email": "Email Address",
+    "studentAge": "Student's Age",
+    "country": "Country",
+    "province": "State / Province",
+    "subjects": "Subject(s) Needed",
+    "teachingLanguage": "Preferred Teaching Language",
+    "notes": "Additional Notes"
+  },
+  "placeholders": {
+    "parentName": "Enter parent's name",
+    "whatsapp": "Enter WhatsApp number",
+    "email": "Enter email address",
+    "studentAge": "Enter student's age",
+    "province": "Enter state or province",
+    "notes": "Write any additional notes here..."
+  },
+  "errors": {
+    "required": "This field is required.",
+    "email": "Please enter a valid email address.",
+    "age": "Please enter a valid age.",
+    "subjects": "Please select at least one subject."
+  },
+  "countries": [
+    { "value": "usa", "label": "United States" },
+    { "value": "canada", "label": "Canada" }
+  ],
+  "subjectOptions": [
+    { "value": "english", "label": "English" },
+    { "value": "french", "label": "French" },
+    { "value": "math", "label": "Mathematics" },
+    { "value": "physics", "label": "Physics" },
+    { "value": "science", "label": "Science" },
+    { "value": "chemistry", "label": "Chemistry" },
+    { "value": "biology", "label": "Biology" },
+    { "value": "other", "label": "Other Subject" }
+  ],
+  "languages": [
+    { "value": "english", "label": "English" },
+    { "value": "french", "label": "French" }
+  ]
+}
   
   },
   "programs": {
@@ -47,11 +215,40 @@
       { "title": "Quran & Arabic Language Programs", "description": "Free programs for learning the Quran and Arabic language." },
       { "title": "Programs for Teens Who Left School", "description": "Free, dedicated support to help teens get back on an academic path." },
       { "title": "Specialized Programs", "description": "IELTS, TOEFL, SAT, GMAT prep, and language learning for adults." }
-    ]
+    ],
+    "imageAlt": "A live tutoring session with a mentor at Success Path Mentors",
+"liveLabel": "Live classes",
+"badge": { "value": "500+", "label": "Top students" }
   },
   "testimonials": {
     "heading": "Student & Parent Testimonials",
-    "subheading": "Our goal is to walk with students every step of the way"
+    "ratingLabel": "Rating: {rating} out of 5 stars",
+    "items": [
+  {
+    "quote": "My son's academic performance improved significantly in just two months. His tutor is dedicated, supportive, and always follows up on his progress.",
+    "name": "Mohammed's Mother",
+    "role": "Parent — Grade 6",
+    "rating": 5
+  },
+  {
+    "quote": "The lessons are well-structured, the explanations are clear, and my daughter now enjoys mathematics after struggling with it for years.",
+    "name": "Khalid Al-Omari",
+    "role": "Parent — Grade 9",
+    "rating": 5
+  },
+  {
+    "quote": "A truly professional platform with excellent communication through WhatsApp. I highly recommend it to any parent looking for quality education.",
+    "name": "Sarah Ahmed",
+    "role": "Parent — Grade 3",
+    "rating": 5
+  },
+  {
+    "quote": "The tutors are friendly, the lessons are engaging, and learning has become much more enjoyable for me.",
+    "name": "Qusai Khudair",
+    "role": "Student — Grade 5",
+    "rating": 5
+  }
+]
   },
   "steps": {
     "heading": "Five simple steps toward a stronger, better future",
@@ -73,17 +270,43 @@
       { "title": "Homework After Every Session", "description": "Every session is followed by simple homework to reinforce understanding, with follow-up and correction to help the student improve session after session." },
       { "title": "Exam Preparation", "description": "We prepare students for exams intelligently, with practical training on different question formats and understanding that helps them walk into exams confident, not confused." },
       { "title": "Flexible Scheduling", "description": "We offer times that fit your schedule and your child's, so you can arrange sessions easily without stress." }
-    ]
+    ],
+    "imageAlt": "A tutor giving a lesson to a student at Success Path Mentors",
+"float": {
+  "satisfaction": { "value": "98%", "label": "Parent satisfaction" },
+  "flexible": { "value": "Flexible timing", "label": "Fits your schedule" }
+},
+  "whatsappCta": "Ask on WhatsApp",
+"whatsappMessage": "Hello, I'd like to know more about the tutoring services you offer."
   },
   "challenges": {
-    "heading": "Are you facing these challenges with your child?",
-    "subheading": "We understand your concern... and we have the solution",
-    "watchVideo": "Watch Video",
-    "items": [
-      { "title": "Struggling to understand homework?", "description": "There's too much homework and it's hard to follow, and they need someone to review it before exams." },
-      { "title": "No results despite private lessons?", "description": "You've paid a lot before, but your child's improvement isn't clear." },
-      { "title": "Is your child distracted and unable to focus?", "description": "Can't complete their studying or focus for long periods, which is affecting their academic level." }
-    ]
+    "heading": "Success stories from our members",
+"subheading": "Watch real experiences from parents and students who achieved tangible results with us",
+"watchVideo": "Watch video",
+"close": "Close",
+"items": [
+  {
+    "name": "Um Mohammed",
+    "role": "Parent — Grade 6",
+    "quote": "My son improved dramatically within two months.",
+    "videoType": "youtube",
+    "videoSrc": "JBHnv3JDBP8?si=gv3OdVkmgQDKbVLN"
+  },
+  {
+    "name": "Khaled Al-Omari",
+    "role": "Parent — Grade 9",
+    "quote": "The close follow-up made all the difference for my daughter.",
+    "videoType": "youtube",
+    "videoSrc": "JBHnv3JDBP8?si=gv3OdVkmgQDKbVLN"
+  },
+  {
+    "name": "Sarah Ahmed",
+    "role": "Parent — Grade 3",
+    "quote": "A professional platform with excellent communication.",
+    "videoType": "youtube",
+    "videoSrc": "JBHnv3JDBP8?si=gv3OdVkmgQDKbVLN"
+  }
+]
   },
   "pricing": {
     "heading": "Pricing Plans",
@@ -101,17 +324,33 @@
         "price": 120,
         "features": ["Private 1:1 online session", "Weekly session", "1-hour session", "4 sessions per month", "Special sibling discount", "Homework after each session", "Regular reports"]
       }
-    ]
+    ],
+    "subheading": "Flexible plans to fit every student's needs — start the journey to success today",
+"popularBadge": "Most popular",
+"whatsappMessage": "Hello, I'd like to subscribe to the \"{plan}\" plan. Please share the subscription details.",
+"cta": "Subscribe now"
   },
   "faq": {
     "heading": "Frequently Asked Questions",
     "subheading": "Answers to the most common questions parents ask about our educational services",
-    "items": [
-      { "question": "Can I change my child's tutor?", "answer": "" },
-      { "question": "Can I reschedule or cancel a session?", "answer": "" },
-      { "question": "What happens after I book a demo?", "answer": "" },
-      { "question": "Do you offer a money-back guarantee?", "answer": "" }
-    ],
+ "items": [
+  {
+    "question": "Can I request a different tutor if needed?",
+    "answer": "Absolutely. If you feel the assigned tutor is not the right fit for your child, you can request a replacement at any time. We'll match you with another qualified tutor to ensure the best learning experience."
+  },
+  {
+    "question": "Can I reschedule or cancel a lesson?",
+    "answer": "Yes. You can reschedule or cancel your lesson in accordance with our scheduling policy, giving you the flexibility to adapt to your family's needs."
+  },
+  {
+    "question": "What happens after I book a trial lesson?",
+    "answer": "Once your request is submitted, our team will contact you via WhatsApp or email to confirm your details, recommend the most suitable tutor, and schedule your trial lesson at a convenient time."
+  },
+  {
+    "question": "Do you offer a money-back guarantee?",
+    "answer": "Yes. We stand behind the quality of our educational services and offer a money-back guarantee under our terms and conditions to ensure complete confidence and satisfaction."
+  }
+],
     "stillHaveQuestions": "Didn't find your answer?",
     "supportText": "Reach out to us directly and we'll respond within a few hours. Our team is ready to help.",
     "contactUs": "Contact Us"

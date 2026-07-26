@@ -1,12 +1,24 @@
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, getLocale } from 'next-intl/server';
 import Image from 'next/image';
-import { Link } from '@/i18n/navigation';
 import { Container } from '@/components/ui/container';
 
 export async function SiteFooter() {
   const t = await getTranslations('footer');
   const tNav = await getTranslations('nav');
+  const locale = await getLocale();
   const year = new Date().getFullYear();
+
+  // Anchor links into homepage sections — same pattern as SiteHeader.
+  // A plain <a> with the locale prefix keeps the active language;
+  // next-intl's <Link> would drop the hash behavior otherwise.
+  const sectionLinks = [
+    // { href: `/${locale}#about`, label: tNav('about') },
+    { href: `/${locale}#programs`, label: tNav('programs') },
+    { href: `/${locale}#services`, label: tNav('services') },
+    { href: `/${locale}#faq`, label: tNav('faq') },
+    { href: `/${locale}#pricing`, label: tNav('pricing') }
+
+  ];
 
   return (
     <footer className="border-t border-primary-100 bg-primary-50">
@@ -25,10 +37,14 @@ export async function SiteFooter() {
         <div>
           <h3 className="text-h4 text-primary">{t('quickLinks')}</h3>
           <ul className="mt-4 space-y-2">
-            <li><Link href="/about" className="text-small text-ink/70 hover:text-primary">{tNav('about')}</Link></li>
-            <li><Link href="/services" className="text-small text-ink/70 hover:text-primary">{tNav('services')}</Link></li>
-            <li><Link href="/faq" className="text-small text-ink/70 hover:text-primary">{tNav('faq')}</Link></li>
-            <li><Link href="/contact" className="text-small text-ink/70 hover:text-primary">{tNav('contact')}</Link></li>
+            {sectionLinks.map((link) => (
+              <li key={link.href}>
+                <a href={link.href} className="text-small text-ink/70 hover:text-primary">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+         
           </ul>
         </div>
 
@@ -46,10 +62,7 @@ export async function SiteFooter() {
       <div className="border-t border-primary-100 py-6">
         <Container className="flex flex-col items-center justify-between gap-2 text-caption text-ink/60 sm:flex-row">
           <p>© {year} Mustafa Academy — Success Path Mentors. {t('rightsReserved')}.</p>
-          <div className="flex gap-4">
-            <Link href="/privacy" className="hover:text-primary">Privacy</Link>
-            <Link href="/terms" className="hover:text-primary">Terms</Link>
-          </div>
+     
         </Container>
       </div>
     </footer>

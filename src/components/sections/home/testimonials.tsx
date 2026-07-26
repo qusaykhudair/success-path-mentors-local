@@ -1,31 +1,25 @@
+// testimonials.tsx  — Server Component
 import { getTranslations } from 'next-intl/server';
-import { Quote } from 'lucide-react';
 import { Section, SectionHeading } from '@/components/ui/section';
-import { Card } from '@/components/ui/card';
-const placeholderTestimonials = [1, 2, 3];
+import { TestimonialsCarousel, type Testimonial } from './testimonials-carousel';
 
 export async function Testimonials() {
   const t = await getTranslations('testimonials');
+  const items = t.raw('items') as Testimonial[];
+  const headingId = 'testimonials-heading';
+
+  if (!Array.isArray(items) || items.length === 0) return null;
 
   return (
-    <Section>
-      <SectionHeading heading={t('heading')} subheading={t('subheading')} />
-      <div className="grid gap-6 md:grid-cols-3">
-        {placeholderTestimonials.map((id) => (
-          <Card key={id} className="flex flex-col">
-            <Quote className="h-8 w-8 text-accent-400" aria-hidden />
-            <p className="mt-4 flex-1 text-small italic text-ink/50">
-              Testimonial content pending — to be provided by the client.
-            </p>
-            <div className="mt-6 flex items-center gap-3 border-t border-primary-100 pt-4">
-              <div className="h-10 w-10 rounded-full bg-primary-100" aria-hidden />
-              <div>
-                <p className="text-small font-semibold text-primary">Parent / Student name</p>
-                <p className="text-caption text-ink/50">Pending</p>
-              </div>
-            </div>
-          </Card>
-        ))}
+    <Section id="testimonials" tone="tint" aria-labelledby={headingId}>
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -end-20 top-10 h-72 w-72 rounded-full bg-accent-300/15 blur-3xl" />
+        <div className="absolute -start-20 bottom-10 h-72 w-72 rounded-full bg-primary-300/15 blur-3xl" />
+      </div>
+
+      <div className="relative">
+        <SectionHeading  heading={t('heading')} />
+        <TestimonialsCarousel items={items} ratingLabel={t('ratingLabel', { rating: 5 })} />
       </div>
     </Section>
   );
