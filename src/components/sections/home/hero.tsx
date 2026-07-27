@@ -86,9 +86,9 @@ export async function Hero({ secondaryCtaTarget = 'programs' }: HeroProps = {}) 
               <ButtonLink
                 href="/contact"
                 size="lg"
-                className="group relative w-full overflow-hidden bg-gradient-to-r from-accent-600 to-accent-500 font-semibold shadow-lg shadow-accent-600/25 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-xl hover:shadow-accent-600/40 focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 active:translate-y-0 active:shadow-md motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:w-auto"
+                className="group relative w-full overflow-hidden bg-gradient-to-r from-accent-600 to-accent-500 font-semibold shadow-lg shadow-accent-600/25 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-xl hover:shadow-accent-600/40 focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 active:translate-y-0 active:shadow-md motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:w-auto text-white"
               >
-                <span aria-hidden="true" className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full motion-reduce:hidden" />
+                <span aria-hidden="true" className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full motion-reduce:hidden " />
                 <span className="relative">{t('ctaPrimary')}</span>
               </ButtonLink>
 

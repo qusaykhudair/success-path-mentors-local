@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Tajawal } from 'next/font/google';
+import { dinNext } from "@/lib/fonts";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -10,12 +10,7 @@ import { SiteHeader } from '@/components/layout/site-header';
 import { SiteFooter } from '@/components/layout/site-footer';
 import '../globals.css';
 
-const tajawal = Tajawal({
-  subsets: ['arabic', 'latin'],
-  weight: ['300', '400', '500', '700', '800', '900'],
-  variable: '--font-tajawal',
-  display: 'swap',
-});
+
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -93,7 +88,11 @@ export default async function LocaleLayout({
   };
 
   return (
-    <html lang={locale} dir={dir} className={tajawal.variable}>
+    <html
+  lang={locale}
+  dir={dir}
+  className={dinNext.variable}
+>
       <body>
         <script
           type="application/ld+json"
