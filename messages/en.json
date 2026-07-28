@@ -22,6 +22,9 @@
     "contact": "Contact",
     "bookFreeSession": "Book a Free Session",
     "whatsappBookingMessage": "Hello, I would like to purchase a free token share 🙌",
+      "primaryNavigation": "Primary navigation",
+"openMenu": "Open menu",
+"closeMenu": "Close menu",
 "subjectsMenu": {
   "trigger": "Subjects",
   "categories": [
@@ -130,16 +133,29 @@
     "contactUs": "Contact us"
   },
   "hero": {
-    "eyebrow": "A simple approach that puts your child's studies at ease",
-    "heading": "Improve your child's academic achievement and performance",
-    "subheading": "We provide one-to-one tutoring to help your child excel.",
-    "ctaPrimary": "Book a Free Session",
-    "ctaSecondary": "Explore Our Programs",
-    "stats": [
-      { "value": 500, "suffix": "+", "label": "Successful Students" },
-      { "value": 98, "suffix": "%", "label": "Parent Satisfaction" },
-      { "value": 50, "suffix": "+", "label": "Specialized Tutors" }
-    ],
+  "eyebrow": "Personalized Online Tutoring • Grades 1–12",
+"heading": "One-to-One Online Tutoring That Builds Real Academic Confidence",
+"subheading": "Personalized Math, English, Science, and French tutoring aligned with Canadian and American curricula.",
+"ctaPrimary": "Book Your Free Trial",
+"ctaSecondary": "Explore Our Programs",
+"whatsappBookingMessage": "Hello, I would like to book a free trial lesson with Mustafa Academy.",
+  "stats": [
+  {
+    "value": 150,
+    "suffix": "+",
+    "label": "Active Students"
+  },
+  {
+    "value": 700,
+    "suffix": "+",
+    "label": "Monthly Sessions"
+  },
+  {
+    "value": 30,
+    "suffix": "+",
+    "label": "Specialized Tutors"
+  }
+],
           "socialProof": "Join {count} learners already growing with us",
   "rating": {
     "value": "4.9",
@@ -327,8 +343,7 @@
     ],
     "subheading": "Flexible plans to fit every student's needs — start the journey to success today",
 "popularBadge": "Most popular",
-"whatsappMessage": "Hello, I'd like to subscribe to the \"{plan}\" plan. Please share the subscription details.",
-"cta": "Subscribe now"
+"whatsappMessage": "Hello, I'd like to subscribe to the \"{plan}\" plan. Please share the subscription details."
   },
   "faq": {
     "heading": "Frequently Asked Questions",

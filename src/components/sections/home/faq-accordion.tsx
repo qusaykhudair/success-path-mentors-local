@@ -43,7 +43,7 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
               <div
                 key={item.question}
                 style={{ animationDelay: `${Math.min(index, 8) * 60}ms` }}
-                className={`faq-item-in overflow-hidden rounded-card border bg-surface shadow-card transition-[box-shadow,border-color] duration-300 ${
+                className={`faq-item-in overflow-hidden rounded-card border bg-card shadow-card transition-[box-shadow,border-color] duration-300 ${
                   isOpen ? 'border-primary/30 shadow-card-hover' : 'border-primary/10'
                 }`}
               >

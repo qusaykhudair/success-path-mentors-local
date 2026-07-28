@@ -11,7 +11,7 @@ export async function Testimonials() {
   if (!Array.isArray(items) || items.length === 0) return null;
 
   return (
-    <Section id="testimonials" tone="tint" aria-labelledby={headingId}>
+    <Section id="testimonials" aria-labelledby={headingId}>
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -end-20 top-10 h-72 w-72 rounded-full bg-accent-300/15 blur-3xl" />
         <div className="absolute -start-20 bottom-10 h-72 w-72 rounded-full bg-primary-300/15 blur-3xl" />

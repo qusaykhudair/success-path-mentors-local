@@ -29,7 +29,7 @@ export async function Services() {
   const waHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waMessage)}`;
 
   return (
-    <Section id="services" tone="tint" aria-labelledby={headingId}>
+    <Section id="services"  aria-labelledby={headingId}>
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute end-1/3 top-0 h-96 w-96 translate-x-1/2 rounded-full bg-accent-300/12 blur-3xl" />
         <div className="absolute start-0 bottom-0 h-80 w-80 rounded-full bg-primary-300/12 blur-3xl" />

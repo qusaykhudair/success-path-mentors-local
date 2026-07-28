@@ -64,7 +64,7 @@ export async function Steps() {
                 </span>
 
                 <Reveal delay={0.1 * i}>
-                  <div className="group relative overflow-hidden rounded-2xl border border-primary-100 bg-surface p-5 shadow-card transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-accent-200 hover:shadow-xl hover:shadow-accent-500/10 motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-6">
+                  <div className="group relative overflow-hidden rounded-2xl border border-primary-100 bg-card p-5 shadow-card transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-accent-200 hover:shadow-xl hover:shadow-accent-500/10 motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-6">
                     <span aria-hidden="true" className="pointer-events-none absolute -end-8 -top-8 h-24 w-24 rounded-full bg-accent-300/0 blur-2xl transition-colors duration-300 ease-out group-hover:bg-accent-300/25" />
                     <span aria-hidden="true" className="absolute inset-x-0 top-0 h-0.5 origin-center scale-x-0 bg-gradient-to-r from-transparent via-accent-500 to-transparent transition-transform duration-500 ease-out group-hover:scale-x-100" />
 

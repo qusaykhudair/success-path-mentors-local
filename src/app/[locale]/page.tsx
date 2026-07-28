@@ -11,8 +11,7 @@ import { Challenges } from '@/components/sections/home/challenges';
 import { Pricing } from '@/components/sections/home/pricing';
 import { Faq } from '@/components/sections/home/faq';
 import {
-  SITE,
-  ORGANIZATION,
+  SITE
 } from '@/lib/constants';
 
 export function generateStaticParams() {
@@ -97,43 +96,24 @@ export default async function HomePage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+
   setRequestLocale(locale);
-
-
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'EducationalOrganization',
-
-  name: ORGANIZATION.name,
-
-  legalName: ORGANIZATION.legalName,
-
-  logo: ORGANIZATION.logo,
-
-  description: SITE.description,
-
-  sameAs: ORGANIZATION.sameAs,
-};
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <main id="main-content">
-        <Hero />
-        <Programs />
-        <Testimonials />
-        <Steps />
-        <Services />
-        <Challenges />
-        <Pricing />
-        <Faq />
-        {/* <Contact /> */}
-          {/* <TrustBadges /> */}
-        {/* <ClosingCta /> */}
-      </main>
+      <Hero />
+      <Programs />
+      <Testimonials />
+      <Steps />
+      <Services />
+      <Challenges />
+      <Pricing />
+      <Faq />
+
+      {/* Future sections */}
+      {/* <Contact /> */}
+      {/* <TrustBadges /> */}
+      {/* <ClosingCta /> */}
     </>
   );
 }

@@ -10,7 +10,7 @@ export async function ClosingCta() {
     <Section tone="primary" className="text-center">
       <h2 className="text-h2 text-white">{t('heading')}</h2>
       <p className="mx-auto mt-4 max-w-xl text-body text-white/80">{t('subheading')}</p>
-      <Link href="/contact" className={`${buttonVariants({ variant: 'accent', size: 'lg' })} mt-8`}>
+      <Link href="/" className={`${buttonVariants({ variant: 'accent', size: 'lg' })} mt-8`}>
         {t('cta')}
       </Link>
     </Section>

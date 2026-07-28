@@ -33,14 +33,7 @@ export async function Faq() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
-      )}
-
-      {/* توهج خلفي خفيف بلون العلامة التجارية */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-32 start-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-primary/10 blur-3xl"
-      />
-
+      )}      
       <SectionHeading heading={t('heading')} subheading={t('subheading')} />
 
       <div className="relative mx-auto max-w-3xl">

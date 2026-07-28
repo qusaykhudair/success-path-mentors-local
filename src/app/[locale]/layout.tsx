@@ -1,13 +1,24 @@
 import type { Metadata } from 'next';
-import { dinNext } from "@/lib/fonts";
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
-import { notFound } from 'next/navigation';
 import type { ReactNode } from 'react';
-import { routing, localeDirection, type Locale } from '@/i18n/routing';
-import { SITE_URL, ORGANIZATION } from '@/lib/constants';
-import { SiteHeader } from '@/components/layout/site-header';
+
+import { NextIntlClientProvider } from 'next-intl';
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from 'next-intl/server';
+import { notFound } from 'next/navigation';
+
 import { SiteFooter } from '@/components/layout/site-footer';
+import { SiteHeader } from '@/components/layout/site-header';
+import {
+  localeDirection,
+  routing,
+  type Locale,
+} from '@/i18n/routing';
+import { ORGANIZATION, SITE_URL } from '@/lib/constants';
+import { dinNext } from '@/lib/fonts';
+
 import '../globals.css';
 
 
@@ -103,14 +114,31 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
         <NextIntlClientProvider messages={messages}>
-          <a
-            href="#main-content"
-            className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-4 focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-white"
-          >
-            Skip to content
-          </a>
+<a
+  href="#main-content"
+  className="
+    sr-only
+    focus:not-sr-only
+    focus:fixed
+    focus:start-4
+    focus:top-4
+    focus:z-[100]
+    focus:rounded-lg
+    focus:bg-primary
+    focus:px-4
+    focus:py-3
+    focus:text-sm
+    focus:font-bold
+    focus:text-white
+    focus:shadow-lg
+  "
+>
+  {locale === 'ar' ? 'انتقل إلى المحتوى الرئيسي' : 'Skip to main content'}
+</a>
           <SiteHeader />
-          <main id="main-content">{children}</main>
+         <main id="main-content" tabIndex={-1}>
+  {children}
+</main>
           <SiteFooter />
         </NextIntlClientProvider>
       </body>

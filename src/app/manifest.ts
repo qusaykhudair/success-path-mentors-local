@@ -1,25 +1,28 @@
 import type { MetadataRoute } from 'next';
 
+import { SITE } from '@/lib/constants';
+
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    id: '/',
-    name: 'Mustafa Academy — Success Path Mentors',
+    id: '/en',
+
+    name: SITE.name,
+
     short_name: 'Mustafa Academy',
 
-    description:
-      'Professional online tutoring platform helping students succeed through personalized learning and expert mentorship.',
+    description: SITE.description,
 
-    start_url: '/',
+    start_url: '/en',
 
     scope: '/',
 
     display: 'standalone',
 
-    orientation: 'portrait',
+    orientation: 'portrait-primary',
 
-    background_color: '#ffffff',
+    background_color: SITE.backgroundColor,
 
-    theme_color: '#0F172A',
+    theme_color: SITE.themeColor,
 
     lang: 'en',
 
@@ -29,7 +32,6 @@ export default function manifest(): MetadataRoute.Manifest {
       'education',
       'online learning',
       'tutoring',
-      'mentoring',
     ],
 
     icons: [
@@ -37,32 +39,48 @@ export default function manifest(): MetadataRoute.Manifest {
         src: '/icons/icon-192.png',
         sizes: '192x192',
         type: 'image/png',
+        purpose: 'any',
       },
       {
         src: '/icons/icon-512.png',
         sizes: '512x512',
         type: 'image/png',
+        purpose: 'any',
       },
       {
         src: '/icons/apple-touch-icon.png',
         sizes: '180x180',
         type: 'image/png',
+        purpose: 'any',
       },
     ],
-
-    screenshots: [],
 
     shortcuts: [
       {
         name: 'Programs',
         short_name: 'Programs',
-        url: '/en/programs',
+        description: 'Explore tutoring programs',
+        url: '/en#programs',
+        icons: [
+          {
+            src: '/icons/icon-192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+        ],
       },
-
       {
-        name: 'Contact',
-        short_name: 'Contact',
-        url: '/en/contact',
+        name: 'Pricing',
+        short_name: 'Pricing',
+        description: 'View tutoring plans',
+        url: '/en#pricing',
+        icons: [
+          {
+            src: '/icons/icon-192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+        ],
       },
     ],
   };

@@ -43,19 +43,20 @@ export const SITE = {
     'Mustafa Academy is a professional online tutoring platform providing personalized academic support, expert mentors, and high-quality educational programs to help students achieve their full potential.',
 
   /** Default Open Graph image */
-  ogImage: '/images/og-image.png',
+ogImage: '/images/logo.png',
+
 
   /** Twitter Card image */
-  twitterImage: '/images/twitter-image.png',
+ twitterImage: '/images/logo.png',
 
   /** Favicon */
-  favicon: '/favicon.ico',
+  favicon: 'src/app/icon.png',
 
   /** Apple Touch Icon */
-  appleTouchIcon: '/apple-touch-icon.png',
+  appleTouchIcon: '/icons/apple-touch-icon.png',
 
   /** Theme color */
-  themeColor: '#0F172A',
+themeColor: '#0F172A',
 
   /** Background color */
   backgroundColor: '#FFFFFF',
@@ -73,25 +74,14 @@ export const ORGANIZATION = {
   legalName: SITE.legalName,
 
   url: SITE.url,
-ogImage: '/images/og-image.jpg',
+
   logo: `${SITE.url}/images/logo.png`,
 
   description: SITE.description,
 
-  sameAs: [
-    /**
-     * Add official social media profiles here.
-     *
-     * Example:
-     * 'https://facebook.com/...',
-     * 'https://instagram.com/...',
-     * 'https://linkedin.com/company/...'
-     */
-  ],
+  sameAs: [] as string[],
 
-  founders: [
-    // Future implementation
-  ],
+  founders: [] as string[],
 } as const;
 
 /**

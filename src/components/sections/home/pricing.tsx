@@ -31,7 +31,7 @@ export async function Pricing() {
   }
 
   return (
-    <Section  tone="tint" id="pricing" aria-labelledby={headingId}>
+    <Section id="pricing" aria-labelledby={headingId}>
       {/* decorative background */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute start-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-accent-300/12 blur-3xl" />
