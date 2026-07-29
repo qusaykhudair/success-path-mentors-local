@@ -1,7 +1,21 @@
+// Client Component
+
 'use client';
 
-import { useMemo, useState } from 'react';
-import { ChevronDown, MessageCircleQuestion } from 'lucide-react';
+import {
+  type KeyboardEvent,
+  useEffect,
+  useId,
+  useRef,
+  useState,
+} from 'react';
+
+import {
+  ChevronDown,
+  MessageCircleQuestion,
+} from 'lucide-react';
+
+import { cn } from '@/lib/utils';
 
 interface FaqItem {
   question: string;
@@ -12,89 +26,366 @@ interface FaqAccordionProps {
   items: FaqItem[];
 }
 
-export function FaqAccordion({ items }: FaqAccordionProps) {
-  const [query] = useState('');
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+export function FaqAccordion({
+  items,
+}: FaqAccordionProps) {
+  const [openIndex, setOpenIndex] =
+    useState<number | null>(0);
 
-  const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    if (!q) return items;
-    return items.filter(
-      (item) =>
-        item.question.toLowerCase().includes(q) ||
-        item.answer.toLowerCase().includes(q),
+  const baseId = useId();
+
+  const buttonRefs = useRef<
+    Array<HTMLButtonElement | null>
+  >([]);
+
+  useEffect(() => {
+    if (
+      openIndex !== null &&
+      openIndex >= items.length
+    ) {
+      setOpenIndex(
+        items.length > 0 ? 0 : null
+      );
+    }
+  }, [items.length, openIndex]);
+
+  function toggleItem(index: number) {
+    setOpenIndex((current) =>
+      current === index ? null : index
     );
-  }, [items, query]);
+  }
+
+  function focusQuestion(index: number) {
+    const normalizedIndex =
+      (index + items.length) %
+      items.length;
+
+    buttonRefs.current[
+      normalizedIndex
+    ]?.focus();
+  }
+
+  function handleKeyDown(
+    event: KeyboardEvent<HTMLButtonElement>,
+    index: number
+  ) {
+    switch (event.key) {
+      case 'ArrowDown':
+        event.preventDefault();
+        focusQuestion(index + 1);
+        break;
+
+      case 'ArrowUp':
+        event.preventDefault();
+        focusQuestion(index - 1);
+        break;
+
+      case 'Home':
+        event.preventDefault();
+        focusQuestion(0);
+        break;
+
+      case 'End':
+        event.preventDefault();
+        focusQuestion(items.length - 1);
+        break;
+
+      default:
+        break;
+    }
+  }
+
+  if (!Array.isArray(items) || items.length === 0) {
+    return (
+      <div
+        className="
+          flex
+          min-h-64
+          flex-col
+          items-center
+          justify-center
+          gap-3
+          rounded-card
+          border
+          border-dashed
+          border-border
+          bg-card
+          px-6
+          py-14
+          text-center
+        "
+      >
+        <MessageCircleQuestion
+          className="
+            h-9
+            w-9
+            text-muted-foreground
+          "
+          strokeWidth={1.6}
+          aria-hidden="true"
+        />
+      </div>
+    );
+  }
 
   return (
-    <div>
-      {filtered.length === 0 ? (
-        <div className="flex flex-col items-center gap-3 rounded-card border border-dashed border-primary/20 py-14 text-center">
-          <MessageCircleQuestion className="size-8 text-ink/30" />
-          <p className="text-small text-ink/60">
-            ما لقينا أسئلة تطابق بحثك عن &quot;{query}&quot;
-          </p>
-        </div>
-      ) : (
-        <div className="flex flex-col gap-3">
-          {filtered.map((item, index) => {
-            const isOpen = openIndex === index;
-            return (
-              <div
-                key={item.question}
-                style={{ animationDelay: `${Math.min(index, 8) * 60}ms` }}
-                className={`faq-item-in overflow-hidden rounded-card border bg-card shadow-card transition-[box-shadow,border-color] duration-300 ${
-                  isOpen ? 'border-primary/30 shadow-card-hover' : 'border-primary/10'
-                }`}
-              >
-                <button
-                  type="button"
-                  onClick={() => setOpenIndex(isOpen ? null : index)}
-                  aria-expanded={isOpen}
-                  className="flex w-full items-center justify-between gap-4 px-5 py-4 text-start transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 sm:px-6 sm:py-5"
-                >
-                  <span
-                    className={`text-small font-semibold transition-colors sm:text-body ${
-                      isOpen ? 'text-primary' : 'text-ink'
-                    }`}
-                  >
-                    {item.question}
-                  </span>
-                  <span
-                    className={`flex size-8 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
-                      isOpen ? 'rotate-180 bg-primary/10 text-primary' : 'bg-primary/5 text-ink/50'
-                    }`}
-                  >
-                    <ChevronDown className="size-4" strokeWidth={2.5} />
-                  </span>
-                </button>
+    <div
+      className="
+        grid
+        gap-3
+        sm:gap-4
+      "
+    >
+      {items.map((item, index) => {
+        const isOpen =
+          openIndex === index;
 
-                {/* حاوية الإجابة — أنيميشن ارتفاع سلس بدون أي مكتبة خارجية */}
-                <div
-                  className="grid transition-[grid-template-rows] duration-300 ease-out"
-                  style={{ gridTemplateRows: isOpen ? '1fr' : '0fr' }}
+        const buttonId =
+          `${baseId}-question-${index}`;
+
+        const panelId =
+          `${baseId}-answer-${index}`;
+
+        return (
+          <article
+            key={`${item.question}-${index}`}
+            className={cn(
+              `
+                group
+                relative
+                overflow-hidden
+                rounded-card
+                border
+                bg-card
+                text-card-foreground
+                shadow-card
+                transition-[border-color,box-shadow,transform]
+                duration-300
+                motion-reduce:transition-none
+              `,
+              isOpen
+                ? `
+                    border-accent-300
+                    shadow-card-hover
+                  `
+                : `
+                    border-border
+                    hover:-translate-y-0.5
+                    hover:border-accent-200
+                    hover:shadow-card-hover
+                    motion-reduce:hover:translate-y-0
+                  `
+            )}
+          >
+            <h3>
+              <button
+                ref={(element) => {
+                  buttonRefs.current[index] =
+                    element;
+                }}
+                id={buttonId}
+                type="button"
+                aria-expanded={isOpen}
+                aria-controls={panelId}
+                onClick={() =>
+                  toggleItem(index)
+                }
+                onKeyDown={(event) =>
+                  handleKeyDown(
+                    event,
+                    index
+                  )
+                }
+                className="
+                  relative
+                  flex
+                  min-h-touch
+                  w-full
+                  items-center
+                  gap-4
+                  px-5
+                  py-5
+                  text-start
+                  focus-visible:outline-none
+                  focus-visible:ring-2
+                  focus-visible:ring-inset
+                  focus-visible:ring-ring
+                  sm:px-6
+                  sm:py-6
+                "
+              >
+                <span
+                  aria-hidden="true"
+                  className={cn(
+                    `
+                      flex
+                      h-9
+                      w-9
+                      shrink-0
+                      items-center
+                      justify-center
+                      rounded-xl
+                      text-caption
+                      font-black
+                      transition-[background-color,color,transform]
+                      duration-300
+                      motion-reduce:transition-none
+                    `,
+                    isOpen
+                      ? `
+                          bg-accent
+                          text-accent-foreground
+                        `
+                      : `
+                          bg-accent-50
+                          text-accent-700
+                          group-hover:bg-accent-100
+                        `
+                  )}
                 >
-                  <div className="overflow-hidden">
-                    <div className="border-t border-primary/10 px-5 pb-5 pt-4 text-small leading-relaxed text-ink/70 sm:px-6">
-                      {item.answer}
-                    </div>
-                  </div>
+                  {String(index + 1).padStart(
+                    2,
+                    '0'
+                  )}
+                </span>
+
+                <span
+                  className={cn(
+                    `
+                      min-w-0
+                      flex-1
+                      text-small
+                      font-bold
+                      leading-relaxed
+                      transition-colors
+                      duration-300
+                      sm:text-body
+                    `,
+                    isOpen
+                      ? 'text-primary-900'
+                      : `
+                          text-foreground
+                          group-hover:text-primary-800
+                        `
+                  )}
+                >
+                  {item.question}
+                </span>
+
+                <span
+                  aria-hidden="true"
+                  className={cn(
+                    `
+                      flex
+                      h-10
+                      w-10
+                      shrink-0
+                      items-center
+                      justify-center
+                      rounded-full
+                      border
+                      transition-[transform,background-color,border-color,color]
+                      duration-300
+                      motion-reduce:transition-none
+                    `,
+                    isOpen
+                      ? `
+                          rotate-180
+                          border-accent-200
+                          bg-accent-50
+                          text-accent-800
+                        `
+                      : `
+                          border-border
+                          bg-surface-sunken
+                          text-muted-foreground
+                          group-hover:border-accent-200
+                          group-hover:text-accent-700
+                        `
+                  )}
+                >
+                  <ChevronDown
+                    className="h-5 w-5"
+                    strokeWidth={2}
+                  />
+                </span>
+              </button>
+            </h3>
+
+            <div
+              id={panelId}
+              role="region"
+              aria-labelledby={buttonId}
+              aria-hidden={!isOpen}
+              className={cn(
+                `
+                  grid
+                  transition-[grid-template-rows,opacity]
+                  duration-300
+                  ease-out
+                  motion-reduce:transition-none
+                `,
+                isOpen
+                  ? `
+                      grid-rows-[1fr]
+                      opacity-100
+                    `
+                  : `
+                      grid-rows-[0fr]
+                      opacity-0
+                    `
+              )}
+            >
+              <div className="overflow-hidden">
+                <div
+                  className="
+                    mx-5
+                    border-t
+                    border-border
+                    pb-6
+                    pt-5
+                    sm:mx-6
+                  "
+                >
+                  <p
+                    className="
+                      whitespace-pre-line
+                      text-small
+                      leading-7
+                      text-muted-foreground
+                    "
+                  >
+                    {item.answer}
+                  </p>
                 </div>
               </div>
-            );
-          })}
-        </div>
-      )}
+            </div>
 
-      <style>{`
-        @keyframes faq-item-in {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .faq-item-in {
-          animation: faq-item-in 0.4s ease-out both;
-        }
-      `}</style>
+            <span
+              aria-hidden="true"
+              className={cn(
+                `
+                  absolute
+                  bottom-0
+                  start-0
+                  h-1
+                  rounded-e-full
+                  bg-gradient-to-r
+                  from-accent
+                  to-primary-500
+                  transition-[width]
+                  duration-500
+                  rtl:bg-gradient-to-l
+                  motion-reduce:transition-none
+                `,
+                isOpen
+                  ? 'w-24'
+                  : 'w-0'
+              )}
+            />
+          </article>
+        );
+      })}
     </div>
   );
 }

@@ -8,8 +8,10 @@ import { Testimonials } from '@/components/sections/home/testimonials';
 import { Steps } from '@/components/sections/home/steps';
 import { Services } from '@/components/sections/home/services';
 import { Challenges } from '@/components/sections/home/challenges';
+import { VideoTestimonials } from '@/components/sections/home/video-testimonials';
 import { Pricing } from '@/components/sections/home/pricing';
 import { Faq } from '@/components/sections/home/faq';
+import { FinalCta } from '@/components/sections/home/final-cta';
 import {
   SITE
 } from '@/lib/constants';
@@ -100,20 +102,17 @@ export default async function HomePage({
   setRequestLocale(locale);
 
   return (
-    <>
-      <Hero />
-      <Programs />
-      <Testimonials />
-      <Steps />
-      <Services />
-      <Challenges />
-      <Pricing />
-      <Faq />
-
-      {/* Future sections */}
-      {/* <Contact /> */}
-      {/* <TrustBadges /> */}
-      {/* <ClosingCta /> */}
-    </>
+ <>
+  <Hero />
+  <Programs />
+  <Steps />
+  <Services />
+  <Challenges />
+  <Testimonials/>
+  <VideoTestimonials />
+  <Pricing />
+  <Faq />
+   <FinalCta />
+</>
   );
 }
