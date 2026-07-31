@@ -1,10 +1,8 @@
-// src/components/sections/home/video-testimonials.tsx
 // Server Component
 
 import { getTranslations } from 'next-intl/server';
 
 import { Reveal } from '@/components/motion/reveal';
-
 import {
   Section,
   SectionHeading,
@@ -27,10 +25,7 @@ export async function VideoTestimonials() {
   const headingId =
     'video-testimonials-heading';
 
-  if (
-    !Array.isArray(items) ||
-    items.length === 0
-  ) {
+  if (!Array.isArray(items) || items.length === 0) {
     return null;
   }
 
@@ -40,47 +35,14 @@ export async function VideoTestimonials() {
       tone="background"
       spacing="md"
       aria-labelledby={headingId}
-      className="
-        relative
-        isolate
-        overflow-hidden
-      "
+      className="relative isolate overflow-hidden"
     >
       <div
         aria-hidden="true"
-        className="
-          pointer-events-none
-          absolute
-          inset-0
-          -z-10
-          overflow-hidden
-        "
+        className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
       >
-        <div
-          className="
-            absolute
-            -end-40
-            top-16
-            h-[28rem]
-            w-[28rem]
-            rounded-full
-            bg-accent-100/45
-            blur-3xl
-          "
-        />
-
-        <div
-          className="
-            absolute
-            -start-36
-            bottom-0
-            h-96
-            w-96
-            rounded-full
-            bg-primary-100/45
-            blur-3xl
-          "
-        />
+        <div className="absolute -end-40 top-16 h-[28rem] w-[28rem] rounded-full bg-accent-100/45 blur-3xl" />
+        <div className="absolute -start-36 bottom-0 h-96 w-96 rounded-full bg-primary-100/45 blur-3xl" />
       </div>
 
       <SectionHeading
@@ -92,13 +54,7 @@ export async function VideoTestimonials() {
           </span>
         }
         subheading={t('subheading')}
-        className="
-          mx-auto
-          mb-12
-          max-w-3xl
-          text-center
-          md:mb-14
-        "
+        className="mx-auto mb-12 max-w-3xl text-center md:mb-14"
       />
 
       <Reveal>

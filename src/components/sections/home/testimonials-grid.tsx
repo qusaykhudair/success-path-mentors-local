@@ -2,7 +2,6 @@
 
 import {
   useCallback,
-  useEffect,
   useMemo,
   useState,
 } from 'react';
@@ -46,7 +45,6 @@ interface TestimonialsGridProps {
   };
 }
 
-const AUTOPLAY_DELAY = 7000;
 const PREVIEW_COUNT = 3;
 
 function getInitials(name: string): string {
@@ -92,7 +90,6 @@ function Rating({
           strokeWidth={1.4}
           className={cn(
             'h-4 w-4',
-
             index < rating
               ? 'fill-warning-500 text-warning-500'
               : inverse
@@ -105,7 +102,7 @@ function Rating({
   );
 }
 
-function Person({
+function PersonDetails({
   item,
   inverse = false,
 }: {
@@ -113,7 +110,7 @@ function Person({
   inverse?: boolean;
 }) {
   return (
-    <figcaption
+    <div
       className={cn(
         `
           flex
@@ -128,19 +125,7 @@ function Person({
       )}
     >
       {item.image ? (
-        <span
-          className="
-            relative
-            h-12
-            w-12
-            shrink-0
-            overflow-hidden
-            rounded-full
-            border-2
-            border-accent-200
-            bg-muted
-          "
-        >
+        <span className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border-2 border-accent-200 bg-muted">
           <Image
             src={item.image}
             alt=""
@@ -192,14 +177,14 @@ function Person({
           className={cn(
             'mt-0.5 truncate text-caption',
             inverse
-              ? 'text-white/60'
+              ? 'text-white/65'
               : 'text-muted-foreground'
           )}
         >
           {item.role}
         </p>
       </div>
-    </figcaption>
+    </div>
   );
 }
 
@@ -221,7 +206,7 @@ function PreviewCard({
       type="button"
       onClick={onSelect}
       aria-current={active ? 'true' : undefined}
-      aria-label={`${labels.view} ${index + 1}`}
+      aria-label={`${labels.view} ${index + 1}: ${item.name}`}
       className={cn(
         `
           group
@@ -255,45 +240,16 @@ function PreviewCard({
       <Quote
         aria-hidden="true"
         strokeWidth={0}
-        className="
-          pointer-events-none
-          absolute
-          -end-2
-          -top-2
-          h-16
-          w-16
-          rotate-180
-          fill-accent-100/70
-          text-accent-100/70
-          rtl:-scale-x-100
-        "
+        className="pointer-events-none absolute -end-2 -top-2 h-16 w-16 rotate-180 fill-accent-100/70 text-accent-100/70 rtl:-scale-x-100"
       />
 
-      <div
-        className="
-          relative
-          flex
-          items-center
-          justify-between
-          gap-3
-        "
-      >
-        <span
-          className="
-            inline-flex
-            items-center
-            gap-1.5
-            text-caption
-            font-bold
-            text-accent-700
-          "
-        >
+      <div className="relative flex items-center justify-between gap-3">
+        <span className="inline-flex items-center gap-1.5 text-caption font-bold text-accent-700">
           <MessageSquareQuote
             className="h-4 w-4"
             strokeWidth={1.8}
             aria-hidden="true"
           />
-
           {labels.feedback}
         </span>
 
@@ -303,21 +259,12 @@ function PreviewCard({
         />
       </div>
 
-      <p
-        className="
-          relative
-          mt-4
-          line-clamp-3
-          text-small
-          leading-relaxed
-          text-foreground
-        "
-      >
+      <p className="relative mt-4 line-clamp-3 text-small leading-relaxed text-foreground">
         “{item.quote}”
       </p>
 
       <div className="relative mt-5">
-        <Person item={item} />
+        <PersonDetails item={item} />
       </div>
 
       <span
@@ -350,9 +297,7 @@ export function TestimonialsGrid({
   labels,
 }: TestimonialsGridProps) {
   const shouldReduceMotion = useReducedMotion();
-
   const [activeIndex, setActiveIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
 
   const itemCount = items.length;
   const activeItem = items[activeIndex];
@@ -378,30 +323,6 @@ export function TestimonialsGrid({
     goTo(activeIndex - 1);
   }, [activeIndex, goTo]);
 
-  useEffect(() => {
-    if (
-      paused ||
-      shouldReduceMotion ||
-      itemCount <= 1
-    ) {
-      return undefined;
-    }
-
-    const timer = window.setInterval(() => {
-      setActiveIndex((current) =>
-        (current + 1) % itemCount
-      );
-    }, AUTOPLAY_DELAY);
-
-    return () => {
-      window.clearInterval(timer);
-    };
-  }, [
-    itemCount,
-    paused,
-    shouldReduceMotion,
-  ]);
-
   const previewIndices = useMemo(() => {
     if (itemCount <= 1) {
       return [];
@@ -426,70 +347,26 @@ export function TestimonialsGrid({
   return (
     <div
       role="region"
-      aria-roledescription="carousel"
       aria-label={labels.carousel}
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onFocusCapture={() => setPaused(true)}
-      onBlurCapture={(event) => {
-        if (
-          !event.currentTarget.contains(
-            event.relatedTarget as Node | null
-          )
-        ) {
-          setPaused(false);
-        }
-      }}
-      className="
-        grid
-        items-stretch
-        gap-5
-        lg:grid-cols-[minmax(0,1.35fr)_minmax(280px,0.65fr)]
-        lg:gap-6
-      "
+      className="grid items-stretch gap-5 lg:grid-cols-[minmax(0,1.35fr)_minmax(280px,0.65fr)] lg:gap-6"
     >
-      {/* Main animated testimonial */}
-      <div
-        className="
-          relative
-          min-h-[500px]
-          overflow-hidden
-          rounded-[1.75rem]
-          border
-          border-primary-800/30
-          bg-brand-dark
-          text-white
-          shadow-xl
-        "
+      <p
+        className="sr-only"
+        aria-live="polite"
+        aria-atomic="true"
       >
-        <div
-          aria-hidden="true"
-          className="
-            pointer-events-none
-            absolute
-            -end-24
-            -top-24
-            h-64
-            w-64
-            rounded-full
-            bg-accent/20
-            blur-3xl
-          "
-        />
+        {activeItem.name}: {activeItem.quote}
+      </p>
 
+      {/* Main testimonial */}
+      <div className="relative min-h-[500px] overflow-hidden rounded-[1.75rem] border border-primary-800/30 bg-brand-dark text-white shadow-xl">
         <div
           aria-hidden="true"
-          className="
-            pointer-events-none
-            absolute
-            -bottom-28
-            -start-20
-            h-64
-            w-64
-            rounded-full
-            bg-primary-400/20
-            blur-3xl
-          "
+          className="pointer-events-none absolute -end-24 -top-24 h-64 w-64 rounded-full bg-accent/20 blur-3xl"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -bottom-28 -start-20 h-64 w-64 rounded-full bg-primary-400/20 blur-3xl"
         />
 
         <AnimatePresence mode="wait" initial={false}>
@@ -504,11 +381,7 @@ export function TestimonialsGrid({
                     scale: 0.985,
                   }
             }
-            animate={{
-              opacity: 1,
-              y: 0,
-              scale: 1,
-            }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={
               shouldReduceMotion
                 ? { opacity: 0 }
@@ -519,52 +392,18 @@ export function TestimonialsGrid({
                   }
             }
             transition={{
-              duration: shouldReduceMotion
-                ? 0
-                : 0.42,
+              duration: shouldReduceMotion ? 0 : 0.42,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="
-              relative
-              flex
-              min-h-[500px]
-              h-full
-              flex-col
-              p-7
-              sm:p-9
-              lg:p-10
-            "
+            className="relative flex h-full min-h-[500px] flex-col p-7 sm:p-9 lg:p-10"
           >
-            <div
-              className="
-                flex
-                items-center
-                justify-between
-                gap-4
-              "
-            >
-              <span
-                className="
-                  inline-flex
-                  items-center
-                  gap-2
-                  rounded-full
-                  border
-                  border-white/15
-                  bg-white/5
-                  px-3
-                  py-1.5
-                  text-caption
-                  font-bold
-                  text-accent-200
-                "
-              >
+            <div className="flex items-center justify-between gap-4">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-caption font-bold text-accent-200">
                 <MessageSquareQuote
                   className="h-4 w-4"
                   strokeWidth={1.8}
                   aria-hidden="true"
                 />
-
                 {labels.feedback}
               </span>
 
@@ -578,147 +417,65 @@ export function TestimonialsGrid({
             <Quote
               aria-hidden="true"
               strokeWidth={0}
-              className="
-                mt-10
-                h-12
-                w-12
-                fill-accent-300
-                text-accent-300
-              "
+              className="mt-10 h-12 w-12 fill-accent-300 text-accent-300"
             />
 
-            <blockquote
-              className="
-                mt-7
-                flex
-                flex-1
-                items-center
-              "
-            >
-              <p
-                className="
-                  max-w-3xl
-                  text-h3
-                  font-bold
-                  leading-relaxed
-                  text-white
-                  sm:text-h2
-                "
-              >
+            <blockquote className="mt-7 flex flex-1 items-center">
+              <p className="max-w-3xl text-h3 font-bold leading-relaxed text-white sm:text-h2">
                 “{activeItem.quote}”
               </p>
             </blockquote>
 
-            <div className="mt-10">
-              <Person item={activeItem} inverse />
-            </div>
+            <figcaption className="mt-10">
+              <PersonDetails
+                item={activeItem}
+                inverse
+              />
+            </figcaption>
           </motion.figure>
         </AnimatePresence>
 
-        {/* Controls */}
-        <div
-          className="
-            absolute
-            bottom-6
-            end-6
-            z-10
-            flex
-            items-center
-            gap-2
-          "
-        >
-          <button
-            type="button"
-            onClick={goPrevious}
-            aria-label={labels.previous}
-            className="
-              inline-flex
-              min-h-touch
-              min-w-touch
-              items-center
-              justify-center
-              rounded-button
-              border
-              border-white/15
-              bg-white/5
-              text-white
-              backdrop-blur-md
-              transition-colors
-              duration-200
-              hover:bg-white/15
-              focus-visible:outline-none
-              focus-visible:ring-2
-              focus-visible:ring-accent-300
-            "
-          >
-            <ChevronLeft
-              className="
-                h-5
-                w-5
-                rtl:-scale-x-100
-              "
-              strokeWidth={1.9}
-              aria-hidden="true"
-            />
-          </button>
+        {itemCount > 1 && (
+          <div className="absolute bottom-6 end-6 z-10 flex items-center gap-2">
+            <button
+              type="button"
+              onClick={goPrevious}
+              aria-label={labels.previous}
+              className="inline-flex min-h-touch min-w-touch items-center justify-center rounded-button border border-white/15 bg-white/5 text-white backdrop-blur-md transition-colors duration-200 hover:bg-white/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-300"
+            >
+              <ChevronLeft
+                className="h-5 w-5 rtl:-scale-x-100"
+                strokeWidth={1.9}
+                aria-hidden="true"
+              />
+            </button>
 
-          <button
-            type="button"
-            onClick={goNext}
-            aria-label={labels.next}
-            className="
-              inline-flex
-              min-h-touch
-              min-w-touch
-              items-center
-              justify-center
-              rounded-button
-              border
-              border-white/15
-              bg-white/5
-              text-white
-              backdrop-blur-md
-              transition-colors
-              duration-200
-              hover:bg-white/15
-              focus-visible:outline-none
-              focus-visible:ring-2
-              focus-visible:ring-accent-300
-            "
-          >
-            <ChevronRight
-              className="
-                h-5
-                w-5
-                rtl:-scale-x-100
-              "
-              strokeWidth={1.9}
-              aria-hidden="true"
-            />
-          </button>
-        </div>
+            <button
+              type="button"
+              onClick={goNext}
+              aria-label={labels.next}
+              className="inline-flex min-h-touch min-w-touch items-center justify-center rounded-button border border-white/15 bg-white/5 text-white backdrop-blur-md transition-colors duration-200 hover:bg-white/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-300"
+            >
+              <ChevronRight
+                className="h-5 w-5 rtl:-scale-x-100"
+                strokeWidth={1.9}
+                aria-hidden="true"
+              />
+            </button>
+          </div>
+        )}
 
         <div
-          className="
-            absolute
-            bottom-7
-            start-7
-            z-10
-            text-caption
-            font-bold
-            text-white/55
-          "
+          className="absolute bottom-7 start-7 z-10 text-caption font-bold text-white/65"
           aria-hidden="true"
         >
           {formatNumber(activeIndex + 1)}
-          <span className="mx-1.5 text-white/25">
-            /
-          </span>
+          <span className="mx-1.5 text-white/35">/</span>
           {formatNumber(itemCount)}
         </div>
       </div>
 
-      {/* Three clickable previews */}
+      {/* Clickable previews */}
       <div className="grid gap-4">
         {previewIndices.map((index) => {
           const item = items[index];
@@ -740,53 +497,39 @@ export function TestimonialsGrid({
         })}
       </div>
 
-      {/* Navigation dots for all 8 testimonials */}
+      {/* Navigation dots */}
       {itemCount > 1 && (
-        <div
-          className="
-            flex
-            flex-wrap
-            items-center
-            justify-center
-            gap-2
-            lg:col-span-2
-            lg:mt-2
-          "
-        >
-          {items.map((item, index) => (
-            <button
-              key={`${item.name}-dot-${index}`}
-              type="button"
-              onClick={() => goTo(index)}
-              aria-label={`${labels.view} ${index + 1}`}
-              aria-current={
-                index === activeIndex
-                  ? 'true'
-                  : undefined
-              }
-              className={cn(
-                `
-                  h-2.5
-                  rounded-full
-                  transition-[width,background-color,transform]
-                  duration-300
-                  focus-visible:outline-none
-                  focus-visible:ring-2
-                  focus-visible:ring-ring
-                  focus-visible:ring-offset-2
-                  motion-reduce:transition-none
-                `,
-                index === activeIndex
-                  ? 'w-8 bg-accent'
-                  : `
-                      w-2.5
-                      bg-primary-200
-                      hover:scale-110
-                      hover:bg-accent-300
+        <div className="flex flex-wrap items-center justify-center gap-1 lg:col-span-2 lg:mt-2">
+          {items.map((item, index) => {
+            const active = index === activeIndex;
+
+            return (
+              <button
+                key={`${item.name}-dot-${index}`}
+                type="button"
+                onClick={() => goTo(index)}
+                aria-label={`${labels.view} ${index + 1}: ${item.name}`}
+                aria-current={active ? 'true' : undefined}
+                className="inline-flex h-11 min-w-11 items-center justify-center rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              >
+                <span
+                  aria-hidden="true"
+                  className={cn(
                     `
-              )}
-            />
-          ))}
+                      h-2.5
+                      rounded-full
+                      transition-[width,background-color,transform]
+                      duration-300
+                      motion-reduce:transition-none
+                    `,
+                    active
+                      ? 'w-8 bg-accent'
+                      : 'w-2.5 bg-primary-200 hover:scale-110 hover:bg-accent-300'
+                  )}
+                />
+              </button>
+            );
+          })}
         </div>
       )}
     </div>

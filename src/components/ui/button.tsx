@@ -45,7 +45,7 @@ const variantStyles = {
 } as const;
 
 const sizeStyles = {
-  sm: 'min-h-10 px-4 py-2 text-small',
+  sm: 'min-h-touch px-4 py-2 text-small',
   md: 'min-h-12 px-6 py-3 text-body',
   lg: 'min-h-14 px-8 py-4 text-body',
 } as const;
@@ -70,10 +70,12 @@ const baseStyles = [
   'focus-visible:ring-2',
   'focus-visible:ring-accent-500',
   'focus-visible:ring-offset-2',
-  'focus-visible:ring-offset-white',
+  'focus-visible:ring-offset-background',
   'disabled:pointer-events-none',
   'disabled:cursor-not-allowed',
   'disabled:opacity-50',
+  'motion-reduce:transition-none',
+  'motion-reduce:hover:translate-y-0',
 ].join(' ');
 
 interface ButtonOwnProps {
@@ -97,7 +99,10 @@ export function buttonVariants({
 type ButtonProps = ButtonOwnProps &
   ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = forwardRef<
+  HTMLButtonElement,
+  ButtonProps
+>(
   (
     {
       className,
@@ -135,18 +140,22 @@ export const ButtonLink = forwardRef<
       className,
       variant = 'primary',
       size = 'md',
+      href,
       'aria-disabled': ariaDisabled,
       tabIndex,
       ...props
     },
     ref
   ) => {
-    const isDisabled = ariaDisabled === true || ariaDisabled === 'true';
+    const isDisabled =
+      ariaDisabled === true ||
+      ariaDisabled === 'true';
 
     return (
       <a
         ref={ref}
-        aria-disabled={ariaDisabled}
+        href={isDisabled ? undefined : href}
+        aria-disabled={isDisabled || undefined}
         tabIndex={isDisabled ? -1 : tabIndex}
         className={cn(
           buttonVariants({
@@ -154,7 +163,8 @@ export const ButtonLink = forwardRef<
             size,
             className,
           }),
-          isDisabled && 'pointer-events-none opacity-50'
+          isDisabled &&
+            'pointer-events-none cursor-not-allowed opacity-50'
         )}
         {...props}
       />

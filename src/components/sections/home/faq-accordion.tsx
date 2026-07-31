@@ -10,10 +10,7 @@ import {
   useState,
 } from 'react';
 
-import {
-  ChevronDown,
-  MessageCircleQuestion,
-} from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 
@@ -56,9 +53,12 @@ export function FaqAccordion({
   }
 
   function focusQuestion(index: number) {
+    if (items.length === 0) {
+      return;
+    }
+
     const normalizedIndex =
-      (index + items.length) %
-      items.length;
+      (index + items.length) % items.length;
 
     buttonRefs.current[
       normalizedIndex
@@ -96,55 +96,15 @@ export function FaqAccordion({
   }
 
   if (!Array.isArray(items) || items.length === 0) {
-    return (
-      <div
-        className="
-          flex
-          min-h-64
-          flex-col
-          items-center
-          justify-center
-          gap-3
-          rounded-card
-          border
-          border-dashed
-          border-border
-          bg-card
-          px-6
-          py-14
-          text-center
-        "
-      >
-        <MessageCircleQuestion
-          className="
-            h-9
-            w-9
-            text-muted-foreground
-          "
-          strokeWidth={1.6}
-          aria-hidden="true"
-        />
-      </div>
-    );
+    return null;
   }
 
   return (
-    <div
-      className="
-        grid
-        gap-3
-        sm:gap-4
-      "
-    >
+    <div className="grid gap-3 sm:gap-4">
       {items.map((item, index) => {
-        const isOpen =
-          openIndex === index;
-
-        const buttonId =
-          `${baseId}-question-${index}`;
-
-        const panelId =
-          `${baseId}-answer-${index}`;
+        const isOpen = openIndex === index;
+        const buttonId = `${baseId}-question-${index}`;
+        const panelId = `${baseId}-answer-${index}`;
 
         return (
           <article
@@ -180,21 +140,15 @@ export function FaqAccordion({
             <h3>
               <button
                 ref={(element) => {
-                  buttonRefs.current[index] =
-                    element;
+                  buttonRefs.current[index] = element;
                 }}
                 id={buttonId}
                 type="button"
                 aria-expanded={isOpen}
                 aria-controls={panelId}
-                onClick={() =>
-                  toggleItem(index)
-                }
+                onClick={() => toggleItem(index)}
                 onKeyDown={(event) =>
-                  handleKeyDown(
-                    event,
-                    index
-                  )
+                  handleKeyDown(event, index)
                 }
                 className="
                   relative
@@ -243,10 +197,7 @@ export function FaqAccordion({
                         `
                   )}
                 >
-                  {String(index + 1).padStart(
-                    2,
-                    '0'
-                  )}
+                  {String(index + 1).padStart(2, '0')}
                 </span>
 
                 <span
@@ -314,9 +265,8 @@ export function FaqAccordion({
 
             <div
               id={panelId}
-              role="region"
-              aria-labelledby={buttonId}
               aria-hidden={!isOpen}
+              inert={!isOpen}
               className={cn(
                 `
                   grid
@@ -337,24 +287,8 @@ export function FaqAccordion({
               )}
             >
               <div className="overflow-hidden">
-                <div
-                  className="
-                    mx-5
-                    border-t
-                    border-border
-                    pb-6
-                    pt-5
-                    sm:mx-6
-                  "
-                >
-                  <p
-                    className="
-                      whitespace-pre-line
-                      text-small
-                      leading-7
-                      text-muted-foreground
-                    "
-                  >
+                <div className="mx-5 border-t border-border pb-6 pt-5 sm:mx-6">
+                  <p className="whitespace-pre-line text-small leading-7 text-muted-foreground">
                     {item.answer}
                   </p>
                 </div>
@@ -378,9 +312,7 @@ export function FaqAccordion({
                   rtl:bg-gradient-to-l
                   motion-reduce:transition-none
                 `,
-                isOpen
-                  ? 'w-24'
-                  : 'w-0'
+                isOpen ? 'w-24' : 'w-0'
               )}
             />
           </article>

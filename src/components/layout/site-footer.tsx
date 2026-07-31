@@ -1,32 +1,24 @@
-// src/components/layout/footer.tsx
 // Server Component
 
-import {
-  getLocale,
-  getTranslations,
-} from 'next-intl/server';
-
+import { getLocale, getTranslations } from 'next-intl/server';
 import Image from 'next/image';
-
+import Link from 'next/link';
 import {
-  ArrowRight,
   ArrowUp,
   BookOpenCheck,
   ExternalLink,
   Facebook,
   Instagram,
   Languages,
-  Linkedin,
   Mail,
   MessageCircle,
+  MessageSquareText,
   ShieldCheck,
   Youtube,
   type LucideIcon,
 } from 'lucide-react';
 
-import { buttonVariants } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
-import { cn } from '@/lib/utils';
 
 const WHATSAPP_NUMBER = '16477875999';
 const CONTACT_EMAIL = 'successpathmentors@gmail.com';
@@ -34,7 +26,6 @@ const CONTACT_EMAIL = 'successpathmentors@gmail.com';
 interface FooterLink {
   href: string;
   label: string;
-  external?: boolean;
 }
 
 interface SocialLink {
@@ -49,107 +40,92 @@ export async function SiteFooter() {
   const locale = await getLocale();
 
   const year = new Date().getFullYear();
-
   const otherLocale =
     locale === 'ar' ? 'en' : 'ar';
 
-  const subjects = t.raw(
-    'subjects'
-  ) as string[];
-
-  const whatsappMessage = encodeURIComponent(
-    t('whatsappMessage')
-  );
+  const homeHref = `/${locale}`;
+  const contactHref = `${homeHref}/contact`;
 
   const whatsappHref =
-    `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
+    `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+      t('whatsappMessage')
+    )}`;
 
   const quickLinks: FooterLink[] = [
     {
-      href: `/${locale}`,
+      href: homeHref,
       label: t('links.home'),
     },
     {
-      href: `/${locale}#programs`,
+      href: `${homeHref}/about`,
+      label: t('links.about'),
+    },
+    {
+      href: `${homeHref}/how-it-works`,
+      label: t('links.howItWorks'),
+    },
+    {
+      href: `${homeHref}/tutor-matching`,
+      label: t('links.tutorMatching'),
+    },
+    {
+      href: `${homeHref}#programs`,
       label: t('links.programs'),
     },
     {
-      href: `/${locale}#services`,
+      href: `${homeHref}#services`,
       label: t('links.services'),
     },
     {
-      href: `/${locale}#pricing`,
+      href: `${homeHref}#pricing`,
       label: t('links.pricing'),
     },
     {
-      href: `/${locale}#faq`,
+      href: `${homeHref}#faq`,
       label: t('links.faq'),
     },
-  ];
-
-  const supportLinks: FooterLink[] = [
     {
-      href: whatsappHref,
-      label: t('whatsappLabel'),
-      external: true,
-    },
-    {
-      href: `mailto:${CONTACT_EMAIL}`,
-      label: t('emailLabel'),
-    },
-    {
-      href: `/${locale}#final-cta`,
-      label: t('links.freeTrial'),
+      href: contactHref,
+      label: t('links.contact'),
     },
   ];
 
   const legalLinks: FooterLink[] = [
     {
-      href: `/${locale}/privacy`,
+      href: `${homeHref}/privacy`,
       label: t('legal.privacy'),
     },
     {
-      href: `/${locale}/terms`,
+      href: `${homeHref}/terms`,
       label: t('legal.terms'),
     },
     {
-      href: `/${locale}/cancellation-policy`,
+      href: `${homeHref}/cancellation-policy`,
       label: t('legal.cancellation'),
     },
   ];
 
-  /*
-   * تظهر الأيقونات دائمًا.
-   * تصبح قابلة للنقر بعد إضافة الروابط في ملف .env.local.
-   */
   const socialLinks: SocialLink[] = [
     {
       key: 'facebook',
       label: t('social.facebook'),
       href:
-        process.env.NEXT_PUBLIC_FACEBOOK_URL,
+        'https://www.facebook.com/SuccessPathMentors',
       icon: Facebook,
     },
     {
       key: 'instagram',
       label: t('social.instagram'),
       href:
-        process.env.NEXT_PUBLIC_INSTAGRAM_URL,
+        'https://www.instagram.com/successpathmentors',
       icon: Instagram,
     },
     {
       key: 'youtube',
       label: t('social.youtube'),
       href:
-        process.env.NEXT_PUBLIC_YOUTUBE_URL,
+        'https://www.youtube.com/@SuccessPathMentors',
       icon: Youtube,
-    },
-    {
-      key: 'linkedin',
-      label: t('social.linkedin'),
-      href:
-        process.env.NEXT_PUBLIC_LINKEDIN_URL,
-      icon: Linkedin,
     },
   ];
 
@@ -173,7 +149,6 @@ export async function SiteFooter() {
         {t('ariaLabel')}
       </h2>
 
-      {/* Background decorations */}
       <div
         aria-hidden="true"
         className="
@@ -192,7 +167,7 @@ export async function SiteFooter() {
             h-[34rem]
             w-[34rem]
             rounded-full
-            bg-accent/15
+            bg-accent/12
             blur-3xl
           "
         />
@@ -205,7 +180,7 @@ export async function SiteFooter() {
             h-[32rem]
             w-[32rem]
             rounded-full
-            bg-primary-400/15
+            bg-primary-400/12
             blur-3xl
           "
         />
@@ -214,7 +189,7 @@ export async function SiteFooter() {
           className="
             absolute
             inset-0
-            opacity-[0.025]
+            opacity-[0.022]
             [background-image:radial-gradient(white_1px,transparent_1px)]
             [background-size:30px_30px]
           "
@@ -228,198 +203,13 @@ export async function SiteFooter() {
             h-px
             bg-gradient-to-r
             from-transparent
-            via-accent-300/80
+            via-accent-300/75
             to-transparent
             rtl:bg-gradient-to-l
           "
         />
       </div>
 
-      {/* Compact footer CTA */}
-      <Container className="pt-12 sm:pt-14">
-        <div
-          className="
-            relative
-            grid
-            w-full
-            items-center
-            gap-7
-            overflow-hidden
-            rounded-[1.75rem]
-            border
-            border-white/10
-            bg-white/[0.065]
-            px-6
-            py-7
-            shadow-xl
-            backdrop-blur-md
-            sm:px-8
-            sm:py-8
-            lg:grid-cols-[minmax(0,1fr)_auto]
-            lg:gap-12
-            xl:px-10
-          "
-        >
-          <div
-            aria-hidden="true"
-            className="
-              pointer-events-none
-              absolute
-              -end-24
-              -top-24
-              h-64
-              w-64
-              rounded-full
-              bg-accent/15
-              blur-3xl
-            "
-          />
-
-          <div className="relative max-w-3xl">
-            <p
-              className="
-                text-caption
-                font-bold
-                uppercase
-                tracking-wider
-                text-accent-200
-              "
-            >
-              {t('eyebrow')}
-            </p>
-
-            <h3
-              className="
-                mt-3
-                max-w-2xl
-                text-h2
-                font-bold
-                leading-tight
-                text-white
-              "
-            >
-              {t('ctaHeading')}
-            </h3>
-
-            <p
-              className="
-                mt-4
-                max-w-3xl
-                text-small
-                leading-7
-                text-white/65
-                sm:text-body
-              "
-            >
-              {t('ctaDescription')}
-            </p>
-          </div>
-
-          <div
-            className="
-              relative
-              flex
-              flex-col
-              gap-3
-              sm:flex-row
-              lg:flex-col
-              xl:flex-row
-            "
-          >
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={cn(
-                buttonVariants({
-                  variant: 'accent',
-                  size: 'lg',
-                }),
-                `
-                  group
-                  w-full
-                  justify-center
-                  whitespace-nowrap
-                  font-bold
-                  !text-accent-foreground
-                  hover:!text-accent-foreground
-                  sm:w-auto
-                `
-              )}
-            >
-              <MessageCircle
-                className="
-                  h-5
-                  w-5
-                  shrink-0
-                  text-current
-                "
-                strokeWidth={1.9}
-                aria-hidden="true"
-              />
-
-              {t('ctaPrimary')}
-
-              <ArrowRight
-                className="
-                  h-4
-                  w-4
-                  shrink-0
-                  text-current
-                  transition-transform
-                  duration-200
-                  group-hover:translate-x-0.5
-                  rtl:-scale-x-100
-                  rtl:group-hover:-translate-x-0.5
-                  motion-reduce:transition-none
-                "
-                strokeWidth={1.9}
-                aria-hidden="true"
-              />
-            </a>
-
-            <a
-              href={`/${locale}#pricing`}
-              className="
-                inline-flex
-                min-h-button
-                w-full
-                items-center
-                justify-center
-                gap-2
-                whitespace-nowrap
-                rounded-button
-                border
-                border-white/20
-                bg-white/5
-                px-6
-                py-3
-                text-body
-                font-bold
-                !text-white
-                transition-[background-color,border-color,transform]
-                duration-200
-                hover:-translate-y-0.5
-                hover:border-white/30
-                hover:bg-white/10
-                hover:!text-white
-                focus-visible:outline-none
-                focus-visible:ring-2
-                focus-visible:ring-accent
-                focus-visible:ring-offset-2
-                focus-visible:ring-offset-primary-950
-                motion-reduce:transition-none
-                motion-reduce:hover:translate-y-0
-                sm:w-auto
-              "
-            >
-              {t('ctaSecondary')}
-            </a>
-          </div>
-        </div>
-      </Container>
-
-      {/* Main footer content */}
       <Container
         className="
           grid
@@ -428,25 +218,31 @@ export async function SiteFooter() {
           sm:py-14
           md:grid-cols-2
           lg:grid-cols-12
-          lg:gap-8
-          xl:gap-10
+          lg:gap-0
         "
       >
-        {/* Brand column */}
-        <div
+        {/* Brand */}
+        <section
+          aria-labelledby="footer-brand-heading"
           className="
             md:col-span-2
             lg:col-span-5
-            lg:pe-8
+            lg:pe-10
           "
         >
-          <a
-            href={`/${locale}`}
+          <h3
+            id="footer-brand-heading"
+            className="sr-only"
+          >
+            {t('logoAlt')}
+          </h3>
+
+          <Link
+            href={homeHref}
             aria-label={t('logoLinkLabel')}
             className="
               inline-flex
               rounded-xl
-              bg-white
               p-3
               shadow-lg
               transition-transform
@@ -458,20 +254,21 @@ export async function SiteFooter() {
               focus-visible:ring-offset-2
               focus-visible:ring-offset-primary-950
               motion-reduce:transition-none
+              motion-reduce:hover:translate-y-0
             "
           >
             <Image
-              src="/images/logo.png"
+              src="/images/footer.png"
               alt={t('logoAlt')}
               width={180}
               height={53}
               className="
-                h-10
+                h-15
                 w-auto
                 object-contain
               "
             />
-          </a>
+          </Link>
 
           <p
             className="
@@ -479,7 +276,7 @@ export async function SiteFooter() {
               max-w-xl
               text-small
               leading-7
-              text-white/65
+              text-white/75
             "
           >
             {t('description')}
@@ -515,14 +312,13 @@ export async function SiteFooter() {
               className="
                 text-caption
                 leading-relaxed
-                text-white/60
+                text-white/70
               "
             >
               {t('brandNote')}
             </p>
           </div>
 
-          {/* Social media */}
           <div className="mt-7">
             <h3
               className="
@@ -540,7 +336,7 @@ export async function SiteFooter() {
                 max-w-lg
                 text-caption
                 leading-relaxed
-                text-white/45
+                text-white/65
               "
             >
               {t('socialDescription')}
@@ -562,6 +358,7 @@ export async function SiteFooter() {
                   return (
                     <span
                       key={social.key}
+                      role="link"
                       aria-label={social.label}
                       aria-disabled="true"
                       title={t(
@@ -578,7 +375,7 @@ export async function SiteFooter() {
                         border
                         border-white/10
                         bg-white/[0.035]
-                        text-white/25
+                        text-white/35
                       "
                     >
                       <Icon
@@ -609,7 +406,7 @@ export async function SiteFooter() {
                       border
                       border-white/10
                       bg-white/5
-                      !text-white/65
+                      !text-white/75
                       transition-[transform,background-color,border-color,color]
                       duration-200
                       hover:-translate-y-1
@@ -637,16 +434,16 @@ export async function SiteFooter() {
               })}
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Quick links */}
         <nav
           aria-label={t('quickLinks')}
           className="
-            lg:col-span-2
+            lg:col-span-3
             lg:border-s
             lg:border-white/10
-            lg:ps-7
+            lg:px-9
           "
         >
           <h3
@@ -672,10 +469,18 @@ export async function SiteFooter() {
             {t('quickLinks')}
           </h3>
 
-          <ul className="mt-6 grid gap-3.5">
+          <ul
+            className="
+              mt-6
+              grid
+              gap-3.5
+              sm:grid-cols-2
+              md:grid-cols-1
+            "
+          >
             {quickLinks.map((link) => (
               <li key={link.href}>
-                <a
+                <Link
                   href={link.href}
                   className="
                     group
@@ -683,12 +488,16 @@ export async function SiteFooter() {
                     items-center
                     gap-2.5
                     text-small
-                    !text-white/60
+                    !text-white/70
                     transition-colors
                     duration-200
                     hover:!text-accent-200
+                    focus-visible:rounded-sm
                     focus-visible:outline-none
-                    focus-visible:text-accent-200
+                    focus-visible:ring-2
+                    focus-visible:ring-accent
+                    focus-visible:ring-offset-2
+                    focus-visible:ring-offset-primary-950
                   "
                 >
                   <span
@@ -697,7 +506,7 @@ export async function SiteFooter() {
                       h-1.5
                       w-1.5
                       rounded-full
-                      bg-white/25
+                      bg-white/30
                       transition-[background-color,transform]
                       duration-200
                       group-hover:scale-125
@@ -706,87 +515,25 @@ export async function SiteFooter() {
                   />
 
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
 
-        {/* Subjects */}
-        <div
-          className="
-            lg:col-span-2
-            lg:border-s
-            lg:border-white/10
-            lg:ps-7
-          "
-        >
-          <h3
-            className="
-              text-small
-              font-bold
-              text-white
-            "
-          >
-            {t('subjectsOffered')}
-          </h3>
-
-          <ul
-            className="
-              mt-6
-              grid
-              grid-cols-2
-              gap-x-4
-              gap-y-3.5
-              md:grid-cols-1
-            "
-          >
-            {Array.isArray(subjects) &&
-              subjects
-                .slice(0, 8)
-                .map((subject) => (
-                  <li
-                    key={subject}
-                    className="
-                      text-small
-                      text-white/60
-                    "
-                  >
-                    {subject}
-                  </li>
-                ))}
-          </ul>
-
-          <p
-            className="
-              mt-6
-              inline-flex
-              rounded-full
-              border
-              border-accent-300/20
-              bg-accent/10
-              px-3
-              py-1.5
-              text-caption
-              font-bold
-              text-accent-200
-            "
-          >
-            {t('gradeRange')}
-          </p>
-        </div>
-
-        {/* Support and contact */}
-        <div
+        {/* Support */}
+        <section
+          aria-labelledby="footer-support-heading"
           className="
             md:col-span-2
-            lg:col-span-3
+            lg:col-span-4
             lg:border-s
             lg:border-white/10
-            lg:ps-7
+            lg:ps-9
           "
         >
           <h3
+            id="footer-support-heading"
             className="
               text-small
               font-bold
@@ -796,63 +543,7 @@ export async function SiteFooter() {
             {t('supportTitle')}
           </h3>
 
-          <ul className="mt-6 grid gap-3">
-            {supportLinks.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  target={
-                    link.external
-                      ? '_blank'
-                      : undefined
-                  }
-                  rel={
-                    link.external
-                      ? 'noopener noreferrer'
-                      : undefined
-                  }
-                  className="
-                    group
-                    inline-flex
-                    items-center
-                    gap-2.5
-                    text-small
-                    !text-white/60
-                    transition-colors
-                    duration-200
-                    hover:!text-accent-200
-                    focus-visible:outline-none
-                    focus-visible:text-accent-200
-                  "
-                >
-                  <span
-                    aria-hidden="true"
-                    className="
-                      h-1.5
-                      w-1.5
-                      rounded-full
-                      bg-white/25
-                      transition-colors
-                      group-hover:bg-accent
-                    "
-                  />
-
-                  {link.label}
-
-                  {link.external && (
-                    <ExternalLink
-                      className="h-3.5 w-3.5"
-                      strokeWidth={1.7}
-                      aria-hidden="true"
-                    />
-                  )}
-                </a>
-              </li>
-            ))}
-          </ul>
-
-          {/* Contact cards */}
-          <div className="mt-7 grid gap-3">
+          <div className="mt-6 grid gap-3">
             <a
               href={whatsappHref}
               target="_blank"
@@ -903,12 +594,12 @@ export async function SiteFooter() {
                 />
               </span>
 
-              <span className="min-w-0">
+              <span className="min-w-0 flex-1">
                 <span
                   className="
                     block
                     text-caption
-                    text-white/45
+                    text-white/65
                   "
                 >
                   {t('whatsappLabel')}
@@ -930,11 +621,10 @@ export async function SiteFooter() {
 
               <ExternalLink
                 className="
-                  ms-auto
                   h-4
                   w-4
                   shrink-0
-                  text-white/30
+                  text-white/45
                   transition-colors
                   group-hover:text-accent-300
                 "
@@ -942,6 +632,79 @@ export async function SiteFooter() {
                 aria-hidden="true"
               />
             </a>
+
+            <Link
+              href={contactHref}
+              className="
+                group
+                flex
+                min-h-touch
+                items-center
+                gap-3
+                rounded-xl
+                border
+                border-accent-300/25
+                bg-accent/10
+                px-4
+                py-3.5
+                !text-white
+                transition-[background-color,border-color,transform]
+                duration-200
+                hover:-translate-y-0.5
+                hover:border-accent-300/50
+                hover:bg-accent/15
+                hover:!text-white
+                focus-visible:outline-none
+                focus-visible:ring-2
+                focus-visible:ring-accent
+                motion-reduce:transition-none
+                motion-reduce:hover:translate-y-0
+              "
+            >
+              <span
+                className="
+                  flex
+                  h-10
+                  w-10
+                  shrink-0
+                  items-center
+                  justify-center
+                  rounded-xl
+                  bg-accent
+                  text-accent-foreground
+                "
+              >
+                <MessageSquareText
+                  className="h-5 w-5"
+                  strokeWidth={1.8}
+                  aria-hidden="true"
+                />
+              </span>
+
+              <span className="min-w-0 flex-1">
+                <span
+                  className="
+                    block
+                    text-caption
+                    text-white/65
+                  "
+                >
+                  {t('contactPageLabel')}
+                </span>
+
+                <span
+                  className="
+                    mt-0.5
+                    block
+                    text-small
+                    font-bold
+                    text-white
+                  "
+                >
+                  {t('contactPageDescription')}
+                </span>
+              </span>
+            </Link>
 
             <a
               href={`mailto:${CONTACT_EMAIL}`}
@@ -991,12 +754,12 @@ export async function SiteFooter() {
                 />
               </span>
 
-              <span className="min-w-0">
+              <span className="min-w-0 flex-1">
                 <span
                   className="
                     block
                     text-caption
-                    text-white/45
+                    text-white/65
                   "
                 >
                   {t('emailLabel')}
@@ -1020,13 +783,13 @@ export async function SiteFooter() {
             </a>
           </div>
 
-          {/* Language switch */}
-          <a
+          <Link
             href={`/${otherLocale}`}
             hrefLang={otherLocale}
             className="
               mt-4
               flex
+              min-h-touch
               items-center
               justify-between
               gap-4
@@ -1089,8 +852,8 @@ export async function SiteFooter() {
             >
               {otherLocale}
             </span>
-          </a>
-        </div>
+          </Link>
+        </section>
       </Container>
 
       {/* Bottom bar */}
@@ -1112,29 +875,16 @@ export async function SiteFooter() {
             lg:justify-between
           "
         >
-          <div className="max-w-2xl">
-            <p
-              className="
-                text-caption
-                leading-relaxed
-                text-white/55
-              "
-            >
-              © {year} Mustafa Academy — Success Path
-              Mentors. {t('rightsReserved')}.
-            </p>
-
-            <p
-              className="
-                mt-1.5
-                text-caption
-                leading-relaxed
-                text-white/35
-              "
-            >
-              {t('policyNotice')}
-            </p>
-          </div>
+          <p
+            className="
+              text-caption
+              leading-relaxed
+              text-white/65
+            "
+          >
+            © {year} Mustafa Academy — Success Path Mentors.{' '}
+            {t('rightsReserved')}.
+          </p>
 
           <div
             className="
@@ -1157,27 +907,31 @@ export async function SiteFooter() {
               >
                 {legalLinks.map((link) => (
                   <li key={link.href}>
-                    <a
+                    <Link
                       href={link.href}
                       className="
                         text-caption
-                        !text-white/45
+                        !text-white/65
                         transition-colors
                         duration-200
                         hover:!text-accent-200
+                        focus-visible:rounded-sm
                         focus-visible:outline-none
-                        focus-visible:text-accent-200
+                        focus-visible:ring-2
+                        focus-visible:ring-accent
+                        focus-visible:ring-offset-2
+                        focus-visible:ring-offset-primary-950
                       "
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
             </nav>
 
             <a
-              href={`/${locale}`}
+              href="#main-content"
               aria-label={t('backToTop')}
               className="
                 inline-flex
@@ -1191,7 +945,7 @@ export async function SiteFooter() {
                 border
                 border-white/10
                 bg-white/5
-                !text-white/65
+                !text-white/75
                 transition-[background-color,border-color,color,transform]
                 duration-200
                 hover:-translate-y-0.5
@@ -1202,6 +956,7 @@ export async function SiteFooter() {
                 focus-visible:ring-2
                 focus-visible:ring-accent
                 motion-reduce:transition-none
+                motion-reduce:hover:translate-y-0
                 sm:self-auto
               "
             >

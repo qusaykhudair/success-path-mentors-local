@@ -10,6 +10,9 @@
     "siteName": "Mustafa Academy",
     "tagline": "Success Path Mentors"
   },
+    "accessibility": {
+    "skipToContent": "Skip to main content"
+  },
   "nav": {
     "home": "Home",
     "about": "Our Story",
@@ -545,7 +548,7 @@
       "name": "Starter Package",
       "description": "A focused starting option for students who need short-term support or want to experience personalized tutoring.",
       "lessons": 4,
-      "price": 100,
+      "price": 110,
       "features": [
         "Four personalized one-to-one lessons",
         "Tutor selection based on subject and grade",
@@ -557,7 +560,7 @@
       "name": "Consistency Package",
       "description": "A balanced option for students who benefit from regular lessons, continued practice, and structured academic support.",
       "lessons": 8,
-      "price": 190,
+      "price": 220,
       "recommended": true,
       "features": [
         "Eight personalized one-to-one lessons",
@@ -571,7 +574,7 @@
       "name": "Progress Package",
       "description": "A more comprehensive option for students working toward sustained improvement across several learning priorities.",
       "lessons": 12,
-      "price": 260,
+      "price": 280,
       "features": [
         "Twelve personalized one-to-one lessons",
         "Focused learning plan for priority skills",
@@ -713,75 +716,46 @@
 
   "whatsappMessage": "Hello, I would like to arrange a free trial lesson with Mustafa Academy. The student's grade is: ____. The subject is: ____. The main learning need is: ____. Preferred times are: ____."
 },
-"footer": {
-  "ariaLabel": "Mustafa Academy website footer",
-  "logoAlt": "Mustafa Academy — Success Path Mentors",
-  "logoLinkLabel": "Go to Mustafa Academy homepage",
-
-  "eyebrow": "Personalized Online Tutoring",
-  "ctaHeading": "Ready to Find the Right Starting Point for the Student?",
-  "ctaDescription": "Share the student's grade, subject, curriculum, and current learning needs. Our team will help explain the available options and arrange the next suitable step.",
-  "ctaPrimary": "Book a Free Trial",
-  "ctaSecondary": "View Lesson Packages",
-
-  "description": "Mustafa Academy provides personalized one-to-one online tutoring for students across different grades, subjects, curricula, and learning needs.",
-
-  "brandNote": "Lesson arrangements, tutor availability, duration, package details, and applicable policies are confirmed with the family before payment.",
-
-  "quickLinks": "Quick Links",
-  "subjectsOffered": "Subjects Offered",
-  "supportTitle": "Support and Contact",
-
-  "whatsappLabel": "WhatsApp",
-  "emailLabel": "Email",
-  "languageSwitch": "العربية",
-
-  "gradeRange": "Grades 1–12",
-
-  "links": {
-    "home": "Home",
-    "programs": "Programs",
-    "services": "Services",
-    "pricing": "Lesson Packages",
-    "faq": "Frequently Asked Questions",
-    "freeTrial": "Book a Free Trial"
-  },
-
-  "subjects": [
-    "Mathematics",
-    "English",
-    "Science",
-    "Physics",
-    "Chemistry",
-    "French",
-    "Arabic",
-    "Other Programs"
-  ],
-
-  "legalLabel": "Legal and policy links",
-
-  "legal": {
-    "privacy": "Privacy Policy",
-    "terms": "Terms and Conditions",
-    "cancellation": "Cancellation Policy"
-  },
-
-  "socialTitle": "Follow Mustafa Academy",
-"socialDescription": "Follow our educational content, academy updates, and latest programs across our social media platforms.",
-"socialNotConfigured": "This social media link will be added soon",
-
-"social": {
-  "facebook": "Follow us on Facebook",
-  "instagram": "Follow us on Instagram",
-  "youtube": "Watch us on YouTube",
-  "linkedin": "Follow us on LinkedIn"
-},
-  "backToTop": "Return to the top of the page",
-
-  "rightsReserved": "All rights reserved",
-
-  "policyNotice": "Service availability and lesson arrangements may vary according to the subject, grade, curriculum, tutor availability, and time zone.",
-
-  "whatsappMessage": "Hello, I would like to learn more about Mustafa Academy's online tutoring services. The student's grade is: ____. The subject is: ____. The curriculum is: ____. The preferred times are: ____."
-}
+  "footer": {
+    "ariaLabel": "Website footer",
+    "logoAlt": "Mustafa Academy — Success Path Mentors",
+    "logoLinkLabel": "Return to the Mustafa Academy homepage",
+    "description": "One-to-one online tutoring for students across elementary, middle, and high school levels, with support in core academic subjects and languages.",
+    "brandNote": "Lessons, tutor matching, scheduling, and communication are coordinated through Success Path Mentors.",
+    "quickLinks": "Explore",
+    "supportTitle": "Contact and support",
+    "whatsappLabel": "WhatsApp",
+    "whatsappMessage": "Hello Success Path Mentors, I would like to ask about online tutoring.",
+    "emailLabel": "Email",
+    "contactPageLabel": "Contact form",
+    "contactPageDescription": "Send a detailed inquiry",
+    "languageSwitch": "View the website in Arabic",
+    "socialTitle": "Follow Success Path Mentors",
+    "socialDescription": "Follow academy updates, educational content, and tutoring information.",
+    "socialNotConfigured": "This social link is not configured yet.",
+    "rightsReserved": "All rights reserved",
+    "legalLabel": "Legal policies",
+    "backToTop": "Back to the top of the page",
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "howItWorks": "How It Works",
+      "tutorMatching": "Tutor Matching",
+      "programs": "Programs",
+      "services": "Services",
+      "pricing": "Pricing",
+      "faq": "Frequently Asked Questions",
+      "contact": "Contact"
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms and Conditions",
+      "cancellation": "Cancellation Policy"
+    },
+    "social": {
+      "facebook": "Success Path Mentors on Facebook",
+      "instagram": "Success Path Mentors on Instagram",
+      "youtube": "Success Path Mentors on YouTube"
+    }
+  }
 }

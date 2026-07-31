@@ -1,7 +1,7 @@
-// src/components/layout/mobile-nav.tsx
-
 'use client';
+
 import {
+  useCallback,
   useEffect,
   useId,
   useRef,
@@ -13,6 +13,7 @@ import {
   Menu,
   X,
 } from 'lucide-react';
+
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -36,6 +37,25 @@ interface MobileNavProps {
   closeMenuLabel: string;
 }
 
+function getFocusableElements(
+  container: HTMLElement
+): HTMLElement[] {
+  return Array.from(
+    container.querySelectorAll<HTMLElement>(
+      [
+        'a[href]',
+        'button:not([disabled])',
+        '[tabindex]',
+      ].join(',')
+    )
+  ).filter(
+    (element) =>
+      element.tabIndex >= 0 &&
+      !element.hasAttribute('disabled') &&
+      element.getAttribute('aria-hidden') !== 'true'
+  );
+}
+
 export function MobileNav({
   sectionLinks,
   homeLabel,
@@ -44,34 +64,34 @@ export function MobileNav({
   bookingHref,
   subjectsLabel,
   subjectCategories,
-  // openMenuLabel,
-  // closeMenuLabel,
+  openMenuLabel,
+  closeMenuLabel,
 }: MobileNavProps) {
   const [open, setOpen] = useState(false);
-
-  const [
-    openCategory,
-    setOpenCategory,
-  ] = useState<string | null>(null);
+  const [openCategory, setOpenCategory] =
+    useState<string | null>(null);
 
   const panelId = useId();
   const triggerRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
 
-  function closeAll({
-    restoreFocus = false,
-  }: {
-    restoreFocus?: boolean;
-  } = {}) {
-    setOpen(false);
-    setOpenCategory(null);
+  const closeAll = useCallback(
+    ({
+      restoreFocus = false,
+    }: {
+      restoreFocus?: boolean;
+    } = {}) => {
+      setOpen(false);
+      setOpenCategory(null);
 
-    if (restoreFocus) {
-      window.requestAnimationFrame(() => {
-        triggerRef.current?.focus();
-      });
-    }
-  }
+      if (restoreFocus) {
+        window.requestAnimationFrame(() => {
+          triggerRef.current?.focus();
+        });
+      }
+    },
+    []
+  );
 
   useEffect(() => {
     if (!open) {
@@ -83,127 +103,115 @@ export function MobileNav({
 
     document.body.style.overflow = 'hidden';
 
-   function handleKeyDown(event: KeyboardEvent) {
-  if (event.key === 'Escape') {
-    event.preventDefault();
+    const focusFrame = window.requestAnimationFrame(() => {
+      const panel = panelRef.current;
 
-    closeAll({
-      restoreFocus: true,
+      if (!panel) {
+        return;
+      }
+
+      getFocusableElements(panel)[0]?.focus();
     });
 
-    return;
-  }
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        closeAll({ restoreFocus: true });
+        return;
+      }
 
-  if (
-    event.key !== 'Tab' ||
-    !panelRef.current
-  ) {
-    return;
-  }
+      if (
+        event.key !== 'Tab' ||
+        !panelRef.current ||
+        !triggerRef.current
+      ) {
+        return;
+      }
 
-  const focusableElements =
-    panelRef.current.querySelectorAll<HTMLElement>(
-      [
-        'a[href]',
-        'button:not([disabled])',
-        '[tabindex]:not([tabindex="-1"])',
-      ].join(',')
-    );
+      const panelElements = getFocusableElements(
+        panelRef.current
+      );
 
-  if (focusableElements.length === 0) {
-    return;
-  }
+      if (panelElements.length === 0) {
+        event.preventDefault();
+        triggerRef.current.focus();
+        return;
+      }
 
-  const firstElement = focusableElements.item(0);
+      const firstElement = panelElements.at(0);
+      const lastElement = panelElements.at(-1);
 
-  const lastElement = focusableElements.item(
-    focusableElements.length - 1
-  );
+      if (!firstElement || !lastElement) {
+        event.preventDefault();
+        triggerRef.current.focus();
+        return;
+      }
 
-  if (!firstElement || !lastElement) {
-    return;
-  }
+      const activeElement = document.activeElement;
 
-  if (
-    event.shiftKey &&
-    document.activeElement === firstElement
-  ) {
-    event.preventDefault();
-    lastElement.focus();
-  } else if (
-    !event.shiftKey &&
-    document.activeElement === lastElement
-  ) {
-    event.preventDefault();
-    firstElement.focus();
-  }
-}
+      if (event.shiftKey) {
+        if (activeElement === firstElement) {
+          event.preventDefault();
+          triggerRef.current.focus();
+        } else if (
+          activeElement === triggerRef.current
+        ) {
+          event.preventDefault();
+          lastElement.focus();
+        }
+
+        return;
+      }
+
+      if (activeElement === lastElement) {
+        event.preventDefault();
+        triggerRef.current.focus();
+      } else if (
+        activeElement === triggerRef.current
+      ) {
+        event.preventDefault();
+        firstElement.focus();
+      }
+    }
 
     document.addEventListener(
       'keydown',
       handleKeyDown
     );
 
-    window.requestAnimationFrame(() => {
-      const firstFocusable =
-        panelRef.current?.querySelector<HTMLElement>(
-          'a[href], button:not([disabled])'
-        );
-
-      firstFocusable?.focus();
-    });
-
     return () => {
-      document.body.style.overflow =
-        previousOverflow;
-
+      window.cancelAnimationFrame(focusFrame);
+      document.body.style.overflow = previousOverflow;
       document.removeEventListener(
         'keydown',
         handleKeyDown
       );
     };
-  }, [open]);
+  }, [closeAll, open]);
 
   return (
-    <div className="lg:hidden">
+    <div
+      className="lg:hidden"
+      role={open ? 'dialog' : undefined}
+      aria-modal={open ? true : undefined}
+      aria-label={open ? subjectsLabel : undefined}
+    >
       <button
         ref={triggerRef}
         type="button"
         onClick={() => {
           if (open) {
-            closeAll({
-              restoreFocus: true,
-            });
+            closeAll({ restoreFocus: true });
           } else {
             setOpen(true);
           }
         }}
         aria-expanded={open}
         aria-controls={panelId}
-        // aria-label={
-        //   open
-        //     ? closeMenuLabel
-        //     : openMenuLabel
-        // }
-        className="
-          relative
-          z-50
-          inline-flex
-          min-h-touch
-          min-w-touch
-          items-center
-          justify-center
-          rounded-button
-          text-foreground
-          transition-colors
-          duration-200
-          hover:bg-muted
-          focus-visible:outline-none
-          focus-visible:ring-2
-          focus-visible:ring-ring
-          focus-visible:ring-offset-2
-          focus-visible:ring-offset-background
-        "
+        aria-label={
+          open ? closeMenuLabel : openMenuLabel
+        }
+        className="relative z-50 inline-flex min-h-touch min-w-touch items-center justify-center rounded-button text-foreground transition-colors duration-200 hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
       >
         {open ? (
           <X
@@ -220,127 +228,60 @@ export function MobileNav({
 
       <div
         aria-hidden="true"
-        onClick={() => closeAll()}
+        onClick={() =>
+          closeAll({ restoreFocus: true })
+        }
         className={cn(
-          'fixed',
-          'inset-0',
-          'z-30',
-          'bg-overlay/55',
-          'backdrop-blur-sm',
-          'transition-opacity',
-          'duration-300',
-          'motion-reduce:transition-none',
-
+          'fixed inset-0 z-30 bg-overlay/55 backdrop-blur-sm transition-opacity duration-300 motion-reduce:transition-none',
           open
             ? 'opacity-100'
             : 'pointer-events-none opacity-0'
         )}
       />
 
- <div
-  ref={panelRef}
-  id={panelId}
-  role="dialog"
-  aria-modal={open ? true : undefined}
-  aria-label={subjectsLabel}
-  aria-hidden={!open}
-  inert={!open}
-  className={cn(
-    'fixed',
-    'inset-x-0',
-    'top-16',
-    'z-40',
-    'max-h-[calc(100dvh-4rem)]',
-    'overflow-y-auto',
-    'border-t',
-    'border-border',
-    'bg-background',
-    'p-5',
-    'shadow-dropdown',
-    'transition-[transform,opacity]',
-    'duration-300',
-    'ease-out',
-    'motion-reduce:transition-none',
-    'lg:hidden',
-
-    open
-      ? 'translate-y-0 opacity-100'
-      : 'pointer-events-none -translate-y-2 opacity-0'
-  )}
->
+      <div
+        ref={panelRef}
+        id={panelId}
+        aria-hidden={!open}
+        inert={!open}
+        className={cn(
+          'fixed inset-x-0 top-16 z-40 max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-border bg-background p-5 shadow-dropdown transition-[transform,opacity] duration-300 ease-out motion-reduce:transition-none lg:hidden',
+          open
+            ? 'translate-y-0 opacity-100'
+            : 'pointer-events-none -translate-y-2 opacity-0'
+        )}
+      >
         <nav
           aria-label={subjectsLabel}
           className="flex flex-col gap-1"
         >
-
-<a
-  href={homeHref}
-  onClick={() => closeAll()}
-  className="
-    flex
-    min-h-touch
-    items-center
-    rounded-button
-    px-3
-    text-body
-    font-bold
-    text-foreground
-    transition-colors
-    duration-200
-    hover:bg-muted
-    focus-visible:outline-none
-    focus-visible:ring-2
-    focus-visible:ring-ring
-  "
->
-  {homeLabel}
-</a>
+          <a
+            href={homeHref}
+            onClick={() => closeAll()}
+            className="flex min-h-touch items-center rounded-button px-3 text-body font-bold text-foreground transition-colors duration-200 hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            {homeLabel}
+          </a>
 
           {sectionLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => closeAll()}
-              className="
-                flex
-                min-h-touch
-                items-center
-                rounded-button
-                px-3
-                text-body
-                font-bold
-                text-foreground
-                transition-colors
-                duration-200
-                hover:bg-muted
-                focus-visible:outline-none
-                focus-visible:ring-2
-                focus-visible:ring-ring
-              "
+              className="flex min-h-touch items-center rounded-button px-3 text-body font-bold text-foreground transition-colors duration-200 hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
               {link.label}
             </a>
           ))}
 
           <div className="mt-2 border-t border-border pt-3">
-            <p
-              className="
-                px-3
-                pb-2
-                text-caption
-                font-bold
-                uppercase
-                tracking-wide
-                text-muted-foreground
-              "
-            >
+            <p className="px-3 pb-2 text-caption font-bold uppercase tracking-wide text-muted-foreground">
               {subjectsLabel}
             </p>
 
             {subjectCategories.map((category) => {
               const categoryIsOpen =
                 openCategory === category.key;
-
               const categoryPanelId =
                 `${panelId}-${category.key}`;
 
@@ -357,40 +298,14 @@ export function MobileNav({
                     }}
                     aria-expanded={categoryIsOpen}
                     aria-controls={categoryPanelId}
-                    className="
-                      flex
-                      min-h-touch
-                      w-full
-                      items-center
-                      justify-between
-                      gap-3
-                      rounded-button
-                      px-3
-                      text-start
-                      text-body
-                      font-bold
-                      text-foreground
-                      transition-colors
-                      duration-200
-                      hover:bg-muted
-                      focus-visible:outline-none
-                      focus-visible:ring-2
-                      focus-visible:ring-ring
-                    "
+                    className="flex min-h-touch w-full items-center justify-between gap-3 rounded-button px-3 text-start text-body font-bold text-foreground transition-colors duration-200 hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                   >
                     <span>{category.label}</span>
 
                     <ChevronDown
                       className={cn(
-                        'h-4',
-                        'w-4',
-                        'shrink-0',
-                        'transition-transform',
-                        'duration-200',
-                        'motion-reduce:transition-none',
-
-                        categoryIsOpen &&
-                          'rotate-180'
+                        'h-4 w-4 shrink-0 transition-transform duration-200 motion-reduce:transition-none',
+                        categoryIsOpen && 'rotate-180'
                       )}
                       aria-hidden="true"
                     />
@@ -399,54 +314,29 @@ export function MobileNav({
                   <div
                     id={categoryPanelId}
                     aria-hidden={!categoryIsOpen}
+                    inert={!categoryIsOpen}
                     className={cn(
-                      'grid',
-                      'transition-[grid-template-rows,opacity]',
-                      'duration-300',
-                      'ease-out',
-                      'motion-reduce:transition-none',
-
+                      'grid transition-[grid-template-rows,opacity] duration-300 ease-out motion-reduce:transition-none',
                       categoryIsOpen
                         ? 'grid-rows-[1fr] opacity-100'
                         : 'grid-rows-[0fr] opacity-0'
                     )}
                   >
                     <ul className="overflow-hidden ps-3">
-                      {category.children.map(
-                        (child) => (
-                          <li key={child.href}>
-                            <a
-                              href={child.href}
-                              onClick={() =>
-                                closeAll()
-                              }
-                              tabIndex={
-                                categoryIsOpen
-                                  ? 0
-                                  : -1
-                              }
-                              className="
-                                block
-                                min-h-touch
-                                rounded-button
-                                px-3
-                                py-2.5
-                                text-small
-                                text-muted-foreground
-                                transition-colors
-                                duration-200
-                                hover:bg-accent-50
-                                hover:text-accent-800
-                                focus-visible:outline-none
-                                focus-visible:ring-2
-                                focus-visible:ring-ring
-                              "
-                            >
-                              {child.label}
-                            </a>
-                          </li>
-                        )
-                      )}
+                      {category.children.map((child) => (
+                        <li key={child.href}>
+                          <a
+                            href={child.href}
+                            onClick={() => closeAll()}
+                            tabIndex={
+                              categoryIsOpen ? 0 : -1
+                            }
+                            className="block min-h-touch rounded-button px-3 py-2.5 text-small text-muted-foreground transition-colors duration-200 hover:bg-accent-50 hover:text-accent-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                          >
+                            {child.label}
+                          </a>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>
