@@ -354,7 +354,16 @@ function deduplicatePageRecords({
         );
 
       const first =
-        sortedGroup[0];
+        sortedGroup.at(0);
+
+      if (!first) {
+        throw new Error(
+          [
+            'Math pathway deduplication failed.',
+            `The group "${groupKey}" contains no source records.`,
+          ].join(' ')
+        );
+      }
 
       const uniqueSubtopics =
         new Map<

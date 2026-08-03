@@ -11,7 +11,6 @@ import {
   CalendarCheck2,
   Check,
   Clock3,
-  MessageCircle,
   ShieldCheck,
   Sparkles,
   WalletCards,
