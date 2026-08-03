@@ -3,6 +3,9 @@ import type {
 } from 'next';
 
 import {
+  approvedEnglishStrands,
+} from '@/content/subjects/english/english-strands';
+import {
   publicMathPathways,
 } from '@/content/subjects/math/math-pathways';
 import {
@@ -18,6 +21,11 @@ const staticPaths = [
   ...publicMathPathways.map(
     (pathway) =>
       `/subjects/math/${pathway.slug}`
+  ),
+  '/subjects/english',
+  ...approvedEnglishStrands.map(
+    (strand) =>
+      `/subjects/english/${strand.slug}`
   ),
 ];
 
@@ -37,7 +45,9 @@ export default function sitemap():
         path === ''
           ? 1
           : path ===
-              '/subjects/math'
+                '/subjects/math' ||
+              path ===
+                '/subjects/english'
             ? 0.9
             : 0.8,
 

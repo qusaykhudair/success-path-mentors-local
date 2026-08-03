@@ -35,6 +35,13 @@ export const routePath = {
     return `/${locale}/subjects/math/${pathwaySlug}`;
   },
 
+  englishStrand(
+    locale: SiteLocale,
+    strandSlug: string
+  ): string {
+    return `/${locale}/subjects/english/${strandSlug}`;
+  },
+
   contact(locale: SiteLocale): string {
     return localizedContactPath(
       locale
@@ -57,6 +64,28 @@ export function getBookingHref(
     locale === 'ar'
       ? 'مرحبًا، أود حجز حصة تجريبية مجانية في الرياضيات.'
       : 'Hello, I would like to book a free mathematics trial lesson.';
+
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    message
+  )}`;
+}
+
+
+export function getEnglishBookingHref(
+  locale: SiteLocale,
+  configuredBookingUrl?: string
+): string {
+  const configured =
+    configuredBookingUrl?.trim();
+
+  if (configured) {
+    return configured;
+  }
+
+  const message =
+    locale === 'ar'
+      ? 'مرحبًا، أود حجز حصة تجريبية مجانية في اللغة الإنجليزية.'
+      : 'Hello, I would like to book a free English trial lesson.';
 
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     message
