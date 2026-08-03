@@ -97,22 +97,42 @@ export type MathPathwayIconKey =
   | 'sigma'
   | 'coins';
 
-export type MathPathwayDataSource =
-  | {
-      type: 'source-pathways';
-      sourceNames: string[];
-    }
-  | {
-      type: 'topic-titles';
-      titles: string[];
-    };
-
 export interface PublicMathPathway {
   slug: MathPathwaySlug;
   title: LocalizedText;
   shortTitle: LocalizedText;
   description: LocalizedText;
   iconKey: MathPathwayIconKey;
-  dataSource: MathPathwayDataSource;
-  additionalView?: boolean;
+}
+
+export type MathClassificationBasis =
+  | 'topic-title-and-subtopics'
+  | 'subtopic-content-correction';
+
+export interface MathTopicDistributionEntry {
+  pathwaySlug: MathPathwaySlug;
+  sourceTopic: string;
+  displayTitle: string;
+  subtopicCount: number;
+  sourceOrder: number;
+  classificationBasis: MathClassificationBasis;
+  reviewNote?: string;
+}
+
+export interface MathTopicDistributionSource {
+  metadata: {
+    sourceFile: string;
+    sourceRecordCount: number;
+    sourceSubtopicCount: number;
+    publicTopicCount: number;
+    classificationSections: MathPathwaySlug[];
+    classificationRule: string;
+    displayDeduplicationRule: string;
+    correctedRecordCount: number;
+    trueDuplicateGroupsMerged: number;
+  };
+  records: Record<
+    string,
+    MathTopicDistributionEntry
+  >;
 }

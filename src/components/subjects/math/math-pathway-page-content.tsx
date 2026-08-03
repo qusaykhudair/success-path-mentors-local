@@ -51,7 +51,7 @@ const pageCopy = {
     curriculumHeading:
       'Curriculum topics by grade',
     curriculumDescription:
-      'Every grade is included. Topic names are taken from the documented Excel roadmap and repeated labels are shown once within the same grade.',
+      'Every grade is included. Topics are classified from the complete curriculum JSON, and repeated labels are shown once within the same section and grade.',
     topicsLabel:
       'documented topics',
     gradeSectionsLabel:
@@ -59,7 +59,7 @@ const pageCopy = {
     topicOverview:
       'Topic overview',
     sourceNote:
-      'Topic names are shown in English as documented in the curriculum source. A grade with no documented topic remains visible for completeness.',
+      'Topic names follow the curriculum JSON. Clearly mismatched source labels are corrected from their subtopic content, while empty grades remain visible for completeness.',
     backToMath:
       'Back to mathematics',
     bookTrial:
@@ -89,7 +89,7 @@ const pageCopy = {
     curriculumHeading:
       'موضوعات المنهج حسب الصف',
     curriculumDescription:
-      'تم تضمين جميع الصفوف. أسماء الموضوعات مأخوذة من خارطة Excel الموثقة، ويظهر العنوان المكرر مرة واحدة فقط داخل الصف نفسه.',
+      'تم تضمين جميع الصفوف. جرى توزيع الموضوعات بعد مراجعة ملف المنهج JSON كاملًا، ويظهر العنوان المكرر مرة واحدة فقط داخل القسم والصف نفسيهما.',
     topicsLabel:
       'موضوعًا موثقًا',
     gradeSectionsLabel:
@@ -97,7 +97,7 @@ const pageCopy = {
     topicOverview:
       'نظرة عامة على الموضوع',
     sourceNote:
-      'تُعرض أسماء الموضوعات بالإنجليزية كما وردت في مصدر المنهج. يبقى الصف ظاهرًا حتى عندما لا يحتوي المصدر على موضوع موثق ضمن هذا المسار.',
+      'تتبع أسماء الموضوعات ملف المنهج JSON، مع تصحيح التسميات التي لا تتوافق بوضوح مع محتوى موضوعاتها الفرعية. ويبقى الصف ظاهرًا حتى عندما لا يحتوي القسم على موضوع موثق.',
     backToMath:
       'العودة إلى الرياضيات',
     bookTrial:

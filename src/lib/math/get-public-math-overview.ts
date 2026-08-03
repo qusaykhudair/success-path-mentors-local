@@ -1,7 +1,7 @@
 import 'server-only';
 
 import curriculumJson from '@/content/subjects/math/data/math-curriculum-full.json';
-import reviewJson from '@/content/subjects/math/data/strand-pathway-review.json';
+import distributionJson from '@/content/subjects/math/data/math-topic-distribution.json';
 import {
   publicMathPathways,
 } from '@/content/subjects/math/math-pathways';
@@ -9,10 +9,9 @@ import type {
   LocalizedText,
   MathCurriculumSource,
   MathGrade,
-  MathPathwayDataSource,
   MathPathwaySlug,
+  MathTopicDistributionSource,
   PublicMathPathway,
-  StrandPathwayReviewSource,
 } from '@/types/math-curriculum';
 import type {
   MathCurriculumOverview,
@@ -29,8 +28,9 @@ interface SourceTopicRecord {
   sourceOrder: number;
   strand: string;
   grade: MathGrade;
-  title: string;
-  sourcePathway: string;
+  sourceTitle: string;
+  displayTitle: string;
+  pathwaySlug: MathPathwaySlug;
   subtopics: string[];
 }
 
@@ -40,15 +40,14 @@ interface PageTopicRecord {
   grade: MathGrade;
   title: string;
   sourceKeys: string[];
-  sourcePathways: string[];
   subtopics: string[];
 }
 
 const curriculum =
   curriculumJson as MathCurriculumSource;
 
-const review =
-  reviewJson as StrandPathwayReviewSource;
+const distribution =
+  distributionJson as MathTopicDistributionSource;
 
 const gradeOrder: MathGrade[] = [
   'G2',
@@ -167,76 +166,103 @@ function getGradeShortLabel(
 
 function buildSourceTopicRecords():
   SourceTopicRecord[] {
+  const pathwaySlugs =
+    new Set(
+      publicMathPathways.map(
+        (pathway) =>
+          pathway.slug
+      )
+    );
+
   const records:
     SourceTopicRecord[] = [];
 
-  review.strands.forEach(
-    (strandRecord, strandIndex) => {
+  Object.entries(
+    curriculum
+  ).forEach(
+    (
+      [strand, gradeMap],
+      strandIndex
+    ) => {
       gradeOrder.forEach(
         (grade, gradeIndex) => {
-          const reviewCell =
-            strandRecord.grades[grade];
+          const sourceTopic =
+            gradeMap[grade];
 
-          if (!reviewCell?.topic) {
+          if (!sourceTopic) {
             return;
           }
 
-          const sourceTopic =
-            curriculum[
-              strandRecord.strand
-            ]?.[grade];
+          const key =
+            `${strand}::${grade}`;
 
-          if (!sourceTopic) {
+          const assignment =
+            distribution.records[key];
+
+          if (!assignment) {
             throw new Error(
               [
-                'Math curriculum source mismatch.',
-                `Missing ${strandRecord.strand} ${grade}.`,
+                'Math topic distribution is incomplete.',
+                `Missing assignment for ${key}.`,
               ].join(' ')
             );
           }
 
           if (
-            sourceTopic.topic !==
-            reviewCell.topic
+            assignment.sourceTopic !==
+            sourceTopic.topic
           ) {
             throw new Error(
               [
-                'Math curriculum title mismatch.',
-                `${strandRecord.strand} ${grade}.`,
-                `Excel: "${reviewCell.topic}".`,
-                `Detailed source: "${sourceTopic.topic}".`,
+                'Math topic distribution title mismatch.',
+                `${key}.`,
+                `JSON: "${sourceTopic.topic}".`,
+                `Distribution: "${assignment.sourceTopic}".`,
               ].join(' ')
             );
           }
 
           if (
-            sourceTopic.subtopics.length !==
-            reviewCell.subtopicCount
+            assignment.subtopicCount !==
+            sourceTopic.subtopics.length
           ) {
             throw new Error(
               [
-                'Math curriculum count mismatch.',
-                `${strandRecord.strand} ${grade}.`,
-                `Excel: ${reviewCell.subtopicCount}.`,
-                `Detailed source: ${sourceTopic.subtopics.length}.`,
+                'Math topic distribution count mismatch.',
+                `${key}.`,
+                `JSON: ${sourceTopic.subtopics.length}.`,
+                `Distribution: ${assignment.subtopicCount}.`,
+              ].join(' ')
+            );
+          }
+
+          if (
+            !pathwaySlugs.has(
+              assignment.pathwaySlug
+            )
+          ) {
+            throw new Error(
+              [
+                'Math topic distribution pathway mismatch.',
+                `${key} uses "${assignment.pathwaySlug}".`,
               ].join(' ')
             );
           }
 
           records.push({
-            key:
-              `${strandRecord.strand}::${grade}`,
+            key,
             sourceOrder:
               strandIndex *
                 gradeOrder.length +
               gradeIndex,
-            strand:
-              strandRecord.strand,
+            strand,
             grade,
-            title:
-              reviewCell.topic,
-            sourcePathway:
-              strandRecord.proposedPathway,
+            sourceTitle:
+              sourceTopic.topic,
+            displayTitle:
+              assignment.displayTitle,
+            pathwaySlug:
+              assignment.pathwaySlug,
             subtopics:
               sourceTopic.subtopics,
           });
@@ -245,16 +271,67 @@ function buildSourceTopicRecords():
     }
   );
 
+  const sourceKeys =
+    new Set(
+      records.map(
+        (record) =>
+          record.key
+      )
+    );
+
+  const extraDistributionKeys =
+    Object.keys(
+      distribution.records
+    ).filter(
+      (key) =>
+        !sourceKeys.has(key)
+    );
+
   if (
-    records.length !==
-    review.statistics
-      .populatedTopicCells
+    extraDistributionKeys.length > 0
   ) {
     throw new Error(
       [
-        'Math curriculum record-count mismatch.',
-        `Expected ${review.statistics.populatedTopicCells}.`,
+        'Math topic distribution contains extra records.',
+        extraDistributionKeys
+          .slice(0, 5)
+          .join(', '),
+      ].join(' ')
+    );
+  }
+
+  if (
+    records.length !==
+    distribution.metadata
+      .sourceRecordCount
+  ) {
+    throw new Error(
+      [
+        'Math topic source-count mismatch.',
+        `Expected ${distribution.metadata.sourceRecordCount}.`,
         `Received ${records.length}.`,
+      ].join(' ')
+    );
+  }
+
+  const subtopicCount =
+    records.reduce(
+      (total, record) =>
+        total +
+        record.subtopics.length,
+      0
+    );
+
+  if (
+    subtopicCount !==
+    distribution.metadata
+      .sourceSubtopicCount
+  ) {
+    throw new Error(
+      [
+        'Math subtopic source-count mismatch.',
+        `Expected ${distribution.metadata.sourceSubtopicCount}.`,
+        `Received ${subtopicCount}.`,
       ].join(' ')
     );
   }
@@ -262,53 +339,6 @@ function buildSourceTopicRecords():
   return records;
 }
 
-function selectRecordsForDataSource({
-  dataSource,
-  records,
-}: {
-  dataSource: MathPathwayDataSource;
-  records: SourceTopicRecord[];
-}): SourceTopicRecord[] {
-  if (
-    dataSource.type ===
-    'source-pathways'
-  ) {
-    const accepted =
-      new Set(
-        dataSource.sourceNames
-      );
-
-    return records.filter(
-      (record) =>
-        accepted.has(
-          record.sourcePathway
-        )
-    );
-  }
-
-  const acceptedTitles =
-    new Set(
-      dataSource.titles.map(
-        normalizeTopicTitle
-      )
-    );
-
-  return records.filter(
-    (record) =>
-      acceptedTitles.has(
-        normalizeTopicTitle(
-          record.title
-        )
-      )
-  );
-}
-
-/**
- * Removes repeated same-page, same-grade topic labels.
- *
- * Unique detailed subtopics are preserved for later topic
- * detail pages. The public topic appears once.
- */
 function deduplicatePageRecords({
   pathwaySlug,
   records,
@@ -322,25 +352,31 @@ function deduplicatePageRecords({
       SourceTopicRecord[]
     >();
 
-  records.forEach(
-    (record) => {
-      const groupKey = [
-        record.grade,
-        normalizeTopicTitle(
-          record.title
-        ),
-      ].join('::');
+  records
+    .filter(
+      (record) =>
+        record.pathwaySlug ===
+        pathwaySlug
+    )
+    .forEach(
+      (record) => {
+        const groupKey = [
+          record.grade,
+          normalizeTopicTitle(
+            record.displayTitle
+          ),
+        ].join('::');
 
-      const existing =
-        groups.get(groupKey) ?? [];
+        const existing =
+          groups.get(groupKey) ?? [];
 
-      existing.push(record);
-      groups.set(
-        groupKey,
-        existing
-      );
-    }
-  );
+        existing.push(record);
+        groups.set(
+          groupKey,
+          existing
+        );
+      }
+    );
 
   return [
     ...groups.entries(),
@@ -403,20 +439,12 @@ function deduplicatePageRecords({
         grade:
           first.grade,
         title:
-          first.title,
+          first.displayTitle,
         sourceKeys:
           sortedGroup.map(
             (record) =>
               record.key
           ),
-        sourcePathways: [
-          ...new Set(
-            sortedGroup.map(
-              (record) =>
-                record.sourcePathway
-            )
-          ),
-        ],
         subtopics: [
           ...uniqueSubtopics.values(),
         ],
@@ -483,11 +511,6 @@ function buildGradeTopicGroup({
   };
 }
 
-/**
- * All five stages and all eleven grades are always returned.
- * Empty grades receive an empty topics array instead of
- * disappearing from the pathway page.
- */
 function buildCompleteStages({
   records,
   locale,
@@ -531,28 +554,15 @@ function buildCompleteStages({
 
 function buildPathwaySummary({
   pathway,
-  sourceRecords,
+  pageRecords,
   locale,
 }: {
   pathway:
     PublicMathPathway;
-  sourceRecords:
-    SourceTopicRecord[];
+  pageRecords:
+    PageTopicRecord[];
   locale: 'en' | 'ar';
 }): PublicMathPathwaySummary {
-  const pageRecords =
-    deduplicatePageRecords({
-      pathwaySlug:
-        pathway.slug,
-      records:
-        selectRecordsForDataSource({
-          dataSource:
-            pathway.dataSource,
-          records:
-            sourceRecords,
-        }),
-    });
-
   const stages =
     buildCompleteStages({
       records:
@@ -592,136 +602,41 @@ function buildPathwaySummary({
   };
 }
 
-/**
- * Grade browsing is based only on the seven source-aligned
- * pages. Functions is an additional page and is not repeated
- * as another learning area in the grade browser.
- *
- * Repeated titles across source pages are merged once for the
- * grade summary and assigned to the first source-aligned page
- * in the configured order.
- */
 function buildGradeSummary({
   grade,
-  sourceRecords,
+  recordsByPathway,
   pathwaySummaries,
   locale,
 }: {
   grade: MathGrade;
-  sourceRecords:
-    SourceTopicRecord[];
+  recordsByPathway:
+    Map<
+      MathPathwaySlug,
+      PageTopicRecord[]
+    >;
   pathwaySummaries:
     PublicMathPathwaySummary[];
   locale: 'en' | 'ar';
 }): MathGradeSummary {
-  const sourceAligned =
-    publicMathPathways.filter(
-      (pathway) =>
-        !pathway.additionalView
-    );
-
-  const ownership =
-    new Map<
-      string,
-      {
-        pathway:
-          PublicMathPathway;
-        records:
-          SourceTopicRecord[];
-      }
-    >();
-
-  sourceAligned.forEach(
-    (pathway) => {
-      const selected =
-        selectRecordsForDataSource({
-          dataSource:
-            pathway.dataSource,
-          records:
-            sourceRecords,
-        }).filter(
-          (record) =>
-            record.grade === grade
-        );
-
-      selected.forEach(
-        (record) => {
-          const key =
-            normalizeTopicTitle(
-              record.title
-            );
-
-          const existing =
-            ownership.get(key);
-
-          if (existing) {
-            existing.records.push(
-              record
-            );
-            return;
-          }
-
-          ownership.set(
-            key,
-            {
-              pathway,
-              records: [
-                record,
-              ],
-            }
-          );
-        }
-      );
-    }
-  );
-
-  const pathwayGroups =
-    new Map<
-      MathPathwaySlug,
-      SourceTopicRecord[]
-    >();
-
-  ownership.forEach(
-    ({ pathway, records }) => {
-      const current =
-        pathwayGroups.get(
-          pathway.slug
-        ) ?? [];
-
-      current.push(
-        ...records
-      );
-
-      pathwayGroups.set(
-        pathway.slug,
-        current
-      );
-    }
-  );
-
   const pathways:
     MathGradePathwaySummary[] =
-      sourceAligned.flatMap(
+      publicMathPathways.flatMap(
         (pathway) => {
-          const ownedRecords =
-            pathwayGroups.get(
-              pathway.slug
-            ) ?? [];
+          const gradeRecords =
+            (
+              recordsByPathway.get(
+                pathway.slug
+              ) ?? []
+            ).filter(
+              (record) =>
+                record.grade === grade
+            );
 
           if (
-            ownedRecords.length ===
-            0
+            gradeRecords.length === 0
           ) {
             return [];
           }
-
-          const pageRecords =
-            deduplicatePageRecords({
-              pathwaySlug:
-                pathway.slug,
-              records:
-                ownedRecords,
-            });
 
           const summary =
             pathwaySummaries.find(
@@ -743,23 +658,15 @@ function buildGradeSummary({
               iconKey:
                 pathway.iconKey,
               topicCount:
-                pageRecords.length,
+                gradeRecords.length,
               topics:
                 buildTopicSummaries(
-                  pageRecords
+                  gradeRecords
                 ),
             },
           ];
         }
       );
-
-  const topicCount =
-    pathways.reduce(
-      (total, pathway) =>
-        total +
-        pathway.topicCount,
-      0
-    );
 
   return {
     grade,
@@ -773,7 +680,13 @@ function buildGradeSummary({
         grade,
         locale
       ),
-    topicCount,
+    topicCount:
+      pathways.reduce(
+        (total, pathway) =>
+          total +
+          pathway.topicCount,
+        0
+      ),
     pathwayCount:
       pathways.length,
     pathways,
@@ -786,22 +699,67 @@ export function getPublicMathOverview(
   const sourceRecords =
     buildSourceTopicRecords();
 
+  const recordsByPathway =
+    new Map<
+      MathPathwaySlug,
+      PageTopicRecord[]
+    >(
+      publicMathPathways.map(
+        (pathway) => [
+          pathway.slug,
+          deduplicatePageRecords({
+            pathwaySlug:
+              pathway.slug,
+            records:
+              sourceRecords,
+          }),
+        ]
+      )
+    );
+
   const pathways =
     publicMathPathways.map(
       (pathway) =>
         buildPathwaySummary({
           pathway,
-          sourceRecords,
+          pageRecords:
+            recordsByPathway.get(
+              pathway.slug
+            ) ?? [],
           locale,
         })
     );
+
+  const publicTopicCount =
+    [
+      ...recordsByPathway.values(),
+    ].reduce(
+      (total, pageRecords) =>
+        total +
+        pageRecords.length,
+      0
+    );
+
+  if (
+    publicTopicCount !==
+    distribution.metadata
+      .publicTopicCount
+  ) {
+    throw new Error(
+      [
+        'Math public-topic count mismatch.',
+        `Expected ${distribution.metadata.publicTopicCount}.`,
+        `Received ${publicTopicCount}.`,
+      ].join(' ')
+    );
+  }
 
   const grades =
     gradeOrder.map(
       (grade) =>
         buildGradeSummary({
           grade,
-          sourceRecords,
+          recordsByPathway,
           pathwaySummaries:
             pathways,
           locale,
@@ -813,11 +771,11 @@ export function getPublicMathOverview(
       gradeMin: 2,
       gradeMax: 12,
       strandCount:
-        review.statistics
-          .strandCount,
+        Object.keys(
+          curriculum
+        ).length,
       topicCount:
-        review.statistics
-          .populatedTopicCells,
+        publicTopicCount,
       publicPathwayCount:
         pathways.length,
     },

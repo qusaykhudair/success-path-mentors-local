@@ -3,14 +3,12 @@ import type {
 } from '@/types/math-curriculum';
 
 /**
- * Page-level curriculum sources.
+ * Public mathematics sections.
  *
- * Source-aligned pages use the Proposed Pathway labels from
- * the Excel workbook. Together, those seven pages account for
- * every populated Excel cell exactly once.
- *
- * Functions is an additional discovery page. It overlaps the
- * source-aligned pages but never removes records from them.
+ * Topic assignment is stored separately in
+ * data/math-topic-distribution.json. This keeps the current
+ * route and component structure unchanged while allowing each
+ * strand-grade JSON record to be reviewed independently.
  */
 export const publicMathPathways:
   PublicMathPathway[] = [
@@ -26,17 +24,11 @@ export const publicMathPathways:
       },
       description: {
         en:
-          'The complete Basics & Operations pathway from the documented Excel roadmap, organized across Grades 2–12.',
+          'Number sense, whole-number operations, integers, exponents, estimation, and mathematical reasoning from Grades 2–12.',
         ar:
-          'المسار الكامل للأساسيات والعمليات الحسابية من خارطة Excel الموثقة، منظمًا للصفوف 2–12.',
+          'الحس العددي والعمليات والأعداد الصحيحة والأسس والتقدير والاستدلال الرياضي من الصف الثاني حتى الثاني عشر.',
       },
       iconKey: 'calculator',
-      dataSource: {
-        type: 'source-pathways',
-        sourceNames: [
-          'Basics & Operations',
-        ],
-      },
     },
     {
       slug: 'fractions-rational-numbers',
@@ -50,17 +42,11 @@ export const publicMathPathways:
       },
       description: {
         en:
-          'The complete Fractions & Rational Numbers pathway from the documented Excel roadmap, organized across Grades 2–12.',
+          'Fractions, decimals, rational numbers, ratios, proportions, and percents organized by grade.',
         ar:
-          'المسار الكامل للكسور والأعداد النسبية من خارطة Excel الموثقة، منظمًا للصفوف 2–12.',
+          'الكسور والأعداد العشرية والنسبية والنسب والتناسبات والنسب المئوية منظمة حسب الصف.',
       },
       iconKey: 'divide-circle',
-      dataSource: {
-        type: 'source-pathways',
-        sourceNames: [
-          'Fractions & Rational Numbers',
-        ],
-      },
     },
     {
       slug: 'algebra-equations',
@@ -74,17 +60,11 @@ export const publicMathPathways:
       },
       description: {
         en:
-          'The complete Algebra & Equations pathway from the documented Excel roadmap, organized across Grades 2–12.',
+          'Expressions, equations, inequalities, systems, polynomials, factoring, and algebraic reasoning.',
         ar:
-          'المسار الكامل للجبر والمعادلات من خارطة Excel الموثقة، منظمًا للصفوف 2–12.',
+          'العبارات والمعادلات والمتباينات والأنظمة وكثيرات الحدود والتحليل والاستدلال الجبري.',
       },
       iconKey: 'variable',
-      dataSource: {
-        type: 'source-pathways',
-        sourceNames: [
-          'Algebra & Equations',
-        ],
-      },
     },
     {
       slug: 'functions',
@@ -98,31 +78,11 @@ export const publicMathPathways:
       },
       description: {
         en:
-          'An additional cross-curriculum view of documented function, relation, sequence, slope, and coordinate-plane topics.',
+          'Patterns, sequences, coordinate planes, relations, variation, linear functions, and function families.',
         ar:
-          'عرض إضافي لموضوعات الدوال والعلاقات والمتتاليات والميل والمستوى الإحداثي الموثقة عبر المنهج.',
+          'الأنماط والمتتاليات والمستوى الإحداثي والعلاقات والتغير والدوال الخطية وعائلات الدوال.',
       },
       iconKey: 'chart-spline',
-      additionalView: true,
-      dataSource: {
-        type: 'topic-titles',
-        titles: [
-          'Coordinate plane',
-          'Direct and inverse variation',
-          'Direct variation',
-          'Exponential functions',
-          'Families of functions',
-          'Functions',
-          'Functions: linear, quadratic, exponential',
-          'Linear functions',
-          'Number sequences',
-          'Parabolas',
-          'Patterns',
-          'Patterns and sequences',
-          'Quadratic relations',
-          'Relations and functions',
-        ],
-      },
     },
     {
       slug: 'geometry-trigonometry',
@@ -136,17 +96,11 @@ export const publicMathPathways:
       },
       description: {
         en:
-          'The complete Geometry & Trigonometry pathway from the documented Excel roadmap, organized across Grades 2–12.',
+          'Measurement, shapes, transformations, triangles, circles, constructions, and trigonometry.',
         ar:
-          'المسار الكامل للهندسة وحساب المثلثات من خارطة Excel الموثقة، منظمًا للصفوف 2–12.',
+          'القياس والأشكال والتحويلات والمثلثات والدوائر والإنشاءات وحساب المثلثات.',
       },
       iconKey: 'shapes',
-      dataSource: {
-        type: 'source-pathways',
-        sourceNames: [
-          'Geometry & Trigonometry',
-        ],
-      },
     },
     {
       slug: 'statistics-probability',
@@ -160,17 +114,11 @@ export const publicMathPathways:
       },
       description: {
         en:
-          'The complete Statistics & Probability pathway from the documented Excel roadmap, organized across Grades 2–12.',
+          'Data displays, statistics, probability, sampling, distributions, and statistical reasoning.',
         ar:
-          'المسار الكامل للإحصاء والاحتمالات من خارطة Excel الموثقة، منظمًا للصفوف 2–12.',
+          'تمثيل البيانات والإحصاء والاحتمالات والعينات والتوزيعات والاستدلال الإحصائي.',
       },
       iconKey: 'chart',
-      dataSource: {
-        type: 'source-pathways',
-        sourceNames: [
-          'Statistics & Probability',
-        ],
-      },
     },
     {
       slug: 'advanced-precalculus',
@@ -184,17 +132,11 @@ export const publicMathPathways:
       },
       description: {
         en:
-          'The complete Advanced / Pre-Calculus pathway from the documented Excel roadmap, organized across Grades 2–12.',
+          'Radicals, logarithms, rational functions, complex numbers, matrices, vectors, conic sections, and advanced series.',
         ar:
-          'المسار الكامل للرياضيات المتقدمة وما قبل التفاضل من خارطة Excel الموثقة، منظمًا للصفوف 2–12.',
+          'الجذور واللوغاريتمات والدوال النسبية والأعداد المركبة والمصفوفات والمتجهات والقطوع والمتسلسلات المتقدمة.',
       },
       iconKey: 'sigma',
-      dataSource: {
-        type: 'source-pathways',
-        sourceNames: [
-          'Advanced / Pre-Calculus',
-        ],
-      },
     },
     {
       slug: 'financial-literacy',
@@ -208,17 +150,10 @@ export const publicMathPathways:
       },
       description: {
         en:
-          'The documented Financial Literacy and mixed Statistics / Financial Literacy source pathways, shown across every grade.',
+          'Money, consumer mathematics, budgeting, prices, payments, interest, and everyday financial decisions.',
         ar:
-          'مسارا الثقافة المالية والإحصاء/الثقافة المالية الموثقان في Excel، مع عرض جميع الصفوف.',
+          'المال ورياضيات المستهلك والميزانية والأسعار وطرق الدفع والفائدة والقرارات المالية اليومية.',
       },
       iconKey: 'coins',
-      dataSource: {
-        type: 'source-pathways',
-        sourceNames: [
-          'Statistics & Probability / Financial Literacy',
-          'Financial Literacy',
-        ],
-      },
     },
   ];

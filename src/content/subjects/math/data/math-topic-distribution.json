@@ -1,0 +1,2651 @@
+{
+  "metadata": {
+    "sourceFile": "math_curriculum_full_extraction1 (1).json",
+    "sourceRecordCount": 327,
+    "sourceSubtopicCount": 3370,
+    "publicTopicCount": 325,
+    "classificationSections": [
+      "basics-operations",
+      "fractions-rational-numbers",
+      "algebra-equations",
+      "functions",
+      "geometry-trigonometry",
+      "statistics-probability",
+      "advanced-precalculus",
+      "financial-literacy"
+    ],
+    "classificationRule": "Every strand-grade JSON record is assigned to exactly one section. The source topic title determines the default section; all subtopics were reviewed, and clearly mismatched source labels receive a record-level section and display-title correction.",
+    "displayDeduplicationRule": "Within the same section and grade, identical display titles are merged and their unique subtopics remain available for future detail pages.",
+    "correctedRecordCount": 11,
+    "trueDuplicateGroupsMerged": 2
+  },
+  "records": {
+    "A::G2": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Counting and number patterns",
+      "displayTitle": "Counting and number patterns",
+      "subtopicCount": 19,
+      "sourceOrder": 0,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "A::G3": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Numbers and comparing",
+      "displayTitle": "Numbers and comparing",
+      "subtopicCount": 25,
+      "sourceOrder": 1,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "A::G4": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Number sense",
+      "displayTitle": "Number sense",
+      "subtopicCount": 20,
+      "sourceOrder": 2,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "A::G5": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Place values and number sense",
+      "displayTitle": "Place values and number sense",
+      "subtopicCount": 19,
+      "sourceOrder": 3,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "A::G6": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Whole numbers",
+      "displayTitle": "Whole numbers",
+      "subtopicCount": 6,
+      "sourceOrder": 4,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "A::G7": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Number theory",
+      "displayTitle": "Number theory",
+      "subtopicCount": 8,
+      "sourceOrder": 5,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "A::G8": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Number theory",
+      "displayTitle": "Number theory",
+      "subtopicCount": 8,
+      "sourceOrder": 6,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "A::G9": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Numbers",
+      "displayTitle": "Numbers",
+      "subtopicCount": 8,
+      "sourceOrder": 7,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "A::G10": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Numbers",
+      "displayTitle": "Numbers",
+      "subtopicCount": 13,
+      "sourceOrder": 8,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "A::G11": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Measurement",
+      "displayTitle": "Measurement",
+      "subtopicCount": 0,
+      "sourceOrder": 9,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "A::G12": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Functions",
+      "displayTitle": "Functions",
+      "subtopicCount": 16,
+      "sourceOrder": 10,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "B::G2": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Comparing and ordering",
+      "displayTitle": "Comparing and ordering",
+      "subtopicCount": 6,
+      "sourceOrder": 11,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "B::G3": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Place values",
+      "displayTitle": "Place values",
+      "subtopicCount": 16,
+      "sourceOrder": 12,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "B::G4": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Addition",
+      "displayTitle": "Addition",
+      "subtopicCount": 19,
+      "sourceOrder": 13,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "B::G5": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Addition and subtraction",
+      "displayTitle": "Addition and subtraction",
+      "subtopicCount": 15,
+      "sourceOrder": 14,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "B::G6": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Decimals",
+      "displayTitle": "Decimals",
+      "subtopicCount": 14,
+      "sourceOrder": 15,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "B::G7": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Integers",
+      "displayTitle": "Integers",
+      "subtopicCount": 9,
+      "sourceOrder": 16,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "B::G8": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Integers",
+      "displayTitle": "Integers",
+      "subtopicCount": 8,
+      "sourceOrder": 17,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "B::G9": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Operations",
+      "displayTitle": "Operations",
+      "subtopicCount": 9,
+      "sourceOrder": 18,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "B::G10": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Exponents",
+      "displayTitle": "Exponents",
+      "subtopicCount": 9,
+      "sourceOrder": 19,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "B::G11": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Equations",
+      "displayTitle": "Equations",
+      "subtopicCount": 0,
+      "sourceOrder": 20,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "B::G12": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Families of functions",
+      "displayTitle": "Families of functions",
+      "subtopicCount": 6,
+      "sourceOrder": 21,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "C::G2": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Names of numbers",
+      "displayTitle": "Names of numbers",
+      "subtopicCount": 9,
+      "sourceOrder": 22,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "C::G3": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Addition",
+      "displayTitle": "Addition",
+      "subtopicCount": 25,
+      "sourceOrder": 23,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "C::G4": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Subtraction",
+      "displayTitle": "Subtraction",
+      "subtopicCount": 17,
+      "sourceOrder": 24,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "C::G5": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Multiplication",
+      "displayTitle": "Multiplication",
+      "subtopicCount": 24,
+      "sourceOrder": 25,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "C::G6": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Integers",
+      "displayTitle": "Integers",
+      "subtopicCount": 4,
+      "sourceOrder": 26,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "C::G7": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Operations with integers",
+      "displayTitle": "Operations with integers",
+      "subtopicCount": 25,
+      "sourceOrder": 27,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "C::G8": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Operations with integers",
+      "displayTitle": "Operations with integers",
+      "subtopicCount": 11,
+      "sourceOrder": 28,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "C::G9": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Ratios, rates and proportions",
+      "displayTitle": "Ratios, rates and proportions",
+      "subtopicCount": 7,
+      "sourceOrder": 29,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "C::G10": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Scientific notation",
+      "displayTitle": "Scientific notation",
+      "subtopicCount": 4,
+      "sourceOrder": 30,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "C::G11": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Inequalities",
+      "displayTitle": "Inequalities",
+      "subtopicCount": 0,
+      "sourceOrder": 31,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "C::G12": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Quadratic relations",
+      "displayTitle": "Quadratic relations",
+      "subtopicCount": 9,
+      "sourceOrder": 32,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "D::G2": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Patterns",
+      "displayTitle": "Patterns",
+      "subtopicCount": 7,
+      "sourceOrder": 33,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "D::G3": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Subtraction",
+      "displayTitle": "Subtraction",
+      "subtopicCount": 15,
+      "sourceOrder": 34,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "D::G4": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Understand multiplication",
+      "displayTitle": "Understand multiplication",
+      "subtopicCount": 8,
+      "sourceOrder": 35,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "D::G5": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Division",
+      "displayTitle": "Division",
+      "subtopicCount": 24,
+      "sourceOrder": 36,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "D::G6": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Addition and subtraction",
+      "displayTitle": "Addition and subtraction",
+      "subtopicCount": 10,
+      "sourceOrder": 37,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "D::G7": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Decimals",
+      "displayTitle": "Decimals",
+      "subtopicCount": 4,
+      "sourceOrder": 38,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "D::G8": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Operations with fractions",
+      "displayTitle": "Operations with fractions",
+      "subtopicCount": 25,
+      "sourceOrder": 39,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "D::G9": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Percents",
+      "displayTitle": "Percents",
+      "subtopicCount": 5,
+      "sourceOrder": 40,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "D::G10": {
+      "pathwaySlug": "advanced-precalculus",
+      "sourceTopic": "Radical expressions",
+      "displayTitle": "Radical expressions",
+      "subtopicCount": 6,
+      "sourceOrder": 41,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "D::G11": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Functions",
+      "displayTitle": "Functions",
+      "subtopicCount": 0,
+      "sourceOrder": 42,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "D::G12": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Polynomials",
+      "displayTitle": "Polynomials",
+      "subtopicCount": 18,
+      "sourceOrder": 43,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "E::G2": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Patterns",
+      "displayTitle": "Addition facts and models",
+      "subtopicCount": 25,
+      "sourceOrder": 44,
+      "classificationBasis": "subtopic-content-correction",
+      "reviewNote": "The source label is Patterns, but every subtopic covers addition facts, models, number lines, arrays, and addition word problems."
+    },
+    "E::G3": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Subtraction",
+      "displayTitle": "Multiplication models",
+      "subtopicCount": 10,
+      "sourceOrder": 45,
+      "classificationBasis": "subtopic-content-correction",
+      "reviewNote": "The source label is Subtraction, but the subtopics cover equal groups, arrays, number lines, and multiplication sentences."
+    },
+    "E::G4": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Understand multiplication",
+      "displayTitle": "Understand multiplication",
+      "subtopicCount": 33,
+      "sourceOrder": 46,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "E::G5": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Division",
+      "displayTitle": "Exponents and powers of ten",
+      "subtopicCount": 8,
+      "sourceOrder": 47,
+      "classificationBasis": "subtopic-content-correction",
+      "reviewNote": "The source label is Division, but the subtopics cover exponents and multiplying or dividing by powers of ten."
+    },
+    "E::G6": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Addition and subtraction",
+      "displayTitle": "Multiplication of whole numbers",
+      "subtopicCount": 9,
+      "sourceOrder": 48,
+      "classificationBasis": "subtopic-content-correction",
+      "reviewNote": "The source label is Addition and subtraction, but the subtopics cover multiplication sentences, products, and product estimation."
+    },
+    "E::G8": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Operations with fractions",
+      "displayTitle": "Rational numbers",
+      "subtopicCount": 7,
+      "sourceOrder": 49,
+      "classificationBasis": "subtopic-content-correction",
+      "reviewNote": "The source label is Operations with fractions, but the subtopics cover rational and irrational numbers, decimals, mixed numbers, and ordering."
+    },
+    "E::G9": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Percents",
+      "displayTitle": "Geometry and measurement",
+      "subtopicCount": 29,
+      "sourceOrder": 50,
+      "classificationBasis": "subtopic-content-correction",
+      "reviewNote": "The source label is Percents, but the subtopics cover perimeter, area, volume, similarity, transformations, and the Pythagorean theorem."
+    },
+    "E::G10": {
+      "pathwaySlug": "advanced-precalculus",
+      "sourceTopic": "Radical expressions",
+      "displayTitle": "Rational exponents",
+      "subtopicCount": 6,
+      "sourceOrder": 51,
+      "classificationBasis": "subtopic-content-correction",
+      "reviewNote": "The source label is Radical expressions, but the subtopics exclusively cover rational exponents."
+    },
+    "E::G11": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Functions",
+      "displayTitle": "Functions",
+      "subtopicCount": 0,
+      "sourceOrder": 52,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "E::G12": {
+      "pathwaySlug": "advanced-precalculus",
+      "sourceTopic": "Polynomials",
+      "displayTitle": "Rational functions",
+      "subtopicCount": 3,
+      "sourceOrder": 53,
+      "classificationBasis": "subtopic-content-correction",
+      "reviewNote": "The source label is Polynomials, but the subtopics cover rational functions, rational equations, and inverse rational functions."
+    },
+    "F::G2": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Subtraction - one digit",
+      "displayTitle": "Subtraction - one digit",
+      "subtopicCount": 15,
+      "sourceOrder": 54,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "F::G3": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Multiplication skill builders",
+      "displayTitle": "Multiplication skill builders",
+      "subtopicCount": 13,
+      "sourceOrder": 55,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "F::G4": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Multiplicative relationships",
+      "displayTitle": "Multiplicative relationships",
+      "subtopicCount": 3,
+      "sourceOrder": 56,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "F::G5": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Number theory",
+      "displayTitle": "Number theory",
+      "subtopicCount": 6,
+      "sourceOrder": 57,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "F::G6": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Division",
+      "displayTitle": "Division",
+      "subtopicCount": 11,
+      "sourceOrder": 58,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "F::G7": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Fractions and mixed numbers",
+      "displayTitle": "Fractions and mixed numbers",
+      "subtopicCount": 12,
+      "sourceOrder": 59,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "F::G8": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Operations with rational numbers",
+      "displayTitle": "Operations with rational numbers",
+      "subtopicCount": 11,
+      "sourceOrder": 60,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "F::G9": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Circles",
+      "displayTitle": "Circles",
+      "subtopicCount": 14,
+      "sourceOrder": 61,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "F::G10": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Coordinate plane",
+      "displayTitle": "Coordinate plane",
+      "subtopicCount": 3,
+      "sourceOrder": 62,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "F::G11": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Systems of inequalities",
+      "displayTitle": "Systems of inequalities",
+      "subtopicCount": 0,
+      "sourceOrder": 63,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "F::G12": {
+      "pathwaySlug": "advanced-precalculus",
+      "sourceTopic": "Logarithms",
+      "displayTitle": "Logarithms",
+      "subtopicCount": 9,
+      "sourceOrder": 64,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "G::G2": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Addition - two digits",
+      "displayTitle": "Addition - two digits",
+      "subtopicCount": 18,
+      "sourceOrder": 65,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "G::G3": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Multiplication fluency",
+      "displayTitle": "Multiplication fluency",
+      "subtopicCount": 21,
+      "sourceOrder": 66,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "G::G4": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Understand division",
+      "displayTitle": "Understand division",
+      "subtopicCount": 10,
+      "sourceOrder": 67,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "G::G5": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Decimals up to hundredths",
+      "displayTitle": "Decimals up to hundredths",
+      "subtopicCount": 18,
+      "sourceOrder": 68,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "G::G6": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Multiply and divide decimals",
+      "displayTitle": "Multiply and divide decimals",
+      "subtopicCount": 23,
+      "sourceOrder": 69,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "G::G7": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Add and subtract fractions",
+      "displayTitle": "Add and subtract fractions",
+      "subtopicCount": 15,
+      "sourceOrder": 70,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "G::G8": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Exponents and roots",
+      "displayTitle": "Exponents and roots",
+      "subtopicCount": 14,
+      "sourceOrder": 71,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "G::G9": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Coordinate plane",
+      "displayTitle": "Coordinate plane",
+      "subtopicCount": 3,
+      "sourceOrder": 72,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "G::G10": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Solve equations",
+      "displayTitle": "Solve equations",
+      "subtopicCount": 11,
+      "sourceOrder": 73,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "G::G11": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Factoring",
+      "displayTitle": "Factoring",
+      "subtopicCount": 0,
+      "sourceOrder": 74,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "G::G12": {
+      "pathwaySlug": "advanced-precalculus",
+      "sourceTopic": "Exponential and logarithmic functions",
+      "displayTitle": "Exponential and logarithmic functions",
+      "subtopicCount": 13,
+      "sourceOrder": 75,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "H::G2": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Subtraction - two digits",
+      "displayTitle": "Subtraction - two digits",
+      "subtopicCount": 12,
+      "sourceOrder": 76,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "H::G3": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Multiplication",
+      "displayTitle": "Multiplication",
+      "subtopicCount": 21,
+      "sourceOrder": 77,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "H::G4": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Division",
+      "displayTitle": "Division",
+      "subtopicCount": 20,
+      "sourceOrder": 78,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "H::G5": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Decimals up to thousandths",
+      "displayTitle": "Decimals up to thousandths",
+      "subtopicCount": 15,
+      "sourceOrder": 79,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "H::G6": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Exponents",
+      "displayTitle": "Exponents",
+      "subtopicCount": 4,
+      "sourceOrder": 80,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "H::G7": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Multiply fractions",
+      "displayTitle": "Multiply fractions",
+      "subtopicCount": 14,
+      "sourceOrder": 81,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "H::G8": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Scientific notation",
+      "displayTitle": "Scientific notation",
+      "subtopicCount": 2,
+      "sourceOrder": 82,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "H::G9": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Properties",
+      "displayTitle": "Properties",
+      "subtopicCount": 4,
+      "sourceOrder": 83,
+      "classificationBasis": "subtopic-content-correction",
+      "reviewNote": "This Properties record is algebraic because its subtopics cover variable expressions, the distributive property, and properties of equality."
+    },
+    "H::G10": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Single-variable inequalities",
+      "displayTitle": "Single-variable inequalities",
+      "subtopicCount": 15,
+      "sourceOrder": 84,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "H::G11": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Quadratic relations",
+      "displayTitle": "Quadratic relations",
+      "subtopicCount": 0,
+      "sourceOrder": 85,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "H::G12": {
+      "pathwaySlug": "advanced-precalculus",
+      "sourceTopic": "Radical functions",
+      "displayTitle": "Radical functions",
+      "subtopicCount": 2,
+      "sourceOrder": 86,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "I::G2": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Addition - three digits",
+      "displayTitle": "Addition - three digits",
+      "subtopicCount": 10,
+      "sourceOrder": 87,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "I::G3": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Understand division",
+      "displayTitle": "Understand division",
+      "subtopicCount": 6,
+      "sourceOrder": 88,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "I::G4": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Mixed operations",
+      "displayTitle": "Mixed operations",
+      "subtopicCount": 16,
+      "sourceOrder": 89,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "I::G5": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Add and subtract decimals up to hundredths",
+      "displayTitle": "Add and subtract decimals up to hundredths",
+      "subtopicCount": 10,
+      "sourceOrder": 90,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "I::G6": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Number theory",
+      "displayTitle": "Number theory",
+      "subtopicCount": 7,
+      "sourceOrder": 91,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "I::G7": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Divide fractions",
+      "displayTitle": "Divide fractions",
+      "subtopicCount": 9,
+      "sourceOrder": 92,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "I::G8": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Ratios, rates and proportions",
+      "displayTitle": "Ratios, rates and proportions",
+      "subtopicCount": 17,
+      "sourceOrder": 93,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "I::G9": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Exponents",
+      "displayTitle": "Exponents",
+      "subtopicCount": 14,
+      "sourceOrder": 94,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "I::G10": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Data and graphs",
+      "displayTitle": "Data and graphs",
+      "subtopicCount": 7,
+      "sourceOrder": 95,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "I::G11": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Parabolas",
+      "displayTitle": "Parabolas",
+      "subtopicCount": 0,
+      "sourceOrder": 96,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "I::G12": {
+      "pathwaySlug": "advanced-precalculus",
+      "sourceTopic": "Roots and rational exponents",
+      "displayTitle": "Roots and rational exponents",
+      "subtopicCount": 8,
+      "sourceOrder": 97,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "J::G2": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Subtraction - three digits",
+      "displayTitle": "Subtraction - three digits",
+      "subtopicCount": 8,
+      "sourceOrder": 98,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "J::G3": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Division skill builders",
+      "displayTitle": "Division skill builders",
+      "subtopicCount": 12,
+      "sourceOrder": 99,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "J::G4": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Variable expressions",
+      "displayTitle": "Variable expressions",
+      "subtopicCount": 7,
+      "sourceOrder": 100,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "J::G5": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Add and subtract decimals up to thousandths",
+      "displayTitle": "Add and subtract decimals up to thousandths",
+      "subtopicCount": 8,
+      "sourceOrder": 101,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "J::G6": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Fractions and mixed numbers",
+      "displayTitle": "Fractions and mixed numbers",
+      "subtopicCount": 18,
+      "sourceOrder": 102,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "J::G7": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Rational numbers",
+      "displayTitle": "Rational numbers",
+      "subtopicCount": 16,
+      "sourceOrder": 103,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "J::G8": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Proportional relationships",
+      "displayTitle": "Proportional relationships",
+      "subtopicCount": 10,
+      "sourceOrder": 104,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "J::G9": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Scientific notation",
+      "displayTitle": "Scientific notation",
+      "subtopicCount": 4,
+      "sourceOrder": 105,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "J::G10": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Relations and functions",
+      "displayTitle": "Relations and functions",
+      "subtopicCount": 11,
+      "sourceOrder": 106,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "J::G11": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Polynomials",
+      "displayTitle": "Polynomials",
+      "subtopicCount": 0,
+      "sourceOrder": 107,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "J::G12": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Systems of equations",
+      "displayTitle": "Systems of equations",
+      "subtopicCount": 10,
+      "sourceOrder": 108,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "K::G2": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Properties",
+      "displayTitle": "Properties",
+      "subtopicCount": 5,
+      "sourceOrder": 109,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "K::G3": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Division fluency",
+      "displayTitle": "Division fluency",
+      "subtopicCount": 15,
+      "sourceOrder": 110,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "K::G4": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Logical reasoning",
+      "displayTitle": "Logical reasoning",
+      "subtopicCount": 6,
+      "sourceOrder": 111,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "K::G5": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Multiply decimals",
+      "displayTitle": "Multiply decimals",
+      "subtopicCount": 15,
+      "sourceOrder": 112,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "K::G6": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Add and subtract fractions",
+      "displayTitle": "Add and subtract fractions",
+      "subtopicCount": 18,
+      "sourceOrder": 113,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "K::G7": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Exponents and square roots",
+      "displayTitle": "Exponents and square roots",
+      "subtopicCount": 8,
+      "sourceOrder": 114,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "K::G8": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Percents",
+      "displayTitle": "Percents",
+      "subtopicCount": 11,
+      "sourceOrder": 115,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "K::G9": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Problem solving",
+      "displayTitle": "Problem solving",
+      "subtopicCount": 5,
+      "sourceOrder": 116,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "K::G10": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Direct and inverse variation",
+      "displayTitle": "Direct and inverse variation",
+      "subtopicCount": 8,
+      "sourceOrder": 117,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "K::G11": {
+      "pathwaySlug": "advanced-precalculus",
+      "sourceTopic": "Radical functions and expressions",
+      "displayTitle": "Radical functions and expressions",
+      "subtopicCount": 0,
+      "sourceOrder": 118,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "K::G12": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Systems of inequalities",
+      "displayTitle": "Systems of inequalities",
+      "subtopicCount": 3,
+      "sourceOrder": 119,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "L::G2": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Mixed operations",
+      "displayTitle": "Mixed operations",
+      "subtopicCount": 17,
+      "sourceOrder": 120,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "L::G3": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Division",
+      "displayTitle": "Division",
+      "subtopicCount": 16,
+      "sourceOrder": 121,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "L::G4": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Patterns and sequences",
+      "displayTitle": "Patterns and sequences",
+      "subtopicCount": 14,
+      "sourceOrder": 122,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "L::G5": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Divide decimals",
+      "displayTitle": "Divide decimals",
+      "subtopicCount": 9,
+      "sourceOrder": 123,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "L::G6": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Multiply and divide fractions",
+      "displayTitle": "Multiply and divide fractions",
+      "subtopicCount": 15,
+      "sourceOrder": 124,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "L::G7": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Ratios, rates and proportions",
+      "displayTitle": "Ratios, rates and proportions",
+      "subtopicCount": 17,
+      "sourceOrder": 125,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "L::G8": {
+      "pathwaySlug": "financial-literacy",
+      "sourceTopic": "Consumer math",
+      "displayTitle": "Consumer math",
+      "subtopicCount": 12,
+      "sourceOrder": 126,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "L::G9": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Number sequences",
+      "displayTitle": "Number sequences",
+      "subtopicCount": 7,
+      "sourceOrder": 127,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "L::G10": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Linear functions",
+      "displayTitle": "Linear functions",
+      "subtopicCount": 27,
+      "sourceOrder": 128,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "L::G11": {
+      "pathwaySlug": "advanced-precalculus",
+      "sourceTopic": "Rational exponents",
+      "displayTitle": "Rational exponents",
+      "subtopicCount": 0,
+      "sourceOrder": 129,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "L::G12": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Nonlinear inequalities",
+      "displayTitle": "Nonlinear inequalities",
+      "subtopicCount": 4,
+      "sourceOrder": 130,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "M::G2": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Place values",
+      "displayTitle": "Place values",
+      "subtopicCount": 17,
+      "sourceOrder": 131,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "M::G3": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Mixed operations",
+      "displayTitle": "Mixed operations",
+      "subtopicCount": 21,
+      "sourceOrder": 132,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "M::G4": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Coordinate plane",
+      "displayTitle": "Coordinate plane",
+      "subtopicCount": 4,
+      "sourceOrder": 133,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "M::G5": {
+      "pathwaySlug": "financial-literacy",
+      "sourceTopic": "Money",
+      "displayTitle": "Money",
+      "subtopicCount": 8,
+      "sourceOrder": 134,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "M::G6": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Mixed operations",
+      "displayTitle": "Mixed operations",
+      "subtopicCount": 14,
+      "sourceOrder": 135,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "M::G7": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Proportional relationships",
+      "displayTitle": "Proportional relationships",
+      "subtopicCount": 9,
+      "sourceOrder": 136,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "M::G8": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Units of measurement",
+      "displayTitle": "Units of measurement",
+      "subtopicCount": 5,
+      "sourceOrder": 137,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "M::G9": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Variable expressions and equations",
+      "displayTitle": "Variable expressions and equations",
+      "subtopicCount": 7,
+      "sourceOrder": 138,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "M::G10": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Systems of linear equations",
+      "displayTitle": "Systems of linear equations",
+      "subtopicCount": 13,
+      "sourceOrder": 139,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "M::G11": {
+      "pathwaySlug": "advanced-precalculus",
+      "sourceTopic": "Rational functions and expressions",
+      "displayTitle": "Rational functions and expressions",
+      "subtopicCount": 0,
+      "sourceOrder": 140,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "M::G12": {
+      "pathwaySlug": "advanced-precalculus",
+      "sourceTopic": "Matrices",
+      "displayTitle": "Matrices",
+      "subtopicCount": 14,
+      "sourceOrder": 141,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "N::G2": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Estimation and rounding",
+      "displayTitle": "Estimation and rounding",
+      "subtopicCount": 7,
+      "sourceOrder": 142,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "N::G3": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Equations and variables",
+      "displayTitle": "Equations and variables",
+      "subtopicCount": 7,
+      "sourceOrder": 143,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "N::G4": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Data and graphs",
+      "displayTitle": "Data and graphs",
+      "subtopicCount": 16,
+      "sourceOrder": 144,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "N::G5": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Fractions and mixed numbers",
+      "displayTitle": "Fractions and mixed numbers",
+      "subtopicCount": 10,
+      "sourceOrder": 145,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "N::G6": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Rational numbers",
+      "displayTitle": "Rational numbers",
+      "subtopicCount": 2,
+      "sourceOrder": 146,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "N::G7": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Percents",
+      "displayTitle": "Percents",
+      "subtopicCount": 8,
+      "sourceOrder": 147,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "N::G8": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Problem solving",
+      "displayTitle": "Problem solving",
+      "subtopicCount": 5,
+      "sourceOrder": 148,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "N::G9": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Solve equations",
+      "displayTitle": "Solve equations",
+      "subtopicCount": 11,
+      "sourceOrder": 149,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "N::G10": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Monomials",
+      "displayTitle": "Monomials",
+      "subtopicCount": 5,
+      "sourceOrder": 150,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "N::G11": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Exponential functions",
+      "displayTitle": "Exponential functions",
+      "subtopicCount": 0,
+      "sourceOrder": 151,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "N::G12": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Trigonometry",
+      "displayTitle": "Trigonometry",
+      "subtopicCount": 17,
+      "sourceOrder": 152,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "O::G2": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Logical reasoning",
+      "displayTitle": "Logical reasoning",
+      "subtopicCount": 1,
+      "sourceOrder": 153,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "O::G3": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Estimation and rounding",
+      "displayTitle": "Estimation and rounding",
+      "subtopicCount": 19,
+      "sourceOrder": 154,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "O::G4": {
+      "pathwaySlug": "financial-literacy",
+      "sourceTopic": "Money",
+      "displayTitle": "Money",
+      "subtopicCount": 9,
+      "sourceOrder": 155,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "O::G5": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Equivalent fractions",
+      "displayTitle": "Equivalent fractions",
+      "subtopicCount": 7,
+      "sourceOrder": 156,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "O::G6": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Problem solving and estimation",
+      "displayTitle": "Problem solving and estimation",
+      "subtopicCount": 6,
+      "sourceOrder": 157,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "O::G7": {
+      "pathwaySlug": "financial-literacy",
+      "sourceTopic": "Consumer math",
+      "displayTitle": "Consumer math",
+      "subtopicCount": 10,
+      "sourceOrder": 158,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "O::G8": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Coordinate plane",
+      "displayTitle": "Coordinate plane",
+      "subtopicCount": 4,
+      "sourceOrder": 159,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "O::G9": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Single-variable inequalities",
+      "displayTitle": "Single-variable inequalities",
+      "subtopicCount": 11,
+      "sourceOrder": 160,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "O::G10": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Polynomials",
+      "displayTitle": "Polynomials",
+      "subtopicCount": 10,
+      "sourceOrder": 161,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "O::G11": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Angle measures",
+      "displayTitle": "Angle measures",
+      "subtopicCount": 0,
+      "sourceOrder": 162,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "O::G12": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Trigonometric functions",
+      "displayTitle": "Trigonometric functions",
+      "subtopicCount": 9,
+      "sourceOrder": 163,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "P::G2": {
+      "pathwaySlug": "financial-literacy",
+      "sourceTopic": "Money",
+      "displayTitle": "Money",
+      "subtopicCount": 19,
+      "sourceOrder": 164,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "P::G3": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Logical reasoning",
+      "displayTitle": "Logical reasoning",
+      "subtopicCount": 6,
+      "sourceOrder": 165,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "P::G4": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Units of measurement",
+      "displayTitle": "Units of measurement",
+      "subtopicCount": 12,
+      "sourceOrder": 166,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "P::G5": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Compare and order fractions",
+      "displayTitle": "Compare and order fractions",
+      "subtopicCount": 9,
+      "sourceOrder": 167,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "P::G6": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Ratios and rates",
+      "displayTitle": "Ratios and rates",
+      "subtopicCount": 17,
+      "sourceOrder": 168,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "P::G7": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Problem solving and estimation",
+      "displayTitle": "Problem solving and estimation",
+      "subtopicCount": 6,
+      "sourceOrder": 169,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "P::G8": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Two-dimensional figures",
+      "displayTitle": "Two-dimensional figures",
+      "subtopicCount": 20,
+      "sourceOrder": 170,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "P::G9": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Data and graphs",
+      "displayTitle": "Data and graphs",
+      "subtopicCount": 7,
+      "sourceOrder": 171,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "P::G10": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Factoring",
+      "displayTitle": "Factoring",
+      "subtopicCount": 8,
+      "sourceOrder": 172,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "P::G11": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Right triangles",
+      "displayTitle": "Right triangles",
+      "subtopicCount": 0,
+      "sourceOrder": 173,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "P::G12": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Trigonometric identities",
+      "displayTitle": "Trigonometric identities",
+      "subtopicCount": 5,
+      "sourceOrder": 174,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Q::G2": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Time",
+      "displayTitle": "Time",
+      "subtopicCount": 16,
+      "sourceOrder": 175,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Q::G3": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Patterns",
+      "displayTitle": "Patterns",
+      "subtopicCount": 8,
+      "sourceOrder": 176,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Q::G4": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Time",
+      "displayTitle": "Time",
+      "subtopicCount": 14,
+      "sourceOrder": 177,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Q::G5": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Add and subtract fractions with like denominators",
+      "displayTitle": "Add and subtract fractions with like denominators",
+      "subtopicCount": 19,
+      "sourceOrder": 178,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Q::G6": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Percents",
+      "displayTitle": "Percents",
+      "subtopicCount": 17,
+      "sourceOrder": 179,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Q::G7": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Units of measurement",
+      "displayTitle": "Units of measurement",
+      "subtopicCount": 6,
+      "sourceOrder": 180,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Q::G8": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Transformations and congruence",
+      "displayTitle": "Transformations and congruence",
+      "subtopicCount": 15,
+      "sourceOrder": 181,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Q::G9": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Relations and functions",
+      "displayTitle": "Relations and functions",
+      "subtopicCount": 10,
+      "sourceOrder": 182,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Q::G10": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Quadratic equations",
+      "displayTitle": "Quadratic equations",
+      "subtopicCount": 9,
+      "sourceOrder": 183,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Q::G11": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Trigonometry",
+      "displayTitle": "Trigonometry",
+      "subtopicCount": 0,
+      "sourceOrder": 184,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Q::G12": {
+      "pathwaySlug": "advanced-precalculus",
+      "sourceTopic": "Conic sections",
+      "displayTitle": "Conic sections",
+      "subtopicCount": 13,
+      "sourceOrder": 185,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "R::G2": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Data and graphs",
+      "displayTitle": "Data and graphs",
+      "subtopicCount": 11,
+      "sourceOrder": 186,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "R::G3": {
+      "pathwaySlug": "financial-literacy",
+      "sourceTopic": "Money",
+      "displayTitle": "Money",
+      "subtopicCount": 13,
+      "sourceOrder": 187,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "R::G4": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Geometry",
+      "displayTitle": "Geometry",
+      "subtopicCount": 29,
+      "sourceOrder": 188,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "R::G5": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Add and subtract fractions with unlike denominators",
+      "displayTitle": "Add and subtract fractions with unlike denominators",
+      "subtopicCount": 15,
+      "sourceOrder": 189,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "R::G6": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Units of measurement",
+      "displayTitle": "Units of measurement",
+      "subtopicCount": 8,
+      "sourceOrder": 190,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "R::G7": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Coordinate plane",
+      "displayTitle": "Coordinate plane",
+      "subtopicCount": 4,
+      "sourceOrder": 191,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "R::G8": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Transformations and similarity",
+      "displayTitle": "Transformations and similarity",
+      "subtopicCount": 6,
+      "sourceOrder": 192,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "R::G9": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Direct variation",
+      "displayTitle": "Direct variation",
+      "subtopicCount": 5,
+      "sourceOrder": 193,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "R::G10": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Parabolas",
+      "displayTitle": "Parabolas",
+      "subtopicCount": 6,
+      "sourceOrder": 194,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "R::G11": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Two-dimensional figures",
+      "displayTitle": "Two-dimensional figures",
+      "subtopicCount": 0,
+      "sourceOrder": 195,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "R::G12": {
+      "pathwaySlug": "advanced-precalculus",
+      "sourceTopic": "Complex numbers",
+      "displayTitle": "Complex numbers",
+      "subtopicCount": 7,
+      "sourceOrder": 196,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "S::G2": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Units of measurement",
+      "displayTitle": "Units of measurement",
+      "subtopicCount": 16,
+      "sourceOrder": 197,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "S::G3": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Time",
+      "displayTitle": "Time",
+      "subtopicCount": 16,
+      "sourceOrder": 198,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "S::G4": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Geometric measurement",
+      "displayTitle": "Geometric measurement",
+      "subtopicCount": 17,
+      "sourceOrder": 199,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "S::G5": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Multiply fractions",
+      "displayTitle": "Multiply fractions",
+      "subtopicCount": 18,
+      "sourceOrder": 200,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "S::G6": {
+      "pathwaySlug": "financial-literacy",
+      "sourceTopic": "Money",
+      "displayTitle": "Money",
+      "subtopicCount": 7,
+      "sourceOrder": 201,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "S::G7": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Number sequences",
+      "displayTitle": "Number sequences",
+      "subtopicCount": 7,
+      "sourceOrder": 202,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "S::G8": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Pythagorean theorem",
+      "displayTitle": "Pythagorean theorem",
+      "subtopicCount": 6,
+      "sourceOrder": 203,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "S::G9": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Linear functions",
+      "displayTitle": "Linear functions",
+      "subtopicCount": 18,
+      "sourceOrder": 204,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "S::G10": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Functions: linear, quadratic, exponential",
+      "displayTitle": "Functions: linear, quadratic, exponential",
+      "subtopicCount": 6,
+      "sourceOrder": 205,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "S::G11": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Three-dimensional figures",
+      "displayTitle": "Three-dimensional figures",
+      "subtopicCount": 0,
+      "sourceOrder": 206,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "S::G12": {
+      "pathwaySlug": "advanced-precalculus",
+      "sourceTopic": "Complex plane",
+      "displayTitle": "Complex plane",
+      "subtopicCount": 8,
+      "sourceOrder": 207,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "T::G2": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Two-dimensional shapes",
+      "displayTitle": "Two-dimensional shapes",
+      "subtopicCount": 10,
+      "sourceOrder": 208,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "T::G3": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Data and graphs",
+      "displayTitle": "Data and graphs",
+      "subtopicCount": 19,
+      "sourceOrder": 209,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "T::G4": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Understand fractions",
+      "displayTitle": "Understand fractions",
+      "subtopicCount": 28,
+      "sourceOrder": 210,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "T::G5": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Divide fractions",
+      "displayTitle": "Divide fractions",
+      "subtopicCount": 3,
+      "sourceOrder": 211,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "T::G6": {
+      "pathwaySlug": "financial-literacy",
+      "sourceTopic": "Consumer math",
+      "displayTitle": "Consumer math",
+      "subtopicCount": 7,
+      "sourceOrder": 212,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "T::G7": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Expressions and properties",
+      "displayTitle": "Expressions and properties",
+      "subtopicCount": 21,
+      "sourceOrder": 213,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "T::G8": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Three-dimensional figures",
+      "displayTitle": "Three-dimensional figures",
+      "subtopicCount": 5,
+      "sourceOrder": 214,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "T::G9": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Systems of linear equations",
+      "displayTitle": "Systems of linear equations",
+      "subtopicCount": 4,
+      "sourceOrder": 215,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "T::G10": {
+      "pathwaySlug": "advanced-precalculus",
+      "sourceTopic": "Rational functions and expressions",
+      "displayTitle": "Rational functions and expressions",
+      "subtopicCount": 7,
+      "sourceOrder": 216,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "T::G11": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Congruent figures",
+      "displayTitle": "Congruent figures",
+      "subtopicCount": 0,
+      "sourceOrder": 217,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "T::G12": {
+      "pathwaySlug": "advanced-precalculus",
+      "sourceTopic": "Polar form",
+      "displayTitle": "Polar form",
+      "subtopicCount": 5,
+      "sourceOrder": 218,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "U::G2": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Three-dimensional shapes",
+      "displayTitle": "Three-dimensional shapes",
+      "subtopicCount": 9,
+      "sourceOrder": 219,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "U::G3": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Units of measurement",
+      "displayTitle": "Units of measurement",
+      "subtopicCount": 13,
+      "sourceOrder": 220,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "U::G4": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Equivalent fractions",
+      "displayTitle": "Equivalent fractions",
+      "subtopicCount": 8,
+      "sourceOrder": 221,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "U::G5": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Integers",
+      "displayTitle": "Integers",
+      "subtopicCount": 6,
+      "sourceOrder": 222,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "U::G6": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Time",
+      "displayTitle": "Time",
+      "subtopicCount": 4,
+      "sourceOrder": 223,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "U::G7": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "One-variable equations",
+      "displayTitle": "One-variable equations",
+      "subtopicCount": 12,
+      "sourceOrder": 224,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "U::G8": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Geometric measurement",
+      "displayTitle": "Geometric measurement",
+      "subtopicCount": 14,
+      "sourceOrder": 225,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "U::G9": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Monomials",
+      "displayTitle": "Monomials",
+      "subtopicCount": 6,
+      "sourceOrder": 226,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "U::G10": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Circles in the coordinate plane",
+      "displayTitle": "Circles in the coordinate plane",
+      "subtopicCount": 5,
+      "sourceOrder": 227,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "U::G11": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Triangles",
+      "displayTitle": "Triangles",
+      "subtopicCount": 0,
+      "sourceOrder": 228,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "U::G12": {
+      "pathwaySlug": "advanced-precalculus",
+      "sourceTopic": "Two-dimensional vectors",
+      "displayTitle": "Two-dimensional vectors",
+      "subtopicCount": 12,
+      "sourceOrder": 229,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "V::G2": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Geometric measurement",
+      "displayTitle": "Geometric measurement",
+      "subtopicCount": 5,
+      "sourceOrder": 230,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "V::G3": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Geometry",
+      "displayTitle": "Geometry",
+      "subtopicCount": 21,
+      "sourceOrder": 231,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "V::G4": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Compare and order fractions",
+      "displayTitle": "Compare and order fractions",
+      "subtopicCount": 15,
+      "sourceOrder": 232,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "V::G5": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Mixed operations",
+      "displayTitle": "Mixed operations",
+      "subtopicCount": 11,
+      "sourceOrder": 233,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "V::G6": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Coordinate plane",
+      "displayTitle": "Coordinate plane",
+      "subtopicCount": 8,
+      "sourceOrder": 234,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "V::G7": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "One-variable inequalities",
+      "displayTitle": "One-variable inequalities",
+      "subtopicCount": 8,
+      "sourceOrder": 235,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "V::G8": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Number sequences",
+      "displayTitle": "Number sequences",
+      "subtopicCount": 7,
+      "sourceOrder": 236,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "V::G9": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Polynomials",
+      "displayTitle": "Polynomials",
+      "subtopicCount": 8,
+      "sourceOrder": 237,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "V::G10": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Logic",
+      "displayTitle": "Logic",
+      "subtopicCount": 8,
+      "sourceOrder": 238,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "V::G11": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Similarity",
+      "displayTitle": "Similarity",
+      "subtopicCount": 0,
+      "sourceOrder": 239,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "V::G12": {
+      "pathwaySlug": "advanced-precalculus",
+      "sourceTopic": "Three-dimensional vectors",
+      "displayTitle": "Three-dimensional vectors",
+      "subtopicCount": 6,
+      "sourceOrder": 240,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "W::G2": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Fractions",
+      "displayTitle": "Fractions",
+      "subtopicCount": 8,
+      "sourceOrder": 241,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "W::G3": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Geometric measurement",
+      "displayTitle": "Geometric measurement",
+      "subtopicCount": 19,
+      "sourceOrder": 242,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "W::G4": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Decimals up to tenths",
+      "displayTitle": "Decimals up to tenths",
+      "subtopicCount": 15,
+      "sourceOrder": 243,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "W::G5": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Problem solving",
+      "displayTitle": "Problem solving",
+      "subtopicCount": 8,
+      "sourceOrder": 244,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "W::G6": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Expressions and properties",
+      "displayTitle": "Expressions and properties",
+      "subtopicCount": 14,
+      "sourceOrder": 245,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "W::G7": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Two-variable equations",
+      "displayTitle": "Two-variable equations",
+      "subtopicCount": 9,
+      "sourceOrder": 246,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "W::G8": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Expressions and properties",
+      "displayTitle": "Expressions and properties",
+      "subtopicCount": 20,
+      "sourceOrder": 247,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "W::G9": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Logic",
+      "displayTitle": "Logic",
+      "subtopicCount": 2,
+      "sourceOrder": 248,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "W::G10": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Measurement",
+      "displayTitle": "Measurement",
+      "subtopicCount": 9,
+      "sourceOrder": 249,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "W::G11": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Logic",
+      "displayTitle": "Logic",
+      "subtopicCount": 0,
+      "sourceOrder": 250,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "W::G12": {
+      "pathwaySlug": "advanced-precalculus",
+      "sourceTopic": "Sequences and series",
+      "displayTitle": "Sequences and series",
+      "subtopicCount": 18,
+      "sourceOrder": 251,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "X::G2": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Probability and statistics",
+      "displayTitle": "Probability and statistics",
+      "subtopicCount": 5,
+      "sourceOrder": 252,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "X::G3": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Understand fractions",
+      "displayTitle": "Understand fractions",
+      "subtopicCount": 24,
+      "sourceOrder": 253,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "X::G4": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Decimals up to hundredths",
+      "displayTitle": "Decimals up to hundredths",
+      "subtopicCount": 22,
+      "sourceOrder": 254,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "X::G5": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Ratios and rates",
+      "displayTitle": "Ratios and rates",
+      "subtopicCount": 9,
+      "sourceOrder": 255,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "X::G6": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "One-variable equations",
+      "displayTitle": "One-variable equations",
+      "subtopicCount": 11,
+      "sourceOrder": 256,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "X::G7": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Two-dimensional figures",
+      "displayTitle": "Two-dimensional figures",
+      "subtopicCount": 17,
+      "sourceOrder": 257,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "X::G8": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "One-variable equations",
+      "displayTitle": "One-variable equations",
+      "subtopicCount": 13,
+      "sourceOrder": 258,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "X::G9": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Probability",
+      "displayTitle": "Probability",
+      "subtopicCount": 5,
+      "sourceOrder": 259,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "X::G10": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Constructions",
+      "displayTitle": "Constructions",
+      "subtopicCount": 2,
+      "sourceOrder": 260,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "X::G11": {
+      "pathwaySlug": "advanced-precalculus",
+      "sourceTopic": "Sequences and series",
+      "displayTitle": "Sequences and series",
+      "subtopicCount": 0,
+      "sourceOrder": 261,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "X::G12": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Logic",
+      "displayTitle": "Logic",
+      "subtopicCount": 6,
+      "sourceOrder": 262,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Y::G2": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Multiplication",
+      "displayTitle": "Multiplication",
+      "subtopicCount": 10,
+      "sourceOrder": 263,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Y::G3": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Equivalent fractions",
+      "displayTitle": "Equivalent fractions",
+      "subtopicCount": 7,
+      "sourceOrder": 264,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Y::G4": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Add and subtract decimals up to tenths",
+      "displayTitle": "Add and subtract decimals up to tenths",
+      "subtopicCount": 10,
+      "sourceOrder": 265,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Y::G5": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Percents",
+      "displayTitle": "Percents",
+      "subtopicCount": 9,
+      "sourceOrder": 266,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Y::G6": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "One-variable inequalities",
+      "displayTitle": "One-variable inequalities",
+      "subtopicCount": 7,
+      "sourceOrder": 267,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Y::G7": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Transformations",
+      "displayTitle": "Transformations",
+      "subtopicCount": 22,
+      "sourceOrder": 268,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Y::G8": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "One-variable inequalities",
+      "displayTitle": "One-variable inequalities",
+      "subtopicCount": 9,
+      "sourceOrder": 269,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Y::G9": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Statistics",
+      "displayTitle": "Statistics",
+      "subtopicCount": 5,
+      "sourceOrder": 270,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Y::G10": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Two-dimensional figures",
+      "displayTitle": "Two-dimensional figures",
+      "subtopicCount": 15,
+      "sourceOrder": 271,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Y::G11": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Probability",
+      "displayTitle": "Probability",
+      "subtopicCount": 0,
+      "sourceOrder": 272,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Y::G12": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Probability",
+      "displayTitle": "Probability",
+      "subtopicCount": 10,
+      "sourceOrder": 273,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Z::G2": {
+      "pathwaySlug": "basics-operations",
+      "sourceTopic": "Division",
+      "displayTitle": "Division",
+      "subtopicCount": 4,
+      "sourceOrder": 274,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Z::G3": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Compare and order fractions",
+      "displayTitle": "Compare and order fractions",
+      "subtopicCount": 9,
+      "sourceOrder": 275,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Z::G4": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Add and subtract decimals up to hundredths",
+      "displayTitle": "Add and subtract decimals up to hundredths",
+      "subtopicCount": 9,
+      "sourceOrder": 276,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Z::G5": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Patterns and sequences",
+      "displayTitle": "Patterns and sequences",
+      "subtopicCount": 13,
+      "sourceOrder": 277,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Z::G6": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Two-variable equations",
+      "displayTitle": "Two-variable equations",
+      "subtopicCount": 10,
+      "sourceOrder": 278,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Z::G7": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Constructions",
+      "displayTitle": "Constructions",
+      "subtopicCount": 6,
+      "sourceOrder": 279,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Z::G8": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Linear functions",
+      "displayTitle": "Linear functions",
+      "subtopicCount": 10,
+      "sourceOrder": 280,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Z::G10": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Three-dimensional figures",
+      "displayTitle": "Three-dimensional figures",
+      "subtopicCount": 14,
+      "sourceOrder": 281,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "Z::G12": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Probability distributions",
+      "displayTitle": "Probability distributions",
+      "subtopicCount": 16,
+      "sourceOrder": 282,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "AA::G3": {
+      "pathwaySlug": "fractions-rational-numbers",
+      "sourceTopic": "Decimals",
+      "displayTitle": "Decimals",
+      "subtopicCount": 19,
+      "sourceOrder": 283,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "AA::G4": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Probability and statistics",
+      "displayTitle": "Probability and statistics",
+      "subtopicCount": 11,
+      "sourceOrder": 284,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "AA::G5": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Coordinate plane",
+      "displayTitle": "Coordinate plane",
+      "subtopicCount": 11,
+      "sourceOrder": 285,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "AA::G6": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Two-dimensional figures",
+      "displayTitle": "Two-dimensional figures",
+      "subtopicCount": 19,
+      "sourceOrder": 286,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "AA::G7": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Three-dimensional figures",
+      "displayTitle": "Three-dimensional figures",
+      "subtopicCount": 3,
+      "sourceOrder": 287,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "AA::G8": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Data and graphs",
+      "displayTitle": "Data and graphs",
+      "subtopicCount": 18,
+      "sourceOrder": 288,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "AA::G10": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Congruent figures",
+      "displayTitle": "Congruent figures",
+      "subtopicCount": 10,
+      "sourceOrder": 289,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "AA::G12": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Distributions of sample means",
+      "displayTitle": "Distributions of sample means",
+      "subtopicCount": 14,
+      "sourceOrder": 290,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "BB::G3": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Probability and statistics",
+      "displayTitle": "Probability and statistics",
+      "subtopicCount": 7,
+      "sourceOrder": 291,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "BB::G5": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Variable expressions",
+      "displayTitle": "Variable expressions",
+      "subtopicCount": 3,
+      "sourceOrder": 292,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "BB::G6": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Symmetry and transformations",
+      "displayTitle": "Symmetry and transformations",
+      "subtopicCount": 11,
+      "sourceOrder": 293,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "BB::G7": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Geometric measurement",
+      "displayTitle": "Geometric measurement",
+      "subtopicCount": 21,
+      "sourceOrder": 294,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "BB::G8": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Statistics",
+      "displayTitle": "Statistics",
+      "subtopicCount": 10,
+      "sourceOrder": 295,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "BB::G10": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Triangles",
+      "displayTitle": "Triangles",
+      "subtopicCount": 7,
+      "sourceOrder": 296,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "CC::G5": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "One-variable equations",
+      "displayTitle": "One-variable equations",
+      "subtopicCount": 10,
+      "sourceOrder": 297,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "CC::G6": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Three-dimensional figures",
+      "displayTitle": "Three-dimensional figures",
+      "subtopicCount": 5,
+      "sourceOrder": 298,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "CC::G7": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Data and graphs",
+      "displayTitle": "Data and graphs",
+      "subtopicCount": 15,
+      "sourceOrder": 299,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "CC::G8": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Probability",
+      "displayTitle": "Probability",
+      "subtopicCount": 9,
+      "sourceOrder": 300,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "CC::G10": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Similarity",
+      "displayTitle": "Similarity",
+      "subtopicCount": 11,
+      "sourceOrder": 301,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "DD::G5": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "One-variable inequalities",
+      "displayTitle": "One-variable inequalities",
+      "subtopicCount": 5,
+      "sourceOrder": 302,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "DD::G6": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Geometric measurement",
+      "displayTitle": "Geometric measurement",
+      "subtopicCount": 24,
+      "sourceOrder": 303,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "DD::G7": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Statistics",
+      "displayTitle": "Statistics",
+      "subtopicCount": 10,
+      "sourceOrder": 304,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "DD::G10": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Right triangles",
+      "displayTitle": "Right triangles",
+      "subtopicCount": 4,
+      "sourceOrder": 305,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "EE::G5": {
+      "pathwaySlug": "algebra-equations",
+      "sourceTopic": "Two-variable equations",
+      "displayTitle": "Two-variable equations",
+      "subtopicCount": 6,
+      "sourceOrder": 306,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "EE::G6": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Data and graphs",
+      "displayTitle": "Data and graphs",
+      "subtopicCount": 20,
+      "sourceOrder": 307,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "EE::G7": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Probability",
+      "displayTitle": "Probability",
+      "subtopicCount": 8,
+      "sourceOrder": 308,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "EE::G10": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Trigonometry",
+      "displayTitle": "Trigonometry",
+      "subtopicCount": 8,
+      "sourceOrder": 309,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "FF::G5": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Data and graphs",
+      "displayTitle": "Data and graphs",
+      "subtopicCount": 20,
+      "sourceOrder": 310,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "FF::G6": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Statistics",
+      "displayTitle": "Statistics",
+      "subtopicCount": 8,
+      "sourceOrder": 311,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "FF::G10": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Transformations",
+      "displayTitle": "Transformations",
+      "subtopicCount": 16,
+      "sourceOrder": 312,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "GG::G5": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Probability and statistics",
+      "displayTitle": "Probability and statistics",
+      "subtopicCount": 12,
+      "sourceOrder": 313,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "GG::G6": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Probability",
+      "displayTitle": "Probability",
+      "subtopicCount": 10,
+      "sourceOrder": 314,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "GG::G10": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Probability",
+      "displayTitle": "Probability",
+      "subtopicCount": 8,
+      "sourceOrder": 315,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "HH::G5": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Probability and statistics",
+      "displayTitle": "Time",
+      "subtopicCount": 10,
+      "sourceOrder": 316,
+      "classificationBasis": "subtopic-content-correction",
+      "reviewNote": "The source label is Probability and statistics, but the subtopics cover time units, elapsed time, schedules, time zones, and timelines."
+    },
+    "HH::G6": {
+      "pathwaySlug": "financial-literacy",
+      "sourceTopic": "Financial literacy",
+      "displayTitle": "Financial literacy",
+      "subtopicCount": 5,
+      "sourceOrder": 317,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "HH::G10": {
+      "pathwaySlug": "statistics-probability",
+      "sourceTopic": "Probability",
+      "displayTitle": "Statistics",
+      "subtopicCount": 5,
+      "sourceOrder": 318,
+      "classificationBasis": "subtopic-content-correction",
+      "reviewNote": "The source label is Probability, but the subtopics cover mean, median, mode, quartiles, sampling, deviation, variance, and standard deviation."
+    },
+    "II::G5": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Units of measurement",
+      "displayTitle": "Units of measurement",
+      "subtopicCount": 8,
+      "sourceOrder": 319,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "II::G6": {
+      "pathwaySlug": "functions",
+      "sourceTopic": "Patterns and sequences",
+      "displayTitle": "Patterns and sequences",
+      "subtopicCount": 9,
+      "sourceOrder": 320,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "JJ::G5": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Two-dimensional figures",
+      "displayTitle": "Two-dimensional figures",
+      "subtopicCount": 12,
+      "sourceOrder": 321,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "KK::G5": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Triangles and quadrilaterals",
+      "displayTitle": "Triangles and quadrilaterals",
+      "subtopicCount": 13,
+      "sourceOrder": 322,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "LL::G5": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Symmetry and transformations",
+      "displayTitle": "Symmetry and transformations",
+      "subtopicCount": 6,
+      "sourceOrder": 323,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "MM::G5": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Three-dimensional figures",
+      "displayTitle": "Three-dimensional figures",
+      "subtopicCount": 7,
+      "sourceOrder": 324,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "NN::G5": {
+      "pathwaySlug": "geometry-trigonometry",
+      "sourceTopic": "Geometric measurement",
+      "displayTitle": "Geometric measurement",
+      "subtopicCount": 12,
+      "sourceOrder": 325,
+      "classificationBasis": "topic-title-and-subtopics"
+    },
+    "OO::G5": {
+      "pathwaySlug": "financial-literacy",
+      "sourceTopic": "Financial literacy",
+      "displayTitle": "Financial literacy",
+      "subtopicCount": 7,
+      "sourceOrder": 326,
+      "classificationBasis": "topic-title-and-subtopics"
+    }
+  }
+}

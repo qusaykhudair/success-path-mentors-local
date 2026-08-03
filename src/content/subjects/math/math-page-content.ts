@@ -122,7 +122,7 @@ const mathPageContent: Record<
       topicOverviewLabel:
         'Overview',
       sourceTopicNamesNote:
-        'Curriculum topic names are shown in English as documented in the source data so that the academic terminology is preserved.',
+        'Topic names follow the curriculum JSON. Clearly mismatched source labels are corrected from their subtopic content while the original source remains stored.',
       gradeNames: {
         G2: 'Grade 2',
         G3: 'Grade 3',
@@ -293,7 +293,7 @@ const mathPageContent: Record<
       topicOverviewLabel:
         'نظرة عامة',
       sourceTopicNamesNote:
-        'تُعرض أسماء موضوعات المنهج بالإنجليزية كما وردت في المصدر للمحافظة على المصطلحات الأكاديمية الأصلية.',
+        'تتبع أسماء الموضوعات ملف المنهج JSON، مع تصحيح التسميات التي لا تتوافق بوضوح مع موضوعاتها الفرعية، مع إبقاء المصدر الأصلي محفوظًا.',
       gradeNames: {
         G2: 'الصف الثاني',
         G3: 'الصف الثالث',
