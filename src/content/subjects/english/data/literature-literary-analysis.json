@@ -1,0 +1,1160 @@
+{
+  "metadata": {
+    "subject": "English",
+    "strand": "Literature and Literary Analysis",
+    "strandSlug": "literature-literary-analysis",
+    "gradeRange": {
+      "min": 1,
+      "max": 12
+    },
+    "sourceRecordCount": 127,
+    "gradedSourceRecordCount": 120,
+    "nonGradedSourceRecordCount": 7,
+    "mainTopicCount": 46,
+    "subtopicCount": 120,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is intentional curriculum progression.",
+    "integrityRules": [
+      "Repeated topics or skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Age-only, adult, IELTS, and grade-not-stated records remain outside Grade 1–12 pages.",
+      "Every public strand contains all twelve grade sections, including empty documented grades."
+    ]
+  },
+  "strand": {
+    "slug": "literature-literary-analysis",
+    "title": {
+      "en": "Literature and Literary Analysis",
+      "ar": "الأدب والتحليل الأدبي"
+    },
+    "description": {
+      "en": "Genres, literary devices, literary concepts, novel studies, critical response, authors, and evidence-based analysis.",
+      "ar": "الأنواع الأدبية والأدوات والمفاهيم الأدبية ودراسة الروايات والاستجابة النقدية والمؤلفون والتحليل القائم على الأدلة."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g1-genres",
+          "title": "Genres",
+          "subtopics": [
+            {
+              "id": "short-stories",
+              "title": "Short stories"
+            }
+          ],
+          "sourceRows": [
+            2
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g2-genres",
+          "title": "Genres",
+          "subtopics": [
+            {
+              "id": "short-stories",
+              "title": "Short stories"
+            }
+          ],
+          "sourceRows": [
+            3
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g3-genres",
+          "title": "Genres",
+          "subtopics": [
+            {
+              "id": "drama-and-plays",
+              "title": "Drama and plays"
+            },
+            {
+              "id": "short-stories",
+              "title": "Short stories"
+            }
+          ],
+          "sourceRows": [
+            4,
+            5
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-literary-devices",
+          "title": "Literary Devices",
+          "subtopics": [
+            {
+              "id": "determine-the-meanings-of-similes",
+              "title": "Determine the meanings of similes"
+            }
+          ],
+          "sourceRows": [
+            6
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 3
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g4-genres",
+          "title": "Genres",
+          "subtopics": [
+            {
+              "id": "short-stories",
+              "title": "Short stories"
+            }
+          ],
+          "sourceRows": [
+            7
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-literary-devices",
+          "title": "Literary Devices",
+          "subtopics": [
+            {
+              "id": "analyze-the-effects-of-figures-of-speech-on-meaning-and-tone",
+              "title": "Analyze the effects of figures of speech on meaning and tone"
+            },
+            {
+              "id": "determine-the-meanings-of-similes-and-metaphors",
+              "title": "Determine the meanings of similes and metaphors"
+            },
+            {
+              "id": "identify-similes-and-metaphors",
+              "title": "Identify similes and metaphors"
+            },
+            {
+              "id": "personification",
+              "title": "Personification"
+            }
+          ],
+          "sourceRows": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-text-analysis",
+          "title": "Text Analysis",
+          "subtopics": [
+            {
+              "id": "literary-analysis",
+              "title": "Literary analysis"
+            }
+          ],
+          "sourceRows": [
+            12
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 3,
+      "subtopicCount": 6
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g5-genres",
+          "title": "Genres",
+          "subtopics": [
+            {
+              "id": "poetry",
+              "title": "Poetry"
+            },
+            {
+              "id": "short-stories",
+              "title": "Short stories"
+            }
+          ],
+          "sourceRows": [
+            13,
+            14
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-literary-devices",
+          "title": "Literary Devices",
+          "subtopics": [
+            {
+              "id": "alliteration-and-onomatopoeia",
+              "title": "Alliteration and onomatopoeia"
+            },
+            {
+              "id": "analyze-the-effects-of-figures-of-speech-on-meaning-and-tone",
+              "title": "Analyze the effects of figures of speech on meaning and tone"
+            },
+            {
+              "id": "determine-the-meanings-of-similes-and-metaphors",
+              "title": "Determine the meanings of similes and metaphors"
+            },
+            {
+              "id": "figurative-language",
+              "title": "Figurative language"
+            },
+            {
+              "id": "general-literary-devices",
+              "title": "General literary devices"
+            },
+            {
+              "id": "hyperbole",
+              "title": "Hyperbole"
+            },
+            {
+              "id": "identify-similes-and-metaphors",
+              "title": "Identify similes and metaphors"
+            },
+            {
+              "id": "idiomatic-expressions",
+              "title": "Idiomatic expressions"
+            },
+            {
+              "id": "personification",
+              "title": "Personification"
+            },
+            {
+              "id": "simile-and-metaphor",
+              "title": "Simile and metaphor"
+            }
+          ],
+          "sourceRows": [
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-novel-study",
+          "title": "Novel Study",
+          "subtopics": [
+            {
+              "id": "novel-study-and-chapter-analysis",
+              "title": "Novel study and chapter analysis"
+            }
+          ],
+          "sourceRows": [
+            25
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 3,
+      "subtopicCount": 13
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g6-book-reports",
+          "title": "Book Reports",
+          "subtopics": [
+            {
+              "id": "book-report-summary-and-analysis",
+              "title": "Book report summary and analysis"
+            }
+          ],
+          "sourceRows": [
+            26
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-genres",
+          "title": "Genres",
+          "subtopics": [
+            {
+              "id": "short-stories",
+              "title": "Short stories"
+            }
+          ],
+          "sourceRows": [
+            27
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-literary-devices",
+          "title": "Literary Devices",
+          "subtopics": [
+            {
+              "id": "alliteration-and-onomatopoeia",
+              "title": "Alliteration and onomatopoeia"
+            },
+            {
+              "id": "analyze-the-effects-of-figures-of-speech-on-meaning-and-tone",
+              "title": "Analyze the effects of figures of speech on meaning and tone"
+            },
+            {
+              "id": "classify-figures-of-speech",
+              "title": "Classify figures of speech"
+            },
+            {
+              "id": "figurative-language",
+              "title": "Figurative language"
+            },
+            {
+              "id": "hyperbole",
+              "title": "Hyperbole"
+            },
+            {
+              "id": "interpret-figures-of-speech",
+              "title": "Interpret figures of speech"
+            },
+            {
+              "id": "personification",
+              "title": "Personification"
+            },
+            {
+              "id": "simile-and-metaphor",
+              "title": "Simile and metaphor"
+            }
+          ],
+          "sourceRows": [
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-novel-study",
+          "title": "Novel Study",
+          "subtopics": [
+            {
+              "id": "novel-study-and-chapter-analysis",
+              "title": "Novel study and chapter analysis"
+            }
+          ],
+          "sourceRows": [
+            36
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-text-analysis",
+          "title": "Text Analysis",
+          "subtopics": [
+            {
+              "id": "literary-analysis",
+              "title": "Literary analysis"
+            }
+          ],
+          "sourceRows": [
+            37
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-texts-and-authors",
+          "title": "Texts and Authors",
+          "subtopics": [
+            {
+              "id": "among-the-hidden",
+              "title": "Among the Hidden"
+            },
+            {
+              "id": "holes",
+              "title": "Holes"
+            }
+          ],
+          "sourceRows": [
+            38,
+            39
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 6,
+      "subtopicCount": 14
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g7-genres",
+          "title": "Genres",
+          "subtopics": [
+            {
+              "id": "poetry",
+              "title": "Poetry"
+            },
+            {
+              "id": "short-stories",
+              "title": "Short stories"
+            }
+          ],
+          "sourceRows": [
+            40,
+            41
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-literary-devices",
+          "title": "Literary Devices",
+          "subtopics": [
+            {
+              "id": "alliteration-and-onomatopoeia",
+              "title": "Alliteration and onomatopoeia"
+            },
+            {
+              "id": "allusion",
+              "title": "Allusion"
+            },
+            {
+              "id": "analyze-the-effects-of-figures-of-speech-on-meaning-and-tone",
+              "title": "Analyze the effects of figures of speech on meaning and tone"
+            },
+            {
+              "id": "classify-figures-of-speech",
+              "title": "Classify figures of speech"
+            },
+            {
+              "id": "figurative-language",
+              "title": "Figurative language"
+            },
+            {
+              "id": "general-literary-devices",
+              "title": "General literary devices"
+            },
+            {
+              "id": "hyperbole",
+              "title": "Hyperbole"
+            },
+            {
+              "id": "interpret-figures-of-speech",
+              "title": "Interpret figures of speech"
+            },
+            {
+              "id": "interpret-the-meaning-of-an-allusion-from-its-source",
+              "title": "Interpret the meaning of an allusion from its source"
+            },
+            {
+              "id": "personification",
+              "title": "Personification"
+            },
+            {
+              "id": "recall-the-source-of-an-allusion",
+              "title": "Recall the source of an allusion"
+            },
+            {
+              "id": "simile-and-metaphor",
+              "title": "Simile and metaphor"
+            }
+          ],
+          "sourceRows": [
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 14
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g8-book-reports",
+          "title": "Book Reports",
+          "subtopics": [
+            {
+              "id": "book-report-summary-and-analysis",
+              "title": "Book report summary and analysis"
+            }
+          ],
+          "sourceRows": [
+            54
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-genres",
+          "title": "Genres",
+          "subtopics": [
+            {
+              "id": "short-stories",
+              "title": "Short stories"
+            }
+          ],
+          "sourceRows": [
+            55
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-literary-concepts",
+          "title": "Literary Concepts",
+          "subtopics": [
+            {
+              "id": "conflict-in-literature",
+              "title": "Conflict in literature"
+            }
+          ],
+          "sourceRows": [
+            56
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-literary-devices",
+          "title": "Literary Devices",
+          "subtopics": [
+            {
+              "id": "analyze-the-effects-of-figures-of-speech-on-meaning-and-tone",
+              "title": "Analyze the effects of figures of speech on meaning and tone"
+            },
+            {
+              "id": "classify-figures-of-speech",
+              "title": "Classify figures of speech"
+            },
+            {
+              "id": "general-literary-devices",
+              "title": "General literary devices"
+            },
+            {
+              "id": "hyperbole",
+              "title": "Hyperbole"
+            },
+            {
+              "id": "interpret-figures-of-speech",
+              "title": "Interpret figures of speech"
+            },
+            {
+              "id": "interpret-the-meaning-of-an-allusion-from-its-source",
+              "title": "Interpret the meaning of an allusion from its source"
+            },
+            {
+              "id": "recall-the-source-of-an-allusion",
+              "title": "Recall the source of an allusion"
+            }
+          ],
+          "sourceRows": [
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-novel-study",
+          "title": "Novel Study",
+          "subtopics": [
+            {
+              "id": "novel-study-and-chapter-analysis",
+              "title": "Novel study and chapter analysis"
+            }
+          ],
+          "sourceRows": [
+            64
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-text-analysis",
+          "title": "Text Analysis",
+          "subtopics": [
+            {
+              "id": "literary-analysis",
+              "title": "Literary analysis"
+            }
+          ],
+          "sourceRows": [
+            65
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-texts-and-authors",
+          "title": "Texts and Authors",
+          "subtopics": [
+            {
+              "id": "the-fourth-stall",
+              "title": "The Fourth Stall"
+            }
+          ],
+          "sourceRows": [
+            66
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 7,
+      "subtopicCount": 13
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-genres",
+          "title": "Genres",
+          "subtopics": [
+            {
+              "id": "poetry",
+              "title": "Poetry"
+            },
+            {
+              "id": "short-stories",
+              "title": "Short stories"
+            }
+          ],
+          "sourceRows": [
+            67,
+            68
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-literary-concepts",
+          "title": "Literary Concepts",
+          "subtopics": [
+            {
+              "id": "conflict-in-literature",
+              "title": "Conflict in literature"
+            }
+          ],
+          "sourceRows": [
+            69
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-literary-devices",
+          "title": "Literary Devices",
+          "subtopics": [
+            {
+              "id": "allusion",
+              "title": "Allusion"
+            },
+            {
+              "id": "analyze-the-effects-of-figures-of-speech-on-meaning-and-tone",
+              "title": "Analyze the effects of figures of speech on meaning and tone"
+            },
+            {
+              "id": "classify-figures-of-speech-euphemism-hyperbole-oxymoron-paradox",
+              "title": "Classify figures of speech: euphemism, hyperbole, oxymoron, paradox"
+            },
+            {
+              "id": "classify-figures-of-speech-review",
+              "title": "Classify figures of speech: review"
+            },
+            {
+              "id": "figurative-language",
+              "title": "Figurative language"
+            },
+            {
+              "id": "general-literary-devices",
+              "title": "General literary devices"
+            },
+            {
+              "id": "hyperbole",
+              "title": "Hyperbole"
+            },
+            {
+              "id": "identify-the-narrative-point-of-view",
+              "title": "Identify the narrative point of view"
+            },
+            {
+              "id": "interpret-figures-of-speech",
+              "title": "Interpret figures of speech"
+            },
+            {
+              "id": "interpret-the-meaning-of-an-allusion-from-its-source",
+              "title": "Interpret the meaning of an allusion from its source"
+            },
+            {
+              "id": "irony",
+              "title": "Irony"
+            },
+            {
+              "id": "recall-the-source-of-an-allusion",
+              "title": "Recall the source of an allusion"
+            },
+            {
+              "id": "symbolism-and-imagery",
+              "title": "Symbolism and imagery"
+            }
+          ],
+          "sourceRows": [
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-text-analysis",
+          "title": "Text Analysis",
+          "subtopics": [
+            {
+              "id": "literary-analysis",
+              "title": "Literary analysis"
+            }
+          ],
+          "sourceRows": [
+            83
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 4,
+      "subtopicCount": 17
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-genres",
+          "title": "Genres",
+          "subtopics": [
+            {
+              "id": "drama-and-plays",
+              "title": "Drama and plays"
+            },
+            {
+              "id": "short-stories",
+              "title": "Short stories"
+            }
+          ],
+          "sourceRows": [
+            84,
+            85
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-literary-concepts",
+          "title": "Literary Concepts",
+          "subtopics": [
+            {
+              "id": "archetypes",
+              "title": "Archetypes"
+            },
+            {
+              "id": "character-archetypes",
+              "title": "Character archetypes"
+            }
+          ],
+          "sourceRows": [
+            86,
+            87
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-literary-devices",
+          "title": "Literary Devices",
+          "subtopics": [
+            {
+              "id": "analyze-the-effects-of-figures-of-speech-on-meaning-and-tone",
+              "title": "Analyze the effects of figures of speech on meaning and tone"
+            },
+            {
+              "id": "classify-figures-of-speech-euphemism-hyperbole-oxymoron-paradox",
+              "title": "Classify figures of speech: euphemism, hyperbole, oxymoron, paradox"
+            },
+            {
+              "id": "classify-figures-of-speech-review",
+              "title": "Classify figures of speech: review"
+            },
+            {
+              "id": "identify-the-narrative-point-of-view",
+              "title": "Identify the narrative point of view"
+            },
+            {
+              "id": "interpret-figures-of-speech",
+              "title": "Interpret figures of speech"
+            },
+            {
+              "id": "interpret-the-meaning-of-an-allusion-from-its-source",
+              "title": "Interpret the meaning of an allusion from its source"
+            },
+            {
+              "id": "recall-the-source-of-an-allusion",
+              "title": "Recall the source of an allusion"
+            }
+          ],
+          "sourceRows": [
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-novel-study",
+          "title": "Novel Study",
+          "subtopics": [
+            {
+              "id": "novel-study-and-chapter-analysis",
+              "title": "Novel study and chapter analysis"
+            }
+          ],
+          "sourceRows": [
+            95
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-texts-and-authors",
+          "title": "Texts and Authors",
+          "subtopics": [
+            {
+              "id": "shakespeare-and-hamlet",
+              "title": "Shakespeare and Hamlet"
+            },
+            {
+              "id": "the-great-gatsby",
+              "title": "The Great Gatsby"
+            }
+          ],
+          "sourceRows": [
+            96,
+            97
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 5,
+      "subtopicCount": 14
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-critical-response",
+          "title": "Critical Response",
+          "subtopics": [
+            {
+              "id": "critical-analysis-response-to-text",
+              "title": "Critical analysis response to text"
+            },
+            {
+              "id": "literary-criticism",
+              "title": "Literary criticism"
+            }
+          ],
+          "sourceRows": [
+            98,
+            99
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-genres",
+          "title": "Genres",
+          "subtopics": [
+            {
+              "id": "poetry",
+              "title": "Poetry"
+            },
+            {
+              "id": "short-stories",
+              "title": "Short stories"
+            }
+          ],
+          "sourceRows": [
+            100,
+            101
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-literary-devices",
+          "title": "Literary Devices",
+          "subtopics": [
+            {
+              "id": "general-literary-devices",
+              "title": "General literary devices"
+            },
+            {
+              "id": "irony",
+              "title": "Irony"
+            }
+          ],
+          "sourceRows": [
+            102,
+            103
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-media-and-cultural-texts",
+          "title": "Media and Cultural Texts",
+          "subtopics": [
+            {
+              "id": "media-analysis-and-representation",
+              "title": "Media analysis and representation"
+            }
+          ],
+          "sourceRows": [
+            104
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-novel-study",
+          "title": "Novel Study",
+          "subtopics": [
+            {
+              "id": "novel-study-and-chapter-analysis",
+              "title": "Novel study and chapter analysis"
+            }
+          ],
+          "sourceRows": [
+            105
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-text-analysis",
+          "title": "Text Analysis",
+          "subtopics": [
+            {
+              "id": "literary-analysis",
+              "title": "Literary analysis"
+            }
+          ],
+          "sourceRows": [
+            106
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-texts-and-authors",
+          "title": "Texts and Authors",
+          "subtopics": [
+            {
+              "id": "shakespeare-and-hamlet",
+              "title": "Shakespeare and Hamlet"
+            },
+            {
+              "id": "the-great-gatsby",
+              "title": "The Great Gatsby"
+            },
+            {
+              "id": "the-kite-runner",
+              "title": "The Kite Runner"
+            }
+          ],
+          "sourceRows": [
+            107,
+            108,
+            109
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 7,
+      "subtopicCount": 12
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-critical-response",
+          "title": "Critical Response",
+          "subtopics": [
+            {
+              "id": "critical-analysis-response-to-text",
+              "title": "Critical analysis response to text"
+            }
+          ],
+          "sourceRows": [
+            110
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-genres",
+          "title": "Genres",
+          "subtopics": [
+            {
+              "id": "poetry",
+              "title": "Poetry"
+            },
+            {
+              "id": "short-stories",
+              "title": "Short stories"
+            }
+          ],
+          "sourceRows": [
+            111,
+            112
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-literary-concepts",
+          "title": "Literary Concepts",
+          "subtopics": [
+            {
+              "id": "archetypes",
+              "title": "Archetypes"
+            },
+            {
+              "id": "character-archetypes",
+              "title": "Character archetypes"
+            },
+            {
+              "id": "conflict-in-literature",
+              "title": "Conflict in literature"
+            },
+            {
+              "id": "genres-and-subgenres",
+              "title": "Genres and subgenres"
+            }
+          ],
+          "sourceRows": [
+            113,
+            114,
+            115,
+            116
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-literary-devices",
+          "title": "Literary Devices",
+          "subtopics": [
+            {
+              "id": "figurative-language",
+              "title": "Figurative language"
+            },
+            {
+              "id": "general-literary-devices",
+              "title": "General literary devices"
+            },
+            {
+              "id": "hyperbole",
+              "title": "Hyperbole"
+            },
+            {
+              "id": "irony",
+              "title": "Irony"
+            }
+          ],
+          "sourceRows": [
+            117,
+            118,
+            119,
+            120
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-text-analysis",
+          "title": "Text Analysis",
+          "subtopics": [
+            {
+              "id": "literary-analysis",
+              "title": "Literary analysis"
+            }
+          ],
+          "sourceRows": [
+            121
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 5,
+      "subtopicCount": 12
+    }
+  ]
+}

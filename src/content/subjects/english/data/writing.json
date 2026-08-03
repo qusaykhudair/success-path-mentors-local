@@ -1,0 +1,2613 @@
+{
+  "metadata": {
+    "subject": "English",
+    "strand": "Writing",
+    "strandSlug": "writing",
+    "gradeRange": {
+      "min": 1,
+      "max": 12
+    },
+    "sourceRecordCount": 298,
+    "gradedSourceRecordCount": 288,
+    "nonGradedSourceRecordCount": 10,
+    "mainTopicCount": 114,
+    "subtopicCount": 288,
+    "exactDuplicateRowsRemoved": 0,
+    "displayCorrectionsApplied": 1,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Skills are counted by grade placement. Repetition across different grades is preserved as intentional curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Main Topic + Subtopic duplicates are removed.",
+      "Clear typographical corrections are applied only in the display layer and logged.",
+      "Age-only, adult, IELTS, and grade-not-stated records remain outside Grade 1–12 pages.",
+      "Empty grade sections remain in the JSON structure but are hidden from public pages."
+    ]
+  },
+  "strand": {
+    "slug": "writing",
+    "title": {
+      "en": "Writing",
+      "ar": "الكتابة"
+    },
+    "description": {
+      "en": "Descriptive, opinion, persuasive, argumentative, paragraph, essay, research, creative, analytical, and digital writing supported by planning, organization, revision, and editing.",
+      "ar": "الكتابة الوصفية وكتابة الرأي والإقناع والحجج والفقرات والمقالات والبحث والكتابة الإبداعية والتحليلية والرقمية، مع التخطيط والتنظيم والمراجعة والتحرير."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g2-descriptive-details",
+          "title": "Descriptive details",
+          "subtopics": [
+            {
+              "id": "add-descriptive-details-to-sentences",
+              "title": "Add descriptive details to sentences"
+            },
+            {
+              "id": "choose-the-sensory-details-that-match-the-picture",
+              "title": "Choose the sensory details that match the picture"
+            },
+            {
+              "id": "revise-the-sentence-using-a-stronger-verb",
+              "title": "Revise the sentence using a stronger verb"
+            }
+          ],
+          "sourceRows": [
+            1,
+            2,
+            3
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-linking-words",
+          "title": "Linking words",
+          "subtopics": [
+            {
+              "id": "identify-time-order-words",
+              "title": "Identify time-order words"
+            },
+            {
+              "id": "use-conjunctions",
+              "title": "Use conjunctions"
+            },
+            {
+              "id": "use-subordinating-conjunctions",
+              "title": "Use subordinating conjunctions"
+            },
+            {
+              "id": "use-time-order-words",
+              "title": "Use time-order words"
+            }
+          ],
+          "sourceRows": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-opinion-writing",
+          "title": "Opinion writing",
+          "subtopics": [
+            {
+              "id": "complete-the-fact-and-opinion-sentences",
+              "title": "Complete the fact and opinion sentences"
+            },
+            {
+              "id": "complete-the-opinion-passage-with-a-reason",
+              "title": "Complete the opinion passage with a reason"
+            },
+            {
+              "id": "complete-the-opinion-passage-with-an-example",
+              "title": "Complete the opinion passage with an example"
+            },
+            {
+              "id": "complete-the-opinion-reason-example-table",
+              "title": "Complete the opinion-reason-example table"
+            }
+          ],
+          "sourceRows": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-organizing-writing",
+          "title": "Organizing writing",
+          "subtopics": [
+            {
+              "id": "put-the-sentences-in-order",
+              "title": "Put the sentences in order"
+            }
+          ],
+          "sourceRows": [
+            12
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-topic-sentences",
+          "title": "Topic sentences",
+          "subtopics": [
+            {
+              "id": "choose-topic-sentences-for-expository-paragraphs",
+              "title": "Choose topic sentences for expository paragraphs"
+            },
+            {
+              "id": "choose-topic-sentences-for-narrative-paragraphs",
+              "title": "Choose topic sentences for narrative paragraphs"
+            }
+          ],
+          "sourceRows": [
+            13,
+            14
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 5,
+      "subtopicCount": 14
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g3-argument-and-evidence",
+          "title": "Argument and Evidence",
+          "subtopics": [
+            {
+              "id": "persuasive-and-argumentative-writing",
+              "title": "Persuasive and argumentative writing"
+            }
+          ],
+          "sourceRows": [
+            15
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-descriptive-details",
+          "title": "Descriptive details",
+          "subtopics": [
+            {
+              "id": "add-descriptive-details-to-sentences",
+              "title": "Add descriptive details to sentences"
+            },
+            {
+              "id": "revise-the-sentence-using-a-stronger-verb",
+              "title": "Revise the sentence using a stronger verb"
+            },
+            {
+              "id": "show-character-emotions-and-traits",
+              "title": "Show character emotions and traits"
+            }
+          ],
+          "sourceRows": [
+            16,
+            17,
+            18
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-linking-words",
+          "title": "Linking words",
+          "subtopics": [
+            {
+              "id": "choose-the-best-transition",
+              "title": "Choose the best transition"
+            },
+            {
+              "id": "identify-time-order-words",
+              "title": "Identify time-order words"
+            },
+            {
+              "id": "use-coordinating-conjunctions",
+              "title": "Use coordinating conjunctions"
+            },
+            {
+              "id": "use-subordinating-conjunctions",
+              "title": "Use subordinating conjunctions"
+            },
+            {
+              "id": "use-time-order-words",
+              "title": "Use time-order words"
+            }
+          ],
+          "sourceRows": [
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-opinion-writing",
+          "title": "Opinion writing",
+          "subtopics": [
+            {
+              "id": "choose-reasons-to-support-an-opinion",
+              "title": "Choose reasons to support an opinion"
+            },
+            {
+              "id": "complete-the-opinion-passage-with-a-reason",
+              "title": "Complete the opinion passage with a reason"
+            },
+            {
+              "id": "complete-the-opinion-passage-with-an-example",
+              "title": "Complete the opinion passage with an example"
+            },
+            {
+              "id": "complete-the-opinion-reason-example-table",
+              "title": "Complete the opinion-reason-example table"
+            },
+            {
+              "id": "distinguish-facts-from-opinions",
+              "title": "Distinguish facts from opinions"
+            },
+            {
+              "id": "identify-an-author-s-statement-of-opinion",
+              "title": "Identify an author's statement of opinion"
+            }
+          ],
+          "sourceRows": [
+            24,
+            25,
+            26,
+            27,
+            28,
+            29
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-organizing-writing",
+          "title": "Organizing writing",
+          "subtopics": [
+            {
+              "id": "order-items-from-most-general-to-most-specific",
+              "title": "Order items from most general to most specific"
+            },
+            {
+              "id": "organize-information-by-topic",
+              "title": "Organize information by topic"
+            },
+            {
+              "id": "put-the-sentences-in-order",
+              "title": "Put the sentences in order"
+            }
+          ],
+          "sourceRows": [
+            30,
+            31,
+            32
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-topic-sentences",
+          "title": "Topic sentences",
+          "subtopics": [
+            {
+              "id": "choose-topic-sentences-for-expository-paragraphs",
+              "title": "Choose topic sentences for expository paragraphs"
+            },
+            {
+              "id": "choose-topic-sentences-for-narrative-paragraphs",
+              "title": "Choose topic sentences for narrative paragraphs"
+            }
+          ],
+          "sourceRows": [
+            33,
+            34
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-writer-s-purpose",
+          "title": "Writer's purpose",
+          "subtopics": [
+            {
+              "id": "choose-the-text-that-matches-the-writer-s-purpose",
+              "title": "Choose the text that matches the writer's purpose"
+            }
+          ],
+          "sourceRows": [
+            35
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-writing-foundations",
+          "title": "Writing Foundations",
+          "subtopics": [
+            {
+              "id": "sentence-writing",
+              "title": "Sentence writing"
+            }
+          ],
+          "sourceRows": [
+            36
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-writing-practice",
+          "title": "Writing Practice",
+          "subtopics": [
+            {
+              "id": "general-writing-practice",
+              "title": "General writing practice"
+            }
+          ],
+          "sourceRows": [
+            37
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 9,
+      "subtopicCount": 23
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g4-argument-and-evidence",
+          "title": "Argument and Evidence",
+          "subtopics": [
+            {
+              "id": "developing-and-supporting-arguments",
+              "title": "Developing and supporting arguments"
+            }
+          ],
+          "sourceRows": [
+            38
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-descriptive-details",
+          "title": "Descriptive details",
+          "subtopics": [
+            {
+              "id": "revise-the-sentence-using-a-stronger-verb",
+              "title": "Revise the sentence using a stronger verb"
+            },
+            {
+              "id": "show-character-emotions-and-traits",
+              "title": "Show character emotions and traits"
+            }
+          ],
+          "sourceRows": [
+            39,
+            40
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-developing-and-supporting-arguments",
+          "title": "Developing and supporting arguments",
+          "subtopics": [
+            {
+              "id": "choose-reasons-to-support-an-opinion",
+              "title": "Choose reasons to support an opinion"
+            },
+            {
+              "id": "distinguish-facts-from-opinions",
+              "title": "Distinguish facts from opinions"
+            },
+            {
+              "id": "identify-an-author-s-statement-of-opinion",
+              "title": "Identify an author's statement of opinion"
+            },
+            {
+              "id": "identify-and-correct-plagiarism",
+              "title": "Identify and correct plagiarism"
+            },
+            {
+              "id": "identify-supporting-details-in-informational-texts",
+              "title": "Identify supporting details in informational texts"
+            },
+            {
+              "id": "identify-supporting-details-in-literary-texts",
+              "title": "Identify supporting details in literary texts"
+            }
+          ],
+          "sourceRows": [
+            41,
+            42,
+            43,
+            44,
+            45,
+            46
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-introductions-and-conclusions",
+          "title": "Introductions and conclusions",
+          "subtopics": [
+            {
+              "id": "choose-the-best-concluding-sentence",
+              "title": "Choose the best concluding sentence"
+            },
+            {
+              "id": "choose-the-best-topic-sentence",
+              "title": "Choose the best topic sentence"
+            }
+          ],
+          "sourceRows": [
+            47,
+            48
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-linking-words",
+          "title": "Linking words",
+          "subtopics": [
+            {
+              "id": "choose-the-best-transition",
+              "title": "Choose the best transition"
+            },
+            {
+              "id": "identify-time-order-words",
+              "title": "Identify time-order words"
+            },
+            {
+              "id": "use-coordinating-conjunctions",
+              "title": "Use coordinating conjunctions"
+            },
+            {
+              "id": "use-subordinating-conjunctions",
+              "title": "Use subordinating conjunctions"
+            }
+          ],
+          "sourceRows": [
+            49,
+            50,
+            51,
+            52
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-modes-of-writing",
+          "title": "Modes of Writing",
+          "subtopics": [
+            {
+              "id": "creative-writing",
+              "title": "Creative writing"
+            },
+            {
+              "id": "descriptive-writing",
+              "title": "Descriptive writing"
+            }
+          ],
+          "sourceRows": [
+            53,
+            54
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-organizing-writing",
+          "title": "Organizing writing",
+          "subtopics": [
+            {
+              "id": "order-items-from-most-general-to-most-specific",
+              "title": "Order items from most general to most specific"
+            },
+            {
+              "id": "organize-information-by-topic",
+              "title": "Organize information by topic"
+            },
+            {
+              "id": "put-the-sentences-in-order",
+              "title": "Put the sentences in order"
+            },
+            {
+              "id": "remove-the-sentence-that-does-not-belong",
+              "title": "Remove the sentence that does not belong"
+            }
+          ],
+          "sourceRows": [
+            55,
+            56,
+            57,
+            58
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-paragraph-writing",
+          "title": "Paragraph Writing",
+          "subtopics": [
+            {
+              "id": "paragraph-structure",
+              "title": "Paragraph structure"
+            }
+          ],
+          "sourceRows": [
+            59
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-writing-foundations",
+          "title": "Writing Foundations",
+          "subtopics": [
+            {
+              "id": "sentence-writing",
+              "title": "Sentence writing"
+            }
+          ],
+          "sourceRows": [
+            60
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-writing-practice",
+          "title": "Writing Practice",
+          "subtopics": [
+            {
+              "id": "general-writing-practice",
+              "title": "General writing practice"
+            }
+          ],
+          "sourceRows": [
+            61
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-writing-process",
+          "title": "Writing Process",
+          "subtopics": [
+            {
+              "id": "editing-and-proofreading",
+              "title": "Editing and proofreading"
+            },
+            {
+              "id": "editing-and-revising",
+              "title": "Editing and revising"
+            }
+          ],
+          "sourceRows": [
+            62,
+            63
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 11,
+      "subtopicCount": 26
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g5-descriptive-details",
+          "title": "Descriptive details",
+          "subtopics": [
+            {
+              "id": "revise-the-sentence-using-a-stronger-verb",
+              "title": "Revise the sentence using a stronger verb"
+            },
+            {
+              "id": "show-character-emotions-and-traits",
+              "title": "Show character emotions and traits"
+            }
+          ],
+          "sourceRows": [
+            64,
+            65
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-developing-and-supporting-arguments",
+          "title": "Developing and supporting arguments",
+          "subtopics": [
+            {
+              "id": "choose-reasons-to-support-an-opinion",
+              "title": "Choose reasons to support an opinion"
+            },
+            {
+              "id": "distinguish-facts-from-opinions",
+              "title": "Distinguish facts from opinions"
+            },
+            {
+              "id": "identify-an-author-s-statement-of-opinion",
+              "title": "Identify an author's statement of opinion"
+            },
+            {
+              "id": "identify-supporting-details-in-informational-texts",
+              "title": "Identify supporting details in informational texts"
+            },
+            {
+              "id": "identify-supporting-details-in-literary-texts",
+              "title": "Identify supporting details in literary texts"
+            }
+          ],
+          "sourceRows": [
+            66,
+            67,
+            68,
+            69,
+            70
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-editing-and-revising",
+          "title": "Editing and revising",
+          "subtopics": [
+            {
+              "id": "correct-errors-with-frequently-confused-words",
+              "title": "Correct errors with frequently confused words"
+            },
+            {
+              "id": "use-the-correct-frequently-confused-word",
+              "title": "Use the correct frequently confused word"
+            }
+          ],
+          "sourceRows": [
+            71,
+            72
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-introductions-and-conclusions",
+          "title": "Introductions and conclusions",
+          "subtopics": [
+            {
+              "id": "choose-the-best-concluding-sentence",
+              "title": "Choose the best concluding sentence"
+            },
+            {
+              "id": "choose-the-best-topic-sentence",
+              "title": "Choose the best topic sentence"
+            }
+          ],
+          "sourceRows": [
+            73,
+            74
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-organizing-writing",
+          "title": "Organizing writing",
+          "subtopics": [
+            {
+              "id": "choose-the-best-transition",
+              "title": "Choose the best transition"
+            },
+            {
+              "id": "order-items-from-most-general-to-most-specific",
+              "title": "Order items from most general to most specific"
+            },
+            {
+              "id": "organize-information-by-topic",
+              "title": "Organize information by topic"
+            },
+            {
+              "id": "put-the-sentences-in-order",
+              "title": "Put the sentences in order"
+            },
+            {
+              "id": "remove-the-sentence-that-does-not-belong",
+              "title": "Remove the sentence that does not belong"
+            },
+            {
+              "id": "use-coordinating-conjunctions",
+              "title": "Use coordinating conjunctions"
+            }
+          ],
+          "sourceRows": [
+            75,
+            76,
+            77,
+            78,
+            79,
+            80
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-paragraph-writing",
+          "title": "Paragraph Writing",
+          "subtopics": [
+            {
+              "id": "paragraph-structure",
+              "title": "Paragraph structure"
+            }
+          ],
+          "sourceRows": [
+            81
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-research-skills",
+          "title": "Research skills",
+          "subtopics": [
+            {
+              "id": "identify-and-correct-plagiarism",
+              "title": "Identify and correct plagiarism"
+            }
+          ],
+          "sourceRows": [
+            82
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-writing-foundations",
+          "title": "Writing Foundations",
+          "subtopics": [
+            {
+              "id": "sentence-writing",
+              "title": "Sentence writing"
+            }
+          ],
+          "sourceRows": [
+            83
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-writing-practice",
+          "title": "Writing Practice",
+          "subtopics": [
+            {
+              "id": "general-writing-practice",
+              "title": "General writing practice"
+            }
+          ],
+          "sourceRows": [
+            84
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 9,
+      "subtopicCount": 21
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g6-creative-techniques",
+          "title": "Creative techniques",
+          "subtopics": [
+            {
+              "id": "use-personification",
+              "title": "Use personification"
+            }
+          ],
+          "sourceRows": [
+            85
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-developing-and-supporting-arguments",
+          "title": "Developing and supporting arguments",
+          "subtopics": [
+            {
+              "id": "choose-evidence-to-support-a-claim",
+              "title": "Choose evidence to support a claim"
+            },
+            {
+              "id": "distinguish-facts-from-opinions",
+              "title": "Distinguish facts from opinions"
+            },
+            {
+              "id": "identify-counterclaims",
+              "title": "Identify counterclaims"
+            },
+            {
+              "id": "identify-supporting-details-in-informational-texts",
+              "title": "Identify supporting details in informational texts"
+            },
+            {
+              "id": "identify-supporting-details-in-literary-texts",
+              "title": "Identify supporting details in literary texts"
+            }
+          ],
+          "sourceRows": [
+            86,
+            87,
+            88,
+            89,
+            90
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-editing-and-revising",
+          "title": "Editing and revising",
+          "subtopics": [
+            {
+              "id": "correct-errors-with-frequently-confused-words",
+              "title": "Correct errors with frequently confused words"
+            },
+            {
+              "id": "correct-errors-with-signs",
+              "title": "Correct errors with signs"
+            },
+            {
+              "id": "suggest-appropriate-revisions",
+              "title": "Suggest appropriate revisions"
+            },
+            {
+              "id": "use-the-correct-frequently-confused-word",
+              "title": "Use the correct frequently confused word"
+            }
+          ],
+          "sourceRows": [
+            91,
+            92,
+            93,
+            94
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-modes-of-writing",
+          "title": "Modes of Writing",
+          "subtopics": [
+            {
+              "id": "descriptive-writing",
+              "title": "Descriptive writing"
+            }
+          ],
+          "sourceRows": [
+            95
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-organizing-writing",
+          "title": "Organizing writing",
+          "subtopics": [
+            {
+              "id": "order-topics-from-broadest-to-narrowest",
+              "title": "Order topics from broadest to narrowest"
+            },
+            {
+              "id": "organize-information-by-topic",
+              "title": "Organize information by topic"
+            },
+            {
+              "id": "transitions-with-conjunctive-adverbs",
+              "title": "Transitions with conjunctive adverbs"
+            }
+          ],
+          "sourceRows": [
+            96,
+            97,
+            98
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-research-skills",
+          "title": "Research skills",
+          "subtopics": [
+            {
+              "id": "identify-and-correct-plagiarism",
+              "title": "Identify and correct plagiarism"
+            }
+          ],
+          "sourceRows": [
+            99
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-writing-foundations",
+          "title": "Writing Foundations",
+          "subtopics": [
+            {
+              "id": "sentence-writing",
+              "title": "Sentence writing"
+            }
+          ],
+          "sourceRows": [
+            100
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-writing-practice",
+          "title": "Writing Practice",
+          "subtopics": [
+            {
+              "id": "general-writing-practice",
+              "title": "General writing practice"
+            }
+          ],
+          "sourceRows": [
+            101
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 8,
+      "subtopicCount": 17
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g7-argument-and-evidence",
+          "title": "Argument and Evidence",
+          "subtopics": [
+            {
+              "id": "persuasive-and-argumentative-writing",
+              "title": "Persuasive and argumentative writing"
+            }
+          ],
+          "sourceRows": [
+            102
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-creative-techniques",
+          "title": "Creative techniques",
+          "subtopics": [
+            {
+              "id": "use-personification",
+              "title": "Use personification"
+            }
+          ],
+          "sourceRows": [
+            103
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-developing-and-supporting-arguments",
+          "title": "Developing and supporting arguments",
+          "subtopics": [
+            {
+              "id": "choose-evidence-to-support-a-claim",
+              "title": "Choose evidence to support a claim"
+            },
+            {
+              "id": "distinguish-facts-from-opinions",
+              "title": "Distinguish facts from opinions"
+            },
+            {
+              "id": "identify-counterclaims",
+              "title": "Identify counterclaims"
+            },
+            {
+              "id": "identify-supporting-details-in-informational-texts",
+              "title": "Identify supporting details in informational texts"
+            },
+            {
+              "id": "identify-supporting-details-in-literary-texts",
+              "title": "Identify supporting details in literary texts"
+            }
+          ],
+          "sourceRows": [
+            104,
+            105,
+            106,
+            107,
+            108
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-editing-and-revising",
+          "title": "Editing and revising",
+          "subtopics": [
+            {
+              "id": "correct-errors-with-frequently-confused-words",
+              "title": "Correct errors with frequently confused words"
+            },
+            {
+              "id": "correct-errors-with-signs",
+              "title": "Correct errors with signs"
+            },
+            {
+              "id": "remove-redundant-words-or-phrases",
+              "title": "Remove redundant words or phrases"
+            },
+            {
+              "id": "suggest-appropriate-revisions",
+              "title": "Suggest appropriate revisions"
+            },
+            {
+              "id": "use-parallel-structure",
+              "title": "Use parallel structure"
+            },
+            {
+              "id": "use-the-correct-frequently-confused-word",
+              "title": "Use the correct frequently confused word"
+            }
+          ],
+          "sourceRows": [
+            109,
+            110,
+            111,
+            112,
+            113,
+            114
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-modes-of-writing",
+          "title": "Modes of Writing",
+          "subtopics": [
+            {
+              "id": "composition",
+              "title": "Composition"
+            },
+            {
+              "id": "creative-writing",
+              "title": "Creative writing"
+            }
+          ],
+          "sourceRows": [
+            115,
+            116
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-organizing-writing",
+          "title": "Organizing writing",
+          "subtopics": [
+            {
+              "id": "order-topics-from-broadest-to-narrowest",
+              "title": "Order topics from broadest to narrowest"
+            },
+            {
+              "id": "organize-information-by-topic",
+              "title": "Organize information by topic"
+            },
+            {
+              "id": "transitions-with-conjunctive-adverbs",
+              "title": "Transitions with conjunctive adverbs"
+            }
+          ],
+          "sourceRows": [
+            117,
+            118,
+            119
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-paragraph-writing",
+          "title": "Paragraph Writing",
+          "subtopics": [
+            {
+              "id": "paragraph-structure",
+              "title": "Paragraph structure"
+            },
+            {
+              "id": "supporting-sentences-and-details",
+              "title": "Supporting sentences and details"
+            },
+            {
+              "id": "topic-sentences",
+              "title": "Topic sentences"
+            }
+          ],
+          "sourceRows": [
+            120,
+            121,
+            122
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-research-skills",
+          "title": "Research skills",
+          "subtopics": [
+            {
+              "id": "identify-plagiarism",
+              "title": "Identify plagiarism"
+            }
+          ],
+          "sourceRows": [
+            123
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-writing-foundations",
+          "title": "Writing Foundations",
+          "subtopics": [
+            {
+              "id": "sentence-writing",
+              "title": "Sentence writing"
+            }
+          ],
+          "sourceRows": [
+            124
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-writing-practice",
+          "title": "Writing Practice",
+          "subtopics": [
+            {
+              "id": "general-writing-practice",
+              "title": "General writing practice"
+            }
+          ],
+          "sourceRows": [
+            125
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-writing-process",
+          "title": "Writing Process",
+          "subtopics": [
+            {
+              "id": "editing-and-proofreading",
+              "title": "Editing and proofreading"
+            },
+            {
+              "id": "editing-and-revising",
+              "title": "Editing and revising"
+            }
+          ],
+          "sourceRows": [
+            126,
+            127
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 11,
+      "subtopicCount": 26
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g8-active-and-passive-voice",
+          "title": "Active and passive voice",
+          "subtopics": [
+            {
+              "id": "identify-active-and-passive-voice",
+              "title": "Identify active and passive voice"
+            },
+            {
+              "id": "rewrite-the-sentence-in-active-voice",
+              "title": "Rewrite the sentence in active voice"
+            }
+          ],
+          "sourceRows": [
+            128,
+            129
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-argument-and-evidence",
+          "title": "Argument and Evidence",
+          "subtopics": [
+            {
+              "id": "developing-and-supporting-arguments",
+              "title": "Developing and supporting arguments"
+            },
+            {
+              "id": "persuasive-and-argumentative-writing",
+              "title": "Persuasive and argumentative writing"
+            }
+          ],
+          "sourceRows": [
+            130,
+            131
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-creative-techniques",
+          "title": "Creative techniques",
+          "subtopics": [
+            {
+              "id": "use-personification",
+              "title": "Use personification"
+            }
+          ],
+          "sourceRows": [
+            132
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-developing-and-supporting-arguments",
+          "title": "Developing and supporting arguments",
+          "subtopics": [
+            {
+              "id": "choose-evidence-to-support-a-claim",
+              "title": "Choose evidence to support a claim"
+            },
+            {
+              "id": "distinguish-facts-from-opinions",
+              "title": "Distinguish facts from opinions"
+            },
+            {
+              "id": "identify-counterclaims",
+              "title": "Identify counterclaims"
+            },
+            {
+              "id": "identify-supporting-details-in-informational-texts",
+              "title": "Identify supporting details in informational texts"
+            },
+            {
+              "id": "identify-supporting-details-in-literary-texts",
+              "title": "Identify supporting details in literary texts"
+            }
+          ],
+          "sourceRows": [
+            133,
+            134,
+            135,
+            136,
+            137
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-editing-and-revising",
+          "title": "Editing and revising",
+          "subtopics": [
+            {
+              "id": "correct-errors-with-frequently-confused-words",
+              "title": "Correct errors with frequently confused words"
+            },
+            {
+              "id": "correct-errors-with-signs",
+              "title": "Correct errors with signs"
+            },
+            {
+              "id": "remove-redundant-words-or-phrases",
+              "title": "Remove redundant words or phrases"
+            },
+            {
+              "id": "suggest-appropriate-revisions",
+              "title": "Suggest appropriate revisions"
+            },
+            {
+              "id": "use-parallel-structure",
+              "title": "Use parallel structure"
+            },
+            {
+              "id": "use-the-correct-frequently-confused-word",
+              "title": "Use the correct frequently confused word"
+            }
+          ],
+          "sourceRows": [
+            138,
+            139,
+            140,
+            141,
+            142,
+            143
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-essay-writing",
+          "title": "Essay Writing",
+          "subtopics": [
+            {
+              "id": "thesis-statements",
+              "title": "Thesis statements"
+            }
+          ],
+          "sourceRows": [
+            144
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-organizing-writing",
+          "title": "Organizing writing",
+          "subtopics": [
+            {
+              "id": "order-topics-from-broadest-to-narrowest",
+              "title": "Order topics from broadest to narrowest"
+            },
+            {
+              "id": "organize-information-by-topic",
+              "title": "Organize information by topic"
+            },
+            {
+              "id": "transitions-with-conjunctive-adverbs",
+              "title": "Transitions with conjunctive adverbs"
+            }
+          ],
+          "sourceRows": [
+            145,
+            146,
+            147
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-paragraph-writing",
+          "title": "Paragraph Writing",
+          "subtopics": [
+            {
+              "id": "paragraph-structure",
+              "title": "Paragraph structure"
+            },
+            {
+              "id": "topic-sentences",
+              "title": "Topic sentences"
+            }
+          ],
+          "sourceRows": [
+            148,
+            149
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-research-skills",
+          "title": "Research skills",
+          "subtopics": [
+            {
+              "id": "identify-plagiarism",
+              "title": "Identify plagiarism"
+            }
+          ],
+          "sourceRows": [
+            150
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-writing-practice",
+          "title": "Writing Practice",
+          "subtopics": [
+            {
+              "id": "general-writing-practice",
+              "title": "General writing practice"
+            }
+          ],
+          "sourceRows": [
+            151
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 10,
+      "subtopicCount": 24
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-active-and-passive-voice",
+          "title": "Active and passive voice",
+          "subtopics": [
+            {
+              "id": "identify-active-and-passive-voice",
+              "title": "Identify active and passive voice"
+            },
+            {
+              "id": "rewrite-the-sentence-in-active-voice",
+              "title": "Rewrite the sentence in active voice"
+            }
+          ],
+          "sourceRows": [
+            152,
+            153
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-argument-and-evidence",
+          "title": "Argument and Evidence",
+          "subtopics": [
+            {
+              "id": "persuasive-essay",
+              "title": "Persuasive essay"
+            },
+            {
+              "id": "persuasive-techniques",
+              "title": "Persuasive techniques"
+            },
+            {
+              "id": "persuasive-techniques-and-rhetoric",
+              "title": "Persuasive techniques and rhetoric"
+            }
+          ],
+          "sourceRows": [
+            154,
+            155,
+            156
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-creative-techniques",
+          "title": "Creative techniques",
+          "subtopics": [
+            {
+              "id": "use-personification",
+              "title": "Use personification"
+            }
+          ],
+          "sourceRows": [
+            157
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-developing-and-supporting-arguments",
+          "title": "Developing and supporting arguments",
+          "subtopics": [
+            {
+              "id": "choose-the-analysis-that-logically-connects-the-evidence-to-the-claim",
+              "title": "Choose the analysis that logically connects the evidence to the claim"
+            },
+            {
+              "id": "choose-the-best-evidence-to-support-a-claim",
+              "title": "Choose the best evidence to support a claim"
+            },
+            {
+              "id": "distinguish-facts-from-opinions",
+              "title": "Distinguish facts from opinions"
+            },
+            {
+              "id": "evaluate-counterclaims",
+              "title": "Evaluate counterclaims"
+            },
+            {
+              "id": "identify-stronger-and-weaker-evidence-to-support-a-claim",
+              "title": "Identify stronger and weaker evidence to support a claim"
+            },
+            {
+              "id": "identify-supporting-evidence-in-a-text",
+              "title": "Identify supporting evidence in a text"
+            },
+            {
+              "id": "transition-logically-between-claims-evidence-analysis-and-counterclaims",
+              "title": "Transition logically between claims, evidence, analysis and counterclaims"
+            }
+          ],
+          "sourceRows": [
+            158,
+            159,
+            160,
+            161,
+            162,
+            163,
+            164
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-editing-and-revising",
+          "title": "Editing and revising",
+          "subtopics": [
+            {
+              "id": "correct-errors-in-everyday-use",
+              "title": "Correct errors in everyday use"
+            },
+            {
+              "id": "correct-errors-with-commonly-misspelled-words",
+              "title": "Correct errors with commonly misspelled words"
+            },
+            {
+              "id": "correct-errors-with-signs",
+              "title": "Correct errors with signs"
+            },
+            {
+              "id": "identify-and-correct-errors-with-frequently-confused-pronouns-and-contractions",
+              "title": "Identify and correct errors with frequently confused pronouns and contractions"
+            },
+            {
+              "id": "identify-and-correct-errors-with-frequently-confused-words",
+              "title": "Identify and correct errors with frequently confused words"
+            },
+            {
+              "id": "suggest-appropriate-revisions",
+              "title": "Suggest appropriate revisions"
+            },
+            {
+              "id": "use-the-correct-frequently-confused-word",
+              "title": "Use the correct frequently confused word"
+            }
+          ],
+          "sourceRows": [
+            165,
+            166,
+            167,
+            168,
+            169,
+            170,
+            171
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-essay-writing",
+          "title": "Essay Writing",
+          "subtopics": [
+            {
+              "id": "essay-writing",
+              "title": "Essay writing"
+            }
+          ],
+          "sourceRows": [
+            172
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-modes-of-writing",
+          "title": "Modes of Writing",
+          "subtopics": [
+            {
+              "id": "composition",
+              "title": "Composition"
+            }
+          ],
+          "sourceRows": [
+            173
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-organizing-writing",
+          "title": "Organizing writing",
+          "subtopics": [
+            {
+              "id": "order-topics-from-broadest-to-narrowest",
+              "title": "Order topics from broadest to narrowest"
+            },
+            {
+              "id": "organize-information-by-topic",
+              "title": "Organize information by topic"
+            }
+          ],
+          "sourceRows": [
+            174,
+            175
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-paragraph-writing",
+          "title": "Paragraph Writing",
+          "subtopics": [
+            {
+              "id": "concluding-sentences",
+              "title": "Concluding sentences"
+            },
+            {
+              "id": "paragraph-structure",
+              "title": "Paragraph structure"
+            },
+            {
+              "id": "supporting-sentences-and-details",
+              "title": "Supporting sentences and details"
+            },
+            {
+              "id": "topic-sentences",
+              "title": "Topic sentences"
+            }
+          ],
+          "sourceRows": [
+            176,
+            177,
+            178,
+            179
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-persuasive-strategies",
+          "title": "Persuasive strategies",
+          "subtopics": [
+            {
+              "id": "identify-appeals-to-ethos-pathos-and-logos-in-advertisements",
+              "title": "Identify appeals to ethos, pathos and logos in advertisements"
+            },
+            {
+              "id": "use-appeals-to-ethos-pathos-and-logos-in-persuasive-writing",
+              "title": "Use appeals to ethos, pathos and logos in persuasive writing"
+            }
+          ],
+          "sourceRows": [
+            180,
+            181
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-research-skills",
+          "title": "Research skills",
+          "subtopics": [
+            {
+              "id": "identify-plagiarism",
+              "title": "Identify plagiarism"
+            },
+            {
+              "id": "recognize-the-parts-of-a-works-cited-entry-mla-8th-edition",
+              "title": "Recognize the parts of a Works Cited entry (MLA 8th edition)"
+            },
+            {
+              "id": "understand-a-works-cited-entry-mla-8th-9th-editions",
+              "title": "Understand a Works Cited entry (MLA 8th–9th editions)"
+            },
+            {
+              "id": "use-in-text-citations-mla-8th-9th-editions",
+              "title": "Use in-text citations (MLA 8th–9th editions)"
+            }
+          ],
+          "sourceRows": [
+            182,
+            183,
+            184,
+            185
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-topic-sentences-and-thesis-statements",
+          "title": "Topic sentences and thesis statements",
+          "subtopics": [
+            {
+              "id": "choose-the-topic-sentence-that-best-captures-the-main-idea",
+              "title": "Choose the topic sentence that best captures the main idea"
+            },
+            {
+              "id": "identify-thesis-statements",
+              "title": "Identify thesis statements"
+            }
+          ],
+          "sourceRows": [
+            186,
+            187
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-writing-clearly-and-concisely",
+          "title": "Writing clearly and concisely",
+          "subtopics": [
+            {
+              "id": "avoid-double-illogical-and-unclear-comparisons",
+              "title": "Avoid double, illogical and unclear comparisons"
+            },
+            {
+              "id": "identify-sentences-with-parallel-structure",
+              "title": "Identify sentences with parallel structure"
+            },
+            {
+              "id": "remove-redundant-words-or-phrases",
+              "title": "Remove redundant words or phrases"
+            },
+            {
+              "id": "transitions-with-conjunctive-adverbs",
+              "title": "Transitions with conjunctive adverbs"
+            },
+            {
+              "id": "use-parallel-structure",
+              "title": "Use parallel structure"
+            }
+          ],
+          "sourceRows": [
+            188,
+            189,
+            190,
+            191,
+            192
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-writing-foundations",
+          "title": "Writing Foundations",
+          "subtopics": [
+            {
+              "id": "sentence-writing",
+              "title": "Sentence writing"
+            }
+          ],
+          "sourceRows": [
+            193
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-writing-practice",
+          "title": "Writing Practice",
+          "subtopics": [
+            {
+              "id": "composition-practice",
+              "title": "Composition practice"
+            },
+            {
+              "id": "general-writing-practice",
+              "title": "General writing practice"
+            }
+          ],
+          "sourceRows": [
+            194,
+            195
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-writing-process",
+          "title": "Writing Process",
+          "subtopics": [
+            {
+              "id": "drafting",
+              "title": "Drafting"
+            },
+            {
+              "id": "editing-and-proofreading",
+              "title": "Editing and proofreading"
+            },
+            {
+              "id": "editing-and-revising",
+              "title": "Editing and revising"
+            },
+            {
+              "id": "planning-and-prewriting",
+              "title": "Planning and prewriting"
+            },
+            {
+              "id": "writing-process",
+              "title": "Writing process"
+            }
+          ],
+          "sourceRows": [
+            196,
+            197,
+            198,
+            199,
+            200
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 16,
+      "subtopicCount": 49
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-active-and-passive-voice",
+          "title": "Active and passive voice",
+          "subtopics": [
+            {
+              "id": "identify-active-and-passive-voice",
+              "title": "Identify active and passive voice"
+            },
+            {
+              "id": "rewrite-the-sentence-in-active-voice",
+              "title": "Rewrite the sentence in active voice"
+            }
+          ],
+          "sourceRows": [
+            201,
+            202
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-argument-and-evidence",
+          "title": "Argument and Evidence",
+          "subtopics": [
+            {
+              "id": "developing-and-supporting-arguments",
+              "title": "Developing and supporting arguments"
+            },
+            {
+              "id": "persuasive-techniques",
+              "title": "Persuasive techniques"
+            },
+            {
+              "id": "persuasive-techniques-and-rhetoric",
+              "title": "Persuasive techniques and rhetoric"
+            }
+          ],
+          "sourceRows": [
+            203,
+            204,
+            205
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-creative-techniques",
+          "title": "Creative techniques",
+          "subtopics": [
+            {
+              "id": "use-personification",
+              "title": "Use personification"
+            }
+          ],
+          "sourceRows": [
+            206
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-developing-and-supporting-arguments",
+          "title": "Developing and supporting arguments",
+          "subtopics": [
+            {
+              "id": "choose-the-analysis-that-logically-connects-the-evidence-to-the-claim",
+              "title": "Choose the analysis that logically connects the evidence to the claim"
+            },
+            {
+              "id": "choose-the-best-evidence-to-support-a-claim",
+              "title": "Choose the best evidence to support a claim"
+            },
+            {
+              "id": "distinguish-facts-from-opinions",
+              "title": "Distinguish facts from opinions"
+            },
+            {
+              "id": "evaluate-counterclaims",
+              "title": "Evaluate counterclaims"
+            },
+            {
+              "id": "identify-stronger-and-weaker-evidence-to-support-a-claim",
+              "title": "Identify stronger and weaker evidence to support a claim"
+            },
+            {
+              "id": "identify-supporting-evidence-in-a-text",
+              "title": "Identify supporting evidence in a text"
+            },
+            {
+              "id": "transition-logically-between-claims-evidence-analysis-and-counterclaims",
+              "title": "Transition logically between claims, evidence, analysis and counterclaims"
+            }
+          ],
+          "sourceRows": [
+            207,
+            208,
+            209,
+            210,
+            211,
+            212,
+            213
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-editing-and-revising",
+          "title": "Editing and revising",
+          "subtopics": [
+            {
+              "id": "correct-errors-in-everyday-use",
+              "title": "Correct errors in everyday use"
+            },
+            {
+              "id": "correct-errors-with-commonly-misspelled-words",
+              "title": "Correct errors with commonly misspelled words"
+            },
+            {
+              "id": "correct-errors-with-signs",
+              "title": "Correct errors with signs"
+            },
+            {
+              "id": "identify-and-correct-errors-with-frequently-confused-pronouns-and-contractions",
+              "title": "Identify and correct errors with frequently confused pronouns and contractions"
+            },
+            {
+              "id": "identify-and-correct-errors-with-frequently-confused-words",
+              "title": "Identify and correct errors with frequently confused words"
+            },
+            {
+              "id": "suggest-appropriate-revisions",
+              "title": "Suggest appropriate revisions"
+            },
+            {
+              "id": "use-the-correct-frequently-confused-word",
+              "title": "Use the correct frequently confused word"
+            }
+          ],
+          "sourceRows": [
+            214,
+            215,
+            216,
+            217,
+            218,
+            219,
+            220
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-essay-writing",
+          "title": "Essay Writing",
+          "subtopics": [
+            {
+              "id": "analytical-essay",
+              "title": "Analytical essay"
+            },
+            {
+              "id": "essay-structure-and-composition",
+              "title": "Essay structure and composition"
+            },
+            {
+              "id": "essay-writing",
+              "title": "Essay writing"
+            }
+          ],
+          "sourceRows": [
+            221,
+            222,
+            223
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-modes-of-writing",
+          "title": "Modes of Writing",
+          "subtopics": [
+            {
+              "id": "composition",
+              "title": "Composition"
+            }
+          ],
+          "sourceRows": [
+            224
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-organizing-writing",
+          "title": "Organizing writing",
+          "subtopics": [
+            {
+              "id": "order-topics-from-broadest-to-narrowest",
+              "title": "Order topics from broadest to narrowest"
+            },
+            {
+              "id": "organize-information-by-topic",
+              "title": "Organize information by topic"
+            }
+          ],
+          "sourceRows": [
+            225,
+            226
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-paragraph-writing",
+          "title": "Paragraph Writing",
+          "subtopics": [
+            {
+              "id": "concluding-sentences",
+              "title": "Concluding sentences"
+            },
+            {
+              "id": "paragraph-structure",
+              "title": "Paragraph structure"
+            },
+            {
+              "id": "supporting-sentences-and-details",
+              "title": "Supporting sentences and details"
+            },
+            {
+              "id": "topic-sentences",
+              "title": "Topic sentences"
+            }
+          ],
+          "sourceRows": [
+            227,
+            228,
+            229,
+            230
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-persuasive-strategies",
+          "title": "Persuasive strategies",
+          "subtopics": [
+            {
+              "id": "identify-appeals-to-ethos-pathos-and-logos-in-advertisements",
+              "title": "Identify appeals to ethos, pathos and logos in advertisements"
+            },
+            {
+              "id": "use-appeals-to-ethos-pathos-and-logos-in-persuasive-writing",
+              "title": "Use appeals to ethos, pathos and logos in persuasive writing"
+            }
+          ],
+          "sourceRows": [
+            231,
+            232
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-research-skills",
+          "title": "Research skills",
+          "subtopics": [
+            {
+              "id": "identify-plagiarism",
+              "title": "Identify plagiarism"
+            },
+            {
+              "id": "recognize-the-parts-of-a-works-cited-entry-mla-8th-edition",
+              "title": "Recognize the parts of a Works Cited entry (MLA 8th edition)"
+            },
+            {
+              "id": "understand-a-works-cited-entry-mla-8th-9th-editions",
+              "title": "Understand a Works Cited entry (MLA 8th–9th editions)"
+            },
+            {
+              "id": "use-in-text-citations-mla-8th-9th-editions",
+              "title": "Use in-text citations (MLA 8th–9th editions)"
+            }
+          ],
+          "sourceRows": [
+            233,
+            234,
+            235,
+            236
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-topic-sentences-and-thesis-statements",
+          "title": "Topic sentences and thesis statements",
+          "subtopics": [
+            {
+              "id": "choose-the-topic-sentence-that-best-captures-the-main-idea",
+              "title": "Choose the topic sentence that best captures the main idea"
+            },
+            {
+              "id": "identify-thesis-statements",
+              "title": "Identify thesis statements"
+            }
+          ],
+          "sourceRows": [
+            237,
+            238
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-writing-clearly-and-concisely",
+          "title": "Writing clearly and concisely",
+          "subtopics": [
+            {
+              "id": "avoid-double-illogical-and-unclear-comparisons",
+              "title": "Avoid double, illogical and unclear comparisons"
+            },
+            {
+              "id": "identify-sentences-with-parallel-structure",
+              "title": "Identify sentences with parallel structure"
+            },
+            {
+              "id": "remove-redundant-words-or-phrases",
+              "title": "Remove redundant words or phrases"
+            },
+            {
+              "id": "transitions-with-conjunctive-adverbs",
+              "title": "Transitions with conjunctive adverbs"
+            },
+            {
+              "id": "use-parallel-structure",
+              "title": "Use parallel structure"
+            }
+          ],
+          "sourceRows": [
+            239,
+            240,
+            241,
+            242,
+            243
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-writing-foundations",
+          "title": "Writing Foundations",
+          "subtopics": [
+            {
+              "id": "sentence-writing",
+              "title": "Sentence writing"
+            }
+          ],
+          "sourceRows": [
+            244
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-writing-practice",
+          "title": "Writing Practice",
+          "subtopics": [
+            {
+              "id": "composition-practice",
+              "title": "Composition practice"
+            },
+            {
+              "id": "general-writing-practice",
+              "title": "General writing practice"
+            }
+          ],
+          "sourceRows": [
+            245,
+            246
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-writing-process",
+          "title": "Writing Process",
+          "subtopics": [
+            {
+              "id": "writing-process",
+              "title": "Writing process"
+            }
+          ],
+          "sourceRows": [
+            247
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 16,
+      "subtopicCount": 47
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-argument-and-evidence",
+          "title": "Argument and Evidence",
+          "subtopics": [
+            {
+              "id": "developing-and-supporting-arguments",
+              "title": "Developing and supporting arguments"
+            },
+            {
+              "id": "persuasive-essay",
+              "title": "Persuasive essay"
+            },
+            {
+              "id": "persuasive-techniques",
+              "title": "Persuasive techniques"
+            },
+            {
+              "id": "persuasive-techniques-and-rhetoric",
+              "title": "Persuasive techniques and rhetoric"
+            }
+          ],
+          "sourceRows": [
+            248,
+            249,
+            250,
+            251
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-critical-and-personal-response",
+          "title": "Critical and Personal Response",
+          "subtopics": [
+            {
+              "id": "personal-response-and-insight",
+              "title": "Personal response and insight"
+            }
+          ],
+          "sourceRows": [
+            252
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-digital-and-project-writing",
+          "title": "Digital and Project Writing",
+          "subtopics": [
+            {
+              "id": "digital-anthology",
+              "title": "Digital anthology"
+            }
+          ],
+          "sourceRows": [
+            253
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-essay-writing",
+          "title": "Essay Writing",
+          "subtopics": [
+            {
+              "id": "essay-structure-and-composition",
+              "title": "Essay structure and composition"
+            },
+            {
+              "id": "essay-writing",
+              "title": "Essay writing"
+            },
+            {
+              "id": "expository-essay",
+              "title": "Expository essay"
+            },
+            {
+              "id": "thesis-statements",
+              "title": "Thesis statements"
+            }
+          ],
+          "sourceRows": [
+            254,
+            255,
+            256,
+            257
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-media-writing",
+          "title": "Media Writing",
+          "subtopics": [
+            {
+              "id": "transcript-writing",
+              "title": "Transcript writing"
+            }
+          ],
+          "sourceRows": [
+            258
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-modes-of-writing",
+          "title": "Modes of Writing",
+          "subtopics": [
+            {
+              "id": "composition",
+              "title": "Composition"
+            },
+            {
+              "id": "descriptive-writing",
+              "title": "Descriptive writing"
+            }
+          ],
+          "sourceRows": [
+            259,
+            260
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-organization",
+          "title": "Organization",
+          "subtopics": [
+            {
+              "id": "introductions-and-conclusions",
+              "title": "Introductions and conclusions"
+            }
+          ],
+          "sourceRows": [
+            261
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-paragraph-writing",
+          "title": "Paragraph Writing",
+          "subtopics": [
+            {
+              "id": "paragraph-structure",
+              "title": "Paragraph structure"
+            },
+            {
+              "id": "topic-sentences",
+              "title": "Topic sentences"
+            }
+          ],
+          "sourceRows": [
+            262,
+            263
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-reasoning-and-rhetoric",
+          "title": "Reasoning and Rhetoric",
+          "subtopics": [
+            {
+              "id": "logical-fallacies",
+              "title": "Logical fallacies"
+            }
+          ],
+          "sourceRows": [
+            264
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-writing-practice",
+          "title": "Writing Practice",
+          "subtopics": [
+            {
+              "id": "general-writing-practice",
+              "title": "General writing practice"
+            }
+          ],
+          "sourceRows": [
+            265
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-writing-process",
+          "title": "Writing Process",
+          "subtopics": [
+            {
+              "id": "drafting",
+              "title": "Drafting"
+            },
+            {
+              "id": "editing-and-proofreading",
+              "title": "Editing and proofreading"
+            }
+          ],
+          "sourceRows": [
+            266,
+            267
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 11,
+      "subtopicCount": 20
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-argument-and-evidence",
+          "title": "Argument and Evidence",
+          "subtopics": [
+            {
+              "id": "developing-and-supporting-arguments",
+              "title": "Developing and supporting arguments"
+            },
+            {
+              "id": "persuasive-and-argumentative-writing",
+              "title": "Persuasive and argumentative writing"
+            },
+            {
+              "id": "persuasive-essay",
+              "title": "Persuasive essay"
+            },
+            {
+              "id": "persuasive-techniques",
+              "title": "Persuasive techniques"
+            }
+          ],
+          "sourceRows": [
+            268,
+            269,
+            270,
+            271
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-critical-and-personal-response",
+          "title": "Critical and Personal Response",
+          "subtopics": [
+            {
+              "id": "personal-response-and-insight",
+              "title": "Personal response and insight"
+            }
+          ],
+          "sourceRows": [
+            272
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-essay-writing",
+          "title": "Essay Writing",
+          "subtopics": [
+            {
+              "id": "analytical-essay",
+              "title": "Analytical essay"
+            },
+            {
+              "id": "essay-structure-and-composition",
+              "title": "Essay structure and composition"
+            },
+            {
+              "id": "essay-writing",
+              "title": "Essay writing"
+            },
+            {
+              "id": "expository-essay",
+              "title": "Expository essay"
+            }
+          ],
+          "sourceRows": [
+            273,
+            274,
+            275,
+            276
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-modes-of-writing",
+          "title": "Modes of Writing",
+          "subtopics": [
+            {
+              "id": "composition",
+              "title": "Composition"
+            },
+            {
+              "id": "creative-writing",
+              "title": "Creative writing"
+            },
+            {
+              "id": "descriptive-writing",
+              "title": "Descriptive writing"
+            }
+          ],
+          "sourceRows": [
+            277,
+            278,
+            279
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-paragraph-writing",
+          "title": "Paragraph Writing",
+          "subtopics": [
+            {
+              "id": "concluding-sentences",
+              "title": "Concluding sentences"
+            },
+            {
+              "id": "paragraph-structure",
+              "title": "Paragraph structure"
+            },
+            {
+              "id": "topic-sentences",
+              "title": "Topic sentences"
+            }
+          ],
+          "sourceRows": [
+            280,
+            281,
+            282
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-writing-foundations",
+          "title": "Writing Foundations",
+          "subtopics": [
+            {
+              "id": "sentence-writing",
+              "title": "Sentence writing"
+            }
+          ],
+          "sourceRows": [
+            283
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-writing-practice",
+          "title": "Writing Practice",
+          "subtopics": [
+            {
+              "id": "general-writing-practice",
+              "title": "General writing practice"
+            }
+          ],
+          "sourceRows": [
+            284
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-writing-process",
+          "title": "Writing Process",
+          "subtopics": [
+            {
+              "id": "drafting",
+              "title": "Drafting"
+            },
+            {
+              "id": "editing-and-proofreading",
+              "title": "Editing and proofreading"
+            },
+            {
+              "id": "editing-and-revising",
+              "title": "Editing and revising"
+            },
+            {
+              "id": "writing-process",
+              "title": "Writing process"
+            }
+          ],
+          "sourceRows": [
+            285,
+            286,
+            287,
+            288
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 8,
+      "subtopicCount": 21
+    }
+  ]
+}

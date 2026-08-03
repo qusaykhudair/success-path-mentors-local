@@ -1,0 +1,272 @@
+{
+  "metadata": {
+    "subject": "English",
+    "strand": "Cross-Curricular Academic Support",
+    "strandSlug": "cross-curricular-academic-support",
+    "gradeRange": {
+      "min": 1,
+      "max": 12
+    },
+    "sourceRecordCount": 10,
+    "gradedSourceRecordCount": 10,
+    "nonGradedSourceRecordCount": 0,
+    "mainTopicCount": 9,
+    "subtopicCount": 10,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is intentional curriculum progression.",
+    "integrityRules": [
+      "Repeated topics or skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Age-only, adult, IELTS, and grade-not-stated records remain outside Grade 1–12 pages.",
+      "Every public strand contains all twelve grade sections, including empty documented grades."
+    ]
+  },
+  "strand": {
+    "slug": "cross-curricular-academic-support",
+    "title": {
+      "en": "Cross-Curricular Academic Support",
+      "ar": "الدعم الأكاديمي عبر المواد"
+    },
+    "description": {
+      "en": "English-language support applied to mathematics, science, social studies, financial literacy, and subject assignments.",
+      "ar": "تطبيق مهارات اللغة الإنجليزية في الرياضيات والعلوم والدراسات الاجتماعية والثقافة المالية وواجبات المواد."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g3-geometry",
+          "title": "Geometry",
+          "subtopics": [
+            {
+              "id": "shapes-and-solids",
+              "title": "Shapes and solids"
+            }
+          ],
+          "sourceRows": [
+            2
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-mathematics",
+          "title": "Mathematics",
+          "subtopics": [
+            {
+              "id": "number-operations-and-mathematics-homework",
+              "title": "Number operations and mathematics homework"
+            }
+          ],
+          "sourceRows": [
+            3
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g4-science",
+          "title": "Science",
+          "subtopics": [
+            {
+              "id": "weathering-erosion-and-earth-processes",
+              "title": "Weathering, erosion, and Earth processes"
+            }
+          ],
+          "sourceRows": [
+            4
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g5-social-studies",
+          "title": "Social Studies",
+          "subtopics": [
+            {
+              "id": "social-studies-assignments-and-content",
+              "title": "Social studies assignments and content"
+            }
+          ],
+          "sourceRows": [
+            5
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g6-social-studies",
+          "title": "Social Studies",
+          "subtopics": [
+            {
+              "id": "social-studies-assignments-and-content",
+              "title": "Social studies assignments and content"
+            }
+          ],
+          "sourceRows": [
+            6
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g7-science",
+          "title": "Science",
+          "subtopics": [
+            {
+              "id": "ecosystems",
+              "title": "Ecosystems"
+            },
+            {
+              "id": "weathering-erosion-and-earth-processes",
+              "title": "Weathering, erosion, and Earth processes"
+            }
+          ],
+          "sourceRows": [
+            7,
+            8
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-social-studies",
+          "title": "Social Studies",
+          "subtopics": [
+            {
+              "id": "social-studies-assignments-and-content",
+              "title": "Social studies assignments and content"
+            }
+          ],
+          "sourceRows": [
+            9
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-financial-literacy",
+          "title": "Financial Literacy",
+          "subtopics": [
+            {
+              "id": "budgeting",
+              "title": "Budgeting"
+            }
+          ],
+          "sourceRows": [
+            10
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-food-studies",
+          "title": "Food Studies",
+          "subtopics": [
+            {
+              "id": "recipe-management-and-food-safety",
+              "title": "Recipe management and food safety"
+            }
+          ],
+          "sourceRows": [
+            11
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    }
+  ]
+}

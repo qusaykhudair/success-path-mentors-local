@@ -1,0 +1,430 @@
+{
+  "metadata": {
+    "subject": "English",
+    "strand": "Reading Fluency",
+    "strandSlug": "reading-fluency",
+    "gradeRange": {
+      "min": 1,
+      "max": 12
+    },
+    "sourceRecordCount": 37,
+    "gradedSourceRecordCount": 28,
+    "nonGradedSourceRecordCount": 9,
+    "mainTopicCount": 16,
+    "subtopicCount": 28,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Skills are counted by grade placement. Repetition across different grades is preserved as intentional curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Main Topic + Subtopic duplicates are removed.",
+      "Age-only, adult, IELTS, and grade-not-stated records remain outside Grade 1–12 pages.",
+      "Empty grade sections remain in the JSON structure but are hidden from public pages."
+    ]
+  },
+  "strand": {
+    "slug": "reading-fluency",
+    "title": {
+      "en": "Reading Fluency",
+      "ar": "الطلاقة القرائية"
+    },
+    "description": {
+      "en": "Accuracy, rate, automaticity, repeated reading, prosody, expression, pacing, intonation, and pronunciation.",
+      "ar": "الدقة والسرعة والتلقائية والقراءة المتكررة والتنغيم والتعبير والإيقاع والنبر والنطق."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g1-oral-reading-fluency",
+          "title": "Oral Reading Fluency",
+          "subtopics": [
+            {
+              "id": "accuracy-rate-and-automaticity",
+              "title": "Accuracy, rate, and automaticity"
+            },
+            {
+              "id": "repeated-reading-and-reading-drills",
+              "title": "Repeated reading and reading drills"
+            }
+          ],
+          "sourceRows": [
+            2,
+            3
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g2-oral-reading-fluency",
+          "title": "Oral Reading Fluency",
+          "subtopics": [
+            {
+              "id": "accuracy-rate-and-automaticity",
+              "title": "Accuracy, rate, and automaticity"
+            },
+            {
+              "id": "repeated-reading-and-reading-drills",
+              "title": "Repeated reading and reading drills"
+            }
+          ],
+          "sourceRows": [
+            5,
+            6
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g3-oral-reading-fluency",
+          "title": "Oral Reading Fluency",
+          "subtopics": [
+            {
+              "id": "accuracy-rate-and-automaticity",
+              "title": "Accuracy, rate, and automaticity"
+            },
+            {
+              "id": "repeated-reading-and-reading-drills",
+              "title": "Repeated reading and reading drills"
+            }
+          ],
+          "sourceRows": [
+            8,
+            9
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-prosody",
+          "title": "Prosody",
+          "subtopics": [
+            {
+              "id": "expression-pacing-and-intonation",
+              "title": "Expression, pacing, and intonation"
+            }
+          ],
+          "sourceRows": [
+            10
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 3
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g4-oral-reading-fluency",
+          "title": "Oral Reading Fluency",
+          "subtopics": [
+            {
+              "id": "accuracy-rate-and-automaticity",
+              "title": "Accuracy, rate, and automaticity"
+            },
+            {
+              "id": "repeated-reading-and-reading-drills",
+              "title": "Repeated reading and reading drills"
+            }
+          ],
+          "sourceRows": [
+            14,
+            15
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g5-oral-reading-fluency",
+          "title": "Oral Reading Fluency",
+          "subtopics": [
+            {
+              "id": "accuracy-rate-and-automaticity",
+              "title": "Accuracy, rate, and automaticity"
+            },
+            {
+              "id": "repeated-reading-and-reading-drills",
+              "title": "Repeated reading and reading drills"
+            }
+          ],
+          "sourceRows": [
+            20,
+            21
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g6-oral-reading-fluency",
+          "title": "Oral Reading Fluency",
+          "subtopics": [
+            {
+              "id": "accuracy-rate-and-automaticity",
+              "title": "Accuracy, rate, and automaticity"
+            },
+            {
+              "id": "repeated-reading-and-reading-drills",
+              "title": "Repeated reading and reading drills"
+            }
+          ],
+          "sourceRows": [
+            25,
+            26
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-pronunciation",
+          "title": "Pronunciation",
+          "subtopics": [
+            {
+              "id": "word-pronunciation",
+              "title": "Word pronunciation"
+            }
+          ],
+          "sourceRows": [
+            27
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 3
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g7-oral-reading-fluency",
+          "title": "Oral Reading Fluency",
+          "subtopics": [
+            {
+              "id": "accuracy-rate-and-automaticity",
+              "title": "Accuracy, rate, and automaticity"
+            },
+            {
+              "id": "repeated-reading-and-reading-drills",
+              "title": "Repeated reading and reading drills"
+            }
+          ],
+          "sourceRows": [
+            31,
+            32
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g8-oral-reading-fluency",
+          "title": "Oral Reading Fluency",
+          "subtopics": [
+            {
+              "id": "accuracy-rate-and-automaticity",
+              "title": "Accuracy, rate, and automaticity"
+            },
+            {
+              "id": "repeated-reading-and-reading-drills",
+              "title": "Repeated reading and reading drills"
+            }
+          ],
+          "sourceRows": [
+            36,
+            37
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-oral-reading-fluency",
+          "title": "Oral Reading Fluency",
+          "subtopics": [
+            {
+              "id": "accuracy-rate-and-automaticity",
+              "title": "Accuracy, rate, and automaticity"
+            },
+            {
+              "id": "repeated-reading-and-reading-drills",
+              "title": "Repeated reading and reading drills"
+            }
+          ],
+          "sourceRows": [
+            42,
+            43
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-pronunciation",
+          "title": "Pronunciation",
+          "subtopics": [
+            {
+              "id": "word-pronunciation",
+              "title": "Word pronunciation"
+            }
+          ],
+          "sourceRows": [
+            44
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 3
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-oral-reading-fluency",
+          "title": "Oral Reading Fluency",
+          "subtopics": [
+            {
+              "id": "accuracy-rate-and-automaticity",
+              "title": "Accuracy, rate, and automaticity"
+            },
+            {
+              "id": "repeated-reading-and-reading-drills",
+              "title": "Repeated reading and reading drills"
+            }
+          ],
+          "sourceRows": [
+            49,
+            50
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-oral-reading-fluency",
+          "title": "Oral Reading Fluency",
+          "subtopics": [
+            {
+              "id": "accuracy-rate-and-automaticity",
+              "title": "Accuracy, rate, and automaticity"
+            },
+            {
+              "id": "repeated-reading-and-reading-drills",
+              "title": "Repeated reading and reading drills"
+            }
+          ],
+          "sourceRows": [
+            54,
+            55
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-oral-reading-fluency",
+          "title": "Oral Reading Fluency",
+          "subtopics": [
+            {
+              "id": "accuracy-rate-and-automaticity",
+              "title": "Accuracy, rate, and automaticity"
+            },
+            {
+              "id": "repeated-reading-and-reading-drills",
+              "title": "Repeated reading and reading drills"
+            }
+          ],
+          "sourceRows": [
+            59,
+            60
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-prosody",
+          "title": "Prosody",
+          "subtopics": [
+            {
+              "id": "expression-pacing-and-intonation",
+              "title": "Expression, pacing, and intonation"
+            }
+          ],
+          "sourceRows": [
+            61
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 3
+    }
+  ]
+}

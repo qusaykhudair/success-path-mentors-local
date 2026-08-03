@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "strand": "Reading Fluency",
+    "recordCount": 9,
+    "status": "excluded-from-grade-pages",
+    "reason": "No explicit Grade 1–12 value was supplied. No grade was inferred from age, IELTS, or adult status."
+  },
+  "records": [
+    {
+      "sourceRow": 64,
+      "gradeLevel": "Age 10 / Grade not stated",
+      "strand": "Reading Fluency",
+      "mainTopic": "Oral Reading Fluency",
+      "subtopic": "Accuracy, rate, and automaticity"
+    },
+    {
+      "sourceRow": 65,
+      "gradeLevel": "Age 10 / Grade not stated",
+      "strand": "Reading Fluency",
+      "mainTopic": "Oral Reading Fluency",
+      "subtopic": "Repeated reading and reading drills"
+    },
+    {
+      "sourceRow": 70,
+      "gradeLevel": "Age 14 / Grade not stated",
+      "strand": "Reading Fluency",
+      "mainTopic": "Oral Reading Fluency",
+      "subtopic": "Repeated reading and reading drills"
+    },
+    {
+      "sourceRow": 72,
+      "gradeLevel": "Age 17 / Grade not stated",
+      "strand": "Reading Fluency",
+      "mainTopic": "Oral Reading Fluency",
+      "subtopic": "Accuracy, rate, and automaticity"
+    },
+    {
+      "sourceRow": 73,
+      "gradeLevel": "Age 17 / Grade not stated",
+      "strand": "Reading Fluency",
+      "mainTopic": "Oral Reading Fluency",
+      "subtopic": "Repeated reading and reading drills"
+    },
+    {
+      "sourceRow": 79,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Reading Fluency",
+      "mainTopic": "Oral Reading Fluency",
+      "subtopic": "Accuracy, rate, and automaticity"
+    },
+    {
+      "sourceRow": 80,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Reading Fluency",
+      "mainTopic": "Oral Reading Fluency",
+      "subtopic": "Repeated reading and reading drills"
+    },
+    {
+      "sourceRow": 85,
+      "gradeLevel": "Grade not stated",
+      "strand": "Reading Fluency",
+      "mainTopic": "Oral Reading Fluency",
+      "subtopic": "Accuracy, rate, and automaticity"
+    },
+    {
+      "sourceRow": 86,
+      "gradeLevel": "Grade not stated",
+      "strand": "Reading Fluency",
+      "mainTopic": "Oral Reading Fluency",
+      "subtopic": "Repeated reading and reading drills"
+    }
+  ]
+}

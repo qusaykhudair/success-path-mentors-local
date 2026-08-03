@@ -1,0 +1,296 @@
+{
+  "metadata": {
+    "subject": "English",
+    "strand": "Assessment and Test Preparation",
+    "strandSlug": "assessment-test-preparation",
+    "gradeRange": {
+      "min": 1,
+      "max": 12
+    },
+    "sourceRecordCount": 15,
+    "gradedSourceRecordCount": 11,
+    "nonGradedSourceRecordCount": 4,
+    "mainTopicCount": 11,
+    "subtopicCount": 11,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is intentional curriculum progression.",
+    "integrityRules": [
+      "Repeated topics or skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Age-only, adult, IELTS, and grade-not-stated records remain outside Grade 1–12 pages.",
+      "Every public strand contains all twelve grade sections, including empty documented grades."
+    ]
+  },
+  "strand": {
+    "slug": "assessment-test-preparation",
+    "title": {
+      "en": "Assessment and Test Preparation",
+      "ar": "التقييم والاستعداد للاختبارات"
+    },
+    "description": {
+      "en": "Diagnostic review, provincial exams, standardized tests, literacy assessments, and language-test preparation.",
+      "ar": "المراجعة التشخيصية والاختبارات الإقليمية والاختبارات المعيارية وتقييمات القراءة والاستعداد لاختبارات اللغة."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g3-diagnostic-and-review",
+          "title": "Diagnostic and Review",
+          "subtopics": [
+            {
+              "id": "assessment-and-skills-review",
+              "title": "Assessment and skills review"
+            }
+          ],
+          "sourceRows": [
+            2
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g5-ela-provincial-exams",
+          "title": "ELA / Provincial Exams",
+          "subtopics": [
+            {
+              "id": "ela-exam-and-practice-test-preparation",
+              "title": "ELA exam and practice-test preparation"
+            }
+          ],
+          "sourceRows": [
+            3
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g6-diagnostic-and-review",
+          "title": "Diagnostic and Review",
+          "subtopics": [
+            {
+              "id": "assessment-and-skills-review",
+              "title": "Assessment and skills review"
+            }
+          ],
+          "sourceRows": [
+            4
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g7-diagnostic-and-review",
+          "title": "Diagnostic and Review",
+          "subtopics": [
+            {
+              "id": "assessment-and-skills-review",
+              "title": "Assessment and skills review"
+            }
+          ],
+          "sourceRows": [
+            5
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-diagnostic-and-review",
+          "title": "Diagnostic and Review",
+          "subtopics": [
+            {
+              "id": "assessment-and-skills-review",
+              "title": "Assessment and skills review"
+            }
+          ],
+          "sourceRows": [
+            6
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-diagnostic-and-review",
+          "title": "Diagnostic and Review",
+          "subtopics": [
+            {
+              "id": "assessment-and-skills-review",
+              "title": "Assessment and skills review"
+            }
+          ],
+          "sourceRows": [
+            7
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-sat",
+          "title": "SAT",
+          "subtopics": [
+            {
+              "id": "sat-reading-writing-and-vocabulary",
+              "title": "SAT reading, writing, and vocabulary"
+            }
+          ],
+          "sourceRows": [
+            8
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-diagnostic-and-review",
+          "title": "Diagnostic and Review",
+          "subtopics": [
+            {
+              "id": "assessment-and-skills-review",
+              "title": "Assessment and skills review"
+            }
+          ],
+          "sourceRows": [
+            9
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-osslt",
+          "title": "OSSLT",
+          "subtopics": [
+            {
+              "id": "ontario-secondary-school-literacy-test-preparation",
+              "title": "Ontario Secondary School Literacy Test preparation"
+            }
+          ],
+          "sourceRows": [
+            10
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-diagnostic-and-review",
+          "title": "Diagnostic and Review",
+          "subtopics": [
+            {
+              "id": "assessment-and-skills-review",
+              "title": "Assessment and skills review"
+            }
+          ],
+          "sourceRows": [
+            11
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-ela-provincial-exams",
+          "title": "ELA / Provincial Exams",
+          "subtopics": [
+            {
+              "id": "ela-exam-and-practice-test-preparation",
+              "title": "ELA exam and practice-test preparation"
+            }
+          ],
+          "sourceRows": [
+            12
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    }
+  ]
+}

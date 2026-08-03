@@ -43,7 +43,7 @@ const copy = {
     eyebrow:
       'English curriculum strand',
     coverage:
-      'Complete Grade 1–12 progression',
+      'Topics organized by available grade level',
     gradeNavigation:
       'Jump to a grade',
     curriculumHeading:
@@ -61,13 +61,15 @@ const copy = {
     skillsLabel:
       'Subtopics and Skills',
     breadcrumbLabel:
-      'Foundational Reading breadcrumb',
+      'English strand breadcrumb',
+    availableGrades:
+      'grade levels with content',
   },
   ar: {
     eyebrow:
       'مسار من منهج الإنجليزية',
     coverage:
-      'تدرج كامل من الصف الأول إلى الثاني عشر',
+      'الموضوعات منظمة حسب الصفوف المتاحة',
     gradeNavigation:
       'انتقل إلى الصف',
     curriculumHeading:
@@ -85,7 +87,9 @@ const copy = {
     skillsLabel:
       'الموضوعات الفرعية والمهارات',
     breadcrumbLabel:
-      'مسار التنقل للقراءة التأسيسية',
+      'مسار التنقل لمسار الإنجليزية',
+    availableGrades:
+      'صفوف تحتوي محتوى',
   },
 } as const;
 
@@ -96,6 +100,12 @@ export function EnglishStrandPageContent({
   bookingHref,
 }: EnglishStrandPageContentProps) {
   const labels = copy[locale];
+
+  const grades =
+    strand.grades.filter(
+      (grade) =>
+        grade.topics.length > 0
+    );
 
   return (
     <>
@@ -341,7 +351,9 @@ export function EnglishStrandPageContent({
                 />
 
                 <span className="text-small font-black text-white">
-                  Grades 1–12
+                  {grades.length.toLocaleString()}
+                  {' '}
+                  {labels.availableGrades}
                 </span>
               </div>
 
@@ -379,7 +391,7 @@ export function EnglishStrandPageContent({
                   gap-2
                 "
               >
-                {strand.grades.map(
+                {grades.map(
                   (grade) => (
                     <a
                       key={grade.grade}
@@ -490,7 +502,7 @@ export function EnglishStrandPageContent({
               shadow-[0_16px_44px_rgba(7,20,38,0.06)]
             "
           >
-            {strand.grades.map(
+            {grades.map(
               (grade, index) => (
                 <article
                   key={grade.grade}
@@ -534,8 +546,10 @@ export function EnglishStrandPageContent({
                     <h3
                       className="
                         mt-2
-                        text-h3
+                        text-[1.3rem]
                         font-black
+                        leading-tight
+                        sm:text-[1.5rem]
                         text-[#0B1F3A]
                       "
                     >

@@ -1,5 +1,3 @@
-// src/components/layout/subjects-menu.tsx
-
 'use client';
 
 import {
@@ -10,11 +8,14 @@ import {
 } from 'react';
 
 import {
+  ArrowRight,
   ChevronDown,
   ChevronRight,
 } from 'lucide-react';
 
-import { cn } from '@/lib/utils';
+import {
+  cn,
+} from '@/lib/utils';
 
 export interface SubjectChild {
   label: string;
@@ -30,19 +31,26 @@ export interface SubjectCategory {
 
 interface SubjectsMenuProps {
   triggerLabel: string;
+  overviewHref: string;
+  overviewLabel: string;
   categories: SubjectCategory[];
 }
 
 export function SubjectsMenu({
   triggerLabel,
+  overviewHref,
+  overviewLabel,
   categories,
 }: SubjectsMenuProps) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] =
+    useState(false);
 
   const [
     activeKey,
     setActiveKey,
-  ] = useState<string | null>(null);
+  ] = useState<string | null>(
+    null
+  );
 
   const containerRef =
     useRef<HTMLDivElement>(null);
@@ -59,7 +67,10 @@ export function SubjectsMenu({
 
   function clearCloseTimer() {
     if (closeTimer.current) {
-      clearTimeout(closeTimer.current);
+      clearTimeout(
+        closeTimer.current
+      );
+
       closeTimer.current = null;
     }
   }
@@ -74,9 +85,11 @@ export function SubjectsMenu({
     setActiveKey(null);
 
     if (restoreFocus) {
-      window.requestAnimationFrame(() => {
-        triggerRef.current?.focus();
-      });
+      window.requestAnimationFrame(
+        () => {
+          triggerRef.current?.focus();
+        }
+      );
     }
   }
 
@@ -88,9 +101,13 @@ export function SubjectsMenu({
   function scheduleClose() {
     clearCloseTimer();
 
-    closeTimer.current = setTimeout(() => {
-      closeMenu();
-    }, 180);
+    closeTimer.current =
+      setTimeout(
+        () => {
+          closeMenu();
+        },
+        180
+      );
   }
 
   useEffect(() => {
@@ -110,7 +127,10 @@ export function SubjectsMenu({
     function handleKeyDown(
       event: KeyboardEvent
     ) {
-      if (event.key === 'Escape' && open) {
+      if (
+        event.key === 'Escape' &&
+        open
+      ) {
         event.preventDefault();
 
         closeMenu({
@@ -190,16 +210,15 @@ export function SubjectsMenu({
         {triggerLabel}
 
         <ChevronDown
+          aria-hidden="true"
           className={cn(
             'h-4',
             'w-4',
             'transition-transform',
             'duration-200',
             'motion-reduce:transition-none',
-
             open && 'rotate-180'
           )}
-          aria-hidden="true"
         />
       </button>
 
@@ -224,144 +243,235 @@ export function SubjectsMenu({
           'duration-200',
           'ease-out',
           'motion-reduce:transition-none',
-
           open
             ? 'pointer-events-auto translate-y-0 opacity-100'
             : 'pointer-events-none -translate-y-1 opacity-0'
         )}
       >
+        <a
+          href={overviewHref}
+          role="menuitem"
+          tabIndex={open ? 0 : -1}
+          onFocus={() =>
+            setActiveKey(null)
+          }
+          onMouseEnter={() =>
+            setActiveKey(null)
+          }
+          onClick={() =>
+            closeMenu()
+          }
+          className="
+            group
+            flex
+            min-h-touch
+            items-center
+            justify-between
+            gap-3
+            rounded-button
+            bg-primary-900
+            px-3
+            text-small
+            font-black
+            text-white
+            transition-colors
+            duration-150
+            hover:bg-primary-800
+            focus-visible:outline-none
+            focus-visible:ring-2
+            focus-visible:ring-accent
+          "
+        >
+          <span>{overviewLabel}</span>
+
+          <ArrowRight
+            aria-hidden="true"
+            className="
+              h-4
+              w-4
+              shrink-0
+              transition-transform
+              duration-150
+              group-hover:translate-x-0.5
+              rtl:-scale-x-100
+              rtl:group-hover:-translate-x-0.5
+            "
+          />
+        </a>
+
+        <div
+          aria-hidden="true"
+          className="
+            my-2
+            h-px
+            bg-border
+          "
+        />
+
         <ul
           role="none"
           className="flex flex-col gap-0.5"
         >
-          {categories.map((category) => {
-            const categoryIsActive =
-              activeKey === category.key;
+          {categories.map(
+            (category) => {
+              const categoryIsActive =
+                activeKey ===
+                category.key;
 
-            return (
-              <li
-                key={category.key}
-                role="none"
-                className="relative"
-                onMouseEnter={() =>
-                  setActiveKey(category.key)
-                }
-              >
-                <a
-                  href={category.href}
-                  role="menuitem"
-                  tabIndex={open ? 0 : -1}
-                  onFocus={() =>
-                    setActiveKey(category.key)
+              return (
+                <li
+                  key={category.key}
+                  role="none"
+                  className="relative"
+                  onMouseEnter={() =>
+                    setActiveKey(
+                      category.key
+                    )
                   }
-                  onClick={() => closeMenu()}
-                  className={cn(
-                    'flex',
-                    'min-h-touch',
-                    'items-center',
-                    'justify-between',
-                    'gap-2',
-                    'rounded-button',
-                    'px-3',
-                    'text-small',
-                    'font-bold',
-                    'transition-colors',
-                    'duration-150',
-                    'focus-visible:outline-none',
-                    'focus-visible:ring-2',
-                    'focus-visible:ring-ring',
-
-                    categoryIsActive
-                      ? 'bg-accent-50 text-accent-800'
-                      : 'text-foreground hover:bg-muted'
-                  )}
                 >
-                  <span>{category.label}</span>
+                  <a
+                    href={category.href}
+                    role="menuitem"
+                    tabIndex={open ? 0 : -1}
+                    onFocus={() =>
+                      setActiveKey(
+                        category.key
+                      )
+                    }
+                    onClick={() =>
+                      closeMenu()
+                    }
+                    className={cn(
+                      'flex',
+                      'min-h-touch',
+                      'items-center',
+                      'justify-between',
+                      'gap-2',
+                      'rounded-button',
+                      'px-3',
+                      'text-small',
+                      'font-bold',
+                      'transition-colors',
+                      'duration-150',
+                      'focus-visible:outline-none',
+                      'focus-visible:ring-2',
+                      'focus-visible:ring-ring',
+                      categoryIsActive
+                        ? 'bg-accent-50 text-accent-800'
+                        : 'text-foreground hover:bg-muted'
+                    )}
+                  >
+                    <span>
+                      {category.label}
+                    </span>
 
-                  {category.children.length > 0 && (
-                    <ChevronRight
-                      className={cn(
-                        'h-4',
-                        'w-4',
-                        'shrink-0',
-                        'text-muted-foreground',
-                        'transition-transform',
-                        'duration-150',
-                        'rtl:-scale-x-100',
-
-                        categoryIsActive &&
-                          'translate-x-0.5 text-accent-700 rtl:-translate-x-0.5'
-                      )}
-                      aria-hidden="true"
-                    />
-                  )}
-                </a>
-
-                {category.children.length > 0 &&
-                  categoryIsActive && (
-                    <div
-                      role="menu"
-                      aria-label={category.label}
-                      className="
-                        absolute
-                        -top-2
-                        start-full
-                        z-10
-                        ms-3
-                        w-64
-                        rounded-card
-                        border
-                        border-border
-                        bg-popover
-                        p-2
-                        text-popover-foreground
-                        shadow-dropdown
-                      "
-                    >
-                      <ul
-                        role="none"
-                        className="flex flex-col gap-0.5"
-                      >
-                        {category.children.map(
-                          (child) => (
-                            <li
-                              key={child.href}
-                              role="none"
-                            >
-                              <a
-                                href={child.href}
-                                role="menuitem"
-                                onClick={() =>
-                                  closeMenu()
-                                }
-                                className="
-                                  block
-                                  min-h-touch
-                                  rounded-button
-                                  px-3
-                                  py-2.5
-                                  text-small
-                                  text-muted-foreground
-                                  transition-colors
-                                  duration-150
-                                  hover:bg-accent-50
-                                  hover:text-accent-800
-                                  focus-visible:outline-none
-                                  focus-visible:ring-2
-                                  focus-visible:ring-ring
-                                "
-                              >
-                                {child.label}
-                              </a>
-                            </li>
-                          )
+                    {category.children.length > 0 && (
+                      <ChevronRight
+                        aria-hidden="true"
+                        className={cn(
+                          'h-4',
+                          'w-4',
+                          'shrink-0',
+                          'text-muted-foreground',
+                          'transition-transform',
+                          'duration-150',
+                          'rtl:-scale-x-100',
+                          categoryIsActive &&
+                            'translate-x-0.5 text-accent-700 rtl:-translate-x-0.5'
                         )}
-                      </ul>
-                    </div>
-                  )}
-              </li>
-            );
-          })}
+                      />
+                    )}
+                  </a>
+
+                  {category.children.length > 0 &&
+                    categoryIsActive && (
+                      <div
+                        role="menu"
+                        aria-label={
+                          category.label
+                        }
+                        className="
+                          absolute
+                          -top-2
+                          start-full
+                          z-10
+                          ms-3
+                          max-h-[min(34rem,calc(100dvh-7rem))]
+                          w-80
+                          overflow-y-auto
+                          overscroll-contain
+                          [scrollbar-width:none]
+                          [-ms-overflow-style:none]
+                          [&::-webkit-scrollbar]:hidden
+                          rounded-card
+                          border
+                          border-border
+                          bg-popover
+                          p-2
+                          text-popover-foreground
+                          shadow-dropdown
+                        "
+                      >
+                        <div
+                          className="
+                            px-3
+                            pb-2
+                            pt-1
+                            text-caption
+                            font-black
+                            text-foreground
+                          "
+                        >
+                          {category.label}
+                        </div>
+
+                        <ul
+                          role="none"
+                          className="flex flex-col gap-0.5"
+                        >
+                          {category.children.map(
+                            (child) => (
+                              <li
+                                key={child.href}
+                                role="none"
+                              >
+                                <a
+                                  href={child.href}
+                                  role="menuitem"
+                                  onClick={() =>
+                                    closeMenu()
+                                  }
+                                  className="
+                                    block
+                                    min-h-touch
+                                    rounded-button
+                                    px-3
+                                    py-2.5
+                                    text-small
+                                    font-semibold
+                                    leading-5
+                                    text-muted-foreground
+                                    transition-colors
+                                    duration-150
+                                    hover:bg-accent-50
+                                    hover:text-accent-800
+                                    focus-visible:outline-none
+                                    focus-visible:ring-2
+                                    focus-visible:ring-ring
+                                  "
+                                >
+                                  {child.label}
+                                </a>
+                              </li>
+                            )
+                          )}
+                        </ul>
+                      </div>
+                    )}
+                </li>
+              );
+            }
+          )}
         </ul>
       </div>
     </div>

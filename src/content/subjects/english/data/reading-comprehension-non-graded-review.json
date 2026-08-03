@@ -1,0 +1,138 @@
+{
+  "metadata": {
+    "strand": "Reading Comprehension",
+    "recordCount": 16,
+    "status": "excluded-from-grade-pages",
+    "reason": "No explicit Grade 1–12 value was supplied. No grade was inferred from age or adult status."
+  },
+  "records": [
+    {
+      "sourceRow": 349,
+      "gradeLevel": "Age 10 / Grade not stated",
+      "strand": "Reading Comprehension",
+      "sourceMainTopic": "Reading Skills",
+      "mainTopic": "Reading Skills",
+      "subtopic": "Comprehension questions and passage analysis"
+    },
+    {
+      "sourceRow": 350,
+      "gradeLevel": "Age 13 / Grade not stated",
+      "strand": "Reading Comprehension",
+      "sourceMainTopic": "Reading Skills",
+      "mainTopic": "Reading Skills",
+      "subtopic": "Comprehension questions and passage analysis"
+    },
+    {
+      "sourceRow": 351,
+      "gradeLevel": "Age 13 / Grade not stated",
+      "strand": "Reading Comprehension",
+      "sourceMainTopic": "Reading Skills",
+      "mainTopic": "Reading Skills",
+      "subtopic": "Short passage comprehension"
+    },
+    {
+      "sourceRow": 352,
+      "gradeLevel": "Age 13 / Grade not stated",
+      "strand": "Reading Comprehension",
+      "sourceMainTopic": "Visual and Multimodal Texts",
+      "mainTopic": "Visual and Multimodal Texts",
+      "subtopic": "Visual elements"
+    },
+    {
+      "sourceRow": 353,
+      "gradeLevel": "Age 17 / Grade not stated",
+      "strand": "Reading Comprehension",
+      "sourceMainTopic": "Key Ideas and Details",
+      "mainTopic": "Key Ideas and Details",
+      "subtopic": "Summarizing and retelling"
+    },
+    {
+      "sourceRow": 354,
+      "gradeLevel": "Age 17 / Grade not stated",
+      "strand": "Reading Comprehension",
+      "sourceMainTopic": "Reading Skills",
+      "mainTopic": "Reading Skills",
+      "subtopic": "Comprehension questions and passage analysis"
+    },
+    {
+      "sourceRow": 355,
+      "gradeLevel": "Adult / IELTS",
+      "strand": "Reading Comprehension",
+      "sourceMainTopic": "Critical Reading",
+      "mainTopic": "Critical Reading",
+      "subtopic": "Inference"
+    },
+    {
+      "sourceRow": 356,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Reading Comprehension",
+      "sourceMainTopic": "Critical Reading",
+      "mainTopic": "Critical Reading",
+      "subtopic": "Fact and opinion"
+    },
+    {
+      "sourceRow": 357,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Reading Comprehension",
+      "sourceMainTopic": "Key Ideas and Details",
+      "mainTopic": "Key Ideas and Details",
+      "subtopic": "Main idea"
+    },
+    {
+      "sourceRow": 358,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Reading Comprehension",
+      "sourceMainTopic": "Key Ideas and Details",
+      "mainTopic": "Key Ideas and Details",
+      "subtopic": "Summarizing and retelling"
+    },
+    {
+      "sourceRow": 359,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Reading Comprehension",
+      "sourceMainTopic": "Reading Skills",
+      "mainTopic": "Reading Skills",
+      "subtopic": "Comprehension questions and passage analysis"
+    },
+    {
+      "sourceRow": 360,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Reading Comprehension",
+      "sourceMainTopic": "Reading Skills",
+      "mainTopic": "Reading Skills",
+      "subtopic": "Short passage comprehension"
+    },
+    {
+      "sourceRow": 361,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Reading Comprehension",
+      "sourceMainTopic": "Text Organization",
+      "mainTopic": "Text Organization",
+      "subtopic": "Cause and effect"
+    },
+    {
+      "sourceRow": 362,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Reading Comprehension",
+      "sourceMainTopic": "Text Types",
+      "mainTopic": "Text Types",
+      "subtopic": "Informational texts"
+    },
+    {
+      "sourceRow": 363,
+      "gradeLevel": "Grade not stated",
+      "strand": "Reading Comprehension",
+      "sourceMainTopic": "Key Ideas and Details",
+      "mainTopic": "Key Ideas and Details",
+      "subtopic": "Significant and explicit details"
+    },
+    {
+      "sourceRow": 364,
+      "gradeLevel": "Grade not stated",
+      "strand": "Reading Comprehension",
+      "sourceMainTopic": "Reading Skills",
+      "mainTopic": "Reading Skills",
+      "subtopic": "Comprehension questions and passage analysis"
+    }
+  ]
+}

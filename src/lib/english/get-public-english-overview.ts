@@ -1,7 +1,18 @@
 import 'server-only';
 
+import academicSkillsJson from '@/content/subjects/english/data/academic-skills-assignments.json';
+import assessmentPreparationJson from '@/content/subjects/english/data/assessment-test-preparation.json';
+import crossCurricularJson from '@/content/subjects/english/data/cross-curricular-academic-support.json';
 import foundationalReadingJson from '@/content/subjects/english/data/foundational-reading.json';
+import grammarLanguageJson from '@/content/subjects/english/data/grammar-language-conventions.json';
+import literatureAnalysisJson from '@/content/subjects/english/data/literature-literary-analysis.json';
+import readingComprehensionJson from '@/content/subjects/english/data/reading-comprehension.json';
+import readingFluencyJson from '@/content/subjects/english/data/reading-fluency.json';
+import speakingListeningJson from '@/content/subjects/english/data/speaking-listening.json';
+import vocabularyWordStudyJson from '@/content/subjects/english/data/vocabulary-word-study.json';
+import writingJson from '@/content/subjects/english/data/writing.json';
 import {
+  approvedEnglishStrands,
   englishStrands,
 } from '@/content/subjects/english/english-strands';
 import type {
@@ -16,9 +27,6 @@ import type {
   EnglishGradePageData,
   EnglishStrandPageData,
 } from '@/types/english-overview';
-
-const foundationalReading =
-  foundationalReadingJson as EnglishStrandCurriculum;
 
 const gradeOrder: EnglishGrade[] = [
   'G1',
@@ -51,6 +59,61 @@ const arabicGradeLabels:
     G12: 'الصف الثاني عشر',
   };
 
+const curriculumEntries: Array<
+  [string, EnglishStrandCurriculum]
+> = [
+  [
+    'foundational-reading',
+    foundationalReadingJson as EnglishStrandCurriculum,
+  ],
+  [
+    'grammar-language-conventions',
+    grammarLanguageJson as EnglishStrandCurriculum,
+  ],
+  [
+    'academic-skills-assignments',
+    academicSkillsJson as EnglishStrandCurriculum,
+  ],
+  [
+    'assessment-test-preparation',
+    assessmentPreparationJson as EnglishStrandCurriculum,
+  ],
+  [
+    'cross-curricular-academic-support',
+    crossCurricularJson as EnglishStrandCurriculum,
+  ],
+  [
+    'literature-literary-analysis',
+    literatureAnalysisJson as EnglishStrandCurriculum,
+  ],
+  [
+    'reading-comprehension',
+    readingComprehensionJson as EnglishStrandCurriculum,
+  ],
+  [
+    'reading-fluency',
+    readingFluencyJson as EnglishStrandCurriculum,
+  ],
+  [
+    'speaking-listening',
+    speakingListeningJson as EnglishStrandCurriculum,
+  ],
+  [
+    'vocabulary-word-study',
+    vocabularyWordStudyJson as EnglishStrandCurriculum,
+  ],
+  [
+    'writing',
+    writingJson as EnglishStrandCurriculum,
+  ],
+];
+
+const curriculumBySlug =
+  new Map<
+    string,
+    EnglishStrandCurriculum
+  >(curriculumEntries);
+
 function normalize(value: string): string {
   return value
     .toLocaleLowerCase('en')
@@ -58,22 +121,30 @@ function normalize(value: string): string {
     .trim();
 }
 
-function validateFoundationalReading(): void {
+function validateCurriculum(
+  curriculum:
+    EnglishStrandCurriculum
+): void {
+  const {
+    metadata,
+    grades,
+  } = curriculum;
+
   if (
-    foundationalReading.metadata
-      .publicStatus !== 'approved'
+    metadata.publicStatus !==
+    'approved'
   ) {
     throw new Error(
-      'Foundational Reading is not approved for public use.'
+      `${metadata.strand} is not approved for public use.`
     );
   }
 
   if (
-    foundationalReading.grades.length !==
+    grades.length !==
     gradeOrder.length
   ) {
     throw new Error(
-      'Foundational Reading must contain exactly 12 grade sections.'
+      `${metadata.strand} must contain exactly 12 grade sections.`
     );
   }
 
@@ -82,13 +153,14 @@ function validateFoundationalReading(): void {
 
   gradeOrder.forEach((grade) => {
     const gradeData =
-      foundationalReading.grades.find(
-        (item) => item.grade === grade
+      grades.find(
+        (item) =>
+          item.grade === grade
       );
 
     if (!gradeData) {
       throw new Error(
-        `Foundational Reading is missing ${grade}.`
+        `${metadata.strand} is missing ${grade}.`
       );
     }
 
@@ -97,14 +169,18 @@ function validateFoundationalReading(): void {
       gradeData.topics.length
     ) {
       throw new Error(
-        `Main-topic count mismatch in ${grade}.`
+        [
+          `${metadata.strand}:`,
+          `Main-topic count mismatch in ${grade}.`,
+        ].join(' ')
       );
     }
 
     const calculatedSubtopics =
       gradeData.topics.reduce(
         (total, topic) =>
-          total + topic.subtopics.length,
+          total +
+          topic.subtopics.length,
         0
       );
 
@@ -113,29 +189,47 @@ function validateFoundationalReading(): void {
       calculatedSubtopics
     ) {
       throw new Error(
-        `Subtopic count mismatch in ${grade}.`
+        [
+          `${metadata.strand}:`,
+          `Subtopic count mismatch in ${grade}.`,
+        ].join(' ')
       );
     }
 
-    const exactRecords = new Set<string>();
+    const exactRecords =
+      new Set<string>();
 
-    gradeData.topics.forEach((topic) => {
-      topic.subtopics.forEach((subtopic) => {
-        const key = [
-          grade,
-          normalize(topic.title),
-          normalize(subtopic.title),
-        ].join('::');
+    gradeData.topics.forEach(
+      (topic) => {
+        topic.subtopics.forEach(
+          (subtopic) => {
+            const key = [
+              grade,
+              normalize(
+                topic.title
+              ),
+              normalize(
+                subtopic.title
+              ),
+            ].join('::');
 
-        if (exactRecords.has(key)) {
-          throw new Error(
-            `Duplicate Foundational Reading record: ${key}`
-          );
-        }
+            if (
+              exactRecords.has(key)
+            ) {
+              throw new Error(
+                [
+                  'Duplicate English record:',
+                  metadata.strand,
+                  key,
+                ].join(' ')
+              );
+            }
 
-        exactRecords.add(key);
-      });
-    });
+            exactRecords.add(key);
+          }
+        );
+      }
+    );
 
     mainTopicCount +=
       gradeData.mainTopicCount;
@@ -145,26 +239,60 @@ function validateFoundationalReading(): void {
 
   if (
     mainTopicCount !==
-    foundationalReading.metadata
-      .mainTopicCount
+    metadata.mainTopicCount
   ) {
     throw new Error(
-      'Foundational Reading total Main Topic count is invalid.'
+      `${metadata.strand}: total Main Topic count is invalid.`
     );
   }
 
   if (
     subtopicCount !==
-    foundationalReading.metadata
-      .subtopicCount
+    metadata.subtopicCount
   ) {
     throw new Error(
-      'Foundational Reading total Subtopic count is invalid.'
+      `${metadata.strand}: total Subtopic count is invalid.`
     );
   }
 }
 
-validateFoundationalReading();
+approvedEnglishStrands.forEach(
+  (strand) => {
+    const curriculum =
+      curriculumBySlug.get(
+        strand.slug
+      );
+
+    if (!curriculum) {
+      throw new Error(
+        [
+          'Approved English strand',
+          `"${strand.slug}"`,
+          'does not have a curriculum JSON file.',
+        ].join(' ')
+      );
+    }
+
+    if (
+      curriculum.metadata
+        .strandSlug !==
+      strand.slug
+    ) {
+      throw new Error(
+        [
+          'English strand slug mismatch:',
+          strand.slug,
+          curriculum.metadata
+            .strandSlug,
+        ].join(' ')
+      );
+    }
+
+    validateCurriculum(
+      curriculum
+    );
+  }
+);
 
 export function getPublicEnglishOverview(
   locale: SiteLocale
@@ -176,39 +304,42 @@ export function getPublicEnglishOverview(
       strandCount:
         englishStrands.length,
       approvedStrandCount:
-        englishStrands.filter(
-          (strand) =>
-            strand.status === 'approved'
-        ).length,
+        approvedEnglishStrands.length,
     },
     strands:
       englishStrands.map(
-        (strand) => ({
-          slug: strand.slug,
-          title:
-            strand.title[locale],
-          description:
-            strand.description[locale],
-          iconKey:
-            strand.iconKey,
-          status:
-            strand.status,
-          gradeRange:
-            strand.gradeRange,
-          ...(strand.slug ===
-          'foundational-reading'
-            ? {
-                mainTopicCount:
-                  foundationalReading
-                    .metadata
-                    .mainTopicCount,
-                subtopicCount:
-                  foundationalReading
-                    .metadata
-                    .subtopicCount,
-              }
-            : {}),
-        })
+        (strand) => {
+          const curriculum =
+            curriculumBySlug.get(
+              strand.slug
+            );
+
+          return {
+            slug: strand.slug,
+            title:
+              strand.title[locale],
+            description:
+              strand.description[locale],
+            iconKey:
+              strand.iconKey,
+            status:
+              strand.status,
+            gradeRange:
+              strand.gradeRange,
+            ...(curriculum
+              ? {
+                  mainTopicCount:
+                    curriculum
+                      .metadata
+                      .mainTopicCount,
+                  subtopicCount:
+                    curriculum
+                      .metadata
+                      .subtopicCount,
+                }
+              : {}),
+          };
+        }
       ),
   };
 }
@@ -217,51 +348,59 @@ export function getPublicEnglishStrand(
   slug: string,
   locale: SiteLocale
 ): EnglishStrandPageData | null {
-  if (
-    slug !== 'foundational-reading'
-  ) {
-    return null;
-  }
-
   const definition =
-    englishStrands.find(
+    approvedEnglishStrands.find(
       (strand) =>
-        strand.slug === slug &&
-        strand.status === 'approved'
+        strand.slug === slug
     );
 
   if (!definition) {
     return null;
   }
 
-  const grades: EnglishGradePageData[] =
-    gradeOrder.map((grade) => {
-      const gradeData =
-        foundationalReading.grades.find(
-          (item) =>
-            item.grade === grade
-        );
+  const curriculum =
+    curriculumBySlug.get(slug);
 
-      if (!gradeData) {
-        throw new Error(
-          `Foundational Reading is missing ${grade}.`
-        );
-      }
+  if (!curriculum) {
+    return null;
+  }
 
-      return {
-        grade,
-        label:
-          locale === 'ar'
-            ? arabicGradeLabels[grade]
-            : `Grade ${grade.slice(1)}`,
-        shortLabel:
-          locale === 'ar'
-            ? `الصف ${grade.slice(1)}`
-            : grade,
-        topics:
-          gradeData.topics,
-      };
-    });
+  const grades:
+    EnglishGradePageData[] =
+      gradeOrder.map((grade) => {
+        const gradeData =
+          curriculum.grades.find(
+            (item) =>
+              item.grade ===
+              grade
+          );
+
+        if (!gradeData) {
+          throw new Error(
+            [
+              curriculum.metadata
+                .strand,
+              `is missing ${grade}.`,
+            ].join(' ')
+          );
+        }
+
+        return {
+          grade,
+          label:
+            locale === 'ar'
+              ? arabicGradeLabels[
+                  grade
+                ]
+              : `Grade ${grade.slice(1)}`,
+          shortLabel:
+            locale === 'ar'
+              ? `الصف ${grade.slice(1)}`
+              : grade,
+          topics:
+            gradeData.topics,
+        };
+      });
 
   return {
     slug,
@@ -276,7 +415,7 @@ export function getPublicEnglishStrand(
     grades,
     sourceNote:
       locale === 'ar'
-        ? 'تُعرض أسماء الموضوعات والمهارات بالإنجليزية كما وردت في مصدر المنهج. تكرار المهارة في صفوف مختلفة يمثل تدرجًا مقصودًا في مستوى الصعوبة والتطبيق.'
-        : 'Topic and skill names are shown in English as supplied by the curriculum source. Repetition across different grades represents intentional progression in difficulty and application.',
+        ? 'تُعرض أسماء الموضوعات والمهارات بالإنجليزية كما وردت في مصدر المنهج. تكرار الموضوع أو المهارة في صفوف مختلفة يمثل تدرجًا مقصودًا في مستوى الصعوبة والعمق والتطبيق. السجلات غير المحددة بصف محفوظة خارج صفحات الصفوف 1–12.'
+        : 'Topic and skill names are shown in English as supplied by the curriculum source. Repetition across different grades represents intentional progression in difficulty, depth, and application. Non-graded records are stored outside the Grade 1–12 pages.',
   };
 }

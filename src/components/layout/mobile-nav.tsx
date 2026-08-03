@@ -14,11 +14,16 @@ import {
   X,
 } from 'lucide-react';
 
-import { buttonVariants } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
+import {
+  buttonVariants,
+} from '@/components/ui/button';
+import {
+  cn,
+} from '@/lib/utils';
 
-import { LocaleSwitcher } from './locale-switcher';
-import type { SubjectCategory } from './subjects-menu';
+import type {
+  SubjectCategory,
+} from './subjects-menu';
 
 interface SectionLink {
   href: string;
@@ -32,6 +37,8 @@ interface MobileNavProps {
   bookLabel: string;
   bookingHref: string;
   subjectsLabel: string;
+  subjectsOverviewHref: string;
+  subjectsOverviewLabel: string;
   subjectCategories: SubjectCategory[];
   openMenuLabel: string;
   closeMenuLabel: string;
@@ -51,8 +58,12 @@ function getFocusableElements(
   ).filter(
     (element) =>
       element.tabIndex >= 0 &&
-      !element.hasAttribute('disabled') &&
-      element.getAttribute('aria-hidden') !== 'true'
+      !element.hasAttribute(
+        'disabled'
+      ) &&
+      element.getAttribute(
+        'aria-hidden'
+      ) !== 'true'
   );
 }
 
@@ -63,17 +74,33 @@ export function MobileNav({
   bookLabel,
   bookingHref,
   subjectsLabel,
+  subjectsOverviewHref,
+  subjectsOverviewLabel,
   subjectCategories,
   openMenuLabel,
   closeMenuLabel,
 }: MobileNavProps) {
-  const [open, setOpen] = useState(false);
-  const [openCategory, setOpenCategory] =
-    useState<string | null>(null);
+  const [open, setOpen] =
+    useState(false);
+
+  const [
+    openCategory,
+    setOpenCategory,
+  ] = useState<string | null>(
+    null
+  );
 
   const panelId = useId();
-  const triggerRef = useRef<HTMLButtonElement>(null);
-  const panelRef = useRef<HTMLDivElement>(null);
+
+  const triggerRef =
+    useRef<HTMLButtonElement>(
+      null
+    );
+
+  const panelRef =
+    useRef<HTMLDivElement>(
+      null
+    );
 
   const closeAll = useCallback(
     ({
@@ -85,9 +112,11 @@ export function MobileNav({
       setOpenCategory(null);
 
       if (restoreFocus) {
-        window.requestAnimationFrame(() => {
-          triggerRef.current?.focus();
-        });
+        window.requestAnimationFrame(
+          () => {
+            triggerRef.current?.focus();
+          }
+        );
       }
     },
     []
@@ -101,22 +130,35 @@ export function MobileNav({
     const previousOverflow =
       document.body.style.overflow;
 
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow =
+      'hidden';
 
-    const focusFrame = window.requestAnimationFrame(() => {
-      const panel = panelRef.current;
+    const focusFrame =
+      window.requestAnimationFrame(
+        () => {
+          const panel =
+            panelRef.current;
 
-      if (!panel) {
-        return;
-      }
+          if (!panel) {
+            return;
+          }
 
-      getFocusableElements(panel)[0]?.focus();
-    });
+          getFocusableElements(
+            panel
+          )[0]?.focus();
+        }
+      );
 
-    function handleKeyDown(event: KeyboardEvent) {
+    function handleKeyDown(
+      event: KeyboardEvent
+    ) {
       if (event.key === 'Escape') {
         event.preventDefault();
-        closeAll({ restoreFocus: true });
+
+        closeAll({
+          restoreFocus: true,
+        });
+
         return;
       }
 
@@ -128,33 +170,47 @@ export function MobileNav({
         return;
       }
 
-      const panelElements = getFocusableElements(
-        panelRef.current
-      );
+      const panelElements =
+        getFocusableElements(
+          panelRef.current
+        );
 
-      if (panelElements.length === 0) {
+      if (
+        panelElements.length === 0
+      ) {
         event.preventDefault();
         triggerRef.current.focus();
         return;
       }
 
-      const firstElement = panelElements.at(0);
-      const lastElement = panelElements.at(-1);
+      const firstElement =
+        panelElements.at(0);
 
-      if (!firstElement || !lastElement) {
+      const lastElement =
+        panelElements.at(-1);
+
+      if (
+        !firstElement ||
+        !lastElement
+      ) {
         event.preventDefault();
         triggerRef.current.focus();
         return;
       }
 
-      const activeElement = document.activeElement;
+      const activeElement =
+        document.activeElement;
 
       if (event.shiftKey) {
-        if (activeElement === firstElement) {
+        if (
+          activeElement ===
+          firstElement
+        ) {
           event.preventDefault();
           triggerRef.current.focus();
         } else if (
-          activeElement === triggerRef.current
+          activeElement ===
+          triggerRef.current
         ) {
           event.preventDefault();
           lastElement.focus();
@@ -163,11 +219,15 @@ export function MobileNav({
         return;
       }
 
-      if (activeElement === lastElement) {
+      if (
+        activeElement ===
+        lastElement
+      ) {
         event.preventDefault();
         triggerRef.current.focus();
       } else if (
-        activeElement === triggerRef.current
+        activeElement ===
+        triggerRef.current
       ) {
         event.preventDefault();
         firstElement.focus();
@@ -180,8 +240,13 @@ export function MobileNav({
     );
 
     return () => {
-      window.cancelAnimationFrame(focusFrame);
-      document.body.style.overflow = previousOverflow;
+      window.cancelAnimationFrame(
+        focusFrame
+      );
+
+      document.body.style.overflow =
+        previousOverflow;
+
       document.removeEventListener(
         'keydown',
         handleKeyDown
@@ -192,16 +257,30 @@ export function MobileNav({
   return (
     <div
       className="lg:hidden"
-      role={open ? 'dialog' : undefined}
-      aria-modal={open ? true : undefined}
-      aria-label={open ? subjectsLabel : undefined}
+      role={
+        open
+          ? 'dialog'
+          : undefined
+      }
+      aria-modal={
+        open
+          ? true
+          : undefined
+      }
+      aria-label={
+        open
+          ? subjectsLabel
+          : undefined
+      }
     >
       <button
         ref={triggerRef}
         type="button"
         onClick={() => {
           if (open) {
-            closeAll({ restoreFocus: true });
+            closeAll({
+              restoreFocus: true,
+            });
           } else {
             setOpen(true);
           }
@@ -209,19 +288,39 @@ export function MobileNav({
         aria-expanded={open}
         aria-controls={panelId}
         aria-label={
-          open ? closeMenuLabel : openMenuLabel
+          open
+            ? closeMenuLabel
+            : openMenuLabel
         }
-        className="relative z-50 inline-flex min-h-touch min-w-touch items-center justify-center rounded-button text-foreground transition-colors duration-200 hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+        className="
+          relative
+          z-50
+          inline-flex
+          min-h-touch
+          min-w-touch
+          items-center
+          justify-center
+          rounded-button
+          text-foreground
+          transition-colors
+          duration-200
+          hover:bg-muted
+          focus-visible:outline-none
+          focus-visible:ring-2
+          focus-visible:ring-ring
+          focus-visible:ring-offset-2
+          focus-visible:ring-offset-background
+        "
       >
         {open ? (
           <X
-            className="h-5 w-5"
             aria-hidden="true"
+            className="h-5 w-5"
           />
         ) : (
           <Menu
-            className="h-5 w-5"
             aria-hidden="true"
+            className="h-5 w-5"
           />
         )}
       </button>
@@ -229,10 +328,19 @@ export function MobileNav({
       <div
         aria-hidden="true"
         onClick={() =>
-          closeAll({ restoreFocus: true })
+          closeAll({
+            restoreFocus: true,
+          })
         }
         className={cn(
-          'fixed inset-0 z-30 bg-overlay/55 backdrop-blur-sm transition-opacity duration-300 motion-reduce:transition-none',
+          'fixed',
+          'inset-0',
+          'z-30',
+          'bg-overlay/55',
+          'backdrop-blur-sm',
+          'transition-opacity',
+          'duration-300',
+          'motion-reduce:transition-none',
           open
             ? 'opacity-100'
             : 'pointer-events-none opacity-0'
@@ -245,7 +353,22 @@ export function MobileNav({
         aria-hidden={!open}
         inert={!open}
         className={cn(
-          'fixed inset-x-0 top-16 z-40 max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-border bg-background p-5 shadow-dropdown transition-[transform,opacity] duration-300 ease-out motion-reduce:transition-none lg:hidden',
+          'fixed',
+          'inset-x-0',
+          'top-16',
+          'z-40',
+          'max-h-[calc(100dvh-4rem)]',
+          'overflow-y-auto',
+          'border-t',
+          'border-border',
+          'bg-background',
+          'p-5',
+          'shadow-dropdown',
+          'transition-[transform,opacity]',
+          'duration-300',
+          'ease-out',
+          'motion-reduce:transition-none',
+          'lg:hidden',
           open
             ? 'translate-y-0 opacity-100'
             : 'pointer-events-none -translate-y-2 opacity-0'
@@ -253,113 +376,321 @@ export function MobileNav({
       >
         <nav
           aria-label={subjectsLabel}
-          className="flex flex-col gap-1"
+          className="
+            flex
+            flex-col
+            gap-1
+          "
         >
           <a
             href={homeHref}
-            onClick={() => closeAll()}
-            className="flex min-h-touch items-center rounded-button px-3 text-body font-bold text-foreground transition-colors duration-200 hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            onClick={() =>
+              closeAll()
+            }
+            className="
+              flex
+              min-h-touch
+              items-center
+              rounded-button
+              px-3
+              text-body
+              font-bold
+              text-foreground
+              transition-colors
+              duration-200
+              hover:bg-muted
+              focus-visible:outline-none
+              focus-visible:ring-2
+              focus-visible:ring-ring
+            "
           >
             {homeLabel}
           </a>
 
-          {sectionLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => closeAll()}
-              className="flex min-h-touch items-center rounded-button px-3 text-body font-bold text-foreground transition-colors duration-200 hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          <div
+            className="
+              mt-2
+              border-y
+              border-border
+              py-3
+            "
+          >
+            <p
+              className="
+                px-3
+                pb-2
+                text-caption
+                font-bold
+                uppercase
+                tracking-wide
+                text-muted-foreground
+              "
             >
-              {link.label}
-            </a>
-          ))}
-
-          <div className="mt-2 border-t border-border pt-3">
-            <p className="px-3 pb-2 text-caption font-bold uppercase tracking-wide text-muted-foreground">
               {subjectsLabel}
             </p>
 
-            {subjectCategories.map((category) => {
-              const categoryIsOpen =
-                openCategory === category.key;
-              const categoryPanelId =
-                `${panelId}-${category.key}`;
+            <a
+              href={subjectsOverviewHref}
+              onClick={() =>
+                closeAll()
+              }
+              className="
+                flex
+                min-h-touch
+                items-center
+                rounded-button
+                bg-primary-900
+                px-3
+                text-body
+                font-black
+                text-white
+                transition-colors
+                hover:bg-primary-800
+                focus-visible:outline-none
+                focus-visible:ring-2
+                focus-visible:ring-accent
+              "
+            >
+              {subjectsOverviewLabel}
+            </a>
 
-              return (
-                <div key={category.key}>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setOpenCategory(
-                        categoryIsOpen
-                          ? null
-                          : category.key
-                      );
-                    }}
-                    aria-expanded={categoryIsOpen}
-                    aria-controls={categoryPanelId}
-                    className="flex min-h-touch w-full items-center justify-between gap-3 rounded-button px-3 text-start text-body font-bold text-foreground transition-colors duration-200 hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                  >
-                    <span>{category.label}</span>
+            <div className="mt-2">
+              {subjectCategories.map(
+                (category) => {
+                  const categoryIsOpen =
+                    openCategory ===
+                    category.key;
 
-                    <ChevronDown
-                      className={cn(
-                        'h-4 w-4 shrink-0 transition-transform duration-200 motion-reduce:transition-none',
-                        categoryIsOpen && 'rotate-180'
-                      )}
-                      aria-hidden="true"
-                    />
-                  </button>
+                  const categoryPanelId =
+                    `${panelId}-${category.key}`;
 
-                  <div
-                    id={categoryPanelId}
-                    aria-hidden={!categoryIsOpen}
-                    inert={!categoryIsOpen}
-                    className={cn(
-                      'grid transition-[grid-template-rows,opacity] duration-300 ease-out motion-reduce:transition-none',
-                      categoryIsOpen
-                        ? 'grid-rows-[1fr] opacity-100'
-                        : 'grid-rows-[0fr] opacity-0'
-                    )}
-                  >
-                    <ul className="overflow-hidden ps-3">
-                      {category.children.map((child) => (
-                        <li key={child.href}>
-                          <a
-                            href={child.href}
-                            onClick={() => closeAll()}
-                            tabIndex={
-                              categoryIsOpen ? 0 : -1
-                            }
-                            className="block min-h-touch rounded-button px-3 py-2.5 text-small text-muted-foreground transition-colors duration-200 hover:bg-accent-50 hover:text-accent-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                          >
-                            {child.label}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              );
-            })}
+                  return (
+                    <div
+                      key={category.key}
+                    >
+                      <div
+                        className="
+                          flex
+                          items-center
+                          gap-1
+                        "
+                      >
+                        <a
+                          href={
+                            category.href
+                          }
+                          onClick={() =>
+                            closeAll()
+                          }
+                          className="
+                            flex
+                            min-h-touch
+                            min-w-0
+                            flex-1
+                            items-center
+                            rounded-button
+                            px-3
+                            text-body
+                            font-bold
+                            text-foreground
+                            transition-colors
+                            duration-200
+                            hover:bg-muted
+                            focus-visible:outline-none
+                            focus-visible:ring-2
+                            focus-visible:ring-ring
+                          "
+                        >
+                          {
+                            category.label
+                          }
+                        </a>
+
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setOpenCategory(
+                              categoryIsOpen
+                                ? null
+                                : category.key
+                            );
+                          }}
+                          aria-expanded={
+                            categoryIsOpen
+                          }
+                          aria-controls={
+                            categoryPanelId
+                          }
+                          aria-label={
+                            category.label
+                          }
+                          className="
+                            inline-flex
+                            min-h-touch
+                            min-w-touch
+                            items-center
+                            justify-center
+                            rounded-button
+                            text-muted-foreground
+                            transition-colors
+                            hover:bg-muted
+                            hover:text-foreground
+                            focus-visible:outline-none
+                            focus-visible:ring-2
+                            focus-visible:ring-ring
+                          "
+                        >
+                          <ChevronDown
+                            aria-hidden="true"
+                            className={cn(
+                              'h-4',
+                              'w-4',
+                              'transition-transform',
+                              'duration-200',
+                              'motion-reduce:transition-none',
+                              categoryIsOpen &&
+                                'rotate-180'
+                            )}
+                          />
+                        </button>
+                      </div>
+
+                      <div
+                        id={
+                          categoryPanelId
+                        }
+                        aria-hidden={
+                          !categoryIsOpen
+                        }
+                        inert={
+                          !categoryIsOpen
+                        }
+                        className={cn(
+                          'grid',
+                          'transition-[grid-template-rows,opacity]',
+                          'duration-300',
+                          'ease-out',
+                          'motion-reduce:transition-none',
+                          categoryIsOpen
+                            ? 'grid-rows-[1fr] opacity-100'
+                            : 'grid-rows-[0fr] opacity-0'
+                        )}
+                      >
+                        <ul
+                          className="
+                            grid
+                            overflow-hidden
+                            ps-3
+                            sm:grid-cols-2
+                          "
+                        >
+                          {category.children.map(
+                            (child) => (
+                              <li
+                                key={
+                                  child.href
+                                }
+                              >
+                                <a
+                                  href={
+                                    child.href
+                                  }
+                                  onClick={() =>
+                                    closeAll()
+                                  }
+                                  tabIndex={
+                                    categoryIsOpen
+                                      ? 0
+                                      : -1
+                                  }
+                                  className="
+                                    block
+                                    min-h-touch
+                                    rounded-button
+                                    px-3
+                                    py-2.5
+                                    text-small
+                                    leading-5
+                                    text-muted-foreground
+                                    transition-colors
+                                    duration-200
+                                    hover:bg-accent-50
+                                    hover:text-accent-800
+                                    focus-visible:outline-none
+                                    focus-visible:ring-2
+                                    focus-visible:ring-ring
+                                  "
+                                >
+                                  {
+                                    child.label
+                                  }
+                                </a>
+                              </li>
+                            )
+                          )}
+                        </ul>
+                      </div>
+                    </div>
+                  );
+                }
+              )}
+            </div>
           </div>
+
+          {sectionLinks.map(
+            (link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() =>
+                  closeAll()
+                }
+                className="
+                  flex
+                  min-h-touch
+                  items-center
+                  rounded-button
+                  px-3
+                  text-body
+                  font-bold
+                  text-foreground
+                  transition-colors
+                  duration-200
+                  hover:bg-muted
+                  focus-visible:outline-none
+                  focus-visible:ring-2
+                  focus-visible:ring-ring
+                "
+              >
+                {link.label}
+              </a>
+            )
+          )}
         </nav>
 
-        <div className="mt-5 border-t border-border pt-5">
-          <div className="mb-4 sm:hidden">
-            <LocaleSwitcher />
-          </div>
-
+        <div
+          className="
+            mt-5
+            border-t
+            border-border
+            pt-5
+          "
+        >
           <a
             href={bookingHref}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => closeAll()}
-            className={buttonVariants({
-              variant: 'accent',
-              size: 'md',
-              className: 'w-full',
-            })}
+            onClick={() =>
+              closeAll()
+            }
+            className={
+              buttonVariants({
+                variant: 'accent',
+                size: 'md',
+                className:
+                  'w-full',
+              })
+            }
           >
             {bookLabel}
           </a>

@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "strand": "Speaking and Listening",
+    "recordCount": 17,
+    "status": "excluded-from-grade-pages",
+    "reason": "No explicit Grade 1–12 value was supplied. No grade was inferred from age, IELTS, or adult status."
+  },
+  "records": [
+    {
+      "sourceRow": 66,
+      "gradeLevel": "Age 10 / Grade not stated",
+      "strand": "Speaking and Listening",
+      "mainTopic": "Conversation",
+      "subtopic": "Everyday conversation"
+    },
+    {
+      "sourceRow": 67,
+      "gradeLevel": "Age 10 / Grade not stated",
+      "strand": "Speaking and Listening",
+      "mainTopic": "Conversation",
+      "subtopic": "Self-introduction"
+    },
+    {
+      "sourceRow": 68,
+      "gradeLevel": "Age 10 / Grade not stated",
+      "strand": "Speaking and Listening",
+      "mainTopic": "Conversation",
+      "subtopic": "Small talk and introductions"
+    },
+    {
+      "sourceRow": 69,
+      "gradeLevel": "Age 10 / Grade not stated",
+      "strand": "Speaking and Listening",
+      "mainTopic": "Speaking",
+      "subtopic": "Speaking practice"
+    },
+    {
+      "sourceRow": 71,
+      "gradeLevel": "Age 14 / Grade not stated",
+      "strand": "Speaking and Listening",
+      "mainTopic": "Conversation",
+      "subtopic": "Self-introduction"
+    },
+    {
+      "sourceRow": 74,
+      "gradeLevel": "Age 17 / Grade not stated",
+      "strand": "Speaking and Listening",
+      "mainTopic": "Conversation",
+      "subtopic": "Self-introduction"
+    },
+    {
+      "sourceRow": 75,
+      "gradeLevel": "Age 17 / Grade not stated",
+      "strand": "Speaking and Listening",
+      "mainTopic": "Listening",
+      "subtopic": "Listening comprehension and practice"
+    },
+    {
+      "sourceRow": 76,
+      "gradeLevel": "Age 17 / Grade not stated",
+      "strand": "Speaking and Listening",
+      "mainTopic": "Speaking",
+      "subtopic": "Speaking practice"
+    },
+    {
+      "sourceRow": 77,
+      "gradeLevel": "Adult / IELTS",
+      "strand": "Speaking and Listening",
+      "mainTopic": "Listening",
+      "subtopic": "Listening comprehension and practice"
+    },
+    {
+      "sourceRow": 78,
+      "gradeLevel": "Adult / IELTS",
+      "strand": "Speaking and Listening",
+      "mainTopic": "Speaking",
+      "subtopic": "Speaking practice"
+    },
+    {
+      "sourceRow": 81,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Speaking and Listening",
+      "mainTopic": "Conversation",
+      "subtopic": "Everyday conversation"
+    },
+    {
+      "sourceRow": 82,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Speaking and Listening",
+      "mainTopic": "Conversation",
+      "subtopic": "Self-introduction"
+    },
+    {
+      "sourceRow": 83,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Speaking and Listening",
+      "mainTopic": "Conversation",
+      "subtopic": "Small talk and introductions"
+    },
+    {
+      "sourceRow": 84,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Speaking and Listening",
+      "mainTopic": "Speaking",
+      "subtopic": "Picture description"
+    },
+    {
+      "sourceRow": 87,
+      "gradeLevel": "Grade not stated",
+      "strand": "Speaking and Listening",
+      "mainTopic": "Conversation",
+      "subtopic": "Everyday conversation"
+    },
+    {
+      "sourceRow": 88,
+      "gradeLevel": "Grade not stated",
+      "strand": "Speaking and Listening",
+      "mainTopic": "Conversation",
+      "subtopic": "Self-introduction"
+    },
+    {
+      "sourceRow": 89,
+      "gradeLevel": "Grade not stated",
+      "strand": "Speaking and Listening",
+      "mainTopic": "Speaking",
+      "subtopic": "Speaking practice"
+    }
+  ]
+}

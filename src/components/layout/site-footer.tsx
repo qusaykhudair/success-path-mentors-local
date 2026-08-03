@@ -45,6 +45,11 @@ export async function SiteFooter() {
 
   const homeHref = `/${locale}`;
   const contactHref = `${homeHref}/contact`;
+  const subjectsHref = `${homeHref}/subjects`;
+  const subjectsLabel =
+    locale === 'ar'
+      ? 'المواد'
+      : 'Subjects';
 
   const whatsappHref =
     `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
@@ -55,6 +60,10 @@ export async function SiteFooter() {
     {
       href: homeHref,
       label: t('links.home'),
+    },
+    {
+      href: subjectsHref,
+      label: subjectsLabel,
     },
     {
       href: `${homeHref}/about`,

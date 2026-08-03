@@ -1,0 +1,3321 @@
+{
+  "metadata": {
+    "subject": "English",
+    "strand": "Reading Comprehension",
+    "strandSlug": "reading-comprehension",
+    "gradeRange": {
+      "min": 1,
+      "max": 12
+    },
+    "sourceRecordCount": 363,
+    "nonGradedSourceRecordCount": 16,
+    "incompleteSourceRecordCount": 1,
+    "sourceMainTopicPlacementCount": 161,
+    "mainTopicCount": 160,
+    "subtopicCount": 346,
+    "exactDuplicateRowsRemoved": 0,
+    "caseOnlyMainTopicNormalizations": 3,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Skills are counted by grade placement. Repetition across different grades is preserved as intentional curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Main Topic + Subtopic duplicates are removed.",
+      "Case-only Main Topic differences are normalized without changing meaning.",
+      "Age-only, adult, IELTS, and grade-not-stated records remain outside Grade 1–12 pages.",
+      "Rows without a Subtopic / Skill are preserved in a review file and are not rendered as empty content.",
+      "Empty grade sections remain in the JSON structure but are hidden from public pages."
+    ],
+    "gradedSourceRecordCount": 346
+  },
+  "strand": {
+    "slug": "reading-comprehension",
+    "title": {
+      "en": "Reading Comprehension",
+      "ar": "الفهم القرائي"
+    },
+    "description": {
+      "en": "Main ideas, details, inference, text structure, author perspective, theme, evidence, literary and informational text analysis, and comparison across texts.",
+      "ar": "الأفكار الرئيسة والتفاصيل والاستنتاج وبنية النص ومنظور الكاتب والموضوع والأدلة وتحليل النصوص الأدبية والمعلوماتية والمقارنة بين النصوص."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g1-reading-skills",
+          "title": "Reading Skills",
+          "subtopics": [
+            {
+              "id": "comprehension-questions-and-passage-analysis",
+              "title": "Comprehension questions and passage analysis"
+            }
+          ],
+          "sourceRows": [
+            2
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g2-author-s-purpose",
+          "title": "Author's purpose",
+          "subtopics": [
+            {
+              "id": "choose-the-text-that-matches-the-writer-s-purpose",
+              "title": "Choose the text that matches the writer's purpose"
+            }
+          ],
+          "sourceRows": [
+            3
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-cause-and-effect",
+          "title": "Cause and effect",
+          "subtopics": [
+            {
+              "id": "match-each-cause-to-its-effect",
+              "title": "Match each cause to its effect"
+            },
+            {
+              "id": "match-each-effect-to-its-cause",
+              "title": "Match each effect to its cause"
+            }
+          ],
+          "sourceRows": [
+            4,
+            5
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-inference-and-analysis",
+          "title": "Inference and analysis",
+          "subtopics": [
+            {
+              "id": "use-actions-and-dialogue-to-understand-characters",
+              "title": "Use actions and dialogue to understand characters"
+            }
+          ],
+          "sourceRows": [
+            6
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-informational-texts",
+          "title": "Informational texts",
+          "subtopics": [
+            {
+              "id": "compare-and-contrast-in-informational-passages",
+              "title": "Compare and contrast in informational passages"
+            },
+            {
+              "id": "read-and-understand-informational-passages",
+              "title": "Read and understand informational passages"
+            }
+          ],
+          "sourceRows": [
+            7,
+            8
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-key-ideas-and-details",
+          "title": "Key Ideas and Details",
+          "subtopics": [
+            {
+              "id": "main-idea",
+              "title": "Main idea"
+            },
+            {
+              "id": "significant-and-explicit-details",
+              "title": "Significant and explicit details"
+            }
+          ],
+          "sourceRows": [
+            9,
+            10
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-literary-texts",
+          "title": "Literary texts",
+          "subtopics": [
+            {
+              "id": "analyze-stories",
+              "title": "Analyze stories"
+            }
+          ],
+          "sourceRows": [
+            11
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-reading-skills",
+          "title": "Reading Skills",
+          "subtopics": [
+            {
+              "id": "comprehension-questions-and-passage-analysis",
+              "title": "Comprehension questions and passage analysis"
+            },
+            {
+              "id": "short-passage-comprehension",
+              "title": "Short passage comprehension"
+            }
+          ],
+          "sourceRows": [
+            12,
+            13
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-sequence",
+          "title": "Sequence",
+          "subtopics": [
+            {
+              "id": "order-events-in-a-story",
+              "title": "Order events in a story"
+            }
+          ],
+          "sourceRows": [
+            14
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-theme",
+          "title": "Theme",
+          "subtopics": [
+            {
+              "id": "determine-the-themes-of-myths-fables-and-folktales",
+              "title": "Determine the themes of myths, fables and folktales"
+            }
+          ],
+          "sourceRows": [
+            15
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-topic-and-purpose",
+          "title": "Topic and purpose",
+          "subtopics": [
+            {
+              "id": "identify-the-purpose-of-a-text",
+              "title": "Identify the purpose of a text"
+            }
+          ],
+          "sourceRows": [
+            16
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 10,
+      "subtopicCount": 14
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g3-author-s-purpose",
+          "title": "Author's purpose",
+          "subtopics": [
+            {
+              "id": "identify-the-author-s-purpose-mixed-media",
+              "title": "Identify the author's purpose: mixed media"
+            },
+            {
+              "id": "identify-the-author-s-purpose-passages",
+              "title": "Identify the author's purpose: passages"
+            }
+          ],
+          "sourceRows": [
+            17,
+            18
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-critical-reading",
+          "title": "Critical Reading",
+          "subtopics": [
+            {
+              "id": "drawing-conclusions",
+              "title": "Drawing conclusions"
+            },
+            {
+              "id": "inference",
+              "title": "Inference"
+            },
+            {
+              "id": "textual-evidence-and-evidence-based-responses",
+              "title": "Textual evidence and evidence-based responses"
+            }
+          ],
+          "sourceRows": [
+            19,
+            20,
+            21
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-inference",
+          "title": "Inference",
+          "subtopics": [
+            {
+              "id": "draw-inferences-from-a-text",
+              "title": "Draw inferences from a text"
+            },
+            {
+              "id": "make-predictions-about-a-story",
+              "title": "Make predictions about a story"
+            },
+            {
+              "id": "use-actions-and-dialogue-to-understand-characters",
+              "title": "Use actions and dialogue to understand characters"
+            }
+          ],
+          "sourceRows": [
+            22,
+            23,
+            24
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-informational-texts-level-1",
+          "title": "Informational texts: level 1",
+          "subtopics": [
+            {
+              "id": "read-about-art-music-and-traditions",
+              "title": "Read about art, music and traditions"
+            },
+            {
+              "id": "read-about-food",
+              "title": "Read about food"
+            },
+            {
+              "id": "read-about-sports-and-hobbies",
+              "title": "Read about sports and hobbies"
+            },
+            {
+              "id": "read-passages-about-animals",
+              "title": "Read passages about animals"
+            }
+          ],
+          "sourceRows": [
+            25,
+            26,
+            27,
+            28
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-informational-texts-level-2",
+          "title": "Informational texts: level 2",
+          "subtopics": [
+            {
+              "id": "read-about-business-and-technology",
+              "title": "Read about business and technology"
+            },
+            {
+              "id": "read-about-famous-people",
+              "title": "Read about famous people"
+            },
+            {
+              "id": "read-about-famous-places",
+              "title": "Read about famous places"
+            },
+            {
+              "id": "read-about-science-and-nature",
+              "title": "Read about science and nature"
+            }
+          ],
+          "sourceRows": [
+            29,
+            30,
+            31,
+            32
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-key-ideas-and-details",
+          "title": "Key Ideas and Details",
+          "subtopics": [
+            {
+              "id": "main-idea",
+              "title": "Main idea"
+            },
+            {
+              "id": "significant-and-explicit-details",
+              "title": "Significant and explicit details"
+            },
+            {
+              "id": "summarizing-and-retelling",
+              "title": "Summarizing and retelling"
+            }
+          ],
+          "sourceRows": [
+            33,
+            34,
+            35
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-literary-texts-level-1",
+          "title": "Literary texts: level 1",
+          "subtopics": [
+            {
+              "id": "read-fantasy-with-illustrations",
+              "title": "Read fantasy with illustrations"
+            },
+            {
+              "id": "read-historical-fiction-with-illustrations",
+              "title": "Read historical fiction with illustrations"
+            },
+            {
+              "id": "read-realistic-fiction-with-illustrations",
+              "title": "Read realistic fiction with illustrations"
+            },
+            {
+              "id": "read-science-fiction-with-illustrations",
+              "title": "Read science fiction with illustrations"
+            }
+          ],
+          "sourceRows": [
+            36,
+            37,
+            38,
+            39
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-literary-texts-level-2",
+          "title": "Literary texts: level 2",
+          "subtopics": [
+            {
+              "id": "read-poetry",
+              "title": "Read poetry"
+            },
+            {
+              "id": "read-realistic-fiction-set",
+              "title": "Read realistic fiction: set"
+            }
+          ],
+          "sourceRows": [
+            40,
+            41
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-main-idea",
+          "title": "Main idea",
+          "subtopics": [
+            {
+              "id": "determine-the-main-idea-of-a-passage",
+              "title": "Determine the main idea of a passage"
+            },
+            {
+              "id": "use-key-details-to-determine-the-main-idea",
+              "title": "Use key details to determine the main idea"
+            }
+          ],
+          "sourceRows": [
+            42,
+            43
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-point-of-view",
+          "title": "Point of view",
+          "subtopics": [
+            {
+              "id": "distinguish-points-of-view",
+              "title": "Distinguish points of view"
+            }
+          ],
+          "sourceRows": [
+            44
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-reading-skills",
+          "title": "Reading Skills",
+          "subtopics": [
+            {
+              "id": "comprehension-questions-and-passage-analysis",
+              "title": "Comprehension questions and passage analysis"
+            },
+            {
+              "id": "short-passage-comprehension",
+              "title": "Short passage comprehension"
+            }
+          ],
+          "sourceRows": [
+            45,
+            46
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-sensory-details",
+          "title": "Sensory details",
+          "subtopics": [
+            {
+              "id": "sort-sensory-details",
+              "title": "Sort sensory details"
+            }
+          ],
+          "sourceRows": [
+            47
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-story-analysis",
+          "title": "Story Analysis",
+          "subtopics": [
+            {
+              "id": "story-elements",
+              "title": "Story elements"
+            }
+          ],
+          "sourceRows": [
+            48
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-story-elements",
+          "title": "Story elements",
+          "subtopics": [
+            {
+              "id": "identify-story-elements",
+              "title": "Identify story elements"
+            }
+          ],
+          "sourceRows": [
+            49
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-text-organization",
+          "title": "Text Organization",
+          "subtopics": [
+            {
+              "id": "cause-and-effect",
+              "title": "Cause and effect"
+            },
+            {
+              "id": "compare-and-contrast",
+              "title": "Compare and contrast"
+            },
+            {
+              "id": "sequence-and-chronological-order",
+              "title": "Sequence and chronological order"
+            }
+          ],
+          "sourceRows": [
+            50,
+            51,
+            52
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-text-structure",
+          "title": "Text structure",
+          "subtopics": [
+            {
+              "id": "compare-and-contrast-in-informational-texts",
+              "title": "Compare and contrast in informational texts"
+            },
+            {
+              "id": "determine-the-order-of-events-in-informational-texts",
+              "title": "Determine the order of events in informational texts"
+            },
+            {
+              "id": "identify-text-structures",
+              "title": "Identify text structures"
+            },
+            {
+              "id": "match-causes-and-effects-in-informational-texts",
+              "title": "Match causes and effects in informational texts"
+            },
+            {
+              "id": "match-causes-with-effects",
+              "title": "Match causes with effects"
+            },
+            {
+              "id": "match-problems-with-their-solutions",
+              "title": "Match problems with their solutions"
+            }
+          ],
+          "sourceRows": [
+            53,
+            54,
+            55,
+            56,
+            57,
+            58
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-text-types",
+          "title": "Text Types",
+          "subtopics": [
+            {
+              "id": "informational-texts",
+              "title": "Informational texts"
+            }
+          ],
+          "sourceRows": [
+            59
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-theme",
+          "title": "Theme",
+          "subtopics": [
+            {
+              "id": "determine-the-themes-of-myths-fables-and-folktales",
+              "title": "Determine the themes of myths, fables and folktales"
+            }
+          ],
+          "sourceRows": [
+            60
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-visual-elements",
+          "title": "Visual elements",
+          "subtopics": [
+            {
+              "id": "compare-mythological-illustrations",
+              "title": "Compare mythological illustrations"
+            }
+          ],
+          "sourceRows": [
+            61
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 19,
+      "subtopicCount": 45
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g4-author-s-purpose",
+          "title": "Author's purpose",
+          "subtopics": [
+            {
+              "id": "identify-the-purpose-of-a-text",
+              "title": "Identify the purpose of a text"
+            }
+          ],
+          "sourceRows": [
+            62
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-critical-reading",
+          "title": "Critical Reading",
+          "subtopics": [
+            {
+              "id": "drawing-conclusions",
+              "title": "Drawing conclusions"
+            },
+            {
+              "id": "fact-and-opinion",
+              "title": "Fact and opinion"
+            },
+            {
+              "id": "inference",
+              "title": "Inference"
+            },
+            {
+              "id": "prediction",
+              "title": "Prediction"
+            },
+            {
+              "id": "textual-evidence-and-evidence-based-responses",
+              "title": "Textual evidence and evidence-based responses"
+            }
+          ],
+          "sourceRows": [
+            63,
+            64,
+            65,
+            66,
+            67
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-inference",
+          "title": "Inference",
+          "subtopics": [
+            {
+              "id": "compare-and-contrast-characters",
+              "title": "Compare and contrast characters"
+            },
+            {
+              "id": "draw-inferences-from-a-text",
+              "title": "Draw inferences from a text"
+            },
+            {
+              "id": "make-predictions-about-a-story",
+              "title": "Make predictions about a story"
+            },
+            {
+              "id": "use-actions-and-dialogue-to-understand-characters",
+              "title": "Use actions and dialogue to understand characters"
+            }
+          ],
+          "sourceRows": [
+            68,
+            69,
+            70,
+            71
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-informational-texts-level-1",
+          "title": "Informational texts: level 1",
+          "subtopics": [
+            {
+              "id": "read-about-animals",
+              "title": "Read about animals"
+            },
+            {
+              "id": "read-about-art-music-and-traditions",
+              "title": "Read about art, music and traditions"
+            },
+            {
+              "id": "read-about-famous-places",
+              "title": "Read about famous places"
+            },
+            {
+              "id": "read-about-sports-and-hobbies",
+              "title": "Read about sports and hobbies"
+            }
+          ],
+          "sourceRows": [
+            72,
+            73,
+            74,
+            75
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-informational-texts-level-2",
+          "title": "Informational texts: level 2",
+          "subtopics": [
+            {
+              "id": "read-about-business-and-technology",
+              "title": "Read about business and technology"
+            },
+            {
+              "id": "read-about-famous-people",
+              "title": "Read about famous people"
+            },
+            {
+              "id": "read-about-history",
+              "title": "Read about history"
+            },
+            {
+              "id": "read-about-science-and-nature",
+              "title": "Read about science and nature"
+            }
+          ],
+          "sourceRows": [
+            76,
+            77,
+            78,
+            79
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-key-ideas-and-details",
+          "title": "Key Ideas and Details",
+          "subtopics": [
+            {
+              "id": "implied-details",
+              "title": "Implied details"
+            },
+            {
+              "id": "main-idea",
+              "title": "Main idea"
+            },
+            {
+              "id": "significant-and-explicit-details",
+              "title": "Significant and explicit details"
+            },
+            {
+              "id": "summarizing-and-retelling",
+              "title": "Summarizing and retelling"
+            },
+            {
+              "id": "supporting-details",
+              "title": "Supporting details"
+            }
+          ],
+          "sourceRows": [
+            80,
+            81,
+            82,
+            83,
+            84
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-literary-texts-level-1",
+          "title": "Literary texts: level 1",
+          "subtopics": [
+            {
+              "id": "read-fantasy-with-illustrations",
+              "title": "Read fantasy with illustrations"
+            },
+            {
+              "id": "read-realistic-fiction-with-illustrations",
+              "title": "Read realistic fiction with illustrations"
+            },
+            {
+              "id": "read-science-fiction-with-illustrations",
+              "title": "Read science fiction with illustrations"
+            }
+          ],
+          "sourceRows": [
+            85,
+            86,
+            87
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-literary-texts-level-2",
+          "title": "Literary texts: level 2",
+          "subtopics": [
+            {
+              "id": "read-drama",
+              "title": "Read drama"
+            },
+            {
+              "id": "read-historical-fiction",
+              "title": "Read historical fiction"
+            },
+            {
+              "id": "read-poetry",
+              "title": "Read poetry"
+            },
+            {
+              "id": "read-realistic-fiction",
+              "title": "Read realistic fiction"
+            }
+          ],
+          "sourceRows": [
+            88,
+            89,
+            90,
+            91
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-main-idea",
+          "title": "Main idea",
+          "subtopics": [
+            {
+              "id": "combine-main-ideas-from-two-texts",
+              "title": "Combine main ideas from two texts"
+            },
+            {
+              "id": "determine-the-main-idea-of-a-passage",
+              "title": "Determine the main idea of a passage"
+            },
+            {
+              "id": "use-key-details-to-determine-the-main-idea",
+              "title": "Use key details to determine the main idea"
+            }
+          ],
+          "sourceRows": [
+            92,
+            93,
+            94
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-point-of-view",
+          "title": "Point of view",
+          "subtopics": [
+            {
+              "id": "distinguish-points-of-view",
+              "title": "Distinguish points of view"
+            }
+          ],
+          "sourceRows": [
+            96
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-reading-skills",
+          "title": "Reading Skills",
+          "subtopics": [
+            {
+              "id": "comprehension-questions-and-passage-analysis",
+              "title": "Comprehension questions and passage analysis"
+            },
+            {
+              "id": "short-passage-comprehension",
+              "title": "Short passage comprehension"
+            }
+          ],
+          "sourceRows": [
+            97,
+            98
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-sensory-details",
+          "title": "Sensory details",
+          "subtopics": [
+            {
+              "id": "sort-sensory-details",
+              "title": "Sort sensory details"
+            }
+          ],
+          "sourceRows": [
+            99
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-story-analysis",
+          "title": "Story Analysis",
+          "subtopics": [
+            {
+              "id": "story-elements",
+              "title": "Story elements"
+            }
+          ],
+          "sourceRows": [
+            100
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-story-elements",
+          "title": "Story elements",
+          "subtopics": [
+            {
+              "id": "identify-story-elements",
+              "title": "Identify story elements"
+            }
+          ],
+          "sourceRows": [
+            101
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-text-organization",
+          "title": "Text Organization",
+          "subtopics": [
+            {
+              "id": "cause-and-effect",
+              "title": "Cause and effect"
+            },
+            {
+              "id": "compare-and-contrast",
+              "title": "Compare and contrast"
+            },
+            {
+              "id": "problem-and-solution",
+              "title": "Problem and solution"
+            },
+            {
+              "id": "sequence-and-chronological-order",
+              "title": "Sequence and chronological order"
+            },
+            {
+              "id": "text-structures",
+              "title": "Text structures"
+            }
+          ],
+          "sourceRows": [
+            102,
+            103,
+            104,
+            105,
+            106
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-text-structure",
+          "title": "Text structure",
+          "subtopics": [
+            {
+              "id": "compare-and-contrast-in-informational-texts",
+              "title": "Compare and contrast in informational texts"
+            },
+            {
+              "id": "determine-the-order-of-events-in-informational-texts",
+              "title": "Determine the order of events in informational texts"
+            },
+            {
+              "id": "identify-text-structures",
+              "title": "Identify text structures"
+            },
+            {
+              "id": "match-causes-and-effects-in-informational-texts",
+              "title": "Match causes and effects in informational texts"
+            },
+            {
+              "id": "match-problems-with-their-solutions",
+              "title": "Match problems with their solutions"
+            }
+          ],
+          "sourceRows": [
+            107,
+            108,
+            109,
+            110,
+            111
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-text-types",
+          "title": "Text Types",
+          "subtopics": [
+            {
+              "id": "informational-texts",
+              "title": "Informational texts"
+            },
+            {
+              "id": "realistic-fiction",
+              "title": "Realistic fiction"
+            }
+          ],
+          "sourceRows": [
+            112,
+            113
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-theme",
+          "title": "Theme",
+          "subtopics": [
+            {
+              "id": "determine-the-themes-of-short-stories-determine-the-themes-of-myths-fables-and-folktales",
+              "title": "Determine the themes of short stories Determine the themes of myths, fables and folktales"
+            }
+          ],
+          "sourceRows": [
+            114
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-theme-and-message",
+          "title": "Theme and Message",
+          "subtopics": [
+            {
+              "id": "theme",
+              "title": "Theme"
+            }
+          ],
+          "sourceRows": [
+            115
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-visual-and-multimodal-texts",
+          "title": "Visual and Multimodal Texts",
+          "subtopics": [
+            {
+              "id": "visual-elements",
+              "title": "Visual elements"
+            }
+          ],
+          "sourceRows": [
+            116
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-visual-elements",
+          "title": "Visual elements",
+          "subtopics": [
+            {
+              "id": "compare-mythological-illustrations",
+              "title": "Compare mythological illustrations"
+            }
+          ],
+          "sourceRows": [
+            117
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 21,
+      "subtopicCount": 55
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g5-author-and-perspective",
+          "title": "Author and Perspective",
+          "subtopics": [
+            {
+              "id": "author-s-purpose",
+              "title": "Author's purpose"
+            },
+            {
+              "id": "point-of-view",
+              "title": "Point of view"
+            }
+          ],
+          "sourceRows": [
+            118,
+            119
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-author-s-purpose-and-tone",
+          "title": "Author's purpose and tone",
+          "subtopics": [
+            {
+              "id": "identify-the-purpose-of-a-text",
+              "title": "Identify the purpose of a text"
+            },
+            {
+              "id": "which-sentence-is-more-formal",
+              "title": "Which sentence is more formal?"
+            }
+          ],
+          "sourceRows": [
+            120,
+            121
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-critical-reading",
+          "title": "Critical Reading",
+          "subtopics": [
+            {
+              "id": "fact-and-opinion",
+              "title": "Fact and opinion"
+            },
+            {
+              "id": "inference",
+              "title": "Inference"
+            },
+            {
+              "id": "prediction",
+              "title": "Prediction"
+            }
+          ],
+          "sourceRows": [
+            122,
+            123,
+            124
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-inference",
+          "title": "Inference",
+          "subtopics": [
+            {
+              "id": "compare-and-contrast-characters",
+              "title": "Compare and contrast characters"
+            },
+            {
+              "id": "draw-inferences-from-a-text",
+              "title": "Draw inferences from a text"
+            },
+            {
+              "id": "use-actions-and-dialogue-to-understand-characters",
+              "title": "Use actions and dialogue to understand characters"
+            }
+          ],
+          "sourceRows": [
+            125,
+            126,
+            127
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-informational-texts-level-1",
+          "title": "Informational texts: level 1",
+          "subtopics": [
+            {
+              "id": "read-about-animals",
+              "title": "Read about animals"
+            },
+            {
+              "id": "read-about-art-music-and-traditions",
+              "title": "Read about art, music and traditions"
+            },
+            {
+              "id": "read-about-famous-places",
+              "title": "Read about famous places"
+            },
+            {
+              "id": "read-about-sports-and-hobbies",
+              "title": "Read about sports and hobbies"
+            }
+          ],
+          "sourceRows": [
+            128,
+            129,
+            130,
+            131
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-informational-texts-level-2",
+          "title": "Informational texts: level 2",
+          "subtopics": [
+            {
+              "id": "read-about-business-and-technology",
+              "title": "Read about business and technology"
+            },
+            {
+              "id": "read-about-famous-people",
+              "title": "Read about famous people"
+            },
+            {
+              "id": "read-about-history",
+              "title": "Read about history"
+            },
+            {
+              "id": "read-about-science-and-nature",
+              "title": "Read about science and nature"
+            }
+          ],
+          "sourceRows": [
+            132,
+            133,
+            134,
+            135
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-key-ideas-and-details",
+          "title": "Key Ideas and Details",
+          "subtopics": [
+            {
+              "id": "main-idea",
+              "title": "Main idea"
+            },
+            {
+              "id": "significant-and-explicit-details",
+              "title": "Significant and explicit details"
+            },
+            {
+              "id": "summarizing-and-retelling",
+              "title": "Summarizing and retelling"
+            }
+          ],
+          "sourceRows": [
+            136,
+            137,
+            138
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-literary-texts-level-1",
+          "title": "Literary texts: level 1",
+          "subtopics": [
+            {
+              "id": "read-fantasy-with-illustrations",
+              "title": "Read fantasy with illustrations"
+            },
+            {
+              "id": "read-historical-fiction-with-illustrations",
+              "title": "Read historical fiction with illustrations"
+            },
+            {
+              "id": "read-realistic-fiction-with-illustrations",
+              "title": "Read realistic fiction with illustrations"
+            }
+          ],
+          "sourceRows": [
+            139,
+            140,
+            141
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-literary-texts-level-2",
+          "title": "Literary texts: level 2",
+          "subtopics": [
+            {
+              "id": "read-drama",
+              "title": "Read drama"
+            },
+            {
+              "id": "read-historical-fiction",
+              "title": "Read historical fiction"
+            },
+            {
+              "id": "read-poetry",
+              "title": "Read poetry"
+            },
+            {
+              "id": "read-realistic-fiction",
+              "title": "Read realistic fiction"
+            }
+          ],
+          "sourceRows": [
+            142,
+            143,
+            144,
+            145
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-main-idea",
+          "title": "Main idea",
+          "subtopics": [
+            {
+              "id": "combine-main-ideas-from-two-texts",
+              "title": "Combine main ideas from two texts"
+            },
+            {
+              "id": "determine-the-main-idea-of-a-passage",
+              "title": "Determine the main idea of a passage"
+            },
+            {
+              "id": "use-key-details-to-determine-the-main-idea",
+              "title": "Use key details to determine the main idea"
+            }
+          ],
+          "sourceRows": [
+            146,
+            147,
+            148
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-point-of-view",
+          "title": "Point of view",
+          "subtopics": [
+            {
+              "id": "compare-and-contrast-points-of-view",
+              "title": "Compare and contrast points of view"
+            }
+          ],
+          "sourceRows": [
+            149
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-reading-skills",
+          "title": "Reading Skills",
+          "subtopics": [
+            {
+              "id": "comprehension-questions-and-passage-analysis",
+              "title": "Comprehension questions and passage analysis"
+            },
+            {
+              "id": "short-passage-comprehension",
+              "title": "Short passage comprehension"
+            }
+          ],
+          "sourceRows": [
+            150,
+            151
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-sensory-details",
+          "title": "Sensory details",
+          "subtopics": [
+            {
+              "id": "sort-sensory-details",
+              "title": "Sort sensory details"
+            }
+          ],
+          "sourceRows": [
+            152
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-story-analysis",
+          "title": "Story Analysis",
+          "subtopics": [
+            {
+              "id": "story-elements",
+              "title": "Story elements"
+            }
+          ],
+          "sourceRows": [
+            153
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-story-elements",
+          "title": "Story elements",
+          "subtopics": [
+            {
+              "id": "identify-story-elements",
+              "title": "Identify story elements"
+            }
+          ],
+          "sourceRows": [
+            154
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-text-organization",
+          "title": "Text Organization",
+          "subtopics": [
+            {
+              "id": "cause-and-effect",
+              "title": "Cause and effect"
+            },
+            {
+              "id": "compare-and-contrast",
+              "title": "Compare and contrast"
+            },
+            {
+              "id": "sequence-and-chronological-order",
+              "title": "Sequence and chronological order"
+            }
+          ],
+          "sourceRows": [
+            155,
+            156,
+            157
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-text-structure",
+          "title": "Text structure",
+          "subtopics": [
+            {
+              "id": "compare-and-contrast-in-informational-texts",
+              "title": "Compare and contrast in informational texts"
+            },
+            {
+              "id": "determine-the-order-of-events-in-informational-texts",
+              "title": "Determine the order of events in informational texts"
+            },
+            {
+              "id": "identify-text-structures",
+              "title": "Identify text structures"
+            },
+            {
+              "id": "match-causes-and-effects-in-informational-texts",
+              "title": "Match causes and effects in informational texts"
+            },
+            {
+              "id": "match-problems-with-their-solutions",
+              "title": "Match problems with their solutions"
+            }
+          ],
+          "sourceRows": [
+            158,
+            159,
+            160,
+            161,
+            162
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-text-types",
+          "title": "Text Types",
+          "subtopics": [
+            {
+              "id": "informational-texts",
+              "title": "Informational texts"
+            },
+            {
+              "id": "literary-texts",
+              "title": "Literary texts"
+            },
+            {
+              "id": "realistic-fiction",
+              "title": "Realistic fiction"
+            }
+          ],
+          "sourceRows": [
+            163,
+            164,
+            165
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-theme",
+          "title": "Theme",
+          "subtopics": [
+            {
+              "id": "determine-the-themes-of-short-stories",
+              "title": "Determine the themes of short stories"
+            }
+          ],
+          "sourceRows": [
+            166
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-theme-and-message",
+          "title": "Theme and Message",
+          "subtopics": [
+            {
+              "id": "theme",
+              "title": "Theme"
+            }
+          ],
+          "sourceRows": [
+            167
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-visual-elements",
+          "title": "Visual elements",
+          "subtopics": [
+            {
+              "id": "compare-mythological-illustrations",
+              "title": "Compare mythological illustrations"
+            }
+          ],
+          "sourceRows": [
+            168
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 21,
+      "subtopicCount": 51
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g6-analyzing-informational-texts",
+          "title": "Analyzing informational texts",
+          "subtopics": [
+            {
+              "id": "read-and-understand-informational-passages",
+              "title": "Read and understand informational passages"
+            },
+            {
+              "id": "trace-an-argument",
+              "title": "Trace an argument"
+            }
+          ],
+          "sourceRows": [
+            169,
+            170
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-analyzing-literature",
+          "title": "Analyzing literature",
+          "subtopics": [
+            {
+              "id": "analyze-short-stories",
+              "title": "Analyze short stories"
+            }
+          ],
+          "sourceRows": [
+            171
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-author-s-purpose-and-tone",
+          "title": "Author's purpose and tone",
+          "subtopics": [
+            {
+              "id": "compare-passages-for-tone",
+              "title": "Compare passages for tone"
+            },
+            {
+              "id": "identify-the-author-s-purpose",
+              "title": "Identify the author's purpose"
+            },
+            {
+              "id": "which-sentence-is-more-formal",
+              "title": "Which sentence is more formal?"
+            }
+          ],
+          "sourceRows": [
+            172,
+            173,
+            174
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-comparing-texts",
+          "title": "Comparing Texts",
+          "subtopics": [
+            {
+              "id": "compare-two-texts-with-different-genres",
+              "title": "Compare two texts with different genres"
+            }
+          ],
+          "sourceRows": [
+            175
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-critical-reading",
+          "title": "Critical Reading",
+          "subtopics": [
+            {
+              "id": "fact-and-opinion",
+              "title": "Fact and opinion"
+            },
+            {
+              "id": "inference",
+              "title": "Inference"
+            },
+            {
+              "id": "textual-evidence-and-evidence-based-responses",
+              "title": "Textual evidence and evidence-based responses"
+            }
+          ],
+          "sourceRows": [
+            176,
+            177,
+            178
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-key-ideas-and-details",
+          "title": "Key Ideas and Details",
+          "subtopics": [
+            {
+              "id": "implied-details",
+              "title": "Implied details"
+            },
+            {
+              "id": "main-idea",
+              "title": "Main idea"
+            },
+            {
+              "id": "significant-and-explicit-details",
+              "title": "Significant and explicit details"
+            },
+            {
+              "id": "summarizing-and-retelling",
+              "title": "Summarizing and retelling"
+            }
+          ],
+          "sourceRows": [
+            179,
+            180,
+            181,
+            182
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-main-idea",
+          "title": "Main idea",
+          "subtopics": [
+            {
+              "id": "determine-the-main-idea-of-a-passage",
+              "title": "Determine the main idea of a passage"
+            }
+          ],
+          "sourceRows": [
+            183
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-point-of-view",
+          "title": "Point of view",
+          "subtopics": [
+            {
+              "id": "determine-the-author-s-point-of-view",
+              "title": "Determine the author's point of view"
+            }
+          ],
+          "sourceRows": [
+            184
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-reading-skills",
+          "title": "Reading Skills",
+          "subtopics": [
+            {
+              "id": "comprehension-questions-and-passage-analysis",
+              "title": "Comprehension questions and passage analysis"
+            },
+            {
+              "id": "short-passage-comprehension",
+              "title": "Short passage comprehension"
+            }
+          ],
+          "sourceRows": [
+            185,
+            186
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-story-analysis",
+          "title": "Story Analysis",
+          "subtopics": [
+            {
+              "id": "character-traits-and-characterization",
+              "title": "Character traits and characterization"
+            },
+            {
+              "id": "story-elements",
+              "title": "Story elements"
+            }
+          ],
+          "sourceRows": [
+            187,
+            188
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-text-organization",
+          "title": "Text Organization",
+          "subtopics": [
+            {
+              "id": "cause-and-effect",
+              "title": "Cause and effect"
+            },
+            {
+              "id": "compare-and-contrast",
+              "title": "Compare and contrast"
+            },
+            {
+              "id": "problem-and-solution",
+              "title": "Problem and solution"
+            }
+          ],
+          "sourceRows": [
+            189,
+            190,
+            191
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-text-structure",
+          "title": "Text structure",
+          "subtopics": [
+            {
+              "id": "compare-and-contrast-in-informational-texts",
+              "title": "Compare and contrast in informational texts"
+            },
+            {
+              "id": "identify-text-structures",
+              "title": "Identify text structures"
+            },
+            {
+              "id": "match-causes-and-effects-in-informational-texts",
+              "title": "Match causes and effects in informational texts"
+            },
+            {
+              "id": "match-problems-with-their-solutions",
+              "title": "Match problems with their solutions"
+            }
+          ],
+          "sourceRows": [
+            192,
+            193,
+            194,
+            195
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-text-types",
+          "title": "Text Types",
+          "subtopics": [
+            {
+              "id": "literary-texts",
+              "title": "Literary texts"
+            }
+          ],
+          "sourceRows": [
+            196
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-theme",
+          "title": "Theme",
+          "subtopics": [
+            {
+              "id": "determine-the-themes-of-short-stories",
+              "title": "Determine the themes of short stories"
+            },
+            {
+              "id": "match-the-quotations-with-their-themes",
+              "title": "Match the quotations with their themes"
+            }
+          ],
+          "sourceRows": [
+            197,
+            198
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-theme-and-message",
+          "title": "Theme and Message",
+          "subtopics": [
+            {
+              "id": "theme",
+              "title": "Theme"
+            }
+          ],
+          "sourceRows": [
+            199
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-visual-and-multimodal-texts",
+          "title": "Visual and Multimodal Texts",
+          "subtopics": [
+            {
+              "id": "visual-elements",
+              "title": "Visual elements"
+            }
+          ],
+          "sourceRows": [
+            200
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-visual-elements",
+          "title": "Visual elements",
+          "subtopics": [
+            {
+              "id": "compare-illustrations-of-literary-and-historical-subjects",
+              "title": "Compare illustrations of literary and historical subjects"
+            }
+          ],
+          "sourceRows": [
+            201
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 17,
+      "subtopicCount": 33
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g7-analyzing-informational-texts",
+          "title": "Analyzing informational texts",
+          "subtopics": [
+            {
+              "id": "read-and-understand-informational-passages",
+              "title": "Read and understand informational passages"
+            },
+            {
+              "id": "trace-an-argument",
+              "title": "Trace an argument"
+            }
+          ],
+          "sourceRows": [
+            202,
+            203
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-analyzing-literature",
+          "title": "Analyzing literature",
+          "subtopics": [
+            {
+              "id": "analyze-short-stories",
+              "title": "Analyze short stories"
+            }
+          ],
+          "sourceRows": [
+            204
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-author-and-perspective",
+          "title": "Author and Perspective",
+          "subtopics": [
+            {
+              "id": "author-s-purpose",
+              "title": "Author's purpose"
+            },
+            {
+              "id": "tone-and-mood",
+              "title": "Tone and mood"
+            }
+          ],
+          "sourceRows": [
+            205,
+            206
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-author-s-purpose-and-tone",
+          "title": "Author's purpose and tone",
+          "subtopics": [
+            {
+              "id": "compare-passages-for-tone",
+              "title": "Compare passages for tone"
+            },
+            {
+              "id": "identify-the-author-s-purpose",
+              "title": "Identify the author's purpose"
+            },
+            {
+              "id": "which-sentence-is-more-formal",
+              "title": "Which sentence is more formal?"
+            }
+          ],
+          "sourceRows": [
+            207,
+            208,
+            209
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-comparing-texts",
+          "title": "Comparing Texts",
+          "subtopics": [
+            {
+              "id": "compare-texts-across-genres-or-viewpoints",
+              "title": "Compare texts across genres or viewpoints"
+            },
+            {
+              "id": "compare-two-texts-with-different-genres",
+              "title": "Compare two texts with different genres"
+            }
+          ],
+          "sourceRows": [
+            210,
+            211
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-critical-reading",
+          "title": "Critical Reading",
+          "subtopics": [
+            {
+              "id": "fact-and-opinion",
+              "title": "Fact and opinion"
+            },
+            {
+              "id": "inference",
+              "title": "Inference"
+            },
+            {
+              "id": "textual-evidence-and-evidence-based-responses",
+              "title": "Textual evidence and evidence-based responses"
+            }
+          ],
+          "sourceRows": [
+            212,
+            213,
+            214
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-key-ideas-and-details",
+          "title": "Key Ideas and Details",
+          "subtopics": [
+            {
+              "id": "implied-details",
+              "title": "Implied details"
+            },
+            {
+              "id": "main-idea",
+              "title": "Main idea"
+            },
+            {
+              "id": "significant-and-explicit-details",
+              "title": "Significant and explicit details"
+            },
+            {
+              "id": "summarizing-and-retelling",
+              "title": "Summarizing and retelling"
+            },
+            {
+              "id": "supporting-details",
+              "title": "Supporting details"
+            }
+          ],
+          "sourceRows": [
+            215,
+            216,
+            217,
+            218,
+            219
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-main-idea",
+          "title": "Main idea",
+          "subtopics": [
+            {
+              "id": "determine-the-main-idea-of-a-passage",
+              "title": "Determine the main idea of a passage"
+            }
+          ],
+          "sourceRows": [
+            220
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-point-of-view",
+          "title": "Point of view",
+          "subtopics": [
+            {
+              "id": "determine-the-author-s-point-of-view",
+              "title": "Determine the author's point of view"
+            }
+          ],
+          "sourceRows": [
+            221
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-reading-skills",
+          "title": "Reading Skills",
+          "subtopics": [
+            {
+              "id": "comprehension-questions-and-passage-analysis",
+              "title": "Comprehension questions and passage analysis"
+            },
+            {
+              "id": "short-passage-comprehension",
+              "title": "Short passage comprehension"
+            }
+          ],
+          "sourceRows": [
+            222,
+            223
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-text-organization",
+          "title": "Text Organization",
+          "subtopics": [
+            {
+              "id": "cause-and-effect",
+              "title": "Cause and effect"
+            },
+            {
+              "id": "compare-and-contrast",
+              "title": "Compare and contrast"
+            },
+            {
+              "id": "text-structures",
+              "title": "Text structures"
+            }
+          ],
+          "sourceRows": [
+            224,
+            225,
+            226
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-text-structure",
+          "title": "Text structure",
+          "subtopics": [
+            {
+              "id": "compare-and-contrast-in-informational-texts",
+              "title": "Compare and contrast in informational texts"
+            },
+            {
+              "id": "identify-text-structures",
+              "title": "Identify text structures"
+            },
+            {
+              "id": "match-causes-and-effects-in-informational-texts",
+              "title": "Match causes and effects in informational texts"
+            },
+            {
+              "id": "match-problems-with-their-solutions",
+              "title": "Match problems with their solutions"
+            }
+          ],
+          "sourceRows": [
+            227,
+            228,
+            229,
+            230
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-text-types",
+          "title": "Text Types",
+          "subtopics": [
+            {
+              "id": "informational-texts",
+              "title": "Informational texts"
+            }
+          ],
+          "sourceRows": [
+            231
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-theme",
+          "title": "Theme",
+          "subtopics": [
+            {
+              "id": "determine-the-themes-of-short-stories",
+              "title": "Determine the themes of short stories"
+            },
+            {
+              "id": "match-the-quotations-with-their-themes",
+              "title": "Match the quotations with their themes"
+            }
+          ],
+          "sourceRows": [
+            232,
+            233
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-theme-and-message",
+          "title": "Theme and Message",
+          "subtopics": [
+            {
+              "id": "theme",
+              "title": "Theme"
+            }
+          ],
+          "sourceRows": [
+            234
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-visual-elements",
+          "title": "Visual elements",
+          "subtopics": [
+            {
+              "id": "compare-illustrations-of-literary-and-historical-subjects",
+              "title": "Compare illustrations of literary and historical subjects"
+            }
+          ],
+          "sourceRows": [
+            235
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 16,
+      "subtopicCount": 34
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g8-analyzing-informational-texts",
+          "title": "Analyzing informational texts",
+          "subtopics": [
+            {
+              "id": "read-and-understand-informational-passages",
+              "title": "Read and understand informational passages"
+            },
+            {
+              "id": "trace-an-argument",
+              "title": "Trace an argument"
+            }
+          ],
+          "sourceRows": [
+            236,
+            237
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-analyzing-literature",
+          "title": "Analyzing literature",
+          "subtopics": [
+            {
+              "id": "analyze-short-stories",
+              "title": "Analyze short stories"
+            }
+          ],
+          "sourceRows": [
+            238
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-author-and-perspective",
+          "title": "Author and Perspective",
+          "subtopics": [
+            {
+              "id": "author-s-purpose",
+              "title": "Author's purpose"
+            },
+            {
+              "id": "point-of-view",
+              "title": "Point of view"
+            }
+          ],
+          "sourceRows": [
+            239,
+            240
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-author-s-purpose-and-tone",
+          "title": "Author's purpose and tone",
+          "subtopics": [
+            {
+              "id": "compare-passages-for-tone",
+              "title": "Compare passages for tone"
+            },
+            {
+              "id": "identify-the-author-s-purpose",
+              "title": "Identify the author's purpose"
+            },
+            {
+              "id": "which-sentence-is-more-formal",
+              "title": "Which sentence is more formal?"
+            }
+          ],
+          "sourceRows": [
+            241,
+            242,
+            243
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-comparing-texts",
+          "title": "Comparing Texts",
+          "subtopics": [
+            {
+              "id": "compare-two-texts-with-different-genres",
+              "title": "Compare two texts with different genres"
+            }
+          ],
+          "sourceRows": [
+            244
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-critical-reading",
+          "title": "Critical Reading",
+          "subtopics": [
+            {
+              "id": "fact-and-opinion",
+              "title": "Fact and opinion"
+            },
+            {
+              "id": "inference",
+              "title": "Inference"
+            },
+            {
+              "id": "textual-evidence-and-evidence-based-responses",
+              "title": "Textual evidence and evidence-based responses"
+            }
+          ],
+          "sourceRows": [
+            245,
+            246,
+            247
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-key-ideas-and-details",
+          "title": "Key Ideas and Details",
+          "subtopics": [
+            {
+              "id": "implied-details",
+              "title": "Implied details"
+            },
+            {
+              "id": "main-idea",
+              "title": "Main idea"
+            },
+            {
+              "id": "significant-and-explicit-details",
+              "title": "Significant and explicit details"
+            },
+            {
+              "id": "summarizing-and-retelling",
+              "title": "Summarizing and retelling"
+            },
+            {
+              "id": "supporting-details",
+              "title": "Supporting details"
+            }
+          ],
+          "sourceRows": [
+            248,
+            249,
+            250,
+            251,
+            252
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-main-idea",
+          "title": "Main idea",
+          "subtopics": [
+            {
+              "id": "determine-the-main-idea-of-a-passage",
+              "title": "Determine the main idea of a passage"
+            }
+          ],
+          "sourceRows": [
+            253
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-point-of-view",
+          "title": "Point of view",
+          "subtopics": [
+            {
+              "id": "determine-the-author-s-point-of-view",
+              "title": "Determine the author's point of view"
+            }
+          ],
+          "sourceRows": [
+            254
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-reading-skills",
+          "title": "Reading Skills",
+          "subtopics": [
+            {
+              "id": "comprehension-questions-and-passage-analysis",
+              "title": "Comprehension questions and passage analysis"
+            },
+            {
+              "id": "short-passage-comprehension",
+              "title": "Short passage comprehension"
+            }
+          ],
+          "sourceRows": [
+            255,
+            256
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-story-analysis",
+          "title": "Story Analysis",
+          "subtopics": [
+            {
+              "id": "plot-and-setting",
+              "title": "Plot and setting"
+            }
+          ],
+          "sourceRows": [
+            257
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-text-organization",
+          "title": "Text Organization",
+          "subtopics": [
+            {
+              "id": "cause-and-effect",
+              "title": "Cause and effect"
+            },
+            {
+              "id": "text-structures",
+              "title": "Text structures"
+            }
+          ],
+          "sourceRows": [
+            258,
+            259
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-text-structure",
+          "title": "Text structure",
+          "subtopics": [
+            {
+              "id": "compare-and-contrast-in-informational-texts",
+              "title": "Compare and contrast in informational texts"
+            },
+            {
+              "id": "identify-text-structures",
+              "title": "Identify text structures"
+            },
+            {
+              "id": "match-causes-and-effects-in-informational-texts",
+              "title": "Match causes and effects in informational texts"
+            },
+            {
+              "id": "match-problems-with-their-solutions",
+              "title": "Match problems with their solutions"
+            }
+          ],
+          "sourceRows": [
+            260,
+            261,
+            262,
+            263
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-text-types",
+          "title": "Text Types",
+          "subtopics": [
+            {
+              "id": "informational-texts",
+              "title": "Informational texts"
+            }
+          ],
+          "sourceRows": [
+            264
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-theme",
+          "title": "Theme",
+          "subtopics": [
+            {
+              "id": "determine-the-themes-of-short-stories",
+              "title": "Determine the themes of short stories"
+            },
+            {
+              "id": "match-the-quotations-with-their-themes",
+              "title": "Match the quotations with their themes"
+            }
+          ],
+          "sourceRows": [
+            265,
+            266
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-theme-and-message",
+          "title": "Theme and Message",
+          "subtopics": [
+            {
+              "id": "theme",
+              "title": "Theme"
+            }
+          ],
+          "sourceRows": [
+            267
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-visual-elements",
+          "title": "Visual elements",
+          "subtopics": [
+            {
+              "id": "compare-illustrations-of-literary-and-historical-subjects",
+              "title": "Compare illustrations of literary and historical subjects"
+            }
+          ],
+          "sourceRows": [
+            268
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 17,
+      "subtopicCount": 33
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-analyzing-informational-texts",
+          "title": "Analyzing informational texts",
+          "subtopics": [
+            {
+              "id": "analyze-rhetorical-strategies-in-historical-texts-set",
+              "title": "Analyze rhetorical strategies in historical texts: set"
+            },
+            {
+              "id": "analyze-the-development-of-informational-passages-set",
+              "title": "Analyze the development of informational passages: set"
+            },
+            {
+              "id": "trace-an-argument-set",
+              "title": "Trace an argument: set"
+            }
+          ],
+          "sourceRows": [
+            269,
+            270,
+            271
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-analyzing-literature",
+          "title": "Analyzing literature",
+          "subtopics": [
+            {
+              "id": "analyze-short-stories-set",
+              "title": "Analyze short stories: set"
+            },
+            {
+              "id": "match-the-quotations-with-their-themes",
+              "title": "Match the quotations with their themes"
+            }
+          ],
+          "sourceRows": [
+            272,
+            273
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-audience-purpose-and-tone",
+          "title": "Audience, purpose and tone",
+          "subtopics": [
+            {
+              "id": "compare-passages-for-subjective-and-objective-tone",
+              "title": "Compare passages for subjective and objective tone"
+            },
+            {
+              "id": "identify-audience-and-purpose",
+              "title": "Identify audience and purpose"
+            },
+            {
+              "id": "which-text-is-most-formal",
+              "title": "Which text is most formal?"
+            }
+          ],
+          "sourceRows": [
+            274,
+            275,
+            276
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-author-and-perspective",
+          "title": "Author and Perspective",
+          "subtopics": [
+            {
+              "id": "author-s-purpose",
+              "title": "Author's purpose"
+            },
+            {
+              "id": "point-of-view",
+              "title": "Point of view"
+            },
+            {
+              "id": "tone-and-mood",
+              "title": "Tone and mood"
+            }
+          ],
+          "sourceRows": [
+            277,
+            278,
+            279
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-critical-reading",
+          "title": "Critical Reading",
+          "subtopics": [
+            {
+              "id": "author-s-argument-and-claims",
+              "title": "Author's argument and claims"
+            },
+            {
+              "id": "fact-and-opinion",
+              "title": "Fact and opinion"
+            },
+            {
+              "id": "inference",
+              "title": "Inference"
+            }
+          ],
+          "sourceRows": [
+            280,
+            281,
+            282
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-key-ideas-and-details",
+          "title": "Key Ideas and Details",
+          "subtopics": [
+            {
+              "id": "implied-details",
+              "title": "Implied details"
+            },
+            {
+              "id": "main-idea",
+              "title": "Main idea"
+            },
+            {
+              "id": "significant-and-explicit-details",
+              "title": "Significant and explicit details"
+            },
+            {
+              "id": "supporting-details",
+              "title": "Supporting details"
+            }
+          ],
+          "sourceRows": [
+            283,
+            284,
+            285,
+            286
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-main-idea",
+          "title": "Main idea",
+          "subtopics": [
+            {
+              "id": "determine-the-main-idea-of-a-passage",
+              "title": "Determine the main idea of a passage"
+            }
+          ],
+          "sourceRows": [
+            287
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-reading-skills",
+          "title": "Reading Skills",
+          "subtopics": [
+            {
+              "id": "comprehension-questions-and-passage-analysis",
+              "title": "Comprehension questions and passage analysis"
+            },
+            {
+              "id": "short-passage-comprehension",
+              "title": "Short passage comprehension"
+            }
+          ],
+          "sourceRows": [
+            288,
+            289
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-story-analysis",
+          "title": "Story Analysis",
+          "subtopics": [
+            {
+              "id": "plot-and-setting",
+              "title": "Plot and setting"
+            }
+          ],
+          "sourceRows": [
+            290
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-text-organization",
+          "title": "Text Organization",
+          "subtopics": [
+            {
+              "id": "cause-and-effect",
+              "title": "Cause and effect"
+            },
+            {
+              "id": "compare-and-contrast",
+              "title": "Compare and contrast"
+            },
+            {
+              "id": "text-structures",
+              "title": "Text structures"
+            }
+          ],
+          "sourceRows": [
+            291,
+            292,
+            293
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-text-types",
+          "title": "Text Types",
+          "subtopics": [
+            {
+              "id": "informational-texts",
+              "title": "Informational texts"
+            },
+            {
+              "id": "realistic-fiction",
+              "title": "Realistic fiction"
+            }
+          ],
+          "sourceRows": [
+            294,
+            295
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-theme-and-message",
+          "title": "Theme and Message",
+          "subtopics": [
+            {
+              "id": "theme",
+              "title": "Theme"
+            }
+          ],
+          "sourceRows": [
+            296
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 12,
+      "subtopicCount": 28
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-analyzing-informational-texts",
+          "title": "Analyzing informational texts",
+          "subtopics": [
+            {
+              "id": "analyze-rhetorical-strategies-in-historical-texts-set",
+              "title": "Analyze rhetorical strategies in historical texts: set"
+            },
+            {
+              "id": "analyze-the-development-of-informational-passages-set",
+              "title": "Analyze the development of informational passages: set"
+            },
+            {
+              "id": "trace-an-argument-set",
+              "title": "Trace an argument: set"
+            }
+          ],
+          "sourceRows": [
+            297,
+            298,
+            299
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-analyzing-literature",
+          "title": "Analyzing literature",
+          "subtopics": [
+            {
+              "id": "analyze-short-stories-set",
+              "title": "Analyze short stories: set"
+            }
+          ],
+          "sourceRows": [
+            300
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-audience-purpose-and-tone",
+          "title": "Audience, purpose and tone",
+          "subtopics": [
+            {
+              "id": "compare-passages-for-subjective-and-objective-tone",
+              "title": "Compare passages for subjective and objective tone"
+            },
+            {
+              "id": "identify-audience-and-purpose",
+              "title": "Identify audience and purpose"
+            },
+            {
+              "id": "which-text-is-most-formal",
+              "title": "Which text is most formal?"
+            }
+          ],
+          "sourceRows": [
+            301,
+            302,
+            303
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-critical-reading",
+          "title": "Critical Reading",
+          "subtopics": [
+            {
+              "id": "fact-and-opinion",
+              "title": "Fact and opinion"
+            }
+          ],
+          "sourceRows": [
+            304
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-key-ideas-and-details",
+          "title": "Key Ideas and Details",
+          "subtopics": [
+            {
+              "id": "main-idea",
+              "title": "Main idea"
+            },
+            {
+              "id": "significant-and-explicit-details",
+              "title": "Significant and explicit details"
+            },
+            {
+              "id": "summarizing-and-retelling",
+              "title": "Summarizing and retelling"
+            },
+            {
+              "id": "supporting-details",
+              "title": "Supporting details"
+            }
+          ],
+          "sourceRows": [
+            305,
+            306,
+            307,
+            308
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-main-idea",
+          "title": "Main idea",
+          "subtopics": [
+            {
+              "id": "determine-the-main-idea-of-a-passage",
+              "title": "Determine the main idea of a passage"
+            }
+          ],
+          "sourceRows": [
+            309
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-reading-skills",
+          "title": "Reading Skills",
+          "subtopics": [
+            {
+              "id": "comprehension-questions-and-passage-analysis",
+              "title": "Comprehension questions and passage analysis"
+            },
+            {
+              "id": "short-passage-comprehension",
+              "title": "Short passage comprehension"
+            }
+          ],
+          "sourceRows": [
+            310,
+            311
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-story-analysis",
+          "title": "Story Analysis",
+          "subtopics": [
+            {
+              "id": "plot-and-setting",
+              "title": "Plot and setting"
+            }
+          ],
+          "sourceRows": [
+            312
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-text-organization",
+          "title": "Text Organization",
+          "subtopics": [
+            {
+              "id": "compare-and-contrast",
+              "title": "Compare and contrast"
+            }
+          ],
+          "sourceRows": [
+            313
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 9,
+      "subtopicCount": 17
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-author-and-perspective",
+          "title": "Author and Perspective",
+          "subtopics": [
+            {
+              "id": "author-s-purpose",
+              "title": "Author's purpose"
+            },
+            {
+              "id": "point-of-view",
+              "title": "Point of view"
+            },
+            {
+              "id": "tone-and-mood",
+              "title": "Tone and mood"
+            }
+          ],
+          "sourceRows": [
+            314,
+            315,
+            316
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-comparing-texts",
+          "title": "Comparing Texts",
+          "subtopics": [
+            {
+              "id": "compare-texts-across-genres-or-viewpoints",
+              "title": "Compare texts across genres or viewpoints"
+            }
+          ],
+          "sourceRows": [
+            317
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-critical-reading",
+          "title": "Critical Reading",
+          "subtopics": [
+            {
+              "id": "fact-and-opinion",
+              "title": "Fact and opinion"
+            },
+            {
+              "id": "inference",
+              "title": "Inference"
+            },
+            {
+              "id": "textual-evidence-and-evidence-based-responses",
+              "title": "Textual evidence and evidence-based responses"
+            }
+          ],
+          "sourceRows": [
+            318,
+            319,
+            320
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-key-ideas-and-details",
+          "title": "Key Ideas and Details",
+          "subtopics": [
+            {
+              "id": "implied-details",
+              "title": "Implied details"
+            },
+            {
+              "id": "main-idea",
+              "title": "Main idea"
+            },
+            {
+              "id": "summarizing-and-retelling",
+              "title": "Summarizing and retelling"
+            }
+          ],
+          "sourceRows": [
+            321,
+            322,
+            323
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-reading-skills",
+          "title": "Reading Skills",
+          "subtopics": [
+            {
+              "id": "comprehension-questions-and-passage-analysis",
+              "title": "Comprehension questions and passage analysis"
+            },
+            {
+              "id": "short-passage-comprehension",
+              "title": "Short passage comprehension"
+            }
+          ],
+          "sourceRows": [
+            324,
+            325
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-story-analysis",
+          "title": "Story Analysis",
+          "subtopics": [
+            {
+              "id": "character-traits-and-characterization",
+              "title": "Character traits and characterization"
+            },
+            {
+              "id": "plot-and-setting",
+              "title": "Plot and setting"
+            }
+          ],
+          "sourceRows": [
+            326,
+            327
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-text-organization",
+          "title": "Text Organization",
+          "subtopics": [
+            {
+              "id": "text-structures",
+              "title": "Text structures"
+            }
+          ],
+          "sourceRows": [
+            328
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-text-types",
+          "title": "Text Types",
+          "subtopics": [
+            {
+              "id": "informational-texts",
+              "title": "Informational texts"
+            },
+            {
+              "id": "literary-texts",
+              "title": "Literary texts"
+            }
+          ],
+          "sourceRows": [
+            329,
+            330
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-theme-and-message",
+          "title": "Theme and Message",
+          "subtopics": [
+            {
+              "id": "theme",
+              "title": "Theme"
+            }
+          ],
+          "sourceRows": [
+            331
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 9,
+      "subtopicCount": 18
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-author-and-perspective",
+          "title": "Author and Perspective",
+          "subtopics": [
+            {
+              "id": "audience-purpose-and-tone",
+              "title": "Audience, purpose, and tone"
+            },
+            {
+              "id": "author-s-purpose",
+              "title": "Author's purpose"
+            },
+            {
+              "id": "point-of-view",
+              "title": "Point of view"
+            },
+            {
+              "id": "tone-and-mood",
+              "title": "Tone and mood"
+            }
+          ],
+          "sourceRows": [
+            332,
+            333,
+            334,
+            335
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-critical-reading",
+          "title": "Critical Reading",
+          "subtopics": [
+            {
+              "id": "inference",
+              "title": "Inference"
+            },
+            {
+              "id": "textual-evidence-and-evidence-based-responses",
+              "title": "Textual evidence and evidence-based responses"
+            }
+          ],
+          "sourceRows": [
+            336,
+            337
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-key-ideas-and-details",
+          "title": "Key Ideas and Details",
+          "subtopics": [
+            {
+              "id": "implied-details",
+              "title": "Implied details"
+            },
+            {
+              "id": "main-idea",
+              "title": "Main idea"
+            },
+            {
+              "id": "significant-and-explicit-details",
+              "title": "Significant and explicit details"
+            },
+            {
+              "id": "summarizing-and-retelling",
+              "title": "Summarizing and retelling"
+            },
+            {
+              "id": "supporting-details",
+              "title": "Supporting details"
+            }
+          ],
+          "sourceRows": [
+            338,
+            339,
+            340,
+            341,
+            342
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-reading-skills",
+          "title": "Reading Skills",
+          "subtopics": [
+            {
+              "id": "comprehension-questions-and-passage-analysis",
+              "title": "Comprehension questions and passage analysis"
+            }
+          ],
+          "sourceRows": [
+            343
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-story-analysis",
+          "title": "Story Analysis",
+          "subtopics": [
+            {
+              "id": "character-traits-and-characterization",
+              "title": "Character traits and characterization"
+            }
+          ],
+          "sourceRows": [
+            344
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-text-organization",
+          "title": "Text Organization",
+          "subtopics": [
+            {
+              "id": "text-structures",
+              "title": "Text structures"
+            }
+          ],
+          "sourceRows": [
+            345
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-text-types",
+          "title": "Text Types",
+          "subtopics": [
+            {
+              "id": "informational-texts",
+              "title": "Informational texts"
+            },
+            {
+              "id": "literary-texts",
+              "title": "Literary texts"
+            }
+          ],
+          "sourceRows": [
+            346,
+            347
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-theme-and-message",
+          "title": "Theme and Message",
+          "subtopics": [
+            {
+              "id": "theme",
+              "title": "Theme"
+            }
+          ],
+          "sourceRows": [
+            348
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 8,
+      "subtopicCount": 17
+    }
+  ]
+}

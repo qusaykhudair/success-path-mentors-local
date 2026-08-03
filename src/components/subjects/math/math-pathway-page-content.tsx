@@ -45,21 +45,21 @@ const pageCopy = {
     eyebrow:
       'Mathematics curriculum pathway',
     completeCoverage:
-      'Complete Grade 2–12 map',
+      'Topics organized by grade',
     gradesNavigation:
       'Jump to a grade',
     curriculumHeading:
       'Curriculum topics by grade',
     curriculumDescription:
-      'Every grade is included. Topics are classified from the complete curriculum JSON, and repeated labels are shown once within the same section and grade.',
+      'Only grades containing curriculum topics are displayed. Topics are classified from the complete curriculum JSON, and repeated labels are shown once within the same section and grade.',
     topicsLabel:
       'documented topics',
     gradeSectionsLabel:
-      'grade sections',
+      'grades with topics',
     topicOverview:
       'Topic overview',
     sourceNote:
-      'Topic names follow the curriculum JSON. Clearly mismatched source labels are corrected from their subtopic content, while empty grades remain visible for completeness.',
+      'Topic names follow the curriculum JSON. Clearly mismatched source labels are corrected from their subtopic content, and grades without topics are omitted from the page.',
     backToMath:
       'Back to mathematics',
     bookTrial:
@@ -83,21 +83,21 @@ const pageCopy = {
     eyebrow:
       'مسار منهج الرياضيات',
     completeCoverage:
-      'خريطة كاملة للصفوف 2–12',
+      'الموضوعات منظمة حسب الصف',
     gradesNavigation:
       'انتقل إلى الصف',
     curriculumHeading:
       'موضوعات المنهج حسب الصف',
     curriculumDescription:
-      'تم تضمين جميع الصفوف. جرى توزيع الموضوعات بعد مراجعة ملف المنهج JSON كاملًا، ويظهر العنوان المكرر مرة واحدة فقط داخل القسم والصف نفسيهما.',
+      'تظهر فقط الصفوف التي تحتوي موضوعات في هذا المسار. جرى توزيع الموضوعات بعد مراجعة ملف المنهج JSON كاملًا، ويظهر العنوان المكرر مرة واحدة فقط داخل القسم والصف نفسيهما.',
     topicsLabel:
       'موضوعًا موثقًا',
     gradeSectionsLabel:
-      'قسمًا للصفوف',
+      'صفوف تحتوي موضوعات',
     topicOverview:
       'نظرة عامة على الموضوع',
     sourceNote:
-      'تتبع أسماء الموضوعات ملف المنهج JSON، مع تصحيح التسميات التي لا تتوافق بوضوح مع محتوى موضوعاتها الفرعية. ويبقى الصف ظاهرًا حتى عندما لا يحتوي القسم على موضوع موثق.',
+      'تتبع أسماء الموضوعات ملف المنهج JSON، مع تصحيح التسميات التي لا تتوافق بوضوح مع محتوى موضوعاتها الفرعية، ولا تظهر الصفوف التي لا تحتوي موضوعات في هذا المسار.',
     backToMath:
       'العودة إلى الرياضيات',
     bookTrial:
@@ -130,10 +130,15 @@ export function MathPathwayPageContent({
     pageCopy[locale];
 
   const grades =
-    pathway.stages.flatMap(
-      (stage) =>
-        stage.grades
-    );
+    pathway.stages
+      .flatMap(
+        (stage) =>
+          stage.grades
+      )
+      .filter(
+        (grade) =>
+          grade.topicCount > 0
+      );
 
   const mathHref =
     routePath.subject(
@@ -489,7 +494,7 @@ export function MathPathwayPageContent({
 
               <CoverageMetric
                 icon={Layers3}
-                value="11"
+                value={grades.length.toLocaleString()}
                 label={
                   copy.gradeSectionsLabel
                 }
@@ -508,57 +513,37 @@ export function MathPathwayPageContent({
               "
             >
               {grades.map(
-                (grade) => {
-                  const hasTopics =
-                    grade.topicCount > 0;
-
-                  return (
-                    <a
-                      key={grade.grade}
-                      href={
-                        `#${pathway.slug}-${grade.grade.toLowerCase()}`
-                      }
-                      title={
-                        hasTopics
-                          ? copy.available
-                          : copy.notAvailable
-                      }
-                      className={`
-                        inline-flex
-                        min-h-10
-                        items-center
-                        justify-center
-                        rounded-lg
-                        border
-                        px-2
-                        py-2
-                        text-caption
-                        font-black
-                        transition-colors
-                        focus-visible:outline-none
-                        focus-visible:ring-2
-                        focus-visible:ring-[#16C7C7]
-                        ${
-                          hasTopics
-                            ? `
-                              border-[#16C7C7]/45
-                              bg-[#16C7C7]/15
-                              text-[#A4F4F1]
-                              hover:bg-[#16C7C7]/25
-                            `
-                            : `
-                              border-white/10
-                              bg-white/[0.04]
-                              text-white/35
-                              hover:bg-white/[0.08]
-                            `
-                        }
-                      `}
-                    >
-                      {grade.shortLabel}
-                    </a>
-                  );
-                }
+                (grade) => (
+                  <a
+                    key={grade.grade}
+                    href={
+                      `#${pathway.slug}-${grade.grade.toLowerCase()}`
+                    }
+                    title={copy.available}
+                    className="
+                      inline-flex
+                      min-h-10
+                      items-center
+                      justify-center
+                      rounded-lg
+                      border
+                      border-[#16C7C7]/45
+                      bg-[#16C7C7]/15
+                      px-2
+                      py-2
+                      text-caption
+                      font-black
+                      text-[#A4F4F1]
+                      transition-colors
+                      hover:bg-[#16C7C7]/25
+                      focus-visible:outline-none
+                      focus-visible:ring-2
+                      focus-visible:ring-[#16C7C7]
+                    "
+                  >
+                    {grade.shortLabel}
+                  </a>
+                )
               )}
             </div>
           </aside>
@@ -959,8 +944,10 @@ function GradeSection({
           <h3
             className="
               mt-1
-              text-h3
+              text-[1.3rem]
               font-black
+              leading-tight
+              sm:text-[1.5rem]
               text-[#0B1F3A]
             "
           >

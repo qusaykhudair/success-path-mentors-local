@@ -51,7 +51,7 @@ const englishPageContent = {
       title:
         'Explore English by learning strand',
       description:
-        'Each strand has a dedicated Grade 1–12 curriculum page. Foundational Reading is now available; the remaining strands will be activated as their reviewed data is added.',
+        'All eleven English curriculum strands now have dedicated grade-level pages, organized from foundational skills through advanced reading, language, communication, and writing.',
       openAction:
         'Open strand',
       pendingLabel:
@@ -130,7 +130,7 @@ const englishPageContent = {
       title:
         'استكشف الإنجليزية حسب مسار التعلم',
       description:
-        'لكل مسار صفحة منهج مستقلة للصفوف 1–12. أصبح مسار القراءة التأسيسية متاحًا الآن، وسيتم تفعيل بقية المسارات بعد إضافة بياناتها ومراجعتها.',
+        'أصبحت مسارات منهج الإنجليزية الأحد عشر متاحة في صفحات مستقلة منظمة حسب الصف، بدءًا من المهارات التأسيسية وصولًا إلى القراءة واللغة والتواصل والكتابة المتقدمة.',
       openAction:
         'فتح المسار',
       pendingLabel:

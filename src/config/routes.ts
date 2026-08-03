@@ -18,7 +18,7 @@ export const routePath = {
   },
 
   subjects(locale: SiteLocale): string {
-    return `/${locale}#programs`;
+    return `/${locale}/subjects`;
   },
 
   subject(
@@ -40,6 +40,26 @@ export const routePath = {
     strandSlug: string
   ): string {
     return `/${locale}/subjects/english/${strandSlug}`;
+  },
+
+  about(locale: SiteLocale): string {
+    return `/${locale}/about`;
+  },
+
+  programs(locale: SiteLocale): string {
+    return `/${locale}#programs`;
+  },
+
+  services(locale: SiteLocale): string {
+    return `/${locale}#services`;
+  },
+
+  pricing(locale: SiteLocale): string {
+    return `/${locale}#pricing`;
+  },
+
+  faq(locale: SiteLocale): string {
+    return `/${locale}#faq`;
   },
 
   contact(locale: SiteLocale): string {
@@ -69,7 +89,6 @@ export function getBookingHref(
     message
   )}`;
 }
-
 
 export function getEnglishBookingHref(
   locale: SiteLocale,

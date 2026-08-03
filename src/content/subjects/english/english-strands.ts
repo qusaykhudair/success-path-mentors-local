@@ -36,7 +36,7 @@ export const englishStrands:
           'بناء الجمل والقواعد وعلامات الترقيم والحروف الكبيرة والاستخدام والاتفاقيات اللغوية.',
       },
       iconKey: 'braces',
-      status: 'pending-data',
+      status: 'approved',
       gradeRange: { min: 1, max: 12 },
     },
     {
@@ -52,7 +52,7 @@ export const englishStrands:
           'القصص والشعر والمسرح والعناصر الأدبية والتفسير والتحليل القائم على الأدلة.',
       },
       iconKey: 'library',
-      status: 'pending-data',
+      status: 'approved',
       gradeRange: { min: 1, max: 12 },
     },
     {
@@ -68,7 +68,7 @@ export const englishStrands:
           'فهم النصوص المعلوماتية والأدبية وتفسيرها وتلخيصها والاستنتاج منها وتقييمها.',
       },
       iconKey: 'book-search',
-      status: 'pending-data',
+      status: 'approved',
       gradeRange: { min: 1, max: 12 },
     },
     {
@@ -84,7 +84,7 @@ export const englishStrands:
           'الدقة والسرعة المناسبة وتقسيم العبارات والتعبير والتلقائية والقراءة الجهرية الواثقة.',
       },
       iconKey: 'audio-lines',
-      status: 'pending-data',
+      status: 'approved',
       gradeRange: { min: 1, max: 12 },
     },
     {
@@ -100,7 +100,7 @@ export const englishStrands:
           'المحادثة والعروض والمناقشة والاستماع النشط والتواصل الشفهي الواضح.',
       },
       iconKey: 'messages-square',
-      status: 'pending-data',
+      status: 'approved',
       gradeRange: { min: 1, max: 12 },
     },
     {
@@ -116,7 +116,7 @@ export const englishStrands:
           'معاني الكلمات وبنيتها وقرائن السياق والجذور واللواحق وأنماط التهجئة والاستخدام الدقيق.',
       },
       iconKey: 'spell-check',
-      status: 'pending-data',
+      status: 'approved',
       gradeRange: { min: 1, max: 12 },
     },
     {
@@ -132,7 +132,7 @@ export const englishStrands:
           'البحث وتدوين الملاحظات والتخطيط وتنظيم الواجبات واستراتيجيات الدراسة والعروض.',
       },
       iconKey: 'clipboard-list',
-      status: 'pending-data',
+      status: 'approved',
       gradeRange: { min: 1, max: 12 },
     },
     {
@@ -148,7 +148,7 @@ export const englishStrands:
           'عمليات الكتابة وأنواع النصوص والتنظيم والتطوير والمراجعة والتحرير والنشر.',
       },
       iconKey: 'pen-line',
-      status: 'pending-data',
+      status: 'approved',
       gradeRange: { min: 1, max: 12 },
     },
     {
@@ -164,7 +164,7 @@ export const englishStrands:
           'التدرب على التقييم واستراتيجيات الاختبار وتخطيط الإجابات والمراجعة والاستعداد للأداء.',
       },
       iconKey: 'file-check',
-      status: 'pending-data',
+      status: 'approved',
       gradeRange: { min: 1, max: 12 },
     },
     {
@@ -180,7 +180,7 @@ export const englishStrands:
           'تطبيق مهارات الإنجليزية في العلوم والدراسات الاجتماعية والرياضيات ومصادر البحث وواجبات المواد.',
       },
       iconKey: 'panels-top-left',
-      status: 'pending-data',
+      status: 'approved',
       gradeRange: { min: 1, max: 12 },
     },
   ];

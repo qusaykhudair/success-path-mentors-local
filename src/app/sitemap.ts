@@ -17,6 +17,8 @@ import {
 
 const staticPaths = [
   '',
+  '/subjects',
+  '/about',
   '/subjects/math',
   ...publicMathPathways.map(
     (pathway) =>
@@ -28,6 +30,33 @@ const staticPaths = [
       `/subjects/english/${strand.slug}`
   ),
 ];
+
+function getPriority(
+  path: string
+): number {
+  if (path === '') {
+    return 1;
+  }
+
+  if (path === '/subjects') {
+    return 0.95;
+  }
+
+  if (
+    path ===
+      '/subjects/math' ||
+    path ===
+      '/subjects/english'
+  ) {
+    return 0.9;
+  }
+
+  if (path === '/about') {
+    return 0.75;
+  }
+
+  return 0.8;
+}
 
 export default function sitemap():
   MetadataRoute.Sitemap {
@@ -42,14 +71,7 @@ export default function sitemap():
           ? 'weekly'
           : 'monthly',
       priority:
-        path === ''
-          ? 1
-          : path ===
-                '/subjects/math' ||
-              path ===
-                '/subjects/english'
-            ? 0.9
-            : 0.8,
+        getPriority(path),
 
       alternates: {
         languages:

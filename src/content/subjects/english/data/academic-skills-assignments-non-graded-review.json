@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "strand": "Academic Skills and Assignments",
+    "recordCount": 1,
+    "status": "excluded-from-grade-pages",
+    "reason": "No explicit Grade 1–12 value was supplied."
+  },
+  "records": [
+    {
+      "sourceRow": 14,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Academic Skills and Assignments",
+      "mainTopic": "Assignment Support",
+      "sourceMainTopic": "Assignment Support",
+      "subtopic": "Assignment completion and project support"
+    }
+  ]
+}

@@ -1,0 +1,568 @@
+{
+  "metadata": {
+    "subject": "English",
+    "strand": "Speaking and Listening",
+    "strandSlug": "speaking-listening",
+    "gradeRange": {
+      "min": 1,
+      "max": 12
+    },
+    "sourceRecordCount": 51,
+    "gradedSourceRecordCount": 34,
+    "nonGradedSourceRecordCount": 17,
+    "mainTopicCount": 28,
+    "subtopicCount": 34,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Skills are counted by grade placement. Repetition across different grades is preserved as intentional curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Main Topic + Subtopic duplicates are removed.",
+      "Age-only, adult, IELTS, and grade-not-stated records remain outside Grade 1–12 pages.",
+      "Empty grade sections remain in the JSON structure but are hidden from public pages."
+    ]
+  },
+  "strand": {
+    "slug": "speaking-listening",
+    "title": {
+      "en": "Speaking and Listening",
+      "ar": "التحدث والاستماع"
+    },
+    "description": {
+      "en": "Conversation, self-introduction, listening comprehension, questions and answers, picture description, speaking practice, and structured argumentation.",
+      "ar": "المحادثة والتعريف بالنفس والفهم السمعي والأسئلة والأجوبة ووصف الصور والتدرب على التحدث وبناء الحجج المنظمة."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g1-conversation",
+          "title": "Conversation",
+          "subtopics": [
+            {
+              "id": "self-introduction",
+              "title": "Self-introduction"
+            }
+          ],
+          "sourceRows": [
+            4
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g2-conversation",
+          "title": "Conversation",
+          "subtopics": [
+            {
+              "id": "self-introduction",
+              "title": "Self-introduction"
+            }
+          ],
+          "sourceRows": [
+            7
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g3-conversation",
+          "title": "Conversation",
+          "subtopics": [
+            {
+              "id": "self-introduction",
+              "title": "Self-introduction"
+            }
+          ],
+          "sourceRows": [
+            11
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-speaking",
+          "title": "Speaking",
+          "subtopics": [
+            {
+              "id": "picture-description",
+              "title": "Picture description"
+            },
+            {
+              "id": "speaking-practice",
+              "title": "Speaking practice"
+            }
+          ],
+          "sourceRows": [
+            12,
+            13
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 3
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g4-conversation",
+          "title": "Conversation",
+          "subtopics": [
+            {
+              "id": "everyday-conversation",
+              "title": "Everyday conversation"
+            },
+            {
+              "id": "self-introduction",
+              "title": "Self-introduction"
+            }
+          ],
+          "sourceRows": [
+            16,
+            17
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-listening",
+          "title": "Listening",
+          "subtopics": [
+            {
+              "id": "listening-comprehension-and-practice",
+              "title": "Listening comprehension and practice"
+            }
+          ],
+          "sourceRows": [
+            18
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-speaking",
+          "title": "Speaking",
+          "subtopics": [
+            {
+              "id": "speaking-practice",
+              "title": "Speaking practice"
+            }
+          ],
+          "sourceRows": [
+            19
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 3,
+      "subtopicCount": 4
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g5-conversation",
+          "title": "Conversation",
+          "subtopics": [
+            {
+              "id": "everyday-conversation",
+              "title": "Everyday conversation"
+            },
+            {
+              "id": "self-introduction",
+              "title": "Self-introduction"
+            }
+          ],
+          "sourceRows": [
+            22,
+            23
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-speaking",
+          "title": "Speaking",
+          "subtopics": [
+            {
+              "id": "speaking-practice",
+              "title": "Speaking practice"
+            }
+          ],
+          "sourceRows": [
+            24
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 3
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g6-conversation",
+          "title": "Conversation",
+          "subtopics": [
+            {
+              "id": "everyday-conversation",
+              "title": "Everyday conversation"
+            },
+            {
+              "id": "self-introduction",
+              "title": "Self-introduction"
+            }
+          ],
+          "sourceRows": [
+            28,
+            29
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-speaking",
+          "title": "Speaking",
+          "subtopics": [
+            {
+              "id": "speaking-practice",
+              "title": "Speaking practice"
+            }
+          ],
+          "sourceRows": [
+            30
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 3
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g7-communication",
+          "title": "Communication",
+          "subtopics": [
+            {
+              "id": "questions-and-answers",
+              "title": "Questions and answers"
+            }
+          ],
+          "sourceRows": [
+            33
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-conversation",
+          "title": "Conversation",
+          "subtopics": [
+            {
+              "id": "self-introduction",
+              "title": "Self-introduction"
+            }
+          ],
+          "sourceRows": [
+            34
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-speaking",
+          "title": "Speaking",
+          "subtopics": [
+            {
+              "id": "speaking-practice",
+              "title": "Speaking practice"
+            }
+          ],
+          "sourceRows": [
+            35
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 3,
+      "subtopicCount": 3
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g8-communication",
+          "title": "Communication",
+          "subtopics": [
+            {
+              "id": "questions-and-answers",
+              "title": "Questions and answers"
+            }
+          ],
+          "sourceRows": [
+            38
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-conversation",
+          "title": "Conversation",
+          "subtopics": [
+            {
+              "id": "everyday-conversation",
+              "title": "Everyday conversation"
+            },
+            {
+              "id": "self-introduction",
+              "title": "Self-introduction"
+            }
+          ],
+          "sourceRows": [
+            39,
+            40
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-speaking",
+          "title": "Speaking",
+          "subtopics": [
+            {
+              "id": "speaking-practice",
+              "title": "Speaking practice"
+            }
+          ],
+          "sourceRows": [
+            41
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 3,
+      "subtopicCount": 4
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-communication",
+          "title": "Communication",
+          "subtopics": [
+            {
+              "id": "questions-and-answers",
+              "title": "Questions and answers"
+            }
+          ],
+          "sourceRows": [
+            45
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-conversation",
+          "title": "Conversation",
+          "subtopics": [
+            {
+              "id": "everyday-conversation",
+              "title": "Everyday conversation"
+            },
+            {
+              "id": "self-introduction",
+              "title": "Self-introduction"
+            }
+          ],
+          "sourceRows": [
+            46,
+            47
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-speaking",
+          "title": "Speaking",
+          "subtopics": [
+            {
+              "id": "speaking-practice",
+              "title": "Speaking practice"
+            }
+          ],
+          "sourceRows": [
+            48
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 3,
+      "subtopicCount": 4
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-conversation",
+          "title": "Conversation",
+          "subtopics": [
+            {
+              "id": "self-introduction",
+              "title": "Self-introduction"
+            }
+          ],
+          "sourceRows": [
+            51
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-listening",
+          "title": "Listening",
+          "subtopics": [
+            {
+              "id": "listening-comprehension-and-practice",
+              "title": "Listening comprehension and practice"
+            }
+          ],
+          "sourceRows": [
+            52
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-speaking",
+          "title": "Speaking",
+          "subtopics": [
+            {
+              "id": "debate-preparation-and-argumentation",
+              "title": "Debate preparation and argumentation"
+            }
+          ],
+          "sourceRows": [
+            53
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 3,
+      "subtopicCount": 3
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-communication",
+          "title": "Communication",
+          "subtopics": [
+            {
+              "id": "questions-and-answers",
+              "title": "Questions and answers"
+            }
+          ],
+          "sourceRows": [
+            56
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-conversation",
+          "title": "Conversation",
+          "subtopics": [
+            {
+              "id": "self-introduction",
+              "title": "Self-introduction"
+            }
+          ],
+          "sourceRows": [
+            57
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-speaking",
+          "title": "Speaking",
+          "subtopics": [
+            {
+              "id": "speaking-practice",
+              "title": "Speaking practice"
+            }
+          ],
+          "sourceRows": [
+            58
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 3,
+      "subtopicCount": 3
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-conversation",
+          "title": "Conversation",
+          "subtopics": [
+            {
+              "id": "self-introduction",
+              "title": "Self-introduction"
+            }
+          ],
+          "sourceRows": [
+            62
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-speaking",
+          "title": "Speaking",
+          "subtopics": [
+            {
+              "id": "speaking-practice",
+              "title": "Speaking practice"
+            }
+          ],
+          "sourceRows": [
+            63
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    }
+  ]
+}

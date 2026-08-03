@@ -1,56 +1,192 @@
-// src/components/layout/site-header.tsx
-
 import Image from 'next/image';
 
-import { getLocale, getTranslations } from 'next-intl/server';
+import {
+  getLocale,
+  getTranslations,
+} from 'next-intl/server';
 
-import { Link } from '@/i18n/navigation';
+import {
+  Link,
+} from '@/i18n/navigation';
 
-import { buttonVariants } from '@/components/ui/button';
-import { Container } from '@/components/ui/container';
+import {
+  buttonVariants,
+} from '@/components/ui/button';
+import {
+  Container,
+} from '@/components/ui/container';
+import {
+  routePath,
+} from '@/config/routes';
+import {
+  approvedEnglishStrands,
+} from '@/content/subjects/english/english-strands';
+import {
+  publicMathPathways,
+} from '@/content/subjects/math/math-pathways';
 
-import { LocaleSwitcher } from './locale-switcher';
-import { MobileNav } from './mobile-nav';
+import {
+  LocaleSwitcher,
+} from './locale-switcher';
+import {
+  MobileNav,
+} from './mobile-nav';
 import {
   SubjectsMenu,
   type SubjectCategory,
 } from './subjects-menu';
 
-const WHATSAPP_NUMBER = '16477875999';
+const WHATSAPP_NUMBER =
+  '16477875999';
+
+const navigationCopy = {
+  en: {
+    subjects: 'Subjects',
+    allSubjects:
+      'View all subjects',
+    math:
+      'Mathematics',
+    english:
+      'English',
+    about:
+      'About Us',
+    primaryNavigation:
+      'Primary navigation',
+  },
+  ar: {
+    subjects: 'المواد',
+    allSubjects:
+      'عرض جميع المواد',
+    math:
+      'الرياضيات',
+    english:
+      'اللغة الإنجليزية',
+    about:
+      'من نحن',
+    primaryNavigation:
+      'التنقل الرئيسي',
+  },
+} as const;
 
 export async function SiteHeader() {
-  const t = await getTranslations('nav');
-  const locale = await getLocale();
+  const t =
+    await getTranslations('nav');
 
-  const whatsappMessage = encodeURIComponent(
-    t('whatsappBookingMessage')
-  );
+  const locale =
+    await getLocale();
+
+  const currentLocale =
+    locale === 'ar'
+      ? 'ar'
+      : 'en';
+
+  const copy =
+    navigationCopy[
+      currentLocale
+    ];
+
+  const whatsappMessage =
+    encodeURIComponent(
+      t('whatsappBookingMessage')
+    );
 
   const whatsappHref =
     `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
 
   const sectionLinks = [
     {
-      href: `/${locale}#programs`,
-      label: t('programs'),
+      href:
+        routePath.about(
+          currentLocale
+        ),
+      label:
+        copy.about,
     },
     {
-      href: `/${locale}#services`,
-      label: t('services'),
+      href:
+        routePath.programs(
+          currentLocale
+        ),
+      label:
+        t('programs'),
     },
     {
-      href: `/${locale}#pricing`,
-      label: t('pricing'),
+      href:
+        routePath.services(
+          currentLocale
+        ),
+      label:
+        t('services'),
     },
     {
-      href: `/${locale}#faq`,
-      label: t('faq'),
+      href:
+        routePath.pricing(
+          currentLocale
+        ),
+      label:
+        t('pricing'),
+    },
+    {
+      href:
+        routePath.faq(
+          currentLocale
+        ),
+      label:
+        t('faq'),
     },
   ];
 
-  const subjectCategories = t.raw(
-    'subjectsMenu.categories'
-  ) as SubjectCategory[];
+  const subjectCategories:
+    SubjectCategory[] = [
+      {
+        key: 'math',
+        label:
+          copy.math,
+        href:
+          routePath.subject(
+            currentLocale,
+            'math'
+          ),
+        children:
+          publicMathPathways.map(
+            (pathway) => ({
+              label:
+                pathway.title[
+                  currentLocale
+                ],
+              href:
+                routePath.mathPathway(
+                  currentLocale,
+                  pathway.slug
+                ),
+            })
+          ),
+      },
+      {
+        key: 'english',
+        label:
+          copy.english,
+        href:
+          routePath.subject(
+            currentLocale,
+            'english'
+          ),
+        children:
+          approvedEnglishStrands.map(
+            (strand) => ({
+              label:
+                strand.title[
+                  currentLocale
+                ],
+              href:
+                routePath.englishStrand(
+                  currentLocale,
+                  strand.slug
+                ),
+            })
+          ),
+      },
+    ];
 
   const navLinkClass = [
     'group',
@@ -87,7 +223,16 @@ export async function SiteHeader() {
         backdrop-blur-xl
       "
     >
-      <Container className="flex min-h-16 items-center justify-between gap-3 lg:min-h-20">
+      <Container
+        className="
+          flex
+          min-h-16
+          items-center
+          justify-between
+          gap-3
+          lg:min-h-20
+        "
+      >
         <Link
           href="/"
           aria-label={t('home')}
@@ -127,63 +272,104 @@ export async function SiteHeader() {
         </Link>
 
         <nav
-          // aria-label={t('primaryNavigation')}
-          className="hidden items-center gap-1 lg:flex"
+          aria-label={
+            copy.primaryNavigation
+          }
+          className="
+            hidden
+            items-center
+            gap-0.5
+            lg:flex
+          "
         >
           <SubjectsMenu
-            triggerLabel={t('subjectsMenu.trigger')}
-            categories={subjectCategories}
+            triggerLabel={
+              copy.subjects
+            }
+            overviewHref={
+              routePath.subjects(
+                currentLocale
+              )
+            }
+            overviewLabel={
+              copy.allSubjects
+            }
+            categories={
+              subjectCategories
+            }
           />
 
-          {sectionLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={navLinkClass}
-            >
-              {link.label}
+          {sectionLinks.map(
+            (link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className={
+                  navLinkClass
+                }
+              >
+                {link.label}
 
-              <span
-                aria-hidden="true"
-                className="
-                  absolute
-                  inset-x-3
-                  bottom-1
-                  h-0.5
-                  origin-center
-                  scale-x-0
-                  rounded-full
-                  bg-accent
-                  transition-transform
-                  duration-200
-                  group-hover:scale-x-100
-                "
-              />
-            </a>
-          ))}
+                <span
+                  aria-hidden="true"
+                  className="
+                    absolute
+                    inset-x-3
+                    bottom-1
+                    h-0.5
+                    origin-center
+                    scale-x-0
+                    rounded-full
+                    bg-accent
+                    transition-transform
+                    duration-200
+                    group-hover:scale-x-100
+                  "
+                />
+              </a>
+            )
+          )}
         </nav>
 
-        <div className="flex items-center gap-2 sm:gap-3">
-          <div className="hidden sm:block">
+        <div
+          className="
+            flex
+            items-center
+            gap-2
+            sm:gap-3
+          "
+        >
+          <div className="hidden lg:block">
             <LocaleSwitcher />
+          </div>
+
+          <div className="lg:hidden">
+            <LocaleSwitcher variant="compact" />
           </div>
 
           <a
             href={whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
-            className={buttonVariants({
-              variant: 'accent',
-              size: 'sm',
-              className: 'hidden lg:inline-flex',
-            })}
+            className={
+              buttonVariants({
+                variant: 'accent',
+                size: 'sm',
+                className:
+                  'hidden xl:inline-flex',
+              })
+            }
           >
             <svg
               viewBox="0 0 20 20"
               fill="none"
               stroke="currentColor"
               strokeWidth={1.7}
-              className="h-4 w-4 shrink-0"
+              className="
+                h-4
+                w-4
+                shrink-0
+              "
               aria-hidden="true"
             >
               <rect
@@ -204,15 +390,43 @@ export async function SiteHeader() {
           </a>
 
           <MobileNav
-            sectionLinks={sectionLinks}
-            homeLabel={t('home')}
-            homeHref={`/${locale}`}
-            bookLabel={t('bookFreeSession')}
-            bookingHref={whatsappHref}
-            subjectsLabel={t('subjectsMenu.trigger')}
-            subjectCategories={subjectCategories}
-            openMenuLabel={t('openMenu')}
-            closeMenuLabel={t('closeMenu')}
+            sectionLinks={
+              sectionLinks
+            }
+            homeLabel={
+              t('home')
+            }
+            homeHref={
+              routePath.home(
+                currentLocale
+              )
+            }
+            bookLabel={
+              t('bookFreeSession')
+            }
+            bookingHref={
+              whatsappHref
+            }
+            subjectsLabel={
+              copy.subjects
+            }
+            subjectsOverviewHref={
+              routePath.subjects(
+                currentLocale
+              )
+            }
+            subjectsOverviewLabel={
+              copy.allSubjects
+            }
+            subjectCategories={
+              subjectCategories
+            }
+            openMenuLabel={
+              t('openMenu')
+            }
+            closeMenuLabel={
+              t('closeMenu')
+            }
           />
         </div>
       </Container>
