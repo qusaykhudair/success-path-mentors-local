@@ -28,6 +28,13 @@ export const routePath = {
     return `/${locale}/subjects/${slug}`;
   },
 
+  mathPathway(
+    locale: SiteLocale,
+    pathwaySlug: string
+  ): string {
+    return `/${locale}/subjects/math/${pathwaySlug}`;
+  },
+
   contact(locale: SiteLocale): string {
     return localizedContactPath(
       locale

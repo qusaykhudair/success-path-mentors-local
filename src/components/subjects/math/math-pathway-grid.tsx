@@ -2,6 +2,12 @@ import {
   MathPathwayCard,
 } from './math-pathway-card';
 
+import {
+  routePath,
+} from '@/config/routes';
+import type {
+  SiteLocale,
+} from '@/config/site';
 import type {
   MathExplorerCopy,
   PublicMathPathwaySummary,
@@ -10,17 +16,13 @@ import type {
 interface MathPathwayGridProps {
   pathways:
     PublicMathPathwaySummary[];
-  selectedSlug: string;
-  onSelect: (
-    slug: string
-  ) => void;
+  locale: SiteLocale;
   copy: MathExplorerCopy;
 }
 
 export function MathPathwayGrid({
   pathways,
-  selectedSlug,
-  onSelect,
+  locale,
   copy,
 }: MathPathwayGridProps) {
   return (
@@ -39,12 +41,9 @@ export function MathPathwayGrid({
               pathway.slug
             }
             pathway={pathway}
-            selected={
-              selectedSlug ===
-              pathway.slug
-            }
-            onSelect={() =>
-              onSelect(
+            href={
+              routePath.mathPathway(
+                locale,
                 pathway.slug
               )
             }

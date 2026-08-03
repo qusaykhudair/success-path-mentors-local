@@ -20,6 +20,16 @@ export type MathStageId =
   | 'grades-9-10'
   | 'grades-11-12';
 
+export type MathPathwaySlug =
+  | 'basics-operations'
+  | 'fractions-rational-numbers'
+  | 'algebra-equations'
+  | 'functions'
+  | 'geometry-trigonometry'
+  | 'statistics-probability'
+  | 'advanced-precalculus'
+  | 'financial-literacy';
+
 export interface LocalizedText {
   en: string;
   ar: string;
@@ -40,15 +50,37 @@ export type MathCurriculumSource = Record<
   >
 >;
 
+export type ReviewCellStatus =
+  | 'available'
+  | 'topic_only'
+  | 'not_listed';
+
+export interface StrandPathwayReviewGradeCell {
+  rawCell: string | null;
+  topic: string | null;
+  subtopicCount: number | null;
+  hasSubtopics: boolean;
+  status: ReviewCellStatus;
+}
+
 export interface StrandPathwayReviewItem {
+  sourceRow: number;
   strand: string;
   proposedPathway: string;
+  grades: Record<
+    MathGrade,
+    StrandPathwayReviewGradeCell
+  >;
 }
 
 export interface StrandPathwayReviewSource {
   statistics: {
     strandCount: number;
+    gradeCount: number;
+    possibleStrandGradeCells: number;
     populatedTopicCells: number;
+    topicOnlyCells: number;
+    blankCells: number;
     totalSubtopicCountShownInExcel: number;
     pathwayCount: number;
   };
@@ -65,36 +97,22 @@ export type MathPathwayIconKey =
   | 'sigma'
   | 'coins';
 
-export type PublicPathwayStatus =
-  | 'confirmed'
-  | 'curated';
-
-export type MathLeafSourceStrategy =
+export type MathPathwayDataSource =
   | {
       type: 'source-pathways';
       sourceNames: string[];
-      grades?: MathGrade[];
     }
   | {
-      type: 'topic-filter';
-      includePatterns: string[];
-      excludePatterns?: string[];
-      grades?: MathGrade[];
-    };
-
-export type MathSourceStrategy =
-  | MathLeafSourceStrategy
-  | {
-      type: 'composite';
-      strategies: MathLeafSourceStrategy[];
+      type: 'topic-titles';
+      titles: string[];
     };
 
 export interface PublicMathPathway {
-  slug: string;
+  slug: MathPathwaySlug;
   title: LocalizedText;
   shortTitle: LocalizedText;
   description: LocalizedText;
   iconKey: MathPathwayIconKey;
-  status: PublicPathwayStatus;
-  sourceStrategy: MathSourceStrategy;
+  dataSource: MathPathwayDataSource;
+  additionalView?: boolean;
 }

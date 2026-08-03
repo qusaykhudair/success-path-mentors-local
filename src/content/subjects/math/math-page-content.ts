@@ -84,7 +84,7 @@ const mathPageContent: Record<
       gradesAriaLabel:
         'Browse mathematics curriculum by grade',
       pathwayCardAction:
-        'View topics and stages',
+        'Open pathway page',
       gradeRangeLabel:
         'Grade range',
       topicsLabel: 'Topics',
@@ -98,7 +98,7 @@ const mathPageContent: Record<
       gradeOverviewDescription:
         'This summary shows the mathematics learning areas represented for the selected grade.',
       overlapNote:
-        'Learning areas may overlap because a topic can support more than one pathway.',
+        'Each curriculum topic is displayed once under its most relevant learning area.',
       bookTrialLabel:
         'Find a math tutor',
       detailsHeading:
@@ -253,7 +253,7 @@ const mathPageContent: Record<
       gradesAriaLabel:
         'تصفح منهج الرياضيات حسب الصف',
       pathwayCardAction:
-        'عرض الموضوعات والمراحل',
+        'فتح صفحة المسار',
       gradeRangeLabel:
         'نطاق الصفوف',
       topicsLabel:
@@ -269,7 +269,7 @@ const mathPageContent: Record<
       gradeOverviewDescription:
         'يوضح هذا الملخص مجالات تعلم الرياضيات الممثلة في الصف المختار.',
       overlapNote:
-        'قد تتداخل مجالات التعلم لأن الموضوع الواحد يمكن أن يدعم أكثر من مسار.',
+        'يظهر كل موضوع في المنهج مرة واحدة فقط ضمن مجال التعلم الأكثر ارتباطًا به.',
       bookTrialLabel:
         'ابحث عن مدرس رياضيات',
       detailsHeading:

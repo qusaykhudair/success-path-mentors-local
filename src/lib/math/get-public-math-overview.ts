@@ -9,8 +9,8 @@ import type {
   LocalizedText,
   MathCurriculumSource,
   MathGrade,
-  MathLeafSourceStrategy,
-  MathSourceStrategy,
+  MathPathwayDataSource,
+  MathPathwaySlug,
   PublicMathPathway,
   StrandPathwayReviewSource,
 } from '@/types/math-curriculum';
@@ -24,14 +24,24 @@ import type {
   PublicMathPathwaySummary,
 } from '@/types/math-overview';
 
-interface TopicRecord {
+interface SourceTopicRecord {
   key: string;
+  sourceOrder: number;
   strand: string;
   grade: MathGrade;
   title: string;
   sourcePathway: string;
   subtopics: string[];
-  publishable: boolean;
+}
+
+interface PageTopicRecord {
+  id: string;
+  sourceOrder: number;
+  grade: MathGrade;
+  title: string;
+  sourceKeys: string[];
+  sourcePathways: string[];
+  subtopics: string[];
 }
 
 const curriculum =
@@ -121,36 +131,13 @@ const arabicGradeNames:
     G12: 'الصف الثاني عشر',
   };
 
-const invalidSubtopics =
-  new Set(['Balanc', '\\']);
-
-/**
- * These source cells were identified in the earlier
- * Excel/JSON audit as requiring a manual curriculum
- * review because the topic title and subtopic list do
- * not describe the same subject area.
- *
- * The source JSON remains unchanged. These records are
- * only withheld from the public page until reviewed.
- */
-const reviewRequiredTopicKeys =
-  new Set([
-    'E::G2',
-    'E::G3',
-    'E::G5',
-    'E::G6',
-    'E::G9',
-    'E::G10',
-    'E::G12',
-    'HH::G5',
-  ]);
-
-function isMathGrade(
+function normalizeTopicTitle(
   value: string
-): value is MathGrade {
-  return gradeOrder.includes(
-    value as MathGrade
-  );
+): string {
+  return value
+    .toLocaleLowerCase('en')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 function localize(
@@ -158,15 +145,6 @@ function localize(
   locale: 'en' | 'ar'
 ): string {
   return value[locale];
-}
-
-function normalizeSearchText(
-  value: string
-): string {
-  return value
-    .toLocaleLowerCase('en')
-    .replace(/\s+/g, ' ')
-    .trim();
 }
 
 function getGradeLabel(
@@ -187,252 +165,277 @@ function getGradeShortLabel(
     : grade;
 }
 
-function buildTopicRecords(): TopicRecord[] {
-  const pathwayByStrand =
-    new Map(
-      review.strands.map(
-        (item) => [
-          item.strand,
-          item.proposedPathway,
-        ]
-      )
-    );
+function buildSourceTopicRecords():
+  SourceTopicRecord[] {
+  const records:
+    SourceTopicRecord[] = [];
 
-  const records: TopicRecord[] = [];
+  review.strands.forEach(
+    (strandRecord, strandIndex) => {
+      gradeOrder.forEach(
+        (grade, gradeIndex) => {
+          const reviewCell =
+            strandRecord.grades[grade];
 
-  Object.entries(curriculum).forEach(
-    ([strand, grades]) => {
-      const sourcePathway =
-        pathwayByStrand.get(strand);
-
-      if (!sourcePathway) {
-        return;
-      }
-
-      Object.entries(grades).forEach(
-        ([gradeKey, sourceTopic]) => {
-          if (
-            !isMathGrade(gradeKey) ||
-            !sourceTopic?.topic
-          ) {
+          if (!reviewCell?.topic) {
             return;
           }
 
-          const subtopics =
-            sourceTopic.subtopics.filter(
-              (subtopic) =>
-                Boolean(
-                  subtopic.trim()
-                ) &&
-                !invalidSubtopics.has(
-                  subtopic
-                )
+          const sourceTopic =
+            curriculum[
+              strandRecord.strand
+            ]?.[grade];
+
+          if (!sourceTopic) {
+            throw new Error(
+              [
+                'Math curriculum source mismatch.',
+                `Missing ${strandRecord.strand} ${grade}.`,
+              ].join(' ')
             );
+          }
+
+          if (
+            sourceTopic.topic !==
+            reviewCell.topic
+          ) {
+            throw new Error(
+              [
+                'Math curriculum title mismatch.',
+                `${strandRecord.strand} ${grade}.`,
+                `Excel: "${reviewCell.topic}".`,
+                `Detailed source: "${sourceTopic.topic}".`,
+              ].join(' ')
+            );
+          }
+
+          if (
+            sourceTopic.subtopics.length !==
+            reviewCell.subtopicCount
+          ) {
+            throw new Error(
+              [
+                'Math curriculum count mismatch.',
+                `${strandRecord.strand} ${grade}.`,
+                `Excel: ${reviewCell.subtopicCount}.`,
+                `Detailed source: ${sourceTopic.subtopics.length}.`,
+              ].join(' ')
+            );
+          }
 
           records.push({
-            key: [
-              strand,
-              gradeKey,
-              sourceTopic.topic,
-            ].join('::'),
-            strand,
-            grade: gradeKey,
-            title: sourceTopic.topic,
-            sourcePathway,
-            subtopics,
-            publishable:
-              !reviewRequiredTopicKeys.has(
-                `${strand}::${gradeKey}`
-              ),
+            key:
+              `${strandRecord.strand}::${grade}`,
+            sourceOrder:
+              strandIndex *
+                gradeOrder.length +
+              gradeIndex,
+            strand:
+              strandRecord.strand,
+            grade,
+            title:
+              reviewCell.topic,
+            sourcePathway:
+              strandRecord.proposedPathway,
+            subtopics:
+              sourceTopic.subtopics,
           });
         }
       );
     }
   );
 
+  if (
+    records.length !==
+    review.statistics
+      .populatedTopicCells
+  ) {
+    throw new Error(
+      [
+        'Math curriculum record-count mismatch.',
+        `Expected ${review.statistics.populatedTopicCells}.`,
+        `Received ${records.length}.`,
+      ].join(' ')
+    );
+  }
+
   return records;
 }
 
-function filterByGrades(
-  records: TopicRecord[],
-  grades?: MathGrade[]
-): TopicRecord[] {
-  if (!grades?.length) {
-    return records;
-  }
-
-  const accepted = new Set(grades);
-
-  return records.filter(
-    (record) =>
-      accepted.has(record.grade)
-  );
-}
-
-function applyLeafStrategy(
-  strategy: MathLeafSourceStrategy,
-  records: TopicRecord[]
-): TopicRecord[] {
+function selectRecordsForDataSource({
+  dataSource,
+  records,
+}: {
+  dataSource: MathPathwayDataSource;
+  records: SourceTopicRecord[];
+}): SourceTopicRecord[] {
   if (
-    strategy.type ===
+    dataSource.type ===
     'source-pathways'
   ) {
     const accepted =
-      new Set(strategy.sourceNames);
+      new Set(
+        dataSource.sourceNames
+      );
 
-    return filterByGrades(
-      records.filter(
-        (record) =>
-          accepted.has(
-            record.sourcePathway
-          )
-      ),
-      strategy.grades
-    );
-  }
-
-  const includePatterns =
-    strategy.includePatterns.map(
-      normalizeSearchText
-    );
-
-  const excludePatterns =
-    (
-      strategy.excludePatterns ?? []
-    ).map(normalizeSearchText);
-
-  return filterByGrades(
-    records.filter((record) => {
-      const title =
-        normalizeSearchText(
-          record.title
-        );
-
-      const included =
-        includePatterns.some(
-          (pattern) =>
-            title.includes(pattern)
-        );
-
-      const excluded =
-        excludePatterns.some(
-          (pattern) =>
-            title.includes(pattern)
-        );
-
-      return included && !excluded;
-    }),
-    strategy.grades
-  );
-}
-
-function applyStrategy(
-  strategy: MathSourceStrategy,
-  records: TopicRecord[]
-): TopicRecord[] {
-  if (
-    strategy.type !== 'composite'
-  ) {
-    return applyLeafStrategy(
-      strategy,
-      records
-    );
-  }
-
-  return deduplicateRecords(
-    strategy.strategies.flatMap(
-      (child) =>
-        applyLeafStrategy(
-          child,
-          records
+    return records.filter(
+      (record) =>
+        accepted.has(
+          record.sourcePathway
         )
-    )
+    );
+  }
+
+  const acceptedTitles =
+    new Set(
+      dataSource.titles.map(
+        normalizeTopicTitle
+      )
+    );
+
+  return records.filter(
+    (record) =>
+      acceptedTitles.has(
+        normalizeTopicTitle(
+          record.title
+        )
+      )
   );
 }
 
-function deduplicateRecords(
-  records: TopicRecord[]
-): TopicRecord[] {
-  return [
-    ...new Map(
-      records.map((record) => [
-        record.key,
-        record,
-      ])
-    ).values(),
-  ];
-}
-
-function buildTopicSummaries(
-  records: TopicRecord[]
-): MathTopicSummary[] {
-  const grouped =
+/**
+ * Removes repeated same-page, same-grade topic labels.
+ *
+ * Unique detailed subtopics are preserved for later topic
+ * detail pages. The public topic appears once.
+ */
+function deduplicatePageRecords({
+  pathwaySlug,
+  records,
+}: {
+  pathwaySlug: MathPathwaySlug;
+  records: SourceTopicRecord[];
+}): PageTopicRecord[] {
+  const groups =
     new Map<
       string,
-      TopicRecord[]
+      SourceTopicRecord[]
     >();
 
-  records
-    .filter(
-      (record) =>
-        record.publishable
-    )
-    .forEach((record) => {
+  records.forEach(
+    (record) => {
       const groupKey = [
         record.grade,
-        normalizeSearchText(
+        normalizeTopicTitle(
           record.title
         ),
       ].join('::');
 
-      const current =
-        grouped.get(groupKey) ?? [];
+      const existing =
+        groups.get(groupKey) ?? [];
 
-      current.push(record);
-      grouped.set(
+      existing.push(record);
+      groups.set(
         groupKey,
-        current
+        existing
       );
-    });
+    }
+  );
 
   return [
-    ...grouped.entries(),
-  ]
-    .map(
-      ([groupKey, group]) => {
-        const first = group[0];
+    ...groups.entries(),
+  ].map(
+    ([groupKey, group]) => {
+      const sortedGroup =
+        [...group].sort(
+          (left, right) =>
+            left.sourceOrder -
+            right.sourceOrder
+        );
 
-        if (!first) {
-          return null;
-        }
+      const first =
+        sortedGroup[0];
 
-        const hasSubtopics =
-          group.some(
-            (record) =>
-              record.subtopics.length > 0
+      const uniqueSubtopics =
+        new Map<
+          string,
+          string
+        >();
+
+      sortedGroup.forEach(
+        (record) => {
+          record.subtopics.forEach(
+            (subtopic) => {
+              const key =
+                normalizeTopicTitle(
+                  subtopic
+                );
+
+              if (
+                !uniqueSubtopics.has(
+                  key
+                )
+              ) {
+                uniqueSubtopics.set(
+                  key,
+                  subtopic
+                );
+              }
+            }
           );
+        }
+      );
 
-        return {
-          id: groupKey,
-          title: first.title,
-          status: hasSubtopics
-            ? 'available'
-            : 'topic-only',
-        } satisfies MathTopicSummary;
-      }
-    )
-    .filter(
-      (
-        topic
-      ): topic is MathTopicSummary =>
-        Boolean(topic)
-    )
-    .sort((left, right) =>
-      left.title.localeCompare(
-        right.title,
-        'en'
-      )
-    );
+      return {
+        id:
+          `${pathwaySlug}::${groupKey}`,
+        sourceOrder:
+          first.sourceOrder,
+        grade:
+          first.grade,
+        title:
+          first.title,
+        sourceKeys:
+          sortedGroup.map(
+            (record) =>
+              record.key
+          ),
+        sourcePathways: [
+          ...new Set(
+            sortedGroup.map(
+              (record) =>
+                record.sourcePathway
+            )
+          ),
+        ],
+        subtopics: [
+          ...uniqueSubtopics.values(),
+        ],
+      };
+    }
+  ).sort(
+    (left, right) =>
+      left.sourceOrder -
+      right.sourceOrder
+  );
+}
+
+function buildTopicSummaries(
+  records:
+    PageTopicRecord[]
+): MathTopicSummary[] {
+  return records.map(
+    (record) => ({
+      id:
+        record.id,
+      title:
+        record.title,
+      status:
+        record.subtopics.length > 0
+          ? 'available'
+          : 'topic-only',
+    })
+  );
 }
 
 function buildGradeTopicGroup({
@@ -441,9 +444,10 @@ function buildGradeTopicGroup({
   locale,
 }: {
   grade: MathGrade;
-  records: TopicRecord[];
+  records:
+    PageTopicRecord[];
   locale: 'en' | 'ar';
-}): MathGradeTopicGroup | null {
+}): MathGradeTopicGroup {
   const topics =
     buildTopicSummaries(
       records.filter(
@@ -451,10 +455,6 @@ function buildGradeTopicGroup({
           record.grade === grade
       )
     );
-
-  if (!topics.length) {
-    return null;
-  }
 
   return {
     grade,
@@ -474,258 +474,338 @@ function buildGradeTopicGroup({
   };
 }
 
-function buildStages({
+/**
+ * All five stages and all eleven grades are always returned.
+ * Empty grades receive an empty topics array instead of
+ * disappearing from the pathway page.
+ */
+function buildCompleteStages({
   records,
   locale,
 }: {
-  records: TopicRecord[];
+  records:
+    PageTopicRecord[];
   locale: 'en' | 'ar';
 }): MathPathwayStageSummary[] {
-  return gradeBands.flatMap(
+  return gradeBands.map(
     (band) => {
       const grades =
-        band.grades.flatMap(
-          (grade) => {
-            const group =
-              buildGradeTopicGroup({
-                grade,
-                records,
-                locale,
-              });
-
-            return group
-              ? [group]
-              : [];
-          }
+        band.grades.map(
+          (grade) =>
+            buildGradeTopicGroup({
+              grade,
+              records,
+              locale,
+            })
         );
 
-      if (!grades.length) {
-        return [];
-      }
-
-      return [
-        {
-          id: band.id,
-          label: localize(
+      return {
+        id:
+          band.id,
+        label:
+          localize(
             band.label,
             locale
           ),
-          grades,
-          topicCount:
-            grades.reduce(
-              (total, grade) =>
-                total +
-                grade.topicCount,
-              0
-            ),
-        },
-      ];
+        grades,
+        topicCount:
+          grades.reduce(
+            (total, grade) =>
+              total +
+              grade.topicCount,
+            0
+          ),
+      };
     }
   );
 }
 
 function buildPathwaySummary({
   pathway,
-  records,
+  sourceRecords,
   locale,
 }: {
-  pathway: PublicMathPathway;
-  records: TopicRecord[];
+  pathway:
+    PublicMathPathway;
+  sourceRecords:
+    SourceTopicRecord[];
   locale: 'en' | 'ar';
 }): PublicMathPathwaySummary {
-  const matched =
-    deduplicateRecords(
-      applyStrategy(
-        pathway.sourceStrategy,
-        records
-      )
-    ).filter(
-      (record) =>
-        record.publishable
-    );
+  const pageRecords =
+    deduplicatePageRecords({
+      pathwaySlug:
+        pathway.slug,
+      records:
+        selectRecordsForDataSource({
+          dataSource:
+            pathway.dataSource,
+          records:
+            sourceRecords,
+        }),
+    });
 
-  const stages = buildStages({
-    records: matched,
-    locale,
-  });
-
-  const gradeNumbers =
-    stages.flatMap(
-      (stage) =>
-        stage.grades.map(
-          (grade) =>
-            Number(
-              grade.grade.slice(1)
-            )
-        )
-    );
+  const stages =
+    buildCompleteStages({
+      records:
+        pageRecords,
+      locale,
+    });
 
   return {
-    slug: pathway.slug,
-    title: localize(
-      pathway.title,
-      locale
-    ),
-    shortTitle: localize(
-      pathway.shortTitle,
-      locale
-    ),
-    description: localize(
-      pathway.description,
-      locale
-    ),
-    iconKey: pathway.iconKey,
+    slug:
+      pathway.slug,
+    title:
+      localize(
+        pathway.title,
+        locale
+      ),
+    shortTitle:
+      localize(
+        pathway.shortTitle,
+        locale
+      ),
+    description:
+      localize(
+        pathway.description,
+        locale
+      ),
+    iconKey:
+      pathway.iconKey,
     gradeRange: {
-      min: gradeNumbers.length
-        ? Math.min(...gradeNumbers)
-        : 2,
-      max: gradeNumbers.length
-        ? Math.max(...gradeNumbers)
-        : 12,
+      min: 2,
+      max: 12,
     },
     topicCount:
-      stages.reduce(
-        (total, stage) =>
-          total +
-          stage.topicCount,
-        0
-      ),
-    stageCount: stages.length,
+      pageRecords.length,
+    stageCount:
+      stages.length,
     stages,
   };
 }
 
+/**
+ * Grade browsing is based only on the seven source-aligned
+ * pages. Functions is an additional page and is not repeated
+ * as another learning area in the grade browser.
+ *
+ * Repeated titles across source pages are merged once for the
+ * grade summary and assigned to the first source-aligned page
+ * in the configured order.
+ */
 function buildGradeSummary({
   grade,
-  records,
-  pathways,
+  sourceRecords,
+  pathwaySummaries,
   locale,
 }: {
   grade: MathGrade;
-  records: TopicRecord[];
-  pathways:
+  sourceRecords:
+    SourceTopicRecord[];
+  pathwaySummaries:
     PublicMathPathwaySummary[];
   locale: 'en' | 'ar';
 }): MathGradeSummary {
-  const publicGradeRecords =
-    records.filter(
-      (record) =>
-        record.grade === grade &&
-        record.publishable
+  const sourceAligned =
+    publicMathPathways.filter(
+      (pathway) =>
+        !pathway.additionalView
     );
 
-  const allTopics =
-    buildTopicSummaries(
-      publicGradeRecords
-    );
+  const ownership =
+    new Map<
+      string,
+      {
+        pathway:
+          PublicMathPathway;
+        records:
+          SourceTopicRecord[];
+      }
+    >();
 
-  const pathwaySummaries:
+  sourceAligned.forEach(
+    (pathway) => {
+      const selected =
+        selectRecordsForDataSource({
+          dataSource:
+            pathway.dataSource,
+          records:
+            sourceRecords,
+        }).filter(
+          (record) =>
+            record.grade === grade
+        );
+
+      selected.forEach(
+        (record) => {
+          const key =
+            normalizeTopicTitle(
+              record.title
+            );
+
+          const existing =
+            ownership.get(key);
+
+          if (existing) {
+            existing.records.push(
+              record
+            );
+            return;
+          }
+
+          ownership.set(
+            key,
+            {
+              pathway,
+              records: [
+                record,
+              ],
+            }
+          );
+        }
+      );
+    }
+  );
+
+  const pathwayGroups =
+    new Map<
+      MathPathwaySlug,
+      SourceTopicRecord[]
+    >();
+
+  ownership.forEach(
+    ({ pathway, records }) => {
+      const current =
+        pathwayGroups.get(
+          pathway.slug
+        ) ?? [];
+
+      current.push(
+        ...records
+      );
+
+      pathwayGroups.set(
+        pathway.slug,
+        current
+      );
+    }
+  );
+
+  const pathways:
     MathGradePathwaySummary[] =
-      publicMathPathways.flatMap(
+      sourceAligned.flatMap(
         (pathway) => {
-          const pathwayRecords =
-            deduplicateRecords(
-              applyStrategy(
-                pathway.sourceStrategy,
-                records
-              ).filter(
-                (record) =>
-                  record.grade ===
-                    grade &&
-                  record.publishable
-              )
-            );
+          const ownedRecords =
+            pathwayGroups.get(
+              pathway.slug
+            ) ?? [];
 
-          const topics =
-            buildTopicSummaries(
-              pathwayRecords
-            );
-
-          if (!topics.length) {
+          if (
+            ownedRecords.length ===
+            0
+          ) {
             return [];
           }
 
-          const publicSummary =
-            pathways.find(
-              (summary) =>
-                summary.slug ===
+          const pageRecords =
+            deduplicatePageRecords({
+              pathwaySlug:
+                pathway.slug,
+              records:
+                ownedRecords,
+            });
+
+          const summary =
+            pathwaySummaries.find(
+              (item) =>
+                item.slug ===
                 pathway.slug
             );
 
-          if (!publicSummary) {
+          if (!summary) {
             return [];
           }
 
           return [
             {
-              slug: pathway.slug,
+              slug:
+                pathway.slug,
               title:
-                publicSummary.shortTitle,
+                summary.shortTitle,
               iconKey:
                 pathway.iconKey,
               topicCount:
-                topics.length,
-              topics,
+                pageRecords.length,
+              topics:
+                buildTopicSummaries(
+                  pageRecords
+                ),
             },
           ];
         }
       );
 
+  const topicCount =
+    pathways.reduce(
+      (total, pathway) =>
+        total +
+        pathway.topicCount,
+      0
+    );
+
   return {
     grade,
-    label: getGradeLabel(
-      grade,
-      locale
-    ),
+    label:
+      getGradeLabel(
+        grade,
+        locale
+      ),
     shortLabel:
       getGradeShortLabel(
         grade,
         locale
       ),
-    topicCount:
-      allTopics.length,
+    topicCount,
     pathwayCount:
-      pathwaySummaries.length,
-    pathways:
-      pathwaySummaries.sort(
-        (left, right) =>
-          right.topicCount -
-          left.topicCount
-      ),
+      pathways.length,
+    pathways,
   };
 }
 
 export function getPublicMathOverview(
   locale: 'en' | 'ar'
 ): MathCurriculumOverview {
-  const records = buildTopicRecords();
+  const sourceRecords =
+    buildSourceTopicRecords();
 
   const pathways =
     publicMathPathways.map(
       (pathway) =>
         buildPathwaySummary({
           pathway,
-          records,
+          sourceRecords,
           locale,
         })
     );
 
-  const grades = gradeOrder.map(
-    (grade) =>
-      buildGradeSummary({
-        grade,
-        records,
-        pathways,
-        locale,
-      })
-  );
+  const grades =
+    gradeOrder.map(
+      (grade) =>
+        buildGradeSummary({
+          grade,
+          sourceRecords,
+          pathwaySummaries:
+            pathways,
+          locale,
+        })
+    );
 
   return {
     totals: {
       gradeMin: 2,
       gradeMax: 12,
       strandCount:
-        review.statistics.strandCount,
+        review.statistics
+          .strandCount,
       topicCount:
         review.statistics
           .populatedTopicCells,

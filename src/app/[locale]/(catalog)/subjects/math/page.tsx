@@ -184,6 +184,7 @@ export default async function MathPage({
         bookingHref={
           bookingHref
         }
+        locale={locale}
       />
 
       <MathOverviewCta

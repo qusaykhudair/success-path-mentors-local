@@ -1,33 +1,11 @@
 {
   "metadata": {
-    "sourceFile": "strand_pathway_review(1).xlsx",
-    "sourceWorkbookSheets": [
-      {
-        "name": "Strand Review",
-        "range": "A1:M42"
-      },
-      {
-        "name": "Legend & Notes",
-        "range": "A1:A18"
-      }
-    ],
-    "extractedAtUtc": "2026-08-02T12:36:23+00:00",
-    "extractionBasis": "Exact values contained in the Excel workbook.",
-    "importantLimitation": "The Excel grade cells contain only a topic name and a subtopic count. They do not contain the individual subtopic names."
-  },
-  "schema": {
-    "gradeCell": {
-      "rawCell": "Original Excel cell value.",
-      "topic": "Topic text parsed from the cell.",
-      "subtopicCount": "Number shown in parentheses in Excel.",
-      "hasSubtopics": "True when subtopicCount is greater than zero.",
-      "status": {
-        "available": "Topic and a positive subtopic count exist.",
-        "topic_only": "Topic exists with count zero.",
-        "not_listed": "The Excel cell is blank.",
-        "unparsed": "A nonblank value did not match Topic (count)."
-      }
-    }
+    "sourceFile": "strand_pathway_review(3).xlsx",
+    "sourceSheet": "Strand Review",
+    "legendSheet": "Legend & Notes",
+    "sourceRecordIdentity": "strand + grade",
+    "pageDisplayIdentity": "page slug + grade + normalized topic title",
+    "pageCoverageRule": "Every pathway page renders Grade 2 through Grade 12. Source-aligned pages include every populated Excel cell whose Proposed Pathway belongs to that page."
   },
   "grades": [
     "G2",

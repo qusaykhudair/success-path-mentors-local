@@ -14,10 +14,10 @@ import {
 import {
   MathPathwayGrid,
 } from './math-pathway-grid';
-import {
-  MathPathwaySummary,
-} from './math-pathway-summary';
 
+import type {
+  SiteLocale,
+} from '@/config/site';
 import type {
   MathCurriculumOverview,
   MathExplorerCopy,
@@ -29,12 +29,14 @@ interface MathCurriculumExplorerProps {
   copy:
     MathExplorerCopy;
   bookingHref: string;
+  locale: SiteLocale;
 }
 
 export function MathCurriculumExplorer({
   overview,
   copy,
   bookingHref,
+  locale,
 }: MathCurriculumExplorerProps) {
   const [
     mode,
@@ -44,59 +46,12 @@ export function MathCurriculumExplorer({
   >('pathways');
 
   const [
-    selectedPathway,
-    setSelectedPathway,
-  ] = useState(
-    overview.pathways[0]
-      ?.slug ?? ''
-  );
-
-  const [
     selectedGrade,
     setSelectedGrade,
   ] = useState(
     overview.grades[0]
       ?.grade ?? 'G2'
   );
-
-  const pathway =
-    overview.pathways.find(
-      (item) =>
-        item.slug ===
-        selectedPathway
-    ) ?? overview.pathways[0];
-
-  function selectPathway(
-    slug: string
-  ) {
-    setSelectedPathway(slug);
-
-    window.requestAnimationFrame(
-      () => {
-        const target =
-          document.getElementById(
-            'math-pathway-summary'
-          );
-
-        if (!target) {
-          return;
-        }
-
-        const reducedMotion =
-          window.matchMedia(
-            '(prefers-reduced-motion: reduce)'
-          ).matches;
-
-        target.scrollIntoView({
-          behavior:
-            reducedMotion
-              ? 'auto'
-              : 'smooth',
-          block: 'start',
-        });
-      }
-    );
-  }
 
   return (
     <section
@@ -219,30 +174,13 @@ export function MathCurriculumExplorer({
         >
           {mode ===
           'pathways' ? (
-            <>
-              <MathPathwayGrid
-                pathways={
-                  overview.pathways
-                }
-                selectedSlug={
-                  selectedPathway
-                }
-                onSelect={
-                  selectPathway
-                }
-                copy={copy}
-              />
-
-              {pathway && (
-                <MathPathwaySummary
-                  pathway={pathway}
-                  copy={copy}
-                  bookingHref={
-                    bookingHref
-                  }
-                />
-              )}
-            </>
+            <MathPathwayGrid
+              pathways={
+                overview.pathways
+              }
+              locale={locale}
+              copy={copy}
+            />
           ) : (
             <MathGradeBrowser
               grades={

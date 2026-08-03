@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
   ArrowRight,
   BookOpen,
@@ -16,64 +17,49 @@ import type {
 interface MathPathwayCardProps {
   pathway:
     PublicMathPathwaySummary;
-  selected: boolean;
-  onSelect: () => void;
+  href: string;
   copy: MathExplorerCopy;
 }
 
 export function MathPathwayCard({
   pathway,
-  selected,
-  onSelect,
+  href,
   copy,
 }: MathPathwayCardProps) {
   return (
-    <button
-      type="button"
+    <Link
+      href={href}
       id={
         `pathway-card-${pathway.slug}`
       }
-      aria-pressed={selected}
-      aria-controls="math-pathway-summary"
-      onClick={onSelect}
-      className={`
+      className="
         group
         relative
         flex
         h-full
-        min-h-[17.5rem]
+        min-h-[17rem]
         w-full
         flex-col
         overflow-hidden
         rounded-[1.25rem]
         border
+        border-[#DCE5EC]
+        bg-white
         p-6
         text-start
-        transition-[border-color,box-shadow,transform,background-color]
+        shadow-[0_6px_20px_rgba(7,20,38,0.045)]
+        transition-[border-color,box-shadow,transform]
         duration-200
+        hover:-translate-y-1
+        hover:border-[#67E8E5]
+        hover:shadow-[0_16px_38px_rgba(7,20,38,0.09)]
         focus-visible:outline-none
         focus-visible:ring-2
         focus-visible:ring-[#16C7C7]
         focus-visible:ring-offset-2
         motion-reduce:transition-none
         motion-reduce:hover:translate-y-0
-        ${
-          selected
-            ? `
-              border-[#0FA8A8]
-              bg-[#ECFEFD]
-              shadow-[0_16px_38px_rgba(7,20,38,0.10)]
-            `
-            : `
-              border-[#DCE5EC]
-              bg-white
-              shadow-[0_6px_20px_rgba(7,20,38,0.045)]
-              hover:-translate-y-1
-              hover:border-[#67E8E5]
-              hover:shadow-[0_16px_38px_rgba(7,20,38,0.09)]
-            `
-        }
-      `}
+      "
     >
       <div
         aria-hidden="true"
@@ -99,7 +85,7 @@ export function MathPathwayCard({
         "
       >
         <span
-          className={`
+          className="
             flex
             h-12
             w-12
@@ -107,21 +93,14 @@ export function MathPathwayCard({
             items-center
             justify-center
             rounded-2xl
+            bg-[#ECFEFD]
+            text-[#108686]
             ring-1
-            ${
-              selected
-                ? `
-                  bg-[#16C7C7]
-                  text-[#071426]
-                  ring-[#16C7C7]
-                `
-                : `
-                  bg-[#ECFEFD]
-                  text-[#108686]
-                  ring-[#CFFAF8]
-                `
-            }
-          `}
+            ring-[#CFFAF8]
+            transition-colors
+            group-hover:bg-[#16C7C7]
+            group-hover:text-[#071426]
+          "
         >
           <MathPathwayIcon
             iconKey={
@@ -247,7 +226,7 @@ export function MathPathwayCard({
           />
         </span>
       </div>
-    </button>
+    </Link>
   );
 }
 
@@ -283,9 +262,7 @@ function MetaPill({
         strokeWidth={1.8}
       />
 
-      <span
-        className="text-[#0B1F3A]"
-      >
+      <span className="text-[#0B1F3A]">
         {value.toLocaleString()}
       </span>
 
