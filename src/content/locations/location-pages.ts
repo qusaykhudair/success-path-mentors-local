@@ -160,15 +160,6 @@ const commonFaqs = [
   },
 ];
 
-function resources(items: Array<[string,string,string,string]>) {
-  return items.map(([name, en, url, type]) => ({
-    name,
-    description: { en, ar: en },
-    url,
-    type: type as any,
-  }));
-}
-
 export const locationPages: LocationPageDefinition[] = [
   {
     "id": "locations",
