@@ -1,0 +1,201 @@
+{
+  "metadata": {
+    "subject": "Chemistry",
+    "subjectSlug": "chemistry",
+    "strand": "Integrated Chemistry",
+    "strandSlug": "integrated-chemistry",
+    "gradeRange": {
+      "min": 9,
+      "max": 11
+    },
+    "gradeLevels": [
+      9,
+      10,
+      11
+    ],
+    "sourceRecordCount": 7,
+    "gradedSourceRecordCount": 6,
+    "nonGradedSourceRecordCount": 1,
+    "mainTopicCount": 3,
+    "subtopicCount": 6,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "integrated-chemistry",
+    "title": {
+      "en": "Integrated Chemistry",
+      "ar": "الكيمياء المتكاملة"
+    },
+    "description": {
+      "en": "Mixed-concept chemistry review connecting major ideas across the course and preparing students for assessment.",
+      "ar": "مراجعة مترابطة لمفاهيم الكيمياء الرئيسية عبر المقرر والاستعداد للتقييمات والاختبارات."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-chemistry-review",
+          "title": "Chemistry Review",
+          "subtopics": [
+            {
+              "id": "mixed-chemistry-concepts",
+              "title": "Mixed chemistry concepts"
+            }
+          ],
+          "sourceRows": [
+            15
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-chemistry-review",
+          "title": "Chemistry Review",
+          "subtopics": [
+            {
+              "id": "general-chemistry-review",
+              "title": "General chemistry review"
+            },
+            {
+              "id": "mixed-chemistry-concepts",
+              "title": "Mixed chemistry concepts"
+            }
+          ],
+          "sourceRows": [
+            37,
+            38
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-chemistry-review",
+          "title": "Chemistry Review",
+          "subtopics": [
+            {
+              "id": "chemistry-course-review",
+              "title": "Chemistry course review"
+            },
+            {
+              "id": "general-chemistry-review",
+              "title": "General chemistry review"
+            },
+            {
+              "id": "mixed-chemistry-concepts",
+              "title": "Mixed chemistry concepts"
+            }
+          ],
+          "sourceRows": [
+            69,
+            70,
+            71
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 3
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    }
+  ]
+}

@@ -1,0 +1,1636 @@
+{
+  "metadata": {
+    "programme": "Programme français",
+    "matiere": "Mathématiques en français",
+    "matiereSlug": "mathematiques-en-francais",
+    "domaine": "B. Nombres",
+    "domaineSlug": "nombres",
+    "niveaux": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "sourceRecordCount": 95,
+    "publicRecordCount": 92,
+    "nonStandardRecordCount": 3,
+    "mainTopicPlacementCount": 59,
+    "subtopicPlacementCount": 92,
+    "observedRecordCount": 59,
+    "referenceRecordCount": 33,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Les sujets principaux et les sous-sujets sont comptés par niveau. Les répétitions entre niveaux sont conservées comme progression pédagogique.",
+    "integrityRules": [
+      "Les répétitions entre niveaux sont conservées.",
+      "Seuls les doublons exacts Niveau + Domaine + Sujet principal + Sous-sujet peuvent être supprimés.",
+      "Les niveaux CECRL, adultes, secondaires parallèles et non précisés sont conservés dans les fichiers de révision.",
+      "Les niveaux sans contenu sont conservés dans le JSON mais masqués sur le site."
+    ]
+  },
+  "domaine": {
+    "slug": "nombres",
+    "titre": "Nombres",
+    "titreSource": "B. Nombres",
+    "description": "Sens du nombre, opérations, fractions, décimaux, pourcentages, rapports, proportions et estimation.",
+    "iconKey": "nombres"
+  },
+  "niveaux": [
+    {
+      "niveau": 1,
+      "label": "1re année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-1-comparer-ordonner-et-estimer",
+          "titre": "Comparer, ordonner et estimer",
+          "sousSujets": [
+            {
+              "id": "relations-entre-nombres-et-estimation",
+              "titre": "Relations entre nombres et estimation",
+              "competence": "Comparer, ordonner, encadrer et estimer selon le niveau",
+              "activite": "Jeu de classement, nombre mystère et estimation d’une collection",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 9
+            }
+          ],
+          "sourceRows": [
+            9
+          ]
+        },
+        {
+          "id": "niveau-1-fractions-decimaux-et-pourcentages",
+          "titre": "Fractions, décimaux et pourcentages",
+          "sousSujets": [
+            {
+              "id": "fractions-comme-parties-egales-simples",
+              "titre": "fractions comme parties égales simples",
+              "competence": "Représenter, comparer et relier les différentes écritures numériques",
+              "activite": "Bandes de fractions, grille de 100 et droite numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 10
+            }
+          ],
+          "sourceRows": [
+            10
+          ]
+        },
+        {
+          "id": "niveau-1-operations",
+          "titre": "Opérations",
+          "sousSujets": [
+            {
+              "id": "addition-et-soustraction-jusqu-a-20",
+              "titre": "addition et soustraction jusqu’à 20",
+              "competence": "Calculer avec des stratégies concrètes, mentales et écrites",
+              "activite": "Ateliers de calcul, jeux de faits numériques et problèmes",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 11
+            }
+          ],
+          "sourceRows": [
+            11
+          ]
+        },
+        {
+          "id": "niveau-1-sens-du-nombre",
+          "titre": "Sens du nombre",
+          "sousSujets": [
+            {
+              "id": "lire-representer-et-decomposer-des-nombres-jusqu-a-50",
+              "titre": "Lire, représenter et décomposer des nombres jusqu’à 50",
+              "competence": "Relier quantité, symbole, valeur de position et différentes représentations",
+              "activite": "Matériel de base dix, cartes-nombres et droite numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 12
+            }
+          ],
+          "sourceRows": [
+            12
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 4,
+      "nombreSousSujets": 4
+    },
+    {
+      "niveau": 2,
+      "label": "2e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-2-comparer-ordonner-et-estimer",
+          "titre": "Comparer, ordonner et estimer",
+          "sousSujets": [
+            {
+              "id": "relations-entre-nombres-et-estimation",
+              "titre": "Relations entre nombres et estimation",
+              "competence": "Comparer, ordonner, encadrer et estimer selon le niveau",
+              "activite": "Jeu de classement, nombre mystère et estimation d’une collection",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 29
+            }
+          ],
+          "sourceRows": [
+            29
+          ]
+        },
+        {
+          "id": "niveau-2-fractions-decimaux-et-pourcentages",
+          "titre": "Fractions, décimaux et pourcentages",
+          "sousSujets": [
+            {
+              "id": "demis-tiers-et-quarts",
+              "titre": "demis, tiers et quarts",
+              "competence": "Représenter, comparer et relier les différentes écritures numériques",
+              "activite": "Bandes de fractions, grille de 100 et droite numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 30
+            }
+          ],
+          "sourceRows": [
+            30
+          ]
+        },
+        {
+          "id": "niveau-2-operations",
+          "titre": "Opérations",
+          "sousSujets": [
+            {
+              "id": "addition",
+              "titre": "Addition",
+              "competence": "Additionner des nombres avec des stratégies adaptées",
+              "activite": "Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Exercices d’application gradués; Support numérique ou visuel; Tri de nombres, construction de paires et justification",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 31
+            },
+            {
+              "id": "addition-et-soustraction",
+              "titre": "Addition et soustraction",
+              "competence": "Choisir une stratégie, calculer et vérifier",
+              "activite": "Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Support numérique ou visuel; Tri de nombres, construction de paires et justification",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 32
+            },
+            {
+              "id": "division",
+              "titre": "Division",
+              "competence": "Interpréter partage et groupement, calculer quotient et reste",
+              "activite": "Manipulation d’objets, schémas en barres et problèmes de partage; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 33
+            },
+            {
+              "id": "multiplication",
+              "titre": "Multiplication",
+              "competence": "Comprendre les groupes égaux, automatiser les faits et appliquer l’algorithme",
+              "activite": "Support numérique ou visuel; Tableaux, matrices, jeux de cartes et problèmes multiplicatifs",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 34
+            },
+            {
+              "id": "soustraction",
+              "titre": "Soustraction",
+              "competence": "Soustraire et interpréter différence, retrait et comparaison",
+              "activite": "Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Support numérique ou visuel; Tri de nombres, construction de paires et justification",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 35
+            },
+            {
+              "id": "addition-et-soustraction-jusqu-a-100-introduction-a-la-multiplication-division",
+              "titre": "addition et soustraction jusqu’à 100; introduction à la multiplication/division",
+              "competence": "Calculer avec des stratégies concrètes, mentales et écrites",
+              "activite": "Ateliers de calcul, jeux de faits numériques et problèmes",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 36
+            }
+          ],
+          "sourceRows": [
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        },
+        {
+          "id": "niveau-2-proprietes-des-nombres",
+          "titre": "Propriétés des nombres",
+          "sousSujets": [
+            {
+              "id": "nombres-pairs-et-impairs",
+              "titre": "Nombres pairs et impairs",
+              "competence": "Reconnaître et justifier la parité",
+              "activite": "Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Tri de nombres, construction de paires et justification",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 37
+            }
+          ],
+          "sourceRows": [
+            37
+          ]
+        },
+        {
+          "id": "niveau-2-rapports-et-proportionnalite",
+          "titre": "Rapports et proportionnalité",
+          "sousSujets": [
+            {
+              "id": "ratios-taux-et-proportions",
+              "titre": "Ratios, taux et proportions",
+              "competence": "Comparer des quantités et résoudre des situations proportionnelles",
+              "activite": "Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles; Évaluation diagnostique ou formative",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 38
+            }
+          ],
+          "sourceRows": [
+            38
+          ]
+        },
+        {
+          "id": "niveau-2-sens-du-nombre",
+          "titre": "Sens du nombre",
+          "sousSujets": [
+            {
+              "id": "lire-representer-et-decomposer-des-nombres-jusqu-a-200",
+              "titre": "Lire, représenter et décomposer des nombres jusqu’à 200",
+              "competence": "Relier quantité, symbole, valeur de position et différentes représentations",
+              "activite": "Matériel de base dix, cartes-nombres et droite numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 39
+            }
+          ],
+          "sourceRows": [
+            39
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 6,
+      "nombreSousSujets": 11
+    },
+    {
+      "niveau": 3,
+      "label": "3e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-3-comparer-ordonner-et-estimer",
+          "titre": "Comparer, ordonner et estimer",
+          "sousSujets": [
+            {
+              "id": "relations-entre-nombres-et-estimation",
+              "titre": "Relations entre nombres et estimation",
+              "competence": "Comparer, ordonner, encadrer et estimer selon le niveau",
+              "activite": "Jeu de classement, nombre mystère et estimation d’une collection",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 54
+            }
+          ],
+          "sourceRows": [
+            54
+          ]
+        },
+        {
+          "id": "niveau-3-estimation",
+          "titre": "Estimation",
+          "sousSujets": [
+            {
+              "id": "arrondir-et-estimer",
+              "titre": "Arrondir et estimer",
+              "competence": "Arrondir selon une valeur de position et vérifier la vraisemblance",
+              "activite": "Estimation de quantités, prix et résultats de calcul; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 55
+            }
+          ],
+          "sourceRows": [
+            55
+          ]
+        },
+        {
+          "id": "niveau-3-fractions",
+          "titre": "Fractions",
+          "sousSujets": [
+            {
+              "id": "sens-representation-et-equivalence-des-fractions",
+              "titre": "Sens, représentation et équivalence des fractions",
+              "competence": "Représenter, comparer, simplifier et relier fractions et décimaux",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 56
+            }
+          ],
+          "sourceRows": [
+            56
+          ]
+        },
+        {
+          "id": "niveau-3-fractions-decimaux-et-pourcentages",
+          "titre": "Fractions, décimaux et pourcentages",
+          "sousSujets": [
+            {
+              "id": "fractions-unitaires-et-equivalences-simples",
+              "titre": "fractions unitaires et équivalences simples",
+              "competence": "Représenter, comparer et relier les différentes écritures numériques",
+              "activite": "Bandes de fractions, grille de 100 et droite numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 57
+            }
+          ],
+          "sourceRows": [
+            57
+          ]
+        },
+        {
+          "id": "niveau-3-operations",
+          "titre": "Opérations",
+          "sousSujets": [
+            {
+              "id": "division",
+              "titre": "Division",
+              "competence": "Interpréter partage et groupement, calculer quotient et reste",
+              "activite": "Manipulation d’objets, schémas en barres et problèmes de partage; Support numérique ou visuel; Tableaux, matrices, jeux de cartes et problèmes multiplicatifs",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 58
+            },
+            {
+              "id": "multiplication",
+              "titre": "Multiplication",
+              "competence": "Comprendre les groupes égaux, automatiser les faits et appliquer l’algorithme",
+              "activite": "Manipulation d’objets, schémas en barres et problèmes de partage; Support numérique ou visuel; Tableaux, matrices, jeux de cartes et problèmes multiplicatifs",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 59
+            },
+            {
+              "id": "quatre-operations-dans-des-situations-adaptees",
+              "titre": "quatre opérations dans des situations adaptées",
+              "competence": "Calculer avec des stratégies concrètes, mentales et écrites",
+              "activite": "Ateliers de calcul, jeux de faits numériques et problèmes",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 60
+            }
+          ],
+          "sourceRows": [
+            58,
+            59,
+            60
+          ]
+        },
+        {
+          "id": "niveau-3-rapports-et-proportionnalite",
+          "titre": "Rapports et proportionnalité",
+          "sousSujets": [
+            {
+              "id": "ratios-taux-et-proportions",
+              "titre": "Ratios, taux et proportions",
+              "competence": "Comparer des quantités et résoudre des situations proportionnelles",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Correction, révision et remédiation; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 61
+            }
+          ],
+          "sourceRows": [
+            61
+          ]
+        },
+        {
+          "id": "niveau-3-sens-du-nombre",
+          "titre": "Sens du nombre",
+          "sousSujets": [
+            {
+              "id": "lire-representer-et-decomposer-des-nombres-jusqu-a-1-000",
+              "titre": "Lire, représenter et décomposer des nombres jusqu’à 1 000",
+              "competence": "Relier quantité, symbole, valeur de position et différentes représentations",
+              "activite": "Matériel de base dix, cartes-nombres et droite numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 62
+            }
+          ],
+          "sourceRows": [
+            62
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 7,
+      "nombreSousSujets": 9
+    },
+    {
+      "niveau": 4,
+      "label": "4e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-4-comparer-ordonner-et-estimer",
+          "titre": "Comparer, ordonner et estimer",
+          "sousSujets": [
+            {
+              "id": "relations-entre-nombres-et-estimation",
+              "titre": "Relations entre nombres et estimation",
+              "competence": "Comparer, ordonner, encadrer et estimer selon le niveau",
+              "activite": "Jeu de classement, nombre mystère et estimation d’une collection",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 84
+            }
+          ],
+          "sourceRows": [
+            84
+          ]
+        },
+        {
+          "id": "niveau-4-estimation",
+          "titre": "Estimation",
+          "sousSujets": [
+            {
+              "id": "arrondir-et-estimer",
+              "titre": "Arrondir et estimer",
+              "competence": "Arrondir selon une valeur de position et vérifier la vraisemblance",
+              "activite": "Estimation de quantités, prix et résultats de calcul; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 85
+            }
+          ],
+          "sourceRows": [
+            85
+          ]
+        },
+        {
+          "id": "niveau-4-fractions",
+          "titre": "Fractions",
+          "sousSujets": [
+            {
+              "id": "operations-sur-les-fractions",
+              "titre": "Opérations sur les fractions",
+              "competence": "Trouver des dénominateurs communs et calculer avec des fractions",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Horloge manipulable, emploi du temps et problèmes; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 86
+            },
+            {
+              "id": "sens-representation-et-equivalence-des-fractions",
+              "titre": "Sens, représentation et équivalence des fractions",
+              "competence": "Représenter, comparer, simplifier et relier fractions et décimaux",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Horloge manipulable, emploi du temps et problèmes; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles; Tableaux, matrices, jeux de cartes et problèmes multiplicatifs",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne; Élevée",
+              "sourceRow": 87
+            }
+          ],
+          "sourceRows": [
+            86,
+            87
+          ]
+        },
+        {
+          "id": "niveau-4-fractions-decimaux-et-pourcentages",
+          "titre": "Fractions, décimaux et pourcentages",
+          "sousSujets": [
+            {
+              "id": "fractions-equivalentes-decimaux-et-comparaison",
+              "titre": "fractions équivalentes, décimaux et comparaison",
+              "competence": "Représenter, comparer et relier les différentes écritures numériques",
+              "activite": "Bandes de fractions, grille de 100 et droite numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 88
+            }
+          ],
+          "sourceRows": [
+            88
+          ]
+        },
+        {
+          "id": "niveau-4-nombres-decimaux",
+          "titre": "Nombres décimaux",
+          "sousSujets": [
+            {
+              "id": "representation-et-operations-sur-les-decimaux",
+              "titre": "Représentation et opérations sur les décimaux",
+              "competence": "Comparer, arrondir et effectuer des opérations sur les décimaux",
+              "activite": "Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Grille décimale, monnaie, droite numérique et problèmes; Interaction orale ou présentation; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 89
+            }
+          ],
+          "sourceRows": [
+            89
+          ]
+        },
+        {
+          "id": "niveau-4-operations",
+          "titre": "Opérations",
+          "sousSujets": [
+            {
+              "id": "addition",
+              "titre": "Addition",
+              "competence": "Additionner des nombres avec des stratégies adaptées",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Grille décimale, monnaie, droite numérique et problèmes; Horloge manipulable, emploi du temps et problèmes; Interaction orale ou présentation; Problème ouvert, schéma, estimation, solution expliquée et comparaison de méthodes; Résolution de problèmes contextualisés; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 90
+            },
+            {
+              "id": "addition-et-soustraction",
+              "titre": "Addition et soustraction",
+              "competence": "Choisir une stratégie, calculer et vérifier",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Grille décimale, monnaie, droite numérique et problèmes; Horloge manipulable, emploi du temps et problèmes; Interaction orale ou présentation; Problème ouvert, schéma, estimation, solution expliquée et comparaison de méthodes; Résolution de problèmes contextualisés; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 91
+            },
+            {
+              "id": "division",
+              "titre": "Division",
+              "competence": "Interpréter partage et groupement, calculer quotient et reste",
+              "activite": "Manipulation d’objets, schémas en barres et problèmes de partage; Résolution de problèmes contextualisés; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 92
+            },
+            {
+              "id": "multiplication",
+              "titre": "Multiplication",
+              "competence": "Comprendre les groupes égaux, automatiser les faits et appliquer l’algorithme",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Support numérique ou visuel; Tableaux, matrices, jeux de cartes et problèmes multiplicatifs; Évaluation diagnostique ou formative",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne; Élevée",
+              "sourceRow": 93
+            },
+            {
+              "id": "soustraction",
+              "titre": "Soustraction",
+              "competence": "Soustraire et interpréter différence, retrait et comparaison",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Grille décimale, monnaie, droite numérique et problèmes; Horloge manipulable, emploi du temps et problèmes; Interaction orale ou présentation; Problème ouvert, schéma, estimation, solution expliquée et comparaison de méthodes; Résolution de problèmes contextualisés; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 94
+            },
+            {
+              "id": "quatre-operations-faits-multiplicatifs-et-division",
+              "titre": "quatre opérations; faits multiplicatifs et division",
+              "competence": "Calculer avec des stratégies concrètes, mentales et écrites",
+              "activite": "Ateliers de calcul, jeux de faits numériques et problèmes",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 95
+            }
+          ],
+          "sourceRows": [
+            90,
+            91,
+            92,
+            93,
+            94,
+            95
+          ]
+        },
+        {
+          "id": "niveau-4-rapports-et-proportionnalite",
+          "titre": "Rapports et proportionnalité",
+          "sousSujets": [
+            {
+              "id": "ratios-taux-et-proportions",
+              "titre": "Ratios, taux et proportions",
+              "competence": "Comparer des quantités et résoudre des situations proportionnelles",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Matériel de base dix, tableau de numération et droite numérique; Problème ouvert, schéma, estimation, solution expliquée et comparaison de méthodes; Résolution de problèmes contextualisés; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles; Évaluation diagnostique ou formative; Évaluation diagnostique, correction expliquée et parcours de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne; Élevée",
+              "sourceRow": 96
+            }
+          ],
+          "sourceRows": [
+            96
+          ]
+        },
+        {
+          "id": "niveau-4-sens-du-nombre",
+          "titre": "Sens du nombre",
+          "sousSujets": [
+            {
+              "id": "comparer-et-ordonner-les-nombres",
+              "titre": "Comparer et ordonner les nombres",
+              "competence": "Utiliser les symboles et justifier l’ordre",
+              "activite": "Cartes-nombres, droite numérique et défis de classement; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 97
+            },
+            {
+              "id": "lire-representer-et-decomposer-des-nombres-jusqu-a-10-000-et-decimaux-simples",
+              "titre": "Lire, représenter et décomposer des nombres jusqu’à 10 000 et décimaux simples",
+              "competence": "Relier quantité, symbole, valeur de position et différentes représentations",
+              "activite": "Matériel de base dix, cartes-nombres et droite numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 98
+            },
+            {
+              "id": "valeur-de-position-et-composition-des-nombres",
+              "titre": "Valeur de position et composition des nombres",
+              "competence": "Lire, représenter, composer et décomposer des nombres",
+              "activite": "Matériel de base dix, tableau de numération et droite numérique; Tableaux de rapports, recettes, cartes et échelles",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 99
+            }
+          ],
+          "sourceRows": [
+            97,
+            98,
+            99
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 8,
+      "nombreSousSujets": 16
+    },
+    {
+      "niveau": 5,
+      "label": "5e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-5-comparer-ordonner-et-estimer",
+          "titre": "Comparer, ordonner et estimer",
+          "sousSujets": [
+            {
+              "id": "relations-entre-nombres-et-estimation",
+              "titre": "Relations entre nombres et estimation",
+              "competence": "Comparer, ordonner, encadrer et estimer selon le niveau",
+              "activite": "Jeu de classement, nombre mystère et estimation d’une collection",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 123
+            }
+          ],
+          "sourceRows": [
+            123
+          ]
+        },
+        {
+          "id": "niveau-5-fractions",
+          "titre": "Fractions",
+          "sousSujets": [
+            {
+              "id": "operations-sur-les-fractions",
+              "titre": "Opérations sur les fractions",
+              "competence": "Trouver des dénominateurs communs et calculer avec des fractions",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Résolution de problèmes contextualisés; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 124
+            },
+            {
+              "id": "sens-representation-et-equivalence-des-fractions",
+              "titre": "Sens, représentation et équivalence des fractions",
+              "competence": "Représenter, comparer, simplifier et relier fractions et décimaux",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Dés, cartes, simulation et comparaison théorie-expérience; Résolution de problèmes contextualisés; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 125
+            }
+          ],
+          "sourceRows": [
+            124,
+            125
+          ]
+        },
+        {
+          "id": "niveau-5-fractions-decimaux-et-pourcentages",
+          "titre": "Fractions, décimaux et pourcentages",
+          "sousSujets": [
+            {
+              "id": "fractions-impropres-nombres-fractionnaires-et-operations-simples",
+              "titre": "fractions impropres, nombres fractionnaires et opérations simples",
+              "competence": "Représenter, comparer et relier les différentes écritures numériques",
+              "activite": "Bandes de fractions, grille de 100 et droite numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 126
+            }
+          ],
+          "sourceRows": [
+            126
+          ]
+        },
+        {
+          "id": "niveau-5-nombres-decimaux",
+          "titre": "Nombres décimaux",
+          "sousSujets": [
+            {
+              "id": "representation-et-operations-sur-les-decimaux",
+              "titre": "Représentation et opérations sur les décimaux",
+              "competence": "Comparer, arrondir et effectuer des opérations sur les décimaux",
+              "activite": "Grille décimale, monnaie, droite numérique et problèmes; Manipulation d’objets, schémas en barres et problèmes de partage; Support numérique ou visuel; Tableaux, matrices, jeux de cartes et problèmes multiplicatifs",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 127
+            }
+          ],
+          "sourceRows": [
+            127
+          ]
+        },
+        {
+          "id": "niveau-5-operations",
+          "titre": "Opérations",
+          "sousSujets": [
+            {
+              "id": "addition",
+              "titre": "Addition",
+              "competence": "Additionner des nombres avec des stratégies adaptées",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Résolution de problèmes contextualisés; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 128
+            },
+            {
+              "id": "addition-et-soustraction",
+              "titre": "Addition et soustraction",
+              "competence": "Choisir une stratégie, calculer et vérifier",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Résolution de problèmes contextualisés; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 129
+            },
+            {
+              "id": "division",
+              "titre": "Division",
+              "competence": "Interpréter partage et groupement, calculer quotient et reste",
+              "activite": "Grille décimale, monnaie, droite numérique et problèmes; Manipulation d’objets, schémas en barres et problèmes de partage; Support numérique ou visuel; Tableaux, matrices, jeux de cartes et problèmes multiplicatifs",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 130
+            },
+            {
+              "id": "multiplication",
+              "titre": "Multiplication",
+              "competence": "Comprendre les groupes égaux, automatiser les faits et appliquer l’algorithme",
+              "activite": "Grille décimale, monnaie, droite numérique et problèmes; Manipulation d’objets, schémas en barres et problèmes de partage; Support numérique ou visuel; Tableaux, matrices, jeux de cartes et problèmes multiplicatifs",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 131
+            },
+            {
+              "id": "soustraction",
+              "titre": "Soustraction",
+              "competence": "Soustraire et interpréter différence, retrait et comparaison",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Résolution de problèmes contextualisés; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 132
+            },
+            {
+              "id": "operations-sur-entiers-et-decimaux",
+              "titre": "opérations sur entiers et décimaux",
+              "competence": "Calculer avec des stratégies concrètes, mentales et écrites",
+              "activite": "Ateliers de calcul, jeux de faits numériques et problèmes",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 133
+            }
+          ],
+          "sourceRows": [
+            128,
+            129,
+            130,
+            131,
+            132,
+            133
+          ]
+        },
+        {
+          "id": "niveau-5-rapports-et-proportionnalite",
+          "titre": "Rapports et proportionnalité",
+          "sousSujets": [
+            {
+              "id": "ratios-taux-et-proportions",
+              "titre": "Ratios, taux et proportions",
+              "competence": "Comparer des quantités et résoudre des situations proportionnelles",
+              "activite": "Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles; Évaluation diagnostique ou formative; Évaluation diagnostique, correction expliquée et parcours de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 134
+            }
+          ],
+          "sourceRows": [
+            134
+          ]
+        },
+        {
+          "id": "niveau-5-sens-du-nombre",
+          "titre": "Sens du nombre",
+          "sousSujets": [
+            {
+              "id": "lire-representer-et-decomposer-des-nombres-grands-nombres-et-decimaux",
+              "titre": "Lire, représenter et décomposer des nombres grands nombres et décimaux",
+              "competence": "Relier quantité, symbole, valeur de position et différentes représentations",
+              "activite": "Matériel de base dix, cartes-nombres et droite numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 135
+            }
+          ],
+          "sourceRows": [
+            135
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 7,
+      "nombreSousSujets": 13
+    },
+    {
+      "niveau": 6,
+      "label": "6e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-6-comparer-ordonner-et-estimer",
+          "titre": "Comparer, ordonner et estimer",
+          "sousSujets": [
+            {
+              "id": "relations-entre-nombres-et-estimation",
+              "titre": "Relations entre nombres et estimation",
+              "competence": "Comparer, ordonner, encadrer et estimer selon le niveau",
+              "activite": "Jeu de classement, nombre mystère et estimation d’une collection",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 155
+            }
+          ],
+          "sourceRows": [
+            155
+          ]
+        },
+        {
+          "id": "niveau-6-fluidite-de-calcul",
+          "titre": "Fluidité de calcul",
+          "sousSujets": [
+            {
+              "id": "strategies-et-automatismes-de-calcul",
+              "titre": "Stratégies et automatismes de calcul",
+              "competence": "Choisir des stratégies efficaces et expliquer son raisonnement",
+              "activite": "Défis chronométrés, nombre cible et discussion de stratégies; Exercices d’application gradués; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 156
+            }
+          ],
+          "sourceRows": [
+            156
+          ]
+        },
+        {
+          "id": "niveau-6-fractions",
+          "titre": "Fractions",
+          "sousSujets": [
+            {
+              "id": "operations-sur-les-fractions",
+              "titre": "Opérations sur les fractions",
+              "competence": "Trouver des dénominateurs communs et calculer avec des fractions",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Cartes-nombres, droite numérique et défis de classement; Droite numérique, matériel et problèmes de comparaison; Grille décimale, monnaie, droite numérique et problèmes; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles; Tableaux, matrices, jeux de cartes et problèmes multiplicatifs",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 157
+            },
+            {
+              "id": "sens-representation-et-equivalence-des-fractions",
+              "titre": "Sens, représentation et équivalence des fractions",
+              "competence": "Représenter, comparer, simplifier et relier fractions et décimaux",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Cartes-nombres, droite numérique et défis de classement; Correction, révision et remédiation; Droite numérique, matériel et problèmes de comparaison; Exercices d’application gradués; Grille décimale, monnaie, droite numérique et problèmes; Mesure d’objets, plans et problèmes de clôture; Problème ouvert, schéma, estimation, solution expliquée et comparaison de méthodes; Résolution de problèmes contextualisés; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles; Tableaux, matrices, jeux de cartes et problèmes multiplicatifs; Évaluation diagnostique ou formative",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 158
+            }
+          ],
+          "sourceRows": [
+            157,
+            158
+          ]
+        },
+        {
+          "id": "niveau-6-fractions-decimaux-et-pourcentages",
+          "titre": "Fractions, décimaux et pourcentages",
+          "sousSujets": [
+            {
+              "id": "fractions-decimaux-pourcentages-et-ratios",
+              "titre": "fractions, décimaux, pourcentages et ratios",
+              "competence": "Représenter, comparer et relier les différentes écritures numériques",
+              "activite": "Bandes de fractions, grille de 100 et droite numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 159
+            }
+          ],
+          "sourceRows": [
+            159
+          ]
+        },
+        {
+          "id": "niveau-6-nombres-decimaux",
+          "titre": "Nombres décimaux",
+          "sousSujets": [
+            {
+              "id": "representation-et-operations-sur-les-decimaux",
+              "titre": "Représentation et opérations sur les décimaux",
+              "competence": "Comparer, arrondir et effectuer des opérations sur les décimaux",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Cartes-nombres, droite numérique et défis de classement; Droite numérique, matériel et problèmes de comparaison; Grille décimale, monnaie, droite numérique et problèmes; Manipulation d’objets, schémas en barres et problèmes de partage; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles; Tableaux, matrices, jeux de cartes et problèmes multiplicatifs",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 160
+            }
+          ],
+          "sourceRows": [
+            160
+          ]
+        },
+        {
+          "id": "niveau-6-operations",
+          "titre": "Opérations",
+          "sousSujets": [
+            {
+              "id": "addition",
+              "titre": "Addition",
+              "competence": "Additionner des nombres avec des stratégies adaptées",
+              "activite": "Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 161
+            },
+            {
+              "id": "addition-et-soustraction",
+              "titre": "Addition et soustraction",
+              "competence": "Choisir une stratégie, calculer et vérifier",
+              "activite": "Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 162
+            },
+            {
+              "id": "division",
+              "titre": "Division",
+              "competence": "Interpréter partage et groupement, calculer quotient et reste",
+              "activite": "Grille décimale, monnaie, droite numérique et problèmes; Manipulation d’objets, schémas en barres et problèmes de partage; Problème ouvert, schéma, estimation, solution expliquée et comparaison de méthodes; Résolution de problèmes contextualisés; Support numérique ou visuel; Tableaux, matrices, jeux de cartes et problèmes multiplicatifs; Évaluation diagnostique ou formative",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 163
+            },
+            {
+              "id": "multiplication",
+              "titre": "Multiplication",
+              "competence": "Comprendre les groupes égaux, automatiser les faits et appliquer l’algorithme",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Grille décimale, monnaie, droite numérique et problèmes; Manipulation d’objets, schémas en barres et problèmes de partage; Résolution de problèmes contextualisés; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles; Tableaux, matrices, jeux de cartes et problèmes multiplicatifs",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 164
+            },
+            {
+              "id": "soustraction",
+              "titre": "Soustraction",
+              "competence": "Soustraire et interpréter différence, retrait et comparaison",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Calcul mental, algorithmes, matériel manipulable et problèmes; Cartes-nombres, droite numérique et défis de classement; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Grille décimale, monnaie, droite numérique et problèmes; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 165
+            },
+            {
+              "id": "operations-et-ordre-des-operations",
+              "titre": "opérations et ordre des opérations",
+              "competence": "Calculer avec des stratégies concrètes, mentales et écrites",
+              "activite": "Ateliers de calcul, jeux de faits numériques et problèmes",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 166
+            }
+          ],
+          "sourceRows": [
+            161,
+            162,
+            163,
+            164,
+            165,
+            166
+          ]
+        },
+        {
+          "id": "niveau-6-pourcentages",
+          "titre": "Pourcentages",
+          "sousSujets": [
+            {
+              "id": "fractions-decimaux-et-pourcentages",
+              "titre": "Fractions, décimaux et pourcentages",
+              "competence": "Convertir entre représentations et calculer un pourcentage",
+              "activite": "Budget simulé, magasin de classe et analyse d’offres; Grilles de 100, rabais, sondages et problèmes financiers; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 167
+            }
+          ],
+          "sourceRows": [
+            167
+          ]
+        },
+        {
+          "id": "niveau-6-rapports-et-proportionnalite",
+          "titre": "Rapports et proportionnalité",
+          "sousSujets": [
+            {
+              "id": "ratios-taux-et-proportions",
+              "titre": "Ratios, taux et proportions",
+              "competence": "Comparer des quantités et résoudre des situations proportionnelles",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Grille décimale, monnaie, droite numérique et problèmes; Mesure d’objets, plans et problèmes de clôture; Problème ouvert, schéma, estimation, solution expliquée et comparaison de méthodes; Résolution de problèmes contextualisés; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles; Tableaux, matrices, jeux de cartes et problèmes multiplicatifs; Évaluation diagnostique ou formative; Évaluation diagnostique, correction expliquée et parcours de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 168
+            }
+          ],
+          "sourceRows": [
+            168
+          ]
+        },
+        {
+          "id": "niveau-6-sens-du-nombre",
+          "titre": "Sens du nombre",
+          "sousSujets": [
+            {
+              "id": "comparer-et-ordonner-les-nombres",
+              "titre": "Comparer et ordonner les nombres",
+              "competence": "Utiliser les symboles et justifier l’ordre",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Cartes-nombres, droite numérique et défis de classement; Droite numérique, matériel et problèmes de comparaison; Grille décimale, monnaie, droite numérique et problèmes; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 169
+            },
+            {
+              "id": "lire-representer-et-decomposer-des-nombres-entiers-decimaux-et-nombres-negatifs",
+              "titre": "Lire, représenter et décomposer des nombres entiers, décimaux et nombres négatifs",
+              "competence": "Relier quantité, symbole, valeur de position et différentes représentations",
+              "activite": "Matériel de base dix, cartes-nombres et droite numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 170
+            }
+          ],
+          "sourceRows": [
+            169,
+            170
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 9,
+      "nombreSousSujets": 16
+    },
+    {
+      "niveau": 7,
+      "label": "7e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-7-comparer-ordonner-et-estimer",
+          "titre": "Comparer, ordonner et estimer",
+          "sousSujets": [
+            {
+              "id": "relations-entre-nombres-et-estimation",
+              "titre": "Relations entre nombres et estimation",
+              "competence": "Comparer, ordonner, encadrer et estimer selon le niveau",
+              "activite": "Jeu de classement, nombre mystère et estimation d’une collection",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 199
+            }
+          ],
+          "sourceRows": [
+            199
+          ]
+        },
+        {
+          "id": "niveau-7-fractions",
+          "titre": "Fractions",
+          "sousSujets": [
+            {
+              "id": "operations-sur-les-fractions",
+              "titre": "Opérations sur les fractions",
+              "competence": "Trouver des dénominateurs communs et calculer avec des fractions",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Exercices d’application gradués",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 200
+            },
+            {
+              "id": "sens-representation-et-equivalence-des-fractions",
+              "titre": "Sens, représentation et équivalence des fractions",
+              "competence": "Représenter, comparer, simplifier et relier fractions et décimaux",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Exercices d’application gradués; Grilles de 100, rabais, sondages et problèmes financiers; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 201
+            }
+          ],
+          "sourceRows": [
+            200,
+            201
+          ]
+        },
+        {
+          "id": "niveau-7-fractions-decimaux-et-pourcentages",
+          "titre": "Fractions, décimaux et pourcentages",
+          "sousSujets": [
+            {
+              "id": "proportions-et-taux",
+              "titre": "proportions et taux",
+              "competence": "Représenter, comparer et relier les différentes écritures numériques",
+              "activite": "Bandes de fractions, grille de 100 et droite numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 202
+            }
+          ],
+          "sourceRows": [
+            202
+          ]
+        },
+        {
+          "id": "niveau-7-nombres-decimaux",
+          "titre": "Nombres décimaux",
+          "sousSujets": [
+            {
+              "id": "representation-et-operations-sur-les-decimaux",
+              "titre": "Représentation et opérations sur les décimaux",
+              "competence": "Comparer, arrondir et effectuer des opérations sur les décimaux",
+              "activite": "Grille décimale, monnaie, droite numérique et problèmes; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 203
+            }
+          ],
+          "sourceRows": [
+            203
+          ]
+        },
+        {
+          "id": "niveau-7-operations",
+          "titre": "Opérations",
+          "sousSujets": [
+            {
+              "id": "addition",
+              "titre": "Addition",
+              "competence": "Additionner des nombres avec des stratégies adaptées",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Exercices d’application gradués",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 204
+            },
+            {
+              "id": "addition-et-soustraction",
+              "titre": "Addition et soustraction",
+              "competence": "Choisir une stratégie, calculer et vérifier",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 205
+            },
+            {
+              "id": "soustraction",
+              "titre": "Soustraction",
+              "competence": "Soustraire et interpréter différence, retrait et comparaison",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 206
+            },
+            {
+              "id": "operations-sur-rationnels-et-pourcentages",
+              "titre": "opérations sur rationnels et pourcentages",
+              "competence": "Calculer avec des stratégies concrètes, mentales et écrites",
+              "activite": "Ateliers de calcul, jeux de faits numériques et problèmes",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 207
+            }
+          ],
+          "sourceRows": [
+            204,
+            205,
+            206,
+            207
+          ]
+        },
+        {
+          "id": "niveau-7-pourcentages",
+          "titre": "Pourcentages",
+          "sousSujets": [
+            {
+              "id": "fractions-decimaux-et-pourcentages",
+              "titre": "Fractions, décimaux et pourcentages",
+              "competence": "Convertir entre représentations et calculer un pourcentage",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Grilles de 100, rabais, sondages et problèmes financiers; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne; Élevée",
+              "sourceRow": 208
+            }
+          ],
+          "sourceRows": [
+            208
+          ]
+        },
+        {
+          "id": "niveau-7-rapports-et-proportionnalite",
+          "titre": "Rapports et proportionnalité",
+          "sousSujets": [
+            {
+              "id": "ratios-taux-et-proportions",
+              "titre": "Ratios, taux et proportions",
+              "competence": "Comparer des quantités et résoudre des situations proportionnelles",
+              "activite": "Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 209
+            }
+          ],
+          "sourceRows": [
+            209
+          ]
+        },
+        {
+          "id": "niveau-7-sens-du-nombre",
+          "titre": "Sens du nombre",
+          "sousSujets": [
+            {
+              "id": "lire-representer-et-decomposer-des-nombres-nombres-rationnels",
+              "titre": "Lire, représenter et décomposer des nombres nombres rationnels",
+              "competence": "Relier quantité, symbole, valeur de position et différentes représentations",
+              "activite": "Matériel de base dix, cartes-nombres et droite numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 210
+            }
+          ],
+          "sourceRows": [
+            210
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 8,
+      "nombreSousSujets": 12
+    },
+    {
+      "niveau": 8,
+      "label": "8e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-8-comparer-ordonner-et-estimer",
+          "titre": "Comparer, ordonner et estimer",
+          "sousSujets": [
+            {
+              "id": "relations-entre-nombres-et-estimation",
+              "titre": "Relations entre nombres et estimation",
+              "competence": "Comparer, ordonner, encadrer et estimer selon le niveau",
+              "activite": "Jeu de classement, nombre mystère et estimation d’une collection",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 232
+            }
+          ],
+          "sourceRows": [
+            232
+          ]
+        },
+        {
+          "id": "niveau-8-fractions",
+          "titre": "Fractions",
+          "sousSujets": [
+            {
+              "id": "sens-representation-et-equivalence-des-fractions",
+              "titre": "Sens, représentation et équivalence des fractions",
+              "competence": "Représenter, comparer, simplifier et relier fractions et décimaux",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 233
+            }
+          ],
+          "sourceRows": [
+            233
+          ]
+        },
+        {
+          "id": "niveau-8-fractions-decimaux-et-pourcentages",
+          "titre": "Fractions, décimaux et pourcentages",
+          "sousSujets": [
+            {
+              "id": "ratios-taux-pourcentages-et-proportionnalite",
+              "titre": "ratios, taux, pourcentages et proportionnalité",
+              "competence": "Représenter, comparer et relier les différentes écritures numériques",
+              "activite": "Bandes de fractions, grille de 100 et droite numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 234
+            }
+          ],
+          "sourceRows": [
+            234
+          ]
+        },
+        {
+          "id": "niveau-8-operations",
+          "titre": "Opérations",
+          "sousSujets": [
+            {
+              "id": "division",
+              "titre": "Division",
+              "competence": "Interpréter partage et groupement, calculer quotient et reste",
+              "activite": "Manipulation d’objets, schémas en barres et problèmes de partage; Support numérique ou visuel; Tuiles algébriques, organisation verticale et vérification",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 235
+            },
+            {
+              "id": "operations-racines-simples-et-notation-scientifique",
+              "titre": "opérations, racines simples et notation scientifique",
+              "competence": "Calculer avec des stratégies concrètes, mentales et écrites",
+              "activite": "Ateliers de calcul, jeux de faits numériques et problèmes",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 236
+            }
+          ],
+          "sourceRows": [
+            235,
+            236
+          ]
+        },
+        {
+          "id": "niveau-8-rapports-et-proportionnalite",
+          "titre": "Rapports et proportionnalité",
+          "sousSujets": [
+            {
+              "id": "ratios-taux-et-proportions",
+              "titre": "Ratios, taux et proportions",
+              "competence": "Comparer des quantités et résoudre des situations proportionnelles",
+              "activite": "Résolution de problèmes contextualisés; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 237
+            }
+          ],
+          "sourceRows": [
+            237
+          ]
+        },
+        {
+          "id": "niveau-8-sens-du-nombre",
+          "titre": "Sens du nombre",
+          "sousSujets": [
+            {
+              "id": "lire-representer-et-decomposer-des-nombres-nombres-rationnels-et-puissances",
+              "titre": "Lire, représenter et décomposer des nombres nombres rationnels et puissances",
+              "competence": "Relier quantité, symbole, valeur de position et différentes représentations",
+              "activite": "Matériel de base dix, cartes-nombres et droite numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 238
+            }
+          ],
+          "sourceRows": [
+            238
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 6,
+      "nombreSousSujets": 7
+    },
+    {
+      "niveau": 9,
+      "label": "9e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-9-fluidite-de-calcul",
+          "titre": "Fluidité de calcul",
+          "sousSujets": [
+            {
+              "id": "strategies-et-automatismes-de-calcul",
+              "titre": "Stratégies et automatismes de calcul",
+              "competence": "Choisir des stratégies efficaces et expliquer son raisonnement",
+              "activite": "Défis chronométrés, nombre cible et discussion de stratégies; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 269
+            }
+          ],
+          "sourceRows": [
+            269
+          ]
+        },
+        {
+          "id": "niveau-9-nombres-rationnels-puissances-et-notation-scientifique",
+          "titre": "Nombres rationnels, puissances et notation scientifique",
+          "sousSujets": [
+            {
+              "id": "nombres-rationnels-puissances-et-notation-scientifique",
+              "titre": "Nombres rationnels, puissances et notation scientifique",
+              "competence": "Effectuer des opérations, estimer et interpréter les résultats",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 270
+            }
+          ],
+          "sourceRows": [
+            270
+          ]
+        },
+        {
+          "id": "niveau-9-rapports-et-proportionnalite",
+          "titre": "Rapports et proportionnalité",
+          "sousSujets": [
+            {
+              "id": "ratios-taux-et-proportions",
+              "titre": "Ratios, taux et proportions",
+              "competence": "Comparer des quantités et résoudre des situations proportionnelles",
+              "activite": "Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles; Évaluation diagnostique ou formative; Évaluation diagnostique, correction expliquée et parcours de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 271
+            }
+          ],
+          "sourceRows": [
+            271
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 3
+    },
+    {
+      "niveau": 10,
+      "label": "10e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-10-rapports-et-proportionnalite",
+          "titre": "Rapports et proportionnalité",
+          "sousSujets": [
+            {
+              "id": "ratios-taux-et-proportions",
+              "titre": "Ratios, taux et proportions",
+              "competence": "Comparer des quantités et résoudre des situations proportionnelles",
+              "activite": "Mesure de hauteur, inclinaison et résolution contextualisée; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles; Évaluation diagnostique ou formative; Évaluation diagnostique, correction expliquée et parcours de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 312
+            }
+          ],
+          "sourceRows": [
+            312
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 1,
+      "nombreSousSujets": 1
+    },
+    {
+      "niveau": 11,
+      "label": "11e année",
+      "statut": "sans-donnees",
+      "sujetsPrincipaux": [],
+      "nombreSujetsPrincipaux": 0,
+      "nombreSousSujets": 0
+    },
+    {
+      "niveau": 12,
+      "label": "12e année",
+      "statut": "sans-donnees",
+      "sujetsPrincipaux": [],
+      "nombreSujetsPrincipaux": 0,
+      "nombreSousSujets": 0
+    }
+  ]
+}

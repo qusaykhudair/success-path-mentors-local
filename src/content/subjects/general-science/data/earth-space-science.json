@@ -1,0 +1,232 @@
+{
+  "metadata": {
+    "subject": "General Science",
+    "subjectSlug": "general-science",
+    "strand": "Earth and Space Science",
+    "strandSlug": "earth-space-science",
+    "gradeRange": {
+      "min": 5,
+      "max": 10
+    },
+    "gradeLevels": [
+      5,
+      6,
+      8,
+      9,
+      10
+    ],
+    "sourceRecordCount": 9,
+    "gradedSourceRecordCount": 6,
+    "nonGradedSourceRecordCount": 3,
+    "mainTopicCount": 6,
+    "subtopicCount": 6,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in JSON but are hidden from public pages."
+    ]
+  },
+  "strand": {
+    "slug": "earth-space-science",
+    "title": {
+      "en": "Earth and Space Science",
+      "ar": "علوم الأرض والفضاء"
+    },
+    "description": {
+      "en": "Earth systems, weathering and erosion, the solar system, astronomy, and the measurement of astronomical distances.",
+      "ar": "أنظمة الأرض والتجوية والتعرية والنظام الشمسي وعلم الفلك وقياس المسافات الفلكية."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g5-surface-processes",
+          "title": "Surface Processes",
+          "subtopics": [
+            {
+              "id": "weathering-erosion-and-deposition",
+              "title": "Weathering, erosion, and deposition"
+            }
+          ],
+          "sourceRows": [
+            2
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g6-astronomy",
+          "title": "Astronomy",
+          "subtopics": [
+            {
+              "id": "solar-system-and-space",
+              "title": "Solar system and space"
+            }
+          ],
+          "sourceRows": [
+            4
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-earth-systems",
+          "title": "Earth Systems",
+          "subtopics": [
+            {
+              "id": "earth-and-space-systems",
+              "title": "Earth and space systems"
+            }
+          ],
+          "sourceRows": [
+            5
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g8-astronomy",
+          "title": "Astronomy",
+          "subtopics": [
+            {
+              "id": "solar-system-and-space",
+              "title": "Solar system and space"
+            }
+          ],
+          "sourceRows": [
+            26
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-astronomy",
+          "title": "Astronomy",
+          "subtopics": [
+            {
+              "id": "solar-system-and-space",
+              "title": "Solar system and space"
+            }
+          ],
+          "sourceRows": [
+            34
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-astronomy",
+          "title": "Astronomy",
+          "subtopics": [
+            {
+              "id": "measuring-astronomical-distances",
+              "title": "Measuring astronomical distances"
+            }
+          ],
+          "sourceRows": [
+            51
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "metadata": {
+    "subject": "Physics",
+    "subjectSlug": "physics",
+    "strand": "Modern Physics",
+    "strandSlug": "modern-physics",
+    "gradeRange": {
+      "min": 11,
+      "max": 12
+    },
+    "gradeLevels": [
+      11,
+      12
+    ],
+    "sourceRecordCount": 8,
+    "gradedSourceRecordCount": 7,
+    "nonGradedSourceRecordCount": 1,
+    "mainTopicCount": 7,
+    "subtopicCount": 7,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "modern-physics",
+    "title": {
+      "en": "Modern Physics",
+      "ar": "الفيزياء الحديثة"
+    },
+    "description": {
+      "en": "Electromagnetic radiation, quantum theory, the photoelectric effect, particle and nuclear physics, and special relativity.",
+      "ar": "الإشعاع الكهرومغناطيسي ونظرية الكم والتأثير الكهروضوئي وفيزياء الجسيمات والنووية والنسبية الخاصة."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-electromagnetic-radiation",
+          "title": "Electromagnetic Radiation",
+          "subtopics": [
+            {
+              "id": "electromagnetic-spectrum-and-radiation",
+              "title": "Electromagnetic spectrum and radiation"
+            }
+          ],
+          "sourceRows": [
+            79
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-quantum-and-particle-physics",
+          "title": "Quantum and Particle Physics",
+          "subtopics": [
+            {
+              "id": "quantum-theory-photoelectric-effect-and-particle-physics",
+              "title": "Quantum theory, photoelectric effect, and particle physics"
+            }
+          ],
+          "sourceRows": [
+            80
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-electromagnetic-radiation",
+          "title": "Electromagnetic Radiation",
+          "subtopics": [
+            {
+              "id": "electromagnetic-spectrum-and-radiation",
+              "title": "Electromagnetic spectrum and radiation"
+            }
+          ],
+          "sourceRows": [
+            121
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-modern-physics",
+          "title": "Modern Physics",
+          "subtopics": [
+            {
+              "id": "modern-physics-overview",
+              "title": "Modern physics overview"
+            }
+          ],
+          "sourceRows": [
+            122
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-nuclear-physics",
+          "title": "Nuclear Physics",
+          "subtopics": [
+            {
+              "id": "nuclear-structure-and-radioactivity",
+              "title": "Nuclear structure and radioactivity"
+            }
+          ],
+          "sourceRows": [
+            123
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-quantum-and-particle-physics",
+          "title": "Quantum and Particle Physics",
+          "subtopics": [
+            {
+              "id": "quantum-theory-photoelectric-effect-and-particle-physics",
+              "title": "Quantum theory, photoelectric effect, and particle physics"
+            }
+          ],
+          "sourceRows": [
+            124
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-relativity",
+          "title": "Relativity",
+          "subtopics": [
+            {
+              "id": "special-relativity",
+              "title": "Special relativity"
+            }
+          ],
+          "sourceRows": [
+            125
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 5,
+      "subtopicCount": 5
+    }
+  ]
+}

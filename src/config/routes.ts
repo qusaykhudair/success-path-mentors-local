@@ -42,6 +42,17 @@ export const routePath = {
     return `/${locale}/subjects/english/${strandSlug}`;
   },
 
+  scienceStrand(
+    locale: SiteLocale,
+    subjectSlug:
+      | 'chemistry'
+      | 'physics'
+      | 'general-science',
+    strandSlug: string
+  ): string {
+    return `/${locale}/subjects/${subjectSlug}/${strandSlug}`;
+  },
+
   about(locale: SiteLocale): string {
     return `/${locale}/about`;
   },
@@ -105,6 +116,69 @@ export function getEnglishBookingHref(
     locale === 'ar'
       ? 'مرحبًا، أود حجز حصة تجريبية مجانية في اللغة الإنجليزية.'
       : 'Hello, I would like to book a free English trial lesson.';
+
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    message
+  )}`;
+}
+
+export function getChemistryBookingHref(
+  locale: SiteLocale,
+  configuredBookingUrl?: string
+): string {
+  const configured =
+    configuredBookingUrl?.trim();
+
+  if (configured) {
+    return configured;
+  }
+
+  const message =
+    locale === 'ar'
+      ? 'مرحبًا، أود حجز حصة تجريبية مجانية في الكيمياء.'
+      : 'Hello, I would like to book a free Chemistry trial lesson.';
+
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    message
+  )}`;
+}
+
+export function getPhysicsBookingHref(
+  locale: SiteLocale,
+  configuredBookingUrl?: string
+): string {
+  const configured =
+    configuredBookingUrl?.trim();
+
+  if (configured) {
+    return configured;
+  }
+
+  const message =
+    locale === 'ar'
+      ? 'مرحبًا، أود حجز حصة تجريبية مجانية في الفيزياء.'
+      : 'Hello, I would like to book a free Physics trial lesson.';
+
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    message
+  )}`;
+}
+
+export function getGeneralScienceBookingHref(
+  locale: SiteLocale,
+  configuredBookingUrl?: string
+): string {
+  const configured =
+    configuredBookingUrl?.trim();
+
+  if (configured) {
+    return configured;
+  }
+
+  const message =
+    locale === 'ar'
+      ? 'مرحبًا، أود حجز حصة تجريبية مجانية في العلوم العامة.'
+      : 'Hello, I would like to book a free General Science trial lesson.';
 
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     message

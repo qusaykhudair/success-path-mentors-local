@@ -1,0 +1,2474 @@
+{
+  "metadata": {
+    "programme": "Programme français",
+    "matiere": "Français",
+    "matiereSlug": "francais",
+    "domaine": "B. Notions fondamentales de la langue",
+    "domaineSlug": "notions-fondamentales-langue",
+    "niveaux": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 165,
+    "publicRecordCount": 146,
+    "nonStandardRecordCount": 19,
+    "mainTopicPlacementCount": 89,
+    "subtopicPlacementCount": 146,
+    "observedRecordCount": 79,
+    "referenceRecordCount": 67,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Les sujets principaux et les sous-sujets sont comptés par niveau. Les répétitions entre niveaux sont conservées comme progression pédagogique.",
+    "integrityRules": [
+      "Les répétitions entre niveaux sont conservées.",
+      "Seuls les doublons exacts Niveau + Domaine + Sujet principal + Sous-sujet peuvent être supprimés.",
+      "Les niveaux CECRL, adultes, secondaires parallèles et non précisés sont conservés dans les fichiers de révision.",
+      "Les niveaux sans contenu sont conservés dans le JSON mais masqués sur le site."
+    ]
+  },
+  "domaine": {
+    "slug": "notions-fondamentales-langue",
+    "titre": "Notions fondamentales de la langue",
+    "titreSource": "B. Notions fondamentales de la langue",
+    "description": "Conscience phonologique, vocabulaire, orthographe, grammaire, conjugaison et fonctionnement de la langue.",
+    "iconKey": "langue"
+  },
+  "niveaux": [
+    {
+      "niveau": 1,
+      "label": "1re année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-1-classes-et-fonctions-des-mots",
+          "titre": "Classes et fonctions des mots",
+          "sousSujets": [
+            {
+              "id": "nom-determinant-adjectif-verbe-pronom-et-complements",
+              "titre": "Nom, déterminant, adjectif, verbe, pronom et compléments",
+              "competence": "Reconnaître nom, déterminant, adjectif et verbe dans une phrase simple",
+              "activite": "Codage couleur, classement, remplacement et analyse de phrases",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 10
+            }
+          ],
+          "sourceRows": [
+            10
+          ]
+        },
+        {
+          "id": "niveau-1-conjugaison",
+          "titre": "Conjugaison",
+          "sousSujets": [
+            {
+              "id": "present-des-verbes-frequents",
+              "titre": "Présent des verbes fréquents",
+              "competence": "Conjuguer et employer les formes verbales attendues dans des phrases contextualisées",
+              "activite": "Frise temporelle, tableau de conjugaison, transformation et rédaction courte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 11
+            }
+          ],
+          "sourceRows": [
+            11
+          ]
+        },
+        {
+          "id": "niveau-1-conscience-phonologique-et-code",
+          "titre": "Conscience phonologique et code",
+          "sousSujets": [
+            {
+              "id": "phonemes-graphemes-syllabes-et-decodage",
+              "titre": "Phonèmes, graphèmes, syllabes et décodage",
+              "competence": "Associer les sons fréquents aux lettres et lire des syllabes/mots réguliers",
+              "activite": "Tri de sons, segmentation syllabique, lecture de pseudo-mots et dictée de syllabes",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 12
+            }
+          ],
+          "sourceRows": [
+            12
+          ]
+        },
+        {
+          "id": "niveau-1-fluidite-et-oralisation",
+          "titre": "Fluidité et oralisation",
+          "sousSujets": [
+            {
+              "id": "exactitude-rythme-et-prosodie",
+              "titre": "Exactitude, rythme et prosodie",
+              "competence": "Lire des phrases et courts textes avec exactitude",
+              "activite": "Lecture répétée, lecture en duo, enregistrement et autoévaluation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 13
+            }
+          ],
+          "sourceRows": [
+            13
+          ]
+        },
+        {
+          "id": "niveau-1-grammaire-et-syntaxe",
+          "titre": "Grammaire et syntaxe",
+          "sousSujets": [
+            {
+              "id": "structure-de-la-phrase",
+              "titre": "Structure de la phrase",
+              "competence": "Construire une phrase simple complète avec sujet et verbe",
+              "activite": "Manipulations syntaxiques, expansion/réduction et fusion de phrases",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 14
+            }
+          ],
+          "sourceRows": [
+            14
+          ]
+        },
+        {
+          "id": "niveau-1-orthographe",
+          "titre": "Orthographe",
+          "sousSujets": [
+            {
+              "id": "mots-frequents-sons-complexes-et-majuscule-point",
+              "titre": "Mots fréquents, sons complexes et majuscule/point",
+              "competence": "Appliquer les régularités et justifier les choix orthographiques dans ses textes",
+              "activite": "Dictée préparée/négociée, correction codée et carnet de mots",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 15
+            }
+          ],
+          "sourceRows": [
+            15
+          ]
+        },
+        {
+          "id": "niveau-1-vocabulaire",
+          "titre": "Vocabulaire",
+          "sousSujets": [
+            {
+              "id": "sens-des-mots-et-relations-lexicales",
+              "titre": "Sens des mots et relations lexicales",
+              "competence": "Enrichir le vocabulaire quotidien et utiliser des mots précis",
+              "activite": "Carte de mots, mur lexical, devinettes et réemploi en contexte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 16
+            }
+          ],
+          "sourceRows": [
+            16
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 7,
+      "nombreSousSujets": 7
+    },
+    {
+      "niveau": 2,
+      "label": "2e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-2-classes-de-mots",
+          "titre": "Classes de mots",
+          "sousSujets": [
+            {
+              "id": "adjectif-qualificatif",
+              "titre": "Adjectif qualificatif",
+              "competence": "Identifier, placer et accorder l’adjectif",
+              "activite": "Encadrement, remplacement, déplacement et construction de phrases; Exercices d’application gradués; Portrait enrichi, expansions du nom et correction d’accords; Support numérique ou visuel; Écriture guidée à partir d’un plan, grille de révision et publication",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 31
+            },
+            {
+              "id": "prepositions",
+              "titre": "Prépositions",
+              "competence": "Employer les prépositions dans les groupes et les compléments",
+              "activite": "Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Phrases à compléter et description spatiale; Support numérique ou visuel; Écriture guidée à partir d’un plan, grille de révision et publication",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 32
+            }
+          ],
+          "sourceRows": [
+            31,
+            32
+          ]
+        },
+        {
+          "id": "niveau-2-classes-et-fonctions-des-mots",
+          "titre": "Classes et fonctions des mots",
+          "sousSujets": [
+            {
+              "id": "nom-determinant-adjectif-verbe-pronom-et-complements",
+              "titre": "Nom, déterminant, adjectif, verbe, pronom et compléments",
+              "competence": "Reconnaître nom, déterminant, adjectif et verbe dans une phrase simple",
+              "activite": "Codage couleur, classement, remplacement et analyse de phrases",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 33
+            }
+          ],
+          "sourceRows": [
+            33
+          ]
+        },
+        {
+          "id": "niveau-2-conjugaison",
+          "titre": "Conjugaison",
+          "sousSujets": [
+            {
+              "id": "imparfait-de-l-indicatif",
+              "titre": "Imparfait de l’indicatif",
+              "competence": "Former et employer l’imparfait pour la description et l’habitude",
+              "activite": "Lecture de récit, repérage et transformation avec le passé composé; Support numérique ou visuel; Transformation présent-imparfait et rédaction d’un souvenir",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 34
+            },
+            {
+              "id": "modes-temps-et-formes-verbales",
+              "titre": "Modes, temps et formes verbales",
+              "competence": "Identifier les modes et choisir le temps adapté",
+              "activite": "Production écrite guidée; Support numérique ou visuel; Table de conjugaison, phrases contextualisées et jeu de rapidité; Tableau comparatif, ligne du temps et transformation de phrases; Écriture guidée à partir d’un plan, grille de révision et publication",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 35
+            },
+            {
+              "id": "passe-compose",
+              "titre": "Passé composé",
+              "competence": "Choisir l’auxiliaire, former le participe passé et situer une action achevée",
+              "activite": "Frise chronologique, récit au passé et exercices de choix d’auxiliaire; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 36
+            },
+            {
+              "id": "passe-simple",
+              "titre": "Passé simple",
+              "competence": "Reconnaître et employer les formes fréquentes dans le récit",
+              "activite": "Lecture de récit, repérage et transformation avec le passé composé; Support numérique ou visuel; Transformation présent-imparfait et rédaction d’un souvenir",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 37
+            },
+            {
+              "id": "present-de-l-indicatif",
+              "titre": "Présent de l’indicatif",
+              "competence": "Conjuguer les verbes usuels et employer le présent selon le contexte",
+              "activite": "Production écrite guidée; Support numérique ou visuel; Table de conjugaison, phrases contextualisées et jeu de rapidité; Tableau comparatif, ligne du temps et transformation de phrases; Écriture guidée à partir d’un plan, grille de révision et publication",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 38
+            },
+            {
+              "id": "present-futur-proche-et-passe-compose",
+              "titre": "Présent, futur proche et passé composé",
+              "competence": "Conjuguer et employer les formes verbales attendues dans des phrases contextualisées",
+              "activite": "Frise temporelle, tableau de conjugaison, transformation et rédaction courte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 39
+            }
+          ],
+          "sourceRows": [
+            34,
+            35,
+            36,
+            37,
+            38,
+            39
+          ]
+        },
+        {
+          "id": "niveau-2-conscience-phonologique-et-code",
+          "titre": "Conscience phonologique et code",
+          "sousSujets": [
+            {
+              "id": "phonemes-graphemes-syllabes-et-decodage",
+              "titre": "Phonèmes, graphèmes, syllabes et décodage",
+              "competence": "Décoder des mots multisyllabiques et mobiliser les régularités orthographiques",
+              "activite": "Tri de sons, segmentation syllabique, lecture de pseudo-mots et dictée de syllabes",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 40
+            }
+          ],
+          "sourceRows": [
+            40
+          ]
+        },
+        {
+          "id": "niveau-2-fluidite-et-oralisation",
+          "titre": "Fluidité et oralisation",
+          "sousSujets": [
+            {
+              "id": "exactitude-rythme-et-prosodie",
+              "titre": "Exactitude, rythme et prosodie",
+              "competence": "Lire des phrases et courts textes avec exactitude",
+              "activite": "Lecture répétée, lecture en duo, enregistrement et autoévaluation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 41
+            },
+            {
+              "id": "prononciation-liaison-et-fluidite",
+              "titre": "Prononciation, liaison et fluidité",
+              "competence": "Lire avec exactitude, rythme, intonation et articulation",
+              "activite": "Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Lecture répétée, enregistrement audio et rétroaction ciblée; Schéma narratif, remise en ordre d’événements et réécriture d’une fin; Support numérique ou visuel; Transformation singulier-pluriel et masculin-féminin",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 42
+            }
+          ],
+          "sourceRows": [
+            41,
+            42
+          ]
+        },
+        {
+          "id": "niveau-2-fonctions-syntaxiques",
+          "titre": "Fonctions syntaxiques",
+          "sousSujets": [
+            {
+              "id": "sujet-predicat-et-groupes-de-la-phrase",
+              "titre": "Sujet, prédicat et groupes de la phrase",
+              "competence": "Repérer les constituants de base et leurs noyaux",
+              "activite": "Encadrement, remplacement, déplacement et construction de phrases; Exercices d’application gradués; Portrait enrichi, expansions du nom et correction d’accords; Support numérique ou visuel; Écriture guidée à partir d’un plan, grille de révision et publication",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 43
+            }
+          ],
+          "sourceRows": [
+            43
+          ]
+        },
+        {
+          "id": "niveau-2-grammaire-et-syntaxe",
+          "titre": "Grammaire et syntaxe",
+          "sousSujets": [
+            {
+              "id": "structure-de-la-phrase",
+              "titre": "Structure de la phrase",
+              "competence": "Construire une phrase simple complète avec sujet et verbe",
+              "activite": "Manipulations syntaxiques, expansion/réduction et fusion de phrases",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 44
+            }
+          ],
+          "sourceRows": [
+            44
+          ]
+        },
+        {
+          "id": "niveau-2-orthographe",
+          "titre": "Orthographe",
+          "sousSujets": [
+            {
+              "id": "mots-frequents-sons-complexes-et-majuscule-point",
+              "titre": "Mots fréquents, sons complexes et majuscule/point",
+              "competence": "Appliquer les régularités et justifier les choix orthographiques dans ses textes",
+              "activite": "Dictée préparée/négociée, correction codée et carnet de mots",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 45
+            }
+          ],
+          "sourceRows": [
+            45
+          ]
+        },
+        {
+          "id": "niveau-2-orthographe-grammaticale",
+          "titre": "Orthographe grammaticale",
+          "sousSujets": [
+            {
+              "id": "accords-en-genre-et-en-nombre",
+              "titre": "Accords en genre et en nombre",
+              "competence": "Accorder déterminant, nom et adjectif dans le groupe nominal",
+              "activite": "Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Lecture répétée, enregistrement audio et rétroaction ciblée; Schéma narratif, remise en ordre d’événements et réécriture d’une fin; Support numérique ou visuel; Transformation singulier-pluriel et masculin-féminin",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 46
+            }
+          ],
+          "sourceRows": [
+            46
+          ]
+        },
+        {
+          "id": "niveau-2-vocabulaire",
+          "titre": "Vocabulaire",
+          "sousSujets": [
+            {
+              "id": "developpement-du-lexique",
+              "titre": "Développement du lexique",
+              "competence": "Comprendre, mémoriser et réutiliser un vocabulaire précis",
+              "activite": "Carte de mots, familles lexicales, synonymes-antonymes et phrase contextualisée; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 47
+            },
+            {
+              "id": "sens-des-mots-et-relations-lexicales",
+              "titre": "Sens des mots et relations lexicales",
+              "competence": "Enrichir le vocabulaire quotidien et utiliser des mots précis",
+              "activite": "Carte de mots, mur lexical, devinettes et réemploi en contexte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 48
+            }
+          ],
+          "sourceRows": [
+            47,
+            48
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 10,
+      "nombreSousSujets": 18
+    },
+    {
+      "niveau": 3,
+      "label": "3e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-3-classes-et-fonctions-des-mots",
+          "titre": "Classes et fonctions des mots",
+          "sousSujets": [
+            {
+              "id": "nom-determinant-adjectif-verbe-pronom-et-complements",
+              "titre": "Nom, déterminant, adjectif, verbe, pronom et compléments",
+              "competence": "Reconnaître nom, déterminant, adjectif et verbe dans une phrase simple",
+              "activite": "Codage couleur, classement, remplacement et analyse de phrases",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 65
+            }
+          ],
+          "sourceRows": [
+            65
+          ]
+        },
+        {
+          "id": "niveau-3-conjugaison",
+          "titre": "Conjugaison",
+          "sousSujets": [
+            {
+              "id": "conditionnel-present",
+              "titre": "Conditionnel présent",
+              "competence": "Exprimer le souhait, l’hypothèse, le conseil et la politesse",
+              "activite": "Jeu de situations, conseils et phrases hypothétiques; Support numérique ou visuel; Table de conjugaison, phrases contextualisées et jeu de rapidité",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 66
+            },
+            {
+              "id": "futur-proche",
+              "titre": "Futur proche",
+              "competence": "Exprimer une intention ou une action imminente",
+              "activite": "Planifier la semaine et jeu de rôle; Prévisions, projet personnel et phrases à compléter; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 67
+            },
+            {
+              "id": "futur-simple",
+              "titre": "Futur simple",
+              "competence": "Former le futur et exprimer une action à venir",
+              "activite": "Planifier la semaine et jeu de rôle; Prévisions, projet personnel et phrases à compléter; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 68
+            },
+            {
+              "id": "present-de-l-indicatif",
+              "titre": "Présent de l’indicatif",
+              "competence": "Conjuguer les verbes usuels et employer le présent selon le contexte",
+              "activite": "Jeu de situations, conseils et phrases hypothétiques; Support numérique ou visuel; Table de conjugaison, phrases contextualisées et jeu de rapidité",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 69
+            },
+            {
+              "id": "present-imparfait-et-futur-simple",
+              "titre": "Présent, imparfait et futur simple",
+              "competence": "Conjuguer et employer les formes verbales attendues dans des phrases contextualisées",
+              "activite": "Frise temporelle, tableau de conjugaison, transformation et rédaction courte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 70
+            }
+          ],
+          "sourceRows": [
+            66,
+            67,
+            68,
+            69,
+            70
+          ]
+        },
+        {
+          "id": "niveau-3-conscience-phonologique-et-code",
+          "titre": "Conscience phonologique et code",
+          "sousSujets": [
+            {
+              "id": "phonemes-graphemes-syllabes-et-decodage",
+              "titre": "Phonèmes, graphèmes, syllabes et décodage",
+              "competence": "Décoder des mots multisyllabiques et mobiliser les régularités orthographiques",
+              "activite": "Tri de sons, segmentation syllabique, lecture de pseudo-mots et dictée de syllabes",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 71
+            }
+          ],
+          "sourceRows": [
+            71
+          ]
+        },
+        {
+          "id": "niveau-3-fluidite-et-oralisation",
+          "titre": "Fluidité et oralisation",
+          "sousSujets": [
+            {
+              "id": "exactitude-rythme-et-prosodie",
+              "titre": "Exactitude, rythme et prosodie",
+              "competence": "Lire des textes variés avec fluidité, expression et respect de la ponctuation",
+              "activite": "Lecture répétée, lecture en duo, enregistrement et autoévaluation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 72
+            }
+          ],
+          "sourceRows": [
+            72
+          ]
+        },
+        {
+          "id": "niveau-3-grammaire-et-syntaxe",
+          "titre": "Grammaire et syntaxe",
+          "sousSujets": [
+            {
+              "id": "structure-de-la-phrase",
+              "titre": "Structure de la phrase",
+              "competence": "Analyser et produire des phrases simples et complexes avec groupes et propositions",
+              "activite": "Manipulations syntaxiques, expansion/réduction et fusion de phrases",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 73
+            }
+          ],
+          "sourceRows": [
+            73
+          ]
+        },
+        {
+          "id": "niveau-3-orthographe",
+          "titre": "Orthographe",
+          "sousSujets": [
+            {
+              "id": "accords-dans-le-groupe-nominal-et-homophones-frequents",
+              "titre": "Accords dans le groupe nominal et homophones fréquents",
+              "competence": "Appliquer les régularités et justifier les choix orthographiques dans ses textes",
+              "activite": "Dictée préparée/négociée, correction codée et carnet de mots",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 74
+            }
+          ],
+          "sourceRows": [
+            74
+          ]
+        },
+        {
+          "id": "niveau-3-vocabulaire",
+          "titre": "Vocabulaire",
+          "sousSujets": [
+            {
+              "id": "sens-des-mots-et-relations-lexicales",
+              "titre": "Sens des mots et relations lexicales",
+              "competence": "Analyser préfixes, suffixes, familles de mots, synonymes, antonymes et champs lexicaux",
+              "activite": "Carte de mots, mur lexical, devinettes et réemploi en contexte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 75
+            }
+          ],
+          "sourceRows": [
+            75
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 7,
+      "nombreSousSujets": 11
+    },
+    {
+      "niveau": 4,
+      "label": "4e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-4-classes-de-mots",
+          "titre": "Classes de mots",
+          "sousSujets": [
+            {
+              "id": "nom-commun-et-nom-propre",
+              "titre": "Nom commun et nom propre",
+              "competence": "Identifier le nom et ses caractéristiques de genre et de nombre",
+              "activite": "Classement de cas, justification de l’accord et correction de texte; Classement, enrichissement de groupes nominaux et production de phrases; Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Frise chronologique, récit au passé et exercices de choix d’auxiliaire; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Repérage dans un texte, classement par groupe et conjugaison; Table de conjugaison, phrases contextualisées et jeu de rapidité; Tableau comparatif, ligne du temps et transformation de phrases; Tri de phrases, transformation et création de titres; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 94
+            },
+            {
+              "id": "verbe-et-groupes-verbaux",
+              "titre": "Verbe et groupes verbaux",
+              "competence": "Identifier le verbe, son infinitif, son groupe et sa fonction",
+              "activite": "Classement, enrichissement de groupes nominaux et production de phrases; Correction, révision et remédiation; Exercices d’application gradués; Frise chronologique, récit au passé et exercices de choix d’auxiliaire; Repérage dans un texte, classement par groupe et conjugaison; Table de conjugaison, phrases contextualisées et jeu de rapidité; Tableau comparatif, ligne du temps et transformation de phrases; Tri de phrases, transformation et création de titres; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 95
+            }
+          ],
+          "sourceRows": [
+            94,
+            95
+          ]
+        },
+        {
+          "id": "niveau-4-classes-et-fonctions-des-mots",
+          "titre": "Classes et fonctions des mots",
+          "sousSujets": [
+            {
+              "id": "nom-determinant-adjectif-verbe-pronom-et-complements",
+              "titre": "Nom, déterminant, adjectif, verbe, pronom et compléments",
+              "competence": "Identifier classes et fonctions; utiliser pronoms et compléments pour assurer la cohésion",
+              "activite": "Codage couleur, classement, remplacement et analyse de phrases",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 96
+            }
+          ],
+          "sourceRows": [
+            96
+          ]
+        },
+        {
+          "id": "niveau-4-conjugaison",
+          "titre": "Conjugaison",
+          "sousSujets": [
+            {
+              "id": "conditionnel-present",
+              "titre": "Conditionnel présent",
+              "competence": "Exprimer le souhait, l’hypothèse, le conseil et la politesse",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Jeu de situations, conseils et phrases hypothétiques; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Lecture répétée, enregistrement audio et rétroaction ciblée; Phrases à trous, justification grammaticale et dictée ciblée; Rédiger une lettre, répondre à un courriel et corriger avec une grille; Table de conjugaison, phrases contextualisées et jeu de rapidité; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 97
+            },
+            {
+              "id": "futur-proche",
+              "titre": "Futur proche",
+              "competence": "Exprimer une intention ou une action imminente",
+              "activite": "Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Planifier la semaine et jeu de rôle; Prévisions, projet personnel et phrases à compléter; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 98
+            },
+            {
+              "id": "futur-simple",
+              "titre": "Futur simple",
+              "competence": "Former le futur et exprimer une action à venir",
+              "activite": "Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Planifier la semaine et jeu de rôle; Prévisions, projet personnel et phrases à compléter; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 99
+            },
+            {
+              "id": "imparfait-de-l-indicatif",
+              "titre": "Imparfait de l’indicatif",
+              "competence": "Former et employer l’imparfait pour la description et l’habitude",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Transformation présent-imparfait et rédaction d’un souvenir; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 100
+            },
+            {
+              "id": "modes-temps-et-formes-verbales",
+              "titre": "Modes, temps et formes verbales",
+              "competence": "Identifier les modes et choisir le temps adapté",
+              "activite": "Classement de cas, justification de l’accord et correction de texte; Classement, enrichissement de groupes nominaux et production de phrases; Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Frise chronologique, récit au passé et exercices de choix d’auxiliaire; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Repérage dans un texte, classement par groupe et conjugaison; Table de conjugaison, phrases contextualisées et jeu de rapidité; Tableau comparatif, ligne du temps et transformation de phrases; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 101
+            },
+            {
+              "id": "passe-compose",
+              "titre": "Passé composé",
+              "competence": "Choisir l’auxiliaire, former le participe passé et situer une action achevée",
+              "activite": "Classement, enrichissement de groupes nominaux et production de phrases; Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Frise chronologique, récit au passé et exercices de choix d’auxiliaire; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Repérage dans un texte, classement par groupe et conjugaison; Table de conjugaison, phrases contextualisées et jeu de rapidité; Tableau comparatif, ligne du temps et transformation de phrases; Tri de phrases, transformation et création de titres; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 102
+            },
+            {
+              "id": "present-de-l-indicatif",
+              "titre": "Présent de l’indicatif",
+              "competence": "Conjuguer les verbes usuels et employer le présent selon le contexte",
+              "activite": "Classement, enrichissement de groupes nominaux et production de phrases; Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Frise chronologique, récit au passé et exercices de choix d’auxiliaire; Jeu de situations, conseils et phrases hypothétiques; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Repérage dans un texte, classement par groupe et conjugaison; Rédiger une lettre, répondre à un courriel et corriger avec une grille; Support numérique ou visuel; Table de conjugaison, phrases contextualisées et jeu de rapidité; Tableau comparatif, ligne du temps et transformation de phrases; Tri de phrases, transformation et création de titres; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 103
+            },
+            {
+              "id": "present-imparfait-futur-et-passe-compose",
+              "titre": "Présent, imparfait, futur et passé composé",
+              "competence": "Conjuguer et employer les formes verbales attendues dans des phrases contextualisées",
+              "activite": "Frise temporelle, tableau de conjugaison, transformation et rédaction courte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 104
+            }
+          ],
+          "sourceRows": [
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104
+          ]
+        },
+        {
+          "id": "niveau-4-fluidite-et-oralisation",
+          "titre": "Fluidité et oralisation",
+          "sousSujets": [
+            {
+              "id": "exactitude-rythme-et-prosodie",
+              "titre": "Exactitude, rythme et prosodie",
+              "competence": "Lire des textes variés avec fluidité, expression et respect de la ponctuation",
+              "activite": "Lecture répétée, lecture en duo, enregistrement et autoévaluation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 105
+            },
+            {
+              "id": "prononciation-liaison-et-fluidite",
+              "titre": "Prononciation, liaison et fluidité",
+              "competence": "Lire avec exactitude, rythme, intonation et articulation",
+              "activite": "Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Jeu de situations, conseils et phrases hypothétiques; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Lecture répétée, enregistrement audio et rétroaction ciblée; Rédiger une lettre, répondre à un courriel et corriger avec une grille",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 106
+            }
+          ],
+          "sourceRows": [
+            105,
+            106
+          ]
+        },
+        {
+          "id": "niveau-4-grammaire-et-syntaxe",
+          "titre": "Grammaire et syntaxe",
+          "sousSujets": [
+            {
+              "id": "structure-de-la-phrase",
+              "titre": "Structure de la phrase",
+              "competence": "Analyser et produire des phrases simples et complexes avec groupes et propositions",
+              "activite": "Manipulations syntaxiques, expansion/réduction et fusion de phrases",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 107
+            }
+          ],
+          "sourceRows": [
+            107
+          ]
+        },
+        {
+          "id": "niveau-4-orthographe",
+          "titre": "Orthographe",
+          "sousSujets": [
+            {
+              "id": "accords-dans-le-groupe-nominal-et-homophones-frequents",
+              "titre": "Accords dans le groupe nominal et homophones fréquents",
+              "competence": "Appliquer les régularités et justifier les choix orthographiques dans ses textes",
+              "activite": "Dictée préparée/négociée, correction codée et carnet de mots",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 108
+            },
+            {
+              "id": "dictee-et-automatisation-orthographique",
+              "titre": "Dictée et automatisation orthographique",
+              "competence": "Mobiliser les correspondances phonèmes-graphèmes et les règles étudiées",
+              "activite": "Classement de cas, justification de l’accord et correction de texte; Classement, enrichissement de groupes nominaux et production de phrases; Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Frise chronologique, récit au passé et exercices de choix d’auxiliaire; Jeu de situations, conseils et phrases hypothétiques; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Lecture répétée, enregistrement audio et rétroaction ciblée; Phrases à trous, justification grammaticale et dictée ciblée; Production écrite guidée; Rédiger une lettre, répondre à un courriel et corriger avec une grille; Support numérique ou visuel; Table de conjugaison, phrases contextualisées et jeu de rapidité; Tableau comparatif, ligne du temps et transformation de phrases; Transformation présent-imparfait et rédaction d’un souvenir; Écriture guidée à partir d’un plan, grille de révision et publication; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne; Élevée",
+              "sourceRow": 109
+            }
+          ],
+          "sourceRows": [
+            108,
+            109
+          ]
+        },
+        {
+          "id": "niveau-4-orthographe-grammaticale",
+          "titre": "Orthographe grammaticale",
+          "sousSujets": [
+            {
+              "id": "accord-du-participe-passe",
+              "titre": "Accord du participe passé",
+              "competence": "Appliquer les règles avec être, avoir et les verbes pronominaux",
+              "activite": "Classement de cas, justification de l’accord et correction de texte; Classement, enrichissement de groupes nominaux et production de phrases; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Tableau comparatif, ligne du temps et transformation de phrases",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 110
+            },
+            {
+              "id": "homophones-grammaticaux",
+              "titre": "Homophones grammaticaux",
+              "competence": "Choisir la graphie correcte selon le sens et la fonction",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Jeu de situations, conseils et phrases hypothétiques; Phrases à trous, justification grammaticale et dictée ciblée; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 111
+            }
+          ],
+          "sourceRows": [
+            110,
+            111
+          ]
+        },
+        {
+          "id": "niveau-4-syntaxe",
+          "titre": "Syntaxe",
+          "sousSujets": [
+            {
+              "id": "phrase-verbale-et-non-verbale",
+              "titre": "Phrase verbale et non verbale",
+              "competence": "Identifier le verbe noyau et transformer les structures",
+              "activite": "Classement, enrichissement de groupes nominaux et production de phrases; Correction, révision et remédiation; Frise chronologique, récit au passé et exercices de choix d’auxiliaire; Repérage dans un texte, classement par groupe et conjugaison; Table de conjugaison, phrases contextualisées et jeu de rapidité; Tri de phrases, transformation et création de titres; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 112
+            }
+          ],
+          "sourceRows": [
+            112
+          ]
+        },
+        {
+          "id": "niveau-4-vocabulaire",
+          "titre": "Vocabulaire",
+          "sousSujets": [
+            {
+              "id": "developpement-du-lexique",
+              "titre": "Développement du lexique",
+              "competence": "Comprendre, mémoriser et réutiliser un vocabulaire précis",
+              "activite": "Carte de mots, familles lexicales, synonymes-antonymes et phrase contextualisée; Interaction orale ou présentation; Jeu de rôle, exposé bref, entretien et rétroaction; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 113
+            },
+            {
+              "id": "sens-des-mots-et-relations-lexicales",
+              "titre": "Sens des mots et relations lexicales",
+              "competence": "Analyser préfixes, suffixes, familles de mots, synonymes, antonymes et champs lexicaux",
+              "activite": "Carte de mots, mur lexical, devinettes et réemploi en contexte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 114
+            }
+          ],
+          "sourceRows": [
+            113,
+            114
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 9,
+      "nombreSousSujets": 21
+    },
+    {
+      "niveau": 5,
+      "label": "5e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-5-classes-de-mots",
+          "titre": "Classes de mots",
+          "sousSujets": [
+            {
+              "id": "determinants",
+              "titre": "Déterminants",
+              "competence": "Identifier et employer articles, possessifs, démonstratifs et autres déterminants",
+              "activite": "Correction, révision et remédiation; Exercices d’application gradués; Tri de groupes nominaux et remplacement de déterminants; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 132
+            }
+          ],
+          "sourceRows": [
+            132
+          ]
+        },
+        {
+          "id": "niveau-5-classes-et-fonctions-des-mots",
+          "titre": "Classes et fonctions des mots",
+          "sousSujets": [
+            {
+              "id": "nom-determinant-adjectif-verbe-pronom-et-complements",
+              "titre": "Nom, déterminant, adjectif, verbe, pronom et compléments",
+              "competence": "Identifier classes et fonctions; utiliser pronoms et compléments pour assurer la cohésion",
+              "activite": "Codage couleur, classement, remplacement et analyse de phrases",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 133
+            }
+          ],
+          "sourceRows": [
+            133
+          ]
+        },
+        {
+          "id": "niveau-5-conjugaison",
+          "titre": "Conjugaison",
+          "sousSujets": [
+            {
+              "id": "futur-simple",
+              "titre": "Futur simple",
+              "competence": "Former le futur et exprimer une action à venir",
+              "activite": "Exercices d’application gradués; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Prévisions, projet personnel et phrases à compléter; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 134
+            },
+            {
+              "id": "imperatif",
+              "titre": "Impératif",
+              "competence": "Donner un ordre, un conseil ou une consigne",
+              "activite": "Cartes de transformation et réécriture selon une consigne; Phrases à trous, justification grammaticale et dictée ciblée; Rédaction d’une recette ou d’un règlement; Support numérique ou visuel; Table de conjugaison, phrases contextualisées et jeu de rapidité",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 135
+            },
+            {
+              "id": "modes-temps-et-formes-verbales",
+              "titre": "Modes, temps et formes verbales",
+              "competence": "Identifier les modes et choisir le temps adapté",
+              "activite": "Classement de cas, justification de l’accord et correction de texte; Support numérique ou visuel; Tableau comparatif, ligne du temps et transformation de phrases; Écriture guidée à partir d’un plan, grille de révision et publication",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 136
+            },
+            {
+              "id": "passe-compose",
+              "titre": "Passé composé",
+              "competence": "Choisir l’auxiliaire, former le participe passé et situer une action achevée",
+              "activite": "Frise chronologique, récit au passé et exercices de choix d’auxiliaire; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Support numérique ou visuel; Table de conjugaison, phrases contextualisées et jeu de rapidité; Évaluation diagnostique ou formative",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 137
+            },
+            {
+              "id": "present-de-l-indicatif",
+              "titre": "Présent de l’indicatif",
+              "competence": "Conjuguer les verbes usuels et employer le présent selon le contexte",
+              "activite": "Frise chronologique, récit au passé et exercices de choix d’auxiliaire; Rédaction d’une recette ou d’un règlement; Support numérique ou visuel; Table de conjugaison, phrases contextualisées et jeu de rapidité; Évaluation diagnostique ou formative",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 138
+            },
+            {
+              "id": "temps-du-recit-et-valeurs-des-temps",
+              "titre": "Temps du récit et valeurs des temps",
+              "competence": "Conjuguer et employer les formes verbales attendues dans des phrases contextualisées",
+              "activite": "Frise temporelle, tableau de conjugaison, transformation et rédaction courte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 139
+            }
+          ],
+          "sourceRows": [
+            134,
+            135,
+            136,
+            137,
+            138,
+            139
+          ]
+        },
+        {
+          "id": "niveau-5-fluidite-et-oralisation",
+          "titre": "Fluidité et oralisation",
+          "sousSujets": [
+            {
+              "id": "exactitude-rythme-et-prosodie",
+              "titre": "Exactitude, rythme et prosodie",
+              "competence": "Lire des textes variés avec fluidité, expression et respect de la ponctuation",
+              "activite": "Lecture répétée, lecture en duo, enregistrement et autoévaluation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 140
+            }
+          ],
+          "sourceRows": [
+            140
+          ]
+        },
+        {
+          "id": "niveau-5-fonctions-syntaxiques",
+          "titre": "Fonctions syntaxiques",
+          "sousSujets": [
+            {
+              "id": "sujet-predicat-et-groupes-de-la-phrase",
+              "titre": "Sujet, prédicat et groupes de la phrase",
+              "competence": "Repérer les constituants de base et leurs noyaux",
+              "activite": "Encadrement, remplacement, déplacement et construction de phrases; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 141
+            }
+          ],
+          "sourceRows": [
+            141
+          ]
+        },
+        {
+          "id": "niveau-5-grammaire-et-syntaxe",
+          "titre": "Grammaire et syntaxe",
+          "sousSujets": [
+            {
+              "id": "structure-de-la-phrase",
+              "titre": "Structure de la phrase",
+              "competence": "Analyser et produire des phrases simples et complexes avec groupes et propositions",
+              "activite": "Manipulations syntaxiques, expansion/réduction et fusion de phrases",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 142
+            }
+          ],
+          "sourceRows": [
+            142
+          ]
+        },
+        {
+          "id": "niveau-5-orthographe",
+          "titre": "Orthographe",
+          "sousSujets": [
+            {
+              "id": "accord-sujet-verbe-participe-passe-et-orthographe-lexicale",
+              "titre": "Accord sujet-verbe, participe passé et orthographe lexicale",
+              "competence": "Appliquer les régularités et justifier les choix orthographiques dans ses textes",
+              "activite": "Dictée préparée/négociée, correction codée et carnet de mots",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 143
+            },
+            {
+              "id": "dictee-et-automatisation-orthographique",
+              "titre": "Dictée et automatisation orthographique",
+              "competence": "Mobiliser les correspondances phonèmes-graphèmes et les règles étudiées",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Interaction orale ou présentation; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 144
+            }
+          ],
+          "sourceRows": [
+            143,
+            144
+          ]
+        },
+        {
+          "id": "niveau-5-orthographe-grammaticale",
+          "titre": "Orthographe grammaticale",
+          "sousSujets": [
+            {
+              "id": "accord-du-participe-passe",
+              "titre": "Accord du participe passé",
+              "competence": "Appliquer les règles avec être, avoir et les verbes pronominaux",
+              "activite": "Classement de cas, justification de l’accord et correction de texte; Support numérique ou visuel; Tableau comparatif, ligne du temps et transformation de phrases; Écriture guidée à partir d’un plan, grille de révision et publication",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 145
+            },
+            {
+              "id": "homophones-grammaticaux",
+              "titre": "Homophones grammaticaux",
+              "competence": "Choisir la graphie correcte selon le sens et la fonction",
+              "activite": "Phrases à trous, justification grammaticale et dictée ciblée; Rédaction d’une recette ou d’un règlement; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 146
+            }
+          ],
+          "sourceRows": [
+            145,
+            146
+          ]
+        },
+        {
+          "id": "niveau-5-syntaxe",
+          "titre": "Syntaxe",
+          "sousSujets": [
+            {
+              "id": "types-et-formes-de-phrases",
+              "titre": "Types et formes de phrases",
+              "competence": "Reconnaître et transformer déclarative, interrogative, impérative, exclamative, active, passive, affirmative et négative",
+              "activite": "Cartes de transformation et réécriture selon une consigne; Rédaction d’une recette ou d’un règlement; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 147
+            }
+          ],
+          "sourceRows": [
+            147
+          ]
+        },
+        {
+          "id": "niveau-5-vocabulaire",
+          "titre": "Vocabulaire",
+          "sousSujets": [
+            {
+              "id": "sens-des-mots-et-relations-lexicales",
+              "titre": "Sens des mots et relations lexicales",
+              "competence": "Analyser préfixes, suffixes, familles de mots, synonymes, antonymes et champs lexicaux",
+              "activite": "Carte de mots, mur lexical, devinettes et réemploi en contexte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 148
+            }
+          ],
+          "sourceRows": [
+            148
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 10,
+      "nombreSousSujets": 17
+    },
+    {
+      "niveau": 6,
+      "label": "6e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-6-classes-de-mots",
+          "titre": "Classes de mots",
+          "sousSujets": [
+            {
+              "id": "adjectif-qualificatif",
+              "titre": "Adjectif qualificatif",
+              "competence": "Identifier, placer et accorder l’adjectif",
+              "activite": "Portrait enrichi, expansions du nom et correction d’accords; Support numérique ou visuel; Transformation présent-imparfait et rédaction d’un souvenir",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 165
+            },
+            {
+              "id": "adverbes",
+              "titre": "Adverbes",
+              "competence": "Reconnaître leur rôle et préciser le sens du verbe, de l’adjectif ou de la phrase",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Enrichissement de phrases et classement par sens; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 166
+            },
+            {
+              "id": "determinants",
+              "titre": "Déterminants",
+              "competence": "Identifier et employer articles, possessifs, démonstratifs et autres déterminants",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Phrases à trous, justification grammaticale et dictée ciblée; Repérage dans un texte, classement par groupe et conjugaison; Tableau comparatif, ligne du temps et transformation de phrases; Tri de groupes nominaux et remplacement de déterminants; Écriture guidée à partir d’un plan, grille de révision et publication; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 167
+            },
+            {
+              "id": "verbe-et-groupes-verbaux",
+              "titre": "Verbe et groupes verbaux",
+              "competence": "Identifier le verbe, son infinitif, son groupe et sa fonction",
+              "activite": "Exercices d’application gradués; Phrases à trous, justification grammaticale et dictée ciblée; Repérage dans un texte, classement par groupe et conjugaison; Tableau comparatif, ligne du temps et transformation de phrases; Tri de groupes nominaux et remplacement de déterminants; Écriture guidée à partir d’un plan, grille de révision et publication; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 168
+            }
+          ],
+          "sourceRows": [
+            165,
+            166,
+            167,
+            168
+          ]
+        },
+        {
+          "id": "niveau-6-classes-et-fonctions-des-mots",
+          "titre": "Classes et fonctions des mots",
+          "sousSujets": [
+            {
+              "id": "nom-determinant-adjectif-verbe-pronom-et-complements",
+              "titre": "Nom, déterminant, adjectif, verbe, pronom et compléments",
+              "competence": "Identifier classes et fonctions; utiliser pronoms et compléments pour assurer la cohésion",
+              "activite": "Codage couleur, classement, remplacement et analyse de phrases",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 169
+            }
+          ],
+          "sourceRows": [
+            169
+          ]
+        },
+        {
+          "id": "niveau-6-conjugaison",
+          "titre": "Conjugaison",
+          "sousSujets": [
+            {
+              "id": "conditionnel-present",
+              "titre": "Conditionnel présent",
+              "competence": "Exprimer le souhait, l’hypothèse, le conseil et la politesse",
+              "activite": "Jeu de situations, conseils et phrases hypothétiques; Support numérique ou visuel; Table de conjugaison, phrases contextualisées et jeu de rapidité",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 170
+            },
+            {
+              "id": "futur-simple",
+              "titre": "Futur simple",
+              "competence": "Former le futur et exprimer une action à venir",
+              "activite": "Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Encadrement, remplacement, déplacement et construction de phrases; Interaction orale ou présentation; Jeu de rôle, exposé bref, entretien et rétroaction; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Manipulations de phrases, remplacement du sujet et correction d’erreurs; Prévisions, projet personnel et phrases à compléter; Support numérique ou visuel; Table de conjugaison, phrases contextualisées et jeu de rapidité",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 171
+            },
+            {
+              "id": "imparfait-de-l-indicatif",
+              "titre": "Imparfait de l’indicatif",
+              "competence": "Former et employer l’imparfait pour la description et l’habitude",
+              "activite": "Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Portrait enrichi, expansions du nom et correction d’accords; Support numérique ou visuel; Transformation présent-imparfait et rédaction d’un souvenir",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 172
+            },
+            {
+              "id": "modes-temps-et-formes-verbales",
+              "titre": "Modes, temps et formes verbales",
+              "competence": "Identifier les modes et choisir le temps adapté",
+              "activite": "Correction, révision et remédiation; Exercices d’application gradués; Phrases à trous, justification grammaticale et dictée ciblée; Repérage dans un texte, classement par groupe et conjugaison; Table de conjugaison, phrases contextualisées et jeu de rapidité; Tableau comparatif, ligne du temps et transformation de phrases; Tri de groupes nominaux et remplacement de déterminants; Tri de phrases, transformation et création de titres; Écriture guidée à partir d’un plan, grille de révision et publication; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 173
+            },
+            {
+              "id": "passe-compose",
+              "titre": "Passé composé",
+              "competence": "Choisir l’auxiliaire, former le participe passé et situer une action achevée",
+              "activite": "Correction, révision et remédiation; Exercices d’application gradués; Frise chronologique, récit au passé et exercices de choix d’auxiliaire; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Support numérique ou visuel; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 174
+            },
+            {
+              "id": "present-de-l-indicatif",
+              "titre": "Présent de l’indicatif",
+              "competence": "Conjuguer les verbes usuels et employer le présent selon le contexte",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Fusion de phrases, découpage en propositions et réécriture; Jeu de situations, conseils et phrases hypothétiques; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Prévisions, projet personnel et phrases à compléter; Support numérique ou visuel; Table de conjugaison, phrases contextualisées et jeu de rapidité; Tableau comparatif, ligne du temps et transformation de phrases; Tri de phrases, transformation et création de titres; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 175
+            },
+            {
+              "id": "temps-du-recit-et-valeurs-des-temps",
+              "titre": "Temps du récit et valeurs des temps",
+              "competence": "Conjuguer et employer les formes verbales attendues dans des phrases contextualisées",
+              "activite": "Frise temporelle, tableau de conjugaison, transformation et rédaction courte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 176
+            }
+          ],
+          "sourceRows": [
+            170,
+            171,
+            172,
+            173,
+            174,
+            175,
+            176
+          ]
+        },
+        {
+          "id": "niveau-6-fluidite-et-oralisation",
+          "titre": "Fluidité et oralisation",
+          "sousSujets": [
+            {
+              "id": "exactitude-rythme-et-prosodie",
+              "titre": "Exactitude, rythme et prosodie",
+              "competence": "Lire des textes variés avec fluidité, expression et respect de la ponctuation",
+              "activite": "Lecture répétée, lecture en duo, enregistrement et autoévaluation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 177
+            },
+            {
+              "id": "prononciation-liaison-et-fluidite",
+              "titre": "Prononciation, liaison et fluidité",
+              "competence": "Lire avec exactitude, rythme, intonation et articulation",
+              "activite": "Lecture guidée, questions graduées, surlignage des indices et résumé; Lecture répétée, enregistrement audio et rétroaction ciblée; Support numérique ou visuel; Évaluation diagnostique ou formative",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 178
+            }
+          ],
+          "sourceRows": [
+            177,
+            178
+          ]
+        },
+        {
+          "id": "niveau-6-fonctions-syntaxiques",
+          "titre": "Fonctions syntaxiques",
+          "sousSujets": [
+            {
+              "id": "sujet-predicat-et-groupes-de-la-phrase",
+              "titre": "Sujet, prédicat et groupes de la phrase",
+              "competence": "Repérer les constituants de base et leurs noyaux",
+              "activite": "Encadrement, remplacement, déplacement et construction de phrases; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Manipulations de phrases, remplacement du sujet et correction d’erreurs; Prévisions, projet personnel et phrases à compléter; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 179
+            }
+          ],
+          "sourceRows": [
+            179
+          ]
+        },
+        {
+          "id": "niveau-6-grammaire-et-syntaxe",
+          "titre": "Grammaire et syntaxe",
+          "sousSujets": [
+            {
+              "id": "structure-de-la-phrase",
+              "titre": "Structure de la phrase",
+              "competence": "Analyser et produire des phrases simples et complexes avec groupes et propositions",
+              "activite": "Manipulations syntaxiques, expansion/réduction et fusion de phrases",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 180
+            }
+          ],
+          "sourceRows": [
+            180
+          ]
+        },
+        {
+          "id": "niveau-6-orthographe",
+          "titre": "Orthographe",
+          "sousSujets": [
+            {
+              "id": "accord-sujet-verbe-participe-passe-et-orthographe-lexicale",
+              "titre": "Accord sujet-verbe, participe passé et orthographe lexicale",
+              "competence": "Appliquer les régularités et justifier les choix orthographiques dans ses textes",
+              "activite": "Dictée préparée/négociée, correction codée et carnet de mots",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 181
+            },
+            {
+              "id": "dictee-et-automatisation-orthographique",
+              "titre": "Dictée et automatisation orthographique",
+              "competence": "Mobiliser les correspondances phonèmes-graphèmes et les règles étudiées",
+              "activite": "Carte de mots, familles lexicales, synonymes-antonymes et phrase contextualisée; Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Enrichissement de phrases et classement par sens; Exercices d’application gradués; Lecture d’infographie, plan explicatif et rédaction d’un court texte documentaire; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Prévisions, projet personnel et phrases à compléter; Support numérique ou visuel; Table de conjugaison, phrases contextualisées et jeu de rapidité; Transformation présent-imparfait et rédaction d’un souvenir; Tri de groupes nominaux et remplacement de déterminants; Écriture guidée à partir d’un plan, grille de révision et publication; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 182
+            }
+          ],
+          "sourceRows": [
+            181,
+            182
+          ]
+        },
+        {
+          "id": "niveau-6-orthographe-grammaticale",
+          "titre": "Orthographe grammaticale",
+          "sousSujets": [
+            {
+              "id": "accord-sujet-verbe",
+              "titre": "Accord sujet-verbe",
+              "competence": "Identifier le noyau du sujet et accorder le verbe",
+              "activite": "Encadrement, remplacement, déplacement et construction de phrases; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Manipulations de phrases, remplacement du sujet et correction d’erreurs; Prévisions, projet personnel et phrases à compléter; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 183
+            },
+            {
+              "id": "homophones-grammaticaux",
+              "titre": "Homophones grammaticaux",
+              "competence": "Choisir la graphie correcte selon le sens et la fonction",
+              "activite": "Exercices d’application gradués; Phrases à trous, justification grammaticale et dictée ciblée; Repérage dans un texte, classement par groupe et conjugaison; Tableau comparatif, ligne du temps et transformation de phrases; Tri de groupes nominaux et remplacement de déterminants; Écriture guidée à partir d’un plan, grille de révision et publication; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 184
+            }
+          ],
+          "sourceRows": [
+            183,
+            184
+          ]
+        },
+        {
+          "id": "niveau-6-syntaxe",
+          "titre": "Syntaxe",
+          "sousSujets": [
+            {
+              "id": "phrase-simple-et-phrase-complexe",
+              "titre": "Phrase simple et phrase complexe",
+              "competence": "Distinguer propositions et construire des phrases complexes",
+              "activite": "Correction, révision et remédiation; Fusion de phrases, découpage en propositions et réécriture; Table de conjugaison, phrases contextualisées et jeu de rapidité; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 185
+            },
+            {
+              "id": "phrase-verbale-et-non-verbale",
+              "titre": "Phrase verbale et non verbale",
+              "competence": "Identifier le verbe noyau et transformer les structures",
+              "activite": "Correction, révision et remédiation; Table de conjugaison, phrases contextualisées et jeu de rapidité; Tableau comparatif, ligne du temps et transformation de phrases; Tri de phrases, transformation et création de titres; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 186
+            }
+          ],
+          "sourceRows": [
+            185,
+            186
+          ]
+        },
+        {
+          "id": "niveau-6-vocabulaire",
+          "titre": "Vocabulaire",
+          "sousSujets": [
+            {
+              "id": "developpement-du-lexique",
+              "titre": "Développement du lexique",
+              "competence": "Comprendre, mémoriser et réutiliser un vocabulaire précis",
+              "activite": "Carte de mots, familles lexicales, synonymes-antonymes et phrase contextualisée; Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Lecture d’infographie, plan explicatif et rédaction d’un court texte documentaire; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Support numérique ou visuel; Écriture guidée à partir d’un plan, grille de révision et publication; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 187
+            },
+            {
+              "id": "sens-des-mots-et-relations-lexicales",
+              "titre": "Sens des mots et relations lexicales",
+              "competence": "Analyser préfixes, suffixes, familles de mots, synonymes, antonymes et champs lexicaux",
+              "activite": "Carte de mots, mur lexical, devinettes et réemploi en contexte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 188
+            }
+          ],
+          "sourceRows": [
+            187,
+            188
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 10,
+      "nombreSousSujets": 24
+    },
+    {
+      "niveau": 7,
+      "label": "7e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-7-classes-de-mots",
+          "titre": "Classes de mots",
+          "sousSujets": [
+            {
+              "id": "verbe-et-groupes-verbaux",
+              "titre": "Verbe et groupes verbaux",
+              "competence": "Identifier le verbe, son infinitif, son groupe et sa fonction",
+              "activite": "Correction, révision et remédiation; Exercices d’application gradués; Repérage dans un texte, classement par groupe et conjugaison; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 204
+            }
+          ],
+          "sourceRows": [
+            204
+          ]
+        },
+        {
+          "id": "niveau-7-classes-et-fonctions-des-mots",
+          "titre": "Classes et fonctions des mots",
+          "sousSujets": [
+            {
+              "id": "nom-determinant-adjectif-verbe-pronom-et-complements",
+              "titre": "Nom, déterminant, adjectif, verbe, pronom et compléments",
+              "competence": "Identifier classes et fonctions; utiliser pronoms et compléments pour assurer la cohésion",
+              "activite": "Codage couleur, classement, remplacement et analyse de phrases",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 205
+            }
+          ],
+          "sourceRows": [
+            205
+          ]
+        },
+        {
+          "id": "niveau-7-conjugaison",
+          "titre": "Conjugaison",
+          "sousSujets": [
+            {
+              "id": "present-de-l-indicatif",
+              "titre": "Présent de l’indicatif",
+              "competence": "Conjuguer les verbes usuels et employer le présent selon le contexte",
+              "activite": "Exercices d’application gradués; Support numérique ou visuel; Table de conjugaison, phrases contextualisées et jeu de rapidité",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 206
+            },
+            {
+              "id": "systeme-verbal-concordance-des-temps-et-modes",
+              "titre": "Système verbal, concordance des temps et modes",
+              "competence": "Conjuguer et employer les formes verbales attendues dans des phrases contextualisées",
+              "activite": "Frise temporelle, tableau de conjugaison, transformation et rédaction courte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 207
+            }
+          ],
+          "sourceRows": [
+            206,
+            207
+          ]
+        },
+        {
+          "id": "niveau-7-fluidite-et-oralisation",
+          "titre": "Fluidité et oralisation",
+          "sousSujets": [
+            {
+              "id": "exactitude-rythme-et-prosodie",
+              "titre": "Exactitude, rythme et prosodie",
+              "competence": "Lire des textes variés avec fluidité, expression et respect de la ponctuation",
+              "activite": "Lecture répétée, lecture en duo, enregistrement et autoévaluation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 208
+            }
+          ],
+          "sourceRows": [
+            208
+          ]
+        },
+        {
+          "id": "niveau-7-fonctions-syntaxiques",
+          "titre": "Fonctions syntaxiques",
+          "sousSujets": [
+            {
+              "id": "complements-du-verbe-et-de-la-phrase",
+              "titre": "Compléments du verbe et de la phrase",
+              "competence": "Identifier COD, COI et compléments circonstanciels",
+              "activite": "Questions de repérage, pronominalisation et déplacement/suppression; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 209
+            }
+          ],
+          "sourceRows": [
+            209
+          ]
+        },
+        {
+          "id": "niveau-7-grammaire-et-syntaxe",
+          "titre": "Grammaire et syntaxe",
+          "sousSujets": [
+            {
+              "id": "structure-de-la-phrase",
+              "titre": "Structure de la phrase",
+              "competence": "Analyser et produire des phrases simples et complexes avec groupes et propositions",
+              "activite": "Manipulations syntaxiques, expansion/réduction et fusion de phrases",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 210
+            }
+          ],
+          "sourceRows": [
+            210
+          ]
+        },
+        {
+          "id": "niveau-7-orthographe",
+          "titre": "Orthographe",
+          "sousSujets": [
+            {
+              "id": "orthographe-grammaticale-avancee-et-justification-des-accords",
+              "titre": "Orthographe grammaticale avancée et justification des accords",
+              "competence": "Appliquer les régularités et justifier les choix orthographiques dans ses textes",
+              "activite": "Dictée préparée/négociée, correction codée et carnet de mots",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 211
+            }
+          ],
+          "sourceRows": [
+            211
+          ]
+        },
+        {
+          "id": "niveau-7-vocabulaire",
+          "titre": "Vocabulaire",
+          "sousSujets": [
+            {
+              "id": "sens-des-mots-et-relations-lexicales",
+              "titre": "Sens des mots et relations lexicales",
+              "competence": "Analyser préfixes, suffixes, familles de mots, synonymes, antonymes et champs lexicaux",
+              "activite": "Carte de mots, mur lexical, devinettes et réemploi en contexte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 212
+            }
+          ],
+          "sourceRows": [
+            212
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 8,
+      "nombreSousSujets": 9
+    },
+    {
+      "niveau": 8,
+      "label": "8e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-8-classes-et-fonctions-des-mots",
+          "titre": "Classes et fonctions des mots",
+          "sousSujets": [
+            {
+              "id": "nom-determinant-adjectif-verbe-pronom-et-complements",
+              "titre": "Nom, déterminant, adjectif, verbe, pronom et compléments",
+              "competence": "Identifier classes et fonctions; utiliser pronoms et compléments pour assurer la cohésion",
+              "activite": "Codage couleur, classement, remplacement et analyse de phrases",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 229
+            }
+          ],
+          "sourceRows": [
+            229
+          ]
+        },
+        {
+          "id": "niveau-8-conjugaison",
+          "titre": "Conjugaison",
+          "sousSujets": [
+            {
+              "id": "systeme-verbal-concordance-des-temps-et-modes",
+              "titre": "Système verbal, concordance des temps et modes",
+              "competence": "Conjuguer et employer les formes verbales attendues dans des phrases contextualisées",
+              "activite": "Frise temporelle, tableau de conjugaison, transformation et rédaction courte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 230
+            }
+          ],
+          "sourceRows": [
+            230
+          ]
+        },
+        {
+          "id": "niveau-8-fluidite-et-oralisation",
+          "titre": "Fluidité et oralisation",
+          "sousSujets": [
+            {
+              "id": "exactitude-rythme-et-prosodie",
+              "titre": "Exactitude, rythme et prosodie",
+              "competence": "Lire des textes variés avec fluidité, expression et respect de la ponctuation",
+              "activite": "Lecture répétée, lecture en duo, enregistrement et autoévaluation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 231
+            }
+          ],
+          "sourceRows": [
+            231
+          ]
+        },
+        {
+          "id": "niveau-8-grammaire-et-syntaxe",
+          "titre": "Grammaire et syntaxe",
+          "sousSujets": [
+            {
+              "id": "structure-de-la-phrase",
+              "titre": "Structure de la phrase",
+              "competence": "Analyser et produire des phrases simples et complexes avec groupes et propositions",
+              "activite": "Manipulations syntaxiques, expansion/réduction et fusion de phrases",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 232
+            }
+          ],
+          "sourceRows": [
+            232
+          ]
+        },
+        {
+          "id": "niveau-8-orthographe",
+          "titre": "Orthographe",
+          "sousSujets": [
+            {
+              "id": "orthographe-grammaticale-avancee-et-justification-des-accords",
+              "titre": "Orthographe grammaticale avancée et justification des accords",
+              "competence": "Appliquer les régularités et justifier les choix orthographiques dans ses textes",
+              "activite": "Dictée préparée/négociée, correction codée et carnet de mots",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 233
+            }
+          ],
+          "sourceRows": [
+            233
+          ]
+        },
+        {
+          "id": "niveau-8-vocabulaire",
+          "titre": "Vocabulaire",
+          "sousSujets": [
+            {
+              "id": "developpement-du-lexique",
+              "titre": "Développement du lexique",
+              "competence": "Comprendre, mémoriser et réutiliser un vocabulaire précis",
+              "activite": "Carte de mots, familles lexicales, synonymes-antonymes et phrase contextualisée; Lecture guidée et questions de compréhension; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 234
+            },
+            {
+              "id": "sens-des-mots-et-relations-lexicales",
+              "titre": "Sens des mots et relations lexicales",
+              "competence": "Analyser préfixes, suffixes, familles de mots, synonymes, antonymes et champs lexicaux",
+              "activite": "Carte de mots, mur lexical, devinettes et réemploi en contexte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 235
+            }
+          ],
+          "sourceRows": [
+            234,
+            235
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 6,
+      "nombreSousSujets": 7
+    },
+    {
+      "niveau": 9,
+      "label": "9e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-9-classes-de-mots",
+          "titre": "Classes de mots",
+          "sousSujets": [
+            {
+              "id": "verbe-et-groupes-verbaux",
+              "titre": "Verbe et groupes verbaux",
+              "competence": "Identifier le verbe, son infinitif, son groupe et sa fonction",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Frise chronologique, récit au passé et exercices de choix d’auxiliaire; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Repérage dans un texte, classement par groupe et conjugaison; Tableau comparatif, ligne du temps et transformation de phrases; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 260
+            }
+          ],
+          "sourceRows": [
+            260
+          ]
+        },
+        {
+          "id": "niveau-9-conjugaison",
+          "titre": "Conjugaison",
+          "sousSujets": [
+            {
+              "id": "futur-simple",
+              "titre": "Futur simple",
+              "competence": "Former le futur et exprimer une action à venir",
+              "activite": "Prévisions, projet personnel et phrases à compléter; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 261
+            },
+            {
+              "id": "modes-temps-et-formes-verbales",
+              "titre": "Modes, temps et formes verbales",
+              "competence": "Identifier les modes et choisir le temps adapté",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Frise chronologique, récit au passé et exercices de choix d’auxiliaire; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Repérage dans un texte, classement par groupe et conjugaison; Tableau comparatif, ligne du temps et transformation de phrases; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 262
+            },
+            {
+              "id": "passe-compose",
+              "titre": "Passé composé",
+              "competence": "Choisir l’auxiliaire, former le participe passé et situer une action achevée",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Frise chronologique, récit au passé et exercices de choix d’auxiliaire; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Repérage dans un texte, classement par groupe et conjugaison; Tableau comparatif, ligne du temps et transformation de phrases; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 263
+            },
+            {
+              "id": "valeurs-des-temps-modes-et-concordance",
+              "titre": "Valeurs des temps, modes et concordance",
+              "competence": "Choisir les temps et modes selon le genre et la chronologie",
+              "activite": "Transformation d’un texte, frise temporelle et justification",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 264
+            }
+          ],
+          "sourceRows": [
+            261,
+            262,
+            263,
+            264
+          ]
+        },
+        {
+          "id": "niveau-9-grammaire-et-syntaxe",
+          "titre": "Grammaire et syntaxe",
+          "sousSujets": [
+            {
+              "id": "phrase-complexe-subordination-et-cohesion",
+              "titre": "Phrase complexe, subordination et cohésion",
+              "competence": "Maîtriser la syntaxe complexe et assurer les reprises et connecteurs",
+              "activite": "Réécriture, combinaison de phrases et correction raisonnée",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 265
+            }
+          ],
+          "sourceRows": [
+            265
+          ]
+        },
+        {
+          "id": "niveau-9-orthographe",
+          "titre": "Orthographe",
+          "sousSujets": [
+            {
+              "id": "accords-complexes-et-correction-autonome",
+              "titre": "Accords complexes et correction autonome",
+              "competence": "Appliquer et expliquer les accords grammaticaux et lexicaux",
+              "activite": "Dictée analytique, révision avec codes et portfolio d’erreurs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 266
+            },
+            {
+              "id": "dictee-et-automatisation-orthographique",
+              "titre": "Dictée et automatisation orthographique",
+              "competence": "Mobiliser les correspondances phonèmes-graphèmes et les règles étudiées",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Frise chronologique, récit au passé et exercices de choix d’auxiliaire; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Repérage dans un texte, classement par groupe et conjugaison; Tableau comparatif, ligne du temps et transformation de phrases; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 267
+            }
+          ],
+          "sourceRows": [
+            266,
+            267
+          ]
+        },
+        {
+          "id": "niveau-9-syntaxe",
+          "titre": "Syntaxe",
+          "sousSujets": [
+            {
+              "id": "types-et-formes-de-phrases",
+              "titre": "Types et formes de phrases",
+              "competence": "Reconnaître et transformer déclarative, interrogative, impérative, exclamative, active, passive, affirmative et négative",
+              "activite": "Cartes de transformation et réécriture selon une consigne; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 268
+            }
+          ],
+          "sourceRows": [
+            268
+          ]
+        },
+        {
+          "id": "niveau-9-vocabulaire-et-style",
+          "titre": "Vocabulaire et style",
+          "sousSujets": [
+            {
+              "id": "nuances-registres-et-procedes-stylistiques",
+              "titre": "Nuances, registres et procédés stylistiques",
+              "competence": "Choisir un lexique précis et adapter le registre",
+              "activite": "Réécriture selon registre, banque lexicale et imitation de style",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 269
+            }
+          ],
+          "sourceRows": [
+            269
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 6,
+      "nombreSousSujets": 10
+    },
+    {
+      "niveau": 10,
+      "label": "10e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-10-conjugaison",
+          "titre": "Conjugaison",
+          "sousSujets": [
+            {
+              "id": "valeurs-des-temps-modes-et-concordance",
+              "titre": "Valeurs des temps, modes et concordance",
+              "competence": "Choisir les temps et modes selon le genre et la chronologie avec un degré croissant d’autonomie et de complexité",
+              "activite": "Transformation d’un texte, frise temporelle et justification",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 283
+            }
+          ],
+          "sourceRows": [
+            283
+          ]
+        },
+        {
+          "id": "niveau-10-grammaire-et-syntaxe",
+          "titre": "Grammaire et syntaxe",
+          "sousSujets": [
+            {
+              "id": "phrase-complexe-subordination-et-cohesion",
+              "titre": "Phrase complexe, subordination et cohésion",
+              "competence": "Maîtriser la syntaxe complexe et assurer les reprises et connecteurs avec un degré croissant d’autonomie et de complexité",
+              "activite": "Réécriture, combinaison de phrases et correction raisonnée",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 284
+            }
+          ],
+          "sourceRows": [
+            284
+          ]
+        },
+        {
+          "id": "niveau-10-orthographe",
+          "titre": "Orthographe",
+          "sousSujets": [
+            {
+              "id": "accords-complexes-et-correction-autonome",
+              "titre": "Accords complexes et correction autonome",
+              "competence": "Appliquer et expliquer les accords grammaticaux et lexicaux avec un degré croissant d’autonomie et de complexité",
+              "activite": "Dictée analytique, révision avec codes et portfolio d’erreurs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 285
+            }
+          ],
+          "sourceRows": [
+            285
+          ]
+        },
+        {
+          "id": "niveau-10-vocabulaire-et-style",
+          "titre": "Vocabulaire et style",
+          "sousSujets": [
+            {
+              "id": "nuances-registres-et-procedes-stylistiques",
+              "titre": "Nuances, registres et procédés stylistiques",
+              "competence": "Choisir un lexique précis et adapter le registre avec un degré croissant d’autonomie et de complexité",
+              "activite": "Réécriture selon registre, banque lexicale et imitation de style",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 286
+            }
+          ],
+          "sourceRows": [
+            286
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 4,
+      "nombreSousSujets": 4
+    },
+    {
+      "niveau": 11,
+      "label": "11e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-11-classes-de-mots",
+          "titre": "Classes de mots",
+          "sousSujets": [
+            {
+              "id": "verbe-et-groupes-verbaux",
+              "titre": "Verbe et groupes verbaux",
+              "competence": "Identifier le verbe, son infinitif, son groupe et sa fonction",
+              "activite": "Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Encadrement, remplacement, déplacement et construction de phrases; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Manipulations de phrases, remplacement du sujet et correction d’erreurs; Repérage dans un texte, classement par groupe et conjugaison; Schéma narratif, remise en ordre d’événements et réécriture d’une fin; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 299
+            }
+          ],
+          "sourceRows": [
+            299
+          ]
+        },
+        {
+          "id": "niveau-11-conjugaison",
+          "titre": "Conjugaison",
+          "sousSujets": [
+            {
+              "id": "present-de-l-indicatif",
+              "titre": "Présent de l’indicatif",
+              "competence": "Conjuguer les verbes usuels et employer le présent selon le contexte",
+              "activite": "Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Table de conjugaison, phrases contextualisées et jeu de rapidité",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 300
+            },
+            {
+              "id": "valeurs-des-temps-modes-et-concordance",
+              "titre": "Valeurs des temps, modes et concordance",
+              "competence": "Choisir les temps et modes selon le genre et la chronologie avec un degré croissant d’autonomie et de complexité",
+              "activite": "Transformation d’un texte, frise temporelle et justification",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 301
+            }
+          ],
+          "sourceRows": [
+            300,
+            301
+          ]
+        },
+        {
+          "id": "niveau-11-fonctions-syntaxiques",
+          "titre": "Fonctions syntaxiques",
+          "sousSujets": [
+            {
+              "id": "sujet-predicat-et-groupes-de-la-phrase",
+              "titre": "Sujet, prédicat et groupes de la phrase",
+              "competence": "Repérer les constituants de base et leurs noyaux",
+              "activite": "Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Encadrement, remplacement, déplacement et construction de phrases; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Manipulations de phrases, remplacement du sujet et correction d’erreurs; Repérage dans un texte, classement par groupe et conjugaison; Schéma narratif, remise en ordre d’événements et réécriture d’une fin; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 302
+            }
+          ],
+          "sourceRows": [
+            302
+          ]
+        },
+        {
+          "id": "niveau-11-grammaire-et-syntaxe",
+          "titre": "Grammaire et syntaxe",
+          "sousSujets": [
+            {
+              "id": "phrase-complexe-subordination-et-cohesion",
+              "titre": "Phrase complexe, subordination et cohésion",
+              "competence": "Maîtriser la syntaxe complexe et assurer les reprises et connecteurs avec un degré croissant d’autonomie et de complexité",
+              "activite": "Réécriture, combinaison de phrases et correction raisonnée",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 303
+            }
+          ],
+          "sourceRows": [
+            303
+          ]
+        },
+        {
+          "id": "niveau-11-orthographe",
+          "titre": "Orthographe",
+          "sousSujets": [
+            {
+              "id": "accords-complexes-et-correction-autonome",
+              "titre": "Accords complexes et correction autonome",
+              "competence": "Appliquer et expliquer les accords grammaticaux et lexicaux avec un degré croissant d’autonomie et de complexité",
+              "activite": "Dictée analytique, révision avec codes et portfolio d’erreurs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 304
+            },
+            {
+              "id": "dictee-et-automatisation-orthographique",
+              "titre": "Dictée et automatisation orthographique",
+              "competence": "Mobiliser les correspondances phonèmes-graphèmes et les règles étudiées",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Encadrement, remplacement, déplacement et construction de phrases; Exercices d’application gradués; Interaction orale ou présentation; Jeu de rôle, exposé bref, entretien et rétroaction; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Manipulations de phrases, remplacement du sujet et correction d’erreurs; Repérage dans un texte, classement par groupe et conjugaison; Schéma narratif, remise en ordre d’événements et réécriture d’une fin; Table de conjugaison, phrases contextualisées et jeu de rapidité; Écriture guidée à partir d’un plan, grille de révision et publication; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 305
+            }
+          ],
+          "sourceRows": [
+            304,
+            305
+          ]
+        },
+        {
+          "id": "niveau-11-orthographe-grammaticale",
+          "titre": "Orthographe grammaticale",
+          "sousSujets": [
+            {
+              "id": "accord-sujet-verbe",
+              "titre": "Accord sujet-verbe",
+              "competence": "Identifier le noyau du sujet et accorder le verbe",
+              "activite": "Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Encadrement, remplacement, déplacement et construction de phrases; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Manipulations de phrases, remplacement du sujet et correction d’erreurs; Repérage dans un texte, classement par groupe et conjugaison; Schéma narratif, remise en ordre d’événements et réécriture d’une fin; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 306
+            }
+          ],
+          "sourceRows": [
+            306
+          ]
+        },
+        {
+          "id": "niveau-11-vocabulaire-et-style",
+          "titre": "Vocabulaire et style",
+          "sousSujets": [
+            {
+              "id": "nuances-registres-et-procedes-stylistiques",
+              "titre": "Nuances, registres et procédés stylistiques",
+              "competence": "Choisir un lexique précis et adapter le registre avec un degré croissant d’autonomie et de complexité",
+              "activite": "Réécriture selon registre, banque lexicale et imitation de style",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 307
+            }
+          ],
+          "sourceRows": [
+            307
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 7,
+      "nombreSousSujets": 9
+    },
+    {
+      "niveau": 12,
+      "label": "12e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-12-classes-de-mots",
+          "titre": "Classes de mots",
+          "sousSujets": [
+            {
+              "id": "adjectif-qualificatif",
+              "titre": "Adjectif qualificatif",
+              "competence": "Identifier, placer et accorder l’adjectif",
+              "activite": "Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Jeu de situations, conseils et phrases hypothétiques; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Portrait enrichi, expansions du nom et correction d’accords; Table de conjugaison, phrases contextualisées et jeu de rapidité",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 322
+            }
+          ],
+          "sourceRows": [
+            322
+          ]
+        },
+        {
+          "id": "niveau-12-conjugaison",
+          "titre": "Conjugaison",
+          "sousSujets": [
+            {
+              "id": "conditionnel-present",
+              "titre": "Conditionnel présent",
+              "competence": "Exprimer le souhait, l’hypothèse, le conseil et la politesse",
+              "activite": "Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Jeu de situations, conseils et phrases hypothétiques; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Portrait enrichi, expansions du nom et correction d’accords; Table de conjugaison, phrases contextualisées et jeu de rapidité",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 323
+            },
+            {
+              "id": "modes-temps-et-formes-verbales",
+              "titre": "Modes, temps et formes verbales",
+              "competence": "Identifier les modes et choisir le temps adapté",
+              "activite": "Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Tableau comparatif, ligne du temps et transformation de phrases",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 324
+            },
+            {
+              "id": "present-de-l-indicatif",
+              "titre": "Présent de l’indicatif",
+              "competence": "Conjuguer les verbes usuels et employer le présent selon le contexte",
+              "activite": "Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Jeu de situations, conseils et phrases hypothétiques; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Portrait enrichi, expansions du nom et correction d’accords; Table de conjugaison, phrases contextualisées et jeu de rapidité",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 325
+            },
+            {
+              "id": "valeurs-des-temps-modes-et-concordance",
+              "titre": "Valeurs des temps, modes et concordance",
+              "competence": "Choisir les temps et modes selon le genre et la chronologie avec un degré croissant d’autonomie et de complexité",
+              "activite": "Transformation d’un texte, frise temporelle et justification",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 326
+            }
+          ],
+          "sourceRows": [
+            323,
+            324,
+            325,
+            326
+          ]
+        },
+        {
+          "id": "niveau-12-grammaire-et-syntaxe",
+          "titre": "Grammaire et syntaxe",
+          "sousSujets": [
+            {
+              "id": "phrase-complexe-subordination-et-cohesion",
+              "titre": "Phrase complexe, subordination et cohésion",
+              "competence": "Maîtriser la syntaxe complexe et assurer les reprises et connecteurs avec un degré croissant d’autonomie et de complexité",
+              "activite": "Réécriture, combinaison de phrases et correction raisonnée",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 327
+            }
+          ],
+          "sourceRows": [
+            327
+          ]
+        },
+        {
+          "id": "niveau-12-orthographe",
+          "titre": "Orthographe",
+          "sousSujets": [
+            {
+              "id": "accords-complexes-et-correction-autonome",
+              "titre": "Accords complexes et correction autonome",
+              "competence": "Appliquer et expliquer les accords grammaticaux et lexicaux avec un degré croissant d’autonomie et de complexité",
+              "activite": "Dictée analytique, révision avec codes et portfolio d’erreurs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 328
+            },
+            {
+              "id": "dictee-et-automatisation-orthographique",
+              "titre": "Dictée et automatisation orthographique",
+              "competence": "Mobiliser les correspondances phonèmes-graphèmes et les règles étudiées",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Jeu de situations, conseils et phrases hypothétiques; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Portrait enrichi, expansions du nom et correction d’accords; Table de conjugaison, phrases contextualisées et jeu de rapidité; Tableau comparatif, ligne du temps et transformation de phrases; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 329
+            }
+          ],
+          "sourceRows": [
+            328,
+            329
+          ]
+        },
+        {
+          "id": "niveau-12-vocabulaire-et-style",
+          "titre": "Vocabulaire et style",
+          "sousSujets": [
+            {
+              "id": "nuances-registres-et-procedes-stylistiques",
+              "titre": "Nuances, registres et procédés stylistiques",
+              "competence": "Choisir un lexique précis et adapter le registre avec un degré croissant d’autonomie et de complexité",
+              "activite": "Réécriture selon registre, banque lexicale et imitation de style",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 330
+            }
+          ],
+          "sourceRows": [
+            330
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 9
+    }
+  ]
+}

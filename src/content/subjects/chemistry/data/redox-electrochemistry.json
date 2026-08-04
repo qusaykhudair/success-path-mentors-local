@@ -1,0 +1,198 @@
+{
+  "metadata": {
+    "subject": "Chemistry",
+    "subjectSlug": "chemistry",
+    "strand": "Redox and Electrochemistry",
+    "strandSlug": "redox-electrochemistry",
+    "gradeRange": {
+      "min": 10,
+      "max": 12
+    },
+    "gradeLevels": [
+      10,
+      12
+    ],
+    "sourceRecordCount": 9,
+    "gradedSourceRecordCount": 4,
+    "nonGradedSourceRecordCount": 5,
+    "mainTopicCount": 4,
+    "subtopicCount": 4,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "redox-electrochemistry",
+    "title": {
+      "en": "Redox and Electrochemistry",
+      "ar": "الأكسدة والاختزال والكيمياء الكهربائية"
+    },
+    "description": {
+      "en": "Oxidation numbers, redox balancing, galvanic and electrolytic cells, corrosion, and electrochemical applications.",
+      "ar": "أعداد الأكسدة وموازنة تفاعلات الأكسدة والاختزال والخلايا الجلفانية والإلكتروليتية والتآكل والتطبيقات الكهربائية."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-electrochemical-cells",
+          "title": "Electrochemical Cells",
+          "subtopics": [
+            {
+              "id": "galvanic-and-electrolytic-cells",
+              "title": "Galvanic and electrolytic cells"
+            }
+          ],
+          "sourceRows": [
+            42
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-oxidation-reduction",
+          "title": "Oxidation–Reduction",
+          "subtopics": [
+            {
+              "id": "oxidation-numbers-and-balancing-redox-reactions",
+              "title": "Oxidation numbers and balancing redox reactions"
+            }
+          ],
+          "sourceRows": [
+            43
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-electrochemical-cells",
+          "title": "Electrochemical Cells",
+          "subtopics": [
+            {
+              "id": "galvanic-and-electrolytic-cells",
+              "title": "Galvanic and electrolytic cells"
+            }
+          ],
+          "sourceRows": [
+            128
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-oxidation-reduction",
+          "title": "Oxidation–Reduction",
+          "subtopics": [
+            {
+              "id": "oxidation-numbers-and-balancing-redox-reactions",
+              "title": "Oxidation numbers and balancing redox reactions"
+            }
+          ],
+          "sourceRows": [
+            129
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    }
+  ]
+}

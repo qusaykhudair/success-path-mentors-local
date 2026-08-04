@@ -1,0 +1,178 @@
+{
+  "metadata": {
+    "subject": "Physics",
+    "recordCount": 21,
+    "status": "excluded-from-grade-pages",
+    "reason": "No Grade 1–12 value was supplied, so no grade was inferred."
+  },
+  "records": [
+    {
+      "sourceRow": 151,
+      "subject": "Physics",
+      "gradeLevel": "Grade not stated",
+      "strand": "Dynamics and Forces",
+      "mainTopic": "Dynamics",
+      "subtopic": "Dynamics and force analysis"
+    },
+    {
+      "sourceRow": 152,
+      "subject": "Physics",
+      "gradeLevel": "Grade not stated",
+      "strand": "Dynamics and Forces",
+      "mainTopic": "Forces",
+      "subtopic": "Force concepts"
+    },
+    {
+      "sourceRow": 153,
+      "subject": "Physics",
+      "gradeLevel": "Grade not stated",
+      "strand": "Electricity and Circuits",
+      "mainTopic": "Electric Quantities",
+      "subtopic": "Charge, current, voltage, and resistance"
+    },
+    {
+      "sourceRow": 154,
+      "subject": "Physics",
+      "gradeLevel": "Grade not stated",
+      "strand": "Electrostatics and Electromagnetism",
+      "mainTopic": "Electrostatics",
+      "subtopic": "Electric charge and electrostatic interactions"
+    },
+    {
+      "sourceRow": 155,
+      "subject": "Physics",
+      "gradeLevel": "Grade not stated",
+      "strand": "Electrostatics and Electromagnetism",
+      "mainTopic": "Electrostatics",
+      "subtopic": "Static charge, induction, and Coulomb's law"
+    },
+    {
+      "sourceRow": 156,
+      "subject": "Physics",
+      "gradeLevel": "Grade not stated",
+      "strand": "Integrated Physics",
+      "mainTopic": "Physics Review",
+      "subtopic": "General physics review"
+    },
+    {
+      "sourceRow": 157,
+      "subject": "Physics",
+      "gradeLevel": "Grade not stated",
+      "strand": "Kinematics",
+      "mainTopic": "Kinematic Equations",
+      "subtopic": "One-dimensional kinematics and SUVAT"
+    },
+    {
+      "sourceRow": 158,
+      "subject": "Physics",
+      "gradeLevel": "Grade not stated",
+      "strand": "Kinematics",
+      "mainTopic": "Motion Description",
+      "subtopic": "Displacement, speed, velocity, and acceleration"
+    },
+    {
+      "sourceRow": 159,
+      "subject": "Physics",
+      "gradeLevel": "Grade not stated",
+      "strand": "Kinematics",
+      "mainTopic": "Projectile and Two-Dimensional Motion",
+      "subtopic": "Projectile and curvilinear motion"
+    },
+    {
+      "sourceRow": 160,
+      "subject": "Physics",
+      "gradeLevel": "Grade not stated",
+      "strand": "Measurement, Vectors, and Modeling",
+      "mainTopic": "Vectors",
+      "subtopic": "Vector components and resultants"
+    },
+    {
+      "sourceRow": 161,
+      "subject": "Physics",
+      "gradeLevel": "Grade not stated",
+      "strand": "Optics",
+      "mainTopic": "Optics",
+      "subtopic": "Optics overview and ray tracing"
+    },
+    {
+      "sourceRow": 162,
+      "subject": "Physics",
+      "gradeLevel": "Grade not stated",
+      "strand": "Optics",
+      "mainTopic": "Reflection and Mirrors",
+      "subtopic": "Reflection, mirrors, and ray diagrams"
+    },
+    {
+      "sourceRow": 163,
+      "subject": "Physics",
+      "gradeLevel": "Grade not stated",
+      "strand": "Optics",
+      "mainTopic": "Refraction and Total Internal Reflection",
+      "subtopic": "Refraction, refractive index, and total internal reflection"
+    },
+    {
+      "sourceRow": 164,
+      "subject": "Physics",
+      "gradeLevel": "Grade not stated",
+      "strand": "Oscillations",
+      "mainTopic": "Simple Harmonic Motion",
+      "subtopic": "Springs and pendulums"
+    },
+    {
+      "sourceRow": 165,
+      "subject": "Physics",
+      "gradeLevel": "Grade not stated",
+      "strand": "Thermal Physics",
+      "mainTopic": "Heat and Temperature",
+      "subtopic": "Heat, temperature, and heat capacity"
+    },
+    {
+      "sourceRow": 166,
+      "subject": "Physics",
+      "gradeLevel": "Grade not stated",
+      "strand": "Thermal Physics",
+      "mainTopic": "Phase Changes",
+      "subtopic": "Heating curves and phase change"
+    },
+    {
+      "sourceRow": 167,
+      "subject": "Physics",
+      "gradeLevel": "Grade not stated",
+      "strand": "Waves and Sound",
+      "mainTopic": "Wave Interference",
+      "subtopic": "Superposition and interference"
+    },
+    {
+      "sourceRow": 168,
+      "subject": "Physics",
+      "gradeLevel": "Grade not stated",
+      "strand": "Waves and Sound",
+      "mainTopic": "Wave Properties",
+      "subtopic": "Transverse/longitudinal waves, speed, frequency, and wavelength"
+    },
+    {
+      "sourceRow": 169,
+      "subject": "Physics",
+      "gradeLevel": "Grade not stated",
+      "strand": "Work, Energy, and Power",
+      "mainTopic": "Conservation of Energy",
+      "subtopic": "Conservation of mechanical and total energy"
+    },
+    {
+      "sourceRow": 170,
+      "subject": "Physics",
+      "gradeLevel": "Grade not stated",
+      "strand": "Work, Energy, and Power",
+      "mainTopic": "Mechanical Energy",
+      "subtopic": "Kinetic, potential, and mechanical energy"
+    },
+    {
+      "sourceRow": 171,
+      "subject": "Physics",
+      "gradeLevel": "Grade not stated",
+      "strand": "Work, Energy, and Power",
+      "mainTopic": "Work and Energy",
+      "subtopic": "Work and the work–energy theorem"
+    }
+  ]
+}

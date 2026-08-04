@@ -1,0 +1,370 @@
+{
+  "metadata": {
+    "subject": "Physics",
+    "subjectSlug": "physics",
+    "strand": "Electricity and Circuits",
+    "strandSlug": "electricity-circuits",
+    "gradeRange": {
+      "min": 8,
+      "max": 12
+    },
+    "gradeLevels": [
+      8,
+      9,
+      11,
+      12
+    ],
+    "sourceRecordCount": 17,
+    "gradedSourceRecordCount": 16,
+    "nonGradedSourceRecordCount": 1,
+    "mainTopicCount": 16,
+    "subtopicCount": 16,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "electricity-circuits",
+    "title": {
+      "en": "Electricity and Circuits",
+      "ar": "الكهرباء والدوائر"
+    },
+    "description": {
+      "en": "Charge, current, voltage, resistance, Ohm’s law, series and parallel circuits, circuit analysis, and power.",
+      "ar": "الشحنة والتيار والجهد والمقاومة وقانون أوم والدوائر على التوالي والتوازي وتحليل الدوائر والقدرة الكهربائية."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g8-electric-quantities",
+          "title": "Electric Quantities",
+          "subtopics": [
+            {
+              "id": "charge-current-voltage-and-resistance",
+              "title": "Charge, current, voltage, and resistance"
+            }
+          ],
+          "sourceRows": [
+            5
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-ohm-s-law",
+          "title": "Ohm's Law",
+          "subtopics": [
+            {
+              "id": "ohm-s-law-and-resistance",
+              "title": "Ohm's law and resistance"
+            }
+          ],
+          "sourceRows": [
+            6
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-series-and-parallel-circuits",
+          "title": "Series and Parallel Circuits",
+          "subtopics": [
+            {
+              "id": "series-parallel-circuits-and-equivalent-resistance",
+              "title": "Series/parallel circuits and equivalent resistance"
+            }
+          ],
+          "sourceRows": [
+            7
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 3,
+      "subtopicCount": 3
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-circuit-analysis",
+          "title": "Circuit Analysis",
+          "subtopics": [
+            {
+              "id": "kirchhoff-s-laws-and-circuit-diagrams",
+              "title": "Kirchhoff's laws and circuit diagrams"
+            }
+          ],
+          "sourceRows": [
+            10
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-electric-quantities",
+          "title": "Electric Quantities",
+          "subtopics": [
+            {
+              "id": "charge-current-voltage-and-resistance",
+              "title": "Charge, current, voltage, and resistance"
+            }
+          ],
+          "sourceRows": [
+            11
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-electrical-energy-and-power",
+          "title": "Electrical Energy and Power",
+          "subtopics": [
+            {
+              "id": "electrical-power-energy-and-meter-reading",
+              "title": "Electrical power, energy, and meter reading"
+            }
+          ],
+          "sourceRows": [
+            12
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-electricity",
+          "title": "Electricity",
+          "subtopics": [
+            {
+              "id": "electricity-concepts",
+              "title": "Electricity concepts"
+            }
+          ],
+          "sourceRows": [
+            13
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-ohm-s-law",
+          "title": "Ohm's Law",
+          "subtopics": [
+            {
+              "id": "ohm-s-law-and-resistance",
+              "title": "Ohm's law and resistance"
+            }
+          ],
+          "sourceRows": [
+            14
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-series-and-parallel-circuits",
+          "title": "Series and Parallel Circuits",
+          "subtopics": [
+            {
+              "id": "series-parallel-circuits-and-equivalent-resistance",
+              "title": "Series/parallel circuits and equivalent resistance"
+            }
+          ],
+          "sourceRows": [
+            15
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 6,
+      "subtopicCount": 6
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-circuit-analysis",
+          "title": "Circuit Analysis",
+          "subtopics": [
+            {
+              "id": "kirchhoff-s-laws-and-circuit-diagrams",
+              "title": "Kirchhoff's laws and circuit diagrams"
+            }
+          ],
+          "sourceRows": [
+            61
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-electric-quantities",
+          "title": "Electric Quantities",
+          "subtopics": [
+            {
+              "id": "charge-current-voltage-and-resistance",
+              "title": "Charge, current, voltage, and resistance"
+            }
+          ],
+          "sourceRows": [
+            62
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-electrical-energy-and-power",
+          "title": "Electrical Energy and Power",
+          "subtopics": [
+            {
+              "id": "electrical-power-energy-and-meter-reading",
+              "title": "Electrical power, energy, and meter reading"
+            }
+          ],
+          "sourceRows": [
+            63
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-ohm-s-law",
+          "title": "Ohm's Law",
+          "subtopics": [
+            {
+              "id": "ohm-s-law-and-resistance",
+              "title": "Ohm's law and resistance"
+            }
+          ],
+          "sourceRows": [
+            64
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-series-and-parallel-circuits",
+          "title": "Series and Parallel Circuits",
+          "subtopics": [
+            {
+              "id": "series-parallel-circuits-and-equivalent-resistance",
+              "title": "Series/parallel circuits and equivalent resistance"
+            }
+          ],
+          "sourceRows": [
+            65
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 5,
+      "subtopicCount": 5
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-circuit-analysis",
+          "title": "Circuit Analysis",
+          "subtopics": [
+            {
+              "id": "kirchhoff-s-laws-and-circuit-diagrams",
+              "title": "Kirchhoff's laws and circuit diagrams"
+            }
+          ],
+          "sourceRows": [
+            106
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-ohm-s-law",
+          "title": "Ohm's Law",
+          "subtopics": [
+            {
+              "id": "ohm-s-law-and-resistance",
+              "title": "Ohm's law and resistance"
+            }
+          ],
+          "sourceRows": [
+            107
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    }
+  ]
+}

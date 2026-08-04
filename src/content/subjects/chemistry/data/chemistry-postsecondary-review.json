@@ -1,0 +1,266 @@
+{
+  "metadata": {
+    "subject": "Chemistry",
+    "recordCount": 32,
+    "status": "excluded-from-grade-pages",
+    "reason": "Postsecondary records are preserved for a future advanced-program page."
+  },
+  "records": [
+    {
+      "sourceRow": 139,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Acids, Bases, and Aqueous Equilibria",
+      "mainTopic": "Acid–Base Concepts",
+      "subtopic": "Arrhenius, Brønsted–Lowry, and Lewis acids/bases"
+    },
+    {
+      "sourceRow": 140,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Acids, Bases, and Aqueous Equilibria",
+      "mainTopic": "Acid–Base Equilibria",
+      "subtopic": "Acid–base equilibria"
+    },
+    {
+      "sourceRow": 141,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Acids, Bases, and Aqueous Equilibria",
+      "mainTopic": "Acid–Base Equilibria",
+      "subtopic": "Ka, Kb, Kw, salts, and hydrolysis"
+    },
+    {
+      "sourceRow": 142,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Acids, Bases, and Aqueous Equilibria",
+      "mainTopic": "Buffers and Titrations",
+      "subtopic": "Buffers, titration curves, and neutralization"
+    },
+    {
+      "sourceRow": 143,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Acids, Bases, and Aqueous Equilibria",
+      "mainTopic": "pH and pOH",
+      "subtopic": "Strong and weak acid/base calculations"
+    },
+    {
+      "sourceRow": 144,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Atomic Structure and Periodicity",
+      "mainTopic": "Periodic Trends",
+      "subtopic": "Atomic-radius, ionization-energy, and electronegativity trends"
+    },
+    {
+      "sourceRow": 145,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Atomic Structure and Periodicity",
+      "mainTopic": "Quantum Model",
+      "subtopic": "Quantum numbers and orbitals"
+    },
+    {
+      "sourceRow": 146,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Chemical Bonding and Molecular Structure",
+      "mainTopic": "Bonding Models",
+      "subtopic": "Hybridization and valence-bond theory"
+    },
+    {
+      "sourceRow": 147,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Chemical Bonding and Molecular Structure",
+      "mainTopic": "Ionic and Covalent Bonding",
+      "subtopic": "Ionic, covalent, and metallic bonding"
+    },
+    {
+      "sourceRow": 148,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Chemical Bonding and Molecular Structure",
+      "mainTopic": "Molecular Geometry",
+      "subtopic": "VSEPR and molecular shapes"
+    },
+    {
+      "sourceRow": 149,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Chemical Bonding and Molecular Structure",
+      "mainTopic": "Polarity and Intermolecular Forces",
+      "subtopic": "Molecular polarity and intermolecular forces"
+    },
+    {
+      "sourceRow": 150,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Chemical Equilibrium",
+      "mainTopic": "Equilibrium Concepts",
+      "subtopic": "Dynamic equilibrium and equilibrium constants"
+    },
+    {
+      "sourceRow": 151,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Chemical Kinetics",
+      "mainTopic": "Rate Laws",
+      "subtopic": "Rate laws and reaction order"
+    },
+    {
+      "sourceRow": 152,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Chemical Kinetics",
+      "mainTopic": "Reaction Mechanisms",
+      "subtopic": "Collision theory, activation energy, and mechanisms"
+    },
+    {
+      "sourceRow": 153,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Chemical Kinetics",
+      "mainTopic": "Reaction Rates",
+      "subtopic": "Chemical kinetics"
+    },
+    {
+      "sourceRow": 154,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Chemical Kinetics",
+      "mainTopic": "Reaction Rates",
+      "subtopic": "Factors affecting reaction rate"
+    },
+    {
+      "sourceRow": 155,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Chemical Reactions and Equations",
+      "mainTopic": "Chemical Reactions",
+      "subtopic": "General chemical reaction concepts"
+    },
+    {
+      "sourceRow": 156,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Integrated Chemistry",
+      "mainTopic": "Chemistry Review",
+      "subtopic": "General chemistry review"
+    },
+    {
+      "sourceRow": 157,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Matter and Chemical Properties",
+      "mainTopic": "States of Matter",
+      "subtopic": "Solids, liquids, gases, and phase behavior"
+    },
+    {
+      "sourceRow": 158,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Nuclear Chemistry",
+      "mainTopic": "Nuclear Reactions",
+      "subtopic": "Fission, fusion, and nuclear power"
+    },
+    {
+      "sourceRow": 159,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Nuclear Chemistry",
+      "mainTopic": "Radioactivity",
+      "subtopic": "Radioactive decay, isotopes, and half-life"
+    },
+    {
+      "sourceRow": 160,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Organic Chemistry",
+      "mainTopic": "Stereochemistry",
+      "subtopic": "Molecular stereochemistry"
+    },
+    {
+      "sourceRow": 161,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Redox and Electrochemistry",
+      "mainTopic": "Electrochemical Cells",
+      "subtopic": "Galvanic and electrolytic cells"
+    },
+    {
+      "sourceRow": 162,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Redox and Electrochemistry",
+      "mainTopic": "Oxidation–Reduction",
+      "subtopic": "Oxidation numbers and balancing redox reactions"
+    },
+    {
+      "sourceRow": 163,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Solutions and Solubility",
+      "mainTopic": "Colligative Properties",
+      "subtopic": "Colligative properties"
+    },
+    {
+      "sourceRow": 164,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Solutions and Solubility",
+      "mainTopic": "Phase Equilibria",
+      "subtopic": "Clausius–Clapeyron relationship"
+    },
+    {
+      "sourceRow": 165,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Solutions and Solubility",
+      "mainTopic": "Solubility",
+      "subtopic": "Solubility curves, saturation, and factors affecting solubility"
+    },
+    {
+      "sourceRow": 166,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Solutions and Solubility",
+      "mainTopic": "Solutions and Concentration",
+      "subtopic": "Physical properties of solutions"
+    },
+    {
+      "sourceRow": 167,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Solutions and Solubility",
+      "mainTopic": "Solutions and Concentration",
+      "subtopic": "Solution formation and concentration units"
+    },
+    {
+      "sourceRow": 168,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "States of Matter and Gases",
+      "mainTopic": "Gas Laws",
+      "subtopic": "Boyle, Charles, Gay-Lussac, combined, and ideal gas laws"
+    },
+    {
+      "sourceRow": 169,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Thermochemistry",
+      "mainTopic": "Calorimetry",
+      "subtopic": "Heat transfer and calorimetry"
+    },
+    {
+      "sourceRow": 170,
+      "subject": "Chemistry",
+      "gradeLevel": "Postsecondary",
+      "strand": "Thermochemistry",
+      "mainTopic": "Enthalpy and Energy Changes",
+      "subtopic": "Enthalpy changes and thermochemical equations"
+    }
+  ]
+}

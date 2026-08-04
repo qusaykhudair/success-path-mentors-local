@@ -1,0 +1,403 @@
+{
+  "metadata": {
+    "programme": "Programme français",
+    "matiere": "Mathématiques en français",
+    "matiereSlug": "mathematiques-en-francais",
+    "domaine": "F. Littératie financière",
+    "domaineSlug": "litteratie-financiere",
+    "niveaux": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 14,
+    "publicRecordCount": 13,
+    "nonStandardRecordCount": 1,
+    "mainTopicPlacementCount": 13,
+    "subtopicPlacementCount": 13,
+    "observedRecordCount": 1,
+    "referenceRecordCount": 12,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Les sujets principaux et les sous-sujets sont comptés par niveau. Les répétitions entre niveaux sont conservées comme progression pédagogique.",
+    "integrityRules": [
+      "Les répétitions entre niveaux sont conservées.",
+      "Seuls les doublons exacts Niveau + Domaine + Sujet principal + Sous-sujet peuvent être supprimés.",
+      "Les niveaux CECRL, adultes, secondaires parallèles et non précisés sont conservés dans les fichiers de révision.",
+      "Les niveaux sans contenu sont conservés dans le JSON mais masqués sur le site."
+    ]
+  },
+  "domaine": {
+    "slug": "litteratie-financiere",
+    "titre": "Littératie financière",
+    "titreSource": "F. Littératie financière",
+    "description": "Argent, budget, décisions financières, taux, intérêts, coûts, revenus et planification financière.",
+    "iconKey": "finance"
+  },
+  "niveaux": [
+    {
+      "niveau": 1,
+      "label": "1re année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-1-argent-et-decisions",
+          "titre": "Argent et décisions",
+          "sousSujets": [
+            {
+              "id": "monnaie-prix-budget-rabais-et-interet-selon-le-niveau",
+              "titre": "Monnaie, prix, budget, rabais et intérêt selon le niveau",
+              "competence": "Comparer des choix et effectuer des calculs financiers simples",
+              "activite": "Magasin de classe, budget, circulaires et scénario d’achat",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 22
+            }
+          ],
+          "sourceRows": [
+            22
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 1,
+      "nombreSousSujets": 1
+    },
+    {
+      "niveau": 2,
+      "label": "2e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-2-argent-et-decisions",
+          "titre": "Argent et décisions",
+          "sousSujets": [
+            {
+              "id": "monnaie-prix-budget-rabais-et-interet-selon-le-niveau",
+              "titre": "Monnaie, prix, budget, rabais et intérêt selon le niveau",
+              "competence": "Comparer des choix et effectuer des calculs financiers simples",
+              "activite": "Magasin de classe, budget, circulaires et scénario d’achat",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 49
+            }
+          ],
+          "sourceRows": [
+            49
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 1,
+      "nombreSousSujets": 1
+    },
+    {
+      "niveau": 3,
+      "label": "3e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-3-argent-et-decisions",
+          "titre": "Argent et décisions",
+          "sousSujets": [
+            {
+              "id": "monnaie-prix-budget-rabais-et-interet-selon-le-niveau",
+              "titre": "Monnaie, prix, budget, rabais et intérêt selon le niveau",
+              "competence": "Comparer des choix et effectuer des calculs financiers simples",
+              "activite": "Magasin de classe, budget, circulaires et scénario d’achat",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 76
+            }
+          ],
+          "sourceRows": [
+            76
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 1,
+      "nombreSousSujets": 1
+    },
+    {
+      "niveau": 4,
+      "label": "4e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-4-argent-et-decisions",
+          "titre": "Argent et décisions",
+          "sousSujets": [
+            {
+              "id": "monnaie-prix-budget-rabais-et-interet-selon-le-niveau",
+              "titre": "Monnaie, prix, budget, rabais et intérêt selon le niveau",
+              "competence": "Comparer des choix et effectuer des calculs financiers simples",
+              "activite": "Magasin de classe, budget, circulaires et scénario d’achat",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 116
+            }
+          ],
+          "sourceRows": [
+            116
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 1,
+      "nombreSousSujets": 1
+    },
+    {
+      "niveau": 5,
+      "label": "5e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-5-argent-et-decisions",
+          "titre": "Argent et décisions",
+          "sousSujets": [
+            {
+              "id": "monnaie-prix-budget-rabais-et-interet-selon-le-niveau",
+              "titre": "Monnaie, prix, budget, rabais et intérêt selon le niveau",
+              "competence": "Comparer des choix et effectuer des calculs financiers simples",
+              "activite": "Magasin de classe, budget, circulaires et scénario d’achat",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 147
+            }
+          ],
+          "sourceRows": [
+            147
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 1,
+      "nombreSousSujets": 1
+    },
+    {
+      "niveau": 6,
+      "label": "6e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-6-argent-et-decisions",
+          "titre": "Argent et décisions",
+          "sousSujets": [
+            {
+              "id": "monnaie-prix-budget-rabais-et-interet-selon-le-niveau",
+              "titre": "Monnaie, prix, budget, rabais et intérêt selon le niveau",
+              "competence": "Comparer des choix et effectuer des calculs financiers simples",
+              "activite": "Magasin de classe, budget, circulaires et scénario d’achat",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 191
+            }
+          ],
+          "sourceRows": [
+            191
+          ]
+        },
+        {
+          "id": "niveau-6-argent-et-decisions-financieres",
+          "titre": "Argent et décisions financières",
+          "sousSujets": [
+            {
+              "id": "monnaie-budget-rabais-et-interet",
+              "titre": "Monnaie, budget, rabais et intérêt",
+              "competence": "Calculer, comparer et prendre des décisions financières",
+              "activite": "Budget simulé, magasin de classe et analyse d’offres; Grilles de 100, rabais, sondages et problèmes financiers; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 192
+            }
+          ],
+          "sourceRows": [
+            192
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 2,
+      "nombreSousSujets": 2
+    },
+    {
+      "niveau": 7,
+      "label": "7e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-7-argent-et-decisions",
+          "titre": "Argent et décisions",
+          "sousSujets": [
+            {
+              "id": "monnaie-prix-budget-rabais-et-interet-selon-le-niveau",
+              "titre": "Monnaie, prix, budget, rabais et intérêt selon le niveau",
+              "competence": "Comparer des choix et effectuer des calculs financiers simples",
+              "activite": "Magasin de classe, budget, circulaires et scénario d’achat",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 223
+            }
+          ],
+          "sourceRows": [
+            223
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 1,
+      "nombreSousSujets": 1
+    },
+    {
+      "niveau": 8,
+      "label": "8e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-8-argent-et-decisions",
+          "titre": "Argent et décisions",
+          "sousSujets": [
+            {
+              "id": "monnaie-prix-budget-rabais-et-interet-selon-le-niveau",
+              "titre": "Monnaie, prix, budget, rabais et intérêt selon le niveau",
+              "competence": "Comparer des choix et effectuer des calculs financiers simples",
+              "activite": "Magasin de classe, budget, circulaires et scénario d’achat",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 256
+            }
+          ],
+          "sourceRows": [
+            256
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 1,
+      "nombreSousSujets": 1
+    },
+    {
+      "niveau": 9,
+      "label": "9e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-9-budget-taux-interet-et-comparaison-d-options",
+          "titre": "Budget, taux, intérêt et comparaison d’options",
+          "sousSujets": [
+            {
+              "id": "budget-taux-interet-et-comparaison-d-options",
+              "titre": "Budget, taux, intérêt et comparaison d’options",
+              "competence": "Prendre des décisions financières justifiées",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 294
+            }
+          ],
+          "sourceRows": [
+            294
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 1,
+      "nombreSousSujets": 1
+    },
+    {
+      "niveau": 10,
+      "label": "10e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-10-croissance-pourcentage-et-interet",
+          "titre": "Croissance, pourcentage et intérêt",
+          "sousSujets": [
+            {
+              "id": "croissance-pourcentage-et-interet",
+              "titre": "Croissance, pourcentage et intérêt",
+              "competence": "Modéliser des situations financières",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 326
+            }
+          ],
+          "sourceRows": [
+            326
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 1,
+      "nombreSousSujets": 1
+    },
+    {
+      "niveau": 11,
+      "label": "11e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-11-interet-compose-prets-et-placements",
+          "titre": "Intérêt composé, prêts et placements",
+          "sousSujets": [
+            {
+              "id": "interet-compose-prets-et-placements",
+              "titre": "Intérêt composé, prêts et placements",
+              "competence": "Comparer des scénarios à long terme",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 347
+            }
+          ],
+          "sourceRows": [
+            347
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 1,
+      "nombreSousSujets": 1
+    },
+    {
+      "niveau": 12,
+      "label": "12e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-12-modelisation-financiere",
+          "titre": "Modélisation financière",
+          "sousSujets": [
+            {
+              "id": "modelisation-financiere",
+              "titre": "Modélisation financière",
+              "competence": "Évaluer emprunts, placements, annuités et risques",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 355
+            }
+          ],
+          "sourceRows": [
+            355
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 1,
+      "nombreSousSujets": 1
+    }
+  ]
+}

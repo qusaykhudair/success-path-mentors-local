@@ -1,0 +1,387 @@
+{
+  "metadata": {
+    "subject": "Physics",
+    "subjectSlug": "physics",
+    "strand": "Work, Energy, and Power",
+    "strandSlug": "work-energy-power",
+    "gradeRange": {
+      "min": 8,
+      "max": 12
+    },
+    "gradeLevels": [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 23,
+    "gradedSourceRecordCount": 19,
+    "nonGradedSourceRecordCount": 4,
+    "mainTopicCount": 16,
+    "subtopicCount": 19,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "work-energy-power",
+    "title": {
+      "en": "Work, Energy, and Power",
+      "ar": "الشغل والطاقة والقدرة"
+    },
+    "description": {
+      "en": "Work, kinetic and potential energy, mechanical energy, energy conservation, power, efficiency, and energy cost.",
+      "ar": "الشغل وطاقة الحركة والوضع والطاقة الميكانيكية وحفظ الطاقة والقدرة والكفاءة وتكلفة الطاقة."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g8-energy",
+          "title": "Energy",
+          "subtopics": [
+            {
+              "id": "energy-practice",
+              "title": "Energy practice"
+            }
+          ],
+          "sourceRows": [
+            8
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-power-and-efficiency",
+          "title": "Power and Efficiency",
+          "subtopics": [
+            {
+              "id": "power-efficiency-and-energy-cost",
+              "title": "Power, efficiency, and energy cost"
+            }
+          ],
+          "sourceRows": [
+            9
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-energy",
+          "title": "Energy",
+          "subtopics": [
+            {
+              "id": "forms-and-transformations-of-energy",
+              "title": "Forms and transformations of energy"
+            }
+          ],
+          "sourceRows": [
+            22
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-mechanical-energy",
+          "title": "Mechanical Energy",
+          "subtopics": [
+            {
+              "id": "kinetic-potential-and-mechanical-energy",
+              "title": "Kinetic, potential, and mechanical energy"
+            }
+          ],
+          "sourceRows": [
+            23
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-power-and-efficiency",
+          "title": "Power and Efficiency",
+          "subtopics": [
+            {
+              "id": "energy-efficiency",
+              "title": "Energy efficiency"
+            },
+            {
+              "id": "power-efficiency-and-energy-cost",
+              "title": "Power, efficiency, and energy cost"
+            }
+          ],
+          "sourceRows": [
+            24,
+            25
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 3,
+      "subtopicCount": 4
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-conservation-of-energy",
+          "title": "Conservation of Energy",
+          "subtopics": [
+            {
+              "id": "conservation-of-mechanical-and-total-energy",
+              "title": "Conservation of mechanical and total energy"
+            }
+          ],
+          "sourceRows": [
+            44
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-energy",
+          "title": "Energy",
+          "subtopics": [
+            {
+              "id": "energy-concepts",
+              "title": "Energy concepts"
+            },
+            {
+              "id": "forms-and-transformations-of-energy",
+              "title": "Forms and transformations of energy"
+            }
+          ],
+          "sourceRows": [
+            45,
+            46
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-mechanical-energy",
+          "title": "Mechanical Energy",
+          "subtopics": [
+            {
+              "id": "kinetic-potential-and-mechanical-energy",
+              "title": "Kinetic, potential, and mechanical energy"
+            }
+          ],
+          "sourceRows": [
+            47
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-work-and-energy",
+          "title": "Work and Energy",
+          "subtopics": [
+            {
+              "id": "work-and-the-work-energy-theorem",
+              "title": "Work and the work–energy theorem"
+            }
+          ],
+          "sourceRows": [
+            48
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 4,
+      "subtopicCount": 5
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-conservation-of-energy",
+          "title": "Conservation of Energy",
+          "subtopics": [
+            {
+              "id": "conservation-of-mechanical-and-total-energy",
+              "title": "Conservation of mechanical and total energy"
+            }
+          ],
+          "sourceRows": [
+            92
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-energy",
+          "title": "Energy",
+          "subtopics": [
+            {
+              "id": "forms-and-transformations-of-energy",
+              "title": "Forms and transformations of energy"
+            }
+          ],
+          "sourceRows": [
+            93
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-mechanical-energy",
+          "title": "Mechanical Energy",
+          "subtopics": [
+            {
+              "id": "kinetic-potential-and-mechanical-energy",
+              "title": "Kinetic, potential, and mechanical energy"
+            }
+          ],
+          "sourceRows": [
+            94
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-power-and-efficiency",
+          "title": "Power and Efficiency",
+          "subtopics": [
+            {
+              "id": "energy-efficiency",
+              "title": "Energy efficiency"
+            },
+            {
+              "id": "power-efficiency-and-energy-cost",
+              "title": "Power, efficiency, and energy cost"
+            }
+          ],
+          "sourceRows": [
+            95,
+            96
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-work-and-energy",
+          "title": "Work and Energy",
+          "subtopics": [
+            {
+              "id": "work-and-the-work-energy-theorem",
+              "title": "Work and the work–energy theorem"
+            }
+          ],
+          "sourceRows": [
+            97
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 5,
+      "subtopicCount": 6
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-conservation-of-energy",
+          "title": "Conservation of Energy",
+          "subtopics": [
+            {
+              "id": "conservation-of-mechanical-and-total-energy",
+              "title": "Conservation of mechanical and total energy"
+            }
+          ],
+          "sourceRows": [
+            136
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-work-and-energy",
+          "title": "Work and Energy",
+          "subtopics": [
+            {
+              "id": "work-and-the-work-energy-theorem",
+              "title": "Work and the work–energy theorem"
+            }
+          ],
+          "sourceRows": [
+            137
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    }
+  ]
+}

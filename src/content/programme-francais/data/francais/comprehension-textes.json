@@ -1,0 +1,1307 @@
+{
+  "metadata": {
+    "programme": "Programme français",
+    "matiere": "Français",
+    "matiereSlug": "francais",
+    "domaine": "C. Compréhension : comprendre des textes et y réagir",
+    "domaineSlug": "comprehension-textes",
+    "niveaux": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 69,
+    "publicRecordCount": 61,
+    "nonStandardRecordCount": 8,
+    "mainTopicPlacementCount": 60,
+    "subtopicPlacementCount": 61,
+    "observedRecordCount": 17,
+    "referenceRecordCount": 44,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Les sujets principaux et les sous-sujets sont comptés par niveau. Les répétitions entre niveaux sont conservées comme progression pédagogique.",
+    "integrityRules": [
+      "Les répétitions entre niveaux sont conservées.",
+      "Seuls les doublons exacts Niveau + Domaine + Sujet principal + Sous-sujet peuvent être supprimés.",
+      "Les niveaux CECRL, adultes, secondaires parallèles et non précisés sont conservés dans les fichiers de révision.",
+      "Les niveaux sans contenu sont conservés dans le JSON mais masqués sur le site."
+    ]
+  },
+  "domaine": {
+    "slug": "comprehension-textes",
+    "titre": "Compréhension des textes",
+    "titreSource": "C. Compréhension : comprendre des textes et y réagir",
+    "description": "Lecture, stratégies de compréhension, fluidité, analyse, interprétation et réaction aux textes.",
+    "iconKey": "lecture"
+  },
+  "niveaux": [
+    {
+      "niveau": 1,
+      "label": "1re année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-1-comprehension-litterale-et-inferentielle",
+          "titre": "Compréhension littérale et inférentielle",
+          "sousSujets": [
+            {
+              "id": "idee-principale-details-ordre-des-evenements-et-inferences",
+              "titre": "Idée principale, détails, ordre des événements et inférences",
+              "competence": "Repérer les informations explicites et raconter l’ordre des événements",
+              "activite": "Questions graduées, schéma qui-quoi-où-quand-pourquoi et justification par le texte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 17
+            }
+          ],
+          "sourceRows": [
+            17
+          ]
+        },
+        {
+          "id": "niveau-1-genres-litteraires",
+          "titre": "Genres littéraires",
+          "sousSujets": [
+            {
+              "id": "recit-conte-poesie-et-theatre",
+              "titre": "Récit, conte, poésie et théâtre",
+              "competence": "Reconnaître personnages, lieu, problème et solution",
+              "activite": "Schéma narratif, cercle de lecture, lecture expressive et mise en scène",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 18
+            }
+          ],
+          "sourceRows": [
+            18
+          ]
+        },
+        {
+          "id": "niveau-1-lecture-et-comprehension",
+          "titre": "Lecture et compréhension",
+          "sousSujets": [
+            {
+              "id": "comprehension-de-textes",
+              "titre": "Compréhension de textes",
+              "competence": "Repérer l’information explicite, faire des inférences et justifier ses réponses",
+              "activite": "Interaction orale ou présentation; Jeu de rôle, exposé bref, entretien et rétroaction; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 19
+            }
+          ],
+          "sourceRows": [
+            19
+          ]
+        },
+        {
+          "id": "niveau-1-strategies-de-comprehension",
+          "titre": "Stratégies de compréhension",
+          "sousSujets": [
+            {
+              "id": "avant-pendant-et-apres-la-lecture",
+              "titre": "Avant, pendant et après la lecture",
+              "competence": "Prédire, visualiser, poser des questions et vérifier sa compréhension",
+              "activite": "Lecture guidée, annotation, pense-bête et journal de lecture",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 20
+            }
+          ],
+          "sourceRows": [
+            20
+          ]
+        },
+        {
+          "id": "niveau-1-textes-informatifs-et-mediatiques",
+          "titre": "Textes informatifs et médiatiques",
+          "sousSujets": [
+            {
+              "id": "organisation-elements-visuels-et-information",
+              "titre": "Organisation, éléments visuels et information",
+              "competence": "Utiliser titres, images et légendes pour comprendre",
+              "activite": "Lecture d’infographie, recherche guidée et comparaison de documents",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 21
+            }
+          ],
+          "sourceRows": [
+            21
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 5
+    },
+    {
+      "niveau": 2,
+      "label": "2e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-2-comprehension-litterale-et-inferentielle",
+          "titre": "Compréhension littérale et inférentielle",
+          "sousSujets": [
+            {
+              "id": "idee-principale-details-ordre-des-evenements-et-inferences",
+              "titre": "Idée principale, détails, ordre des événements et inférences",
+              "competence": "Repérer les informations explicites et raconter l’ordre des événements",
+              "activite": "Questions graduées, schéma qui-quoi-où-quand-pourquoi et justification par le texte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 49
+            }
+          ],
+          "sourceRows": [
+            49
+          ]
+        },
+        {
+          "id": "niveau-2-genres-de-textes",
+          "titre": "Genres de textes",
+          "sousSujets": [
+            {
+              "id": "texte-descriptif",
+              "titre": "Texte descriptif",
+              "competence": "Repérer et produire des détails sensoriels et un vocabulaire précis",
+              "activite": "Lecture guidée et questions de compréhension; Portrait, description d’un lieu et enrichissement par adjectifs; Support numérique ou visuel; Écriture guidée à partir d’un plan, grille de révision et publication",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 50
+            },
+            {
+              "id": "texte-narratif-et-recit",
+              "titre": "Texte narratif et récit",
+              "competence": "Identifier structure, personnages, événements, point de vue et thème",
+              "activite": "Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Lecture répétée, enregistrement audio et rétroaction ciblée; Schéma narratif, remise en ordre d’événements et réécriture d’une fin; Support numérique ou visuel; Transformation singulier-pluriel et masculin-féminin",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 51
+            }
+          ],
+          "sourceRows": [
+            50,
+            51
+          ]
+        },
+        {
+          "id": "niveau-2-genres-litteraires",
+          "titre": "Genres littéraires",
+          "sousSujets": [
+            {
+              "id": "recit-conte-poesie-et-theatre",
+              "titre": "Récit, conte, poésie et théâtre",
+              "competence": "Reconnaître personnages, lieu, problème et solution",
+              "activite": "Schéma narratif, cercle de lecture, lecture expressive et mise en scène",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 52
+            }
+          ],
+          "sourceRows": [
+            52
+          ]
+        },
+        {
+          "id": "niveau-2-lecture-et-comprehension",
+          "titre": "Lecture et compréhension",
+          "sousSujets": [
+            {
+              "id": "comprehension-de-textes",
+              "titre": "Compréhension de textes",
+              "competence": "Repérer l’information explicite, faire des inférences et justifier ses réponses",
+              "activite": "Interaction orale ou présentation; Jeu de rôle, exposé bref, entretien et rétroaction; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Lecture répétée, enregistrement audio et rétroaction ciblée; Phrases à compléter et description spatiale; Production écrite guidée; Schéma narratif, remise en ordre d’événements et réécriture d’une fin; Support numérique ou visuel; Transformation singulier-pluriel et masculin-féminin; Écriture guidée à partir d’un plan, grille de révision et publication",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne; Élevée",
+              "sourceRow": 53
+            }
+          ],
+          "sourceRows": [
+            53
+          ]
+        },
+        {
+          "id": "niveau-2-strategies-de-comprehension",
+          "titre": "Stratégies de compréhension",
+          "sousSujets": [
+            {
+              "id": "avant-pendant-et-apres-la-lecture",
+              "titre": "Avant, pendant et après la lecture",
+              "competence": "Prédire, visualiser, poser des questions et vérifier sa compréhension",
+              "activite": "Lecture guidée, annotation, pense-bête et journal de lecture",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 54
+            }
+          ],
+          "sourceRows": [
+            54
+          ]
+        },
+        {
+          "id": "niveau-2-textes-informatifs-et-mediatiques",
+          "titre": "Textes informatifs et médiatiques",
+          "sousSujets": [
+            {
+              "id": "organisation-elements-visuels-et-information",
+              "titre": "Organisation, éléments visuels et information",
+              "competence": "Utiliser titres, images et légendes pour comprendre",
+              "activite": "Lecture d’infographie, recherche guidée et comparaison de documents",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 55
+            }
+          ],
+          "sourceRows": [
+            55
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 6,
+      "nombreSousSujets": 7
+    },
+    {
+      "niveau": 3,
+      "label": "3e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-3-comprehension-litterale-et-inferentielle",
+          "titre": "Compréhension littérale et inférentielle",
+          "sousSujets": [
+            {
+              "id": "idee-principale-details-ordre-des-evenements-et-inferences",
+              "titre": "Idée principale, détails, ordre des événements et inférences",
+              "competence": "Dégager idées principales, preuves, relations logiques et inférences",
+              "activite": "Questions graduées, schéma qui-quoi-où-quand-pourquoi et justification par le texte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 76
+            }
+          ],
+          "sourceRows": [
+            76
+          ]
+        },
+        {
+          "id": "niveau-3-genres-de-textes",
+          "titre": "Genres de textes",
+          "sousSujets": [
+            {
+              "id": "texte-descriptif",
+              "titre": "Texte descriptif",
+              "competence": "Repérer et produire des détails sensoriels et un vocabulaire précis",
+              "activite": "Portrait, description d’un lieu et enrichissement par adjectifs; Support numérique ou visuel; Écriture guidée à partir d’un plan, grille de révision et publication",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 77
+            }
+          ],
+          "sourceRows": [
+            77
+          ]
+        },
+        {
+          "id": "niveau-3-genres-litteraires",
+          "titre": "Genres littéraires",
+          "sousSujets": [
+            {
+              "id": "recit-conte-poesie-et-theatre",
+              "titre": "Récit, conte, poésie et théâtre",
+              "competence": "Reconnaître personnages, lieu, problème et solution",
+              "activite": "Schéma narratif, cercle de lecture, lecture expressive et mise en scène",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 78
+            }
+          ],
+          "sourceRows": [
+            78
+          ]
+        },
+        {
+          "id": "niveau-3-lecture-et-comprehension",
+          "titre": "Lecture et compréhension",
+          "sousSujets": [
+            {
+              "id": "comprehension-de-textes",
+              "titre": "Compréhension de textes",
+              "competence": "Repérer l’information explicite, faire des inférences et justifier ses réponses",
+              "activite": "Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne; Élevée",
+              "sourceRow": 79
+            }
+          ],
+          "sourceRows": [
+            79
+          ]
+        },
+        {
+          "id": "niveau-3-strategies-de-comprehension",
+          "titre": "Stratégies de compréhension",
+          "sousSujets": [
+            {
+              "id": "avant-pendant-et-apres-la-lecture",
+              "titre": "Avant, pendant et après la lecture",
+              "competence": "Prédire, visualiser, poser des questions et vérifier sa compréhension",
+              "activite": "Lecture guidée, annotation, pense-bête et journal de lecture",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 80
+            }
+          ],
+          "sourceRows": [
+            80
+          ]
+        },
+        {
+          "id": "niveau-3-textes-informatifs-et-mediatiques",
+          "titre": "Textes informatifs et médiatiques",
+          "sousSujets": [
+            {
+              "id": "organisation-elements-visuels-et-information",
+              "titre": "Organisation, éléments visuels et information",
+              "competence": "Interpréter tableaux, infographies, hyperliens, arguments et sources",
+              "activite": "Lecture d’infographie, recherche guidée et comparaison de documents",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 81
+            }
+          ],
+          "sourceRows": [
+            81
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 6,
+      "nombreSousSujets": 6
+    },
+    {
+      "niveau": 4,
+      "label": "4e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-4-comprehension-litterale-et-inferentielle",
+          "titre": "Compréhension littérale et inférentielle",
+          "sousSujets": [
+            {
+              "id": "idee-principale-details-ordre-des-evenements-et-inferences",
+              "titre": "Idée principale, détails, ordre des événements et inférences",
+              "competence": "Dégager idées principales, preuves, relations logiques et inférences",
+              "activite": "Questions graduées, schéma qui-quoi-où-quand-pourquoi et justification par le texte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 115
+            }
+          ],
+          "sourceRows": [
+            115
+          ]
+        },
+        {
+          "id": "niveau-4-genres-litteraires",
+          "titre": "Genres littéraires",
+          "sousSujets": [
+            {
+              "id": "recit-conte-poesie-et-theatre",
+              "titre": "Récit, conte, poésie et théâtre",
+              "competence": "Analyser structure, thème, point de vue, procédés et effets sur le lecteur",
+              "activite": "Schéma narratif, cercle de lecture, lecture expressive et mise en scène",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 116
+            }
+          ],
+          "sourceRows": [
+            116
+          ]
+        },
+        {
+          "id": "niveau-4-lecture-et-comprehension",
+          "titre": "Lecture et compréhension",
+          "sousSujets": [
+            {
+              "id": "comprehension-de-textes",
+              "titre": "Compréhension de textes",
+              "competence": "Repérer l’information explicite, faire des inférences et justifier ses réponses",
+              "activite": "Carte de mots, familles lexicales, synonymes-antonymes et phrase contextualisée; Classement de cas, justification de l’accord et correction de texte; Classement, enrichissement de groupes nominaux et production de phrases; Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Frise chronologique, récit au passé et exercices de choix d’auxiliaire; Interaction orale ou présentation; Jeu de rôle, exposé bref, entretien et rétroaction; Jeu de situations, conseils et phrases hypothétiques; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Lecture répétée, enregistrement audio et rétroaction ciblée; Planifier la semaine et jeu de rôle; Production écrite guidée; Prévisions, projet personnel et phrases à compléter; Rédiger une lettre, répondre à un courriel et corriger avec une grille; Support numérique ou visuel; Table de conjugaison, phrases contextualisées et jeu de rapidité; Tableau comparatif, ligne du temps et transformation de phrases; Transformation présent-imparfait et rédaction d’un souvenir; Écriture guidée à partir d’un plan, grille de révision et publication; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne; Élevée",
+              "sourceRow": 117
+            }
+          ],
+          "sourceRows": [
+            117
+          ]
+        },
+        {
+          "id": "niveau-4-strategies-de-comprehension",
+          "titre": "Stratégies de compréhension",
+          "sousSujets": [
+            {
+              "id": "avant-pendant-et-apres-la-lecture",
+              "titre": "Avant, pendant et après la lecture",
+              "competence": "Prédire, visualiser, poser des questions et vérifier sa compréhension",
+              "activite": "Lecture guidée, annotation, pense-bête et journal de lecture",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 118
+            }
+          ],
+          "sourceRows": [
+            118
+          ]
+        },
+        {
+          "id": "niveau-4-textes-informatifs-et-mediatiques",
+          "titre": "Textes informatifs et médiatiques",
+          "sousSujets": [
+            {
+              "id": "organisation-elements-visuels-et-information",
+              "titre": "Organisation, éléments visuels et information",
+              "competence": "Interpréter tableaux, infographies, hyperliens, arguments et sources",
+              "activite": "Lecture d’infographie, recherche guidée et comparaison de documents",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 119
+            }
+          ],
+          "sourceRows": [
+            119
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 5
+    },
+    {
+      "niveau": 5,
+      "label": "5e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-5-comprehension-litterale-et-inferentielle",
+          "titre": "Compréhension littérale et inférentielle",
+          "sousSujets": [
+            {
+              "id": "idee-principale-details-ordre-des-evenements-et-inferences",
+              "titre": "Idée principale, détails, ordre des événements et inférences",
+              "competence": "Dégager idées principales, preuves, relations logiques et inférences",
+              "activite": "Questions graduées, schéma qui-quoi-où-quand-pourquoi et justification par le texte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 149
+            }
+          ],
+          "sourceRows": [
+            149
+          ]
+        },
+        {
+          "id": "niveau-5-genres-litteraires",
+          "titre": "Genres littéraires",
+          "sousSujets": [
+            {
+              "id": "recit-conte-poesie-et-theatre",
+              "titre": "Récit, conte, poésie et théâtre",
+              "competence": "Analyser structure, thème, point de vue, procédés et effets sur le lecteur",
+              "activite": "Schéma narratif, cercle de lecture, lecture expressive et mise en scène",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 150
+            }
+          ],
+          "sourceRows": [
+            150
+          ]
+        },
+        {
+          "id": "niveau-5-lecture-et-comprehension",
+          "titre": "Lecture et compréhension",
+          "sousSujets": [
+            {
+              "id": "comprehension-de-textes",
+              "titre": "Compréhension de textes",
+              "competence": "Repérer l’information explicite, faire des inférences et justifier ses réponses",
+              "activite": "Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Frise chronologique, récit au passé et exercices de choix d’auxiliaire; Interaction orale ou présentation; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Production écrite guidée; Prévisions, projet personnel et phrases à compléter; Support numérique ou visuel; Écriture guidée à partir d’un plan, grille de révision et publication; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne; Élevée",
+              "sourceRow": 151
+            }
+          ],
+          "sourceRows": [
+            151
+          ]
+        },
+        {
+          "id": "niveau-5-strategies-de-comprehension",
+          "titre": "Stratégies de compréhension",
+          "sousSujets": [
+            {
+              "id": "avant-pendant-et-apres-la-lecture",
+              "titre": "Avant, pendant et après la lecture",
+              "competence": "Mobiliser des stratégies, annoter, inférer, synthétiser et surveiller sa compréhension",
+              "activite": "Lecture guidée, annotation, pense-bête et journal de lecture",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 152
+            }
+          ],
+          "sourceRows": [
+            152
+          ]
+        },
+        {
+          "id": "niveau-5-textes-informatifs-et-mediatiques",
+          "titre": "Textes informatifs et médiatiques",
+          "sousSujets": [
+            {
+              "id": "organisation-elements-visuels-et-information",
+              "titre": "Organisation, éléments visuels et information",
+              "competence": "Interpréter tableaux, infographies, hyperliens, arguments et sources",
+              "activite": "Lecture d’infographie, recherche guidée et comparaison de documents",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 153
+            }
+          ],
+          "sourceRows": [
+            153
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 5
+    },
+    {
+      "niveau": 6,
+      "label": "6e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-6-comprehension-litterale-et-inferentielle",
+          "titre": "Compréhension littérale et inférentielle",
+          "sousSujets": [
+            {
+              "id": "idee-principale-details-ordre-des-evenements-et-inferences",
+              "titre": "Idée principale, détails, ordre des événements et inférences",
+              "competence": "Dégager idées principales, preuves, relations logiques et inférences",
+              "activite": "Questions graduées, schéma qui-quoi-où-quand-pourquoi et justification par le texte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 189
+            }
+          ],
+          "sourceRows": [
+            189
+          ]
+        },
+        {
+          "id": "niveau-6-genres-de-textes",
+          "titre": "Genres de textes",
+          "sousSujets": [
+            {
+              "id": "texte-explicatif-ou-informatif",
+              "titre": "Texte explicatif ou informatif",
+              "competence": "Comprendre l’organisation logique et expliquer un phénomène ou une idée",
+              "activite": "Carte de mots, familles lexicales, synonymes-antonymes et phrase contextualisée; Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Lecture d’infographie, plan explicatif et rédaction d’un court texte documentaire; Lecture guidée et questions de compréhension; Écriture guidée à partir d’un plan, grille de révision et publication; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 190
+            }
+          ],
+          "sourceRows": [
+            190
+          ]
+        },
+        {
+          "id": "niveau-6-genres-litteraires",
+          "titre": "Genres littéraires",
+          "sousSujets": [
+            {
+              "id": "recit-conte-poesie-et-theatre",
+              "titre": "Récit, conte, poésie et théâtre",
+              "competence": "Analyser structure, thème, point de vue, procédés et effets sur le lecteur",
+              "activite": "Schéma narratif, cercle de lecture, lecture expressive et mise en scène",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 191
+            }
+          ],
+          "sourceRows": [
+            191
+          ]
+        },
+        {
+          "id": "niveau-6-lecture-et-comprehension",
+          "titre": "Lecture et compréhension",
+          "sousSujets": [
+            {
+              "id": "comprehension-de-textes",
+              "titre": "Compréhension de textes",
+              "competence": "Repérer l’information explicite, faire des inférences et justifier ses réponses",
+              "activite": "Carte de mots, familles lexicales, synonymes-antonymes et phrase contextualisée; Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Encadrement, remplacement, déplacement et construction de phrases; Enrichissement de phrases et classement par sens; Exercices d’application gradués; Frise chronologique, récit au passé et exercices de choix d’auxiliaire; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Lecture répétée, enregistrement audio et rétroaction ciblée; Manipulations de phrases, remplacement du sujet et correction d’erreurs; Prévisions, projet personnel et phrases à compléter; Support numérique ou visuel; Table de conjugaison, phrases contextualisées et jeu de rapidité; Transformation présent-imparfait et rédaction d’un souvenir; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne; Élevée",
+              "sourceRow": 192
+            }
+          ],
+          "sourceRows": [
+            192
+          ]
+        },
+        {
+          "id": "niveau-6-strategies-de-comprehension",
+          "titre": "Stratégies de compréhension",
+          "sousSujets": [
+            {
+              "id": "avant-pendant-et-apres-la-lecture",
+              "titre": "Avant, pendant et après la lecture",
+              "competence": "Mobiliser des stratégies, annoter, inférer, synthétiser et surveiller sa compréhension",
+              "activite": "Lecture guidée, annotation, pense-bête et journal de lecture",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 193
+            }
+          ],
+          "sourceRows": [
+            193
+          ]
+        },
+        {
+          "id": "niveau-6-textes-informatifs-et-mediatiques",
+          "titre": "Textes informatifs et médiatiques",
+          "sousSujets": [
+            {
+              "id": "organisation-elements-visuels-et-information",
+              "titre": "Organisation, éléments visuels et information",
+              "competence": "Interpréter tableaux, infographies, hyperliens, arguments et sources",
+              "activite": "Lecture d’infographie, recherche guidée et comparaison de documents",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 194
+            }
+          ],
+          "sourceRows": [
+            194
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 6,
+      "nombreSousSujets": 6
+    },
+    {
+      "niveau": 7,
+      "label": "7e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-7-comprehension-litterale-et-inferentielle",
+          "titre": "Compréhension littérale et inférentielle",
+          "sousSujets": [
+            {
+              "id": "idee-principale-details-ordre-des-evenements-et-inferences",
+              "titre": "Idée principale, détails, ordre des événements et inférences",
+              "competence": "Dégager idées principales, preuves, relations logiques et inférences",
+              "activite": "Questions graduées, schéma qui-quoi-où-quand-pourquoi et justification par le texte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 213
+            }
+          ],
+          "sourceRows": [
+            213
+          ]
+        },
+        {
+          "id": "niveau-7-genres-de-textes",
+          "titre": "Genres de textes",
+          "sousSujets": [
+            {
+              "id": "texte-explicatif-ou-informatif",
+              "titre": "Texte explicatif ou informatif",
+              "competence": "Comprendre l’organisation logique et expliquer un phénomène ou une idée",
+              "activite": "Lecture d’infographie, plan explicatif et rédaction d’un court texte documentaire; Lecture guidée et questions de compréhension; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 214
+            }
+          ],
+          "sourceRows": [
+            214
+          ]
+        },
+        {
+          "id": "niveau-7-genres-litteraires",
+          "titre": "Genres littéraires",
+          "sousSujets": [
+            {
+              "id": "recit-conte-poesie-et-theatre",
+              "titre": "Récit, conte, poésie et théâtre",
+              "competence": "Analyser structure, thème, point de vue, procédés et effets sur le lecteur",
+              "activite": "Schéma narratif, cercle de lecture, lecture expressive et mise en scène",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 215
+            }
+          ],
+          "sourceRows": [
+            215
+          ]
+        },
+        {
+          "id": "niveau-7-lecture-et-comprehension",
+          "titre": "Lecture et compréhension",
+          "sousSujets": [
+            {
+              "id": "comprehension-de-textes",
+              "titre": "Compréhension de textes",
+              "competence": "Repérer l’information explicite, faire des inférences et justifier ses réponses",
+              "activite": "Correction, révision et remédiation; Exercices d’application gradués; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles; Évaluation diagnostique ou formative; Évaluation diagnostique, exercices gradués et correction",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 216
+            }
+          ],
+          "sourceRows": [
+            216
+          ]
+        },
+        {
+          "id": "niveau-7-strategies-de-comprehension",
+          "titre": "Stratégies de compréhension",
+          "sousSujets": [
+            {
+              "id": "avant-pendant-et-apres-la-lecture",
+              "titre": "Avant, pendant et après la lecture",
+              "competence": "Mobiliser des stratégies, annoter, inférer, synthétiser et surveiller sa compréhension",
+              "activite": "Lecture guidée, annotation, pense-bête et journal de lecture",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 217
+            }
+          ],
+          "sourceRows": [
+            217
+          ]
+        },
+        {
+          "id": "niveau-7-textes-informatifs-et-mediatiques",
+          "titre": "Textes informatifs et médiatiques",
+          "sousSujets": [
+            {
+              "id": "organisation-elements-visuels-et-information",
+              "titre": "Organisation, éléments visuels et information",
+              "competence": "Interpréter tableaux, infographies, hyperliens, arguments et sources",
+              "activite": "Lecture d’infographie, recherche guidée et comparaison de documents",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 218
+            }
+          ],
+          "sourceRows": [
+            218
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 6,
+      "nombreSousSujets": 6
+    },
+    {
+      "niveau": 8,
+      "label": "8e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-8-comprehension-litterale-et-inferentielle",
+          "titre": "Compréhension littérale et inférentielle",
+          "sousSujets": [
+            {
+              "id": "idee-principale-details-ordre-des-evenements-et-inferences",
+              "titre": "Idée principale, détails, ordre des événements et inférences",
+              "competence": "Dégager idées principales, preuves, relations logiques et inférences",
+              "activite": "Questions graduées, schéma qui-quoi-où-quand-pourquoi et justification par le texte",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 236
+            }
+          ],
+          "sourceRows": [
+            236
+          ]
+        },
+        {
+          "id": "niveau-8-genres-litteraires",
+          "titre": "Genres littéraires",
+          "sousSujets": [
+            {
+              "id": "recit-conte-poesie-et-theatre",
+              "titre": "Récit, conte, poésie et théâtre",
+              "competence": "Analyser structure, thème, point de vue, procédés et effets sur le lecteur",
+              "activite": "Schéma narratif, cercle de lecture, lecture expressive et mise en scène",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 237
+            }
+          ],
+          "sourceRows": [
+            237
+          ]
+        },
+        {
+          "id": "niveau-8-lecture-et-comprehension",
+          "titre": "Lecture et compréhension",
+          "sousSujets": [
+            {
+              "id": "comprehension-de-textes",
+              "titre": "Compréhension de textes",
+              "competence": "Repérer l’information explicite, faire des inférences et justifier ses réponses",
+              "activite": "Correction, révision et remédiation; Exercices d’application gradués; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Production écrite guidée; Support numérique ou visuel; Écriture guidée à partir d’un plan, grille de révision et publication; Évaluation diagnostique ou formative",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 238
+            }
+          ],
+          "sourceRows": [
+            238
+          ]
+        },
+        {
+          "id": "niveau-8-strategies-de-comprehension",
+          "titre": "Stratégies de compréhension",
+          "sousSujets": [
+            {
+              "id": "avant-pendant-et-apres-la-lecture",
+              "titre": "Avant, pendant et après la lecture",
+              "competence": "Mobiliser des stratégies, annoter, inférer, synthétiser et surveiller sa compréhension",
+              "activite": "Lecture guidée, annotation, pense-bête et journal de lecture",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 239
+            }
+          ],
+          "sourceRows": [
+            239
+          ]
+        },
+        {
+          "id": "niveau-8-textes-informatifs-et-mediatiques",
+          "titre": "Textes informatifs et médiatiques",
+          "sousSujets": [
+            {
+              "id": "organisation-elements-visuels-et-information",
+              "titre": "Organisation, éléments visuels et information",
+              "competence": "Interpréter tableaux, infographies, hyperliens, arguments et sources",
+              "activite": "Lecture d’infographie, recherche guidée et comparaison de documents",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 240
+            }
+          ],
+          "sourceRows": [
+            240
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 5
+    },
+    {
+      "niveau": 9,
+      "label": "9e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-9-lecture-analytique",
+          "titre": "Lecture analytique",
+          "sousSujets": [
+            {
+              "id": "arguments-preuves-et-procedes-rhetoriques",
+              "titre": "Arguments, preuves et procédés rhétoriques",
+              "competence": "Analyser la logique, les preuves et les effets produits",
+              "activite": "Annotation, tableau argument-preuve et discussion socratique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 270
+            }
+          ],
+          "sourceRows": [
+            270
+          ]
+        },
+        {
+          "id": "niveau-9-lecture-et-comprehension",
+          "titre": "Lecture et compréhension",
+          "sousSujets": [
+            {
+              "id": "comprehension-de-textes",
+              "titre": "Compréhension de textes",
+              "competence": "Repérer l’information explicite, faire des inférences et justifier ses réponses",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Frise chronologique, récit au passé et exercices de choix d’auxiliaire; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Repérage dans un texte, classement par groupe et conjugaison; Support numérique ou visuel; Tableau comparatif, ligne du temps et transformation de phrases; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne; Élevée",
+              "sourceRow": 271
+            }
+          ],
+          "sourceRows": [
+            271
+          ]
+        },
+        {
+          "id": "niveau-9-lecture-litteraire",
+          "titre": "Lecture littéraire",
+          "sousSujets": [
+            {
+              "id": "roman-nouvelle-poesie-et-theatre",
+              "titre": "Roman, nouvelle, poésie et théâtre",
+              "competence": "Interpréter thèmes, symboles, point de vue et construction de l’œuvre",
+              "activite": "Cercle de lecture, commentaire, mise en scène et carnet de citations",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 272
+            }
+          ],
+          "sourceRows": [
+            272
+          ]
+        },
+        {
+          "id": "niveau-9-recherche-et-synthese",
+          "titre": "Recherche et synthèse",
+          "sousSujets": [
+            {
+              "id": "documents-multiples-et-prise-de-notes",
+              "titre": "Documents multiples et prise de notes",
+              "competence": "Sélectionner, croiser, citer et synthétiser des sources",
+              "activite": "Dossier documentaire, prise de notes et bibliographie",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 273
+            }
+          ],
+          "sourceRows": [
+            273
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 4,
+      "nombreSousSujets": 4
+    },
+    {
+      "niveau": 10,
+      "label": "10e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-10-lecture-analytique",
+          "titre": "Lecture analytique",
+          "sousSujets": [
+            {
+              "id": "arguments-preuves-et-procedes-rhetoriques",
+              "titre": "Arguments, preuves et procédés rhétoriques",
+              "competence": "Analyser la logique, les preuves et les effets produits avec un degré croissant d’autonomie et de complexité",
+              "activite": "Annotation, tableau argument-preuve et discussion socratique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 287
+            }
+          ],
+          "sourceRows": [
+            287
+          ]
+        },
+        {
+          "id": "niveau-10-lecture-litteraire",
+          "titre": "Lecture littéraire",
+          "sousSujets": [
+            {
+              "id": "roman-nouvelle-poesie-et-theatre",
+              "titre": "Roman, nouvelle, poésie et théâtre",
+              "competence": "Interpréter thèmes, symboles, point de vue et construction de l’œuvre avec un degré croissant d’autonomie et de complexité",
+              "activite": "Cercle de lecture, commentaire, mise en scène et carnet de citations",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 288
+            }
+          ],
+          "sourceRows": [
+            288
+          ]
+        },
+        {
+          "id": "niveau-10-recherche-et-synthese",
+          "titre": "Recherche et synthèse",
+          "sousSujets": [
+            {
+              "id": "documents-multiples-et-prise-de-notes",
+              "titre": "Documents multiples et prise de notes",
+              "competence": "Sélectionner, croiser, citer et synthétiser des sources avec un degré croissant d’autonomie et de complexité",
+              "activite": "Dossier documentaire, prise de notes et bibliographie",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 289
+            }
+          ],
+          "sourceRows": [
+            289
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 3
+    },
+    {
+      "niveau": 11,
+      "label": "11e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-11-genres-de-textes",
+          "titre": "Genres de textes",
+          "sousSujets": [
+            {
+              "id": "texte-narratif-et-recit",
+              "titre": "Texte narratif et récit",
+              "competence": "Identifier structure, personnages, événements, point de vue et thème",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Encadrement, remplacement, déplacement et construction de phrases; Exercices d’application gradués; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Manipulations de phrases, remplacement du sujet et correction d’erreurs; Repérage dans un texte, classement par groupe et conjugaison; Schéma narratif, remise en ordre d’événements et réécriture d’une fin; Écriture guidée à partir d’un plan, grille de révision et publication; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 308
+            }
+          ],
+          "sourceRows": [
+            308
+          ]
+        },
+        {
+          "id": "niveau-11-lecture-analytique",
+          "titre": "Lecture analytique",
+          "sousSujets": [
+            {
+              "id": "arguments-preuves-et-procedes-rhetoriques",
+              "titre": "Arguments, preuves et procédés rhétoriques",
+              "competence": "Analyser la logique, les preuves et les effets produits avec un degré croissant d’autonomie et de complexité",
+              "activite": "Annotation, tableau argument-preuve et discussion socratique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 309
+            }
+          ],
+          "sourceRows": [
+            309
+          ]
+        },
+        {
+          "id": "niveau-11-lecture-et-comprehension",
+          "titre": "Lecture et compréhension",
+          "sousSujets": [
+            {
+              "id": "comprehension-de-textes",
+              "titre": "Compréhension de textes",
+              "competence": "Repérer l’information explicite, faire des inférences et justifier ses réponses",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Encadrement, remplacement, déplacement et construction de phrases; Exercices d’application gradués; Interaction orale ou présentation; Jeu de rôle, exposé bref, entretien et rétroaction; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Manipulations de phrases, remplacement du sujet et correction d’erreurs; Repérage dans un texte, classement par groupe et conjugaison; Schéma narratif, remise en ordre d’événements et réécriture d’une fin; Table de conjugaison, phrases contextualisées et jeu de rapidité; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 310
+            }
+          ],
+          "sourceRows": [
+            310
+          ]
+        },
+        {
+          "id": "niveau-11-lecture-litteraire",
+          "titre": "Lecture littéraire",
+          "sousSujets": [
+            {
+              "id": "roman-nouvelle-poesie-et-theatre",
+              "titre": "Roman, nouvelle, poésie et théâtre",
+              "competence": "Interpréter thèmes, symboles, point de vue et construction de l’œuvre avec un degré croissant d’autonomie et de complexité",
+              "activite": "Cercle de lecture, commentaire, mise en scène et carnet de citations",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 311
+            }
+          ],
+          "sourceRows": [
+            311
+          ]
+        },
+        {
+          "id": "niveau-11-recherche-et-synthese",
+          "titre": "Recherche et synthèse",
+          "sousSujets": [
+            {
+              "id": "documents-multiples-et-prise-de-notes",
+              "titre": "Documents multiples et prise de notes",
+              "competence": "Sélectionner, croiser, citer et synthétiser des sources avec un degré croissant d’autonomie et de complexité",
+              "activite": "Dossier documentaire, prise de notes et bibliographie",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 312
+            }
+          ],
+          "sourceRows": [
+            312
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 5
+    },
+    {
+      "niveau": 12,
+      "label": "12e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-12-lecture-analytique",
+          "titre": "Lecture analytique",
+          "sousSujets": [
+            {
+              "id": "arguments-preuves-et-procedes-rhetoriques",
+              "titre": "Arguments, preuves et procédés rhétoriques",
+              "competence": "Analyser la logique, les preuves et les effets produits avec un degré croissant d’autonomie et de complexité",
+              "activite": "Annotation, tableau argument-preuve et discussion socratique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 331
+            }
+          ],
+          "sourceRows": [
+            331
+          ]
+        },
+        {
+          "id": "niveau-12-lecture-et-comprehension",
+          "titre": "Lecture et compréhension",
+          "sousSujets": [
+            {
+              "id": "comprehension-de-textes",
+              "titre": "Compréhension de textes",
+              "competence": "Repérer l’information explicite, faire des inférences et justifier ses réponses",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Jeu de situations, conseils et phrases hypothétiques; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Portrait enrichi, expansions du nom et correction d’accords; Table de conjugaison, phrases contextualisées et jeu de rapidité; Tableau comparatif, ligne du temps et transformation de phrases; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 332
+            }
+          ],
+          "sourceRows": [
+            332
+          ]
+        },
+        {
+          "id": "niveau-12-lecture-litteraire",
+          "titre": "Lecture littéraire",
+          "sousSujets": [
+            {
+              "id": "roman-nouvelle-poesie-et-theatre",
+              "titre": "Roman, nouvelle, poésie et théâtre",
+              "competence": "Interpréter thèmes, symboles, point de vue et construction de l’œuvre avec un degré croissant d’autonomie et de complexité",
+              "activite": "Cercle de lecture, commentaire, mise en scène et carnet de citations",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 333
+            }
+          ],
+          "sourceRows": [
+            333
+          ]
+        },
+        {
+          "id": "niveau-12-recherche-et-synthese",
+          "titre": "Recherche et synthèse",
+          "sousSujets": [
+            {
+              "id": "documents-multiples-et-prise-de-notes",
+              "titre": "Documents multiples et prise de notes",
+              "competence": "Sélectionner, croiser, citer et synthétiser des sources avec un degré croissant d’autonomie et de complexité",
+              "activite": "Dossier documentaire, prise de notes et bibliographie",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 334
+            }
+          ],
+          "sourceRows": [
+            334
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 4,
+      "nombreSousSujets": 4
+    }
+  ]
+}

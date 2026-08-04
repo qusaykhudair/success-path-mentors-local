@@ -1,0 +1,272 @@
+{
+  "metadata": {
+    "subject": "Physics",
+    "subjectSlug": "physics",
+    "strand": "Waves and Sound",
+    "strandSlug": "waves-sound",
+    "gradeRange": {
+      "min": 9,
+      "max": 12
+    },
+    "gradeLevels": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 11,
+    "gradedSourceRecordCount": 9,
+    "nonGradedSourceRecordCount": 2,
+    "mainTopicCount": 9,
+    "subtopicCount": 9,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "waves-sound",
+    "title": {
+      "en": "Waves and Sound",
+      "ar": "الموجات والصوت"
+    },
+    "description": {
+      "en": "Wave speed, frequency, wavelength, sound, resonance, harmonics, Doppler effect, superposition, and interference.",
+      "ar": "سرعة الموجة والتردد والطول الموجي والصوت والرنين والتوافقيات وتأثير دوبلر والتراكب والتداخل."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-wave-properties",
+          "title": "Wave Properties",
+          "subtopics": [
+            {
+              "id": "transverse-longitudinal-waves-speed-frequency-and-wavelength",
+              "title": "Transverse/longitudinal waves, speed, frequency, and wavelength"
+            }
+          ],
+          "sourceRows": [
+            21
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-sound-and-resonance",
+          "title": "Sound and Resonance",
+          "subtopics": [
+            {
+              "id": "sound-waves-resonance-harmonics-and-doppler-effect",
+              "title": "Sound waves, resonance, harmonics, and Doppler effect"
+            }
+          ],
+          "sourceRows": [
+            42
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-wave-properties",
+          "title": "Wave Properties",
+          "subtopics": [
+            {
+              "id": "transverse-longitudinal-waves-speed-frequency-and-wavelength",
+              "title": "Transverse/longitudinal waves, speed, frequency, and wavelength"
+            }
+          ],
+          "sourceRows": [
+            43
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-sound-and-resonance",
+          "title": "Sound and Resonance",
+          "subtopics": [
+            {
+              "id": "sound-waves-resonance-harmonics-and-doppler-effect",
+              "title": "Sound waves, resonance, harmonics, and Doppler effect"
+            }
+          ],
+          "sourceRows": [
+            89
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-wave-interference",
+          "title": "Wave Interference",
+          "subtopics": [
+            {
+              "id": "superposition-and-interference",
+              "title": "Superposition and interference"
+            }
+          ],
+          "sourceRows": [
+            90
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-wave-properties",
+          "title": "Wave Properties",
+          "subtopics": [
+            {
+              "id": "transverse-longitudinal-waves-speed-frequency-and-wavelength",
+              "title": "Transverse/longitudinal waves, speed, frequency, and wavelength"
+            }
+          ],
+          "sourceRows": [
+            91
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 3,
+      "subtopicCount": 3
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-sound-and-resonance",
+          "title": "Sound and Resonance",
+          "subtopics": [
+            {
+              "id": "sound-waves-resonance-harmonics-and-doppler-effect",
+              "title": "Sound waves, resonance, harmonics, and Doppler effect"
+            }
+          ],
+          "sourceRows": [
+            133
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-wave-interference",
+          "title": "Wave Interference",
+          "subtopics": [
+            {
+              "id": "superposition-and-interference",
+              "title": "Superposition and interference"
+            }
+          ],
+          "sourceRows": [
+            134
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-wave-properties",
+          "title": "Wave Properties",
+          "subtopics": [
+            {
+              "id": "transverse-longitudinal-waves-speed-frequency-and-wavelength",
+              "title": "Transverse/longitudinal waves, speed, frequency, and wavelength"
+            }
+          ],
+          "sourceRows": [
+            135
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 3,
+      "subtopicCount": 3
+    }
+  ]
+}

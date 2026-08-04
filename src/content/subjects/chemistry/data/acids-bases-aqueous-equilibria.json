@@ -1,0 +1,343 @@
+{
+  "metadata": {
+    "subject": "Chemistry",
+    "subjectSlug": "chemistry",
+    "strand": "Acids, Bases, and Aqueous Equilibria",
+    "strandSlug": "acids-bases-aqueous-equilibria",
+    "gradeRange": {
+      "min": 9,
+      "max": 12
+    },
+    "gradeLevels": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 26,
+    "gradedSourceRecordCount": 16,
+    "nonGradedSourceRecordCount": 10,
+    "mainTopicCount": 13,
+    "subtopicCount": 16,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "acids-bases-aqueous-equilibria",
+    "title": {
+      "en": "Acids, Bases, and Aqueous Equilibria",
+      "ar": "الأحماض والقواعد والاتزانات المائية"
+    },
+    "description": {
+      "en": "Acid–base models, pH and pOH, equilibrium constants, buffers, titrations, salts, and hydrolysis.",
+      "ar": "نماذج الأحماض والقواعد ودرجة الحموضة والاتزان والمحاليل المنظمة والمعايرة والأملاح والتحلل المائي."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-acid-base-concepts",
+          "title": "Acid–Base Concepts",
+          "subtopics": [
+            {
+              "id": "arrhenius-br-nsted-lowry-and-lewis-acids-bases",
+              "title": "Arrhenius, Brønsted–Lowry, and Lewis acids/bases"
+            }
+          ],
+          "sourceRows": [
+            4
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-acid-base-concepts",
+          "title": "Acid–Base Concepts",
+          "subtopics": [
+            {
+              "id": "acid-base-definitions-and-reactions",
+              "title": "Acid–base definitions and reactions"
+            }
+          ],
+          "sourceRows": [
+            21
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-acid-base-equilibria",
+          "title": "Acid–Base Equilibria",
+          "subtopics": [
+            {
+              "id": "acid-base-equilibria",
+              "title": "Acid–base equilibria"
+            },
+            {
+              "id": "ka-kb-kw-salts-and-hydrolysis",
+              "title": "Ka, Kb, Kw, salts, and hydrolysis"
+            }
+          ],
+          "sourceRows": [
+            22,
+            23
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-buffers-and-titrations",
+          "title": "Buffers and Titrations",
+          "subtopics": [
+            {
+              "id": "buffers-titration-curves-and-neutralization",
+              "title": "Buffers, titration curves, and neutralization"
+            }
+          ],
+          "sourceRows": [
+            24
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-ph-and-poh",
+          "title": "pH and pOH",
+          "subtopics": [
+            {
+              "id": "strong-and-weak-acid-base-calculations",
+              "title": "Strong and weak acid/base calculations"
+            }
+          ],
+          "sourceRows": [
+            25
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 4,
+      "subtopicCount": 5
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-acid-base-concepts",
+          "title": "Acid–Base Concepts",
+          "subtopics": [
+            {
+              "id": "acid-base-definitions-and-reactions",
+              "title": "Acid–base definitions and reactions"
+            },
+            {
+              "id": "arrhenius-br-nsted-lowry-and-lewis-acids-bases",
+              "title": "Arrhenius, Brønsted–Lowry, and Lewis acids/bases"
+            }
+          ],
+          "sourceRows": [
+            48,
+            49
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-acid-base-equilibria",
+          "title": "Acid–Base Equilibria",
+          "subtopics": [
+            {
+              "id": "ka-kb-kw-salts-and-hydrolysis",
+              "title": "Ka, Kb, Kw, salts, and hydrolysis"
+            }
+          ],
+          "sourceRows": [
+            50
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-buffers-and-titrations",
+          "title": "Buffers and Titrations",
+          "subtopics": [
+            {
+              "id": "buffers-titration-curves-and-neutralization",
+              "title": "Buffers, titration curves, and neutralization"
+            }
+          ],
+          "sourceRows": [
+            51
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-ph-and-poh",
+          "title": "pH and pOH",
+          "subtopics": [
+            {
+              "id": "strong-and-weak-acid-base-calculations",
+              "title": "Strong and weak acid/base calculations"
+            }
+          ],
+          "sourceRows": [
+            52
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 4,
+      "subtopicCount": 5
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-acid-base-concepts",
+          "title": "Acid–Base Concepts",
+          "subtopics": [
+            {
+              "id": "acid-base-definitions-and-reactions",
+              "title": "Acid–base definitions and reactions"
+            },
+            {
+              "id": "arrhenius-br-nsted-lowry-and-lewis-acids-bases",
+              "title": "Arrhenius, Brønsted–Lowry, and Lewis acids/bases"
+            }
+          ],
+          "sourceRows": [
+            91,
+            92
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-acid-base-equilibria",
+          "title": "Acid–Base Equilibria",
+          "subtopics": [
+            {
+              "id": "ka-kb-kw-salts-and-hydrolysis",
+              "title": "Ka, Kb, Kw, salts, and hydrolysis"
+            }
+          ],
+          "sourceRows": [
+            93
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-buffers-and-titrations",
+          "title": "Buffers and Titrations",
+          "subtopics": [
+            {
+              "id": "buffers-titration-curves-and-neutralization",
+              "title": "Buffers, titration curves, and neutralization"
+            }
+          ],
+          "sourceRows": [
+            94
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-ph-and-poh",
+          "title": "pH and pOH",
+          "subtopics": [
+            {
+              "id": "strong-and-weak-acid-base-calculations",
+              "title": "Strong and weak acid/base calculations"
+            }
+          ],
+          "sourceRows": [
+            95
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 4,
+      "subtopicCount": 5
+    }
+  ]
+}

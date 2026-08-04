@@ -19,11 +19,23 @@ import {
   routePath,
 } from '@/config/routes';
 import {
+  programmeFrancaisRoutes,
+} from '@/lib/programme-francais/routes';
+import {
+  approvedChemistryStrands,
+} from '@/content/subjects/chemistry/chemistry-strands';
+import {
   approvedEnglishStrands,
 } from '@/content/subjects/english/english-strands';
 import {
   publicMathPathways,
 } from '@/content/subjects/math/math-pathways';
+import {
+  approvedGeneralScienceStrands,
+} from '@/content/subjects/general-science/general-science-strands';
+import {
+  approvedPhysicsStrands,
+} from '@/content/subjects/physics/physics-strands';
 
 import {
   LocaleSwitcher,
@@ -48,6 +60,14 @@ const navigationCopy = {
       'Mathematics',
     english:
       'English',
+    chemistry:
+      'Chemistry',
+    physics:
+      'Physics',
+    generalScience:
+      'General Science',
+    frenchProgram:
+      'Programme français',
     about:
       'About Us',
     primaryNavigation:
@@ -61,6 +81,14 @@ const navigationCopy = {
       'الرياضيات',
     english:
       'اللغة الإنجليزية',
+    chemistry:
+      'الكيمياء',
+    physics:
+      'الفيزياء',
+    generalScience:
+      'العلوم العامة',
+    frenchProgram:
+      'Programme français',
     about:
       'من نحن',
     primaryNavigation:
@@ -185,6 +213,106 @@ export async function SiteHeader() {
                 ),
             })
           ),
+      },
+      {
+        key: 'chemistry',
+        label:
+          copy.chemistry,
+        href:
+          routePath.subject(
+            currentLocale,
+            'chemistry'
+          ),
+        children:
+          approvedChemistryStrands.map(
+            (strand) => ({
+              label:
+                strand.title[
+                  currentLocale
+                ],
+              href:
+                routePath.scienceStrand(
+                  currentLocale,
+                  'chemistry',
+                  strand.slug
+                ),
+            })
+          ),
+      },
+      {
+        key: 'physics',
+        label:
+          copy.physics,
+        href:
+          routePath.subject(
+            currentLocale,
+            'physics'
+          ),
+        children:
+          approvedPhysicsStrands.map(
+            (strand) => ({
+              label:
+                strand.title[
+                  currentLocale
+                ],
+              href:
+                routePath.scienceStrand(
+                  currentLocale,
+                  'physics',
+                  strand.slug
+                ),
+            })
+          ),
+      },
+      {
+        key: 'general-science',
+        label:
+          copy.generalScience,
+        href:
+          routePath.subject(
+            currentLocale,
+            'general-science'
+          ),
+        children:
+          approvedGeneralScienceStrands.map(
+            (strand) => ({
+              label:
+                strand.title[
+                  currentLocale
+                ],
+              href:
+                routePath.scienceStrand(
+                  currentLocale,
+                  'general-science',
+                  strand.slug
+                ),
+            })
+          ),
+      },
+      {
+        key: 'programme-francais',
+        label:
+          copy.frenchProgram,
+        href:
+          programmeFrancaisRoutes.home,
+        children: [
+          {
+            label:
+              'Français',
+            href:
+              programmeFrancaisRoutes.subject(
+                'francais'
+              ),
+          },
+          {
+            label:
+              'Mathématiques en français',
+            href:
+              programmeFrancaisRoutes.subject(
+                'mathematiques-en-francais'
+              ),
+          },
+        ],
       },
     ];
 

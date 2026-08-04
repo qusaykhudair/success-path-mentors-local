@@ -1,0 +1,182 @@
+{
+  "metadata": {
+    "subject": "Chemistry",
+    "subjectSlug": "chemistry",
+    "strand": "Chemical Equilibrium",
+    "strandSlug": "chemical-equilibrium",
+    "gradeRange": {
+      "min": 12,
+      "max": 12
+    },
+    "gradeLevels": [
+      12
+    ],
+    "sourceRecordCount": 7,
+    "gradedSourceRecordCount": 3,
+    "nonGradedSourceRecordCount": 4,
+    "mainTopicCount": 3,
+    "subtopicCount": 3,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "chemical-equilibrium",
+    "title": {
+      "en": "Chemical Equilibrium",
+      "ar": "الاتزان الكيميائي"
+    },
+    "description": {
+      "en": "Dynamic equilibrium, equilibrium constants, Le Chatelier’s principle, solubility equilibria, and the common-ion effect.",
+      "ar": "الاتزان الديناميكي وثوابت الاتزان ومبدأ لوشاتيليه واتزانات الذوبانية وتأثير الأيون المشترك."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-equilibrium-concepts",
+          "title": "Equilibrium Concepts",
+          "subtopics": [
+            {
+              "id": "dynamic-equilibrium-and-equilibrium-constants",
+              "title": "Dynamic equilibrium and equilibrium constants"
+            }
+          ],
+          "sourceRows": [
+            105
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-le-chatelier-s-principle",
+          "title": "Le Chatelier's Principle",
+          "subtopics": [
+            {
+              "id": "stress-and-equilibrium-shifts",
+              "title": "Stress and equilibrium shifts"
+            }
+          ],
+          "sourceRows": [
+            106
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-solubility-equilibria",
+          "title": "Solubility Equilibria",
+          "subtopics": [
+            {
+              "id": "ksp-and-common-ion-effect",
+              "title": "Ksp and common-ion effect"
+            }
+          ],
+          "sourceRows": [
+            107
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 3,
+      "subtopicCount": 3
+    }
+  ]
+}

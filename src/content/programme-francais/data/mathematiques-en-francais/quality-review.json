@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "programme": "Programme français",
+    "matiere": "Mathématiques en français",
+    "sourceSheet": "Carte Mathématiques",
+    "sourceRecordCount": 352,
+    "publicGradeRecordCount": 315,
+    "nonStandardRecordCount": 37,
+    "exactDuplicateRowsRemoved": 0,
+    "requiredFieldGaps": 0
+  },
+  "removedExactDuplicates": [],
+  "notes": [
+    "Les libellés Domaine, Sujet principal, Sous-sujet, Compétences et Activités sont conservés en français.",
+    "Les informations internes sur les élèves, enseignants et rapports ne sont pas publiées dans les pages."
+  ]
+}

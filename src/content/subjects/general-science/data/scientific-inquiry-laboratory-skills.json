@@ -1,0 +1,427 @@
+{
+  "metadata": {
+    "subject": "General Science",
+    "subjectSlug": "general-science",
+    "strand": "Scientific Inquiry and Laboratory Skills",
+    "strandSlug": "scientific-inquiry-laboratory-skills",
+    "gradeRange": {
+      "min": 6,
+      "max": 12
+    },
+    "gradeLevels": [
+      6,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 25,
+    "gradedSourceRecordCount": 23,
+    "nonGradedSourceRecordCount": 2,
+    "mainTopicCount": 18,
+    "subtopicCount": 23,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in JSON but are hidden from public pages."
+    ]
+  },
+  "strand": {
+    "slug": "scientific-inquiry-laboratory-skills",
+    "title": {
+      "en": "Scientific Inquiry and Laboratory Skills",
+      "ar": "الاستقصاء العلمي ومهارات المختبر"
+    },
+    "description": {
+      "en": "Scientific reasoning, experimental design, measurement, data, laboratory safety, microscopy, and integrated review.",
+      "ar": "الاستدلال العلمي وتصميم التجارب والقياس والبيانات والسلامة المختبرية والمجهر والمراجعة المتكاملة."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g6-integrated-science-review",
+          "title": "Integrated Science Review",
+          "subtopics": [
+            {
+              "id": "mixed-science-concepts",
+              "title": "Mixed science concepts"
+            }
+          ],
+          "sourceRows": [
+            11
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-scientific-reasoning",
+          "title": "Scientific Reasoning",
+          "subtopics": [
+            {
+              "id": "hypotheses-theories-and-laws",
+              "title": "Hypotheses, theories, and laws"
+            }
+          ],
+          "sourceRows": [
+            12
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g8-experimental-design",
+          "title": "Experimental Design",
+          "subtopics": [
+            {
+              "id": "independent-dependent-and-controlled-variables",
+              "title": "Independent, dependent, and controlled variables"
+            },
+            {
+              "id": "variables-and-controls",
+              "title": "Variables and controls"
+            },
+            {
+              "id": "variables-in-investigations",
+              "title": "Variables in investigations"
+            }
+          ],
+          "sourceRows": [
+            29,
+            30,
+            31
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-scientific-method",
+          "title": "Scientific Method",
+          "subtopics": [
+            {
+              "id": "steps-of-scientific-inquiry",
+              "title": "Steps of scientific inquiry"
+            }
+          ],
+          "sourceRows": [
+            32
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-scientific-reasoning",
+          "title": "Scientific Reasoning",
+          "subtopics": [
+            {
+              "id": "hypotheses-theories-and-laws",
+              "title": "Hypotheses, theories, and laws"
+            }
+          ],
+          "sourceRows": [
+            33
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 3,
+      "subtopicCount": 5
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-experimental-design",
+          "title": "Experimental Design",
+          "subtopics": [
+            {
+              "id": "independent-dependent-and-controlled-variables",
+              "title": "Independent, dependent, and controlled variables"
+            }
+          ],
+          "sourceRows": [
+            44
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-integrated-science-review",
+          "title": "Integrated Science Review",
+          "subtopics": [
+            {
+              "id": "mixed-science-concepts",
+              "title": "Mixed science concepts"
+            }
+          ],
+          "sourceRows": [
+            45
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-laboratory-skills",
+          "title": "Laboratory Skills",
+          "subtopics": [
+            {
+              "id": "laboratory-preparation-and-safety",
+              "title": "Laboratory preparation and safety"
+            },
+            {
+              "id": "whmis-hhps-and-laboratory-equipment",
+              "title": "WHMIS, HHPS, and laboratory equipment"
+            }
+          ],
+          "sourceRows": [
+            46,
+            47
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-measurement-and-data",
+          "title": "Measurement and Data",
+          "subtopics": [
+            {
+              "id": "scientific-measurement-and-precision",
+              "title": "Scientific measurement and precision"
+            },
+            {
+              "id": "unit-conversion-and-scientific-notation",
+              "title": "Unit conversion and scientific notation"
+            }
+          ],
+          "sourceRows": [
+            48,
+            49
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-scientific-reasoning",
+          "title": "Scientific Reasoning",
+          "subtopics": [
+            {
+              "id": "hypotheses-theories-and-laws",
+              "title": "Hypotheses, theories, and laws"
+            }
+          ],
+          "sourceRows": [
+            50
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 5,
+      "subtopicCount": 7
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-integrated-science-review",
+          "title": "Integrated Science Review",
+          "subtopics": [
+            {
+              "id": "mixed-science-concepts",
+              "title": "Mixed science concepts"
+            }
+          ],
+          "sourceRows": [
+            62
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-measurement-and-data",
+          "title": "Measurement and Data",
+          "subtopics": [
+            {
+              "id": "scientific-measurement-and-precision",
+              "title": "Scientific measurement and precision"
+            },
+            {
+              "id": "unit-conversion-and-scientific-notation",
+              "title": "Unit conversion and scientific notation"
+            }
+          ],
+          "sourceRows": [
+            63,
+            64
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-microscopy",
+          "title": "Microscopy",
+          "subtopics": [
+            {
+              "id": "microscope-use-and-magnification",
+              "title": "Microscope use and magnification"
+            }
+          ],
+          "sourceRows": [
+            65
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-scientific-reasoning",
+          "title": "Scientific Reasoning",
+          "subtopics": [
+            {
+              "id": "hypotheses-theories-and-laws",
+              "title": "Hypotheses, theories, and laws"
+            }
+          ],
+          "sourceRows": [
+            66
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 4,
+      "subtopicCount": 5
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-integrated-science-review",
+          "title": "Integrated Science Review",
+          "subtopics": [
+            {
+              "id": "mixed-science-concepts",
+              "title": "Mixed science concepts"
+            }
+          ],
+          "sourceRows": [
+            76
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-laboratory-skills",
+          "title": "Laboratory Skills",
+          "subtopics": [
+            {
+              "id": "laboratory-preparation-and-safety",
+              "title": "Laboratory preparation and safety"
+            }
+          ],
+          "sourceRows": [
+            77
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-measurement-and-data",
+          "title": "Measurement and Data",
+          "subtopics": [
+            {
+              "id": "scientific-measurement-and-precision",
+              "title": "Scientific measurement and precision"
+            }
+          ],
+          "sourceRows": [
+            78
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 3,
+      "subtopicCount": 3
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-scientific-reasoning",
+          "title": "Scientific Reasoning",
+          "subtopics": [
+            {
+              "id": "hypotheses-theories-and-laws",
+              "title": "Hypotheses, theories, and laws"
+            }
+          ],
+          "sourceRows": [
+            81
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    }
+  ]
+}

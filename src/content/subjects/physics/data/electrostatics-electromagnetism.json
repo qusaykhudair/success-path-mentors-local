@@ -1,0 +1,322 @@
+{
+  "metadata": {
+    "subject": "Physics",
+    "subjectSlug": "physics",
+    "strand": "Electrostatics and Electromagnetism",
+    "strandSlug": "electrostatics-electromagnetism",
+    "gradeRange": {
+      "min": 9,
+      "max": 12
+    },
+    "gradeLevels": [
+      9,
+      11,
+      12
+    ],
+    "sourceRecordCount": 17,
+    "gradedSourceRecordCount": 14,
+    "nonGradedSourceRecordCount": 3,
+    "mainTopicCount": 12,
+    "subtopicCount": 14,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "electrostatics-electromagnetism",
+    "title": {
+      "en": "Electrostatics and Electromagnetism",
+      "ar": "الكهرباء الساكنة والكهرومغناطيسية"
+    },
+    "description": {
+      "en": "Electric charge, fields, potential, Coulomb’s law, magnetism, electromagnetic induction, and applications.",
+      "ar": "الشحنة والمجالات والجهد وقانون كولوم والمغناطيسية والحث الكهرومغناطيسي وتطبيقاته."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-electric-fields-and-potential",
+          "title": "Electric Fields and Potential",
+          "subtopics": [
+            {
+              "id": "electric-field-potential-and-potential-difference",
+              "title": "Electric field, potential, and potential difference"
+            }
+          ],
+          "sourceRows": [
+            16
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-electrostatics",
+          "title": "Electrostatics",
+          "subtopics": [
+            {
+              "id": "electric-charge-and-electrostatic-interactions",
+              "title": "Electric charge and electrostatic interactions"
+            },
+            {
+              "id": "static-charge-induction-and-coulomb-s-law",
+              "title": "Static charge, induction, and Coulomb's law"
+            }
+          ],
+          "sourceRows": [
+            17,
+            18
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 3
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-electric-fields-and-potential",
+          "title": "Electric Fields and Potential",
+          "subtopics": [
+            {
+              "id": "electric-field-potential-and-potential-difference",
+              "title": "Electric field, potential, and potential difference"
+            }
+          ],
+          "sourceRows": [
+            66
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-electromagnetic-induction",
+          "title": "Electromagnetic Induction",
+          "subtopics": [
+            {
+              "id": "faraday-s-and-lenz-s-laws",
+              "title": "Faraday's and Lenz's laws"
+            }
+          ],
+          "sourceRows": [
+            67
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-electromagnetism",
+          "title": "Electromagnetism",
+          "subtopics": [
+            {
+              "id": "electricity-magnetism-relationships-and-applications",
+              "title": "Electricity–magnetism relationships and applications"
+            }
+          ],
+          "sourceRows": [
+            68
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-electrostatics",
+          "title": "Electrostatics",
+          "subtopics": [
+            {
+              "id": "electric-charge-and-electrostatic-interactions",
+              "title": "Electric charge and electrostatic interactions"
+            }
+          ],
+          "sourceRows": [
+            69
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-magnetism",
+          "title": "Magnetism",
+          "subtopics": [
+            {
+              "id": "magnetic-fields-and-magnetic-force",
+              "title": "Magnetic fields and magnetic force"
+            }
+          ],
+          "sourceRows": [
+            70
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 5,
+      "subtopicCount": 5
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-electric-fields-and-potential",
+          "title": "Electric Fields and Potential",
+          "subtopics": [
+            {
+              "id": "electric-field-potential-and-potential-difference",
+              "title": "Electric field, potential, and potential difference"
+            }
+          ],
+          "sourceRows": [
+            108
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-electromagnetic-induction",
+          "title": "Electromagnetic Induction",
+          "subtopics": [
+            {
+              "id": "faraday-s-and-lenz-s-laws",
+              "title": "Faraday's and Lenz's laws"
+            }
+          ],
+          "sourceRows": [
+            109
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-electromagnetism",
+          "title": "Electromagnetism",
+          "subtopics": [
+            {
+              "id": "electricity-magnetism-relationships-and-applications",
+              "title": "Electricity–magnetism relationships and applications"
+            }
+          ],
+          "sourceRows": [
+            110
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-electrostatics",
+          "title": "Electrostatics",
+          "subtopics": [
+            {
+              "id": "electric-charge-and-electrostatic-interactions",
+              "title": "Electric charge and electrostatic interactions"
+            },
+            {
+              "id": "static-charge-induction-and-coulomb-s-law",
+              "title": "Static charge, induction, and Coulomb's law"
+            }
+          ],
+          "sourceRows": [
+            111,
+            112
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-magnetism",
+          "title": "Magnetism",
+          "subtopics": [
+            {
+              "id": "magnetic-fields-and-magnetic-force",
+              "title": "Magnetic fields and magnetic force"
+            }
+          ],
+          "sourceRows": [
+            113
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 5,
+      "subtopicCount": 6
+    }
+  ]
+}

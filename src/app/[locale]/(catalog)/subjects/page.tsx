@@ -19,14 +19,26 @@ import {
   siteConfig,
 } from '@/config/site';
 import {
+  approvedChemistryStrands,
+} from '@/content/subjects/chemistry/chemistry-strands';
+import {
   approvedEnglishStrands,
 } from '@/content/subjects/english/english-strands';
 import {
   publicMathPathways,
 } from '@/content/subjects/math/math-pathways';
 import {
+  approvedGeneralScienceStrands,
+} from '@/content/subjects/general-science/general-science-strands';
+import {
+  approvedPhysicsStrands,
+} from '@/content/subjects/physics/physics-strands';
+import {
   getSubjectsPageContent,
 } from '@/content/subjects/subjects-page-content';
+import {
+  programmeFrancaisRoutes,
+} from '@/lib/programme-francais/routes';
 import {
   buildPageMetadata,
 } from '@/lib/seo/metadata';
@@ -76,7 +88,9 @@ export default async function SubjectsPage({
     );
 
   const subjectsHref =
-    routePath.subjects(locale);
+    routePath.subjects(
+      locale
+    );
 
   const breadcrumbs:
     BreadcrumbItem[] = [
@@ -94,7 +108,8 @@ export default async function SubjectsPage({
 
   const subjects = [
     {
-      key: 'math' as const,
+      key:
+        'math' as const,
       title:
         copy.directory.math
           .title,
@@ -136,7 +151,8 @@ export default async function SubjectsPage({
         ),
     },
     {
-      key: 'english' as const,
+      key:
+        'english' as const,
       title:
         copy.directory.english
           .title,
@@ -176,6 +192,182 @@ export default async function SubjectsPage({
               ),
           })
         ),
+    },
+    {
+      key:
+        'chemistry' as const,
+      title:
+        copy.directory.chemistry
+          .title,
+      description:
+        copy.directory.chemistry
+          .description,
+      gradeRange:
+        copy.directory.chemistry
+          .gradeRange,
+      unitCount:
+        approvedChemistryStrands.length,
+      unitLabel:
+        copy.directory.chemistry
+          .unitLabel,
+      action:
+        copy.directory.chemistry
+          .action,
+      branchesLabel:
+        copy.directory.chemistry
+          .branchesLabel,
+      href:
+        routePath.subject(
+          locale,
+          'chemistry'
+        ),
+      branches:
+        approvedChemistryStrands.map(
+          (strand) => ({
+            title:
+              strand.title[
+                locale
+              ],
+            href:
+              routePath.scienceStrand(
+                locale,
+                'chemistry',
+                strand.slug
+              ),
+          })
+        ),
+    },
+    {
+      key:
+        'physics' as const,
+      title:
+        copy.directory.physics
+          .title,
+      description:
+        copy.directory.physics
+          .description,
+      gradeRange:
+        copy.directory.physics
+          .gradeRange,
+      unitCount:
+        approvedPhysicsStrands.length,
+      unitLabel:
+        copy.directory.physics
+          .unitLabel,
+      action:
+        copy.directory.physics
+          .action,
+      branchesLabel:
+        copy.directory.physics
+          .branchesLabel,
+      href:
+        routePath.subject(
+          locale,
+          'physics'
+        ),
+      branches:
+        approvedPhysicsStrands.map(
+          (strand) => ({
+            title:
+              strand.title[
+                locale
+              ],
+            href:
+              routePath.scienceStrand(
+                locale,
+                'physics',
+                strand.slug
+              ),
+          })
+        ),
+    },
+    {
+      key:
+        'general-science' as const,
+      title:
+        copy.directory.generalScience
+          .title,
+      description:
+        copy.directory.generalScience
+          .description,
+      gradeRange:
+        copy.directory.generalScience
+          .gradeRange,
+      unitCount:
+        approvedGeneralScienceStrands.length,
+      unitLabel:
+        copy.directory.generalScience
+          .unitLabel,
+      action:
+        copy.directory.generalScience
+          .action,
+      branchesLabel:
+        copy.directory.generalScience
+          .branchesLabel,
+      href:
+        routePath.subject(
+          locale,
+          'general-science'
+        ),
+      branches:
+        approvedGeneralScienceStrands.map(
+          (strand) => ({
+            title:
+              strand.title[
+                locale
+              ],
+            href:
+              routePath.scienceStrand(
+                locale,
+                'general-science',
+                strand.slug
+              ),
+          })
+        ),
+    },
+    {
+      key:
+        'programme-francais' as const,
+      title:
+        copy.directory.frenchProgram
+          .title,
+      description:
+        copy.directory.frenchProgram
+          .description,
+      gradeRange:
+        copy.directory.frenchProgram
+          .gradeRange,
+      unitCount:
+        2,
+      unitLabel:
+        copy.directory.frenchProgram
+          .unitLabel,
+      action:
+        copy.directory.frenchProgram
+          .action,
+      branchesLabel:
+        copy.directory.frenchProgram
+          .branchesLabel,
+      href:
+        programmeFrancaisRoutes.home,
+      branches: [
+        {
+          title:
+            'Français',
+          href:
+            programmeFrancaisRoutes.subject(
+              'francais'
+            ),
+        },
+        {
+          title:
+            'Mathématiques en français',
+          href:
+            programmeFrancaisRoutes.subject(
+              'mathematiques-en-francais'
+            ),
+        },
+      ],
     },
   ];
 
@@ -259,13 +451,17 @@ export default async function SubjectsPage({
 
       <JsonLd
         id="subjects-collection-schema"
-        data={collectionSchema}
+        data={
+          collectionSchema
+        }
       />
 
       <SubjectsPageContent
         locale={locale}
         copy={copy}
-        breadcrumbs={breadcrumbs}
+        breadcrumbs={
+          breadcrumbs
+        }
         subjects={subjects}
         contactHref={
           routePath.contact(
@@ -273,7 +469,9 @@ export default async function SubjectsPage({
           )
         }
         aboutHref={
-          routePath.about(locale)
+          routePath.about(
+            locale
+          )
         }
       />
     </>

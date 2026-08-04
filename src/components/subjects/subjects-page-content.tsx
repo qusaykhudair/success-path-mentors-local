@@ -5,12 +5,16 @@ import {
   Calculator,
   Check,
   GraduationCap,
+  Languages,
   Layers3,
 } from 'lucide-react';
 
 import {
   Breadcrumbs,
 } from '@/components/internal/breadcrumbs';
+import {
+  ScienceStrandIcon,
+} from '@/components/subjects/science/science-strand-icon';
 import type {
   SiteLocale,
 } from '@/config/site';
@@ -24,7 +28,13 @@ interface BranchLink {
 }
 
 interface SubjectDirectoryItem {
-  key: 'math' | 'english';
+  key:
+    | 'math'
+    | 'english'
+    | 'chemistry'
+    | 'physics'
+    | 'general-science'
+    | 'programme-francais';
   title: string;
   description: string;
   gradeRange: string;
@@ -44,8 +54,6 @@ interface SubjectsPageCopy {
     eyebrow: string;
     title: string;
     description: string;
-    mathAction: string;
-    englishAction: string;
     stats: {
       subjects: string;
       pathways: string;
@@ -83,24 +91,6 @@ export function SubjectsPageContent({
   contactHref,
   aboutHref,
 }: SubjectsPageContentProps) {
-  const math =
-    subjects.find(
-      (subject) =>
-        subject.key === 'math'
-    );
-
-  const english =
-    subjects.find(
-      (subject) =>
-        subject.key === 'english'
-    );
-
-  if (!math || !english) {
-    throw new Error(
-      'Subjects page requires mathematics and English.'
-    );
-  }
-
   const pathwayCount =
     subjects.reduce(
       (total, subject) =>
@@ -243,94 +233,55 @@ export function SubjectsPageContent({
                 sm:flex-wrap
               "
             >
-              <Link
-                href={math.href}
-                className="
-                  group
-                  inline-flex
-                  min-h-12
-                  items-center
-                  justify-center
-                  gap-2
-                  rounded-xl
-                  bg-[#16C7C7]
-                  px-6
-                  py-3
-                  text-small
-                  font-black
-                  text-[#071426]
-                  transition-[transform,background-color]
-                  hover:-translate-y-0.5
-                  hover:bg-[#2DD4D1]
-                  focus-visible:outline-none
-                  focus-visible:ring-2
-                  focus-visible:ring-white
-                  focus-visible:ring-offset-2
-                  focus-visible:ring-offset-[#071426]
-                  motion-reduce:transition-none
-                  motion-reduce:hover:translate-y-0
-                "
-              >
-                {copy.hero.mathAction}
+              {subjects.map(
+                (subject, index) => (
+                  <Link
+                    key={subject.key}
+                    href={subject.href}
+                    className={`
+                      group
+                      inline-flex
+                      min-h-12
+                      items-center
+                      justify-center
+                      gap-2
+                      rounded-xl
+                      px-6
+                      py-3
+                      text-small
+                      font-black
+                      transition-[transform,background-color,border-color]
+                      hover:-translate-y-0.5
+                      focus-visible:outline-none
+                      focus-visible:ring-2
+                      focus-visible:ring-white
+                      focus-visible:ring-offset-2
+                      focus-visible:ring-offset-[#071426]
+                      motion-reduce:transition-none
+                      motion-reduce:hover:translate-y-0
+                      ${
+                        index === 0
+                          ? 'bg-[#16C7C7] text-[#071426] hover:bg-[#2DD4D1]'
+                          : 'border border-white/20 bg-white/[0.06] text-white hover:border-[#67E8E5] hover:bg-white/10'
+                      }
+                    `}
+                  >
+                    {subject.action}
 
-                <ArrowRight
-                  aria-hidden="true"
-                  className="
-                    h-4
-                    w-4
-                    transition-transform
-                    group-hover:translate-x-1
-                    rtl:-scale-x-100
-                    rtl:group-hover:-translate-x-1
-                  "
-                />
-              </Link>
-
-              <Link
-                href={english.href}
-                className="
-                  group
-                  inline-flex
-                  min-h-12
-                  items-center
-                  justify-center
-                  gap-2
-                  rounded-xl
-                  border
-                  border-white/20
-                  bg-white/[0.06]
-                  px-6
-                  py-3
-                  text-small
-                  font-black
-                  text-white
-                  transition-[transform,background-color,border-color]
-                  hover:-translate-y-0.5
-                  hover:border-[#67E8E5]
-                  hover:bg-white/10
-                  focus-visible:outline-none
-                  focus-visible:ring-2
-                  focus-visible:ring-[#16C7C7]
-                  focus-visible:ring-offset-2
-                  focus-visible:ring-offset-[#071426]
-                  motion-reduce:transition-none
-                  motion-reduce:hover:translate-y-0
-                "
-              >
-                {copy.hero.englishAction}
-
-                <ArrowRight
-                  aria-hidden="true"
-                  className="
-                    h-4
-                    w-4
-                    transition-transform
-                    group-hover:translate-x-1
-                    rtl:-scale-x-100
-                    rtl:group-hover:-translate-x-1
-                  "
-                />
-              </Link>
+                    <ArrowRight
+                      aria-hidden="true"
+                      className="
+                        h-4
+                        w-4
+                        transition-transform
+                        group-hover:translate-x-1
+                        rtl:-scale-x-100
+                        rtl:group-hover:-translate-x-1
+                      "
+                    />
+                  </Link>
+                )
+              )}
             </div>
           </div>
 
@@ -352,7 +303,12 @@ export function SubjectsPageContent({
           >
             <HeroStat
               icon={BookOpenCheck}
-              value="2"
+              value={
+                subjects.length
+                  .toLocaleString(
+                    locale
+                  )
+              }
               label={
                 copy.hero.stats
                   .subjects
@@ -362,9 +318,10 @@ export function SubjectsPageContent({
             <HeroStat
               icon={Layers3}
               value={
-                pathwayCount.toLocaleString(
-                  locale
-                )
+                pathwayCount
+                  .toLocaleString(
+                    locale
+                  )
               }
               label={
                 copy.hero.stats
@@ -403,11 +360,7 @@ export function SubjectsPageContent({
             lg:px-8
           "
         >
-          <div
-            className="
-              max-w-3xl
-            "
-          >
+          <div className="max-w-3xl">
             <p
               className="
                 text-caption
@@ -456,6 +409,7 @@ export function SubjectsPageContent({
                 <SubjectCard
                   key={subject.key}
                   subject={subject}
+                  wide={false}
                 />
               )
             )}
@@ -511,7 +465,12 @@ export function SubjectsPageContent({
               "
             />
 
-            <div className="relative max-w-3xl">
+            <div
+              className="
+                relative
+                max-w-3xl
+              "
+            >
               <p
                 className="
                   text-caption
@@ -625,17 +584,14 @@ export function SubjectsPageContent({
 
 function SubjectCard({
   subject,
+  wide,
 }: {
   subject: SubjectDirectoryItem;
+  wide: boolean;
 }) {
-  const Icon =
-    subject.key === 'math'
-      ? Calculator
-      : BookOpenCheck;
-
   return (
     <article
-      className="
+      className={`
         flex
         h-full
         flex-col
@@ -645,7 +601,12 @@ function SubjectCard({
         border-[#DCE5EC]
         bg-white
         shadow-[0_16px_44px_rgba(7,20,38,0.06)]
-      "
+        ${
+          wide
+            ? 'xl:col-span-2'
+            : ''
+        }
+      `}
     >
       <div
         className="
@@ -678,10 +639,10 @@ function SubjectCard({
               ring-[#CFFAF8]
             "
           >
-            <Icon
-              aria-hidden="true"
-              className="h-7 w-7"
-              strokeWidth={1.8}
+            <SubjectIcon
+              subjectKey={
+                subject.key
+              }
             />
           </span>
 
@@ -723,7 +684,8 @@ function SubjectCard({
               "
             >
               {
-                subject.unitCount.toLocaleString()
+                subject.unitCount
+                  .toLocaleString()
               }
               {' '}
               {subject.unitLabel}
@@ -814,16 +776,23 @@ function SubjectCard({
         </h4>
 
         <ul
-          className="
+          className={`
             mt-4
             grid
             gap-2.5
             sm:grid-cols-2
-          "
+            ${
+              wide
+                ? 'lg:grid-cols-4'
+                : ''
+            }
+          `}
         >
           {subject.branches.map(
             (branch) => (
-              <li key={branch.href}>
+              <li
+                key={branch.href}
+              >
                 <Link
                   href={branch.href}
                   className="
@@ -869,7 +838,10 @@ function SubjectCard({
                     "
                   >
                     <Check
-                      className="h-3 w-3"
+                      className="
+                        h-3
+                        w-3
+                      "
                       strokeWidth={2.2}
                     />
                   </span>
@@ -884,6 +856,78 @@ function SubjectCard({
         </ul>
       </div>
     </article>
+  );
+}
+
+function SubjectIcon({
+  subjectKey,
+}: {
+  subjectKey:
+    SubjectDirectoryItem['key'];
+}) {
+  if (subjectKey === 'math') {
+    return (
+      <Calculator
+        aria-hidden="true"
+        className="h-7 w-7"
+        strokeWidth={1.8}
+      />
+    );
+  }
+
+  if (
+    subjectKey === 'chemistry'
+  ) {
+    return (
+      <ScienceStrandIcon
+        iconKey="flask"
+        className="h-8 w-8"
+      />
+    );
+  }
+
+  if (
+    subjectKey === 'physics'
+  ) {
+    return (
+      <ScienceStrandIcon
+        iconKey="physics"
+        className="h-8 w-8"
+      />
+    );
+  }
+
+  if (
+    subjectKey ===
+    'general-science'
+  ) {
+    return (
+      <ScienceStrandIcon
+        iconKey="earth"
+        className="h-8 w-8"
+      />
+    );
+  }
+
+  if (
+    subjectKey ===
+    'programme-francais'
+  ) {
+    return (
+      <Languages
+        aria-hidden="true"
+        className="h-7 w-7"
+        strokeWidth={1.8}
+      />
+    );
+  }
+
+  return (
+    <BookOpenCheck
+      aria-hidden="true"
+      className="h-7 w-7"
+      strokeWidth={1.8}
+    />
   );
 }
 

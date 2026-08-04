@@ -1,0 +1,1362 @@
+{
+  "metadata": {
+    "programme": "Programme français",
+    "matiere": "Mathématiques en français",
+    "matiereSlug": "mathematiques-en-francais",
+    "domaine": "E. Sens de l’espace",
+    "domaineSlug": "sens-espace",
+    "niveaux": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sourceRecordCount": 87,
+    "publicRecordCount": 72,
+    "nonStandardRecordCount": 15,
+    "mainTopicPlacementCount": 52,
+    "subtopicPlacementCount": 72,
+    "observedRecordCount": 35,
+    "referenceRecordCount": 37,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Les sujets principaux et les sous-sujets sont comptés par niveau. Les répétitions entre niveaux sont conservées comme progression pédagogique.",
+    "integrityRules": [
+      "Les répétitions entre niveaux sont conservées.",
+      "Seuls les doublons exacts Niveau + Domaine + Sujet principal + Sous-sujet peuvent être supprimés.",
+      "Les niveaux CECRL, adultes, secondaires parallèles et non précisés sont conservés dans les fichiers de révision.",
+      "Les niveaux sans contenu sont conservés dans le JSON mais masqués sur le site."
+    ]
+  },
+  "domaine": {
+    "slug": "sens-espace",
+    "titre": "Sens de l’espace",
+    "titreSource": "E. Sens de l’espace",
+    "description": "Géométrie plane et dans l’espace, mesure, transformations, coordonnées, angles, aires et volumes.",
+    "iconKey": "espace"
+  },
+  "niveaux": [
+    {
+      "niveau": 1,
+      "label": "1re année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-1-geometrie",
+          "titre": "Géométrie",
+          "sousSujets": [
+            {
+              "id": "figures-2d-et-solides-3d",
+              "titre": "figures 2D et solides 3D",
+              "competence": "Décrire, construire, classifier et justifier des propriétés",
+              "activite": "Géoplan, papier quadrillé, instruments et logiciel de géométrie",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 18
+            }
+          ],
+          "sourceRows": [
+            18
+          ]
+        },
+        {
+          "id": "niveau-1-mesure",
+          "titre": "Mesure",
+          "sousSujets": [
+            {
+              "id": "longueur-masse-capacite-et-temps-avec-unites-non-conventionnelles",
+              "titre": "longueur, masse, capacité et temps avec unités non conventionnelles",
+              "competence": "Estimer, mesurer, convertir et résoudre des problèmes de mesure",
+              "activite": "Ateliers de mesure, objets réels et tableau de conversions",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 19
+            }
+          ],
+          "sourceRows": [
+            19
+          ]
+        },
+        {
+          "id": "niveau-1-position-et-transformations",
+          "titre": "Position et transformations",
+          "sousSujets": [
+            {
+              "id": "reperage-symetrie-translation-et-rotation-selon-le-niveau",
+              "titre": "Repérage, symétrie, translation et rotation selon le niveau",
+              "competence": "Décrire une position et appliquer une transformation",
+              "activite": "Carte au trésor, coordonnées, calque et robot",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 20
+            }
+          ],
+          "sourceRows": [
+            20
+          ]
+        },
+        {
+          "id": "niveau-1-perimetre-aire-et-volume",
+          "titre": "Périmètre, aire et volume",
+          "sousSujets": [
+            {
+              "id": "relations-entre-dimensions-et-mesures",
+              "titre": "Relations entre dimensions et mesures",
+              "competence": "Choisir une formule ou une stratégie et interpréter les unités",
+              "activite": "Découpage-recomposition, quadrillage et construction de solides",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 21
+            }
+          ],
+          "sourceRows": [
+            21
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 4,
+      "nombreSousSujets": 4
+    },
+    {
+      "niveau": 2,
+      "label": "2e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-2-geometrie",
+          "titre": "Géométrie",
+          "sousSujets": [
+            {
+              "id": "figures-symetrie-et-localisation",
+              "titre": "figures, symétrie et localisation",
+              "competence": "Décrire, construire, classifier et justifier des propriétés",
+              "activite": "Géoplan, papier quadrillé, instruments et logiciel de géométrie",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 45
+            }
+          ],
+          "sourceRows": [
+            45
+          ]
+        },
+        {
+          "id": "niveau-2-mesure",
+          "titre": "Mesure",
+          "sousSujets": [
+            {
+              "id": "unites-standards-simples-heure-et-monnaie",
+              "titre": "unités standards simples, heure et monnaie",
+              "competence": "Estimer, mesurer, convertir et résoudre des problèmes de mesure",
+              "activite": "Ateliers de mesure, objets réels et tableau de conversions",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 46
+            }
+          ],
+          "sourceRows": [
+            46
+          ]
+        },
+        {
+          "id": "niveau-2-position-et-transformations",
+          "titre": "Position et transformations",
+          "sousSujets": [
+            {
+              "id": "reperage-symetrie-translation-et-rotation-selon-le-niveau",
+              "titre": "Repérage, symétrie, translation et rotation selon le niveau",
+              "competence": "Décrire une position et appliquer une transformation",
+              "activite": "Carte au trésor, coordonnées, calque et robot",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 47
+            }
+          ],
+          "sourceRows": [
+            47
+          ]
+        },
+        {
+          "id": "niveau-2-perimetre-aire-et-volume",
+          "titre": "Périmètre, aire et volume",
+          "sousSujets": [
+            {
+              "id": "relations-entre-dimensions-et-mesures",
+              "titre": "Relations entre dimensions et mesures",
+              "competence": "Choisir une formule ou une stratégie et interpréter les unités",
+              "activite": "Découpage-recomposition, quadrillage et construction de solides",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 48
+            }
+          ],
+          "sourceRows": [
+            48
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 4,
+      "nombreSousSujets": 4
+    },
+    {
+      "niveau": 3,
+      "label": "3e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-3-geometrie",
+          "titre": "Géométrie",
+          "sousSujets": [
+            {
+              "id": "angles-polygones-et-transformations",
+              "titre": "angles, polygones et transformations",
+              "competence": "Décrire, construire, classifier et justifier des propriétés",
+              "activite": "Géoplan, papier quadrillé, instruments et logiciel de géométrie",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 68
+            }
+          ],
+          "sourceRows": [
+            68
+          ]
+        },
+        {
+          "id": "niveau-3-geometrie-dans-l-espace",
+          "titre": "Géométrie dans l’espace",
+          "sousSujets": [
+            {
+              "id": "solides-vues-et-developpements",
+              "titre": "Solides, vues et développements",
+              "competence": "Décrire, représenter et calculer des mesures de solides",
+              "activite": "Construction de patrons, vues 2D/3D et modèles; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 69
+            }
+          ],
+          "sourceRows": [
+            69
+          ]
+        },
+        {
+          "id": "niveau-3-mesure",
+          "titre": "Mesure",
+          "sousSujets": [
+            {
+              "id": "aire-des-figures-planes-et-surfaces",
+              "titre": "Aire des figures planes et surfaces",
+              "competence": "Décomposer des figures et appliquer les formules d’aire",
+              "activite": "Mesure d’objets, plans et problèmes de clôture; Quadrillage, découpage-recomposition et problèmes; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 70
+            },
+            {
+              "id": "perimetre",
+              "titre": "Périmètre",
+              "competence": "Calculer et comparer des périmètres de figures",
+              "activite": "Mesure d’objets, plans et problèmes de clôture; Quadrillage, découpage-recomposition et problèmes; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 71
+            },
+            {
+              "id": "unites-et-conversions-de-mesure",
+              "titre": "Unités et conversions de mesure",
+              "competence": "Choisir une unité, mesurer et convertir",
+              "activite": "Ateliers de mesure, estimation et tableau de conversions; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 72
+            },
+            {
+              "id": "perimetre-aire-par-unites-carrees-masse-et-capacite",
+              "titre": "périmètre, aire par unités carrées, masse et capacité",
+              "competence": "Estimer, mesurer, convertir et résoudre des problèmes de mesure",
+              "activite": "Ateliers de mesure, objets réels et tableau de conversions",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 73
+            }
+          ],
+          "sourceRows": [
+            70,
+            71,
+            72,
+            73
+          ]
+        },
+        {
+          "id": "niveau-3-position-et-transformations",
+          "titre": "Position et transformations",
+          "sousSujets": [
+            {
+              "id": "reperage-symetrie-translation-et-rotation-selon-le-niveau",
+              "titre": "Repérage, symétrie, translation et rotation selon le niveau",
+              "competence": "Décrire une position et appliquer une transformation",
+              "activite": "Carte au trésor, coordonnées, calque et robot",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 74
+            }
+          ],
+          "sourceRows": [
+            74
+          ]
+        },
+        {
+          "id": "niveau-3-perimetre-aire-et-volume",
+          "titre": "Périmètre, aire et volume",
+          "sousSujets": [
+            {
+              "id": "relations-entre-dimensions-et-mesures",
+              "titre": "Relations entre dimensions et mesures",
+              "competence": "Choisir une formule ou une stratégie et interpréter les unités",
+              "activite": "Découpage-recomposition, quadrillage et construction de solides",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 75
+            }
+          ],
+          "sourceRows": [
+            75
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 8
+    },
+    {
+      "niveau": 4,
+      "label": "4e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-4-geometrie",
+          "titre": "Géométrie",
+          "sousSujets": [
+            {
+              "id": "quadrilateres-symetrie-et-coordonnees",
+              "titre": "quadrilatères, symétrie et coordonnées",
+              "competence": "Décrire, construire, classifier et justifier des propriétés",
+              "activite": "Géoplan, papier quadrillé, instruments et logiciel de géométrie",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 106
+            }
+          ],
+          "sourceRows": [
+            106
+          ]
+        },
+        {
+          "id": "niveau-4-geometrie-plane",
+          "titre": "Géométrie plane",
+          "sousSujets": [
+            {
+              "id": "angles",
+              "titre": "Angles",
+              "competence": "Mesurer, construire, classifier et utiliser les propriétés des angles",
+              "activite": "Exercices d’application gradués; Rapporteur, chasse aux angles et problèmes; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 107
+            }
+          ],
+          "sourceRows": [
+            107
+          ]
+        },
+        {
+          "id": "niveau-4-mesure",
+          "titre": "Mesure",
+          "sousSujets": [
+            {
+              "id": "aire-des-figures-planes-et-surfaces",
+              "titre": "Aire des figures planes et surfaces",
+              "competence": "Décomposer des figures et appliquer les formules d’aire",
+              "activite": "Quadrillage, découpage-recomposition et problèmes; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 108
+            },
+            {
+              "id": "perimetre",
+              "titre": "Périmètre",
+              "competence": "Calculer et comparer des périmètres de figures",
+              "activite": "Mesure d’objets, plans et problèmes de clôture; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 109
+            },
+            {
+              "id": "temps-et-duree",
+              "titre": "Temps et durée",
+              "competence": "Lire l’heure, calculer des durées et résoudre des horaires",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Bandes de fractions, modèles d’aire et problèmes contextualisés; Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Horloge manipulable, emploi du temps et problèmes; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 110
+            },
+            {
+              "id": "unites-et-conversions-de-mesure",
+              "titre": "Unités et conversions de mesure",
+              "competence": "Choisir une unité, mesurer et convertir",
+              "activite": "Ateliers de mesure, estimation et tableau de conversions; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 111
+            },
+            {
+              "id": "perimetre-aire-volume-par-cubes-et-conversions",
+              "titre": "périmètre, aire, volume par cubes et conversions",
+              "competence": "Estimer, mesurer, convertir et résoudre des problèmes de mesure",
+              "activite": "Ateliers de mesure, objets réels et tableau de conversions",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 112
+            }
+          ],
+          "sourceRows": [
+            108,
+            109,
+            110,
+            111,
+            112
+          ]
+        },
+        {
+          "id": "niveau-4-position-et-transformations",
+          "titre": "Position et transformations",
+          "sousSujets": [
+            {
+              "id": "reperage-symetrie-translation-et-rotation-selon-le-niveau",
+              "titre": "Repérage, symétrie, translation et rotation selon le niveau",
+              "competence": "Décrire une position et appliquer une transformation",
+              "activite": "Carte au trésor, coordonnées, calque et robot",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 113
+            }
+          ],
+          "sourceRows": [
+            113
+          ]
+        },
+        {
+          "id": "niveau-4-perimetre-aire-et-volume",
+          "titre": "Périmètre, aire et volume",
+          "sousSujets": [
+            {
+              "id": "relations-entre-dimensions-et-mesures",
+              "titre": "Relations entre dimensions et mesures",
+              "competence": "Choisir une formule ou une stratégie et interpréter les unités",
+              "activite": "Découpage-recomposition, quadrillage et construction de solides",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 114
+            }
+          ],
+          "sourceRows": [
+            114
+          ]
+        },
+        {
+          "id": "niveau-4-reperage",
+          "titre": "Repérage",
+          "sousSujets": [
+            {
+              "id": "coordonnees-et-deplacements-dans-le-plan",
+              "titre": "Coordonnées et déplacements dans le plan",
+              "competence": "Repérer, tracer et transformer des points dans un plan cartésien",
+              "activite": "Quadrillage, coordonnées mystères et programmation de déplacements; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 115
+            }
+          ],
+          "sourceRows": [
+            115
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 6,
+      "nombreSousSujets": 10
+    },
+    {
+      "niveau": 5,
+      "label": "5e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-5-geometrie",
+          "titre": "Géométrie",
+          "sousSujets": [
+            {
+              "id": "triangles-transformations-et-plan-cartesien",
+              "titre": "triangles, transformations et plan cartésien",
+              "competence": "Décrire, construire, classifier et justifier des propriétés",
+              "activite": "Géoplan, papier quadrillé, instruments et logiciel de géométrie",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 142
+            }
+          ],
+          "sourceRows": [
+            142
+          ]
+        },
+        {
+          "id": "niveau-5-mesure",
+          "titre": "Mesure",
+          "sousSujets": [
+            {
+              "id": "aire-de-triangles-parallelogrammes-volume-et-conversions",
+              "titre": "aire de triangles/parallélogrammes, volume et conversions",
+              "competence": "Estimer, mesurer, convertir et résoudre des problèmes de mesure",
+              "activite": "Ateliers de mesure, objets réels et tableau de conversions",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 143
+            }
+          ],
+          "sourceRows": [
+            143
+          ]
+        },
+        {
+          "id": "niveau-5-position-et-transformations",
+          "titre": "Position et transformations",
+          "sousSujets": [
+            {
+              "id": "reperage-symetrie-translation-et-rotation-selon-le-niveau",
+              "titre": "Repérage, symétrie, translation et rotation selon le niveau",
+              "competence": "Décrire une position et appliquer une transformation",
+              "activite": "Carte au trésor, coordonnées, calque et robot",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 144
+            }
+          ],
+          "sourceRows": [
+            144
+          ]
+        },
+        {
+          "id": "niveau-5-perimetre-aire-et-volume",
+          "titre": "Périmètre, aire et volume",
+          "sousSujets": [
+            {
+              "id": "relations-entre-dimensions-et-mesures",
+              "titre": "Relations entre dimensions et mesures",
+              "competence": "Choisir une formule ou une stratégie et interpréter les unités",
+              "activite": "Découpage-recomposition, quadrillage et construction de solides",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 145
+            }
+          ],
+          "sourceRows": [
+            145
+          ]
+        },
+        {
+          "id": "niveau-5-transformations",
+          "titre": "Transformations",
+          "sousSujets": [
+            {
+              "id": "translations-rotations-et-homotheties",
+              "titre": "Translations, rotations et homothéties",
+              "competence": "Décrire et appliquer des transformations",
+              "activite": "Papier calque, coordonnées et logiciel de géométrie; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 146
+            }
+          ],
+          "sourceRows": [
+            146
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 5
+    },
+    {
+      "niveau": 6,
+      "label": "6e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-6-geometrie",
+          "titre": "Géométrie",
+          "sousSujets": [
+            {
+              "id": "angles-polygones-et-coordonnees",
+              "titre": "angles, polygones et coordonnées",
+              "competence": "Décrire, construire, classifier et justifier des propriétés",
+              "activite": "Géoplan, papier quadrillé, instruments et logiciel de géométrie",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 180
+            }
+          ],
+          "sourceRows": [
+            180
+          ]
+        },
+        {
+          "id": "niveau-6-geometrie-dans-l-espace",
+          "titre": "Géométrie dans l’espace",
+          "sousSujets": [
+            {
+              "id": "solides-vues-et-developpements",
+              "titre": "Solides, vues et développements",
+              "competence": "Décrire, représenter et calculer des mesures de solides",
+              "activite": "Construction de patrons, vues 2D/3D et modèles; Cubes unitaires, contenants et formules; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 181
+            }
+          ],
+          "sourceRows": [
+            181
+          ]
+        },
+        {
+          "id": "niveau-6-geometrie-plane",
+          "titre": "Géométrie plane",
+          "sousSujets": [
+            {
+              "id": "polygones-et-quadrilateres",
+              "titre": "Polygones et quadrilatères",
+              "competence": "Classifier selon les propriétés et construire des figures",
+              "activite": "Diagramme de classification, construction et justification; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 182
+            }
+          ],
+          "sourceRows": [
+            182
+          ]
+        },
+        {
+          "id": "niveau-6-mesure",
+          "titre": "Mesure",
+          "sousSujets": [
+            {
+              "id": "aire-des-figures-planes-et-surfaces",
+              "titre": "Aire des figures planes et surfaces",
+              "competence": "Décomposer des figures et appliquer les formules d’aire",
+              "activite": "Mesure d’objets, plans et problèmes de clôture; Quadrillage, découpage-recomposition et problèmes; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 183
+            },
+            {
+              "id": "perimetre",
+              "titre": "Périmètre",
+              "competence": "Calculer et comparer des périmètres de figures",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Correction, révision et remédiation; Exercices d’application gradués; Mesure d’objets, plans et problèmes de clôture; Quadrillage, découpage-recomposition et problèmes; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles; Évaluation diagnostique, correction expliquée et parcours de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne; Élevée",
+              "sourceRow": 184
+            },
+            {
+              "id": "unites-et-conversions-de-mesure",
+              "titre": "Unités et conversions de mesure",
+              "competence": "Choisir une unité, mesurer et convertir",
+              "activite": "Ateliers de mesure, estimation et tableau de conversions; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 185
+            },
+            {
+              "id": "volume",
+              "titre": "Volume",
+              "competence": "Comprendre et calculer le volume de prismes et autres solides",
+              "activite": "Construction de patrons, vues 2D/3D et modèles; Cubes unitaires, contenants et formules; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 186
+            },
+            {
+              "id": "aire-volume-unites-et-echelles",
+              "titre": "aire, volume, unités et échelles",
+              "competence": "Estimer, mesurer, convertir et résoudre des problèmes de mesure",
+              "activite": "Ateliers de mesure, objets réels et tableau de conversions",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 187
+            }
+          ],
+          "sourceRows": [
+            183,
+            184,
+            185,
+            186,
+            187
+          ]
+        },
+        {
+          "id": "niveau-6-position-et-transformations",
+          "titre": "Position et transformations",
+          "sousSujets": [
+            {
+              "id": "reperage-symetrie-translation-et-rotation-selon-le-niveau",
+              "titre": "Repérage, symétrie, translation et rotation selon le niveau",
+              "competence": "Décrire une position et appliquer une transformation",
+              "activite": "Carte au trésor, coordonnées, calque et robot",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 188
+            }
+          ],
+          "sourceRows": [
+            188
+          ]
+        },
+        {
+          "id": "niveau-6-perimetre-aire-et-volume",
+          "titre": "Périmètre, aire et volume",
+          "sousSujets": [
+            {
+              "id": "relations-entre-dimensions-et-mesures",
+              "titre": "Relations entre dimensions et mesures",
+              "competence": "Choisir une formule ou une stratégie et interpréter les unités",
+              "activite": "Découpage-recomposition, quadrillage et construction de solides",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 189
+            }
+          ],
+          "sourceRows": [
+            189
+          ]
+        },
+        {
+          "id": "niveau-6-reperage",
+          "titre": "Repérage",
+          "sousSujets": [
+            {
+              "id": "coordonnees-et-deplacements-dans-le-plan",
+              "titre": "Coordonnées et déplacements dans le plan",
+              "competence": "Repérer, tracer et transformer des points dans un plan cartésien",
+              "activite": "Quadrillage, coordonnées mystères et programmation de déplacements; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 190
+            }
+          ],
+          "sourceRows": [
+            190
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 7,
+      "nombreSousSujets": 11
+    },
+    {
+      "niveau": 7,
+      "label": "7e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-7-geometrie",
+          "titre": "Géométrie",
+          "sousSujets": [
+            {
+              "id": "transformations-constructions-et-relations-geometriques",
+              "titre": "transformations, constructions et relations géométriques",
+              "competence": "Décrire, construire, classifier et justifier des propriétés",
+              "activite": "Géoplan, papier quadrillé, instruments et logiciel de géométrie",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 217
+            }
+          ],
+          "sourceRows": [
+            217
+          ]
+        },
+        {
+          "id": "niveau-7-geometrie-plane",
+          "titre": "Géométrie plane",
+          "sousSujets": [
+            {
+              "id": "droites-segments-parallelisme-et-perpendicularite",
+              "titre": "Droites, segments, parallélisme et perpendicularité",
+              "competence": "Construire et reconnaître les relations géométriques",
+              "activite": "Règle-équerre, constructions et justification; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 218
+            },
+            {
+              "id": "triangles",
+              "titre": "Triangles",
+              "competence": "Classifier et utiliser les propriétés des triangles",
+              "activite": "Construction, mesure, somme des angles et problèmes; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 219
+            }
+          ],
+          "sourceRows": [
+            218,
+            219
+          ]
+        },
+        {
+          "id": "niveau-7-mesure",
+          "titre": "Mesure",
+          "sousSujets": [
+            {
+              "id": "circonference-aire-du-cercle-et-volume",
+              "titre": "circonférence, aire du cercle et volume",
+              "competence": "Estimer, mesurer, convertir et résoudre des problèmes de mesure",
+              "activite": "Ateliers de mesure, objets réels et tableau de conversions",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 220
+            }
+          ],
+          "sourceRows": [
+            220
+          ]
+        },
+        {
+          "id": "niveau-7-position-et-transformations",
+          "titre": "Position et transformations",
+          "sousSujets": [
+            {
+              "id": "reperage-symetrie-translation-et-rotation-selon-le-niveau",
+              "titre": "Repérage, symétrie, translation et rotation selon le niveau",
+              "competence": "Décrire une position et appliquer une transformation",
+              "activite": "Carte au trésor, coordonnées, calque et robot",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 221
+            }
+          ],
+          "sourceRows": [
+            221
+          ]
+        },
+        {
+          "id": "niveau-7-perimetre-aire-et-volume",
+          "titre": "Périmètre, aire et volume",
+          "sousSujets": [
+            {
+              "id": "relations-entre-dimensions-et-mesures",
+              "titre": "Relations entre dimensions et mesures",
+              "competence": "Choisir une formule ou une stratégie et interpréter les unités",
+              "activite": "Découpage-recomposition, quadrillage et construction de solides",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 222
+            }
+          ],
+          "sourceRows": [
+            222
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 6
+    },
+    {
+      "niveau": 8,
+      "label": "8e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-8-geometrie",
+          "titre": "Géométrie",
+          "sousSujets": [
+            {
+              "id": "pythagore-transformations-et-geometrie-analytique",
+              "titre": "Pythagore, transformations et géométrie analytique",
+              "competence": "Décrire, construire, classifier et justifier des propriétés",
+              "activite": "Géoplan, papier quadrillé, instruments et logiciel de géométrie",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 247
+            }
+          ],
+          "sourceRows": [
+            247
+          ]
+        },
+        {
+          "id": "niveau-8-geometrie-dans-l-espace",
+          "titre": "Géométrie dans l’espace",
+          "sousSujets": [
+            {
+              "id": "solides-vues-et-developpements",
+              "titre": "Solides, vues et développements",
+              "competence": "Décrire, représenter et calculer des mesures de solides",
+              "activite": "Construction de patrons, vues 2D/3D et modèles; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 248
+            }
+          ],
+          "sourceRows": [
+            248
+          ]
+        },
+        {
+          "id": "niveau-8-geometrie-plane",
+          "titre": "Géométrie plane",
+          "sousSujets": [
+            {
+              "id": "cercle-et-disque",
+              "titre": "Cercle et disque",
+              "competence": "Utiliser rayon, diamètre, circonférence et aire",
+              "activite": "Mesure d’objets circulaires et découverte de π; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 249
+            },
+            {
+              "id": "polygones-et-quadrilateres",
+              "titre": "Polygones et quadrilatères",
+              "competence": "Classifier selon les propriétés et construire des figures",
+              "activite": "Diagramme de classification, construction et justification; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 250
+            }
+          ],
+          "sourceRows": [
+            249,
+            250
+          ]
+        },
+        {
+          "id": "niveau-8-mesure",
+          "titre": "Mesure",
+          "sousSujets": [
+            {
+              "id": "aire-des-figures-planes-et-surfaces",
+              "titre": "Aire des figures planes et surfaces",
+              "competence": "Décomposer des figures et appliquer les formules d’aire",
+              "activite": "Mesure d’objets, plans et problèmes de clôture; Quadrillage, découpage-recomposition et problèmes; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 251
+            },
+            {
+              "id": "perimetre",
+              "titre": "Périmètre",
+              "competence": "Calculer et comparer des périmètres de figures",
+              "activite": "Mesure d’objets, plans et problèmes de clôture; Quadrillage, découpage-recomposition et problèmes; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 252
+            },
+            {
+              "id": "aires-composees-volumes-et-conversions",
+              "titre": "aires composées, volumes et conversions",
+              "competence": "Estimer, mesurer, convertir et résoudre des problèmes de mesure",
+              "activite": "Ateliers de mesure, objets réels et tableau de conversions",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 253
+            }
+          ],
+          "sourceRows": [
+            251,
+            252,
+            253
+          ]
+        },
+        {
+          "id": "niveau-8-position-et-transformations",
+          "titre": "Position et transformations",
+          "sousSujets": [
+            {
+              "id": "reperage-symetrie-translation-et-rotation-selon-le-niveau",
+              "titre": "Repérage, symétrie, translation et rotation selon le niveau",
+              "competence": "Décrire une position et appliquer une transformation",
+              "activite": "Carte au trésor, coordonnées, calque et robot",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 254
+            }
+          ],
+          "sourceRows": [
+            254
+          ]
+        },
+        {
+          "id": "niveau-8-perimetre-aire-et-volume",
+          "titre": "Périmètre, aire et volume",
+          "sousSujets": [
+            {
+              "id": "relations-entre-dimensions-et-mesures",
+              "titre": "Relations entre dimensions et mesures",
+              "competence": "Choisir une formule ou une stratégie et interpréter les unités",
+              "activite": "Découpage-recomposition, quadrillage et construction de solides",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 255
+            }
+          ],
+          "sourceRows": [
+            255
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 6,
+      "nombreSousSujets": 9
+    },
+    {
+      "niveau": 9,
+      "label": "9e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-9-geometrie-analytique-et-transformations",
+          "titre": "Géométrie analytique et transformations",
+          "sousSujets": [
+            {
+              "id": "geometrie-analytique-et-transformations",
+              "titre": "Géométrie analytique et transformations",
+              "competence": "Utiliser coordonnées, propriétés et transformations",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 284
+            }
+          ],
+          "sourceRows": [
+            284
+          ]
+        },
+        {
+          "id": "niveau-9-geometrie-dans-l-espace",
+          "titre": "Géométrie dans l’espace",
+          "sousSujets": [
+            {
+              "id": "solides-vues-et-developpements",
+              "titre": "Solides, vues et développements",
+              "competence": "Décrire, représenter et calculer des mesures de solides",
+              "activite": "Construction de patrons, vues 2D/3D et modèles; Cubes unitaires, contenants et formules; Quadrillage, découpage-recomposition et problèmes; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne; Élevée",
+              "sourceRow": 285
+            }
+          ],
+          "sourceRows": [
+            285
+          ]
+        },
+        {
+          "id": "niveau-9-geometrie-plane",
+          "titre": "Géométrie plane",
+          "sousSujets": [
+            {
+              "id": "cercle-et-disque",
+              "titre": "Cercle et disque",
+              "competence": "Utiliser rayon, diamètre, circonférence et aire",
+              "activite": "Mesure d’objets circulaires et découverte de π; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 286
+            },
+            {
+              "id": "droites-segments-parallelisme-et-perpendicularite",
+              "titre": "Droites, segments, parallélisme et perpendicularité",
+              "competence": "Construire et reconnaître les relations géométriques",
+              "activite": "Balance algébrique, tuiles, vérification et problèmes; Règle-équerre, constructions et justification; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 287
+            },
+            {
+              "id": "polygones-et-quadrilateres",
+              "titre": "Polygones et quadrilatères",
+              "competence": "Classifier selon les propriétés et construire des figures",
+              "activite": "Diagramme de classification, construction et justification; Mesure d’objets, plans et problèmes de clôture; Quadrillage, découpage-recomposition et problèmes; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 288
+            }
+          ],
+          "sourceRows": [
+            286,
+            287,
+            288
+          ]
+        },
+        {
+          "id": "niveau-9-mesure",
+          "titre": "Mesure",
+          "sousSujets": [
+            {
+              "id": "aire-des-figures-planes-et-surfaces",
+              "titre": "Aire des figures planes et surfaces",
+              "competence": "Décomposer des figures et appliquer les formules d’aire",
+              "activite": "Construction de patrons, vues 2D/3D et modèles; Diagramme de classification, construction et justification; Mesure d’objets, plans et problèmes de clôture; Quadrillage, découpage-recomposition et problèmes; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 289
+            },
+            {
+              "id": "perimetre",
+              "titre": "Périmètre",
+              "competence": "Calculer et comparer des périmètres de figures",
+              "activite": "Diagramme de classification, construction et justification; Mesure d’objets, plans et problèmes de clôture; Quadrillage, découpage-recomposition et problèmes; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 290
+            },
+            {
+              "id": "volume",
+              "titre": "Volume",
+              "competence": "Comprendre et calculer le volume de prismes et autres solides",
+              "activite": "Construction de patrons, vues 2D/3D et modèles; Cubes unitaires, contenants et formules; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 291
+            }
+          ],
+          "sourceRows": [
+            289,
+            290,
+            291
+          ]
+        },
+        {
+          "id": "niveau-9-mesure-et-trigonometrie-introductive",
+          "titre": "Mesure et trigonométrie introductive",
+          "sousSujets": [
+            {
+              "id": "mesure-et-trigonometrie-introductive",
+              "titre": "Mesure et trigonométrie introductive",
+              "competence": "Résoudre des problèmes de longueurs, aires, volumes et triangles",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 292
+            }
+          ],
+          "sourceRows": [
+            292
+          ]
+        },
+        {
+          "id": "niveau-9-relations-metriques",
+          "titre": "Relations métriques",
+          "sousSujets": [
+            {
+              "id": "theoreme-de-pythagore",
+              "titre": "Théorème de Pythagore",
+              "competence": "Calculer une longueur et vérifier si un triangle est rectangle",
+              "activite": "Mesures, carrés construits sur les côtés et problèmes; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 293
+            }
+          ],
+          "sourceRows": [
+            293
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 6,
+      "nombreSousSujets": 10
+    },
+    {
+      "niveau": 10,
+      "label": "10e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-10-geometrie-analytique",
+          "titre": "Géométrie analytique",
+          "sousSujets": [
+            {
+              "id": "geometrie-analytique",
+              "titre": "Géométrie analytique",
+              "competence": "Étudier droites, distances, milieux et relations géométriques",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 322
+            }
+          ],
+          "sourceRows": [
+            322
+          ]
+        },
+        {
+          "id": "niveau-10-geometrie-plane",
+          "titre": "Géométrie plane",
+          "sousSujets": [
+            {
+              "id": "angles",
+              "titre": "Angles",
+              "competence": "Mesurer, construire, classifier et utiliser les propriétés des angles",
+              "activite": "Rapporteur, chasse aux angles et problèmes",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 323
+            }
+          ],
+          "sourceRows": [
+            323
+          ]
+        },
+        {
+          "id": "niveau-10-trigonometrie",
+          "titre": "Trigonométrie",
+          "sousSujets": [
+            {
+              "id": "rapports-trigonometriques",
+              "titre": "Rapports trigonométriques",
+              "competence": "Utiliser sinus, cosinus et tangente dans les triangles rectangles",
+              "activite": "Mesure de hauteur, inclinaison et résolution contextualisée; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 324
+            },
+            {
+              "id": "trigonometrie",
+              "titre": "Trigonométrie",
+              "competence": "Utiliser sinus, cosinus et tangente dans des situations",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 325
+            }
+          ],
+          "sourceRows": [
+            324,
+            325
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 4
+    },
+    {
+      "niveau": 11,
+      "label": "11e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-11-trigonometrie-et-geometrie",
+          "titre": "Trigonométrie et géométrie",
+          "sousSujets": [
+            {
+              "id": "trigonometrie-et-geometrie",
+              "titre": "Trigonométrie et géométrie",
+              "competence": "Résoudre des triangles et modéliser des phénomènes périodiques",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 346
+            }
+          ],
+          "sourceRows": [
+            346
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 1,
+      "nombreSousSujets": 1
+    },
+    {
+      "niveau": 12,
+      "label": "12e année",
+      "statut": "sans-donnees",
+      "sujetsPrincipaux": [],
+      "nombreSujetsPrincipaux": 0,
+      "nombreSousSujets": 0
+    }
+  ]
+}

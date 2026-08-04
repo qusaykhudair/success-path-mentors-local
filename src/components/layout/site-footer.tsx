@@ -51,6 +51,9 @@ export async function SiteFooter() {
       ? 'المواد'
       : 'Subjects';
 
+  const frenchProgramHref =
+    '/fr/programme-francais';
+
   const whatsappHref =
     `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
       t('whatsappMessage')
@@ -64,6 +67,10 @@ export async function SiteFooter() {
     {
       href: subjectsHref,
       label: subjectsLabel,
+    },
+    {
+      href: frenchProgramHref,
+      label: 'Programme français',
     },
     {
       href: `${homeHref}/about`,
