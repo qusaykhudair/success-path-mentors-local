@@ -50,7 +50,7 @@ export function SubjectsMenu({
     activeKey,
     setActiveKey,
   ] = useState<string | null>(
-    null
+    categories[0]?.key ?? null
   );
 
   const containerRef =
@@ -65,6 +65,12 @@ export function SubjectsMenu({
     );
 
   const menuId = useId();
+
+  const activeCategory =
+    categories.find(
+      (category) =>
+        category.key === activeKey
+    ) ?? categories[0];
 
   const clearCloseTimer =
     useCallback(() => {
@@ -85,7 +91,6 @@ export function SubjectsMenu({
     } = {}) => {
       clearCloseTimer();
       setOpen(false);
-      setActiveKey(null);
 
       if (restoreFocus) {
         window.requestAnimationFrame(
@@ -99,8 +104,17 @@ export function SubjectsMenu({
   const openMenu =
     useCallback(() => {
       clearCloseTimer();
+      setActiveKey(
+        (current) =>
+          current ??
+          categories[0]?.key ??
+          null
+      );
       setOpen(true);
-    }, [clearCloseTimer]);
+    }, [
+      categories,
+      clearCloseTimer,
+    ]);
 
   const scheduleClose =
     useCallback(() => {
@@ -204,7 +218,7 @@ export function SubjectsMenu({
           items-center
           gap-1.5
           rounded-button
-          px-3
+          px-2.5
           text-small
           font-bold
           text-muted-foreground
@@ -239,18 +253,22 @@ export function SubjectsMenu({
         role="menu"
         aria-hidden={!open}
         className={cn(
-          'absolute',
-          'top-full',
-          'z-50',
-          'mt-2',
-          'w-64',
-          'rounded-card',
+          'fixed',
+          'left-1/2',
+          'top-[5.5rem]',
+          'z-[60]',
+          'grid',
+          'w-[min(58rem,calc(100vw-2rem))]',
+          'max-h-[calc(100dvh-6.5rem)]',
+          '-translate-x-1/2',
+          'grid-cols-[15rem_minmax(0,1fr)]',
+          'overflow-hidden',
+          'rounded-[1.25rem]',
           'border',
           'border-border',
           'bg-popover',
-          'p-2',
           'text-popover-foreground',
-          'shadow-dropdown',
+          'shadow-[0_24px_70px_rgba(7,20,38,0.18)]',
           'transition-[transform,opacity]',
           'duration-200',
           'ease-out',
@@ -260,124 +278,116 @@ export function SubjectsMenu({
             : 'pointer-events-none -translate-y-1 opacity-0'
         )}
       >
-        <a
-          href={overviewHref}
-          role="menuitem"
-          tabIndex={open ? 0 : -1}
-          onFocus={() =>
-            setActiveKey(null)
-          }
-          onMouseEnter={() =>
-            setActiveKey(null)
-          }
-          onClick={() =>
-            closeMenu()
-          }
-          className="
-            group
-            flex
-            min-h-touch
-            items-center
-            justify-between
-            gap-3
-            rounded-button
-            bg-primary-900
-            px-3
-            text-small
-            font-black
-            text-white
-            transition-colors
-            duration-150
-            hover:bg-primary-800
-            focus-visible:outline-none
-            focus-visible:ring-2
-            focus-visible:ring-accent
-          "
-        >
-          <span>{overviewLabel}</span>
-
-          <ArrowRight
-            aria-hidden="true"
-            className="
-              h-4
-              w-4
-              shrink-0
-              transition-transform
-              duration-150
-              group-hover:translate-x-0.5
-              rtl:-scale-x-100
-              rtl:group-hover:-translate-x-0.5
-            "
-          />
-        </a>
-
         <div
-          aria-hidden="true"
           className="
-            my-2
-            h-px
-            bg-border
+            overflow-y-auto
+            overscroll-contain
+            border-e
+            border-border
+            bg-muted/45
+            p-3
+            [scrollbar-width:none]
+            [&::-webkit-scrollbar]:hidden
           "
-        />
-
-        <ul
-          role="none"
-          className="flex flex-col gap-0.5"
         >
-          {categories.map(
-            (category) => {
-              const categoryIsActive =
-                activeKey ===
-                category.key;
+          <a
+            href={overviewHref}
+            role="menuitem"
+            tabIndex={open ? 0 : -1}
+            onClick={() =>
+              closeMenu()
+            }
+            className="
+              group
+              flex
+              min-h-touch
+              items-center
+              justify-between
+              gap-3
+              rounded-xl
+              bg-primary-900
+              px-3.5
+              text-small
+              font-black
+              text-white
+              transition-colors
+              hover:bg-primary-800
+              focus-visible:outline-none
+              focus-visible:ring-2
+              focus-visible:ring-accent
+            "
+          >
+            <span>{overviewLabel}</span>
 
-              return (
-                <li
-                  key={category.key}
-                  role="none"
-                  className="relative"
-                  onMouseEnter={() =>
-                    setActiveKey(
-                      category.key
-                    )
-                  }
-                >
-                  <a
-                    href={category.href}
-                    role="menuitem"
-                    tabIndex={open ? 0 : -1}
-                    onFocus={() =>
+            <ArrowRight
+              aria-hidden="true"
+              className="
+                h-4
+                w-4
+                shrink-0
+                transition-transform
+                group-hover:translate-x-0.5
+                rtl:-scale-x-100
+                rtl:group-hover:-translate-x-0.5
+              "
+            />
+          </a>
+
+          <ul
+            role="none"
+            className="mt-3 grid gap-1"
+          >
+            {categories.map(
+              (category) => {
+                const categoryIsActive =
+                  activeCategory?.key ===
+                  category.key;
+
+                return (
+                  <li
+                    key={category.key}
+                    role="none"
+                    onMouseEnter={() =>
                       setActiveKey(
                         category.key
                       )
                     }
-                    onClick={() =>
-                      closeMenu()
-                    }
-                    className={cn(
-                      'flex',
-                      'min-h-touch',
-                      'items-center',
-                      'justify-between',
-                      'gap-2',
-                      'rounded-button',
-                      'px-3',
-                      'text-small',
-                      'font-bold',
-                      'transition-colors',
-                      'duration-150',
-                      'focus-visible:outline-none',
-                      'focus-visible:ring-2',
-                      'focus-visible:ring-ring',
-                      categoryIsActive
-                        ? 'bg-accent-50 text-accent-800'
-                        : 'text-foreground hover:bg-muted'
-                    )}
                   >
-                    <span>
-                      {category.label}
-                    </span>
+                    <a
+                      href={category.href}
+                      role="menuitem"
+                      tabIndex={open ? 0 : -1}
+                      onFocus={() =>
+                        setActiveKey(
+                          category.key
+                        )
+                      }
+                      onClick={() =>
+                        closeMenu()
+                      }
+                      className={cn(
+                        'flex',
+                        'min-h-touch',
+                        'items-center',
+                        'justify-between',
+                        'gap-3',
+                        'rounded-xl',
+                        'px-3.5',
+                        'text-small',
+                        'font-bold',
+                        'transition-colors',
+                        'focus-visible:outline-none',
+                        'focus-visible:ring-2',
+                        'focus-visible:ring-ring',
+                        categoryIsActive
+                          ? 'bg-accent-50 text-accent-800 shadow-sm'
+                          : 'text-foreground hover:bg-background'
+                      )}
+                    >
+                      <span>
+                        {category.label}
+                      </span>
 
-                    {category.children.length > 0 && (
                       <ChevronRight
                         aria-hidden="true"
                         className={cn(
@@ -385,106 +395,97 @@ export function SubjectsMenu({
                           'w-4',
                           'shrink-0',
                           'text-muted-foreground',
-                          'transition-transform',
-                          'duration-150',
                           'rtl:-scale-x-100',
                           categoryIsActive &&
-                            'translate-x-0.5 text-accent-700 rtl:-translate-x-0.5'
+                            'text-accent-700'
                         )}
                       />
-                    )}
+                    </a>
+                  </li>
+                );
+              }
+            )}
+          </ul>
+        </div>
+
+        <div
+          className="
+            min-h-0
+            overflow-y-auto
+            overscroll-contain
+            p-3
+            [scrollbar-width:none]
+            [&::-webkit-scrollbar]:hidden
+          "
+        >
+          <ul
+            role="none"
+            className="
+              grid
+              grid-cols-2
+              content-start
+              gap-1.5
+            "
+          >
+            {activeCategory?.children.map(
+              (child) => (
+                <li
+                  key={child.href}
+                  role="none"
+                >
+                  <a
+                    href={child.href}
+                    role="menuitem"
+                    tabIndex={open ? 0 : -1}
+                    onClick={() =>
+                      closeMenu()
+                    }
+                    className="
+                      group
+                      flex
+                      min-h-touch
+                      items-center
+                      gap-3
+                      rounded-xl
+                      border
+                      border-transparent
+                      px-3.5
+                      py-2.5
+                      text-small
+                      font-semibold
+                      leading-5
+                      text-muted-foreground
+                      transition-[background-color,border-color,color]
+                      hover:border-accent-100
+                      hover:bg-accent-50
+                      hover:text-accent-800
+                      focus-visible:outline-none
+                      focus-visible:ring-2
+                      focus-visible:ring-ring
+                    "
+                  >
+                    <span
+                      aria-hidden="true"
+                      className="
+                        h-1.5
+                        w-1.5
+                        shrink-0
+                        rounded-full
+                        bg-accent-500
+                        transition-transform
+                        group-hover:scale-125
+                      "
+                    />
+
+                    <span>
+                      {child.label}
+                    </span>
                   </a>
-
-                  {category.children.length > 0 &&
-                    categoryIsActive && (
-                      <div
-                        role="menu"
-                        aria-label={
-                          category.label
-                        }
-                        className="
-                          absolute
-                          -top-2
-                          start-full
-                          z-10
-                          ms-3
-                          max-h-[min(34rem,calc(100dvh-7rem))]
-                          w-80
-                          overflow-y-auto
-                          overscroll-contain
-                          [scrollbar-width:none]
-                          [-ms-overflow-style:none]
-                          [&::-webkit-scrollbar]:hidden
-                          rounded-card
-                          border
-                          border-border
-                          bg-popover
-                          p-2
-                          text-popover-foreground
-                          shadow-dropdown
-                        "
-                      >
-                        <div
-                          className="
-                            px-3
-                            pb-2
-                            pt-1
-                            text-caption
-                            font-black
-                            text-foreground
-                          "
-                        >
-                          {category.label}
-                        </div>
-
-                        <ul
-                          role="none"
-                          className="flex flex-col gap-0.5"
-                        >
-                          {category.children.map(
-                            (child) => (
-                              <li
-                                key={child.href}
-                                role="none"
-                              >
-                                <a
-                                  href={child.href}
-                                  role="menuitem"
-                                  onClick={() =>
-                                    closeMenu()
-                                  }
-                                  className="
-                                    block
-                                    min-h-touch
-                                    rounded-button
-                                    px-3
-                                    py-2.5
-                                    text-small
-                                    font-semibold
-                                    leading-5
-                                    text-muted-foreground
-                                    transition-colors
-                                    duration-150
-                                    hover:bg-accent-50
-                                    hover:text-accent-800
-                                    focus-visible:outline-none
-                                    focus-visible:ring-2
-                                    focus-visible:ring-ring
-                                  "
-                                >
-                                  {child.label}
-                                </a>
-                              </li>
-                            )
-                          )}
-                        </ul>
-                      </div>
-                    )}
                 </li>
-              );
-            }
-          )}
-        </ul>
+              )
+            )}
+          </ul>
+        </div>
       </div>
     </div>
   );

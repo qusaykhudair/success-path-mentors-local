@@ -80,9 +80,9 @@ const navigationCopy = {
       'Primary navigation',
   },
   ar: {
-    subjects: 'المواد',
+    subjects: 'المواد الدراسية',
     allSubjects:
-      'عرض جميع المواد',
+      'عرض جميع المواد الدراسية',
     math:
       'الرياضيات',
     english:
@@ -136,30 +136,6 @@ export async function SiteHeader() {
   const sectionLinks = [
     {
       href:
-        routePath.locations(
-          currentLocale
-        ),
-      label:
-        copy.locations,
-    },
-    {
-      href:
-        routePath.about(
-          currentLocale
-        ),
-      label:
-        copy.about,
-    },
-    {
-      href:
-        routePath.howItWorks(
-          currentLocale
-        ),
-      label:
-        copy.howItWorks,
-    },
-    {
-      href:
         routePath.programs(
           currentLocale
         ),
@@ -181,6 +157,30 @@ export async function SiteHeader() {
         ),
       label:
         copy.packages,
+    },
+    {
+      href:
+        routePath.howItWorks(
+          currentLocale
+        ),
+      label:
+        copy.howItWorks,
+    },
+    {
+      href:
+        routePath.locations(
+          currentLocale
+        ),
+      label:
+        copy.locations,
+    },
+    {
+      href:
+        routePath.about(
+          currentLocale
+        ),
+      label:
+        copy.about,
     },
     {
       href:
@@ -243,6 +243,31 @@ export async function SiteHeader() {
           ),
       },
       {
+        key: 'general-science',
+        label:
+          copy.generalScience,
+        href:
+          routePath.subject(
+            currentLocale,
+            'general-science'
+          ),
+        children:
+          approvedGeneralScienceStrands.map(
+            (strand) => ({
+              label:
+                strand.title[
+                  currentLocale
+                ],
+              href:
+                routePath.scienceStrand(
+                  currentLocale,
+                  'general-science',
+                  strand.slug
+                ),
+            })
+          ),
+      },
+      {
         key: 'chemistry',
         label:
           copy.chemistry,
@@ -287,31 +312,6 @@ export async function SiteHeader() {
                 routePath.scienceStrand(
                   currentLocale,
                   'physics',
-                  strand.slug
-                ),
-            })
-          ),
-      },
-      {
-        key: 'general-science',
-        label:
-          copy.generalScience,
-        href:
-          routePath.subject(
-            currentLocale,
-            'general-science'
-          ),
-        children:
-          approvedGeneralScienceStrands.map(
-            (strand) => ({
-              label:
-                strand.title[
-                  currentLocale
-                ],
-              href:
-                routePath.scienceStrand(
-                  currentLocale,
-                  'general-science',
                   strand.slug
                 ),
             })
@@ -386,7 +386,7 @@ export async function SiteHeader() {
           items-center
           justify-between
           gap-3
-          lg:min-h-20
+          xl:min-h-20
         "
       >
         <Link
@@ -422,7 +422,7 @@ export async function SiteHeader() {
               group-hover:scale-[1.03]
               motion-reduce:transition-none
               motion-reduce:group-hover:scale-100
-              lg:h-9
+              xl:h-9
             "
           />
         </Link>
@@ -435,7 +435,7 @@ export async function SiteHeader() {
             hidden
             items-center
             gap-0.5
-            lg:flex
+            xl:flex
           "
         >
           <SubjectsMenu
@@ -495,11 +495,11 @@ export async function SiteHeader() {
             sm:gap-3
           "
         >
-          <div className="hidden lg:block">
+          <div className="hidden xl:block">
             <LocaleSwitcher />
           </div>
 
-          <div className="lg:hidden">
+          <div className="xl:hidden">
             <LocaleSwitcher variant="compact" />
           </div>
 
@@ -512,7 +512,7 @@ export async function SiteHeader() {
                 variant: 'accent',
                 size: 'sm',
                 className:
-                  'hidden xl:inline-flex',
+                  'hidden 2xl:inline-flex',
               })
             }
           >

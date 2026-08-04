@@ -685,6 +685,21 @@
   }
 }
 
+
+
+@keyframes whatsapp-hint-float {
+  0%,
+  100% {
+    opacity: 0.82;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-4px);
+  }
+}
+
 /* =========================================================
    Accessibility: reduced motion
    ========================================================= */

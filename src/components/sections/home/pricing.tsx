@@ -2,7 +2,6 @@
 // Server Component
 
 import {
-  getLocale,
   getTranslations,
 } from 'next-intl/server';
 
@@ -39,8 +38,6 @@ const WHATSAPP_NUMBER = '16477875999';
 
 export async function Pricing() {
   const t = await getTranslations('pricing');
-  const locale = await getLocale();
-
   const plans = t.raw('plans') as Plan[];
   const highlights = t.raw('highlights') as string[];
 
@@ -50,18 +47,22 @@ export async function Pricing() {
     return null;
   }
 
-  const numberLocale =
-    locale === 'ar' ? 'ar-CA' : 'en-CA';
+  const dollarNumber =
+    new Intl.NumberFormat(
+      'en-US',
+      {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 2,
+      }
+    );
 
-  const currency = new Intl.NumberFormat(
-    numberLocale,
-    {
-      style: 'currency',
-      currency: 'CAD',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 2,
-    }
-  );
+  function formatDollar(
+    value: number
+  ): string {
+    return `$${dollarNumber.format(
+      value
+    )}`;
+  }
 
   function whatsappHref(plan: Plan): string {
     const message = t('whatsappMessage', {
@@ -426,6 +427,7 @@ export async function Pricing() {
                       "
                     >
                       <span
+                        dir="ltr"
                         className={cn(
                           `
                             text-5xl
@@ -437,7 +439,7 @@ export async function Pricing() {
                             : 'text-primary-950'
                         )}
                       >
-                        {currency.format(plan.price)}
+                        {formatDollar(plan.price)}
                       </span>
 
                       <span
@@ -496,6 +498,7 @@ export async function Pricing() {
                         </p>
 
                         <p
+                          dir="ltr"
                           className={cn(
                             `
                               mt-0.5
@@ -507,7 +510,7 @@ export async function Pricing() {
                               : 'text-foreground'
                           )}
                         >
-                          {currency.format(
+                          {formatDollar(
                             pricePerLesson
                           )}
                         </p>

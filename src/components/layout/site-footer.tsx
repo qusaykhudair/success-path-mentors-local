@@ -1,28 +1,34 @@
 // Server Component
 
-import { getLocale, getTranslations } from 'next-intl/server';
+import {
+  getLocale,
+  getTranslations,
+} from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
   ArrowUp,
-  BookOpenCheck,
-  ExternalLink,
   Facebook,
   Instagram,
   Languages,
   Mail,
   MessageCircle,
   MessageSquareText,
-  ShieldCheck,
   Youtube,
   type LucideIcon,
 } from 'lucide-react';
 
-import { Container } from '@/components/ui/container';
-import { routePath } from '@/config/routes';
+import {
+  Container,
+} from '@/components/ui/container';
+import {
+  routePath,
+} from '@/config/routes';
 
-const WHATSAPP_NUMBER = '16477875999';
-const CONTACT_EMAIL = 'successpathmentors@gmail.com';
+const WHATSAPP_NUMBER =
+  '16477875999';
+const CONTACT_EMAIL =
+  'successpathmentors@gmail.com';
 
 interface FooterLink {
   href: string;
@@ -32,51 +38,61 @@ interface FooterLink {
 interface SocialLink {
   key: string;
   label: string;
-  href?: string;
+  href: string;
   icon: LucideIcon;
 }
 
 export async function SiteFooter() {
-  const t = await getTranslations('footer');
-  const locale = await getLocale();
+  const t =
+    await getTranslations(
+      'footer'
+    );
+
+  const locale =
+    await getLocale();
+
   const currentLocale =
     locale === 'ar'
       ? 'ar'
       : 'en';
 
-  const year = new Date().getFullYear();
   const otherLocale =
-    locale === 'ar' ? 'en' : 'ar';
+    currentLocale === 'ar'
+      ? 'en'
+      : 'ar';
 
-  const homeHref = `/${currentLocale}`;
+  const year =
+    new Date().getFullYear();
+
+  const homeHref =
+    routePath.home(
+      currentLocale
+    );
+
   const contactHref =
     routePath.contact(
       currentLocale
     );
-  const subjectsHref = `${homeHref}/subjects`;
+
   const subjectsLabel =
-    locale === 'ar'
-      ? 'المواد'
+    currentLocale === 'ar'
+      ? 'المواد الدراسية'
       : 'Subjects';
 
-
-  const locationsLabel =
-    locale === 'ar'
-      ? 'المواقع'
-      : 'Locations';
-
   const packagesLabel =
-    locale === 'ar'
+    currentLocale === 'ar'
       ? 'الباقات'
       : 'Packages';
 
   const howItWorksLabel =
-    locale === 'ar'
+    currentLocale === 'ar'
       ? 'آلية عمل المنصة'
       : 'How It Works';
 
-  const frenchProgramHref =
-    '/fr/programme-francais';
+  const locationsLabel =
+    currentLocale === 'ar'
+      ? 'المواقع'
+      : 'Locations';
 
   const whatsappHref =
     `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
@@ -85,48 +101,28 @@ export async function SiteFooter() {
 
   const quickLinks: FooterLink[] = [
     {
-      href: homeHref,
-      label: t('links.home'),
-    },
-    {
-      href: subjectsHref,
-      label: subjectsLabel,
-    },
-    {
       href:
-        routePath.locations(
+        routePath.subjects(
           currentLocale
         ),
       label:
-        locationsLabel,
-    },
-    {
-      href: frenchProgramHref,
-      label: 'Programme français',
-    },
-    {
-      href: `${homeHref}/about`,
-      label: t('links.about'),
+        subjectsLabel,
     },
     {
       href:
-        routePath.howItWorks(
+        routePath.programs(
           currentLocale
         ),
       label:
-        howItWorksLabel,
+        t('links.programs'),
     },
     {
-      href: `${homeHref}/tutor-matching`,
-      label: t('links.tutorMatching'),
-    },
-    {
-      href: `${homeHref}#programs`,
-      label: t('links.programs'),
-    },
-    {
-      href: `${homeHref}#services`,
-      label: t('links.services'),
+      href:
+        routePath.services(
+          currentLocale
+        ),
+      label:
+        t('links.services'),
     },
     {
       href:
@@ -137,51 +133,102 @@ export async function SiteFooter() {
         packagesLabel,
     },
     {
-      href: `${homeHref}#faq`,
-      label: t('links.faq'),
+      href:
+        routePath.howItWorks(
+          currentLocale
+        ),
+      label:
+        howItWorksLabel,
     },
     {
-      href: contactHref,
-      label: t('links.contact'),
+      href:
+        routePath.locations(
+          currentLocale
+        ),
+      label:
+        locationsLabel,
+    },
+    {
+      href:
+        routePath.about(
+          currentLocale
+        ),
+      label:
+        t('links.about'),
+    },
+    {
+      href:
+        '/fr/programme-francais',
+      label:
+        'Programme français',
+    },
+    {
+      href:
+        routePath.faq(
+          currentLocale
+        ),
+      label:
+        t('links.faq'),
+    },
+    {
+      href:
+        contactHref,
+      label:
+        t('links.contact'),
     },
   ];
 
   const legalLinks: FooterLink[] = [
     {
-      href: `${homeHref}/privacy`,
-      label: t('legal.privacy'),
+      href:
+        `${homeHref}/privacy`,
+      label:
+        t('legal.privacy'),
     },
     {
-      href: `${homeHref}/terms`,
-      label: t('legal.terms'),
+      href:
+        `${homeHref}/terms`,
+      label:
+        t('legal.terms'),
     },
     {
-      href: `${homeHref}/cancellation-policy`,
-      label: t('legal.cancellation'),
+      href:
+        `${homeHref}/cancellation-policy`,
+      label:
+        t('legal.cancellation'),
     },
   ];
 
   const socialLinks: SocialLink[] = [
     {
-      key: 'facebook',
-      label: t('social.facebook'),
+      key:
+        'facebook',
+      label:
+        t('social.facebook'),
       href:
         'https://www.facebook.com/SuccessPathMentors',
-      icon: Facebook,
+      icon:
+        Facebook,
     },
     {
-      key: 'instagram',
-      label: t('social.instagram'),
+      key:
+        'instagram',
+      label:
+        t('social.instagram'),
       href:
         'https://www.instagram.com/successpathmentors',
-      icon: Instagram,
+      icon:
+        Instagram,
     },
     {
-      key: 'youtube',
-      label: t('social.youtube'),
+      key:
+        'youtube',
+      label:
+        t('social.youtube'),
       href:
         'https://www.youtube.com/@SuccessPathMentors',
-      icon: Youtube,
+      icon:
+        Youtube,
     },
   ];
 
@@ -212,79 +259,41 @@ export async function SiteFooter() {
           absolute
           inset-0
           -z-10
-          overflow-hidden
+          opacity-[0.025]
+          [background-image:radial-gradient(white_1px,transparent_1px)]
+          [background-size:30px_30px]
         "
-      >
-        <div
-          className="
-            absolute
-            -end-48
-            -top-48
-            h-[34rem]
-            w-[34rem]
-            rounded-full
-            bg-accent/12
-            blur-3xl
-          "
-        />
+      />
 
-        <div
-          className="
-            absolute
-            -bottom-48
-            -start-40
-            h-[32rem]
-            w-[32rem]
-            rounded-full
-            bg-primary-400/12
-            blur-3xl
-          "
-        />
-
-        <div
-          className="
-            absolute
-            inset-0
-            opacity-[0.022]
-            [background-image:radial-gradient(white_1px,transparent_1px)]
-            [background-size:30px_30px]
-          "
-        />
-
-        <div
-          className="
-            absolute
-            inset-x-0
-            top-0
-            h-px
-            bg-gradient-to-r
-            from-transparent
-            via-accent-300/75
-            to-transparent
-            rtl:bg-gradient-to-l
-          "
-        />
-      </div>
+      <div
+        aria-hidden="true"
+        className="
+          pointer-events-none
+          absolute
+          -end-40
+          -top-48
+          -z-10
+          h-96
+          w-96
+          rounded-full
+          bg-accent/10
+          blur-3xl
+        "
+      />
 
       <Container
         className="
           grid
-          gap-10
-          py-12
-          sm:py-14
+          gap-8
+          py-9
+          sm:py-10
           md:grid-cols-2
-          lg:grid-cols-12
-          lg:gap-0
+          lg:grid-cols-[1.05fr_1.35fr_1fr]
+          lg:gap-10
         "
       >
-        {/* Brand */}
         <section
           aria-labelledby="footer-brand-heading"
-          className="
-            md:col-span-2
-            lg:col-span-5
-            lg:pe-10
-          "
         >
           <h3
             id="footer-brand-heading"
@@ -295,31 +304,26 @@ export async function SiteFooter() {
 
           <Link
             href={homeHref}
-            aria-label={t('logoLinkLabel')}
+            aria-label={
+              t('logoLinkLabel')
+            }
             className="
               inline-flex
               rounded-xl
-              p-3
-              shadow-lg
-              transition-transform
-              duration-200
-              hover:-translate-y-0.5
               focus-visible:outline-none
               focus-visible:ring-2
               focus-visible:ring-accent
               focus-visible:ring-offset-2
               focus-visible:ring-offset-primary-950
-              motion-reduce:transition-none
-              motion-reduce:hover:translate-y-0
             "
           >
             <Image
               src="/images/footer.png"
               alt={t('logoAlt')}
-              width={180}
-              height={53}
+              width={170}
+              height={50}
               className="
-                h-15
+                h-12
                 w-auto
                 object-contain
               "
@@ -328,11 +332,11 @@ export async function SiteFooter() {
 
           <p
             className="
-              mt-6
-              max-w-xl
-              text-small
-              leading-7
-              text-white/75
+              mt-4
+              max-w-md
+              text-caption
+              leading-6
+              text-white/70
             "
           >
             {t('description')}
@@ -340,108 +344,16 @@ export async function SiteFooter() {
 
           <div
             className="
-              mt-6
+              mt-5
               flex
-              max-w-xl
-              items-start
-              gap-3
-              rounded-xl
-              border
-              border-white/10
-              bg-white/5
-              p-4
+              items-center
+              gap-2.5
             "
           >
-            <ShieldCheck
-              className="
-                mt-0.5
-                h-5
-                w-5
-                shrink-0
-                text-accent-300
-              "
-              strokeWidth={1.8}
-              aria-hidden="true"
-            />
-
-            <p
-              className="
-                text-caption
-                leading-relaxed
-                text-white/70
-              "
-            >
-              {t('brandNote')}
-            </p>
-          </div>
-
-          <div className="mt-7">
-            <h3
-              className="
-                text-small
-                font-bold
-                text-white
-              "
-            >
-              {t('socialTitle')}
-            </h3>
-
-            <p
-              className="
-                mt-2
-                max-w-lg
-                text-caption
-                leading-relaxed
-                text-white/65
-              "
-            >
-              {t('socialDescription')}
-            </p>
-
-            <div
-              className="
-                mt-4
-                flex
-                flex-wrap
-                items-center
-                gap-3
-              "
-            >
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-
-                if (!social.href) {
-                  return (
-                    <span
-                      key={social.key}
-                      role="link"
-                      aria-label={social.label}
-                      aria-disabled="true"
-                      title={t(
-                        'socialNotConfigured'
-                      )}
-                      className="
-                        inline-flex
-                        h-11
-                        w-11
-                        cursor-not-allowed
-                        items-center
-                        justify-center
-                        rounded-xl
-                        border
-                        border-white/10
-                        bg-white/[0.035]
-                        text-white/35
-                      "
-                    >
-                      <Icon
-                        className="h-5 w-5"
-                        strokeWidth={1.8}
-                        aria-hidden="true"
-                      />
-                    </span>
-                  );
-                }
+            {socialLinks.map(
+              (social) => {
+                const Icon =
+                  social.icon;
 
                 return (
                   <a
@@ -449,459 +361,269 @@ export async function SiteFooter() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={social.label}
+                    aria-label={
+                      social.label
+                    }
                     title={social.label}
                     className="
-                      group
                       inline-flex
-                      h-11
-                      w-11
+                      h-10
+                      w-10
                       items-center
                       justify-center
                       rounded-xl
                       border
                       border-white/10
                       bg-white/5
-                      !text-white/75
-                      transition-[transform,background-color,border-color,color]
-                      duration-200
-                      hover:-translate-y-1
+                      text-white/70
+                      transition-[background-color,border-color,color,transform]
+                      hover:-translate-y-0.5
                       hover:border-accent-300/30
                       hover:bg-accent
-                      hover:!text-accent-foreground
+                      hover:text-accent-foreground
                       focus-visible:outline-none
                       focus-visible:ring-2
                       focus-visible:ring-accent
-                      motion-reduce:transition-none
-                      motion-reduce:hover:translate-y-0
                     "
                   >
                     <Icon
-                      className="
-                        h-5
-                        w-5
-                        text-current
-                      "
-                      strokeWidth={1.8}
                       aria-hidden="true"
+                      className="h-[1.125rem] w-[1.125rem]"
+                      strokeWidth={1.8}
                     />
                   </a>
                 );
-              })}
-            </div>
+              }
+            )}
           </div>
         </section>
 
-        {/* Quick links */}
         <nav
-          aria-label={t('quickLinks')}
+          aria-label={
+            t('quickLinks')
+          }
           className="
-            lg:col-span-3
-            lg:border-s
-            lg:border-white/10
-            lg:px-9
+            md:border-s
+            md:border-white/10
+            md:ps-8
           "
         >
           <h3
             className="
-              flex
-              items-center
-              gap-2
               text-small
-              font-bold
+              font-black
               text-white
             "
           >
-            <BookOpenCheck
-              className="
-                h-5
-                w-5
-                text-accent-300
-              "
-              strokeWidth={1.8}
-              aria-hidden="true"
-            />
-
             {t('quickLinks')}
           </h3>
 
           <ul
             className="
-              mt-6
+              mt-4
               grid
-              gap-3.5
-              sm:grid-cols-2
-              md:grid-cols-1
+              grid-cols-2
+              gap-x-6
+              gap-y-2.5
             "
           >
-            {quickLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="
-                    group
-                    inline-flex
-                    items-center
-                    gap-2.5
-                    text-small
-                    !text-white/70
-                    transition-colors
-                    duration-200
-                    hover:!text-accent-200
-                    focus-visible:rounded-sm
-                    focus-visible:outline-none
-                    focus-visible:ring-2
-                    focus-visible:ring-accent
-                    focus-visible:ring-offset-2
-                    focus-visible:ring-offset-primary-950
-                  "
-                >
-                  <span
-                    aria-hidden="true"
+            {quickLinks.map(
+              (link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
                     className="
-                      h-1.5
-                      w-1.5
-                      rounded-full
-                      bg-white/30
-                      transition-[background-color,transform]
-                      duration-200
-                      group-hover:scale-125
-                      group-hover:bg-accent
+                      inline-flex
+                      text-caption
+                      font-semibold
+                      leading-6
+                      text-white/68
+                      transition-colors
+                      hover:text-accent-200
+                      focus-visible:rounded-sm
+                      focus-visible:outline-none
+                      focus-visible:ring-2
+                      focus-visible:ring-accent
                     "
-                  />
-
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              )
+            )}
           </ul>
         </nav>
 
-        {/* Support */}
         <section
-          aria-labelledby="footer-support-heading"
+          aria-labelledby="footer-contact-heading"
           className="
             md:col-span-2
-            lg:col-span-4
+            lg:col-span-1
             lg:border-s
             lg:border-white/10
-            lg:ps-9
+            lg:ps-8
           "
         >
           <h3
-            id="footer-support-heading"
+            id="footer-contact-heading"
             className="
               text-small
-              font-bold
+              font-black
               text-white
             "
           >
             {t('supportTitle')}
           </h3>
 
-          <div className="mt-6 grid gap-3">
+          <div
+            className="
+              mt-4
+              grid
+              gap-2.5
+            "
+          >
             <a
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
               className="
-                group
                 flex
-                min-h-touch
+                min-h-11
                 items-center
                 gap-3
                 rounded-xl
                 border
                 border-white/10
                 bg-white/5
-                px-4
-                py-3.5
-                !text-white
-                transition-[background-color,border-color,transform]
-                duration-200
-                hover:-translate-y-0.5
+                px-3.5
+                py-2.5
+                text-white
+                transition-colors
                 hover:border-accent-300/30
                 hover:bg-accent/10
-                hover:!text-white
                 focus-visible:outline-none
                 focus-visible:ring-2
                 focus-visible:ring-accent
-                motion-reduce:transition-none
-                motion-reduce:hover:translate-y-0
               "
             >
-              <span
-                className="
-                  flex
-                  h-10
-                  w-10
-                  shrink-0
-                  items-center
-                  justify-center
-                  rounded-xl
-                  bg-accent
-                  text-accent-foreground
-                "
-              >
-                <MessageCircle
-                  className="h-5 w-5"
-                  strokeWidth={1.9}
-                  aria-hidden="true"
-                />
-              </span>
-
-              <span className="min-w-0 flex-1">
-                <span
-                  className="
-                    block
-                    text-caption
-                    text-white/65
-                  "
-                >
-                  {t('whatsappLabel')}
-                </span>
-
-                <span
-                  dir="ltr"
-                  className="
-                    mt-0.5
-                    block
-                    text-small
-                    font-bold
-                    text-white
-                  "
-                >
-                  +1 647 787 5999
-                </span>
-              </span>
-
-              <ExternalLink
-                className="
-                  h-4
-                  w-4
-                  shrink-0
-                  text-white/45
-                  transition-colors
-                  group-hover:text-accent-300
-                "
-                strokeWidth={1.8}
+              <MessageCircle
                 aria-hidden="true"
+                className="h-[1.125rem] w-[1.125rem] shrink-0 text-accent-300"
+                strokeWidth={1.9}
               />
+
+              <span
+                dir="ltr"
+                className="text-caption font-bold"
+              >
+                +1 647 787 5999
+              </span>
+            </a>
+
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="
+                flex
+                min-h-11
+                items-center
+                gap-3
+                rounded-xl
+                border
+                border-white/10
+                bg-white/5
+                px-3.5
+                py-2.5
+                text-white
+                transition-colors
+                hover:border-accent-300/30
+                hover:bg-accent/10
+                focus-visible:outline-none
+                focus-visible:ring-2
+                focus-visible:ring-accent
+              "
+            >
+              <Mail
+                aria-hidden="true"
+                className="h-[1.125rem] w-[1.125rem] shrink-0 text-accent-300"
+                strokeWidth={1.8}
+              />
+
+              <span
+                dir="ltr"
+                className="min-w-0 truncate text-caption font-bold"
+              >
+                {CONTACT_EMAIL}
+              </span>
             </a>
 
             <Link
               href={contactHref}
               className="
-                group
                 flex
-                min-h-touch
+                min-h-11
                 items-center
                 gap-3
                 rounded-xl
                 border
                 border-accent-300/25
                 bg-accent/10
-                px-4
-                py-3.5
-                !text-white
-                transition-[background-color,border-color,transform]
-                duration-200
-                hover:-translate-y-0.5
-                hover:border-accent-300/50
+                px-3.5
+                py-2.5
+                text-caption
+                font-bold
+                text-white
+                transition-colors
                 hover:bg-accent/15
-                hover:!text-white
                 focus-visible:outline-none
                 focus-visible:ring-2
                 focus-visible:ring-accent
-                motion-reduce:transition-none
-                motion-reduce:hover:translate-y-0
               "
             >
-              <span
-                className="
-                  flex
-                  h-10
-                  w-10
-                  shrink-0
-                  items-center
-                  justify-center
-                  rounded-xl
-                  bg-accent
-                  text-accent-foreground
-                "
-              >
-                <MessageSquareText
-                  className="h-5 w-5"
-                  strokeWidth={1.8}
-                  aria-hidden="true"
-                />
-              </span>
+              <MessageSquareText
+                aria-hidden="true"
+                className="h-[1.125rem] w-[1.125rem] shrink-0 text-accent-300"
+                strokeWidth={1.8}
+              />
 
-              <span className="min-w-0 flex-1">
-                <span
-                  className="
-                    block
-                    text-caption
-                    text-white/65
-                  "
-                >
-                  {t('contactPageLabel')}
-                </span>
-
-                <span
-                  className="
-                    mt-0.5
-                    block
-                    text-small
-                    font-bold
-                    text-white
-                  "
-                >
-                  {t('contactPageDescription')}
-                </span>
-              </span>
+              {t('contactPageDescription')}
             </Link>
-
-            <a
-              href={`mailto:${CONTACT_EMAIL}`}
-              className="
-                group
-                flex
-                min-h-touch
-                items-center
-                gap-3
-                rounded-xl
-                border
-                border-white/10
-                bg-white/5
-                px-4
-                py-3.5
-                !text-white
-                transition-[background-color,border-color,transform]
-                duration-200
-                hover:-translate-y-0.5
-                hover:border-accent-300/30
-                hover:bg-accent/10
-                hover:!text-white
-                focus-visible:outline-none
-                focus-visible:ring-2
-                focus-visible:ring-accent
-                motion-reduce:transition-none
-                motion-reduce:hover:translate-y-0
-              "
-            >
-              <span
-                className="
-                  flex
-                  h-10
-                  w-10
-                  shrink-0
-                  items-center
-                  justify-center
-                  rounded-xl
-                  bg-white/10
-                  text-accent-300
-                "
-              >
-                <Mail
-                  className="h-5 w-5"
-                  strokeWidth={1.8}
-                  aria-hidden="true"
-                />
-              </span>
-
-              <span className="min-w-0 flex-1">
-                <span
-                  className="
-                    block
-                    text-caption
-                    text-white/65
-                  "
-                >
-                  {t('emailLabel')}
-                </span>
-
-                <span
-                  dir="ltr"
-                  className="
-                    mt-0.5
-                    block
-                    max-w-full
-                    truncate
-                    text-small
-                    font-bold
-                    text-white
-                  "
-                >
-                  {CONTACT_EMAIL}
-                </span>
-              </span>
-            </a>
           </div>
 
           <Link
             href={`/${otherLocale}`}
             hrefLang={otherLocale}
             className="
-              mt-4
-              flex
-              min-h-touch
+              mt-3
+              inline-flex
+              min-h-10
               items-center
-              justify-between
-              gap-4
-              rounded-xl
-              border
-              border-white/10
-              bg-white/5
-              px-4
-              py-3.5
-              !text-white
-              transition-[background-color,border-color]
-              duration-200
-              hover:border-accent-300/25
-              hover:bg-white/10
-              hover:!text-white
+              gap-2
+              rounded-lg
+              px-2
+              text-caption
+              font-bold
+              text-white/68
+              transition-colors
+              hover:text-accent-200
               focus-visible:outline-none
               focus-visible:ring-2
               focus-visible:ring-accent
             "
           >
-            <span
-              className="
-                flex
-                items-center
-                gap-3
-              "
-            >
-              <Languages
-                className="
-                  h-5
-                  w-5
-                  text-accent-300
-                "
-                strokeWidth={1.8}
-                aria-hidden="true"
-              />
+            <Languages
+              aria-hidden="true"
+              className="h-4 w-4 text-accent-300"
+              strokeWidth={1.8}
+            />
 
-              <span
-                className="
-                  text-small
-                  font-semibold
-                  text-white
-                "
-              >
-                {t('languageSwitch')}
-              </span>
-            </span>
+            {t('languageSwitch')}
 
             <span
               className="
                 rounded-full
                 bg-white/10
-                px-2.5
-                py-1
-                text-caption
-                font-bold
+                px-2
+                py-0.5
                 uppercase
                 text-accent-200
               "
@@ -912,30 +634,29 @@ export async function SiteFooter() {
         </section>
       </Container>
 
-      {/* Bottom bar */}
       <div
         className="
           border-t
           border-white/10
-          bg-primary-950/35
+          bg-primary-950/30
         "
       >
         <Container
           className="
             flex
             flex-col
-            gap-5
-            py-6
-            lg:flex-row
-            lg:items-center
-            lg:justify-between
+            gap-3
+            py-4
+            md:flex-row
+            md:items-center
+            md:justify-between
           "
         >
           <p
             className="
               text-caption
-              leading-relaxed
-              text-white/65
+              leading-6
+              text-white/58
             "
           >
             © {year} Mustafa Academy — Success Path Mentors.{' '}
@@ -945,81 +666,61 @@ export async function SiteFooter() {
           <div
             className="
               flex
-              flex-col
-              gap-4
-              sm:flex-row
-              sm:items-center
+              flex-wrap
+              items-center
+              gap-x-4
+              gap-y-2
             "
           >
-            <nav aria-label={t('legalLabel')}>
-              <ul
-                className="
-                  flex
-                  flex-wrap
-                  items-center
-                  gap-x-5
-                  gap-y-2
-                "
-              >
-                {legalLinks.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="
-                        text-caption
-                        !text-white/65
-                        transition-colors
-                        duration-200
-                        hover:!text-accent-200
-                        focus-visible:rounded-sm
-                        focus-visible:outline-none
-                        focus-visible:ring-2
-                        focus-visible:ring-accent
-                        focus-visible:ring-offset-2
-                        focus-visible:ring-offset-primary-950
-                      "
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+            {legalLinks.map(
+              (link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="
+                    text-caption
+                    text-white/58
+                    transition-colors
+                    hover:text-accent-200
+                    focus-visible:rounded-sm
+                    focus-visible:outline-none
+                    focus-visible:ring-2
+                    focus-visible:ring-accent
+                  "
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
 
             <a
               href="#main-content"
-              aria-label={t('backToTop')}
+              aria-label={
+                t('backToTop')
+              }
               className="
                 inline-flex
-                h-11
-                w-11
-                shrink-0
+                h-9
+                w-9
                 items-center
                 justify-center
-                self-start
                 rounded-full
                 border
                 border-white/10
                 bg-white/5
-                !text-white/75
-                transition-[background-color,border-color,color,transform]
-                duration-200
-                hover:-translate-y-0.5
-                hover:border-accent-300/30
+                text-white/65
+                transition-colors
                 hover:bg-accent
-                hover:!text-accent-foreground
+                hover:text-accent-foreground
                 focus-visible:outline-none
                 focus-visible:ring-2
                 focus-visible:ring-accent
-                motion-reduce:transition-none
-                motion-reduce:hover:translate-y-0
-                sm:self-auto
               "
             >
               <ArrowUp
+                aria-hidden="true"
                 className="h-4 w-4"
                 strokeWidth={2}
-                aria-hidden="true"
               />
             </a>
           </div>

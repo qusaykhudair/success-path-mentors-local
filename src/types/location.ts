@@ -10,6 +10,7 @@ export type LocationPageLevel =
   | 'index'
   | 'country'
   | 'region'
+  | 'curriculum'
   | 'city';
 
 export interface LocalizedText {
