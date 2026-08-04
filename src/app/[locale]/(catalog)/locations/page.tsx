@@ -85,7 +85,7 @@ export default async function LocationsPage({
       page
     );
 
-  const children =
+  const childLocations =
     getLocationChildren(
       locale,
       page
@@ -120,7 +120,7 @@ export default async function LocationsPage({
     buildLocationPageSchemas({
       locale,
       page,
-      children,
+      childLocations,
     });
 
   return (
@@ -153,7 +153,7 @@ export default async function LocationsPage({
         locale={locale}
         page={page}
         ancestors={ancestors}
-        childLocations={children}
+        childLocations={childLocations}
         related={related}
       />
     </>

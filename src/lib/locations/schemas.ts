@@ -44,11 +44,11 @@ export function buildLocationBreadcrumbSchema(
 export function buildLocationPageSchemas({
   locale,
   page,
-  children,
+  childLocations,
 }: {
   locale: SiteLocale;
   page: LocalizedLocationPage;
-  children: LocalizedLocationPage[];
+  childLocations: LocalizedLocationPage[];
 }) {
   const pageHref =
     routePath.location(
@@ -113,15 +113,15 @@ export function buildLocationPageSchemas({
     },
     about:
       place,
-    ...(children.length > 0
+    ...(childLocations.length > 0
       ? {
           mainEntity: {
             '@type':
               'ItemList',
             numberOfItems:
-              children.length,
+              childLocations.length,
             itemListElement:
-              children.map(
+              childLocations.map(
                 (child, index) => ({
                   '@type':
                     'ListItem',
