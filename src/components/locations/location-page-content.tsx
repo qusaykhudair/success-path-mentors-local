@@ -31,7 +31,7 @@ interface LocationPageContentProps {
   locale: SiteLocale;
   page: LocalizedLocationPage;
   ancestors: LocalizedLocationPage[];
-  children: LocalizedLocationPage[];
+  childLocations: LocalizedLocationPage[];
   related: LocalizedLocationPage[];
 }
 
@@ -147,7 +147,7 @@ export function LocationPageContent({
   locale,
   page,
   ancestors,
-  children,
+  childLocations,
   related,
 }: LocationPageContentProps) {
   const copy = labels[locale];
@@ -353,7 +353,7 @@ export function LocationPageContent({
         </div>
       </section>
 
-      {children.length > 0 ? (
+      {childLocations.length > 0 ? (
         <section
           className="bg-[#F8FAFC] py-14 sm:py-18 lg:py-20"
         >
@@ -371,7 +371,7 @@ export function LocationPageContent({
             <div
               className="mt-9 grid gap-5 md:grid-cols-2 xl:grid-cols-3"
             >
-              {children.map(
+              {childLocations.map(
                 (child) => (
                   <LocationLinkCard
                     key={child.id}

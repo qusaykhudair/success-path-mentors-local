@@ -19,7 +19,6 @@ import {
 import { Reveal } from '@/components/motion/reveal';
 import { buttonVariants } from '@/components/ui/button';
 import { Section } from '@/components/ui/section';
-import { cn } from '@/lib/utils';
 
 const WHATSAPP_NUMBER = '16477875999';
 

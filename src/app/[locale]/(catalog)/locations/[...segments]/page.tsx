@@ -186,7 +186,7 @@ export default async function LocationPage({
         locale={locale}
         page={page}
         ancestors={ancestors}
-        children={children}
+        childLocations={children}
         related={related}
       />
     </>

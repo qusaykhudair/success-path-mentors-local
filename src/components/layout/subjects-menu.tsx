@@ -1,6 +1,7 @@
 'use client';
 
 import {
+  useCallback,
   useEffect,
   useId,
   useRef,
@@ -65,50 +66,57 @@ export function SubjectsMenu({
 
   const menuId = useId();
 
-  function clearCloseTimer() {
-    if (closeTimer.current) {
-      clearTimeout(
-        closeTimer.current
-      );
+  const clearCloseTimer =
+    useCallback(() => {
+      if (closeTimer.current) {
+        clearTimeout(
+          closeTimer.current
+        );
 
-      closeTimer.current = null;
-    }
-  }
+        closeTimer.current = null;
+      }
+    }, []);
 
-  function closeMenu({
-    restoreFocus = false,
-  }: {
-    restoreFocus?: boolean;
-  } = {}) {
-    clearCloseTimer();
-    setOpen(false);
-    setActiveKey(null);
+  const closeMenu =
+    useCallback(({
+      restoreFocus = false,
+    }: {
+      restoreFocus?: boolean;
+    } = {}) => {
+      clearCloseTimer();
+      setOpen(false);
+      setActiveKey(null);
 
-    if (restoreFocus) {
-      window.requestAnimationFrame(
-        () => {
-          triggerRef.current?.focus();
-        }
-      );
-    }
-  }
+      if (restoreFocus) {
+        window.requestAnimationFrame(
+          () => {
+            triggerRef.current?.focus();
+          }
+        );
+      }
+    }, [clearCloseTimer]);
 
-  function openMenu() {
-    clearCloseTimer();
-    setOpen(true);
-  }
+  const openMenu =
+    useCallback(() => {
+      clearCloseTimer();
+      setOpen(true);
+    }, [clearCloseTimer]);
 
-  function scheduleClose() {
-    clearCloseTimer();
+  const scheduleClose =
+    useCallback(() => {
+      clearCloseTimer();
 
-    closeTimer.current =
-      setTimeout(
-        () => {
-          closeMenu();
-        },
-        180
-      );
-  }
+      closeTimer.current =
+        setTimeout(
+          () => {
+            closeMenu();
+          },
+          180
+        );
+    }, [
+      clearCloseTimer,
+      closeMenu,
+    ]);
 
   useEffect(() => {
     function handlePointerDown(
@@ -162,7 +170,11 @@ export function SubjectsMenu({
         handleKeyDown
       );
     };
-  }, [open]);
+  }, [
+    clearCloseTimer,
+    closeMenu,
+    open,
+  ]);
 
   return (
     <div
