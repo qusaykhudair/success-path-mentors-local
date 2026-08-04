@@ -9,6 +9,9 @@ import { InternalPageHero } from '@/components/internal/internal-page-hero';
 import { InternalPageShell } from '@/components/internal/internal-page-shell';
 import { ProcessSteps } from '@/components/internal/process-steps';
 import {
+  routePath,
+} from '@/config/routes';
+import {
   isSupportedLocale,
   siteConfig,
 } from '@/config/site';
@@ -56,13 +59,17 @@ export default async function HowItWorksPage({
   const content =
     howItWorksPageContent[locale];
 
-  const homeHref = `/${locale}`;
+  const homeHref =
+    routePath.home(locale);
+
   const pageHref =
-    `${homeHref}/how-it-works`;
+    routePath.howItWorks(
+      locale
+    );
 
   const bookingHref =
     siteConfig.bookingUrl.trim() ||
-    `${homeHref}#pricing`;
+    routePath.packages(locale);
 
   const breadcrumbs = [
     {
@@ -152,7 +159,8 @@ export default async function HowItWorksPage({
         secondaryAction={{
           label:
             content.hero.secondaryAction,
-          href: `${homeHref}/about`,
+          href:
+            routePath.about(locale),
         }}
         highlights={
           content.hero.highlights

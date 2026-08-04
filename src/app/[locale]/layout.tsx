@@ -13,6 +13,7 @@ import {
 
 import { notFound } from 'next/navigation';
 
+import { FloatingWhatsAppButton } from '@/components/layout/floating-whatsapp-button';
 import { SiteFooter } from '@/components/layout/site-footer';
 import { SiteHeader } from '@/components/layout/site-header';
 
@@ -283,6 +284,14 @@ export default async function LocaleLayout({
           </a>
 
           <SiteHeader />
+
+          <FloatingWhatsAppButton
+            locale={
+              locale === 'ar'
+                ? 'ar'
+                : 'en'
+            }
+          />
 
           <main
             id="main-content"

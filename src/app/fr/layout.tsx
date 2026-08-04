@@ -5,6 +5,7 @@ import type {
   ReactNode,
 } from 'react';
 
+import { FloatingWhatsAppButton } from '@/components/layout/floating-whatsapp-button';
 import {
   FrenchProgramFooter,
 } from '@/components/programme-francais/french-program-footer';
@@ -175,6 +176,10 @@ export default function FrenchLayout({
         </a>
 
         <FrenchProgramHeader />
+
+        <FloatingWhatsAppButton
+          locale="fr"
+        />
 
         <main
           id="main-content"

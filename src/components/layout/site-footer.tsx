@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 
 import { Container } from '@/components/ui/container';
+import { routePath } from '@/config/routes';
 
 const WHATSAPP_NUMBER = '16477875999';
 const CONTACT_EMAIL = 'successpathmentors@gmail.com';
@@ -38,18 +39,41 @@ interface SocialLink {
 export async function SiteFooter() {
   const t = await getTranslations('footer');
   const locale = await getLocale();
+  const currentLocale =
+    locale === 'ar'
+      ? 'ar'
+      : 'en';
 
   const year = new Date().getFullYear();
   const otherLocale =
     locale === 'ar' ? 'en' : 'ar';
 
-  const homeHref = `/${locale}`;
-  const contactHref = `${homeHref}/contact`;
+  const homeHref = `/${currentLocale}`;
+  const contactHref =
+    routePath.contact(
+      currentLocale
+    );
   const subjectsHref = `${homeHref}/subjects`;
   const subjectsLabel =
     locale === 'ar'
       ? 'المواد'
       : 'Subjects';
+
+
+  const locationsLabel =
+    locale === 'ar'
+      ? 'المواقع'
+      : 'Locations';
+
+  const packagesLabel =
+    locale === 'ar'
+      ? 'الباقات'
+      : 'Packages';
+
+  const howItWorksLabel =
+    locale === 'ar'
+      ? 'آلية عمل المنصة'
+      : 'How It Works';
 
   const frenchProgramHref =
     '/fr/programme-francais';
@@ -69,6 +93,14 @@ export async function SiteFooter() {
       label: subjectsLabel,
     },
     {
+      href:
+        routePath.locations(
+          currentLocale
+        ),
+      label:
+        locationsLabel,
+    },
+    {
       href: frenchProgramHref,
       label: 'Programme français',
     },
@@ -77,8 +109,12 @@ export async function SiteFooter() {
       label: t('links.about'),
     },
     {
-      href: `${homeHref}/how-it-works`,
-      label: t('links.howItWorks'),
+      href:
+        routePath.howItWorks(
+          currentLocale
+        ),
+      label:
+        howItWorksLabel,
     },
     {
       href: `${homeHref}/tutor-matching`,
@@ -93,8 +129,12 @@ export async function SiteFooter() {
       label: t('links.services'),
     },
     {
-      href: `${homeHref}#pricing`,
-      label: t('links.pricing'),
+      href:
+        routePath.packages(
+          currentLocale
+        ),
+      label:
+        packagesLabel,
     },
     {
       href: `${homeHref}#faq`,

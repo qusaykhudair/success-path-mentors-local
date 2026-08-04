@@ -67,20 +67,14 @@ const pageCopy = {
         'Grade-based progression',
     },
     chemistry: {
-      curriculumDescription:
-        'A chemistry topic may appear again in a later grade with greater depth, more advanced calculations, or broader applications.',
       bookTrial:
         'Find a chemistry tutor',
     },
     physics: {
-      curriculumDescription:
-        'A physics topic may appear again in a later grade with deeper models, more advanced mathematics, or broader problem-solving applications.',
       bookTrial:
         'Find a physics tutor',
     },
     'general-science': {
-      curriculumDescription:
-        'A General Science topic may appear again in a later grade with deeper biological, environmental, experimental, or systems-level understanding.',
       bookTrial:
         'Find a science tutor',
     },
@@ -111,20 +105,14 @@ const pageCopy = {
         'تدرج حسب الصف',
     },
     chemistry: {
-      curriculumDescription:
-        'قد يظهر موضوع الكيمياء مرة أخرى في صف أعلى بعمق أكبر وحسابات أكثر تقدمًا وتطبيقات أوسع.',
       bookTrial:
         'ابحث عن مدرس كيمياء',
     },
     physics: {
-      curriculumDescription:
-        'قد يظهر موضوع الفيزياء مرة أخرى في صف أعلى بنماذج أعمق ورياضيات أكثر تقدمًا وتطبيقات أوسع في حل المسائل.',
       bookTrial:
         'ابحث عن مدرس فيزياء',
     },
     'general-science': {
-      curriculumDescription:
-        'قد يظهر موضوع العلوم العامة مرة أخرى في صف أعلى بعمق أكبر في المفاهيم الحيوية والبيئية والتجريبية وفهم الأنظمة.',
       bookTrial:
         'ابحث عن مدرس علوم',
     },
@@ -547,17 +535,6 @@ export function ScienceStrandPageContent({
 
             <p
               className="
-                mt-4
-                text-body
-                leading-8
-                text-[#475569]
-              "
-            >
-              {labels.curriculumDescription}
-            </p>
-
-            <p
-              className="
                 mt-3
                 text-small
                 font-bold
@@ -658,23 +635,6 @@ export function ScienceStrandPageContent({
               )
             )}
           </div>
-
-          <p
-            className="
-              mt-6
-              rounded-xl
-              border
-              border-[#CFFAF8]
-              bg-[#ECFEFD]
-              px-4
-              py-3
-              text-small
-              leading-7
-              text-[#126A6A]
-            "
-          >
-            {strand.sourceNote}
-          </p>
         </div>
       </section>
     </>

@@ -15,9 +15,10 @@ export const localeLabels: Record<Locale, string> = {
   ar: 'العربية',
 };
 
-const pathnames = {
+export const pathnames = {
   '/': '/',
   '/about': { en: '/about', ar: '/عن-المنصة' },
+  '/how-it-works': { en: '/how-it-works', ar: '/آلية-العمل' },
   '/subjects': { en: '/subjects', ar: '/المواد-الدراسية' },
   '/locations': { en: '/locations', ar: '/المواقع' },
   '/services': { en: '/services', ar: '/الخدمات' },

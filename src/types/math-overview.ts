@@ -89,19 +89,15 @@ export interface MathExplorerCopy {
   gradeStageDescription: string;
   selectedGradeLabel: string;
   gradeOverviewDescription: string;
-  overlapNote: string;
   bookTrialLabel: string;
   detailsHeading: string;
   gradesIncludedLabel: string;
   stageTopicsLabel: string;
   gradeTopicsLabel: string;
   learningAreasLabel: string;
-  topicOnlyNote: string;
   topicsHeading: string;
-  topicsDescription: string;
   topicsInGradeLabel: string;
   topicOverviewLabel: string;
-  sourceTopicNamesNote: string;
   gradeNames: Record<MathGrade, string>;
   gradeShortNames: Record<MathGrade, string>;
 }

@@ -371,17 +371,7 @@ export function MathGradeBrowser({
                 text-[#126A6A]
               "
             >
-              {copy.overlapNote}
-              {' '}
-              {copy.sourceTopicNamesNote}
-
-              {selected.grade ===
-                'G11' && (
-                <>
-                  {' '}
-                  {copy.topicOnlyNote}
-                </>
-              )}
+              {copy.gradeOverviewDescription}
             </p>
 
             <Link

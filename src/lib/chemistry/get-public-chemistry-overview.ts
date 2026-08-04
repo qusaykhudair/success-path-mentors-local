@@ -486,9 +486,5 @@ export function getPublicChemistryStrand(
       curriculum.metadata
         .gradeLevels,
     grades,
-    sourceNote:
-      locale === 'ar'
-        ? 'تظهر أسماء الموضوعات الرئيسية والفرعية بالإنجليزية كما وردت في مصدر المنهج. التكرار بين الصفوف محفوظ لأنه يمثل تدرجًا مقصودًا، بينما حُفظت سجلات Postsecondary وGrade not stated خارج صفحات الصفوف.'
-        : 'Main Topic and Subtopic names are shown in English as supplied by the curriculum source. Repetition across grades is preserved as intentional progression, while Postsecondary and Grade-not-stated records are stored outside the grade pages.',
   };
 }

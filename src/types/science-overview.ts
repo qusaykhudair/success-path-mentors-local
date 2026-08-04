@@ -99,5 +99,4 @@ export interface ScienceStrandPageData {
   iconKey: ScienceStrandIconKey;
   gradeLevels: number[];
   grades: ScienceGradePageData[];
-  sourceNote: string;
 }

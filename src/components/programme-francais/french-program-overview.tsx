@@ -600,11 +600,11 @@ export function FrenchProgramOverview({
                   text-[#64748B]
                 "
               >
-                Le contenu reprend les
-                catégories du fichier fourni,
-                sans traduction ni remplacement
-                par des libellés anglais ou
-                arabes.
+                Chaque parcours présente une
+                progression claire par niveau,
+                avec les compétences et les
+                activités utiles pour guider
+                l’apprentissage.
               </p>
             </div>
 

@@ -603,28 +603,6 @@ export function FrenchDomainPageContent({
               )
             )}
           </div>
-
-          <div
-            className="
-              mt-6
-              rounded-xl
-              border
-              border-[#CFFAF8]
-              bg-[#ECFEFD]
-              px-4
-              py-3
-              text-small
-              leading-7
-              text-[#126A6A]
-            "
-          >
-            Le contenu public couvre
-            exclusivement les niveaux de la
-            1re à la 12e année. Les niveaux
-            CECRL, adultes, secondaires
-            parallèles et non précisés sont
-            conservés séparément pour révision.
-          </div>
         </div>
       </section>
     </>

@@ -68,8 +68,14 @@ const navigationCopy = {
       'General Science',
     frenchProgram:
       'Programme français',
+    locations:
+      'Locations',
     about:
       'About Us',
+    howItWorks:
+      'How It Works',
+    packages:
+      'Packages',
     primaryNavigation:
       'Primary navigation',
   },
@@ -89,8 +95,14 @@ const navigationCopy = {
       'العلوم العامة',
     frenchProgram:
       'Programme français',
+    locations:
+      'المواقع',
     about:
       'من نحن',
+    howItWorks:
+      'آلية عمل المنصة',
+    packages:
+      'الباقات',
     primaryNavigation:
       'التنقل الرئيسي',
   },
@@ -124,11 +136,27 @@ export async function SiteHeader() {
   const sectionLinks = [
     {
       href:
+        routePath.locations(
+          currentLocale
+        ),
+      label:
+        copy.locations,
+    },
+    {
+      href:
         routePath.about(
           currentLocale
         ),
       label:
         copy.about,
+    },
+    {
+      href:
+        routePath.howItWorks(
+          currentLocale
+        ),
+      label:
+        copy.howItWorks,
     },
     {
       href:
@@ -148,11 +176,11 @@ export async function SiteHeader() {
     },
     {
       href:
-        routePath.pricing(
+        routePath.packages(
           currentLocale
         ),
       label:
-        t('pricing'),
+        copy.packages,
     },
     {
       href:
@@ -323,7 +351,7 @@ export async function SiteHeader() {
     'min-h-touch',
     'items-center',
     'rounded-button',
-    'px-3',
+    'px-2.5',
     'text-small',
     'font-bold',
     'text-muted-foreground',

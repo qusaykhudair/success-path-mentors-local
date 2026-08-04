@@ -97,8 +97,6 @@ const mathPageContent: Record<
         'Selected grade',
       gradeOverviewDescription:
         'This summary shows the mathematics learning areas represented for the selected grade.',
-      overlapNote:
-        'Each curriculum topic is displayed once under its most relevant learning area.',
       bookTrialLabel:
         'Find a math tutor',
       detailsHeading:
@@ -111,18 +109,12 @@ const mathPageContent: Record<
         'curriculum topics',
       learningAreasLabel:
         'learning areas',
-      topicOnlyNote:
-        'Grade 11 source data contains topic names without detailed subtopic lists.',
       topicsHeading:
         'Curriculum topics by stage and grade',
-      topicsDescription:
-        'Every topic below comes from the stored mathematics curriculum data. Select a pathway above, then review the documented topics for each grade.',
       topicsInGradeLabel:
         'topics',
       topicOverviewLabel:
         'Overview',
-      sourceTopicNamesNote:
-        'Topic names follow the curriculum JSON. Clearly mismatched source labels are corrected from their subtopic content while the original source remains stored.',
       gradeNames: {
         G2: 'Grade 2',
         G3: 'Grade 3',
@@ -268,8 +260,6 @@ const mathPageContent: Record<
         'الصف المختار',
       gradeOverviewDescription:
         'يوضح هذا الملخص مجالات تعلم الرياضيات الممثلة في الصف المختار.',
-      overlapNote:
-        'يظهر كل موضوع في المنهج مرة واحدة فقط ضمن مجال التعلم الأكثر ارتباطًا به.',
       bookTrialLabel:
         'ابحث عن مدرس رياضيات',
       detailsHeading:
@@ -282,18 +272,12 @@ const mathPageContent: Record<
         'موضوعًا في المنهج',
       learningAreasLabel:
         'مجالات تعليمية',
-      topicOnlyNote:
-        'تحتوي بيانات الصف الحادي عشر على أسماء الموضوعات دون قوائم موضوعات فرعية تفصيلية.',
       topicsHeading:
         'موضوعات المنهج حسب المرحلة والصف',
-      topicsDescription:
-        'جميع الموضوعات أدناه مأخوذة مباشرة من بيانات منهج الرياضيات المخزنة. اختر المسار ثم راجع الموضوعات الموثقة لكل صف.',
       topicsInGradeLabel:
         'موضوعًا',
       topicOverviewLabel:
         'نظرة عامة',
-      sourceTopicNamesNote:
-        'تتبع أسماء الموضوعات ملف المنهج JSON، مع تصحيح التسميات التي لا تتوافق بوضوح مع موضوعاتها الفرعية، مع إبقاء المصدر الأصلي محفوظًا.',
       gradeNames: {
         G2: 'الصف الثاني',
         G3: 'الصف الثالث',

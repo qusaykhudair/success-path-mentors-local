@@ -50,16 +50,12 @@ const pageCopy = {
       'Jump to a grade',
     curriculumHeading:
       'Curriculum topics by grade',
-    curriculumDescription:
-      'Only grades containing curriculum topics are displayed. Topics are classified from the complete curriculum JSON, and repeated labels are shown once within the same section and grade.',
     topicsLabel:
       'documented topics',
     gradeSectionsLabel:
       'grades with topics',
     topicOverview:
       'Topic overview',
-    sourceNote:
-      'Topic names follow the curriculum JSON. Clearly mismatched source labels are corrected from their subtopic content, and grades without topics are omitted from the page.',
     backToMath:
       'Back to mathematics',
     bookTrial:
@@ -88,16 +84,12 @@ const pageCopy = {
       'انتقل إلى الصف',
     curriculumHeading:
       'موضوعات المنهج حسب الصف',
-    curriculumDescription:
-      'تظهر فقط الصفوف التي تحتوي موضوعات في هذا المسار. جرى توزيع الموضوعات بعد مراجعة ملف المنهج JSON كاملًا، ويظهر العنوان المكرر مرة واحدة فقط داخل القسم والصف نفسيهما.',
     topicsLabel:
       'موضوعًا موثقًا',
     gradeSectionsLabel:
       'صفوف تحتوي موضوعات',
     topicOverview:
       'نظرة عامة على الموضوع',
-    sourceNote:
-      'تتبع أسماء الموضوعات ملف المنهج JSON، مع تصحيح التسميات التي لا تتوافق بوضوح مع محتوى موضوعاتها الفرعية، ولا تظهر الصفوف التي لا تحتوي موضوعات في هذا المسار.',
     backToMath:
       'العودة إلى الرياضيات',
     bookTrial:
@@ -610,19 +602,6 @@ export function MathPathwayPageContent({
                 }
               </h2>
 
-              <p
-                className="
-                  mt-4
-                  text-small
-                  leading-7
-                  text-[#475569]
-                "
-              >
-                {
-                  copy.curriculumDescription
-                }
-              </p>
-
               <nav
                 aria-label={
                   copy.gradesNavigation
@@ -716,23 +695,6 @@ export function MathPathwayPageContent({
               )}
             </div>
           </div>
-
-          <p
-            className="
-              mt-6
-              rounded-xl
-              border
-              border-[#CFFAF8]
-              bg-[#ECFEFD]
-              px-4
-              py-3
-              text-small
-              leading-7
-              text-[#126A6A]
-            "
-          >
-            {copy.sourceNote}
-          </p>
         </div>
       </section>
 

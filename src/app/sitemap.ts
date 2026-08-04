@@ -21,11 +21,17 @@ import {
   programmeFrancaisSubjects,
 } from '@/content/programme-francais/programme-francais-definitions';
 import {
+  locationPages,
+} from '@/content/locations/location-pages';
+import {
   routing,
 } from '@/i18n/routing';
 import {
   SITE_URL,
 } from '@/lib/constants';
+import {
+  buildAbsoluteUrl,
+} from '@/lib/seo/urls';
 import {
   programmeFrancaisRoutes,
 } from '@/lib/programme-francais/routes';
@@ -34,6 +40,17 @@ const localizedPaths = [
   '',
   '/subjects',
   '/about',
+  '/how-it-works',
+  '/locations',
+  ...locationPages
+    .filter(
+      (page) =>
+        page.segments.length > 0
+    )
+    .map(
+      (page) =>
+        `/locations/${page.segments.join('/')}`
+    ),
   '/subjects/math',
   ...publicMathPathways.map(
     (pathway) =>
@@ -88,8 +105,21 @@ function getLocalizedPriority(
     return 1;
   }
 
-  if (path === '/subjects') {
+  if (
+    path === '/subjects' ||
+    path === '/locations'
+  ) {
     return 0.95;
+  }
+
+  if (
+    path.startsWith(
+      '/locations/'
+    )
+  ) {
+    return path.split('/').length >= 5
+      ? 0.9
+      : 0.88;
   }
 
   if (
@@ -107,8 +137,11 @@ function getLocalizedPriority(
     return 0.9;
   }
 
-  if (path === '/about') {
-    return 0.75;
+  if (
+    path === '/about' ||
+    path === '/how-it-works'
+  ) {
+    return 0.78;
   }
 
   return 0.8;
@@ -145,7 +178,10 @@ export default function sitemap():
     localizedPaths.map(
       (path) => ({
         url:
-          `${SITE_URL}/${routing.defaultLocale}${path}`,
+          buildAbsoluteUrl(
+            routing.defaultLocale,
+            path
+          ),
         lastModified:
           new Date(),
         changeFrequency:
@@ -157,15 +193,24 @@ export default function sitemap():
             path
           ),
         alternates: {
-          languages:
-            Object.fromEntries(
+          languages: {
+            ...Object.fromEntries(
               routing.locales.map(
                 (locale) => [
                   locale,
-                  `${SITE_URL}/${locale}${path}`,
+                  buildAbsoluteUrl(
+                    locale,
+                    path
+                  ),
                 ]
               )
             ),
+            'x-default':
+              buildAbsoluteUrl(
+                routing.defaultLocale,
+                path
+              ),
+          },
         },
       })
     );

@@ -733,45 +733,6 @@ export async function Pricing() {
           );
         })}
       </div>
-
-      {/* Pricing information */}
-      <Reveal delay={0.15}>
-        <div
-          className="
-            mx-auto
-            mt-9
-            max-w-5xl
-            rounded-[1.25rem]
-            border
-            border-border
-            bg-surface-sunken
-            p-5
-            text-center
-            sm:p-6
-          "
-        >
-          <p
-            className="
-              text-small
-              leading-relaxed
-              text-muted-foreground
-            "
-          >
-            {t('note')}
-          </p>
-
-          <p
-            className="
-              mt-2
-              text-caption
-              leading-relaxed
-              text-muted-foreground
-            "
-          >
-            {t('termsNote')}
-          </p>
-        </div>
-      </Reveal>
     </Section>
   );
 }

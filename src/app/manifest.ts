@@ -70,8 +70,8 @@ export default function manifest(): MetadataRoute.Manifest {
         ],
       },
       {
-        name: 'Pricing',
-        short_name: 'Pricing',
+        name: 'Packages',
+        short_name: 'Packages',
         description: 'View tutoring plans',
         url: '/en#pricing',
         icons: [

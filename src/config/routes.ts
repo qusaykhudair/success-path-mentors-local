@@ -57,6 +57,29 @@ export const routePath = {
     return `/${locale}/about`;
   },
 
+  howItWorks(locale: SiteLocale): string {
+    return locale === 'ar'
+      ? '/ar/آلية-العمل'
+      : '/en/how-it-works';
+  },
+
+  locations(locale: SiteLocale): string {
+    return `/${locale}/locations`;
+  },
+
+  location(
+    locale: SiteLocale,
+    ...segments: string[]
+  ): string {
+    const path = segments
+      .filter(Boolean)
+      .join('/');
+
+    return path
+      ? `/${locale}/locations/${path}`
+      : `/${locale}/locations`;
+  },
+
   programs(locale: SiteLocale): string {
     return `/${locale}#programs`;
   },
@@ -65,8 +88,12 @@ export const routePath = {
     return `/${locale}#services`;
   },
 
-  pricing(locale: SiteLocale): string {
+  packages(locale: SiteLocale): string {
     return `/${locale}#pricing`;
+  },
+
+  pricing(locale: SiteLocale): string {
+    return routePath.packages(locale);
   },
 
   faq(locale: SiteLocale): string {

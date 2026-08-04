@@ -48,8 +48,6 @@ const copy = {
       'Jump to a grade',
     curriculumHeading:
       'Main topics and skills by grade',
-    curriculumDescription:
-      'A topic or skill may appear again in a later grade with greater depth, complexity, independence, or application.',
     expandHint:
       'Open a Main Topic to view its Subtopics and Skills.',
     bookTrial:
@@ -74,8 +72,6 @@ const copy = {
       'انتقل إلى الصف',
     curriculumHeading:
       'الموضوعات الرئيسية والمهارات حسب الصف',
-    curriculumDescription:
-      'قد يظهر الموضوع أو المهارة مرة أخرى في صف أعلى بمزيد من العمق والتعقيد والاستقلالية والتطبيق.',
     expandHint:
       'افتح الموضوع الرئيسي لعرض الموضوعات الفرعية والمهارات.',
     bookTrial:
@@ -470,17 +466,6 @@ export function EnglishStrandPageContent({
 
             <p
               className="
-                mt-4
-                text-body
-                leading-8
-                text-[#475569]
-              "
-            >
-              {labels.curriculumDescription}
-            </p>
-
-            <p
-              className="
                 mt-3
                 text-small
                 font-bold
@@ -574,23 +559,6 @@ export function EnglishStrandPageContent({
               )
             )}
           </div>
-
-          <p
-            className="
-              mt-6
-              rounded-xl
-              border
-              border-[#CFFAF8]
-              bg-[#ECFEFD]
-              px-4
-              py-3
-              text-small
-              leading-7
-              text-[#126A6A]
-            "
-          >
-            {strand.sourceNote}
-          </p>
         </div>
       </section>
     </>

@@ -79,5 +79,4 @@ export interface EnglishStrandPageData {
     max: number;
   };
   grades: EnglishGradePageData[];
-  sourceNote: string;
 }

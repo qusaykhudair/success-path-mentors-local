@@ -413,9 +413,5 @@ export function getPublicEnglishStrand(
     gradeRange:
       definition.gradeRange,
     grades,
-    sourceNote:
-      locale === 'ar'
-        ? 'تُعرض أسماء الموضوعات والمهارات بالإنجليزية كما وردت في مصدر المنهج. تكرار الموضوع أو المهارة في صفوف مختلفة يمثل تدرجًا مقصودًا في مستوى الصعوبة والعمق والتطبيق. السجلات غير المحددة بصف محفوظة خارج صفحات الصفوف 1–12.'
-        : 'Topic and skill names are shown in English as supplied by the curriculum source. Repetition across different grades represents intentional progression in difficulty, depth, and application. Non-graded records are stored outside the Grade 1–12 pages.',
   };
 }
