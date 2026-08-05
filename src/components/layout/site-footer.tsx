@@ -665,7 +665,7 @@ export async function SiteFooter() {
               text-white/58
             "
           >
-            © {year} Success Path Mentors — Success Path Mentors.{' '}
+            © {year} Success Path Mentors.{' '}
             {t('rightsReserved')}.
           </p>
 

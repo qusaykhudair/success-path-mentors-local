@@ -14,10 +14,7 @@ export const siteConfig = {
   organizationName: 'Success Path Mentors',
   description:
     'Personalized one-to-one online tutoring for students in Grades 1–12.',
-  url: normalizeSiteUrl(
-    process.env.NEXT_PUBLIC_SITE_URL ??
-      'https://successpathmentors.net'
-  ),
+  url: normalizeSiteUrl('https://successpathmentors.net'),
   locales: supportedLocales,
   defaultLocale,
   defaultOgImage:

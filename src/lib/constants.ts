@@ -10,8 +10,7 @@
  * -----------------------------------------------------------------------------
  */
 
-export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://successpathmentors.net';
+export const SITE_URL = 'https://successpathmentors.net';
 
 /**
  * -----------------------------------------------------------------------------
