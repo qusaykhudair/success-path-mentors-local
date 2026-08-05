@@ -161,7 +161,7 @@ export async function Pricing() {
             >
               {highlights
                 .slice(0, 3)
-                .map((highlight, index) => {
+                .map((highlight: string, index: number) => {
                   const icons = [
                     CalendarCheck2,
                     Clock3,
@@ -219,7 +219,7 @@ export async function Pricing() {
           lg:grid-cols-3
         "
       >
-        {plans.map((plan, index) => {
+        {plans.map((plan: Plan, index: number) => {
           const recommended =
             plan.recommended === true;
 
@@ -596,7 +596,7 @@ export async function Pricing() {
                     "
                   >
                     {plan.features.map(
-                      (feature) => (
+                      (feature: string) => (
                         <li
                           key={feature}
                           className="
