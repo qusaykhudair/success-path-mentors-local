@@ -4,12 +4,11 @@ import {
 import type {
   ProgrammeFrancaisSubjectKey,
 } from '@/types/programme-francais';
+import { buildTrialLessonMessage, buildWhatsAppHref } from '@/lib/whatsapp';
 
 const BASE_PATH =
   '/fr/programme-francais';
 
-const WHATSAPP_NUMBER =
-  '16477875999';
 
 export const programmeFrancaisRoutes = {
   home:
@@ -44,12 +43,7 @@ export function getProgrammeFrancaisBookingHref(
     return configured;
   }
 
-  const message =
-    subjectTitle
-      ? `Bonjour, je souhaite réserver un cours d’essai gratuit en ${subjectTitle}.`
-      : 'Bonjour, je souhaite réserver un cours d’essai gratuit pour le Programme français.';
-
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    message
-  )}`;
+  return buildWhatsAppHref(
+    buildTrialLessonMessage('fr', { subject: subjectTitle ?? 'Programme français' })
+  );
 }

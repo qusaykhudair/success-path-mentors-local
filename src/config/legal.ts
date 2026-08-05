@@ -14,6 +14,6 @@ export const legalConfig = {
     process.env.NEXT_PUBLIC_LEGAL_ENTITY_NAME?.trim() ||
     siteConfig.organizationName,
 
-  effectiveDate: 'July 31, 2026',
-  effectiveDateArabic: '31 يوليو 2026',
+  effectiveDate: 'August 5, 2026',
+  effectiveDateArabic: '5 أغسطس 2026',
 } as const;

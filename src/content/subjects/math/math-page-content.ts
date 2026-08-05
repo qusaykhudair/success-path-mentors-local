@@ -12,7 +12,7 @@ const mathPageContent: Record<
   en: {
     seo: {
       title:
-        'Online Math Tutoring for Grades 2–12 | Mustafa Academy',
+        'Online Math Tutoring for Grades 2–12 | Success Path Mentors',
       description:
         'Explore one-to-one online math tutoring across number sense, fractions, algebra, functions, geometry, statistics, financial literacy, and advanced mathematics.',
       pathname: '/subjects/math',
@@ -167,7 +167,7 @@ const mathPageContent: Record<
   ar: {
     seo: {
       title:
-        'دروس رياضيات أونلاين للصفوف 2–12 | أكاديمية مصطفى',
+        'دروس رياضيات أونلاين للصفوف 2–12 | Success Path Mentors',
       description:
         'استكشف دروس الرياضيات الفردية أونلاين في الحس العددي والكسور والجبر والدوال والهندسة والإحصاء والثقافة المالية والرياضيات المتقدمة.',
       pathname: '/subjects/math',

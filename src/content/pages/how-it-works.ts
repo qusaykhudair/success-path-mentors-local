@@ -91,9 +91,9 @@ export const howItWorksPageContent = {
   en: {
     seo: {
       title:
-        'How Online Tutoring Works | Mustafa Academy',
+        'How Online Tutoring Works | Success Path Mentors',
       description:
-        'See how Mustafa Academy learns about the student, matches an appropriate tutor, coordinates the schedule, and supports ongoing one-to-one online learning.',
+        'See how Success Path Mentors learns about the student, matches an appropriate tutor, coordinates the schedule, and supports ongoing one-to-one online learning.',
     },
 
     breadcrumbs: {
@@ -140,7 +140,7 @@ export const howItWorksPageContent = {
     process: {
       eyebrow: 'Step by step',
       title:
-        'How a student begins with Mustafa Academy',
+        'How a student begins with Success Path Mentors',
       description:
         'The process is designed to stay practical and transparent while giving the team enough information to make a responsible tutoring match.',
       items: [
@@ -314,16 +314,16 @@ export const howItWorksPageContent = {
       description:
         'Tell the team the grade, subject, learning goal, language, time zone, and available times. This gives us a clear starting point for the tutoring request.',
       primaryAction: 'View tutoring options',
-      secondaryAction: 'About Mustafa Academy',
+      secondaryAction: 'About Success Path Mentors',
     },
   },
 
   ar: {
     seo: {
       title:
-        'كيف تعمل الدروس أونلاين | أكاديمية مصطفى',
+        'كيف تعمل الدروس أونلاين | Success Path Mentors',
       description:
-        'تعرّف على خطوات بدء الدروس في أكاديمية مصطفى، من فهم احتياج الطالب واختيار المدرس المناسب إلى تنسيق الموعد والمتابعة بعد الحصة الأولى.',
+        'تعرّف على خطوات بدء الدروس في Success Path Mentors، من فهم احتياج الطالب واختيار المدرس المناسب إلى تنسيق الموعد والمتابعة بعد الحصة الأولى.',
     },
 
     breadcrumbs: {
@@ -370,7 +370,7 @@ export const howItWorksPageContent = {
     process: {
       eyebrow: 'خطوة بخطوة',
       title:
-        'كيف يبدأ الطالب مع أكاديمية مصطفى؟',
+        'كيف يبدأ الطالب مع Success Path Mentors؟',
       description:
         'تم تصميم العملية لتكون عملية وواضحة، مع توفير معلومات كافية تساعد الفريق على اتخاذ قرار مسؤول في اختيار المدرس.',
       items: [
@@ -544,7 +544,7 @@ export const howItWorksPageContent = {
       description:
         'أرسل الصف والمادة والهدف التعليمي واللغة والمنطقة الزمنية والأوقات المتاحة. تمنح هذه التفاصيل الفريق نقطة بداية واضحة لمراجعة الطلب.',
       primaryAction: 'استعرض خيارات التدريس',
-      secondaryAction: 'عن أكاديمية مصطفى',
+      secondaryAction: 'عن Success Path Mentors',
     },
   },
 } satisfies Record<

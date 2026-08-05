@@ -186,7 +186,7 @@ function buildWhatsAppMessage({
   const lines =
     locale === 'ar'
       ? [
-        'طلب تواصل جديد من موقع أكاديمية مصطفى',
+        'طلب تواصل جديد من موقع Success Path Mentors',
         `رقم الاستفسار: ${inquiryId}`,
         '',
         `اسم المتواصل: ${values.contactName}`,
@@ -209,7 +209,7 @@ function buildWhatsAppMessage({
         values.message,
       ]
       : [
-        'New contact request from the Mustafa Academy website',
+        'New contact request from the Success Path Mentors website',
         `Inquiry ID: ${inquiryId}`,
         '',
         `Contact name: ${values.contactName}`,

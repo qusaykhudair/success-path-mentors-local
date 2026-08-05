@@ -1,7 +1,7 @@
 // src/components/sections/home/challenges.tsx
 // Server Component
 
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 
 import {
   BrainCircuit,
@@ -25,6 +25,8 @@ import {
   SectionHeading,
 } from '@/components/ui/section';
 
+import { buildGeneralInquiryMessage, buildWhatsAppHref } from '@/lib/whatsapp';
+
 interface ChallengeItem {
   title: string;
   challenge: string;
@@ -40,10 +42,10 @@ const CHALLENGE_ICONS: LucideIcon[] = [
   MessagesSquare,
 ];
 
-const WHATSAPP_NUMBER = '16477875999';
 
 export async function Challenges() {
   const t = await getTranslations('whyMustafa');
+  const locale = (await getLocale()) === 'ar' ? 'ar' : 'en';
 
   const items = t.raw('items') as ChallengeItem[];
   const headingId = 'why-mustafa-heading';
@@ -52,12 +54,9 @@ export async function Challenges() {
     return null;
   }
 
-  const whatsappMessage = encodeURIComponent(
-    t('whatsappMessage')
+  const whatsappHref = buildWhatsAppHref(
+    buildGeneralInquiryMessage(locale, locale === 'ar' ? 'تحديات الطالب التعليمية' : 'Student learning challenges')
   );
-
-  const whatsappHref =
-    `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
 
   return (
     <Section

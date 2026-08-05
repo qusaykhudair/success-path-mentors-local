@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Phone } from 'lucide-react';
 
 import {
   getLocale,
@@ -47,9 +48,9 @@ import {
   SubjectsMenu,
   type SubjectCategory,
 } from './subjects-menu';
-
-const WHATSAPP_NUMBER =
-  '16477875999';
+import { LocationsMenu } from './locations-menu';
+import { locationNavigation } from '@/content/locations/location-navigation';
+import { buildTrialLessonMessage, buildWhatsAppHref, WHATSAPP_DISPLAY_NUMBER } from '@/lib/whatsapp';
 
 const navigationCopy = {
   en: {
@@ -69,7 +70,7 @@ const navigationCopy = {
     frenchProgram:
       'Programme français',
     locations:
-      'Locations',
+      'Our Locations',
     about:
       'About Us',
     howItWorks:
@@ -96,7 +97,7 @@ const navigationCopy = {
     frenchProgram:
       'Programme français',
     locations:
-      'المواقع',
+      'أين نحن',
     about:
       'من نحن',
     howItWorks:
@@ -125,13 +126,9 @@ export async function SiteHeader() {
       currentLocale
     ];
 
-  const whatsappMessage =
-    encodeURIComponent(
-      t('whatsappBookingMessage')
-    );
-
-  const whatsappHref =
-    `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
+  const whatsappHref = buildWhatsAppHref(
+    buildTrialLessonMessage(currentLocale)
+  );
 
   const sectionLinks = [
     {
@@ -165,14 +162,6 @@ export async function SiteHeader() {
         ),
       label:
         copy.howItWorks,
-    },
-    {
-      href:
-        routePath.locations(
-          currentLocale
-        ),
-      label:
-        copy.locations,
     },
     {
       href:
@@ -351,8 +340,8 @@ export async function SiteHeader() {
     'min-h-touch',
     'items-center',
     'rounded-button',
-    'px-2.5',
-    'text-small',
+    'px-2',
+    'text-[0.78rem]',
     'font-bold',
     'text-muted-foreground',
     'transition-[color,background-color]',
@@ -385,8 +374,8 @@ export async function SiteHeader() {
           min-h-16
           items-center
           justify-between
-          gap-3
-          xl:min-h-20
+          gap-2
+          xl:min-h-[4.5rem]
         "
       >
         <Link
@@ -407,11 +396,11 @@ export async function SiteHeader() {
         >
           <Image
             src="/images/logo.png"
-            alt="Mustafa Academy"
-            width={160}
+            alt="Success Path Mentors"
+            width={145}
             height={47}
             priority
-            sizes="(max-width: 1024px) 130px, 160px"
+            sizes="(max-width: 1024px) 122px, 145px"
             className="
               h-8
               w-auto
@@ -422,7 +411,7 @@ export async function SiteHeader() {
               group-hover:scale-[1.03]
               motion-reduce:transition-none
               motion-reduce:group-hover:scale-100
-              xl:h-9
+              xl:h-8
             "
           />
         </Link>
@@ -434,7 +423,9 @@ export async function SiteHeader() {
           className="
             hidden
             items-center
-            gap-0.5
+            flex-1
+            justify-center
+            gap-0
             xl:flex
           "
         >
@@ -453,6 +444,14 @@ export async function SiteHeader() {
             categories={
               subjectCategories
             }
+          />
+
+          <LocationsMenu
+            triggerLabel={copy.locations}
+            overviewHref={routePath.locations(currentLocale)}
+            overviewLabel={currentLocale === 'ar' ? 'عرض جميع المواقع' : 'View all locations'}
+            countries={locationNavigation}
+            locale={currentLocale}
           />
 
           {sectionLinks.map(
@@ -504,6 +503,15 @@ export async function SiteHeader() {
           </div>
 
           <a
+            href="tel:+16477875999"
+            aria-label={currentLocale === 'ar' ? 'اتصل بنا على الرقم +1 647 787 5999' : 'Call us at +1 647 787 5999'}
+            className="hidden items-center gap-1.5 rounded-button border border-border/70 bg-background px-2.5 py-2 text-[0.78rem] font-bold text-foreground shadow-xs transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 2xl:inline-flex"
+          >
+            <Phone aria-hidden="true" className="h-4 w-4 text-accent" />
+            <span dir="ltr" className="whitespace-nowrap">{WHATSAPP_DISPLAY_NUMBER}</span>
+          </a>
+
+          <a
             href={whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
@@ -512,7 +520,7 @@ export async function SiteHeader() {
                 variant: 'accent',
                 size: 'sm',
                 className:
-                  'hidden 2xl:inline-flex',
+                  'hidden min-[1680px]:inline-flex',
               })
             }
           >
@@ -577,12 +585,19 @@ export async function SiteHeader() {
             subjectCategories={
               subjectCategories
             }
+            locationsLabel={copy.locations}
+            locationsOverviewHref={routePath.locations(currentLocale)}
+            locationsOverviewLabel={currentLocale === 'ar' ? 'عرض جميع أماكن خدمتنا' : 'View all locations'}
+            locationCountries={locationNavigation}
+            locale={currentLocale}
             openMenuLabel={
               t('openMenu')
             }
             closeMenuLabel={
               t('closeMenu')
             }
+            phoneLabel={currentLocale === 'ar' ? 'اتصل بنا' : 'Call us'}
+            phoneNumber={WHATSAPP_DISPLAY_NUMBER}
           />
         </div>
       </Container>

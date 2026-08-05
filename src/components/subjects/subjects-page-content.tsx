@@ -285,7 +285,7 @@ export function SubjectsPageContent({
             </div>
           </div>
 
-          <dl
+          <div role="list"
             className="
               grid
               gap-3
@@ -337,7 +337,7 @@ export function SubjectsPageContent({
                   .grades
               }
             />
-          </dl>
+          </div>
         </div>
       </section>
 
@@ -950,7 +950,7 @@ function HeroStat({
         p-4
       "
     >
-      <dt
+      <p
         className="
           flex
           items-center
@@ -971,9 +971,9 @@ function HeroStat({
         />
 
         {label}
-      </dt>
+      </p>
 
-      <dd
+      <p
         className="
           mt-2
           text-h4
@@ -982,7 +982,7 @@ function HeroStat({
         "
       >
         {value}
-      </dd>
+      </p>
     </div>
   );
 }

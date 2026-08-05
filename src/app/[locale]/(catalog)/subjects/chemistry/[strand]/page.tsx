@@ -84,8 +84,8 @@ export async function generateMetadata({
     seo: {
       title:
         locale === 'ar'
-          ? `${strand.title} حسب الصف | أكاديمية مصطفى`
-          : `${strand.title} by Grade | Mustafa Academy`,
+          ? `${strand.title} حسب الصف | Success Path Mentors`
+          : `${strand.title} by Grade | Success Path Mentors`,
       description:
         locale === 'ar'
           ? `استعرض الموضوعات الرئيسية والفرعية في ${strand.title} حسب الصفوف المتاحة.`

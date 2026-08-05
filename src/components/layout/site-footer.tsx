@@ -1,3 +1,4 @@
+import { buildGeneralInquiryMessage, buildWhatsAppHref } from '@/lib/whatsapp';
 // Server Component
 
 import {
@@ -91,13 +92,12 @@ export async function SiteFooter() {
 
   const locationsLabel =
     currentLocale === 'ar'
-      ? 'المواقع'
-      : 'Locations';
+      ? 'أين نحن'
+      : 'Our Locations';
 
-  const whatsappHref =
-    `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-      t('whatsappMessage')
-    )}`;
+  const whatsappHref = buildWhatsAppHref(
+    buildGeneralInquiryMessage(currentLocale, currentLocale === 'ar' ? 'التواصل وخدمات التدريس' : 'Contact and tutoring services')
+  );
 
   const quickLinks: FooterLink[] = [
     {
@@ -196,6 +196,14 @@ export async function SiteFooter() {
         `${homeHref}/cancellation-policy`,
       label:
         t('legal.cancellation'),
+    },
+    {
+      href:
+        `${homeHref}/data-deletion`,
+      label:
+        currentLocale === 'ar'
+          ? 'حذف البيانات'
+          : 'Data Deletion',
     },
   ];
 
@@ -659,7 +667,7 @@ export async function SiteFooter() {
               text-white/58
             "
           >
-            © {year} Mustafa Academy — Success Path Mentors.{' '}
+            © {year} Success Path Mentors — Success Path Mentors.{' '}
             {t('rightsReserved')}.
           </p>
 

@@ -2,6 +2,7 @@
 // Server Component
 
 import {
+  getLocale,
   getTranslations,
 } from 'next-intl/server';
 
@@ -24,6 +25,8 @@ import {
 } from '@/components/ui/section';
 
 import { cn } from '@/lib/utils';
+import { buildPackageInquiryMessage, buildWhatsAppHref } from '@/lib/whatsapp';
+import { pricingPlans } from '@/content/pricing-plans';
 
 interface Plan {
   name: string;
@@ -34,11 +37,11 @@ interface Plan {
   recommended?: boolean;
 }
 
-const WHATSAPP_NUMBER = '16477875999';
 
 export async function Pricing() {
   const t = await getTranslations('pricing');
-  const plans = t.raw('plans') as Plan[];
+  const locale = (await getLocale()) === 'ar' ? 'ar' : 'en';
+  const plans = pricingPlans[locale] as readonly Plan[];
   const highlights = t.raw('highlights') as string[];
 
   const headingId = 'pricing-heading';
@@ -65,14 +68,9 @@ export async function Pricing() {
   }
 
   function whatsappHref(plan: Plan): string {
-    const message = t('whatsappMessage', {
-      plan: plan.name,
-      lessons: plan.lessons,
-    });
-
-    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-      message
-    )}`;
+    return buildWhatsAppHref(
+      buildPackageInquiryMessage(locale, plan.name, plan.lessons)
+    );
   }
 
   return (

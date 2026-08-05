@@ -84,9 +84,9 @@ export const aboutPageContent = {
   en: {
     seo: {
       title:
-        'About Mustafa Academy | Personalized Online Tutoring',
+        'About Success Path Mentors | Personalized Online Tutoring',
       description:
-        'Learn how Mustafa Academy supports students in Grades 1–12 through personalized one-to-one online tutoring, thoughtful tutor matching, and consistent family communication.',
+        'Learn how Success Path Mentors supports students in Grades 1–12 through personalized one-to-one online tutoring, thoughtful tutor matching, and consistent family communication.',
     },
 
     breadcrumbs: {
@@ -96,11 +96,11 @@ export const aboutPageContent = {
     },
 
     hero: {
-      eyebrow: 'About Mustafa Academy',
+      eyebrow: 'About Success Path Mentors',
       title:
         'Personalized tutoring built around each student',
       description:
-        'Mustafa Academy, operated by Success Path Mentors, provides one-to-one online tutoring designed around the student’s subject, grade, learning goals, schoolwork, and preferred schedule.',
+        'Success Path Mentors, operated by Success Path Mentors, provides one-to-one online tutoring designed around the student’s subject, grade, learning goals, schoolwork, and preferred schedule.',
       primaryAction: 'Explore our tutoring approach',
       secondaryAction: 'Email our team',
       highlights: [
@@ -129,7 +129,7 @@ export const aboutPageContent = {
       description:
         'Students learn differently, and the support they need can change from one subject, grade, or school term to another.',
       paragraphs: [
-        'Mustafa Academy was developed to give families a more flexible and personal alternative to one-size-fits-all tutoring. Our lessons take place online, allowing students to learn from home while receiving direct support from a tutor matched to the subject and learning need.',
+        'Success Path Mentors was developed to give families a more flexible and personal alternative to one-size-fits-all tutoring. Our lessons take place online, allowing students to learn from home while receiving direct support from a tutor matched to the subject and learning need.',
         'The goal is not simply to complete a worksheet or provide an answer. Our approach focuses on explaining concepts, identifying gaps, practising skills, improving confidence, and helping the student become more independent over time.',
         'We also recognize the important role of parents and guardians. Clear scheduling, practical communication, and appropriate follow-up are part of creating a stable learning experience.',
       ],
@@ -243,7 +243,7 @@ export const aboutPageContent = {
       items: [
         {
           question:
-            'What grades does Mustafa Academy support?',
+            'What grades does Success Path Mentors support?',
           answer:
             'The academy provides tutoring support for students in Grades 1–12. Available subjects and tutors can vary by grade, curriculum, language, and schedule.',
         },
@@ -288,9 +288,9 @@ export const aboutPageContent = {
   ar: {
     seo: {
       title:
-        'من نحن | أكاديمية مصطفى للدروس الفردية أونلاين',
+        'من نحن | Success Path Mentors للدروس الفردية أونلاين',
       description:
-        'تعرّف على طريقة عمل أكاديمية مصطفى في دعم طلاب الصفوف من الأول إلى الثاني عشر من خلال حصص فردية أونلاين، واختيار المدرس المناسب، والتواصل الواضح مع الأسرة.',
+        'تعرّف على طريقة عمل Success Path Mentors في دعم طلاب الصفوف من الأول إلى الثاني عشر من خلال حصص فردية أونلاين، واختيار المدرس المناسب، والتواصل الواضح مع الأسرة.',
     },
 
     breadcrumbs: {
@@ -300,11 +300,11 @@ export const aboutPageContent = {
     },
 
     hero: {
-      eyebrow: 'عن أكاديمية مصطفى',
+      eyebrow: 'عن Success Path Mentors',
       title:
         'تعليم فردي يُبنى حول احتياجات كل طالب',
       description:
-        'تقدم أكاديمية مصطفى، التابعة لـ Success Path Mentors، حصصًا فردية أونلاين تراعي مادة الطالب وصفه الدراسي وأهدافه التعليمية وواجباته المدرسية والوقت المناسب للأسرة.',
+        'تقدم Success Path Mentors، التابعة لـ Success Path Mentors، حصصًا فردية أونلاين تراعي مادة الطالب وصفه الدراسي وأهدافه التعليمية وواجباته المدرسية والوقت المناسب للأسرة.',
       primaryAction: 'تعرّف على أسلوب التدريس',
       secondaryAction: 'راسل فريق الأكاديمية',
       highlights: [
@@ -333,7 +333,7 @@ export const aboutPageContent = {
       description:
         'يختلف الطلاب في طريقة تعلمهم، كما تتغير احتياجاتهم باختلاف المادة والصف والفصل الدراسي.',
       paragraphs: [
-        'تم تطوير أكاديمية مصطفى لتمنح الأسر بديلًا أكثر مرونة وشخصية من خدمات التدريس الموحدة. تتم الحصص أونلاين، ليتمكن الطالب من التعلم من المنزل والحصول على دعم مباشر من مدرس يتم اختياره وفق المادة والاحتياج التعليمي.',
+        'تم تطوير Success Path Mentors لتمنح الأسر بديلًا أكثر مرونة وشخصية من خدمات التدريس الموحدة. تتم الحصص أونلاين، ليتمكن الطالب من التعلم من المنزل والحصول على دعم مباشر من مدرس يتم اختياره وفق المادة والاحتياج التعليمي.',
         'الهدف ليس إنهاء ورقة عمل أو إعطاء إجابة جاهزة. يركز أسلوبنا على شرح المفاهيم، وتحديد الفجوات، والتدرب على المهارات، وتحسين الثقة، ومساعدة الطالب على أن يصبح أكثر استقلالية مع الوقت.',
         'كما نقدر الدور المهم لولي الأمر. لذلك يعد تنظيم المواعيد والتواصل العملي والمتابعة المناسبة جزءًا من بناء تجربة تعليمية مستقرة.',
       ],
@@ -447,7 +447,7 @@ export const aboutPageContent = {
       items: [
         {
           question:
-            'ما الصفوف التي تدعمها أكاديمية مصطفى؟',
+            'ما الصفوف التي تدعمها Success Path Mentors؟',
           answer:
             'تقدم الأكاديمية دعمًا لطلاب الصفوف من الأول إلى الثاني عشر. وقد تختلف المواد والمدرسون المتاحون وفق الصف والمنهج واللغة والوقت المطلوب.',
         },

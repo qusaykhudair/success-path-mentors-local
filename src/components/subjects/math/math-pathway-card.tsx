@@ -169,7 +169,7 @@ export function MathPathwayCard({
           pt-6
         "
       >
-        <dl
+        <div role="list"
           className="
             flex
             flex-wrap
@@ -195,7 +195,7 @@ export function MathPathwayCard({
               copy.stagesLabel
             }
           />
-        </dl>
+        </div>
 
         <span
           className="

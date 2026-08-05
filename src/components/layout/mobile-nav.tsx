@@ -12,6 +12,7 @@ import {
   ChevronDown,
   Menu,
   X,
+  Phone,
 } from 'lucide-react';
 
 import {
@@ -24,6 +25,7 @@ import {
 import type {
   SubjectCategory,
 } from './subjects-menu';
+import type { LocationNavCountry } from '@/content/locations/location-navigation';
 
 interface SectionLink {
   href: string;
@@ -40,8 +42,15 @@ interface MobileNavProps {
   subjectsOverviewHref: string;
   subjectsOverviewLabel: string;
   subjectCategories: SubjectCategory[];
+  locationsLabel: string;
+  locationsOverviewHref: string;
+  locationsOverviewLabel: string;
+  locationCountries: LocationNavCountry[];
+  locale: 'en' | 'ar';
   openMenuLabel: string;
   closeMenuLabel: string;
+  phoneLabel: string;
+  phoneNumber: string;
 }
 
 function getFocusableElements(
@@ -77,8 +86,15 @@ export function MobileNav({
   subjectsOverviewHref,
   subjectsOverviewLabel,
   subjectCategories,
+  locationsLabel,
+  locationsOverviewHref,
+  locationsOverviewLabel,
+  locationCountries,
+  locale,
   openMenuLabel,
   closeMenuLabel,
+  phoneLabel,
+  phoneNumber,
 }: MobileNavProps) {
   const [open, setOpen] =
     useState(false);
@@ -89,6 +105,9 @@ export function MobileNav({
   ] = useState<string | null>(
     null
   );
+
+  const [openLocationCountry, setOpenLocationCountry] = useState<string | null>(null);
+  const [openLocationRegion, setOpenLocationRegion] = useState<string | null>(null);
 
   const panelId = useId();
 
@@ -110,6 +129,8 @@ export function MobileNav({
     } = {}) => {
       setOpen(false);
       setOpenCategory(null);
+      setOpenLocationCountry(null);
+      setOpenLocationRegion(null);
 
       if (restoreFocus) {
         window.requestAnimationFrame(
@@ -623,6 +644,104 @@ export function MobileNav({
             </div>
           </div>
 
+          <div className="border-b border-border py-3">
+            <div className="flex items-center gap-1">
+              <a
+                href={locationsOverviewHref}
+                onClick={() => closeAll()}
+                className="flex min-h-touch min-w-0 flex-1 items-center rounded-button bg-primary-900 px-3 text-body font-black text-white transition-colors hover:bg-primary-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              >
+                {locationsOverviewLabel}
+              </a>
+              <span className="sr-only">{locationsLabel}</span>
+            </div>
+
+            <div className="mt-2 grid gap-1">
+              {locationCountries.map((country) => {
+                const countryOpen = openLocationCountry === country.key;
+                const countryPanelId = `${panelId}-location-${country.key}`;
+                return (
+                  <div key={country.key}>
+                    <div className="flex items-center gap-1">
+                      <a
+                        href={`/${locale}${country.href}`}
+                        onClick={() => closeAll()}
+                        className="flex min-h-touch min-w-0 flex-1 items-center rounded-button px-3 text-body font-bold text-foreground transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                      >
+                        {country.label[locale]}
+                      </a>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setOpenLocationCountry(countryOpen ? null : country.key);
+                          setOpenLocationRegion(null);
+                        }}
+                        aria-expanded={countryOpen}
+                        aria-controls={countryPanelId}
+                        aria-label={country.label[locale]}
+                        className="inline-flex min-h-touch min-w-touch items-center justify-center rounded-button text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                      >
+                        <ChevronDown aria-hidden="true" className={cn('h-4 w-4 transition-transform duration-200', countryOpen && 'rotate-180')} />
+                      </button>
+                    </div>
+
+                    <div id={countryPanelId} aria-hidden={!countryOpen} inert={!countryOpen} className={cn('grid transition-[grid-template-rows,opacity] duration-300', countryOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0')}>
+                      <div className="overflow-hidden ps-3">
+                        {country.regions.map((region) => {
+                          const regionId = `${country.key}-${region.key}`;
+                          const regionOpen = openLocationRegion === regionId;
+                          const regionPanelId = `${panelId}-location-${regionId}`;
+                          return (
+                            <div key={region.key}>
+                              <div className="flex items-center gap-1">
+                                <a
+                                  href={`/${locale}${region.href}`}
+                                  onClick={() => closeAll()}
+                                  tabIndex={countryOpen ? 0 : -1}
+                                  className="flex min-h-touch min-w-0 flex-1 items-center rounded-button px-3 text-small font-bold text-foreground transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                                >
+                                  {region.label[locale]}
+                                </a>
+                                <button
+                                  type="button"
+                                  tabIndex={countryOpen ? 0 : -1}
+                                  onClick={() => setOpenLocationRegion(regionOpen ? null : regionId)}
+                                  aria-expanded={regionOpen}
+                                  aria-controls={regionPanelId}
+                                  aria-label={region.label[locale]}
+                                  className="inline-flex min-h-touch min-w-touch items-center justify-center rounded-button text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                                >
+                                  <ChevronDown aria-hidden="true" className={cn('h-4 w-4 transition-transform duration-200', regionOpen && 'rotate-180')} />
+                                </button>
+                              </div>
+
+                              <div id={regionPanelId} aria-hidden={!regionOpen} inert={!regionOpen} className={cn('grid transition-[grid-template-rows,opacity] duration-300', regionOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0')}>
+                                <ul className="grid overflow-hidden ps-3 sm:grid-cols-2">
+                                  <li>
+                                    <a href={`/${locale}${region.curriculum.href}`} onClick={() => closeAll()} tabIndex={countryOpen && regionOpen ? 0 : -1} className="block min-h-touch rounded-button px-3 py-2.5 text-small font-bold leading-5 text-accent-800 transition-colors hover:bg-accent-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                                      {region.curriculum.label[locale]}
+                                    </a>
+                                  </li>
+                                  {region.cities.map((city) => (
+                                    <li key={city.href}>
+                                      <a href={`/${locale}${city.href}`} onClick={() => closeAll()} tabIndex={countryOpen && regionOpen ? 0 : -1} className="block min-h-touch rounded-button px-3 py-2.5 text-small leading-5 text-muted-foreground transition-colors hover:bg-accent-50 hover:text-accent-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                                        {city.label[locale]}
+                                      </a>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
           {sectionLinks.map(
             (link) => (
               <a
@@ -662,6 +781,25 @@ export function MobileNav({
             pt-5
           "
         >
+          <div className="mb-3 grid grid-cols-[auto_1fr] gap-2">
+            <a
+              href="tel:+16477875999"
+              onClick={() => closeAll()}
+              aria-label={`${phoneLabel} ${phoneNumber}`}
+              className="inline-flex min-h-touch min-w-touch items-center justify-center rounded-button border border-border bg-background text-accent transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            >
+              <Phone aria-hidden="true" className="h-5 w-5" />
+            </a>
+            <a
+              href="tel:+16477875999"
+              onClick={() => closeAll()}
+              className="flex min-h-touch flex-col items-start justify-center rounded-button border border-border bg-background px-3 text-start transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            >
+              <span className="text-xs font-semibold text-muted-foreground">{phoneLabel}</span>
+              <span dir="ltr" className="text-sm font-black text-foreground">{phoneNumber}</span>
+            </a>
+          </div>
+
           <a
             href={bookingHref}
             target="_blank"

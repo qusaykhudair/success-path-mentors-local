@@ -8,7 +8,7 @@ export default function manifest(): MetadataRoute.Manifest {
 
     name: SITE.name,
 
-    short_name: 'Mustafa Academy',
+    short_name: 'Success Path Mentors',
 
     description: SITE.description,
 

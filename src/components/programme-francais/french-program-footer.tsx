@@ -72,7 +72,7 @@ export function FrenchProgramFooter() {
           >
             <Image
               src="/images/footer.png"
-              alt="Mustafa Academy"
+              alt="Success Path Mentors"
               width={180}
               height={53}
               className="
@@ -264,7 +264,7 @@ export function FrenchProgramFooter() {
           "
         >
           <p>
-            © {year} Mustafa Academy —
+            © {year} Success Path Mentors —
             Success Path Mentors.
           </p>
 

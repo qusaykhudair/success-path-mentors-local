@@ -41,7 +41,13 @@ const localizedPaths = [
   '/subjects',
   '/about',
   '/how-it-works',
+  '/contact',
+  '/tutor-matching',
   '/locations',
+  '/privacy',
+  '/terms',
+  '/cancellation-policy',
+  '/data-deletion',
   ...locationPages
     .filter(
       (page) =>

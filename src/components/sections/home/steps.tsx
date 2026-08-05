@@ -1,7 +1,7 @@
 // src/components/sections/home/steps.tsx
 // Server Component
 
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import {
   ArrowRight,
   ChartNoAxesCombined,
@@ -22,6 +22,8 @@ import {
 } from '@/components/ui/section';
 
 
+import { buildGeneralInquiryMessage, buildWhatsAppHref } from '@/lib/whatsapp';
+
 interface StepItem {
   number: number;
   title: string;
@@ -36,10 +38,10 @@ const STEP_ICONS: LucideIcon[] = [
   ChartNoAxesCombined,
 ];
 
-const WHATSAPP_NUMBER = '16477875999';
 
 export async function Steps() {
   const t = await getTranslations('steps');
+  const locale = (await getLocale()) === 'ar' ? 'ar' : 'en';
   const items = t.raw('items') as StepItem[];
 
   const headingId = 'steps-heading';
@@ -48,12 +50,9 @@ export async function Steps() {
     return null;
   }
 
-  const whatsappMessage = encodeURIComponent(
-    t('whatsappMessage')
+  const whatsappHref = buildWhatsAppHref(
+    buildGeneralInquiryMessage(locale, locale === 'ar' ? 'آلية عمل التدريس' : 'How tutoring works')
   );
-
-  const whatsappHref =
-    `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
 
   return (
     <Section

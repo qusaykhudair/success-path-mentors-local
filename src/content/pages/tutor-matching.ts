@@ -110,9 +110,9 @@ export const tutorMatchingPageContent = {
   en: {
     seo: {
       title:
-        'Online Tutor Matching | Mustafa Academy',
+        'Online Tutor Matching | Success Path Mentors',
       description:
-        'Learn how Mustafa Academy matches students with online tutors according to subject, grade, curriculum, language, availability, communication style, and learning goals.',
+        'Learn how Success Path Mentors matches students with online tutors according to subject, grade, curriculum, language, availability, communication style, and learning goals.',
     },
 
     breadcrumbs: {
@@ -383,7 +383,7 @@ export const tutorMatchingPageContent = {
       heading: 'Explore related pages',
       items: [
         {
-          title: 'About Mustafa Academy',
+          title: 'About Success Path Mentors',
           description:
             'Learn about the academy’s purpose, values, tutoring model, and approach to quality.',
           href: '/en/about',
@@ -420,9 +420,9 @@ export const tutorMatchingPageContent = {
   ar: {
     seo: {
       title:
-        'اختيار المدرس المناسب أونلاين | أكاديمية مصطفى',
+        'اختيار المدرس المناسب أونلاين | Success Path Mentors',
       description:
-        'تعرّف على طريقة اختيار المدرس في أكاديمية مصطفى وفق المادة والصف والمنهج واللغة والأوقات المتاحة وطريقة التواصل والهدف التعليمي.',
+        'تعرّف على طريقة اختيار المدرس في Success Path Mentors وفق المادة والصف والمنهج واللغة والأوقات المتاحة وطريقة التواصل والهدف التعليمي.',
     },
 
     breadcrumbs: {
@@ -693,7 +693,7 @@ export const tutorMatchingPageContent = {
       heading: 'صفحات مرتبطة',
       items: [
         {
-          title: 'عن أكاديمية مصطفى',
+          title: 'عن Success Path Mentors',
           description:
             'تعرّف على هدف الأكاديمية وقيمها ونموذج التدريس وطريقة العمل على الجودة.',
           href: '/ar/about',

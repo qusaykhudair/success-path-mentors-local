@@ -1,160 +1,49 @@
-const WHATSAPP_NUMBER =
-  '16477875999';
+import { buildGeneralInquiryMessage, buildWhatsAppHref } from '@/lib/whatsapp';
 
-type FloatingWhatsAppLocale =
-  | 'en'
-  | 'ar'
-  | 'fr';
+type FloatingWhatsAppLocale = 'en' | 'ar' | 'fr';
 
 const floatingWhatsAppCopy = {
   en: {
-    label:
-      'Contact us on WhatsApp',
-    message:
-      'Hello, I would like to ask about Mustafa Academy tutoring services.',
+    eyebrow: 'Need help?',
+    label: 'Chat with us on WhatsApp',
   },
   ar: {
-    label:
-      'تواصل معنا عبر واتساب',
-    message:
-      'مرحبًا، أود الاستفسار عن خدمات التدريس في أكاديمية مصطفى.',
+    eyebrow: 'تحتاج مساعدة؟',
+    label: 'تواصل معنا عبر واتساب',
   },
   fr: {
-    label:
-      'Nous contacter sur WhatsApp',
-    message:
-      'Bonjour, je souhaite obtenir des renseignements sur les services de tutorat de Mustafa Academy.',
+    eyebrow: "Besoin d'aide ?",
+    label: 'Écrivez-nous sur WhatsApp',
   },
 } as const;
 
 interface FloatingWhatsAppButtonProps {
-  locale:
-    FloatingWhatsAppLocale;
+  locale: FloatingWhatsAppLocale;
 }
 
 export function FloatingWhatsAppButton({
   locale,
 }: FloatingWhatsAppButtonProps) {
-  const copy =
-    floatingWhatsAppCopy[
-      locale
-    ];
-
-  const href =
-    `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-      copy.message
-    )}`;
+  const copy = floatingWhatsAppCopy[locale];
+  const href = buildWhatsAppHref(buildGeneralInquiryMessage(locale));
 
   return (
-    <div
+    <a
       data-nosnippet
-      className="
-        fixed
-        bottom-[calc(env(safe-area-inset-bottom,0px)+1.1rem)]
-        right-4
-        z-[45]
-        flex
-        flex-col
-        items-end
-        gap-2
-        sm:right-6
-      "
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={copy.label}
+      title={copy.label}
+      className="fixed bottom-[calc(env(safe-area-inset-bottom,0px)+1rem)] left-4 z-[45] inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_10px_28px_rgba(37,211,102,0.3)] transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(37,211,102,0.38)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 sm:left-6 sm:h-14 sm:w-14 lg:bottom-7 lg:left-8"
     >
-      <span
+      <svg
+        viewBox="0 0 32 32"
         aria-hidden="true"
-        className="
-          pointer-events-none
-          max-w-[13rem]
-          rounded-full
-          border
-          border-white/80
-          bg-white/95
-          px-3.5
-          py-2
-          text-[0.72rem]
-          font-bold
-          leading-4
-          text-[#166534]
-          opacity-90
-          shadow-[0_8px_24px_rgba(7,20,38,0.14)]
-          backdrop-blur-md
-          motion-safe:animate-[whatsapp-hint-float_3.4s_ease-in-out_infinite]
-        "
+        className="h-7 w-7 fill-current sm:h-8 sm:w-8"
       >
-        {copy.label}
-      </span>
-
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={copy.label}
-        title={copy.label}
-        className="
-          group
-          relative
-          isolate
-          inline-flex
-          h-14
-          w-14
-          items-center
-          justify-center
-          rounded-full
-          border-2
-          border-white
-          bg-[#25D366]
-          text-white
-          shadow-[0_14px_34px_rgba(18,140,74,0.34)]
-          transition-[transform,background-color,box-shadow]
-          duration-200
-          hover:-translate-y-1
-          hover:scale-[1.04]
-          hover:bg-[#20C45C]
-          hover:shadow-[0_18px_42px_rgba(18,140,74,0.42)]
-          focus-visible:outline-none
-          focus-visible:ring-2
-          focus-visible:ring-[#071426]
-          focus-visible:ring-offset-2
-          motion-reduce:transition-none
-          motion-reduce:hover:translate-y-0
-          motion-reduce:hover:scale-100
-          sm:h-[3.75rem]
-          sm:w-[3.75rem]
-        "
-      >
-        <span
-          aria-hidden="true"
-          className="
-            absolute
-            inset-0
-            -z-10
-            rounded-full
-            bg-[#25D366]/35
-            motion-safe:animate-ping
-          "
-        />
-
-        <svg
-          viewBox="0 0 32 32"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth={2.2}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          aria-hidden="true"
-          className="
-            h-7
-            w-7
-            transition-transform
-            duration-200
-            group-hover:rotate-[-4deg]
-            group-hover:scale-105
-          "
-        >
-          <path d="M27 15.4a11 11 0 0 1-16.2 9.7L5 27l1.9-5.6A11 11 0 1 1 27 15.4Z" />
-          <path d="M11.3 10.5c.4-.7.8-.7 1.2-.7h.5c.2 0 .5.1.6.5l1.1 2.6c.1.3.1.6-.1.8l-.9 1c-.2.2-.2.5 0 .8.7 1.3 1.8 2.4 3.1 3.1.3.2.6.2.8 0l1.1-1.3c.2-.3.5-.3.8-.2l2.5 1.2c.3.2.5.4.5.7 0 .5-.2 1.8-1 2.5-.8.7-1.9 1.1-3.2.8-1.5-.3-3.4-1.1-5.5-3-2-1.8-3.2-4-3.6-5.6-.3-1.2.1-2.3.7-3.2.4-.5.8-.8 1.4-1Z" />
-        </svg>
-      </a>
-    </div>
+        <path d="M16.03 3.2A12.55 12.55 0 0 0 5.18 22.04L3.2 28.8l6.93-1.82A12.58 12.58 0 1 0 16.03 3.2Zm0 22.82c-1.84 0-3.64-.5-5.2-1.45l-.37-.22-4.11 1.08 1.1-4-.24-.39a10.26 10.26 0 1 1 8.82 4.98Zm5.63-7.68c-.31-.16-1.83-.9-2.11-1.01-.28-.1-.49-.16-.69.16-.2.31-.8 1.01-.98 1.22-.18.21-.36.23-.67.08-.31-.16-1.31-.48-2.5-1.54a9.35 9.35 0 0 1-1.73-2.15c-.18-.31-.02-.48.14-.64.14-.14.31-.36.46-.54.15-.18.2-.31.31-.52.1-.21.05-.39-.03-.54-.08-.16-.69-1.66-.95-2.27-.25-.6-.51-.52-.69-.53h-.59c-.21 0-.54.08-.82.39-.28.31-1.08 1.06-1.08 2.58 0 1.52 1.11 2.99 1.26 3.2.16.21 2.18 3.33 5.28 4.67.74.32 1.31.51 1.76.65.74.23 1.41.2 1.94.12.59-.09 1.83-.75 2.09-1.47.26-.73.26-1.35.18-1.48-.07-.13-.28-.2-.59-.36Z" />
+      </svg>
+    </a>
   );
 }

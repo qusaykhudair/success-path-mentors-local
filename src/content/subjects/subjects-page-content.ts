@@ -6,9 +6,9 @@ const subjectsPageContent = {
   en: {
     seo: {
       title:
-        'Online Tutoring Subjects | Math, English, Chemistry, Physics and General Science | Mustafa Academy',
+        'Online Tutoring Subjects | Math, English, Chemistry, Physics and General Science | Success Path Mentors',
       description:
-        'Explore Mustafa Academy mathematics, English, chemistry, physics, and General Science curricula organized by subject, pathway, strand, and grade level.',
+        'Explore Success Path Mentors mathematics, English, chemistry, physics, and General Science curricula organized by subject, pathway, strand, and grade level.',
       pathname:
         '/subjects',
     },
@@ -138,15 +138,15 @@ const subjectsPageContent = {
       primary:
         'Contact us',
       secondary:
-        'Learn about Mustafa Academy',
+        'Learn about Success Path Mentors',
     },
   },
   ar: {
     seo: {
       title:
-        'مواد التدريس أونلاين | الرياضيات والإنجليزية والكيمياء والفيزياء والعلوم العامة | أكاديمية مصطفى',
+        'مواد التدريس أونلاين | الرياضيات والإنجليزية والكيمياء والفيزياء والعلوم العامة | Success Path Mentors',
       description:
-        'استكشف مناهج الرياضيات واللغة الإنجليزية والكيمياء والفيزياء والعلوم العامة في أكاديمية مصطفى، منظمة حسب المادة والمسار والصف.',
+        'استكشف مناهج الرياضيات واللغة الإنجليزية والكيمياء والفيزياء والعلوم العامة في Success Path Mentors، منظمة حسب المادة والمسار والصف.',
       pathname:
         '/subjects',
     },
@@ -276,7 +276,7 @@ const subjectsPageContent = {
       primary:
         'تواصل معنا',
       secondary:
-        'تعرّف إلى أكاديمية مصطفى',
+        'تعرّف إلى Success Path Mentors',
     },
   },
 } as const;

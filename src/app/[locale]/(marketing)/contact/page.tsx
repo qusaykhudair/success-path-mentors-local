@@ -251,7 +251,7 @@ export default async function ContactPage({
               }
             </p>
 
-            <dl className="mt-7 grid gap-5">
+            <div role="list" className="mt-7 grid gap-5">
               <div
                 className="
                   rounded-xl
@@ -261,7 +261,7 @@ export default async function ContactPage({
                   p-4
                 "
               >
-                <dt
+                <p
                   className="
                     flex
                     items-center
@@ -282,9 +282,9 @@ export default async function ContactPage({
                     content.directContact
                       .emailLabel
                   }
-                </dt>
+                </p>
 
-                <dd className="mt-2">
+                <p className="mt-2">
                   <a
                     href={emailHref}
                     className="
@@ -306,7 +306,7 @@ export default async function ContactPage({
                         .emailValue
                     }
                   </a>
-                </dd>
+                </p>
               </div>
 
               <div
@@ -318,7 +318,7 @@ export default async function ContactPage({
                   p-4
                 "
               >
-                <dt
+                <p
                   className="
                     flex
                     items-center
@@ -339,9 +339,9 @@ export default async function ContactPage({
                     content.directContact
                       .replyLabel
                   }
-                </dt>
+                </p>
 
-                <dd
+                <p
                   className="
                     mt-2
                     text-small
@@ -353,7 +353,7 @@ export default async function ContactPage({
                     content.directContact
                       .replyValue
                   }
-                </dd>
+                </p>
               </div>
 
               <div
@@ -365,7 +365,7 @@ export default async function ContactPage({
                   p-4
                 "
               >
-                <dt
+                <p
                   className="
                     flex
                     items-center
@@ -386,9 +386,9 @@ export default async function ContactPage({
                     content.directContact
                       .privacyLabel
                   }
-                </dt>
+                </p>
 
-                <dd
+                <p
                   className="
                     mt-2
                     text-small
@@ -400,9 +400,9 @@ export default async function ContactPage({
                     content.directContact
                       .privacyValue
                   }
-                </dd>
+                </p>
               </div>
-            </dl>
+            </div>
           </aside>
         </div>
       </ContentSection>

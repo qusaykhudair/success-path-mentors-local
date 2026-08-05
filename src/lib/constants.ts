@@ -11,7 +11,7 @@
  */
 
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mustafaacademy.com';
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://successpathmentors.net';
 
 /**
  * -----------------------------------------------------------------------------
@@ -21,10 +21,10 @@ export const SITE_URL =
 
 export const SITE = {
   /** Public website name */
-  name: 'Mustafa Academy',
+  name: 'Success Path Mentors',
 
   /** Registered / legal business name */
-  legalName: 'Mustafa Academy',
+  legalName: 'Commenda Inc. operating as Success Path Mentors',
 
   /** Brand slogan */
   tagline: 'Empowering Students. Inspiring Success.',
@@ -36,11 +36,11 @@ export const SITE = {
   url: SITE_URL,
 
   /** Default page title */
-  title: 'Mustafa Academy',
+  title: 'Success Path Mentors',
 
   /** Default SEO description */
   description:
-    'Mustafa Academy is a professional online tutoring platform providing personalized academic support, expert mentors, and high-quality educational programs to help students achieve their full potential.',
+    'Success Path Mentors provides one-to-one online tutoring for Grades 1–12, with curriculum-aligned support for families in Canada and the United States, including Arabic-speaking families and students transitioning between education systems.',
 
   /** Default Open Graph image */
 ogImage: '/images/logo.png',
@@ -91,17 +91,17 @@ export const ORGANIZATION = {
  */
 
 export const CONTACT = {
-  phone: '',
+  phone: '+1 647 787 5999',
 
-  whatsapp: '',
+  whatsapp: '+1 647 787 5999',
 
-  email: '',
+  email: 'successpathmentors@gmail.com',
 
   address: '',
 
   city: '',
 
-  country: '',
+  country: 'Canada',
 
   postalCode: '',
 } as const;
@@ -151,7 +151,7 @@ export const VERIFICATION = {
  */
 
 export const DEFAULT_KEYWORDS = [
-  'Mustafa Academy',
+  'Success Path Mentors',
   'Online Tutoring',
   'Private Tutoring',
   'Academic Mentoring',

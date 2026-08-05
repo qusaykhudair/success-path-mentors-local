@@ -137,7 +137,7 @@ export function FrenchProgramHeader() {
         >
           <Image
             src="/images/logo.png"
-            alt="Mustafa Academy"
+            alt="Success Path Mentors"
             width={160}
             height={47}
             priority

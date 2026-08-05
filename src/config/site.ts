@@ -10,7 +10,7 @@ function normalizeSiteUrl(value: string): string {
 }
 
 export const siteConfig = {
-  name: 'Mustafa Academy',
+  name: 'Success Path Mentors',
   organizationName: 'Success Path Mentors',
   description:
     'Personalized one-to-one online tutoring for students in Grades 1–12.',

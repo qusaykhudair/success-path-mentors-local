@@ -2,7 +2,7 @@
 // Server Component
 
 import Image from 'next/image';
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import {
   BrainCircuit,
   BadgeCheck,
@@ -24,6 +24,8 @@ import {
 } from '@/components/ui/section';
 import { cn } from '@/lib/utils';
 
+import { buildGeneralInquiryMessage, buildWhatsAppHref } from '@/lib/whatsapp';
+
 interface ServiceItem {
   title: string;
   description: string;
@@ -39,20 +41,17 @@ const SERVICE_ICONS: LucideIcon[] = [
   BrainCircuit,
 ];
 
-const WHATSAPP_NUMBER = '16477875999';
 
 export async function Services() {
   const t = await getTranslations('services');
+  const locale = (await getLocale()) === 'ar' ? 'ar' : 'en';
   const items = t.raw('items') as ServiceItem[];
 
   const headingId = 'services-heading';
 
-  const whatsappMessage = encodeURIComponent(
-    t('whatsappMessage')
+  const whatsappHref = buildWhatsAppHref(
+    buildGeneralInquiryMessage(locale, locale === 'ar' ? 'خدمات التدريس' : 'Tutoring services')
   );
-
-  const whatsappHref =
-    `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
 
   return (
     <Section

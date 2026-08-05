@@ -1,8 +1,7 @@
 import type {
   SiteLocale,
 } from '@/config/site';
-
-const WHATSAPP_NUMBER = '16477875999';
+import { buildTrialLessonMessage, buildWhatsAppHref } from '@/lib/whatsapp';
 
 function localizedContactPath(
   locale: SiteLocale
@@ -18,28 +17,28 @@ export const routePath = {
   },
 
   subjects(locale: SiteLocale): string {
-    return `/${locale}/subjects`;
+    return locale === 'ar' ? '/ar/المواد-الدراسية' : '/en/subjects';
   },
 
   subject(
     locale: SiteLocale,
     slug: string
   ): string {
-    return `/${locale}/subjects/${slug}`;
+    return locale === 'ar' ? `/ar/المواد-الدراسية/${slug}` : `/en/subjects/${slug}`;
   },
 
   mathPathway(
     locale: SiteLocale,
     pathwaySlug: string
   ): string {
-    return `/${locale}/subjects/math/${pathwaySlug}`;
+    return locale === 'ar' ? `/ar/المواد-الدراسية/math/${pathwaySlug}` : `/en/subjects/math/${pathwaySlug}`;
   },
 
   englishStrand(
     locale: SiteLocale,
     strandSlug: string
   ): string {
-    return `/${locale}/subjects/english/${strandSlug}`;
+    return locale === 'ar' ? `/ar/المواد-الدراسية/english/${strandSlug}` : `/en/subjects/english/${strandSlug}`;
   },
 
   scienceStrand(
@@ -50,7 +49,7 @@ export const routePath = {
       | 'general-science',
     strandSlug: string
   ): string {
-    return `/${locale}/subjects/${subjectSlug}/${strandSlug}`;
+    return locale === 'ar' ? `/ar/المواد-الدراسية/${subjectSlug}/${strandSlug}` : `/en/subjects/${subjectSlug}/${strandSlug}`;
   },
 
   about(locale: SiteLocale): string {
@@ -118,14 +117,9 @@ export function getBookingHref(
     return configured;
   }
 
-  const message =
-    locale === 'ar'
-      ? 'مرحبًا، أود حجز حصة تجريبية مجانية في الرياضيات.'
-      : 'Hello, I would like to book a free mathematics trial lesson.';
-
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    message
-  )}`;
+  return buildWhatsAppHref(
+    buildTrialLessonMessage(locale, { subject: locale === 'ar' ? 'الرياضيات' : 'Mathematics' })
+  );
 }
 
 export function getEnglishBookingHref(
@@ -139,14 +133,9 @@ export function getEnglishBookingHref(
     return configured;
   }
 
-  const message =
-    locale === 'ar'
-      ? 'مرحبًا، أود حجز حصة تجريبية مجانية في اللغة الإنجليزية.'
-      : 'Hello, I would like to book a free English trial lesson.';
-
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    message
-  )}`;
+  return buildWhatsAppHref(
+    buildTrialLessonMessage(locale, { subject: locale === 'ar' ? 'اللغة الإنجليزية' : 'English' })
+  );
 }
 
 export function getChemistryBookingHref(
@@ -160,14 +149,9 @@ export function getChemistryBookingHref(
     return configured;
   }
 
-  const message =
-    locale === 'ar'
-      ? 'مرحبًا، أود حجز حصة تجريبية مجانية في الكيمياء.'
-      : 'Hello, I would like to book a free Chemistry trial lesson.';
-
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    message
-  )}`;
+  return buildWhatsAppHref(
+    buildTrialLessonMessage(locale, { subject: locale === 'ar' ? 'الكيمياء' : 'Chemistry' })
+  );
 }
 
 export function getPhysicsBookingHref(
@@ -181,14 +165,9 @@ export function getPhysicsBookingHref(
     return configured;
   }
 
-  const message =
-    locale === 'ar'
-      ? 'مرحبًا، أود حجز حصة تجريبية مجانية في الفيزياء.'
-      : 'Hello, I would like to book a free Physics trial lesson.';
-
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    message
-  )}`;
+  return buildWhatsAppHref(
+    buildTrialLessonMessage(locale, { subject: locale === 'ar' ? 'الفيزياء' : 'Physics' })
+  );
 }
 
 export function getGeneralScienceBookingHref(
@@ -202,12 +181,7 @@ export function getGeneralScienceBookingHref(
     return configured;
   }
 
-  const message =
-    locale === 'ar'
-      ? 'مرحبًا، أود حجز حصة تجريبية مجانية في العلوم العامة.'
-      : 'Hello, I would like to book a free General Science trial lesson.';
-
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    message
-  )}`;
+  return buildWhatsAppHref(
+    buildTrialLessonMessage(locale, { subject: locale === 'ar' ? 'العلوم العامة' : 'General Science' })
+  );
 }

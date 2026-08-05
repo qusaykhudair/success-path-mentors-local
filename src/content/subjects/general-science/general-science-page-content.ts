@@ -6,7 +6,7 @@ const generalSciencePageContent = {
   en: {
     seo: {
       title:
-        'Online General Science Tutoring for Grades 5–12 | Mustafa Academy',
+        'Online General Science Tutoring for Grades 5–12 | Success Path Mentors',
       description:
         'Personalized one-to-one General Science tutoring organized by grade and curriculum strand, including life science, Earth and space science, scientific inquiry, laboratory skills, and engineering structures.',
       pathname:
@@ -118,7 +118,7 @@ const generalSciencePageContent = {
   ar: {
     seo: {
       title:
-        'تدريس العلوم العامة أونلاين للصفوف 5–12 | أكاديمية مصطفى',
+        'تدريس العلوم العامة أونلاين للصفوف 5–12 | Success Path Mentors',
       description:
         'دروس علوم عامة فردية منظمة حسب الصف ومسار المنهج، وتشمل علوم الحياة وعلوم الأرض والفضاء والاستقصاء العلمي ومهارات المختبر والهياكل الهندسية.',
       pathname:

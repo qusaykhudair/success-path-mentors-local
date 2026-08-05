@@ -20,6 +20,8 @@ export const pathnames = {
   '/about': { en: '/about', ar: '/عن-المنصة' },
   '/how-it-works': { en: '/how-it-works', ar: '/آلية-العمل' },
   '/subjects': { en: '/subjects', ar: '/المواد-الدراسية' },
+  '/subjects/[subject]': { en: '/subjects/[subject]', ar: '/المواد-الدراسية/[subject]' },
+  '/subjects/[subject]/[strand]': { en: '/subjects/[subject]/[strand]', ar: '/المواد-الدراسية/[subject]/[strand]' },
   '/locations': { en: '/locations', ar: '/المواقع' },
   '/services': { en: '/services', ar: '/الخدمات' },
   '/blog': { en: '/blog', ar: '/المدونة' },
@@ -29,6 +31,7 @@ export const pathnames = {
   '/find-tutor': { en: '/find-tutor', ar: '/ابحث-عن-معلم' },
   '/privacy': { en: '/privacy', ar: '/سياسة-الخصوصية' },
   '/terms': { en: '/terms', ar: '/الشروط-والأحكام' },
+  '/data-deletion': { en: '/data-deletion', ar: '/حذف-البيانات' },
 } as const;
 
 export type AppPathname = keyof typeof pathnames;

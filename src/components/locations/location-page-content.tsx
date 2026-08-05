@@ -26,6 +26,7 @@ import {
 import type {
   LocalizedLocationPage,
 } from '@/types/location';
+import { buildTrialLessonMessage, buildWhatsAppHref } from '@/lib/whatsapp';
 
 interface LocationPageContentProps {
   locale: SiteLocale;
@@ -41,11 +42,10 @@ const labels = {
     explore: 'Explore locations',
     book: 'Book a free trial',
     howItWorks: 'How tutoring works',
-    officialResources: 'Official education resources',
+    officialResources: 'Helpful curriculum resources',
     officialDisclaimer:
-      'These links are provided for verification and family reference. Mustafa Academy is not affiliated with the listed schools, boards, districts, libraries, colleges, universities, or government agencies.',
+      'Use these official links to review curriculum expectations, assessments, and school-system information that may help you prepare for tutoring.',
     related: 'Related location pages',
-    reviewed: 'Local facts reviewed',
     onlineOnly:
       'Online service — no physical office or local-centre claim',
     stepsTitle: 'How online tutoring works',
@@ -64,11 +64,10 @@ const labels = {
     explore: 'استكشف المواقع',
     book: 'احجز حصة تجريبية',
     howItWorks: 'آلية العمل',
-    officialResources: 'موارد التعليم الرسمية',
+    officialResources: 'روابط مفيدة للمنهاج والتعليم',
     officialDisclaimer:
-      'تُعرض هذه الروابط للتحقق ومرجع الأسرة. لا ترتبط أكاديمية مصطفى بالمدارس أو المجالس أو المناطق التعليمية أو المكتبات أو الكليات أو الجامعات أو الجهات الحكومية المذكورة.',
+      'استخدم هذه الروابط الرسمية للاطلاع على توقعات المنهاج والاختبارات ومعلومات النظام المدرسي التي قد تساعد في التحضير للدروس.',
     related: 'صفحات مواقع مرتبطة',
-    reviewed: 'تاريخ مراجعة المعلومات المحلية',
     onlineOnly:
       'خدمة أونلاين — دون ادعاء وجود مكتب أو مركز محلي',
     stepsTitle: 'كيف تعمل الدروس أونلاين؟',
@@ -114,14 +113,9 @@ function getBookingHref(
     return configured;
   }
 
-  const message =
-    locale === 'ar'
-      ? `مرحبًا، أود حجز حصة تجريبية لطالب في ${locationName}.`
-      : `Hello, I would like to book a free trial lesson for a student in ${locationName}.`;
-
-  return `https://wa.me/16477875999?text=${encodeURIComponent(
-    message
-  )}`;
+  return buildWhatsAppHref(
+    buildTrialLessonMessage(locale, { location: locationName })
+  );
 }
 
 function getSubjectHref({
@@ -825,11 +819,6 @@ export function LocationPageContent({
             ) : null}
           </div>
 
-          <p
-            className="mt-5 text-caption text-[#64748B]"
-          >
-            {copy.reviewed}: {page.reviewedAt}
-          </p>
         </div>
       </section>
 

@@ -5,9 +5,9 @@ export const privacyPolicyContent = {
   en: {
     seo: {
       title:
-        'Privacy Policy | Mustafa Academy',
+        'Privacy Policy | Success Path Mentors',
       description:
-        'Learn how Mustafa Academy and Success Path Mentors collect, use, protect, retain, and share information relating to families, students, tutors, and website visitors.',
+        'Learn how Success Path Mentors and Success Path Mentors collect, use, protect, retain, and share information relating to families, students, tutors, and website visitors.',
     },
 
     breadcrumbs: {
@@ -20,7 +20,7 @@ export const privacyPolicyContent = {
       eyebrow: 'Privacy and data',
       title: 'Privacy Policy',
       description:
-        'This policy explains how Mustafa Academy, operated by Success Path Mentors, handles information connected with the website, tutoring inquiries, lesson coordination, payments, communication, and educational services.',
+        'This policy explains how Success Path Mentors, operated by Success Path Mentors, handles information connected with the website, tutoring inquiries, lesson coordination, payments, communication, and educational services.',
       lastUpdatedLabel: 'Last updated',
       lastUpdated:
         legalConfig.effectiveDate,
@@ -126,6 +126,9 @@ export const privacyPolicyContent = {
           'We do not knowingly collect personal information online directly from a child under 13 without the involvement or authorization required from a parent or guardian. A child under 13 should not submit a website form or create a service request independently.',
           'The adult arranging tutoring confirms that they have authority to provide the student information and permissions required for the service.',
           'Families should not submit unnecessary identity documents, card numbers, passwords, immigration records, medical records, or other highly sensitive information through the website or ordinary email.',
+          'Student information is treated as sensitive and should be limited to what is reasonably needed for tutoring, scheduling, progress support, safety, payment administration, or legal obligations.',
+          'We do not use student information for targeted advertising, and we do not knowingly sell student or child personal information.',
+          'A parent or guardian may request access, correction, or deletion of a minor student’s information, subject to identity verification, legal retention requirements, and the student’s evolving capacity where applicable.',
         ],
       },
       {
@@ -161,6 +164,7 @@ export const privacyPolicyContent = {
           'We retain information only as long as reasonably necessary for the purpose for which it was collected and for legitimate legal, tax, accounting, payment, quality, safety, complaint, and dispute-resolution needs.',
           'Retention periods vary by record type. Inquiry messages may be retained for follow-up, while transaction and invoice records may need to be kept longer.',
           'When information is no longer required, we take reasonable steps to delete, anonymize, or securely dispose of it, subject to backup cycles and legal restrictions.',
+          'Detailed instructions for submitting a deletion request are published at /en/data-deletion and /ar/data-deletion. Requests may also be sent to the contact email shown on this page.',
         ],
       },
       {
@@ -231,9 +235,9 @@ export const privacyPolicyContent = {
   ar: {
     seo: {
       title:
-        'سياسة الخصوصية | أكاديمية مصطفى',
+        'سياسة الخصوصية | Success Path Mentors',
       description:
-        'تعرّف على كيفية جمع أكاديمية مصطفى وSuccess Path Mentors للمعلومات المتعلقة بالأسر والطلاب والمدرسين وزوار الموقع واستخدامها وحمايتها والاحتفاظ بها.',
+        'تعرّف على كيفية جمع Success Path Mentors وSuccess Path Mentors للمعلومات المتعلقة بالأسر والطلاب والمدرسين وزوار الموقع واستخدامها وحمايتها والاحتفاظ بها.',
     },
 
     breadcrumbs: {
@@ -246,7 +250,7 @@ export const privacyPolicyContent = {
       eyebrow: 'الخصوصية والبيانات',
       title: 'سياسة الخصوصية',
       description:
-        'توضح هذه السياسة كيفية تعامل أكاديمية مصطفى، التابعة لـ Success Path Mentors، مع المعلومات المرتبطة بالموقع وطلبات التدريس وتنظيم الحصص والدفع والتواصل والخدمات التعليمية.',
+        'توضح هذه السياسة كيفية تعامل Success Path Mentors، التابعة لـ Success Path Mentors، مع المعلومات المرتبطة بالموقع وطلبات التدريس وتنظيم الحصص والدفع والتواصل والخدمات التعليمية.',
       lastUpdatedLabel: 'آخر تحديث',
       lastUpdated:
         legalConfig.effectiveDateArabic,

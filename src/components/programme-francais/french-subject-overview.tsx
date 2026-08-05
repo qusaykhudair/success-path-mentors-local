@@ -267,7 +267,7 @@ export function FrenchSubjectOverview({
             </div>
           </div>
 
-          <dl
+          <div role="list"
             className="
               grid
               gap-3
@@ -308,7 +308,7 @@ export function FrenchSubjectOverview({
               value="1re–12e"
               label="années couvertes"
             />
-          </dl>
+          </div>
         </div>
       </section>
 
@@ -586,7 +586,7 @@ function SubjectStat({
         p-4
       "
     >
-      <dt
+      <p
         className="
           flex
           items-center
@@ -607,9 +607,9 @@ function SubjectStat({
         />
 
         {label}
-      </dt>
+      </p>
 
-      <dd
+      <p
         className="
           mt-2
           text-h4
@@ -618,7 +618,7 @@ function SubjectStat({
         "
       >
         {value}
-      </dd>
+      </p>
     </div>
   );
 }

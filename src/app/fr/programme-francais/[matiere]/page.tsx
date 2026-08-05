@@ -63,7 +63,7 @@ export async function generateMetadata({
 
   return buildFrenchProgramMetadata({
     title:
-      `${overview.subject.title} par niveau | Mustafa Academy`,
+      `${overview.subject.title} par niveau | Success Path Mentors`,
     description:
       overview.subject.description,
     pathname:

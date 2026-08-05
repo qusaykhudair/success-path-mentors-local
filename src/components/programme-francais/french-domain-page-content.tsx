@@ -899,7 +899,7 @@ function DomainStat({
         p-4
       "
     >
-      <dt
+      <p
         className="
           flex
           items-center
@@ -920,9 +920,9 @@ function DomainStat({
         />
 
         {label}
-      </dt>
+      </p>
 
-      <dd
+      <p
         className="
           mt-2
           text-h4
@@ -931,7 +931,7 @@ function DomainStat({
         "
       >
         {value}
-      </dd>
+      </p>
     </div>
   );
 }

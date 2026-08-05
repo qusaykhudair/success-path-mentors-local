@@ -6,7 +6,7 @@ const physicsPageContent = {
   en: {
     seo: {
       title:
-        'Online Physics Tutoring for Grades 5–12 | Mustafa Academy',
+        'Online Physics Tutoring for Grades 5–12 | Success Path Mentors',
       description:
         'Personalized one-to-one physics tutoring organized by grade and curriculum strand, from forces and motion to electricity, waves, optics, energy, and modern physics.',
       pathname:
@@ -118,7 +118,7 @@ const physicsPageContent = {
   ar: {
     seo: {
       title:
-        'تدريس الفيزياء أونلاين للصفوف 5–12 | أكاديمية مصطفى',
+        'تدريس الفيزياء أونلاين للصفوف 5–12 | Success Path Mentors',
       description:
         'دروس فيزياء فردية منظمة حسب الصف ومسار المنهج، من الحركة والقوى إلى الكهرباء والموجات والبصريات والطاقة والفيزياء الحديثة.',
       pathname:

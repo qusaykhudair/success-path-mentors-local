@@ -466,7 +466,7 @@ export function MathPathwayPageContent({
               </span>
             </div>
 
-            <dl
+            <div role="list"
               className="
                 mt-5
                 grid
@@ -491,7 +491,7 @@ export function MathPathwayPageContent({
                   copy.gradeSectionsLabel
                 }
               />
-            </dl>
+            </div>
 
             <div
               className="
@@ -1095,7 +1095,7 @@ function CoverageMetric({
         p-4
       "
     >
-      <dt
+      <p
         className="
           flex
           items-center
@@ -1112,9 +1112,9 @@ function CoverageMetric({
         />
 
         {label}
-      </dt>
+      </p>
 
-      <dd
+      <p
         className="
           mt-2
           text-h4
@@ -1123,7 +1123,7 @@ function CoverageMetric({
         "
       >
         {value}
-      </dd>
+      </p>
     </div>
   );
 }

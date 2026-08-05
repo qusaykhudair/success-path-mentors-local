@@ -83,8 +83,8 @@ export async function generateMetadata({
 
   const title =
     locale === 'ar'
-      ? `${pathway.title} حسب الصف | أكاديمية مصطفى`
-      : `${pathway.title} by Grade | Mustafa Academy`;
+      ? `${pathway.title} حسب الصف | Success Path Mentors`
+      : `${pathway.title} by Grade | Success Path Mentors`;
 
   const description =
     locale === 'ar'

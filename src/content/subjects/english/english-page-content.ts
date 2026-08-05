@@ -6,7 +6,7 @@ const englishPageContent = {
   en: {
     seo: {
       title:
-        'Online English Tutoring for Grades 1–12 | Mustafa Academy',
+        'Online English Tutoring for Grades 1–12 | Success Path Mentors',
       description:
         'Personalized one-to-one English tutoring organized by grade, curriculum strand, schoolwork, and student goals.',
       pathname: '/subjects/english',
@@ -82,7 +82,7 @@ const englishPageContent = {
   ar: {
     seo: {
       title:
-        'تدريس اللغة الإنجليزية أونلاين للصفوف 1–12 | أكاديمية مصطفى',
+        'تدريس اللغة الإنجليزية أونلاين للصفوف 1–12 | Success Path Mentors',
       description:
         'دروس فردية مخصصة في اللغة الإنجليزية منظمة حسب الصف ومسار المنهج وواجبات المدرسة وأهداف الطالب.',
       pathname: '/subjects/english',

@@ -54,7 +54,7 @@ export interface LocationSubjectLink {
 }
 
 export interface LocationAssessment {
-  name: string;
+  name: LocalizedText;
   description: LocalizedText;
 }
 

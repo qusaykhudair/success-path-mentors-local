@@ -1,7 +1,7 @@
 // src/components/sections/home/faq.tsx
 // Server Component
 
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 
 import {
   ArrowRight,
@@ -21,15 +21,17 @@ import {
 
 import { FaqAccordion } from './faq-accordion';
 
+import { buildGeneralInquiryMessage, buildWhatsAppHref } from '@/lib/whatsapp';
+
 interface FaqItem {
   question: string;
   answer: string;
 }
 
-const WHATSAPP_NUMBER = '16477875999';
 
 export async function Faq() {
   const t = await getTranslations('faq');
+  const locale = (await getLocale()) === 'ar' ? 'ar' : 'en';
 
   const rawItems = t.raw('items') as FaqItem[];
   const supportPoints = t.raw('supportPoints') as string[];
@@ -67,12 +69,9 @@ export async function Faq() {
     faqJsonLd
   ).replace(/</g, '\\u003c');
 
-  const whatsappMessage = encodeURIComponent(
-    t('whatsappMessage')
+  const whatsappHref = buildWhatsAppHref(
+    buildGeneralInquiryMessage(locale, locale === 'ar' ? 'الأسئلة والدعم الدراسي' : 'Questions and tutoring support')
   );
-
-  const whatsappHref =
-    `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
 
   const supportIcons = [
     BookOpenCheck,

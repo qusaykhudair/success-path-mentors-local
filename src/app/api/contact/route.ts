@@ -4,6 +4,7 @@ export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 const MAX_REQUESTS = 5;
+const MAX_BODY_BYTES = 24 * 1024;
 const WINDOW_MS =
   10 * 60 * 1000;
 const MIN_FORM_TIME_MS = 2500;
@@ -196,6 +197,14 @@ function getRequiredEnvironmentValue(
 export async function POST(
   request: Request
 ) {
+  const contentLength = Number(request.headers.get('content-length') ?? 0);
+
+  if (Number.isFinite(contentLength) && contentLength > MAX_BODY_BYTES) {
+    return NextResponse.json(
+      { ok: false, error: 'Request body is too large' },
+      { status: 413, headers: { 'Cache-Control': 'no-store' } }
+    );
+  }
   if (!sameOrigin(request)) {
     return NextResponse.json(
       {
@@ -224,6 +233,10 @@ export async function POST(
       },
       {
         status: 429,
+        headers: {
+          'Retry-After': String(Math.ceil(WINDOW_MS / 1000)),
+          'Cache-Control': 'no-store',
+        },
       }
     );
   }
@@ -307,6 +320,19 @@ export async function POST(
       payload.inquiryType,
       80
     );
+
+  if (email && isRateLimited(`contact-email:${email}`)) {
+    return NextResponse.json(
+      { ok: false, error: 'Too many contact requests' },
+      {
+        status: 429,
+        headers: {
+          'Retry-After': String(Math.ceil(WINDOW_MS / 1000)),
+          'Cache-Control': 'no-store',
+        },
+      }
+    );
+  }
 
   const message =
     cleanText(

@@ -5,9 +5,9 @@ export const termsContent = {
   en: {
     seo: {
       title:
-        'Terms and Conditions | Mustafa Academy',
+        'Terms and Conditions | Success Path Mentors',
       description:
-        'Read the terms governing the Mustafa Academy website and one-to-one online tutoring services, including bookings, lessons, payments, conduct, privacy, technology, and service limitations.',
+        'Read the terms governing the Success Path Mentors website and one-to-one online tutoring services, including bookings, lessons, payments, conduct, privacy, technology, and service limitations.',
     },
 
     breadcrumbs: {
@@ -20,7 +20,7 @@ export const termsContent = {
       eyebrow: 'Service terms',
       title: 'Terms and Conditions',
       description:
-        'These Terms govern use of the Mustafa Academy website and online tutoring services operated by Success Path Mentors. Please read them before booking, purchasing a package, or allowing a student to participate.',
+        'These Terms govern use of the Success Path Mentors website and online tutoring services operated by Success Path Mentors. Please read them before booking, purchasing a package, or allowing a student to participate.',
       lastUpdatedLabel: 'Last updated',
       lastUpdated:
         legalConfig.effectiveDate,
@@ -306,9 +306,9 @@ export const termsContent = {
   ar: {
     seo: {
       title:
-        'الشروط والأحكام | أكاديمية مصطفى',
+        'الشروط والأحكام | Success Path Mentors',
       description:
-        'اقرأ الشروط التي تنظم موقع أكاديمية مصطفى وخدمات التدريس الفردي أونلاين، بما في ذلك الحجز والحصص والدفع والسلوك والخصوصية والتقنية وحدود الخدمة.',
+        'اقرأ الشروط التي تنظم موقع Success Path Mentors وخدمات التدريس الفردي أونلاين، بما في ذلك الحجز والحصص والدفع والسلوك والخصوصية والتقنية وحدود الخدمة.',
     },
 
     breadcrumbs: {
@@ -321,7 +321,7 @@ export const termsContent = {
       eyebrow: 'شروط الخدمة',
       title: 'الشروط والأحكام',
       description:
-        'تنظم هذه الشروط استخدام موقع أكاديمية مصطفى وخدمات التدريس أونلاين التي تديرها Success Path Mentors. يرجى قراءتها قبل الحجز أو شراء باقة أو مشاركة الطالب.',
+        'تنظم هذه الشروط استخدام موقع Success Path Mentors وخدمات التدريس أونلاين التي تديرها Success Path Mentors. يرجى قراءتها قبل الحجز أو شراء باقة أو مشاركة الطالب.',
       lastUpdatedLabel: 'آخر تحديث',
       lastUpdated:
         legalConfig.effectiveDateArabic,
@@ -579,7 +579,7 @@ export const termsContent = {
           'يجوز للأكاديمية نقل الاتفاق ضمن إعادة تنظيم أو نقل قانوني للعمل، ولا يجوز للعميل نقل الباقة أو الاتفاق دون موافقة مكتوبة.',
           'يمكن استخدام المراسلات والتأكيدات والفواتير والموافقات الإلكترونية كسجلات للاتفاق.',
           'وضعت عناوين الأقسام للتسهيل ولا تحد من معنى الأحكام.',
-          'تشكل هذه الشروط والحجز أو الفاتورة وسياسة الخصوصية وسياسة الإلغاء وأي شروط مكتوبة محددة اتفاق الخدمة.',
+          'تشكل هذه الشروط والحجز أو الفاتورة وسياسة الخصوصية وتعليمات حذف البيانات وسياسة الإلغاء وأي شروط مكتوبة محددة اتفاق الخدمة.',
         ],
       },
       {

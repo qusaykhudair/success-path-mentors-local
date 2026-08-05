@@ -198,7 +198,7 @@ export function MathGradeBrowser({
               </p>
             </div>
 
-            <dl
+            <div role="list"
               className="
                 flex
                 flex-wrap
@@ -224,7 +224,7 @@ export function MathGradeBrowser({
                   copy.learningAreasLabel
                 }
               />
-            </dl>
+            </div>
           </div>
         </div>
 

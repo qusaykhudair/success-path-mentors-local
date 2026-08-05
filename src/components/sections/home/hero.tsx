@@ -11,7 +11,7 @@ import {
   UsersRound,
   type LucideIcon,
 } from 'lucide-react';
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 
 import { Reveal } from '@/components/motion/reveal';
 import {
@@ -21,6 +21,8 @@ import { Container } from '@/components/ui/container';
 
 import { EnrollmentCard } from './enrollment-card';
 import { StatCounter } from './stat-counter';
+
+import { buildTrialLessonMessage, buildWhatsAppHref } from '@/lib/whatsapp';
 
 interface Stat {
   value: number;
@@ -32,7 +34,6 @@ interface HeroProps {
   secondaryCtaTarget?: string;
 }
 
-const WHATSAPP_NUMBER = '16477875999';
 
 const STAT_ICONS: LucideIcon[] = [
   UsersRound,
@@ -44,18 +45,16 @@ export async function Hero({
   secondaryCtaTarget = 'programs',
 }: HeroProps = {}) {
   const t = await getTranslations('hero');
+  const locale = (await getLocale()) === 'ar' ? 'ar' : 'en';
 
   const stats = t.raw('stats') as Stat[];
 
   const ratingValue = t('rating.value');
   const ratingCount = t('rating.count');
 
-  const whatsappMessage = encodeURIComponent(
-    t('whatsappBookingMessage')
+  const whatsappHref = buildWhatsAppHref(
+    buildTrialLessonMessage(locale)
   );
-
-  const whatsappHref =
-    `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
 
   return (
     <section
@@ -322,7 +321,7 @@ export async function Hero({
           </Reveal>
 
           {/* Statistics */}
-          <dl
+          <div role="list"
             className="
               mt-9
               grid
@@ -414,7 +413,7 @@ export async function Hero({
                     </span>
 
                     <div className="relative">
-                      <dt
+                      <p
                         className="
                           text-small
                           leading-snug
@@ -422,9 +421,9 @@ export async function Hero({
                         "
                       >
                         {stat.label}
-                      </dt>
+                      </p>
 
-                      <dd
+                      <p
                         className="
                           mt-1
                           text-h3
@@ -436,13 +435,13 @@ export async function Hero({
                           end={stat.value}
                           suffix={stat.suffix}
                         />
-                      </dd>
+                      </p>
                     </div>
                   </div>
                 </Reveal>
               );
             })}
-          </dl>
+          </div>
         </div>
 
         {/* Enrollment card */}

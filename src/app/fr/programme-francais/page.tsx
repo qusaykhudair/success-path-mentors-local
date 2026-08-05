@@ -20,7 +20,7 @@ import {
 export const metadata =
   buildFrenchProgramMetadata({
     title:
-      'Programme français : français et mathématiques | Mustafa Academy',
+      'Programme français : français et mathématiques | Success Path Mentors',
     description:
       'Programme entièrement en français pour l’apprentissage du français et des mathématiques, organisé de la 1re à la 12e année.',
     pathname:

@@ -1,7 +1,7 @@
 // src/components/sections/home/final-cta.tsx
 // Server Component
 
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 
 import {
   ArrowRight,
@@ -19,8 +19,8 @@ import {
 import { Reveal } from '@/components/motion/reveal';
 import { buttonVariants } from '@/components/ui/button';
 import { Section } from '@/components/ui/section';
+import { buildGeneralInquiryMessage, buildWhatsAppHref } from '@/lib/whatsapp';
 
-const WHATSAPP_NUMBER = '16477875999';
 
 const TRUST_ICONS: LucideIcon[] = [
   BookOpenCheck,
@@ -36,6 +36,7 @@ const NEXT_STEP_ICONS: LucideIcon[] = [
 
 export async function FinalCta() {
   const t = await getTranslations('finalCta');
+  const locale = (await getLocale()) === 'ar' ? 'ar' : 'en';
 
   const trustPoints = t.raw(
     'trustPoints'
@@ -50,12 +51,9 @@ export async function FinalCta() {
 
   const headingId = 'final-cta-heading';
 
-  const whatsappMessage = encodeURIComponent(
-    t('whatsappMessage')
+  const whatsappHref = buildWhatsAppHref(
+    buildGeneralInquiryMessage(locale, locale === 'ar' ? 'مطابقة المدرس والتسجيل' : 'Tutor matching and enrollment')
   );
-
-  const whatsappHref =
-    `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
 
   return (
     <Section
@@ -663,4 +661,5 @@ export async function FinalCta() {
       </Reveal>
     </Section>
   );
+
 }

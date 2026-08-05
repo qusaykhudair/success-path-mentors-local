@@ -5,9 +5,9 @@ export const cancellationPolicyContent = {
   en: {
     seo: {
       title:
-        'Cancellation and Rescheduling Policy | Mustafa Academy',
+        'Cancellation and Rescheduling Policy | Success Path Mentors',
       description:
-        'Read the Mustafa Academy rules for lesson cancellation, rescheduling, absence, late arrival, tutor cancellation, technical problems, and exceptional circumstances.',
+        'Read the Success Path Mentors rules for lesson cancellation, rescheduling, absence, late arrival, tutor cancellation, technical problems, and exceptional circumstances.',
     },
 
     breadcrumbs: {
@@ -230,9 +230,9 @@ export const cancellationPolicyContent = {
   ar: {
     seo: {
       title:
-        'سياسة الإلغاء وإعادة الجدولة | أكاديمية مصطفى',
+        'سياسة الإلغاء وإعادة الجدولة | Success Path Mentors',
       description:
-        'اقرأ قواعد أكاديمية مصطفى المتعلقة بإلغاء الحصص وإعادة جدولتها والغياب والتأخير وإلغاء المدرس والمشكلات التقنية والظروف الاستثنائية.',
+        'اقرأ قواعد Success Path Mentors المتعلقة بإلغاء الحصص وإعادة جدولتها والغياب والتأخير وإلغاء المدرس والمشكلات التقنية والظروف الاستثنائية.',
     },
 
     breadcrumbs: {

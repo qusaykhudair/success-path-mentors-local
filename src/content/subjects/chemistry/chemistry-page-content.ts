@@ -6,7 +6,7 @@ const chemistryPageContent = {
   en: {
     seo: {
       title:
-        'Online Chemistry Tutoring for Grades 5–12 | Mustafa Academy',
+        'Online Chemistry Tutoring for Grades 5–12 | Success Path Mentors',
       description:
         'Personalized one-to-one chemistry tutoring organized by grade and curriculum strand, from matter and atomic structure to stoichiometry, equilibrium, organic chemistry, and thermochemistry.',
       pathname:
@@ -118,7 +118,7 @@ const chemistryPageContent = {
   ar: {
     seo: {
       title:
-        'تدريس الكيمياء أونلاين للصفوف 5–12 | أكاديمية مصطفى',
+        'تدريس الكيمياء أونلاين للصفوف 5–12 | Success Path Mentors',
       description:
         'دروس كيمياء فردية منظمة حسب الصف ومسار المنهج، من المادة والبنية الذرية إلى الحسابات والاتزان والكيمياء العضوية والحرارية.',
       pathname:

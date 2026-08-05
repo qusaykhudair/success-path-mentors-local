@@ -146,9 +146,9 @@ export const contactPageContent = {
   en: {
     seo: {
       title:
-        'Contact Mustafa Academy | Online Tutoring Inquiry',
+        'Contact Success Path Mentors | Online Tutoring Inquiry',
       description:
-        'Contact Mustafa Academy about one-to-one online tutoring, tutor matching, scheduling, lessons, payments, or support for an existing student.',
+        'Contact Success Path Mentors about one-to-one online tutoring, tutor matching, scheduling, lessons, payments, or support for an existing student.',
     },
 
     breadcrumbs: {
@@ -1060,9 +1060,9 @@ export const contactPageContent = {
   ar: {
     seo: {
       title:
-        'تواصل مع أكاديمية مصطفى | استفسار عن التدريس أونلاين',
+        'تواصل مع Success Path Mentors | استفسار عن التدريس أونلاين',
       description:
-        'تواصل مع أكاديمية مصطفى بخصوص الدروس الفردية واختيار المدرس والمواعيد والحصص والدفع أو دعم طالب حالي.',
+        'تواصل مع Success Path Mentors بخصوص الدروس الفردية واختيار المدرس والمواعيد والحصص والدفع أو دعم طالب حالي.',
     },
 
     breadcrumbs: {

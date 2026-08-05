@@ -14,6 +14,7 @@ import {
 import { notFound } from 'next/navigation';
 
 import { FloatingWhatsAppButton } from '@/components/layout/floating-whatsapp-button';
+import { BackToTopButton } from '@/components/layout/back-to-top-button';
 import { SiteFooter } from '@/components/layout/site-footer';
 import { SiteHeader } from '@/components/layout/site-header';
 
@@ -198,6 +199,33 @@ export default async function LocaleLayout({
           sameAs: socialProfiles,
         }
       : {}),
+
+    areaServed: [
+      { '@type': 'Country', name: 'Canada' },
+      { '@type': 'Country', name: 'United States' },
+    ],
+
+    knowsAbout: [
+      'K-12 online tutoring',
+      'Canadian provincial curricula',
+      'United States state curricula',
+      'Math tutoring',
+      'English tutoring',
+      'Science tutoring',
+      'French tutoring',
+      'Arabic-speaking family support',
+      'Homework help',
+      'Test preparation',
+    ],
+
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      telephone: '+1-647-787-5999',
+      email: 'successpathmentors@gmail.com',
+      availableLanguage: ['English', 'Arabic'],
+      areaServed: ['CA', 'US'],
+    },
   };
 
   const websiteJsonLd = {
@@ -286,6 +314,14 @@ export default async function LocaleLayout({
           <SiteHeader />
 
           <FloatingWhatsAppButton
+            locale={
+              locale === 'ar'
+                ? 'ar'
+                : 'en'
+            }
+          />
+
+          <BackToTopButton
             locale={
               locale === 'ar'
                 ? 'ar'

@@ -6,6 +6,7 @@ import type {
 } from 'react';
 
 import { FloatingWhatsAppButton } from '@/components/layout/floating-whatsapp-button';
+import { BackToTopButton } from '@/components/layout/back-to-top-button';
 import {
   FrenchProgramFooter,
 } from '@/components/programme-francais/french-program-footer';
@@ -34,9 +35,9 @@ export const metadata:
       ),
     title: {
       default:
-        'Programme français | Mustafa Academy',
+        'Programme français | Success Path Mentors',
       template:
-        '%s | Mustafa Academy',
+        '%s | Success Path Mentors',
     },
     description:
       'Programme de français et de mathématiques enseignées en français, de la 1re à la 12e année.',
@@ -180,6 +181,8 @@ export default function FrenchLayout({
         <FloatingWhatsAppButton
           locale="fr"
         />
+
+        <BackToTopButton locale="fr" />
 
         <main
           id="main-content"

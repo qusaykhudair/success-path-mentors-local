@@ -230,7 +230,7 @@ export function FrenchProgramOverview({
             </div>
           </div>
 
-          <dl
+          <div role="list"
             className="
               grid
               gap-3
@@ -286,7 +286,7 @@ export function FrenchProgramOverview({
               }
               label="sous-sujets publics"
             />
-          </dl>
+          </div>
         </div>
       </section>
 
@@ -804,7 +804,7 @@ function OverviewStat({
         p-4
       "
     >
-      <dt
+      <p
         className="
           flex
           items-center
@@ -825,9 +825,9 @@ function OverviewStat({
         />
 
         {label}
-      </dt>
+      </p>
 
-      <dd
+      <p
         className="
           mt-2
           text-h4
@@ -836,7 +836,7 @@ function OverviewStat({
         "
       >
         {value}
-      </dd>
+      </p>
     </div>
   );
 }
