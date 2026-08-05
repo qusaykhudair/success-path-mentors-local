@@ -62,7 +62,7 @@ export function LocaleSwitcher({
       type="button"
       onClick={() =>
         router.replace(
-          pathname,
+          pathname as never,
           {
             locale:
               otherLocale,

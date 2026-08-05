@@ -26,8 +26,6 @@ import {
   routePath,
 } from '@/config/routes';
 
-const WHATSAPP_NUMBER =
-  '16477875999';
 const CONTACT_EMAIL =
   'successpathmentors@gmail.com';
 
