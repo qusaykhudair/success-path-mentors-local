@@ -33,7 +33,7 @@ interface Plan {
   description: string;
   lessons: number;
   price: number;
-  features: string[];
+  features: readonly string[];
   recommended?: boolean;
 }
 
@@ -41,7 +41,7 @@ interface Plan {
 export async function Pricing() {
   const t = await getTranslations('pricing');
   const locale = (await getLocale()) === 'ar' ? 'ar' : 'en';
-  const plans = pricingPlans[locale] as readonly Plan[];
+  const plans: readonly Plan[] = pricingPlans[locale];
   const highlights = t.raw('highlights') as string[];
 
   const headingId = 'pricing-heading';
