@@ -1,0 +1,212 @@
+{
+  "metadata": {
+    "subject": "Physics",
+    "subjectSlug": "physics",
+    "strand": "Integrated Physics",
+    "strandSlug": "integrated-physics",
+    "gradeRange": {
+      "min": 9,
+      "max": 12
+    },
+    "gradeLevels": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 8,
+    "gradedSourceRecordCount": 6,
+    "nonGradedSourceRecordCount": 2,
+    "mainTopicCount": 4,
+    "subtopicCount": 6,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "integrated-physics",
+    "title": {
+      "en": "Integrated Physics",
+      "ar": "الفيزياء المتكاملة"
+    },
+    "description": {
+      "en": "Mixed-concept physics review connecting the main ideas of mechanics, electricity, waves, energy, and modern physics.",
+      "ar": "مراجعة مترابطة لمفاهيم الفيزياء في الميكانيكا والكهرباء والموجات والطاقة والفيزياء الحديثة."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-physics-review",
+          "title": "Physics Review",
+          "subtopics": [
+            {
+              "id": "mixed-physics-concepts",
+              "title": "Mixed physics concepts"
+            }
+          ],
+          "sourceRows": [
+            19
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-physics-review",
+          "title": "Physics Review",
+          "subtopics": [
+            {
+              "id": "general-physics-review",
+              "title": "General physics review"
+            },
+            {
+              "id": "mixed-physics-concepts",
+              "title": "Mixed physics concepts"
+            }
+          ],
+          "sourceRows": [
+            30,
+            31
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-physics-review",
+          "title": "Physics Review",
+          "subtopics": [
+            {
+              "id": "general-physics-review",
+              "title": "General physics review"
+            },
+            {
+              "id": "mixed-physics-concepts",
+              "title": "Mixed physics concepts"
+            }
+          ],
+          "sourceRows": [
+            71,
+            72
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-physics-review",
+          "title": "Physics Review",
+          "subtopics": [
+            {
+              "id": "mixed-physics-concepts",
+              "title": "Mixed physics concepts"
+            }
+          ],
+          "sourceRows": [
+            114
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    }
+  ]
+}

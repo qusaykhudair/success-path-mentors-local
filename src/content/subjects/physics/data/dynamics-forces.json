@@ -1,0 +1,476 @@
+{
+  "metadata": {
+    "subject": "Physics",
+    "subjectSlug": "physics",
+    "strand": "Dynamics and Forces",
+    "strandSlug": "dynamics-forces",
+    "gradeRange": {
+      "min": 6,
+      "max": 12
+    },
+    "gradeLevels": [
+      6,
+      7,
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 33,
+    "gradedSourceRecordCount": 26,
+    "nonGradedSourceRecordCount": 7,
+    "mainTopicCount": 22,
+    "subtopicCount": 26,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "dynamics-forces",
+    "title": {
+      "en": "Dynamics and Forces",
+      "ar": "الديناميكا والقوى"
+    },
+    "description": {
+      "en": "Forces, Newton’s laws, free-body diagrams, friction, gravitation, circular motion, and connected systems.",
+      "ar": "القوى وقوانين نيوتن ومخططات الجسم الحر والاحتكاك والجاذبية والحركة الدائرية والأنظمة المترابطة."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g6-flight",
+          "title": "Flight",
+          "subtopics": [
+            {
+              "id": "four-forces-of-flight",
+              "title": "Four forces of flight"
+            }
+          ],
+          "sourceRows": [
+            3
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g7-flight",
+          "title": "Flight",
+          "subtopics": [
+            {
+              "id": "four-forces-of-flight",
+              "title": "Four forces of flight"
+            }
+          ],
+          "sourceRows": [
+            4
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-circular-motion",
+          "title": "Circular Motion",
+          "subtopics": [
+            {
+              "id": "centripetal-force-and-circular-motion",
+              "title": "Centripetal force and circular motion"
+            }
+          ],
+          "sourceRows": [
+            26
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-dynamics",
+          "title": "Dynamics",
+          "subtopics": [
+            {
+              "id": "dynamics-and-force-analysis",
+              "title": "Dynamics and force analysis"
+            }
+          ],
+          "sourceRows": [
+            27
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-forces",
+          "title": "Forces",
+          "subtopics": [
+            {
+              "id": "force-practice-and-applications",
+              "title": "Force practice and applications"
+            }
+          ],
+          "sourceRows": [
+            28
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-newton-s-laws",
+          "title": "Newton's Laws",
+          "subtopics": [
+            {
+              "id": "newton-s-laws-and-force-acceleration-relationships",
+              "title": "Newton's laws and force–acceleration relationships"
+            }
+          ],
+          "sourceRows": [
+            29
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 4,
+      "subtopicCount": 4
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-circular-motion",
+          "title": "Circular Motion",
+          "subtopics": [
+            {
+              "id": "centripetal-force-and-circular-motion",
+              "title": "Centripetal force and circular motion"
+            }
+          ],
+          "sourceRows": [
+            49
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-dynamics",
+          "title": "Dynamics",
+          "subtopics": [
+            {
+              "id": "dynamics-and-force-analysis",
+              "title": "Dynamics and force analysis"
+            }
+          ],
+          "sourceRows": [
+            50
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-forces",
+          "title": "Forces",
+          "subtopics": [
+            {
+              "id": "force-concepts",
+              "title": "Force concepts"
+            },
+            {
+              "id": "force-practice-and-applications",
+              "title": "Force practice and applications"
+            },
+            {
+              "id": "forces-review",
+              "title": "Forces review"
+            }
+          ],
+          "sourceRows": [
+            51,
+            52,
+            53
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-free-body-diagrams",
+          "title": "Free-Body Diagrams",
+          "subtopics": [
+            {
+              "id": "force-identification-and-free-body-diagrams",
+              "title": "Force identification and free-body diagrams"
+            }
+          ],
+          "sourceRows": [
+            54
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-friction-and-contact-forces",
+          "title": "Friction and Contact Forces",
+          "subtopics": [
+            {
+              "id": "friction-normal-force-applied-force-and-tension",
+              "title": "Friction, normal force, applied force, and tension"
+            },
+            {
+              "id": "frictional-force",
+              "title": "Frictional force"
+            }
+          ],
+          "sourceRows": [
+            55,
+            56
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-gravitation",
+          "title": "Gravitation",
+          "subtopics": [
+            {
+              "id": "universal-gravitation-and-gravitational-fields",
+              "title": "Universal gravitation and gravitational fields"
+            }
+          ],
+          "sourceRows": [
+            57
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-inclines-pulleys-and-connected-systems",
+          "title": "Inclines, Pulleys, and Connected Systems",
+          "subtopics": [
+            {
+              "id": "inclined-planes-and-pulley-systems",
+              "title": "Inclined planes and pulley systems"
+            }
+          ],
+          "sourceRows": [
+            58
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-newton-s-laws",
+          "title": "Newton's Laws",
+          "subtopics": [
+            {
+              "id": "newton-s-laws-and-force-acceleration-relationships",
+              "title": "Newton's laws and force–acceleration relationships"
+            },
+            {
+              "id": "newton-s-second-law",
+              "title": "Newton's second law"
+            }
+          ],
+          "sourceRows": [
+            59,
+            60
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 8,
+      "subtopicCount": 12
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-circular-motion",
+          "title": "Circular Motion",
+          "subtopics": [
+            {
+              "id": "centripetal-force-and-circular-motion",
+              "title": "Centripetal force and circular motion"
+            }
+          ],
+          "sourceRows": [
+            98
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-dynamics",
+          "title": "Dynamics",
+          "subtopics": [
+            {
+              "id": "dynamics-and-force-analysis",
+              "title": "Dynamics and force analysis"
+            }
+          ],
+          "sourceRows": [
+            99
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-forces",
+          "title": "Forces",
+          "subtopics": [
+            {
+              "id": "force-practice-and-applications",
+              "title": "Force practice and applications"
+            }
+          ],
+          "sourceRows": [
+            100
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-free-body-diagrams",
+          "title": "Free-Body Diagrams",
+          "subtopics": [
+            {
+              "id": "force-identification-and-free-body-diagrams",
+              "title": "Force identification and free-body diagrams"
+            }
+          ],
+          "sourceRows": [
+            101
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-friction-and-contact-forces",
+          "title": "Friction and Contact Forces",
+          "subtopics": [
+            {
+              "id": "friction-normal-force-applied-force-and-tension",
+              "title": "Friction, normal force, applied force, and tension"
+            }
+          ],
+          "sourceRows": [
+            102
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-gravitation",
+          "title": "Gravitation",
+          "subtopics": [
+            {
+              "id": "universal-gravitation-and-gravitational-fields",
+              "title": "Universal gravitation and gravitational fields"
+            }
+          ],
+          "sourceRows": [
+            103
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-inclines-pulleys-and-connected-systems",
+          "title": "Inclines, Pulleys, and Connected Systems",
+          "subtopics": [
+            {
+              "id": "inclined-planes-and-pulley-systems",
+              "title": "Inclined planes and pulley systems"
+            }
+          ],
+          "sourceRows": [
+            104
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-newton-s-laws",
+          "title": "Newton's Laws",
+          "subtopics": [
+            {
+              "id": "newton-s-laws-and-force-acceleration-relationships",
+              "title": "Newton's laws and force–acceleration relationships"
+            }
+          ],
+          "sourceRows": [
+            105
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 8,
+      "subtopicCount": 8
+    }
+  ]
+}

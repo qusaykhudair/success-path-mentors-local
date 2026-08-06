@@ -1,14 +1,79 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
-import { ButtonLink } from '@/components/ui/button';
-import { LocaleSwitcher } from './locale-switcher';
-import type { SubjectCategory } from './subjects-menu';
+import {
+  useCallback,
+  useEffect,
+  useId,
+  useRef,
+  useState,
+} from 'react';
+
+import {
+  ChevronDown,
+  Menu,
+  X,
+  Phone,
+} from 'lucide-react';
+
+import {
+  buttonVariants,
+} from '@/components/ui/button';
+import {
+  cn,
+} from '@/lib/utils';
+
+import type {
+  SubjectCategory,
+} from './subjects-menu';
+import type { LocationNavCountry } from '@/content/locations/location-navigation';
 
 interface SectionLink {
   href: string;
   label: string;
+}
+
+interface MobileNavProps {
+  sectionLinks: SectionLink[];
+  homeLabel: string;
+  homeHref: string;
+  bookLabel: string;
+  bookingHref: string;
+  subjectsLabel: string;
+  subjectsOverviewHref: string;
+  subjectsOverviewLabel: string;
+  subjectCategories: SubjectCategory[];
+  locationsLabel: string;
+  locationsOverviewHref: string;
+  locationsOverviewLabel: string;
+  locationCountries: LocationNavCountry[];
+  locale: 'en' | 'ar';
+  openMenuLabel: string;
+  closeMenuLabel: string;
+  phoneLabel: string;
+  phoneNumber: string;
+}
+
+function getFocusableElements(
+  container: HTMLElement
+): HTMLElement[] {
+  return Array.from(
+    container.querySelectorAll<HTMLElement>(
+      [
+        'a[href]',
+        'button:not([disabled])',
+        '[tabindex]',
+      ].join(',')
+    )
+  ).filter(
+    (element) =>
+      element.tabIndex >= 0 &&
+      !element.hasAttribute(
+        'disabled'
+      ) &&
+      element.getAttribute(
+        'aria-hidden'
+      ) !== 'true'
+  );
 }
 
 export function MobileNav({
@@ -16,140 +81,743 @@ export function MobileNav({
   homeLabel,
   homeHref,
   bookLabel,
+  bookingHref,
   subjectsLabel,
+  subjectsOverviewHref,
+  subjectsOverviewLabel,
   subjectCategories,
-}: {
-  sectionLinks: SectionLink[];
-  homeLabel: string;
-  homeHref: string;
-  bookLabel: string;
-  subjectsLabel: string;
-  subjectCategories: SubjectCategory[];
-}) {
-  const [open, setOpen] = useState(false);
-  const [openCategory, setOpenCategory] = useState<string | null>(null);
+  locationsLabel,
+  locationsOverviewHref,
+  locationsOverviewLabel,
+  locationCountries,
+  locale,
+  openMenuLabel,
+  closeMenuLabel,
+  phoneLabel,
+  phoneNumber,
+}: MobileNavProps) {
+  const [open, setOpen] =
+    useState(false);
+
+  const [
+    openCategory,
+    setOpenCategory,
+  ] = useState<string | null>(
+    null
+  );
+
+  const [openLocationCountry, setOpenLocationCountry] = useState<string | null>(null);
+  const [openLocationRegion, setOpenLocationRegion] = useState<string | null>(null);
+
+  const panelId = useId();
+
+  const triggerRef =
+    useRef<HTMLButtonElement>(
+      null
+    );
+
+  const panelRef =
+    useRef<HTMLDivElement>(
+      null
+    );
+
+  const closeAll = useCallback(
+    ({
+      restoreFocus = false,
+    }: {
+      restoreFocus?: boolean;
+    } = {}) => {
+      setOpen(false);
+      setOpenCategory(null);
+      setOpenLocationCountry(null);
+      setOpenLocationRegion(null);
+
+      if (restoreFocus) {
+        window.requestAnimationFrame(
+          () => {
+            triggerRef.current?.focus();
+          }
+        );
+      }
+    },
+    []
+  );
 
   useEffect(() => {
-    if (open) {
-      const previous = document.body.style.overflow;
-      document.body.style.overflow = 'hidden';
-      return () => {
-        document.body.style.overflow = previous;
-      };
+    if (!open) {
+      return undefined;
     }
-    return undefined;
-  }, [open]);
 
-  function closeAll() {
-    setOpen(false);
-    setOpenCategory(null);
-  }
+    const previousOverflow =
+      document.body.style.overflow;
+
+    document.body.style.overflow =
+      'hidden';
+
+    const focusFrame =
+      window.requestAnimationFrame(
+        () => {
+          const panel =
+            panelRef.current;
+
+          if (!panel) {
+            return;
+          }
+
+          getFocusableElements(
+            panel
+          )[0]?.focus();
+        }
+      );
+
+    function handleKeyDown(
+      event: KeyboardEvent
+    ) {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+
+        closeAll({
+          restoreFocus: true,
+        });
+
+        return;
+      }
+
+      if (
+        event.key !== 'Tab' ||
+        !panelRef.current ||
+        !triggerRef.current
+      ) {
+        return;
+      }
+
+      const panelElements =
+        getFocusableElements(
+          panelRef.current
+        );
+
+      if (
+        panelElements.length === 0
+      ) {
+        event.preventDefault();
+        triggerRef.current.focus();
+        return;
+      }
+
+      const firstElement =
+        panelElements.at(0);
+
+      const lastElement =
+        panelElements.at(-1);
+
+      if (
+        !firstElement ||
+        !lastElement
+      ) {
+        event.preventDefault();
+        triggerRef.current.focus();
+        return;
+      }
+
+      const activeElement =
+        document.activeElement;
+
+      if (event.shiftKey) {
+        if (
+          activeElement ===
+          firstElement
+        ) {
+          event.preventDefault();
+          triggerRef.current.focus();
+        } else if (
+          activeElement ===
+          triggerRef.current
+        ) {
+          event.preventDefault();
+          lastElement.focus();
+        }
+
+        return;
+      }
+
+      if (
+        activeElement ===
+        lastElement
+      ) {
+        event.preventDefault();
+        triggerRef.current.focus();
+      } else if (
+        activeElement ===
+        triggerRef.current
+      ) {
+        event.preventDefault();
+        firstElement.focus();
+      }
+    }
+
+    document.addEventListener(
+      'keydown',
+      handleKeyDown
+    );
+
+    return () => {
+      window.cancelAnimationFrame(
+        focusFrame
+      );
+
+      document.body.style.overflow =
+        previousOverflow;
+
+      document.removeEventListener(
+        'keydown',
+        handleKeyDown
+      );
+    };
+  }, [closeAll, open]);
 
   return (
-    <div className="lg:hidden">
+    <div
+      className="xl:hidden"
+      role={
+        open
+          ? 'dialog'
+          : undefined
+      }
+      aria-modal={
+        open
+          ? true
+          : undefined
+      }
+      aria-label={
+        open
+          ? subjectsLabel
+          : undefined
+      }
+    >
       <button
+        ref={triggerRef}
         type="button"
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => {
+          if (open) {
+            closeAll({
+              restoreFocus: true,
+            });
+          } else {
+            setOpen(true);
+          }
+        }}
         aria-expanded={open}
-        aria-controls="mobile-nav-panel"
-        aria-label={open ? 'Close menu' : 'Open menu'}
-        className="relative z-50 rounded-full p-2 text-primary transition-colors duration-200 hover:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2"
+        aria-controls={panelId}
+        aria-label={
+          open
+            ? closeMenuLabel
+            : openMenuLabel
+        }
+        className="
+          relative
+          z-50
+          inline-flex
+          min-h-touch
+          min-w-touch
+          items-center
+          justify-center
+          rounded-button
+          text-foreground
+          transition-colors
+          duration-200
+          hover:bg-muted
+          focus-visible:outline-none
+          focus-visible:ring-2
+          focus-visible:ring-ring
+          focus-visible:ring-offset-2
+          focus-visible:ring-offset-background
+        "
       >
-        {open ? <X size={22} aria-hidden /> : <Menu size={22} aria-hidden />}
+        {open ? (
+          <X
+            aria-hidden="true"
+            className="h-5 w-5"
+          />
+        ) : (
+          <Menu
+            aria-hidden="true"
+            className="h-5 w-5"
+          />
+        )}
       </button>
 
       <div
         aria-hidden="true"
-        onClick={closeAll}
-        className={`fixed inset-0 z-30 bg-primary-950/30 backdrop-blur-[2px] transition-opacity duration-300 ease-out motion-reduce:transition-none ${open ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
+        onClick={() =>
+          closeAll({
+            restoreFocus: true,
+          })
+        }
+        className={cn(
+          'fixed',
+          'inset-0',
+          'z-30',
+          'bg-overlay/55',
+          'backdrop-blur-sm',
+          'transition-opacity',
+          'duration-300',
+          'motion-reduce:transition-none',
+          open
+            ? 'opacity-100'
+            : 'pointer-events-none opacity-0'
+        )}
       />
 
       <div
-        id="mobile-nav-panel"
+        ref={panelRef}
+        id={panelId}
         aria-hidden={!open}
-        className={`absolute inset-x-0 top-full z-40 max-h-[calc(100vh-4rem)] origin-top overflow-y-auto rounded-b-2xl border-t border-primary-100 bg-surface p-6 shadow-xl shadow-primary-900/10 transition-all duration-300 ease-out motion-reduce:transition-none ${open ? 'translate-y-0 opacity-100' : 'pointer-events-none -translate-y-2 opacity-0'}`}
+        inert={!open}
+        className={cn(
+          'fixed',
+          'inset-x-0',
+          'top-16',
+          'z-40',
+          'max-h-[calc(100dvh-4rem)]',
+          'overflow-y-auto',
+          'border-t',
+          'border-border',
+          'bg-background',
+          'p-5',
+          'shadow-dropdown',
+          'transition-[transform,opacity]',
+          'duration-300',
+          'ease-out',
+          'motion-reduce:transition-none',
+          'xl:hidden',
+          open
+            ? 'translate-y-0 opacity-100'
+            : 'pointer-events-none -translate-y-2 opacity-0'
+        )}
       >
-        <nav aria-label="Mobile" className="flex flex-col gap-1">
-          {/* Home */}
-          <a href={homeHref}
-            onClick={closeAll}
-            tabIndex={open ? 0 : -1}
-            className="rounded-lg px-3 py-2.5 text-body font-medium text-primary transition-colors duration-200 hover:bg-accent-50 hover:text-accent-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
+        <nav
+          aria-label={subjectsLabel}
+          className="
+            flex
+            flex-col
+            gap-1
+          "
+        >
+          <a
+            href={homeHref}
+            onClick={() =>
+              closeAll()
+            }
+            className="
+              flex
+              min-h-touch
+              items-center
+              rounded-button
+              px-3
+              text-body
+              font-bold
+              text-foreground
+              transition-colors
+              duration-200
+              hover:bg-muted
+              focus-visible:outline-none
+              focus-visible:ring-2
+              focus-visible:ring-ring
+            "
           >
             {homeLabel}
           </a>
 
-          {/* Section anchors */}
-          {sectionLinks.map((link) => (
-            <a key={link.href} href={link.href}
-              onClick={closeAll}
-              tabIndex={open ? 0 : -1}
-              className="rounded-lg px-3 py-2.5 text-body font-medium text-primary transition-colors duration-200 hover:bg-accent-50 hover:text-accent-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
+          <div
+            className="
+              border-y
+              border-border
+              py-3
+            "
+          >
+
+            <a
+              href={subjectsOverviewHref}
+              onClick={() =>
+                closeAll()
+              }
+              className="
+                flex
+                min-h-touch
+                items-center
+                rounded-button
+                bg-primary-900
+                px-3
+                text-body
+                font-black
+                text-white
+                transition-colors
+                hover:bg-primary-800
+                focus-visible:outline-none
+                focus-visible:ring-2
+                focus-visible:ring-accent
+              "
             >
-              {link.label}
+              {subjectsOverviewLabel}
             </a>
-          ))}
 
-          {/* Subjects accordion */}
-          <div className="mt-1 border-t border-primary-100 pt-1">
-            <p className="px-3 pb-1 pt-2 text-caption font-semibold uppercase tracking-wide text-ink-secondary">
-              {subjectsLabel}
-            </p>
+            <div className="mt-2">
+              {subjectCategories.map(
+                (category) => {
+                  const categoryIsOpen =
+                    openCategory ===
+                    category.key;
 
-            {subjectCategories.map((cat) => {
-              const isOpen = openCategory === cat.key;
-              return (
-                <div key={cat.key}>
-                  <button
-                    type="button"
-                    onClick={() => setOpenCategory(isOpen ? null : cat.key)}
-                    aria-expanded={isOpen}
-                    tabIndex={open ? 0 : -1}
-                    className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-body font-medium text-primary transition-colors duration-200 hover:bg-accent-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
-                  >
-                    <span>{cat.label}</span>
-                    <ChevronDown
-                      className={`h-4 w-4 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
-                      strokeWidth={2}
-                      aria-hidden="true"
-                    />
-                  </button>
+                  const categoryPanelId =
+                    `${panelId}-${category.key}`;
 
-                  <div className={`grid transition-all duration-300 ease-out motion-reduce:transition-none ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
-                    <ul className="overflow-hidden ps-3">
-                      {cat.children.map((child) => (
-                        <li key={child.href}>
-                          <a href={child.href}
-                            onClick={closeAll}
-                            tabIndex={open && isOpen ? 0 : -1}
-                            className="block rounded-lg px-3 py-2 text-small text-ink-secondary transition-colors duration-200 hover:bg-accent-50 hover:text-accent-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
-                          >
-                            {child.label}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              );
-            })}
+                  return (
+                    <div
+                      key={category.key}
+                    >
+                      <div
+                        className="
+                          flex
+                          items-center
+                          gap-1
+                        "
+                      >
+                        <a
+                          href={
+                            category.href
+                          }
+                          onClick={() =>
+                            closeAll()
+                          }
+                          className="
+                            flex
+                            min-h-touch
+                            min-w-0
+                            flex-1
+                            items-center
+                            rounded-button
+                            px-3
+                            text-body
+                            font-bold
+                            text-foreground
+                            transition-colors
+                            duration-200
+                            hover:bg-muted
+                            focus-visible:outline-none
+                            focus-visible:ring-2
+                            focus-visible:ring-ring
+                          "
+                        >
+                          {
+                            category.label
+                          }
+                        </a>
+
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setOpenCategory(
+                              categoryIsOpen
+                                ? null
+                                : category.key
+                            );
+                          }}
+                          aria-expanded={
+                            categoryIsOpen
+                          }
+                          aria-controls={
+                            categoryPanelId
+                          }
+                          aria-label={
+                            category.label
+                          }
+                          className="
+                            inline-flex
+                            min-h-touch
+                            min-w-touch
+                            items-center
+                            justify-center
+                            rounded-button
+                            text-muted-foreground
+                            transition-colors
+                            hover:bg-muted
+                            hover:text-foreground
+                            focus-visible:outline-none
+                            focus-visible:ring-2
+                            focus-visible:ring-ring
+                          "
+                        >
+                          <ChevronDown
+                            aria-hidden="true"
+                            className={cn(
+                              'h-4',
+                              'w-4',
+                              'transition-transform',
+                              'duration-200',
+                              'motion-reduce:transition-none',
+                              categoryIsOpen &&
+                                'rotate-180'
+                            )}
+                          />
+                        </button>
+                      </div>
+
+                      <div
+                        id={
+                          categoryPanelId
+                        }
+                        aria-hidden={
+                          !categoryIsOpen
+                        }
+                        inert={
+                          !categoryIsOpen
+                        }
+                        className={cn(
+                          'grid',
+                          'transition-[grid-template-rows,opacity]',
+                          'duration-300',
+                          'ease-out',
+                          'motion-reduce:transition-none',
+                          categoryIsOpen
+                            ? 'grid-rows-[1fr] opacity-100'
+                            : 'grid-rows-[0fr] opacity-0'
+                        )}
+                      >
+                        <ul
+                          className="
+                            grid
+                            overflow-hidden
+                            ps-3
+                            sm:grid-cols-2
+                          "
+                        >
+                          {category.children.map(
+                            (child) => (
+                              <li
+                                key={
+                                  child.href
+                                }
+                              >
+                                <a
+                                  href={
+                                    child.href
+                                  }
+                                  onClick={() =>
+                                    closeAll()
+                                  }
+                                  tabIndex={
+                                    categoryIsOpen
+                                      ? 0
+                                      : -1
+                                  }
+                                  className="
+                                    block
+                                    min-h-touch
+                                    rounded-button
+                                    px-3
+                                    py-2.5
+                                    text-small
+                                    leading-5
+                                    text-muted-foreground
+                                    transition-colors
+                                    duration-200
+                                    hover:bg-accent-50
+                                    hover:text-accent-800
+                                    focus-visible:outline-none
+                                    focus-visible:ring-2
+                                    focus-visible:ring-ring
+                                  "
+                                >
+                                  {
+                                    child.label
+                                  }
+                                </a>
+                              </li>
+                            )
+                          )}
+                        </ul>
+                      </div>
+                    </div>
+                  );
+                }
+              )}
+            </div>
           </div>
+
+          <div className="border-b border-border py-3">
+            <div className="flex items-center gap-1">
+              <a
+                href={locationsOverviewHref}
+                onClick={() => closeAll()}
+                className="flex min-h-touch min-w-0 flex-1 items-center rounded-button bg-primary-900 px-3 text-body font-black text-white transition-colors hover:bg-primary-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              >
+                {locationsOverviewLabel}
+              </a>
+              <span className="sr-only">{locationsLabel}</span>
+            </div>
+
+            <div className="mt-2 grid gap-1">
+              {locationCountries.map((country) => {
+                const countryOpen = openLocationCountry === country.key;
+                const countryPanelId = `${panelId}-location-${country.key}`;
+                return (
+                  <div key={country.key}>
+                    <div className="flex items-center gap-1">
+                      <a
+                        href={`/${locale}${country.href}`}
+                        onClick={() => closeAll()}
+                        className="flex min-h-touch min-w-0 flex-1 items-center rounded-button px-3 text-body font-bold text-foreground transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                      >
+                        {country.label[locale]}
+                      </a>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setOpenLocationCountry(countryOpen ? null : country.key);
+                          setOpenLocationRegion(null);
+                        }}
+                        aria-expanded={countryOpen}
+                        aria-controls={countryPanelId}
+                        aria-label={country.label[locale]}
+                        className="inline-flex min-h-touch min-w-touch items-center justify-center rounded-button text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                      >
+                        <ChevronDown aria-hidden="true" className={cn('h-4 w-4 transition-transform duration-200', countryOpen && 'rotate-180')} />
+                      </button>
+                    </div>
+
+                    <div id={countryPanelId} aria-hidden={!countryOpen} inert={!countryOpen} className={cn('grid transition-[grid-template-rows,opacity] duration-300', countryOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0')}>
+                      <div className="overflow-hidden ps-3">
+                        {country.regions.map((region) => {
+                          const regionId = `${country.key}-${region.key}`;
+                          const regionOpen = openLocationRegion === regionId;
+                          const regionPanelId = `${panelId}-location-${regionId}`;
+                          return (
+                            <div key={region.key}>
+                              <div className="flex items-center gap-1">
+                                <a
+                                  href={`/${locale}${region.href}`}
+                                  onClick={() => closeAll()}
+                                  tabIndex={countryOpen ? 0 : -1}
+                                  className="flex min-h-touch min-w-0 flex-1 items-center rounded-button px-3 text-small font-bold text-foreground transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                                >
+                                  {region.label[locale]}
+                                </a>
+                                <button
+                                  type="button"
+                                  tabIndex={countryOpen ? 0 : -1}
+                                  onClick={() => setOpenLocationRegion(regionOpen ? null : regionId)}
+                                  aria-expanded={regionOpen}
+                                  aria-controls={regionPanelId}
+                                  aria-label={region.label[locale]}
+                                  className="inline-flex min-h-touch min-w-touch items-center justify-center rounded-button text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                                >
+                                  <ChevronDown aria-hidden="true" className={cn('h-4 w-4 transition-transform duration-200', regionOpen && 'rotate-180')} />
+                                </button>
+                              </div>
+
+                              <div id={regionPanelId} aria-hidden={!regionOpen} inert={!regionOpen} className={cn('grid transition-[grid-template-rows,opacity] duration-300', regionOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0')}>
+                                <ul className="grid overflow-hidden ps-3 sm:grid-cols-2">
+                                  <li>
+                                    <a href={`/${locale}${region.curriculum.href}`} onClick={() => closeAll()} tabIndex={countryOpen && regionOpen ? 0 : -1} className="block min-h-touch rounded-button px-3 py-2.5 text-small font-bold leading-5 text-accent-800 transition-colors hover:bg-accent-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                                      {region.curriculum.label[locale]}
+                                    </a>
+                                  </li>
+                                  {region.cities.map((city) => (
+                                    <li key={city.href}>
+                                      <a href={`/${locale}${city.href}`} onClick={() => closeAll()} tabIndex={countryOpen && regionOpen ? 0 : -1} className="block min-h-touch rounded-button px-3 py-2.5 text-small leading-5 text-muted-foreground transition-colors hover:bg-accent-50 hover:text-accent-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                                        {city.label[locale]}
+                                      </a>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {sectionLinks.map(
+            (link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() =>
+                  closeAll()
+                }
+                className="
+                  flex
+                  min-h-touch
+                  items-center
+                  rounded-button
+                  px-3
+                  text-body
+                  font-bold
+                  text-foreground
+                  transition-colors
+                  duration-200
+                  hover:bg-muted
+                  focus-visible:outline-none
+                  focus-visible:ring-2
+                  focus-visible:ring-ring
+                "
+              >
+                {link.label}
+              </a>
+            )
+          )}
         </nav>
 
-        <div className="mt-5 flex items-center gap-3 border-t border-primary-100 pt-5">
-          <div className="shrink-0">
-            <LocaleSwitcher />
+        <div
+          className="
+            mt-5
+            border-t
+            border-border
+            pt-5
+          "
+        >
+          <div className="mb-3 grid grid-cols-[auto_1fr] gap-2">
+            <a
+              href="tel:+16477875999"
+              onClick={() => closeAll()}
+              aria-label={`${phoneLabel} ${phoneNumber}`}
+              className="inline-flex min-h-touch min-w-touch items-center justify-center rounded-button border border-border bg-background text-accent transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            >
+              <Phone aria-hidden="true" className="h-5 w-5" />
+            </a>
+            <a
+              href="tel:+16477875999"
+              onClick={() => closeAll()}
+              className="flex min-h-touch flex-col items-start justify-center rounded-button border border-border bg-background px-3 text-start transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            >
+              <span className="text-xs font-semibold text-muted-foreground">{phoneLabel}</span>
+              <span dir="ltr" className="text-sm font-black text-foreground">{phoneNumber}</span>
+            </a>
           </div>
-          <ButtonLink
-            href="/contact"
-            size="sm"
-            tabIndex={open ? 0 : -1}
-            onClick={closeAll}
-            className="group relative flex-1 overflow-hidden bg-gradient-to-r from-accent-600 to-accent-500 text-center font-semibold shadow-md shadow-accent-600/20 transition-all duration-300 ease-out hover:shadow-lg hover:shadow-accent-600/35 focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 active:scale-[0.98] motion-reduce:transition-none"
+
+          <a
+            href={bookingHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() =>
+              closeAll()
+            }
+            className={
+              buttonVariants({
+                variant: 'accent',
+                size: 'md',
+                className:
+                  'w-full',
+              })
+            }
           >
-            <span aria-hidden="true" className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full motion-reduce:hidden" />
-            <span className="relative">{bookLabel}</span>
-          </ButtonLink>
+            {bookLabel}
+          </a>
         </div>
       </div>
     </div>

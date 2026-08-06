@@ -1,0 +1,384 @@
+{
+  "metadata": {
+    "subject": "Chemistry",
+    "subjectSlug": "chemistry",
+    "strand": "Chemical Reactions and Equations",
+    "strandSlug": "chemical-reactions-equations",
+    "gradeRange": {
+      "min": 9,
+      "max": 12
+    },
+    "gradeLevels": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 23,
+    "gradedSourceRecordCount": 17,
+    "nonGradedSourceRecordCount": 6,
+    "mainTopicCount": 17,
+    "subtopicCount": 17,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "chemical-reactions-equations",
+    "title": {
+      "en": "Chemical Reactions and Equations",
+      "ar": "التفاعلات والمعادلات الكيميائية"
+    },
+    "description": {
+      "en": "Writing and balancing equations, classifying reaction types, predicting products, and net ionic equations.",
+      "ar": "كتابة المعادلات وموازنتها وتصنيف أنواع التفاعلات وتوقع النواتج وكتابة المعادلات الأيونية الصافية."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-chemical-equations",
+          "title": "Chemical Equations",
+          "subtopics": [
+            {
+              "id": "writing-and-balancing-equations",
+              "title": "Writing and balancing equations"
+            }
+          ],
+          "sourceRows": [
+            12
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-chemical-reactions",
+          "title": "Chemical Reactions",
+          "subtopics": [
+            {
+              "id": "general-chemical-reaction-concepts",
+              "title": "General chemical reaction concepts"
+            }
+          ],
+          "sourceRows": [
+            13
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-reaction-types",
+          "title": "Reaction Types",
+          "subtopics": [
+            {
+              "id": "synthesis-decomposition-combustion-and-displacement-reactions",
+              "title": "Synthesis, decomposition, combustion, and displacement reactions"
+            }
+          ],
+          "sourceRows": [
+            14
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 3,
+      "subtopicCount": 3
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-chemical-equations",
+          "title": "Chemical Equations",
+          "subtopics": [
+            {
+              "id": "writing-and-balancing-equations",
+              "title": "Writing and balancing equations"
+            }
+          ],
+          "sourceRows": [
+            33
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-chemical-reactions",
+          "title": "Chemical Reactions",
+          "subtopics": [
+            {
+              "id": "general-chemical-reaction-concepts",
+              "title": "General chemical reaction concepts"
+            }
+          ],
+          "sourceRows": [
+            34
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-predicting-products",
+          "title": "Predicting Products",
+          "subtopics": [
+            {
+              "id": "predicting-products-of-reactions",
+              "title": "Predicting products of reactions"
+            }
+          ],
+          "sourceRows": [
+            35
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-reaction-types",
+          "title": "Reaction Types",
+          "subtopics": [
+            {
+              "id": "synthesis-decomposition-combustion-and-displacement-reactions",
+              "title": "Synthesis, decomposition, combustion, and displacement reactions"
+            }
+          ],
+          "sourceRows": [
+            36
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 4,
+      "subtopicCount": 4
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-chemical-equations",
+          "title": "Chemical Equations",
+          "subtopics": [
+            {
+              "id": "writing-and-balancing-equations",
+              "title": "Writing and balancing equations"
+            }
+          ],
+          "sourceRows": [
+            64
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-chemical-reactions",
+          "title": "Chemical Reactions",
+          "subtopics": [
+            {
+              "id": "general-chemical-reaction-concepts",
+              "title": "General chemical reaction concepts"
+            }
+          ],
+          "sourceRows": [
+            65
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-ionic-and-precipitation-reactions",
+          "title": "Ionic and Precipitation Reactions",
+          "subtopics": [
+            {
+              "id": "net-ionic-equations-and-precipitation",
+              "title": "Net ionic equations and precipitation"
+            }
+          ],
+          "sourceRows": [
+            66
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-predicting-products",
+          "title": "Predicting Products",
+          "subtopics": [
+            {
+              "id": "predicting-products-of-reactions",
+              "title": "Predicting products of reactions"
+            }
+          ],
+          "sourceRows": [
+            67
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-reaction-types",
+          "title": "Reaction Types",
+          "subtopics": [
+            {
+              "id": "synthesis-decomposition-combustion-and-displacement-reactions",
+              "title": "Synthesis, decomposition, combustion, and displacement reactions"
+            }
+          ],
+          "sourceRows": [
+            68
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 5,
+      "subtopicCount": 5
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-chemical-equations",
+          "title": "Chemical Equations",
+          "subtopics": [
+            {
+              "id": "writing-and-balancing-equations",
+              "title": "Writing and balancing equations"
+            }
+          ],
+          "sourceRows": [
+            114
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-chemical-reactions",
+          "title": "Chemical Reactions",
+          "subtopics": [
+            {
+              "id": "general-chemical-reaction-concepts",
+              "title": "General chemical reaction concepts"
+            }
+          ],
+          "sourceRows": [
+            115
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-ionic-and-precipitation-reactions",
+          "title": "Ionic and Precipitation Reactions",
+          "subtopics": [
+            {
+              "id": "net-ionic-equations-and-precipitation",
+              "title": "Net ionic equations and precipitation"
+            }
+          ],
+          "sourceRows": [
+            116
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-predicting-products",
+          "title": "Predicting Products",
+          "subtopics": [
+            {
+              "id": "predicting-products-of-reactions",
+              "title": "Predicting products of reactions"
+            }
+          ],
+          "sourceRows": [
+            117
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-reaction-types",
+          "title": "Reaction Types",
+          "subtopics": [
+            {
+              "id": "synthesis-decomposition-combustion-and-displacement-reactions",
+              "title": "Synthesis, decomposition, combustion, and displacement reactions"
+            }
+          ],
+          "sourceRows": [
+            118
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 5,
+      "subtopicCount": 5
+    }
+  ]
+}

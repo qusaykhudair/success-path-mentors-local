@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "programme": "Programme français",
+    "matiere": "Français",
+    "sourceSheet": "Carte Français",
+    "sourceRecordCount": 360,
+    "publicGradeRecordCount": 325,
+    "nonStandardRecordCount": 35,
+    "exactDuplicateRowsRemoved": 0,
+    "requiredFieldGaps": 0
+  },
+  "removedExactDuplicates": [],
+  "notes": [
+    "Les libellés Domaine, Sujet principal, Sous-sujet, Compétences et Activités sont conservés en français.",
+    "Les informations internes sur les élèves, enseignants et rapports ne sont pas publiées dans les pages."
+  ]
+}

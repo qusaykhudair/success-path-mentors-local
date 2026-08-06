@@ -1,0 +1,55 @@
+{
+  "exactDuplicateRows": [],
+  "crossTopicExactSubtopicOverlaps": [],
+  "semanticOverlapFlags": [
+    {
+      "grade": "G2",
+      "umbrellaTopic": "Phonics",
+      "detailedTopic": "Consonant blends and digraphs",
+      "status": "needs-review",
+      "note": "Possible curriculum overlap; do not merge automatically."
+    },
+    {
+      "grade": "G2",
+      "umbrellaTopic": "Phonics",
+      "detailedTopic": "Long vowel patterns",
+      "status": "needs-review",
+      "note": "Possible curriculum overlap; do not merge automatically."
+    },
+    {
+      "grade": "G2",
+      "umbrellaTopic": "Phonics",
+      "detailedTopic": "Short vowels",
+      "status": "needs-review",
+      "note": "Possible curriculum overlap; do not merge automatically."
+    },
+    {
+      "grade": "G2",
+      "umbrellaTopic": "Phonics",
+      "detailedTopic": "Silent e",
+      "status": "needs-review",
+      "note": "Possible curriculum overlap; do not merge automatically."
+    },
+    {
+      "grade": "G2",
+      "umbrellaTopic": "Word Recognition",
+      "detailedTopic": "Sight words",
+      "status": "needs-review",
+      "note": "Possible curriculum overlap; do not merge automatically."
+    },
+    {
+      "grade": "G2",
+      "umbrellaTopic": "Syllabication",
+      "detailedTopic": "Syllables",
+      "status": "needs-review",
+      "note": "Possible curriculum overlap; do not merge automatically."
+    },
+    {
+      "grade": "G3",
+      "umbrellaTopic": "Word Structure",
+      "detailedTopic": "Multisyllabic words",
+      "status": "needs-review",
+      "note": "Possible curriculum overlap; do not merge automatically."
+    }
+  ]
+}

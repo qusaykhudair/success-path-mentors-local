@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "strand": "Vocabulary and Word Study",
+    "sourceMainTopicPlacements": 131,
+    "displayMainTopicPlacements": 132,
+    "displayCorrectionCount": 7,
+    "exactDuplicateRowsRemoved": 0
+  },
+  "displayCorrections": [
+    {
+      "sourceRow": 10,
+      "grade": "G2",
+      "sourceMainTopic": "Context clues",
+      "displayMainTopic": "Reference skills",
+      "subtopic": "Order alphabetically based on the first letter",
+      "reason": "The supplied skill teaches alphabetical order or dictionary-reference use rather than meaning from context."
+    },
+    {
+      "sourceRow": 11,
+      "grade": "G2",
+      "sourceMainTopic": "Context clues",
+      "displayMainTopic": "Reference skills",
+      "subtopic": "Order alphabetically based on the first three letters",
+      "reason": "The supplied skill teaches alphabetical order or dictionary-reference use rather than meaning from context."
+    },
+    {
+      "sourceRow": 12,
+      "grade": "G2",
+      "sourceMainTopic": "Context clues",
+      "displayMainTopic": "Reference skills",
+      "subtopic": "Order alphabetically based on the first two letters",
+      "reason": "The supplied skill teaches alphabetical order or dictionary-reference use rather than meaning from context."
+    },
+    {
+      "sourceRow": 13,
+      "grade": "G2",
+      "sourceMainTopic": "Context clues",
+      "displayMainTopic": "Reference skills",
+      "subtopic": "Use dictionary entries",
+      "reason": "The supplied skill teaches alphabetical order or dictionary-reference use rather than meaning from context."
+    },
+    {
+      "sourceRow": 14,
+      "grade": "G2",
+      "sourceMainTopic": "Context clues",
+      "displayMainTopic": "Reference skills",
+      "subtopic": "Use guide words",
+      "reason": "The supplied skill teaches alphabetical order or dictionary-reference use rather than meaning from context."
+    },
+    {
+      "sourceRow": 208,
+      "grade": "G6",
+      "sourceMainTopic": "Homophones",
+      "displayMainTopic": "Multiple-meaning words",
+      "subtopic": "Which definition matches the sentence?",
+      "reason": "The supplied skill matches word meanings to sentence contexts and does not test homophone selection."
+    },
+    {
+      "sourceRow": 209,
+      "grade": "G6",
+      "sourceMainTopic": "Homophones",
+      "displayMainTopic": "Multiple-meaning words",
+      "subtopic": "Which sentence matches the definition?",
+      "reason": "The supplied skill matches word meanings to sentence contexts and does not test homophone selection."
+    }
+  ],
+  "removedExactDuplicates": [],
+  "preservedStructuralOverlaps": [
+    {
+      "examples": [
+        "Word Relationships and detailed relationship topics",
+        "Morphology and detailed roots or affix topics",
+        "Meaning and Nuance and Shades of meaning"
+      ],
+      "decision": "Preserved because the source presents them as separate Main Topics and the skills may represent different levels of instruction."
+    }
+  ]
+}

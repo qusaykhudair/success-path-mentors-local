@@ -10,8 +10,7 @@
  * -----------------------------------------------------------------------------
  */
 
-export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mustafaacademy.com';
+export const SITE_URL = 'https://successpathmentors.net';
 
 /**
  * -----------------------------------------------------------------------------
@@ -21,10 +20,10 @@ export const SITE_URL =
 
 export const SITE = {
   /** Public website name */
-  name: 'Mustafa Academy',
+  name: 'Success Path Mentors',
 
   /** Registered / legal business name */
-  legalName: 'Mustafa Academy',
+  legalName: 'Commenda Inc. operating as Success Path Mentors',
 
   /** Brand slogan */
   tagline: 'Empowering Students. Inspiring Success.',
@@ -36,26 +35,27 @@ export const SITE = {
   url: SITE_URL,
 
   /** Default page title */
-  title: 'Mustafa Academy',
+  title: 'Success Path Mentors',
 
   /** Default SEO description */
   description:
-    'Mustafa Academy is a professional online tutoring platform providing personalized academic support, expert mentors, and high-quality educational programs to help students achieve their full potential.',
+    'Success Path Mentors provides one-to-one online tutoring for Grades 1–12, with curriculum-aligned support for families in Canada and the United States, including Arabic-speaking families and students transitioning between education systems.',
 
   /** Default Open Graph image */
-  ogImage: '/images/og-image.png',
+ogImage: '/images/logo.png',
+
 
   /** Twitter Card image */
-  twitterImage: '/images/twitter-image.png',
+ twitterImage: '/images/logo.png',
 
   /** Favicon */
-  favicon: '/favicon.ico',
+  favicon: 'src/app/icon.png',
 
   /** Apple Touch Icon */
-  appleTouchIcon: '/apple-touch-icon.png',
+  appleTouchIcon: '/icons/apple-touch-icon.png',
 
   /** Theme color */
-  themeColor: '#0F172A',
+themeColor: '#0F172A',
 
   /** Background color */
   backgroundColor: '#FFFFFF',
@@ -73,25 +73,14 @@ export const ORGANIZATION = {
   legalName: SITE.legalName,
 
   url: SITE.url,
-ogImage: '/images/og-image.jpg',
+
   logo: `${SITE.url}/images/logo.png`,
 
   description: SITE.description,
 
-  sameAs: [
-    /**
-     * Add official social media profiles here.
-     *
-     * Example:
-     * 'https://facebook.com/...',
-     * 'https://instagram.com/...',
-     * 'https://linkedin.com/company/...'
-     */
-  ],
+  sameAs: [] as string[],
 
-  founders: [
-    // Future implementation
-  ],
+  founders: [] as string[],
 } as const;
 
 /**
@@ -101,17 +90,17 @@ ogImage: '/images/og-image.jpg',
  */
 
 export const CONTACT = {
-  phone: '',
+  phone: '+1 647 787 5999',
 
-  whatsapp: '',
+  whatsapp: '+1 647 787 5999',
 
-  email: '',
+  email: 'successpathmentors@gmail.com',
 
   address: '',
 
   city: '',
 
-  country: '',
+  country: 'Canada',
 
   postalCode: '',
 } as const;
@@ -161,7 +150,7 @@ export const VERIFICATION = {
  */
 
 export const DEFAULT_KEYWORDS = [
-  'Mustafa Academy',
+  'Success Path Mentors',
   'Online Tutoring',
   'Private Tutoring',
   'Academic Mentoring',

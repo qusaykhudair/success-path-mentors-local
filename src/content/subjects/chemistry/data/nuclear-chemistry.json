@@ -1,0 +1,214 @@
+{
+  "metadata": {
+    "subject": "Chemistry",
+    "subjectSlug": "chemistry",
+    "strand": "Nuclear Chemistry",
+    "strandSlug": "nuclear-chemistry",
+    "gradeRange": {
+      "min": 10,
+      "max": 12
+    },
+    "gradeLevels": [
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 7,
+    "gradedSourceRecordCount": 5,
+    "nonGradedSourceRecordCount": 2,
+    "mainTopicCount": 5,
+    "subtopicCount": 5,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "nuclear-chemistry",
+    "title": {
+      "en": "Nuclear Chemistry",
+      "ar": "الكيمياء النووية"
+    },
+    "description": {
+      "en": "Radioactive decay, isotopes, half-life, fission, fusion, and applications of nuclear energy.",
+      "ar": "الاضمحلال الإشعاعي والنظائر وعمر النصف والانشطار والاندماج وتطبيقات الطاقة النووية."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-nuclear-reactions",
+          "title": "Nuclear Reactions",
+          "subtopics": [
+            {
+              "id": "fission-fusion-and-nuclear-power",
+              "title": "Fission, fusion, and nuclear power"
+            }
+          ],
+          "sourceRows": [
+            40
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-nuclear-reactions",
+          "title": "Nuclear Reactions",
+          "subtopics": [
+            {
+              "id": "fission-fusion-and-nuclear-power",
+              "title": "Fission, fusion, and nuclear power"
+            }
+          ],
+          "sourceRows": [
+            73
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-radioactivity",
+          "title": "Radioactivity",
+          "subtopics": [
+            {
+              "id": "radioactive-decay-isotopes-and-half-life",
+              "title": "Radioactive decay, isotopes, and half-life"
+            }
+          ],
+          "sourceRows": [
+            74
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-nuclear-reactions",
+          "title": "Nuclear Reactions",
+          "subtopics": [
+            {
+              "id": "fission-fusion-and-nuclear-power",
+              "title": "Fission, fusion, and nuclear power"
+            }
+          ],
+          "sourceRows": [
+            120
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-radioactivity",
+          "title": "Radioactivity",
+          "subtopics": [
+            {
+              "id": "radioactive-decay-isotopes-and-half-life",
+              "title": "Radioactive decay, isotopes, and half-life"
+            }
+          ],
+          "sourceRows": [
+            121
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    }
+  ]
+}

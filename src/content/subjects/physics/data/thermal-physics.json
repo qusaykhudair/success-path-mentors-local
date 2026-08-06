@@ -1,0 +1,200 @@
+{
+  "metadata": {
+    "subject": "Physics",
+    "subjectSlug": "physics",
+    "strand": "Thermal Physics",
+    "strandSlug": "thermal-physics",
+    "gradeRange": {
+      "min": 5,
+      "max": 11
+    },
+    "gradeLevels": [
+      5,
+      10,
+      11
+    ],
+    "sourceRecordCount": 6,
+    "gradedSourceRecordCount": 4,
+    "nonGradedSourceRecordCount": 2,
+    "mainTopicCount": 4,
+    "subtopicCount": 4,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "thermal-physics",
+    "title": {
+      "en": "Thermal Physics",
+      "ar": "الفيزياء الحرارية"
+    },
+    "description": {
+      "en": "Heat, temperature, heat capacity, thermal transfer, heating curves, and phase changes.",
+      "ar": "الحرارة ودرجة الحرارة والسعة الحرارية وانتقال الطاقة ومنحنيات التسخين وتغيرات الحالة."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g5-heat-and-temperature",
+          "title": "Heat and Temperature",
+          "subtopics": [
+            {
+              "id": "heat-temperature-and-heat-capacity",
+              "title": "Heat, temperature, and heat capacity"
+            }
+          ],
+          "sourceRows": [
+            2
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-heat-and-temperature",
+          "title": "Heat and Temperature",
+          "subtopics": [
+            {
+              "id": "heat-temperature-and-heat-capacity",
+              "title": "Heat, temperature, and heat capacity"
+            }
+          ],
+          "sourceRows": [
+            41
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-heat-and-temperature",
+          "title": "Heat and Temperature",
+          "subtopics": [
+            {
+              "id": "heat-temperature-and-heat-capacity",
+              "title": "Heat, temperature, and heat capacity"
+            }
+          ],
+          "sourceRows": [
+            87
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-phase-changes",
+          "title": "Phase Changes",
+          "subtopics": [
+            {
+              "id": "heating-curves-and-phase-change",
+              "title": "Heating curves and phase change"
+            }
+          ],
+          "sourceRows": [
+            88
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    }
+  ]
+}

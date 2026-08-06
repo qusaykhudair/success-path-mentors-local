@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "subject": "Chemistry",
+    "sourceRecordCount": 215,
+    "gradedSourceRecordCount": 137,
+    "postsecondaryRecordCount": 32,
+    "gradeNotStatedRecordCount": 46,
+    "exactDuplicateRowsRemoved": 0
+  },
+  "removedExactDuplicates": [],
+  "notes": [
+    "No topic or subtopic wording was changed from the supplied source.",
+    "Postsecondary and Grade not stated records are stored separately."
+  ]
+}

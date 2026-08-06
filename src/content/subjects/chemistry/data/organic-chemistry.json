@@ -1,0 +1,296 @@
+{
+  "metadata": {
+    "subject": "Chemistry",
+    "subjectSlug": "chemistry",
+    "strand": "Organic Chemistry",
+    "strandSlug": "organic-chemistry",
+    "gradeRange": {
+      "min": 9,
+      "max": 12
+    },
+    "gradeLevels": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 16,
+    "gradedSourceRecordCount": 12,
+    "nonGradedSourceRecordCount": 4,
+    "mainTopicCount": 10,
+    "subtopicCount": 12,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "organic-chemistry",
+    "title": {
+      "en": "Organic Chemistry",
+      "ar": "الكيمياء العضوية"
+    },
+    "description": {
+      "en": "Hydrocarbons, functional groups, organic nomenclature, stereochemistry, and organic reaction types.",
+      "ar": "الهيدروكربونات والمجموعات الوظيفية والتسمية العضوية والكيمياء الفراغية وأنواع التفاعلات العضوية."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-hydrocarbons",
+          "title": "Hydrocarbons",
+          "subtopics": [
+            {
+              "id": "alkanes-alkenes-alkynes-cycloalkanes-and-aromatics",
+              "title": "Alkanes, alkenes, alkynes, cycloalkanes, and aromatics"
+            }
+          ],
+          "sourceRows": [
+            18
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-organic-chemistry",
+          "title": "Organic Chemistry",
+          "subtopics": [
+            {
+              "id": "organic-chemistry-concepts",
+              "title": "Organic chemistry concepts"
+            }
+          ],
+          "sourceRows": [
+            19
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-hydrocarbons",
+          "title": "Hydrocarbons",
+          "subtopics": [
+            {
+              "id": "alkanes-alkenes-alkynes-cycloalkanes-and-aromatics",
+              "title": "Alkanes, alkenes, alkynes, cycloalkanes, and aromatics"
+            }
+          ],
+          "sourceRows": [
+            41
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-functional-groups",
+          "title": "Functional Groups",
+          "subtopics": [
+            {
+              "id": "functional-groups-and-organic-nomenclature",
+              "title": "Functional groups and organic nomenclature"
+            }
+          ],
+          "sourceRows": [
+            75
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-hydrocarbons",
+          "title": "Hydrocarbons",
+          "subtopics": [
+            {
+              "id": "alkanes-alkenes-alkynes-cycloalkanes-and-aromatics",
+              "title": "Alkanes, alkenes, alkynes, cycloalkanes, and aromatics"
+            }
+          ],
+          "sourceRows": [
+            76
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-organic-chemistry",
+          "title": "Organic Chemistry",
+          "subtopics": [
+            {
+              "id": "organic-chemistry-concepts",
+              "title": "Organic chemistry concepts"
+            }
+          ],
+          "sourceRows": [
+            77
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 3,
+      "subtopicCount": 3
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-functional-groups",
+          "title": "Functional Groups",
+          "subtopics": [
+            {
+              "id": "functional-groups-and-organic-nomenclature",
+              "title": "Functional groups and organic nomenclature"
+            },
+            {
+              "id": "organic-compound-nomenclature",
+              "title": "Organic-compound nomenclature"
+            }
+          ],
+          "sourceRows": [
+            122,
+            123
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-hydrocarbons",
+          "title": "Hydrocarbons",
+          "subtopics": [
+            {
+              "id": "alkanes-alkenes-alkynes-cycloalkanes-and-aromatics",
+              "title": "Alkanes, alkenes, alkynes, cycloalkanes, and aromatics"
+            }
+          ],
+          "sourceRows": [
+            124
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-organic-chemistry",
+          "title": "Organic Chemistry",
+          "subtopics": [
+            {
+              "id": "organic-chemistry-concepts",
+              "title": "Organic chemistry concepts"
+            }
+          ],
+          "sourceRows": [
+            125
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-organic-reactions",
+          "title": "Organic Reactions",
+          "subtopics": [
+            {
+              "id": "organic-reaction-types-and-mechanisms",
+              "title": "Organic reaction types and mechanisms"
+            },
+            {
+              "id": "reactions-of-organic-compounds",
+              "title": "Reactions of organic compounds"
+            }
+          ],
+          "sourceRows": [
+            126,
+            127
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 4,
+      "subtopicCount": 6
+    }
+  ]
+}

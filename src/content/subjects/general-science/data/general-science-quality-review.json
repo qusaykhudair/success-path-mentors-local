@@ -1,0 +1,26 @@
+{
+  "metadata": {
+    "subject": "General Science",
+    "sourceRecordCount": 89,
+    "gradedSourceRecordCount": 80,
+    "postsecondaryRecordCount": 2,
+    "gradeNotStatedRecordCount": 7,
+    "exactDuplicateRowsRemoved": 1
+  },
+  "removedExactDuplicates": [
+    {
+      "sourceRow": 38,
+      "subject": "General Science",
+      "gradeLevel": "Grade 9",
+      "strand": "Life Science",
+      "mainTopic": "Cell Processes",
+      "subtopic": "Cell division and reproduction",
+      "grade": "G9"
+    }
+  ],
+  "notes": [
+    "No Main Topic or Subtopic wording was changed from the supplied source.",
+    "One exact duplicate was removed only from the public normalized layer.",
+    "Postsecondary and Grade not stated records remain stored separately."
+  ]
+}

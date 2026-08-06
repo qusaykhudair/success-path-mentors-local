@@ -1,120 +1,606 @@
-// components/layout/site-header.tsx  — Server Component
-import { getTranslations, getLocale } from 'next-intl/server';
 import Image from 'next/image';
-import { Link } from '@/i18n/navigation';
-import { Container } from '@/components/ui/container';
-import { LocaleSwitcher } from './locale-switcher';
-import { MobileNav } from './mobile-nav';
-import { SubjectsMenu } from './subjects-menu';
+import { Phone } from 'lucide-react';
 
-interface SubjectChild {
-  label: string;
-  href: string;
-}
-interface SubjectCategory {
-  key: string;
-  label: string;
-  href: string;
-  children: SubjectChild[];
-}
+import {
+  getLocale,
+  getTranslations,
+} from 'next-intl/server';
+
+import {
+  Link,
+} from '@/i18n/navigation';
+
+import {
+  buttonVariants,
+} from '@/components/ui/button';
+import {
+  Container,
+} from '@/components/ui/container';
+import {
+  routePath,
+} from '@/config/routes';
+import {
+  programmeFrancaisRoutes,
+} from '@/lib/programme-francais/routes';
+import {
+  approvedChemistryStrands,
+} from '@/content/subjects/chemistry/chemistry-strands';
+import {
+  approvedEnglishStrands,
+} from '@/content/subjects/english/english-strands';
+import {
+  publicMathPathways,
+} from '@/content/subjects/math/math-pathways';
+import {
+  approvedGeneralScienceStrands,
+} from '@/content/subjects/general-science/general-science-strands';
+import {
+  approvedPhysicsStrands,
+} from '@/content/subjects/physics/physics-strands';
+
+import {
+  LocaleSwitcher,
+} from './locale-switcher';
+import {
+  MobileNav,
+} from './mobile-nav';
+import {
+  SubjectsMenu,
+  type SubjectCategory,
+} from './subjects-menu';
+import { LocationsMenu } from './locations-menu';
+import { locationNavigation } from '@/content/locations/location-navigation';
+import { buildTrialLessonMessage, buildWhatsAppHref, WHATSAPP_DISPLAY_NUMBER } from '@/lib/whatsapp';
+
+const navigationCopy = {
+  en: {
+    subjects: 'Subjects',
+    allSubjects:
+      'View all subjects',
+    math:
+      'Mathematics',
+    english:
+      'English',
+    chemistry:
+      'Chemistry',
+    physics:
+      'Physics',
+    generalScience:
+      'General Science',
+    frenchProgram:
+      'Programme français',
+    locations:
+      'Our Locations',
+    about:
+      'About Us',
+    howItWorks:
+      'How It Works',
+    packages:
+      'Packages',
+    primaryNavigation:
+      'Primary navigation',
+  },
+  ar: {
+    subjects: 'المواد الدراسية',
+    allSubjects:
+      'عرض جميع المواد الدراسية',
+    math:
+      'الرياضيات',
+    english:
+      'اللغة الإنجليزية',
+    chemistry:
+      'الكيمياء',
+    physics:
+      'الفيزياء',
+    generalScience:
+      'العلوم العامة',
+    frenchProgram:
+      'Programme français',
+    locations:
+      'أين نحن',
+    about:
+      'من نحن',
+    howItWorks:
+      'آلية عمل المنصة',
+    packages:
+      'الباقات',
+    primaryNavigation:
+      'التنقل الرئيسي',
+  },
+} as const;
 
 export async function SiteHeader() {
-  const t = await getTranslations('nav');
-  const locale = await getLocale();
-const whatsappNumber = '16477875999'; 
-const whatsappMessage = encodeURIComponent(t('whatsappBookingMessage'));
-const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-  // Anchor links into homepage sections. Built with the current locale prefix
-  // so they keep the active language (a plain <a> otherwise drops to default).
+  const t =
+    await getTranslations('nav');
+
+  const locale =
+    await getLocale();
+
+  const currentLocale =
+    locale === 'ar'
+      ? 'ar'
+      : 'en';
+
+  const copy =
+    navigationCopy[
+      currentLocale
+    ];
+
+  const whatsappHref = buildWhatsAppHref(
+    buildTrialLessonMessage(currentLocale)
+  );
+
   const sectionLinks = [
-    // { href: `/${locale}#about`, label: t('about') },
-    { href: `/${locale}#programs`, label: t('programs') },
-    { href: `/${locale}#services`, label: t('services') },
-    { href: `/${locale}#faq`, label: t('faq') },
-     { href: `/${locale}#pricing`, label: t('pricing') }
+    {
+      href:
+        routePath.programs(
+          currentLocale
+        ),
+      label:
+        t('programs'),
+    },
+    {
+      href:
+        routePath.services(
+          currentLocale
+        ),
+      label:
+        t('services'),
+    },
+    {
+      href:
+        routePath.packages(
+          currentLocale
+        ),
+      label:
+        copy.packages,
+    },
+    {
+      href:
+        routePath.howItWorks(
+          currentLocale
+        ),
+      label:
+        copy.howItWorks,
+    },
+    {
+      href:
+        routePath.about(
+          currentLocale
+        ),
+      label:
+        copy.about,
+    },
+    {
+      href:
+        routePath.faq(
+          currentLocale
+        ),
+      label:
+        t('faq'),
+    },
   ];
 
-  // Passed to MobileNav (which builds its own anchor links the same way).
-  const mobileSectionLinks = sectionLinks;
+  const subjectCategories:
+    SubjectCategory[] = [
+      {
+        key: 'math',
+        label:
+          copy.math,
+        href:
+          routePath.subject(
+            currentLocale,
+            'math'
+          ),
+        children:
+          publicMathPathways.map(
+            (pathway) => ({
+              label:
+                pathway.title[
+                  currentLocale
+                ],
+              href:
+                routePath.mathPathway(
+                  currentLocale,
+                  pathway.slug
+                ),
+            })
+          ),
+      },
+      {
+        key: 'english',
+        label:
+          copy.english,
+        href:
+          routePath.subject(
+            currentLocale,
+            'english'
+          ),
+        children:
+          approvedEnglishStrands.map(
+            (strand) => ({
+              label:
+                strand.title[
+                  currentLocale
+                ],
+              href:
+                routePath.englishStrand(
+                  currentLocale,
+                  strand.slug
+                ),
+            })
+          ),
+      },
+      {
+        key: 'general-science',
+        label:
+          copy.generalScience,
+        href:
+          routePath.subject(
+            currentLocale,
+            'general-science'
+          ),
+        children:
+          approvedGeneralScienceStrands.map(
+            (strand) => ({
+              label:
+                strand.title[
+                  currentLocale
+                ],
+              href:
+                routePath.scienceStrand(
+                  currentLocale,
+                  'general-science',
+                  strand.slug
+                ),
+            })
+          ),
+      },
+      {
+        key: 'chemistry',
+        label:
+          copy.chemistry,
+        href:
+          routePath.subject(
+            currentLocale,
+            'chemistry'
+          ),
+        children:
+          approvedChemistryStrands.map(
+            (strand) => ({
+              label:
+                strand.title[
+                  currentLocale
+                ],
+              href:
+                routePath.scienceStrand(
+                  currentLocale,
+                  'chemistry',
+                  strand.slug
+                ),
+            })
+          ),
+      },
+      {
+        key: 'physics',
+        label:
+          copy.physics,
+        href:
+          routePath.subject(
+            currentLocale,
+            'physics'
+          ),
+        children:
+          approvedPhysicsStrands.map(
+            (strand) => ({
+              label:
+                strand.title[
+                  currentLocale
+                ],
+              href:
+                routePath.scienceStrand(
+                  currentLocale,
+                  'physics',
+                  strand.slug
+                ),
+            })
+          ),
+      },
+      {
+        key: 'programme-francais',
+        label:
+          copy.frenchProgram,
+        href:
+          programmeFrancaisRoutes.home,
+        children: [
+          {
+            label:
+              'Français',
+            href:
+              programmeFrancaisRoutes.subject(
+                'francais'
+              ),
+          },
+          {
+            label:
+              'Mathématiques en français',
+            href:
+              programmeFrancaisRoutes.subject(
+                'mathematiques-en-francais'
+              ),
+          },
+        ],
+      },
+    ];
 
-  const subjectCategories = t.raw('subjectsMenu.categories') as SubjectCategory[];
-
-  const navLinkClass =
-    'group relative rounded-full px-3.5 py-2 text-body font-medium text-ink-secondary transition-colors duration-200 hover:bg-accent-50 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2';
-  const underlineClass =
-    'absolute inset-x-3.5 bottom-1 h-0.5 origin-center scale-x-0 rounded-full bg-accent-500 transition-transform duration-200 ease-out group-hover:scale-x-100';
+  const navLinkClass = [
+    'group',
+    'relative',
+    'inline-flex',
+    'min-h-touch',
+    'items-center',
+    'rounded-button',
+    'px-2',
+    'text-[0.78rem]',
+    'font-bold',
+    'text-muted-foreground',
+    'transition-[color,background-color]',
+    'duration-200',
+    'hover:bg-muted',
+    'hover:text-foreground',
+    'focus-visible:outline-none',
+    'focus-visible:ring-2',
+    'focus-visible:ring-ring',
+    'focus-visible:ring-offset-2',
+    'focus-visible:ring-offset-background',
+  ].join(' ');
 
   return (
-    <>
+    <header
+      className="
+        sticky
+        top-0
+        z-40
+        border-b
+        border-border/70
+        bg-background/90
+        shadow-xs
+        backdrop-blur-xl
+      "
+    >
+      <Container
+        className="
+          flex
+          min-h-16
+          items-center
+          justify-between
+          gap-2
+          xl:min-h-[4.5rem]
+        "
+      >
+        <Link
+          href="/"
+          aria-label={t('home')}
+          className="
+            group
+            inline-flex
+            shrink-0
+            items-center
+            rounded-button
+            focus-visible:outline-none
+            focus-visible:ring-2
+            focus-visible:ring-ring
+            focus-visible:ring-offset-2
+            focus-visible:ring-offset-background
+          "
+        >
+          <Image
+            src="/images/logo.png"
+            alt="Success Path Mentors"
+            width={145}
+            height={47}
+            priority
+            sizes="(max-width: 1024px) 122px, 145px"
+            className="
+              h-8
+              w-auto
+              object-contain
+              transition-transform
+              duration-300
+              ease-out
+              group-hover:scale-[1.03]
+              motion-reduce:transition-none
+              motion-reduce:group-hover:scale-100
+              xl:h-8
+            "
+          />
+        </Link>
 
-      <header className="sticky top-0 z-40 relative bg-surface/95 shadow-sm backdrop-blur">
-        <span
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-accent-300 to-transparent"
-        />
+        <nav
+          aria-label={
+            copy.primaryNavigation
+          }
+          className="
+            hidden
+            items-center
+            flex-1
+            justify-center
+            gap-0
+            xl:flex
+          "
+        >
+          <SubjectsMenu
+            triggerLabel={
+              copy.subjects
+            }
+            overviewHref={
+              routePath.subjects(
+                currentLocale
+              )
+            }
+            overviewLabel={
+              copy.allSubjects
+            }
+            categories={
+              subjectCategories
+            }
+          />
 
-        <Container className="flex h-16 items-center justify-between gap-3 lg:h-20">
-          <Link
-            href="/"
-            className="group flex shrink-0 items-center gap-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2"
-            aria-label="Mustafa Academy home"
-          >
-            <Image
-              src="/images/logo.png"
-              alt="Mustafa Academy — Success Path Mentors"
-              width={160}
-              height={47}
-              priority
-              className="h-7 w-auto transition-transform duration-300 ease-out group-hover:scale-105 sm:h-8 lg:h-9"
-            />
-          </Link>
+          <LocationsMenu
+            triggerLabel={copy.locations}
+            overviewHref={routePath.locations(currentLocale)}
+            overviewLabel={currentLocale === 'ar' ? 'عرض جميع المواقع' : 'View all locations'}
+            countries={locationNavigation}
+            locale={currentLocale}
+          />
 
-          <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
-
-            {/* Subjects mega-menu */}
-            <SubjectsMenu triggerLabel={t('subjectsMenu.trigger')} categories={subjectCategories} />
-
-            {/* Section anchor links */}
-            {sectionLinks.map((link) => (
-              <a key={link.href} href={link.href} className={navLinkClass}>
+          {sectionLinks.map(
+            (link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className={
+                  navLinkClass
+                }
+              >
                 {link.label}
-                <span aria-hidden="true" className={underlineClass} />
+
+                <span
+                  aria-hidden="true"
+                  className="
+                    absolute
+                    inset-x-3
+                    bottom-1
+                    h-0.5
+                    origin-center
+                    scale-x-0
+                    rounded-full
+                    bg-accent
+                    transition-transform
+                    duration-200
+                    group-hover:scale-x-100
+                  "
+                />
               </a>
-            ))}
-          </nav>
+            )
+          )}
+        </nav>
 
-          <div className="flex items-center gap-2 sm:gap-3">
+        <div
+          className="
+            flex
+            items-center
+            gap-2
+            sm:gap-3
+          "
+        >
+          <div className="hidden xl:block">
             <LocaleSwitcher />
-<a
-         href={whatsappHref}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="group relative hidden overflow-hidden rounded-full bg-gradient-to-r from-accent-600 to-accent-500 px-4 py-2 text-small font-semibold text-white shadow-md shadow-accent-600/20 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent-600/35 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 active:translate-y-0 motion-reduce:transition-none motion-reduce:hover:translate-y-0 lg:inline-flex"
->
-  <span
-    aria-hidden="true"
-    className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full motion-reduce:hidden"
-  />
-  <span className="relative inline-flex items-center gap-1.5">
-    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={1.6} className="h-4 w-4 shrink-0" aria-hidden="true">
-      <rect x="3" y="4" width="14" height="13" rx="2" />
-      <path strokeLinecap="round" d="M3 8h14M7 2.5v3M13 2.5v3" />
-    </svg>
-    {t('bookFreeSession')}
-  </span>
-</a>
-
-            <MobileNav
-              sectionLinks={mobileSectionLinks}
-              homeLabel={t('home')}
-              homeHref={`/${locale}`}
-              bookLabel={t('bookFreeSession')}
-              subjectsLabel={t('subjectsMenu.trigger')}
-              subjectCategories={subjectCategories}
-            />
           </div>
-        </Container>
-      </header>
-    </>
+
+          <div className="xl:hidden">
+            <LocaleSwitcher variant="compact" />
+          </div>
+
+          <a
+            href="tel:+16477875999"
+            aria-label={currentLocale === 'ar' ? 'اتصل بنا على الرقم +1 647 787 5999' : 'Call us at +1 647 787 5999'}
+            className="hidden items-center gap-1.5 rounded-button border border-border/70 bg-background px-2.5 py-2 text-[0.78rem] font-bold text-foreground shadow-xs transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 2xl:inline-flex"
+          >
+            <Phone aria-hidden="true" className="h-4 w-4 text-accent" />
+            <span dir="ltr" className="whitespace-nowrap">{WHATSAPP_DISPLAY_NUMBER}</span>
+          </a>
+
+          <a
+            href={whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={
+              buttonVariants({
+                variant: 'accent',
+                size: 'sm',
+                className:
+                  'hidden min-[1680px]:inline-flex',
+              })
+            }
+          >
+            <svg
+              viewBox="0 0 20 20"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1.7}
+              className="
+                h-4
+                w-4
+                shrink-0
+              "
+              aria-hidden="true"
+            >
+              <rect
+                x="3"
+                y="4"
+                width="14"
+                height="13"
+                rx="2"
+              />
+
+              <path
+                strokeLinecap="round"
+                d="M3 8h14M7 2.5v3M13 2.5v3"
+              />
+            </svg>
+
+            {t('bookFreeSession')}
+          </a>
+
+          <MobileNav
+            sectionLinks={
+              sectionLinks
+            }
+            homeLabel={
+              t('home')
+            }
+            homeHref={
+              routePath.home(
+                currentLocale
+              )
+            }
+            bookLabel={
+              t('bookFreeSession')
+            }
+            bookingHref={
+              whatsappHref
+            }
+            subjectsLabel={
+              copy.subjects
+            }
+            subjectsOverviewHref={
+              routePath.subjects(
+                currentLocale
+              )
+            }
+            subjectsOverviewLabel={
+              copy.allSubjects
+            }
+            subjectCategories={
+              subjectCategories
+            }
+            locationsLabel={copy.locations}
+            locationsOverviewHref={routePath.locations(currentLocale)}
+            locationsOverviewLabel={currentLocale === 'ar' ? 'عرض جميع أماكن خدمتنا' : 'View all locations'}
+            locationCountries={locationNavigation}
+            locale={currentLocale}
+            openMenuLabel={
+              t('openMenu')
+            }
+            closeMenuLabel={
+              t('closeMenu')
+            }
+            phoneLabel={currentLocale === 'ar' ? 'اتصل بنا' : 'Call us'}
+            phoneNumber={WHATSAPP_DISPLAY_NUMBER}
+          />
+        </div>
+      </Container>
+    </header>
   );
 }

@@ -1,0 +1,258 @@
+{
+  "metadata": {
+    "subject": "Chemistry",
+    "subjectSlug": "chemistry",
+    "strand": "Chemical Nomenclature and Formulas",
+    "strandSlug": "chemical-nomenclature-formulas",
+    "gradeRange": {
+      "min": 9,
+      "max": 12
+    },
+    "gradeLevels": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 10,
+    "gradedSourceRecordCount": 8,
+    "nonGradedSourceRecordCount": 2,
+    "mainTopicCount": 8,
+    "subtopicCount": 8,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "chemical-nomenclature-formulas",
+    "title": {
+      "en": "Chemical Nomenclature and Formulas",
+      "ar": "التسمية والصيغ الكيميائية"
+    },
+    "description": {
+      "en": "Naming ionic and molecular compounds, writing chemical formulas, and working with polyatomic ions.",
+      "ar": "تسمية المركبات الأيونية والجزيئية وكتابة الصيغ الكيميائية والتعامل مع الأيونات متعددة الذرات."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-chemical-formulas",
+          "title": "Chemical Formulas",
+          "subtopics": [
+            {
+              "id": "writing-formulas-and-polyatomic-ions",
+              "title": "Writing formulas and polyatomic ions"
+            }
+          ],
+          "sourceRows": [
+            10
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-chemical-nomenclature",
+          "title": "Chemical Nomenclature",
+          "subtopics": [
+            {
+              "id": "naming-ionic-and-molecular-compounds",
+              "title": "Naming ionic and molecular compounds"
+            }
+          ],
+          "sourceRows": [
+            11
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-chemical-formulas",
+          "title": "Chemical Formulas",
+          "subtopics": [
+            {
+              "id": "writing-formulas-and-polyatomic-ions",
+              "title": "Writing formulas and polyatomic ions"
+            }
+          ],
+          "sourceRows": [
+            31
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-chemical-nomenclature",
+          "title": "Chemical Nomenclature",
+          "subtopics": [
+            {
+              "id": "naming-ionic-and-molecular-compounds",
+              "title": "Naming ionic and molecular compounds"
+            }
+          ],
+          "sourceRows": [
+            32
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-chemical-formulas",
+          "title": "Chemical Formulas",
+          "subtopics": [
+            {
+              "id": "writing-formulas-and-polyatomic-ions",
+              "title": "Writing formulas and polyatomic ions"
+            }
+          ],
+          "sourceRows": [
+            62
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-chemical-nomenclature",
+          "title": "Chemical Nomenclature",
+          "subtopics": [
+            {
+              "id": "naming-ionic-and-molecular-compounds",
+              "title": "Naming ionic and molecular compounds"
+            }
+          ],
+          "sourceRows": [
+            63
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-chemical-formulas",
+          "title": "Chemical Formulas",
+          "subtopics": [
+            {
+              "id": "writing-formulas-and-polyatomic-ions",
+              "title": "Writing formulas and polyatomic ions"
+            }
+          ],
+          "sourceRows": [
+            112
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-chemical-nomenclature",
+          "title": "Chemical Nomenclature",
+          "subtopics": [
+            {
+              "id": "naming-ionic-and-molecular-compounds",
+              "title": "Naming ionic and molecular compounds"
+            }
+          ],
+          "sourceRows": [
+            113
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    }
+  ]
+}

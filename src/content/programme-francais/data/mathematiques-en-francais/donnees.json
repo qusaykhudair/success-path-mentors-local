@@ -1,0 +1,816 @@
+{
+  "metadata": {
+    "programme": "Programme français",
+    "matiere": "Mathématiques en français",
+    "matiereSlug": "mathematiques-en-francais",
+    "domaine": "D. Données",
+    "domaineSlug": "donnees",
+    "niveaux": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 40,
+    "publicRecordCount": 36,
+    "nonStandardRecordCount": 4,
+    "mainTopicPlacementCount": 33,
+    "subtopicPlacementCount": 36,
+    "observedRecordCount": 6,
+    "referenceRecordCount": 30,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Les sujets principaux et les sous-sujets sont comptés par niveau. Les répétitions entre niveaux sont conservées comme progression pédagogique.",
+    "integrityRules": [
+      "Les répétitions entre niveaux sont conservées.",
+      "Seuls les doublons exacts Niveau + Domaine + Sujet principal + Sous-sujet peuvent être supprimés.",
+      "Les niveaux CECRL, adultes, secondaires parallèles et non précisés sont conservés dans les fichiers de révision.",
+      "Les niveaux sans contenu sont conservés dans le JSON mais masqués sur le site."
+    ]
+  },
+  "domaine": {
+    "slug": "donnees",
+    "titre": "Données",
+    "titreSource": "D. Données",
+    "description": "Collecte, représentation, analyse et interprétation des données, probabilités et statistiques.",
+    "iconKey": "donnees"
+  },
+  "niveaux": [
+    {
+      "niveau": 1,
+      "label": "1re année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-1-analyse-de-donnees",
+          "titre": "Analyse de données",
+          "sousSujets": [
+            {
+              "id": "centre-variabilite-et-conclusions-adaptees",
+              "titre": "Centre, variabilité et conclusions adaptées",
+              "competence": "Lire, comparer et tirer une conclusion à partir de données",
+              "activite": "Critique de graphiques, moyenne/médiane aux niveaux supérieurs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 15
+            }
+          ],
+          "sourceRows": [
+            15
+          ]
+        },
+        {
+          "id": "niveau-1-collecte-et-representation",
+          "titre": "Collecte et représentation",
+          "sousSujets": [
+            {
+              "id": "tableaux-et-diagrammes-adaptes-au-niveau",
+              "titre": "Tableaux et diagrammes adaptés au niveau",
+              "competence": "Formuler une question, recueillir des données et choisir une représentation",
+              "activite": "Sondage de classe, tableau, diagramme et interprétation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 16
+            }
+          ],
+          "sourceRows": [
+            16
+          ]
+        },
+        {
+          "id": "niveau-1-probabilite",
+          "titre": "Probabilité",
+          "sousSujets": [
+            {
+              "id": "evenements-possibles-et-probabilite-experimentale",
+              "titre": "Événements possibles et probabilité expérimentale",
+              "competence": "Décrire et comparer la vraisemblance; simuler des expériences",
+              "activite": "Dés, pièces, cartes, roue et tableau de fréquences",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 17
+            }
+          ],
+          "sourceRows": [
+            17
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 3
+    },
+    {
+      "niveau": 2,
+      "label": "2e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-2-analyse-de-donnees",
+          "titre": "Analyse de données",
+          "sousSujets": [
+            {
+              "id": "centre-variabilite-et-conclusions-adaptees",
+              "titre": "Centre, variabilité et conclusions adaptées",
+              "competence": "Lire, comparer et tirer une conclusion à partir de données",
+              "activite": "Critique de graphiques, moyenne/médiane aux niveaux supérieurs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 42
+            }
+          ],
+          "sourceRows": [
+            42
+          ]
+        },
+        {
+          "id": "niveau-2-collecte-et-representation",
+          "titre": "Collecte et représentation",
+          "sousSujets": [
+            {
+              "id": "tableaux-et-diagrammes-adaptes-au-niveau",
+              "titre": "Tableaux et diagrammes adaptés au niveau",
+              "competence": "Formuler une question, recueillir des données et choisir une représentation",
+              "activite": "Sondage de classe, tableau, diagramme et interprétation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 43
+            }
+          ],
+          "sourceRows": [
+            43
+          ]
+        },
+        {
+          "id": "niveau-2-probabilite",
+          "titre": "Probabilité",
+          "sousSujets": [
+            {
+              "id": "evenements-possibles-et-probabilite-experimentale",
+              "titre": "Événements possibles et probabilité expérimentale",
+              "competence": "Décrire et comparer la vraisemblance; simuler des expériences",
+              "activite": "Dés, pièces, cartes, roue et tableau de fréquences",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 44
+            }
+          ],
+          "sourceRows": [
+            44
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 3
+    },
+    {
+      "niveau": 3,
+      "label": "3e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-3-analyse-de-donnees",
+          "titre": "Analyse de données",
+          "sousSujets": [
+            {
+              "id": "centre-variabilite-et-conclusions-adaptees",
+              "titre": "Centre, variabilité et conclusions adaptées",
+              "competence": "Lire, comparer et tirer une conclusion à partir de données",
+              "activite": "Critique de graphiques, moyenne/médiane aux niveaux supérieurs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 65
+            }
+          ],
+          "sourceRows": [
+            65
+          ]
+        },
+        {
+          "id": "niveau-3-collecte-et-representation",
+          "titre": "Collecte et représentation",
+          "sousSujets": [
+            {
+              "id": "tableaux-et-diagrammes-adaptes-au-niveau",
+              "titre": "Tableaux et diagrammes adaptés au niveau",
+              "competence": "Formuler une question, recueillir des données et choisir une représentation",
+              "activite": "Sondage de classe, tableau, diagramme et interprétation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 66
+            }
+          ],
+          "sourceRows": [
+            66
+          ]
+        },
+        {
+          "id": "niveau-3-probabilite",
+          "titre": "Probabilité",
+          "sousSujets": [
+            {
+              "id": "evenements-possibles-et-probabilite-experimentale",
+              "titre": "Événements possibles et probabilité expérimentale",
+              "competence": "Décrire et comparer la vraisemblance; simuler des expériences",
+              "activite": "Dés, pièces, cartes, roue et tableau de fréquences",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 67
+            }
+          ],
+          "sourceRows": [
+            67
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 3
+    },
+    {
+      "niveau": 4,
+      "label": "4e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-4-analyse-de-donnees",
+          "titre": "Analyse de données",
+          "sousSujets": [
+            {
+              "id": "centre-variabilite-et-conclusions-adaptees",
+              "titre": "Centre, variabilité et conclusions adaptées",
+              "competence": "Lire, comparer et tirer une conclusion à partir de données",
+              "activite": "Critique de graphiques, moyenne/médiane aux niveaux supérieurs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 103
+            }
+          ],
+          "sourceRows": [
+            103
+          ]
+        },
+        {
+          "id": "niveau-4-collecte-et-representation",
+          "titre": "Collecte et représentation",
+          "sousSujets": [
+            {
+              "id": "tableaux-et-diagrammes-adaptes-au-niveau",
+              "titre": "Tableaux et diagrammes adaptés au niveau",
+              "competence": "Formuler une question, recueillir des données et choisir une représentation",
+              "activite": "Sondage de classe, tableau, diagramme et interprétation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 104
+            }
+          ],
+          "sourceRows": [
+            104
+          ]
+        },
+        {
+          "id": "niveau-4-probabilite",
+          "titre": "Probabilité",
+          "sousSujets": [
+            {
+              "id": "evenements-possibles-et-probabilite-experimentale",
+              "titre": "Événements possibles et probabilité expérimentale",
+              "competence": "Décrire et comparer la vraisemblance; simuler des expériences",
+              "activite": "Dés, pièces, cartes, roue et tableau de fréquences",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 105
+            }
+          ],
+          "sourceRows": [
+            105
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 3
+    },
+    {
+      "niveau": 5,
+      "label": "5e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-5-analyse-de-donnees",
+          "titre": "Analyse de données",
+          "sousSujets": [
+            {
+              "id": "centre-variabilite-et-conclusions-adaptees",
+              "titre": "Centre, variabilité et conclusions adaptées",
+              "competence": "Lire, comparer et tirer une conclusion à partir de données",
+              "activite": "Critique de graphiques, moyenne/médiane aux niveaux supérieurs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 138
+            }
+          ],
+          "sourceRows": [
+            138
+          ]
+        },
+        {
+          "id": "niveau-5-collecte-et-representation",
+          "titre": "Collecte et représentation",
+          "sousSujets": [
+            {
+              "id": "tableaux-et-diagrammes-adaptes-au-niveau",
+              "titre": "Tableaux et diagrammes adaptés au niveau",
+              "competence": "Formuler une question, recueillir des données et choisir une représentation",
+              "activite": "Sondage de classe, tableau, diagramme et interprétation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 139
+            }
+          ],
+          "sourceRows": [
+            139
+          ]
+        },
+        {
+          "id": "niveau-5-probabilite",
+          "titre": "Probabilité",
+          "sousSujets": [
+            {
+              "id": "probabilite-experimentale-et-theorique",
+              "titre": "Probabilité expérimentale et théorique",
+              "competence": "Décrire l’espace des résultats et calculer/interpréter une probabilité",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Dés, cartes, simulation et comparaison théorie-expérience; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 140
+            },
+            {
+              "id": "evenements-possibles-et-probabilite-experimentale",
+              "titre": "Événements possibles et probabilité expérimentale",
+              "competence": "Décrire et comparer la vraisemblance; simuler des expériences",
+              "activite": "Dés, pièces, cartes, roue et tableau de fréquences",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 141
+            }
+          ],
+          "sourceRows": [
+            140,
+            141
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 4
+    },
+    {
+      "niveau": 6,
+      "label": "6e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-6-analyse-de-donnees",
+          "titre": "Analyse de données",
+          "sousSujets": [
+            {
+              "id": "centre-variabilite-et-conclusions-adaptees",
+              "titre": "Centre, variabilité et conclusions adaptées",
+              "competence": "Lire, comparer et tirer une conclusion à partir de données",
+              "activite": "Critique de graphiques, moyenne/médiane aux niveaux supérieurs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 175
+            },
+            {
+              "id": "statistiques-descriptives",
+              "titre": "Statistiques descriptives",
+              "competence": "Collecter, représenter, résumer et interpréter des données",
+              "activite": "Exercices d’application gradués; Sondage, tableau, diagramme, moyenne-médiane-mode et conclusion; Support numérique ou visuel; Évaluation diagnostique, correction expliquée et parcours de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 176
+            }
+          ],
+          "sourceRows": [
+            175,
+            176
+          ]
+        },
+        {
+          "id": "niveau-6-collecte-et-representation",
+          "titre": "Collecte et représentation",
+          "sousSujets": [
+            {
+              "id": "tableaux-et-diagrammes-adaptes-au-niveau",
+              "titre": "Tableaux et diagrammes adaptés au niveau",
+              "competence": "Formuler une question, recueillir des données et choisir une représentation",
+              "activite": "Sondage de classe, tableau, diagramme et interprétation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 177
+            }
+          ],
+          "sourceRows": [
+            177
+          ]
+        },
+        {
+          "id": "niveau-6-probabilite",
+          "titre": "Probabilité",
+          "sousSujets": [
+            {
+              "id": "probabilite-experimentale-et-theorique",
+              "titre": "Probabilité expérimentale et théorique",
+              "competence": "Décrire l’espace des résultats et calculer/interpréter une probabilité",
+              "activite": "Dés, cartes, simulation et comparaison théorie-expérience; Exercices d’application gradués; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 178
+            },
+            {
+              "id": "evenements-possibles-et-probabilite-experimentale",
+              "titre": "Événements possibles et probabilité expérimentale",
+              "competence": "Décrire et comparer la vraisemblance; simuler des expériences",
+              "activite": "Dés, pièces, cartes, roue et tableau de fréquences",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 179
+            }
+          ],
+          "sourceRows": [
+            178,
+            179
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 5
+    },
+    {
+      "niveau": 7,
+      "label": "7e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-7-analyse-de-donnees",
+          "titre": "Analyse de données",
+          "sousSujets": [
+            {
+              "id": "centre-variabilite-et-conclusions-adaptees",
+              "titre": "Centre, variabilité et conclusions adaptées",
+              "competence": "Lire, comparer et tirer une conclusion à partir de données",
+              "activite": "Critique de graphiques, moyenne/médiane aux niveaux supérieurs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 214
+            }
+          ],
+          "sourceRows": [
+            214
+          ]
+        },
+        {
+          "id": "niveau-7-collecte-et-representation",
+          "titre": "Collecte et représentation",
+          "sousSujets": [
+            {
+              "id": "tableaux-et-diagrammes-adaptes-au-niveau",
+              "titre": "Tableaux et diagrammes adaptés au niveau",
+              "competence": "Formuler une question, recueillir des données et choisir une représentation",
+              "activite": "Sondage de classe, tableau, diagramme et interprétation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 215
+            }
+          ],
+          "sourceRows": [
+            215
+          ]
+        },
+        {
+          "id": "niveau-7-probabilite",
+          "titre": "Probabilité",
+          "sousSujets": [
+            {
+              "id": "evenements-possibles-et-probabilite-experimentale",
+              "titre": "Événements possibles et probabilité expérimentale",
+              "competence": "Décrire et comparer la vraisemblance; simuler des expériences",
+              "activite": "Dés, pièces, cartes, roue et tableau de fréquences",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 216
+            }
+          ],
+          "sourceRows": [
+            216
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 3
+    },
+    {
+      "niveau": 8,
+      "label": "8e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-8-analyse-de-donnees",
+          "titre": "Analyse de données",
+          "sousSujets": [
+            {
+              "id": "centre-variabilite-et-conclusions-adaptees",
+              "titre": "Centre, variabilité et conclusions adaptées",
+              "competence": "Lire, comparer et tirer une conclusion à partir de données",
+              "activite": "Critique de graphiques, moyenne/médiane aux niveaux supérieurs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 244
+            }
+          ],
+          "sourceRows": [
+            244
+          ]
+        },
+        {
+          "id": "niveau-8-collecte-et-representation",
+          "titre": "Collecte et représentation",
+          "sousSujets": [
+            {
+              "id": "tableaux-et-diagrammes-adaptes-au-niveau",
+              "titre": "Tableaux et diagrammes adaptés au niveau",
+              "competence": "Formuler une question, recueillir des données et choisir une représentation",
+              "activite": "Sondage de classe, tableau, diagramme et interprétation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 245
+            }
+          ],
+          "sourceRows": [
+            245
+          ]
+        },
+        {
+          "id": "niveau-8-probabilite",
+          "titre": "Probabilité",
+          "sousSujets": [
+            {
+              "id": "evenements-possibles-et-probabilite-experimentale",
+              "titre": "Événements possibles et probabilité expérimentale",
+              "competence": "Décrire et comparer la vraisemblance; simuler des expériences",
+              "activite": "Dés, pièces, cartes, roue et tableau de fréquences",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 246
+            }
+          ],
+          "sourceRows": [
+            246
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 3
+    },
+    {
+      "niveau": 9,
+      "label": "9e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-9-analyse-de-donnees",
+          "titre": "Analyse de données",
+          "sousSujets": [
+            {
+              "id": "statistiques-descriptives",
+              "titre": "Statistiques descriptives",
+              "competence": "Collecter, représenter, résumer et interpréter des données",
+              "activite": "Correction, révision et remédiation; Dés, cartes, simulation et comparaison théorie-expérience; Exercices d’application gradués; Sondage, tableau, diagramme, moyenne-médiane-mode et conclusion; Support numérique ou visuel; Évaluation diagnostique ou formative; Évaluation diagnostique, correction expliquée et parcours de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne; Élevée",
+              "sourceRow": 280
+            }
+          ],
+          "sourceRows": [
+            280
+          ]
+        },
+        {
+          "id": "niveau-9-collecte-representation-et-analyse",
+          "titre": "Collecte, représentation et analyse",
+          "sousSujets": [
+            {
+              "id": "collecte-representation-et-analyse",
+              "titre": "Collecte, représentation et analyse",
+              "competence": "Interpréter des données, tendances et sources de biais",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 281
+            }
+          ],
+          "sourceRows": [
+            281
+          ]
+        },
+        {
+          "id": "niveau-9-probabilite",
+          "titre": "Probabilité",
+          "sousSujets": [
+            {
+              "id": "probabilite-experimentale-et-theorique",
+              "titre": "Probabilité expérimentale et théorique",
+              "competence": "Décrire l’espace des résultats et calculer/interpréter une probabilité",
+              "activite": "Dés, cartes, simulation et comparaison théorie-expérience; Exercices d’application gradués; Sondage, tableau, diagramme, moyenne-médiane-mode et conclusion; Support numérique ou visuel; Évaluation diagnostique, correction expliquée et parcours de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 282
+            }
+          ],
+          "sourceRows": [
+            282
+          ]
+        },
+        {
+          "id": "niveau-9-representation-des-donnees",
+          "titre": "Représentation des données",
+          "sousSujets": [
+            {
+              "id": "tableaux-diagrammes-et-graphiques",
+              "titre": "Tableaux, diagrammes et graphiques",
+              "competence": "Choisir, construire et interpréter une représentation",
+              "activite": "Balance algébrique, tuiles, vérification et problèmes; Créer un graphique à partir de données et critiquer une représentation; Interaction orale ou présentation; Support numérique ou visuel; Tableau de variations, graphique et interprétation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 283
+            }
+          ],
+          "sourceRows": [
+            283
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 4,
+      "nombreSousSujets": 4
+    },
+    {
+      "niveau": 10,
+      "label": "10e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-10-probabilite-et-simulation",
+          "titre": "Probabilité et simulation",
+          "sousSujets": [
+            {
+              "id": "probabilite-et-simulation",
+              "titre": "Probabilité et simulation",
+              "competence": "Calculer et comparer probabilités théoriques/expérimentales",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 321
+            }
+          ],
+          "sourceRows": [
+            321
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 1,
+      "nombreSousSujets": 1
+    },
+    {
+      "niveau": 11,
+      "label": "11e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-11-probabilite-conditionnelle-et-combinatoire",
+          "titre": "Probabilité conditionnelle et combinatoire",
+          "sousSujets": [
+            {
+              "id": "probabilite-conditionnelle-et-combinatoire",
+              "titre": "Probabilité conditionnelle et combinatoire",
+              "competence": "Modéliser des événements composés",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 344
+            }
+          ],
+          "sourceRows": [
+            344
+          ]
+        },
+        {
+          "id": "niveau-11-statistique-descriptive-et-distributions",
+          "titre": "Statistique descriptive et distributions",
+          "sousSujets": [
+            {
+              "id": "statistique-descriptive-et-distributions",
+              "titre": "Statistique descriptive et distributions",
+              "competence": "Analyser centre, dispersion, corrélation et limites des données",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 345
+            }
+          ],
+          "sourceRows": [
+            345
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 2,
+      "nombreSousSujets": 2
+    },
+    {
+      "niveau": 12,
+      "label": "12e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-12-probabilite-avancee",
+          "titre": "Probabilité avancée",
+          "sousSujets": [
+            {
+              "id": "probabilite-avancee",
+              "titre": "Probabilité avancée",
+              "competence": "Utiliser modèles discrets et continus selon le cours",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 353
+            }
+          ],
+          "sourceRows": [
+            353
+          ]
+        },
+        {
+          "id": "niveau-12-statistique-et-inference",
+          "titre": "Statistique et inférence",
+          "sousSujets": [
+            {
+              "id": "statistique-et-inference",
+              "titre": "Statistique et inférence",
+              "competence": "Analyser des distributions, échantillons et conclusions",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 354
+            }
+          ],
+          "sourceRows": [
+            354
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 2,
+      "nombreSousSujets": 2
+    }
+  ]
+}

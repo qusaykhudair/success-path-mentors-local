@@ -1,5 +1,4 @@
-# Success Path Mentors — Website Rebuild
-
+# Success Path Mentors — Website Rebuild- Qusay2026
 Next.js 15 (App Router) + React 19 + TypeScript (strict) + Tailwind CSS.
 Full EN/AR internationalization with RTL/LTR support via `next-intl`.
 

@@ -1,0 +1,232 @@
+{
+  "metadata": {
+    "subject": "Chemistry",
+    "subjectSlug": "chemistry",
+    "strand": "Matter and Chemical Properties",
+    "strandSlug": "matter-chemical-properties",
+    "gradeRange": {
+      "min": 5,
+      "max": 12
+    },
+    "gradeLevels": [
+      5,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 10,
+    "gradedSourceRecordCount": 6,
+    "nonGradedSourceRecordCount": 4,
+    "mainTopicCount": 6,
+    "subtopicCount": 6,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "matter-chemical-properties",
+    "title": {
+      "en": "Matter and Chemical Properties",
+      "ar": "المادة والخواص الكيميائية"
+    },
+    "description": {
+      "en": "States and classification of matter, particle theory, physical and chemical properties, and changes.",
+      "ar": "حالات المادة وتصنيفها ونظرية الجسيمات والخواص والتغيرات الفيزيائية والكيميائية."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g5-states-of-matter",
+          "title": "States of Matter",
+          "subtopics": [
+            {
+              "id": "solids-liquids-gases-and-phase-behavior",
+              "title": "Solids, liquids, gases, and phase behavior"
+            }
+          ],
+          "sourceRows": [
+            2
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-classification-of-matter",
+          "title": "Classification of Matter",
+          "subtopics": [
+            {
+              "id": "elements-compounds-mixtures-and-properties",
+              "title": "Elements, compounds, mixtures, and properties"
+            }
+          ],
+          "sourceRows": [
+            16
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-particle-theory",
+          "title": "Particle Theory",
+          "subtopics": [
+            {
+              "id": "particle-theory-of-matter",
+              "title": "Particle theory of matter"
+            }
+          ],
+          "sourceRows": [
+            17
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-physical-and-chemical-changes",
+          "title": "Physical and Chemical Changes",
+          "subtopics": [
+            {
+              "id": "physical-changes",
+              "title": "Physical changes"
+            }
+          ],
+          "sourceRows": [
+            39
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-classification-of-matter",
+          "title": "Classification of Matter",
+          "subtopics": [
+            {
+              "id": "elements-compounds-mixtures-and-properties",
+              "title": "Elements, compounds, mixtures, and properties"
+            }
+          ],
+          "sourceRows": [
+            72
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-classification-of-matter",
+          "title": "Classification of Matter",
+          "subtopics": [
+            {
+              "id": "elements-compounds-mixtures-and-properties",
+              "title": "Elements, compounds, mixtures, and properties"
+            }
+          ],
+          "sourceRows": [
+            119
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    }
+  ]
+}

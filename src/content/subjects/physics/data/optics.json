@@ -1,0 +1,326 @@
+{
+  "metadata": {
+    "subject": "Physics",
+    "subjectSlug": "physics",
+    "strand": "Optics",
+    "strandSlug": "optics",
+    "gradeRange": {
+      "min": 10,
+      "max": 12
+    },
+    "gradeLevels": [
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 16,
+    "gradedSourceRecordCount": 13,
+    "nonGradedSourceRecordCount": 3,
+    "mainTopicCount": 13,
+    "subtopicCount": 13,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "optics",
+    "title": {
+      "en": "Optics",
+      "ar": "البصريات"
+    },
+    "description": {
+      "en": "Light behavior, reflection, mirrors, refraction, total internal reflection, lenses, image formation, interference, and diffraction.",
+      "ar": "سلوك الضوء والانعكاس والمرايا والانكسار والانعكاس الكلي والعدسات وتكوين الصور والتداخل والحيود."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-lenses-and-image-formation",
+          "title": "Lenses and Image Formation",
+          "subtopics": [
+            {
+              "id": "converging-diverging-lenses-lens-equation-and-magnification",
+              "title": "Converging/diverging lenses, lens equation, and magnification"
+            }
+          ],
+          "sourceRows": [
+            36
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-light",
+          "title": "Light",
+          "subtopics": [
+            {
+              "id": "properties-and-behavior-of-light",
+              "title": "Properties and behavior of light"
+            }
+          ],
+          "sourceRows": [
+            37
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-optics",
+          "title": "Optics",
+          "subtopics": [
+            {
+              "id": "optics-overview-and-ray-tracing",
+              "title": "Optics overview and ray tracing"
+            }
+          ],
+          "sourceRows": [
+            38
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-reflection-and-mirrors",
+          "title": "Reflection and Mirrors",
+          "subtopics": [
+            {
+              "id": "reflection-mirrors-and-ray-diagrams",
+              "title": "Reflection, mirrors, and ray diagrams"
+            }
+          ],
+          "sourceRows": [
+            39
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-refraction-and-total-internal-reflection",
+          "title": "Refraction and Total Internal Reflection",
+          "subtopics": [
+            {
+              "id": "refraction-refractive-index-and-total-internal-reflection",
+              "title": "Refraction, refractive index, and total internal reflection"
+            }
+          ],
+          "sourceRows": [
+            40
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 5,
+      "subtopicCount": 5
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-lenses-and-image-formation",
+          "title": "Lenses and Image Formation",
+          "subtopics": [
+            {
+              "id": "converging-diverging-lenses-lens-equation-and-magnification",
+              "title": "Converging/diverging lenses, lens equation, and magnification"
+            }
+          ],
+          "sourceRows": [
+            82
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-optics",
+          "title": "Optics",
+          "subtopics": [
+            {
+              "id": "optics-overview-and-ray-tracing",
+              "title": "Optics overview and ray tracing"
+            }
+          ],
+          "sourceRows": [
+            83
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-reflection-and-mirrors",
+          "title": "Reflection and Mirrors",
+          "subtopics": [
+            {
+              "id": "reflection-mirrors-and-ray-diagrams",
+              "title": "Reflection, mirrors, and ray diagrams"
+            }
+          ],
+          "sourceRows": [
+            84
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-refraction-and-total-internal-reflection",
+          "title": "Refraction and Total Internal Reflection",
+          "subtopics": [
+            {
+              "id": "refraction-refractive-index-and-total-internal-reflection",
+              "title": "Refraction, refractive index, and total internal reflection"
+            }
+          ],
+          "sourceRows": [
+            85
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 4,
+      "subtopicCount": 4
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-lenses-and-image-formation",
+          "title": "Lenses and Image Formation",
+          "subtopics": [
+            {
+              "id": "converging-diverging-lenses-lens-equation-and-magnification",
+              "title": "Converging/diverging lenses, lens equation, and magnification"
+            }
+          ],
+          "sourceRows": [
+            128
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-optics",
+          "title": "Optics",
+          "subtopics": [
+            {
+              "id": "optics-overview-and-ray-tracing",
+              "title": "Optics overview and ray tracing"
+            }
+          ],
+          "sourceRows": [
+            129
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-refraction-and-total-internal-reflection",
+          "title": "Refraction and Total Internal Reflection",
+          "subtopics": [
+            {
+              "id": "refraction-refractive-index-and-total-internal-reflection",
+              "title": "Refraction, refractive index, and total internal reflection"
+            }
+          ],
+          "sourceRows": [
+            130
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-wave-optics",
+          "title": "Wave Optics",
+          "subtopics": [
+            {
+              "id": "double-slit-interference-and-diffraction",
+              "title": "Double-slit interference and diffraction"
+            }
+          ],
+          "sourceRows": [
+            131
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 4,
+      "subtopicCount": 4
+    }
+  ]
+}

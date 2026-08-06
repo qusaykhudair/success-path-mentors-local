@@ -1,0 +1,313 @@
+{
+  "metadata": {
+    "subject": "English",
+    "strand": "Academic Skills and Assignments",
+    "strandSlug": "academic-skills-assignments",
+    "gradeRange": {
+      "min": 1,
+      "max": 12
+    },
+    "sourceRecordCount": 13,
+    "gradedSourceRecordCount": 12,
+    "nonGradedSourceRecordCount": 1,
+    "mainTopicCount": 12,
+    "subtopicCount": 12,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is intentional curriculum progression.",
+    "integrityRules": [
+      "Repeated topics or skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Age-only, adult, IELTS, and grade-not-stated records remain outside Grade 1–12 pages.",
+      "Every public strand contains all twelve grade sections, including empty documented grades."
+    ]
+  },
+  "strand": {
+    "slug": "academic-skills-assignments",
+    "title": {
+      "en": "Academic Skills and Assignments",
+      "ar": "المهارات والواجبات الأكاديمية"
+    },
+    "description": {
+      "en": "Assignment completion, project support, assessment work, and organized academic follow-through.",
+      "ar": "إكمال الواجبات ودعم المشاريع وأعمال التقييم والمتابعة الأكاديمية المنظمة."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g2-assignment-support",
+          "title": "Assignment Support",
+          "subtopics": [
+            {
+              "id": "assignment-completion-and-project-support",
+              "title": "Assignment completion and project support"
+            }
+          ],
+          "sourceRows": [
+            2
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g3-assignment-support",
+          "title": "Assignment Support",
+          "subtopics": [
+            {
+              "id": "assignment-completion-and-project-support",
+              "title": "Assignment completion and project support"
+            }
+          ],
+          "sourceRows": [
+            3
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g4-assignment-support",
+          "title": "Assignment Support",
+          "subtopics": [
+            {
+              "id": "assignment-completion-and-project-support",
+              "title": "Assignment completion and project support"
+            }
+          ],
+          "sourceRows": [
+            4
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g5-assignment-support",
+          "title": "Assignment Support",
+          "subtopics": [
+            {
+              "id": "assignment-completion-and-project-support",
+              "title": "Assignment completion and project support"
+            }
+          ],
+          "sourceRows": [
+            5
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g6-assignment-support",
+          "title": "Assignment Support",
+          "subtopics": [
+            {
+              "id": "assignment-completion-and-project-support",
+              "title": "Assignment completion and project support"
+            }
+          ],
+          "sourceRows": [
+            6
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g7-assignment-support",
+          "title": "Assignment Support",
+          "subtopics": [
+            {
+              "id": "assignment-completion-and-project-support",
+              "title": "Assignment completion and project support"
+            }
+          ],
+          "sourceRows": [
+            7
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g8-assignment-support",
+          "title": "Assignment Support",
+          "subtopics": [
+            {
+              "id": "assignment-completion-and-project-support",
+              "title": "Assignment completion and project support"
+            }
+          ],
+          "sourceRows": [
+            8
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-assignment-support",
+          "title": "Assignment Support",
+          "subtopics": [
+            {
+              "id": "assignment-completion-and-project-support",
+              "title": "Assignment completion and project support"
+            }
+          ],
+          "sourceRows": [
+            9
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-assignment-support",
+          "title": "Assignment Support",
+          "subtopics": [
+            {
+              "id": "assignment-completion-and-project-support",
+              "title": "Assignment completion and project support"
+            }
+          ],
+          "sourceRows": [
+            10
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-assessment",
+          "title": "Assessment",
+          "subtopics": [
+            {
+              "id": "tests-and-examinations",
+              "title": "Tests and examinations"
+            }
+          ],
+          "sourceRows": [
+            11
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-assignment-support",
+          "title": "Assignment Support",
+          "subtopics": [
+            {
+              "id": "assignment-completion-and-project-support",
+              "title": "Assignment completion and project support"
+            }
+          ],
+          "sourceRows": [
+            12
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-assignment-support",
+          "title": "Assignment Support",
+          "subtopics": [
+            {
+              "id": "assignment-completion-and-project-support",
+              "title": "Assignment completion and project support"
+            }
+          ],
+          "sourceRows": [
+            13
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    }
+  ]
+}

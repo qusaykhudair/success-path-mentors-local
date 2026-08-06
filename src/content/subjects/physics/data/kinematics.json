@@ -1,0 +1,329 @@
+{
+  "metadata": {
+    "subject": "Physics",
+    "subjectSlug": "physics",
+    "strand": "Kinematics",
+    "strandSlug": "kinematics",
+    "gradeRange": {
+      "min": 9,
+      "max": 12
+    },
+    "gradeLevels": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 21,
+    "gradedSourceRecordCount": 15,
+    "nonGradedSourceRecordCount": 6,
+    "mainTopicCount": 12,
+    "subtopicCount": 15,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "kinematics",
+    "title": {
+      "en": "Kinematics",
+      "ar": "الحركة"
+    },
+    "description": {
+      "en": "Displacement, speed, velocity, acceleration, motion graphs, kinematic equations, projectiles, relative motion, and free fall.",
+      "ar": "الإزاحة والسرعة والتسارع ورسوم الحركة والمعادلات الحركية والمقذوفات والحركة النسبية والسقوط الحر."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-motion-graphs",
+          "title": "Motion Graphs",
+          "subtopics": [
+            {
+              "id": "position-velocity-and-acceleration-time-graphs",
+              "title": "Position-, velocity-, and acceleration-time graphs"
+            }
+          ],
+          "sourceRows": [
+            20
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-motion-description",
+          "title": "Motion Description",
+          "subtopics": [
+            {
+              "id": "displacement-speed-velocity-and-acceleration",
+              "title": "Displacement, speed, velocity, and acceleration"
+            },
+            {
+              "id": "language-of-motion",
+              "title": "Language of motion"
+            },
+            {
+              "id": "speed-distance-time-relationships",
+              "title": "Speed–distance–time relationships"
+            }
+          ],
+          "sourceRows": [
+            32,
+            33,
+            34
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-motion-graphs",
+          "title": "Motion Graphs",
+          "subtopics": [
+            {
+              "id": "position-velocity-and-acceleration-time-graphs",
+              "title": "Position-, velocity-, and acceleration-time graphs"
+            }
+          ],
+          "sourceRows": [
+            35
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 4
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-kinematic-equations",
+          "title": "Kinematic Equations",
+          "subtopics": [
+            {
+              "id": "one-dimensional-kinematics-and-suvat",
+              "title": "One-dimensional kinematics and SUVAT"
+            }
+          ],
+          "sourceRows": [
+            73
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-motion-description",
+          "title": "Motion Description",
+          "subtopics": [
+            {
+              "id": "displacement-speed-velocity-and-acceleration",
+              "title": "Displacement, speed, velocity, and acceleration"
+            }
+          ],
+          "sourceRows": [
+            74
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-motion-graphs",
+          "title": "Motion Graphs",
+          "subtopics": [
+            {
+              "id": "position-velocity-and-acceleration-time-graphs",
+              "title": "Position-, velocity-, and acceleration-time graphs"
+            }
+          ],
+          "sourceRows": [
+            75
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-projectile-and-two-dimensional-motion",
+          "title": "Projectile and Two-Dimensional Motion",
+          "subtopics": [
+            {
+              "id": "projectile-and-curvilinear-motion",
+              "title": "Projectile and curvilinear motion"
+            }
+          ],
+          "sourceRows": [
+            76
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-relative-and-falling-motion",
+          "title": "Relative and Falling Motion",
+          "subtopics": [
+            {
+              "id": "relative-motion-and-free-fall",
+              "title": "Relative motion and free fall"
+            }
+          ],
+          "sourceRows": [
+            77
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 5,
+      "subtopicCount": 5
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-kinematic-equations",
+          "title": "Kinematic Equations",
+          "subtopics": [
+            {
+              "id": "one-dimensional-kinematics-and-suvat",
+              "title": "One-dimensional kinematics and SUVAT"
+            }
+          ],
+          "sourceRows": [
+            115
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-motion-description",
+          "title": "Motion Description",
+          "subtopics": [
+            {
+              "id": "displacement-speed-velocity-and-acceleration",
+              "title": "Displacement, speed, velocity, and acceleration"
+            },
+            {
+              "id": "language-of-motion",
+              "title": "Language of motion"
+            }
+          ],
+          "sourceRows": [
+            116,
+            117
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-motion-graphs",
+          "title": "Motion Graphs",
+          "subtopics": [
+            {
+              "id": "position-velocity-and-acceleration-time-graphs",
+              "title": "Position-, velocity-, and acceleration-time graphs"
+            }
+          ],
+          "sourceRows": [
+            118
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-projectile-and-two-dimensional-motion",
+          "title": "Projectile and Two-Dimensional Motion",
+          "subtopics": [
+            {
+              "id": "projectile-and-curvilinear-motion",
+              "title": "Projectile and curvilinear motion"
+            }
+          ],
+          "sourceRows": [
+            119
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 4,
+      "subtopicCount": 5
+    }
+  ]
+}

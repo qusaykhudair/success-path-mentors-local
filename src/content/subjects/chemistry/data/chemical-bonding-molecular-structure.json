@@ -1,0 +1,333 @@
+{
+  "metadata": {
+    "subject": "Chemistry",
+    "subjectSlug": "chemistry",
+    "strand": "Chemical Bonding and Molecular Structure",
+    "strandSlug": "chemical-bonding-molecular-structure",
+    "gradeRange": {
+      "min": 9,
+      "max": 12
+    },
+    "gradeLevels": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 23,
+    "gradedSourceRecordCount": 14,
+    "nonGradedSourceRecordCount": 9,
+    "mainTopicCount": 13,
+    "subtopicCount": 14,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "chemical-bonding-molecular-structure",
+    "title": {
+      "en": "Chemical Bonding and Molecular Structure",
+      "ar": "الروابط الكيميائية والبنية الجزيئية"
+    },
+    "description": {
+      "en": "Ionic, covalent, and metallic bonding, Lewis structures, molecular geometry, polarity, and intermolecular forces.",
+      "ar": "الروابط الأيونية والتساهمية والفلزية وتراكيب لويس والهندسة الجزيئية والقطبية والقوى بين الجزيئات."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-ionic-and-covalent-bonding",
+          "title": "Ionic and Covalent Bonding",
+          "subtopics": [
+            {
+              "id": "ionic-covalent-and-metallic-bonding",
+              "title": "Ionic, covalent, and metallic bonding"
+            }
+          ],
+          "sourceRows": [
+            9
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-ionic-and-covalent-bonding",
+          "title": "Ionic and Covalent Bonding",
+          "subtopics": [
+            {
+              "id": "ionic-covalent-and-metallic-bonding",
+              "title": "Ionic, covalent, and metallic bonding"
+            }
+          ],
+          "sourceRows": [
+            28
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-lewis-structures",
+          "title": "Lewis Structures",
+          "subtopics": [
+            {
+              "id": "lewis-electron-dot-structures",
+              "title": "Lewis electron-dot structures"
+            }
+          ],
+          "sourceRows": [
+            29
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-polarity-and-intermolecular-forces",
+          "title": "Polarity and Intermolecular Forces",
+          "subtopics": [
+            {
+              "id": "molecular-polarity-and-intermolecular-forces",
+              "title": "Molecular polarity and intermolecular forces"
+            }
+          ],
+          "sourceRows": [
+            30
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 3,
+      "subtopicCount": 3
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-ionic-and-covalent-bonding",
+          "title": "Ionic and Covalent Bonding",
+          "subtopics": [
+            {
+              "id": "chemical-bonding-review",
+              "title": "Chemical bonding review"
+            },
+            {
+              "id": "ionic-covalent-and-metallic-bonding",
+              "title": "Ionic, covalent, and metallic bonding"
+            }
+          ],
+          "sourceRows": [
+            56,
+            57
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-lewis-structures",
+          "title": "Lewis Structures",
+          "subtopics": [
+            {
+              "id": "lewis-electron-dot-structures",
+              "title": "Lewis electron-dot structures"
+            }
+          ],
+          "sourceRows": [
+            58
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-molecular-geometry",
+          "title": "Molecular Geometry",
+          "subtopics": [
+            {
+              "id": "vsepr-and-molecular-shapes",
+              "title": "VSEPR and molecular shapes"
+            }
+          ],
+          "sourceRows": [
+            59
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-polarity-and-intermolecular-forces",
+          "title": "Polarity and Intermolecular Forces",
+          "subtopics": [
+            {
+              "id": "molecular-polarity-and-intermolecular-forces",
+              "title": "Molecular polarity and intermolecular forces"
+            }
+          ],
+          "sourceRows": [
+            60
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 4,
+      "subtopicCount": 5
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-bonding-models",
+          "title": "Bonding Models",
+          "subtopics": [
+            {
+              "id": "hybridization-and-valence-bond-theory",
+              "title": "Hybridization and valence-bond theory"
+            }
+          ],
+          "sourceRows": [
+            100
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-ionic-and-covalent-bonding",
+          "title": "Ionic and Covalent Bonding",
+          "subtopics": [
+            {
+              "id": "ionic-covalent-and-metallic-bonding",
+              "title": "Ionic, covalent, and metallic bonding"
+            }
+          ],
+          "sourceRows": [
+            101
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-lewis-structures",
+          "title": "Lewis Structures",
+          "subtopics": [
+            {
+              "id": "lewis-electron-dot-structures",
+              "title": "Lewis electron-dot structures"
+            }
+          ],
+          "sourceRows": [
+            102
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-molecular-geometry",
+          "title": "Molecular Geometry",
+          "subtopics": [
+            {
+              "id": "vsepr-and-molecular-shapes",
+              "title": "VSEPR and molecular shapes"
+            }
+          ],
+          "sourceRows": [
+            103
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-polarity-and-intermolecular-forces",
+          "title": "Polarity and Intermolecular Forces",
+          "subtopics": [
+            {
+              "id": "molecular-polarity-and-intermolecular-forces",
+              "title": "Molecular polarity and intermolecular forces"
+            }
+          ],
+          "sourceRows": [
+            104
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 5,
+      "subtopicCount": 5
+    }
+  ]
+}

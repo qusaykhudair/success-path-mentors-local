@@ -1,16 +1,48 @@
 'use client';
 
-import CountUp from 'react-countup';
-import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { useInView } from 'framer-motion';
+import CountUp from 'react-countup';
 
-export function StatCounter({ end, suffix }: { end: number; suffix: string }) {
+interface StatCounterProps {
+  end: number;
+  suffix?: string;
+  duration?: number;
+}
+
+export function StatCounter({
+  end,
+  suffix = '',
+  duration = 1.6,
+}: StatCounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: '-10%' });
+
+  const inView = useInView(ref, {
+    once: true,
+    margin: '-10%',
+  });
+
+  const accessibleValue = `${end}${suffix}`;
 
   return (
     <span ref={ref}>
-      {inView ? <CountUp end={end} duration={1.6} suffix={suffix} /> : `0${suffix}`}
+      <span className="sr-only">
+        {accessibleValue}
+      </span>
+
+      <span aria-hidden="true">
+        {inView ? (
+          <CountUp
+            start={0}
+            end={end}
+            duration={duration}
+            suffix={suffix}
+            preserveValue
+          />
+        ) : (
+          accessibleValue
+        )}
+      </span>
     </span>
   );
 }

@@ -1,0 +1,979 @@
+{
+  "metadata": {
+    "programme": "Programme français",
+    "matiere": "Mathématiques en français",
+    "matiereSlug": "mathematiques-en-francais",
+    "domaine": "C. Algèbre",
+    "domaineSlug": "algebre",
+    "niveaux": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 53,
+    "publicRecordCount": 45,
+    "nonStandardRecordCount": 8,
+    "mainTopicPlacementCount": 41,
+    "subtopicPlacementCount": 45,
+    "observedRecordCount": 18,
+    "referenceRecordCount": 27,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Les sujets principaux et les sous-sujets sont comptés par niveau. Les répétitions entre niveaux sont conservées comme progression pédagogique.",
+    "integrityRules": [
+      "Les répétitions entre niveaux sont conservées.",
+      "Seuls les doublons exacts Niveau + Domaine + Sujet principal + Sous-sujet peuvent être supprimés.",
+      "Les niveaux CECRL, adultes, secondaires parallèles et non précisés sont conservés dans les fichiers de révision.",
+      "Les niveaux sans contenu sont conservés dans le JSON mais masqués sur le site."
+    ]
+  },
+  "domaine": {
+    "slug": "algebre",
+    "titre": "Algèbre",
+    "titreSource": "C. Algèbre",
+    "description": "Régularités, expressions, équations, relations, fonctions, polynômes et raisonnement algébrique.",
+    "iconKey": "algebre"
+  },
+  "niveaux": [
+    {
+      "niveau": 1,
+      "label": "1re année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-1-regularites-et-relations",
+          "titre": "Régularités et relations",
+          "sousSujets": [
+            {
+              "id": "suites-croissantes-decroissantes-et-regles",
+              "titre": "Suites croissantes/décroissantes et règles",
+              "competence": "Décrire, prolonger et généraliser une régularité",
+              "activite": "Motifs avec objets, table de valeurs et règle",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 13
+            }
+          ],
+          "sourceRows": [
+            13
+          ]
+        },
+        {
+          "id": "niveau-1-egalite-et-inconnues",
+          "titre": "Égalité et inconnues",
+          "sousSujets": [
+            {
+              "id": "egalite-expressions-et-equations-adaptees",
+              "titre": "Égalité, expressions et équations adaptées",
+              "competence": "Utiliser l’égalité comme relation et déterminer une valeur inconnue",
+              "activite": "Balance, boîtes d’inconnues et phrases mathématiques",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 14
+            }
+          ],
+          "sourceRows": [
+            14
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 2,
+      "nombreSousSujets": 2
+    },
+    {
+      "niveau": 2,
+      "label": "2e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-2-regularites-et-relations",
+          "titre": "Régularités et relations",
+          "sousSujets": [
+            {
+              "id": "suites-croissantes-decroissantes-et-regles",
+              "titre": "Suites croissantes/décroissantes et règles",
+              "competence": "Décrire, prolonger et généraliser une régularité",
+              "activite": "Motifs avec objets, table de valeurs et règle",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 40
+            }
+          ],
+          "sourceRows": [
+            40
+          ]
+        },
+        {
+          "id": "niveau-2-egalite-et-inconnues",
+          "titre": "Égalité et inconnues",
+          "sousSujets": [
+            {
+              "id": "egalite-expressions-et-equations-adaptees",
+              "titre": "Égalité, expressions et équations adaptées",
+              "competence": "Utiliser l’égalité comme relation et déterminer une valeur inconnue",
+              "activite": "Balance, boîtes d’inconnues et phrases mathématiques",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 41
+            }
+          ],
+          "sourceRows": [
+            41
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 2,
+      "nombreSousSujets": 2
+    },
+    {
+      "niveau": 3,
+      "label": "3e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-3-regularites-et-relations",
+          "titre": "Régularités et relations",
+          "sousSujets": [
+            {
+              "id": "suites-croissantes-decroissantes-et-regles",
+              "titre": "Suites croissantes/décroissantes et règles",
+              "competence": "Décrire, prolonger et généraliser une régularité",
+              "activite": "Motifs avec objets, table de valeurs et règle",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 63
+            }
+          ],
+          "sourceRows": [
+            63
+          ]
+        },
+        {
+          "id": "niveau-3-egalite-et-inconnues",
+          "titre": "Égalité et inconnues",
+          "sousSujets": [
+            {
+              "id": "egalite-expressions-et-equations-adaptees",
+              "titre": "Égalité, expressions et équations adaptées",
+              "competence": "Utiliser l’égalité comme relation et déterminer une valeur inconnue",
+              "activite": "Balance, boîtes d’inconnues et phrases mathématiques",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 64
+            }
+          ],
+          "sourceRows": [
+            64
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 2,
+      "nombreSousSujets": 2
+    },
+    {
+      "niveau": 4,
+      "label": "4e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-4-regularites",
+          "titre": "Régularités",
+          "sousSujets": [
+            {
+              "id": "suites-et-regularites",
+              "titre": "Suites et régularités",
+              "competence": "Identifier une règle, prolonger et représenter une suite",
+              "activite": "Suites avec objets, tableaux de valeurs et règle algébrique; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 100
+            }
+          ],
+          "sourceRows": [
+            100
+          ]
+        },
+        {
+          "id": "niveau-4-regularites-et-relations",
+          "titre": "Régularités et relations",
+          "sousSujets": [
+            {
+              "id": "suites-croissantes-decroissantes-et-regles",
+              "titre": "Suites croissantes/décroissantes et règles",
+              "competence": "Décrire, prolonger et généraliser une régularité",
+              "activite": "Motifs avec objets, table de valeurs et règle",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 101
+            }
+          ],
+          "sourceRows": [
+            101
+          ]
+        },
+        {
+          "id": "niveau-4-egalite-et-inconnues",
+          "titre": "Égalité et inconnues",
+          "sousSujets": [
+            {
+              "id": "egalite-expressions-et-equations-adaptees",
+              "titre": "Égalité, expressions et équations adaptées",
+              "competence": "Utiliser l’égalité comme relation et déterminer une valeur inconnue",
+              "activite": "Balance, boîtes d’inconnues et phrases mathématiques",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 102
+            }
+          ],
+          "sourceRows": [
+            102
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 3
+    },
+    {
+      "niveau": 5,
+      "label": "5e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-5-regularites-et-relations",
+          "titre": "Régularités et relations",
+          "sousSujets": [
+            {
+              "id": "suites-croissantes-decroissantes-et-regles",
+              "titre": "Suites croissantes/décroissantes et règles",
+              "competence": "Décrire, prolonger et généraliser une régularité",
+              "activite": "Motifs avec objets, table de valeurs et règle",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 136
+            }
+          ],
+          "sourceRows": [
+            136
+          ]
+        },
+        {
+          "id": "niveau-5-egalite-et-inconnues",
+          "titre": "Égalité et inconnues",
+          "sousSujets": [
+            {
+              "id": "egalite-expressions-et-equations-adaptees",
+              "titre": "Égalité, expressions et équations adaptées",
+              "competence": "Utiliser l’égalité comme relation et déterminer une valeur inconnue",
+              "activite": "Balance, boîtes d’inconnues et phrases mathématiques",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 137
+            }
+          ],
+          "sourceRows": [
+            137
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 2,
+      "nombreSousSujets": 2
+    },
+    {
+      "niveau": 6,
+      "label": "6e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-6-expressions-algebriques",
+          "titre": "Expressions algébriques",
+          "sousSujets": [
+            {
+              "id": "variables-et-expressions",
+              "titre": "Variables et expressions",
+              "competence": "Traduire une situation, simplifier et évaluer une expression",
+              "activite": "Tuiles algébriques, traduction mots-symboles et substitution",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 171
+            }
+          ],
+          "sourceRows": [
+            171
+          ]
+        },
+        {
+          "id": "niveau-6-regularites-et-relations",
+          "titre": "Régularités et relations",
+          "sousSujets": [
+            {
+              "id": "suites-croissantes-decroissantes-et-regles",
+              "titre": "Suites croissantes/décroissantes et règles",
+              "competence": "Décrire, prolonger et généraliser une régularité",
+              "activite": "Motifs avec objets, table de valeurs et règle",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 172
+            }
+          ],
+          "sourceRows": [
+            172
+          ]
+        },
+        {
+          "id": "niveau-6-egalite-et-inconnues",
+          "titre": "Égalité et inconnues",
+          "sousSujets": [
+            {
+              "id": "egalite-expressions-et-equations-adaptees",
+              "titre": "Égalité, expressions et équations adaptées",
+              "competence": "Utiliser l’égalité comme relation et déterminer une valeur inconnue",
+              "activite": "Balance, boîtes d’inconnues et phrases mathématiques",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 173
+            }
+          ],
+          "sourceRows": [
+            173
+          ]
+        },
+        {
+          "id": "niveau-6-equations-et-inequations",
+          "titre": "Équations et inéquations",
+          "sousSujets": [
+            {
+              "id": "equations",
+              "titre": "Équations",
+              "competence": "Modéliser et résoudre des équations en justifiant les transformations",
+              "activite": "Balance algébrique, tuiles, vérification et problèmes; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne; Élevée",
+              "sourceRow": 174
+            }
+          ],
+          "sourceRows": [
+            174
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 4,
+      "nombreSousSujets": 4
+    },
+    {
+      "niveau": 7,
+      "label": "7e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-7-regularites-et-relations",
+          "titre": "Régularités et relations",
+          "sousSujets": [
+            {
+              "id": "suites-croissantes-decroissantes-et-regles",
+              "titre": "Suites croissantes/décroissantes et règles",
+              "competence": "Décrire, prolonger et généraliser une régularité",
+              "activite": "Motifs avec objets, table de valeurs et règle",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 211
+            }
+          ],
+          "sourceRows": [
+            211
+          ]
+        },
+        {
+          "id": "niveau-7-egalite-et-inconnues",
+          "titre": "Égalité et inconnues",
+          "sousSujets": [
+            {
+              "id": "egalite-expressions-et-equations-adaptees",
+              "titre": "Égalité, expressions et équations adaptées",
+              "competence": "Utiliser l’égalité comme relation et déterminer une valeur inconnue",
+              "activite": "Balance, boîtes d’inconnues et phrases mathématiques",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 212
+            }
+          ],
+          "sourceRows": [
+            212
+          ]
+        },
+        {
+          "id": "niveau-7-equations-et-inequations",
+          "titre": "Équations et inéquations",
+          "sousSujets": [
+            {
+              "id": "equations",
+              "titre": "Équations",
+              "competence": "Modéliser et résoudre des équations en justifiant les transformations",
+              "activite": "Balance algébrique, tuiles, vérification et problèmes; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 213
+            }
+          ],
+          "sourceRows": [
+            213
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 3
+    },
+    {
+      "niveau": 8,
+      "label": "8e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-8-fonctions",
+          "titre": "Fonctions",
+          "sousSujets": [
+            {
+              "id": "analyse-et-representation-de-fonctions",
+              "titre": "Analyse et représentation de fonctions",
+              "competence": "Déterminer domaine, image, variations et caractéristiques",
+              "activite": "Support numérique ou visuel; Tableau de variations, graphique et interprétation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 239
+            }
+          ],
+          "sourceRows": [
+            239
+          ]
+        },
+        {
+          "id": "niveau-8-polynomes",
+          "titre": "Polynômes",
+          "sousSujets": [
+            {
+              "id": "operations-sur-les-polynomes",
+              "titre": "Opérations sur les polynômes",
+              "competence": "Additionner, soustraire, multiplier et diviser des polynômes",
+              "activite": "Manipulation d’objets, schémas en barres et problèmes de partage; Support numérique ou visuel; Tuiles algébriques, organisation verticale et vérification",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 240
+            }
+          ],
+          "sourceRows": [
+            240
+          ]
+        },
+        {
+          "id": "niveau-8-regularites-et-relations",
+          "titre": "Régularités et relations",
+          "sousSujets": [
+            {
+              "id": "suites-croissantes-decroissantes-et-regles",
+              "titre": "Suites croissantes/décroissantes et règles",
+              "competence": "Décrire, prolonger et généraliser une régularité",
+              "activite": "Motifs avec objets, table de valeurs et règle",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 241
+            }
+          ],
+          "sourceRows": [
+            241
+          ]
+        },
+        {
+          "id": "niveau-8-egalite-et-inconnues",
+          "titre": "Égalité et inconnues",
+          "sousSujets": [
+            {
+              "id": "egalite-expressions-et-equations-adaptees",
+              "titre": "Égalité, expressions et équations adaptées",
+              "competence": "Utiliser l’égalité comme relation et déterminer une valeur inconnue",
+              "activite": "Balance, boîtes d’inconnues et phrases mathématiques",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 242
+            }
+          ],
+          "sourceRows": [
+            242
+          ]
+        },
+        {
+          "id": "niveau-8-equations-et-inequations",
+          "titre": "Équations et inéquations",
+          "sousSujets": [
+            {
+              "id": "equations",
+              "titre": "Équations",
+              "competence": "Modéliser et résoudre des équations en justifiant les transformations",
+              "activite": "Balance algébrique, tuiles, vérification et problèmes; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 243
+            }
+          ],
+          "sourceRows": [
+            243
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 5
+    },
+    {
+      "niveau": 9,
+      "label": "9e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-9-expressions-algebriques",
+          "titre": "Expressions algébriques",
+          "sousSujets": [
+            {
+              "id": "variables-et-expressions",
+              "titre": "Variables et expressions",
+              "competence": "Traduire une situation, simplifier et évaluer une expression",
+              "activite": "Support numérique ou visuel; Tuiles algébriques, traduction mots-symboles et substitution",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne; Élevée",
+              "sourceRow": 272
+            }
+          ],
+          "sourceRows": [
+            272
+          ]
+        },
+        {
+          "id": "niveau-9-expressions-equations-et-inequations",
+          "titre": "Expressions, équations et inéquations",
+          "sousSujets": [
+            {
+              "id": "expressions-equations-et-inequations",
+              "titre": "Expressions, équations et inéquations",
+              "competence": "Simplifier, résoudre et modéliser des situations",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 273
+            }
+          ],
+          "sourceRows": [
+            273
+          ]
+        },
+        {
+          "id": "niveau-9-fonctions",
+          "titre": "Fonctions",
+          "sousSujets": [
+            {
+              "id": "analyse-et-representation-de-fonctions",
+              "titre": "Analyse et représentation de fonctions",
+              "competence": "Déterminer domaine, image, variations et caractéristiques",
+              "activite": "Balance algébrique, tuiles, vérification et problèmes; Créer un graphique à partir de données et critiquer une représentation; Interaction orale ou présentation; Support numérique ou visuel; Tableau de variations, graphique et interprétation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne; Élevée",
+              "sourceRow": 274
+            }
+          ],
+          "sourceRows": [
+            274
+          ]
+        },
+        {
+          "id": "niveau-9-polynomes",
+          "titre": "Polynômes",
+          "sousSujets": [
+            {
+              "id": "operations-sur-les-polynomes",
+              "titre": "Opérations sur les polynômes",
+              "competence": "Additionner, soustraire, multiplier et diviser des polynômes",
+              "activite": "Exercices d’application gradués; Support numérique ou visuel; Tuiles algébriques, organisation verticale et vérification; Évaluation diagnostique, correction expliquée et parcours de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 275
+            }
+          ],
+          "sourceRows": [
+            275
+          ]
+        },
+        {
+          "id": "niveau-9-relations-lineaires",
+          "titre": "Relations linéaires",
+          "sousSujets": [
+            {
+              "id": "relations-lineaires",
+              "titre": "Relations linéaires",
+              "competence": "Relier taux de variation, table, graphique et équation",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 276
+            }
+          ],
+          "sourceRows": [
+            276
+          ]
+        },
+        {
+          "id": "niveau-9-equations-et-inequations",
+          "titre": "Équations et inéquations",
+          "sousSujets": [
+            {
+              "id": "inequations",
+              "titre": "Inéquations",
+              "competence": "Résoudre, représenter et interpréter des inéquations",
+              "activite": "Droite graduée, situations de contraintes et vérification; Support numérique ou visuel; Évaluation diagnostique ou formative",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne; Élevée",
+              "sourceRow": 277
+            },
+            {
+              "id": "systemes-d-equations",
+              "titre": "Systèmes d’équations",
+              "competence": "Résoudre graphiquement et algébriquement et interpréter l’intersection",
+              "activite": "Support numérique ou visuel; Tableau, graphique, substitution et élimination",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 278
+            },
+            {
+              "id": "equations",
+              "titre": "Équations",
+              "competence": "Modéliser et résoudre des équations en justifiant les transformations",
+              "activite": "Balance algébrique, tuiles, vérification et problèmes; Créer un graphique à partir de données et critiquer une représentation; Exercices d’application gradués; Interaction orale ou présentation; Règle-équerre, constructions et justification; Support numérique ou visuel; Tableau de variations, graphique et interprétation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 279
+            }
+          ],
+          "sourceRows": [
+            277,
+            278,
+            279
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 6,
+      "nombreSousSujets": 8
+    },
+    {
+      "niveau": 10,
+      "label": "10e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-10-fonctions",
+          "titre": "Fonctions",
+          "sousSujets": [
+            {
+              "id": "analyse-et-representation-de-fonctions",
+              "titre": "Analyse et représentation de fonctions",
+              "competence": "Déterminer domaine, image, variations et caractéristiques",
+              "activite": "Collecte de données, tableau de valeurs et tracé; Support numérique ou visuel; Tableau de variations, graphique et interprétation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 313
+            },
+            {
+              "id": "fonctions-lineaires-et-affines",
+              "titre": "Fonctions linéaires et affines",
+              "competence": "Relier situation, table, équation et graphique",
+              "activite": "Collecte de données, tableau de valeurs et tracé; Tableau de variations, graphique et interprétation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 314
+            },
+            {
+              "id": "fonctions-quadratiques",
+              "titre": "Fonctions quadratiques",
+              "competence": "Analyser sommet, zéros, axe de symétrie et transformations",
+              "activite": "Balance algébrique, tuiles, vérification et problèmes; Tableur, graphique dynamique et résolution de problèmes",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 315
+            }
+          ],
+          "sourceRows": [
+            313,
+            314,
+            315
+          ]
+        },
+        {
+          "id": "niveau-10-fonctions-quadratiques",
+          "titre": "Fonctions quadratiques",
+          "sousSujets": [
+            {
+              "id": "fonctions-quadratiques",
+              "titre": "Fonctions quadratiques",
+              "competence": "Analyser paraboles, zéros, sommet et transformations",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 316
+            }
+          ],
+          "sourceRows": [
+            316
+          ]
+        },
+        {
+          "id": "niveau-10-polynomes",
+          "titre": "Polynômes",
+          "sousSujets": [
+            {
+              "id": "factorisation",
+              "titre": "Factorisation",
+              "competence": "Mettre en facteur et reconnaître des identités remarquables",
+              "activite": "Balance algébrique, tuiles, vérification et problèmes; Support numérique ou visuel; Tuiles algébriques, aire de rectangles et exercices gradués",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 317
+            }
+          ],
+          "sourceRows": [
+            317
+          ]
+        },
+        {
+          "id": "niveau-10-polynomes-et-factorisation",
+          "titre": "Polynômes et factorisation",
+          "sousSujets": [
+            {
+              "id": "polynomes-et-factorisation",
+              "titre": "Polynômes et factorisation",
+              "competence": "Effectuer des opérations et factoriser des expressions",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 318
+            }
+          ],
+          "sourceRows": [
+            318
+          ]
+        },
+        {
+          "id": "niveau-10-systemes-d-equations",
+          "titre": "Systèmes d’équations",
+          "sousSujets": [
+            {
+              "id": "systemes-d-equations",
+              "titre": "Systèmes d’équations",
+              "competence": "Résoudre graphiquement et algébriquement",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 319
+            }
+          ],
+          "sourceRows": [
+            319
+          ]
+        },
+        {
+          "id": "niveau-10-equations-et-inequations",
+          "titre": "Équations et inéquations",
+          "sousSujets": [
+            {
+              "id": "equations",
+              "titre": "Équations",
+              "competence": "Modéliser et résoudre des équations en justifiant les transformations",
+              "activite": "Balance algébrique, tuiles, vérification et problèmes; Problème ouvert, schéma, estimation, solution expliquée et comparaison de méthodes; Résolution de problèmes contextualisés; Support numérique ou visuel; Tableur, graphique dynamique et résolution de problèmes; Tuiles algébriques, aire de rectangles et exercices gradués",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 320
+            }
+          ],
+          "sourceRows": [
+            320
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 6,
+      "nombreSousSujets": 8
+    },
+    {
+      "niveau": 11,
+      "label": "11e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-11-fonctions-avancees",
+          "titre": "Fonctions avancées",
+          "sousSujets": [
+            {
+              "id": "fonctions-avancees",
+              "titre": "Fonctions avancées",
+              "competence": "Étudier fonctions quadratiques, exponentielles, rationnelles ou trigonométriques selon le parcours",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 341
+            }
+          ],
+          "sourceRows": [
+            341
+          ]
+        },
+        {
+          "id": "niveau-11-transformations-de-fonctions",
+          "titre": "Transformations de fonctions",
+          "sousSujets": [
+            {
+              "id": "transformations-de-fonctions",
+              "titre": "Transformations de fonctions",
+              "competence": "Relier paramètres et caractéristiques graphiques",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 342
+            }
+          ],
+          "sourceRows": [
+            342
+          ]
+        },
+        {
+          "id": "niveau-11-equations-et-identites",
+          "titre": "Équations et identités",
+          "sousSujets": [
+            {
+              "id": "equations-et-identites",
+              "titre": "Équations et identités",
+              "competence": "Résoudre et vérifier des équations plus complexes",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 343
+            }
+          ],
+          "sourceRows": [
+            343
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 3
+    },
+    {
+      "niveau": 12,
+      "label": "12e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-12-fonctions-et-modeles",
+          "titre": "Fonctions et modèles",
+          "sousSujets": [
+            {
+              "id": "fonctions-et-modeles",
+              "titre": "Fonctions et modèles",
+              "competence": "Analyser et combiner des fonctions algébriques, exponentielles, logarithmiques et trigonométriques",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 350
+            }
+          ],
+          "sourceRows": [
+            350
+          ]
+        },
+        {
+          "id": "niveau-12-taux-de-variation-et-introduction-au-calcul",
+          "titre": "Taux de variation et introduction au calcul",
+          "sousSujets": [
+            {
+              "id": "taux-de-variation-et-introduction-au-calcul",
+              "titre": "Taux de variation et introduction au calcul",
+              "competence": "Interpréter taux moyen/instantané et comportement local",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 351
+            }
+          ],
+          "sourceRows": [
+            351
+          ]
+        },
+        {
+          "id": "niveau-12-vecteurs-et-geometrie-analytique",
+          "titre": "Vecteurs et géométrie analytique",
+          "sousSujets": [
+            {
+              "id": "vecteurs-et-geometrie-analytique",
+              "titre": "Vecteurs et géométrie analytique",
+              "competence": "Représenter et résoudre des problèmes en deux ou trois dimensions",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 352
+            }
+          ],
+          "sourceRows": [
+            352
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 3
+    }
+  ]
+}

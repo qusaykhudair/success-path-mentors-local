@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "subject": "General Science",
+    "recordCount": 7,
+    "status": "excluded-from-grade-pages",
+    "reason": "No Grade 1–12 value was supplied, so no grade was inferred."
+  },
+  "records": [
+    {
+      "sourceRow": 84,
+      "subject": "General Science",
+      "gradeLevel": "Grade not stated",
+      "strand": "Earth and Space Science",
+      "mainTopic": "Astronomy",
+      "subtopic": "Earth–Moon–Sun system"
+    },
+    {
+      "sourceRow": 85,
+      "subject": "General Science",
+      "gradeLevel": "Grade not stated",
+      "strand": "Earth and Space Science",
+      "mainTopic": "Astronomy",
+      "subtopic": "Solar system and space"
+    },
+    {
+      "sourceRow": 86,
+      "subject": "General Science",
+      "gradeLevel": "Grade not stated",
+      "strand": "Earth and Space Science",
+      "mainTopic": "Astronomy",
+      "subtopic": "Space science review and applications"
+    },
+    {
+      "sourceRow": 87,
+      "subject": "General Science",
+      "gradeLevel": "Grade not stated",
+      "strand": "Life Science",
+      "mainTopic": "Cell Biology",
+      "subtopic": "Cell theory and cell structure"
+    },
+    {
+      "sourceRow": 88,
+      "subject": "General Science",
+      "gradeLevel": "Grade not stated",
+      "strand": "Life Science",
+      "mainTopic": "Cell Biology",
+      "subtopic": "Plant and animal cells"
+    },
+    {
+      "sourceRow": 89,
+      "subject": "General Science",
+      "gradeLevel": "Grade not stated",
+      "strand": "Scientific Inquiry and Laboratory Skills",
+      "mainTopic": "Measurement and Data",
+      "subtopic": "Scientific measurement and precision"
+    },
+    {
+      "sourceRow": 90,
+      "subject": "General Science",
+      "gradeLevel": "Grade not stated",
+      "strand": "Scientific Inquiry and Laboratory Skills",
+      "mainTopic": "Scientific Method",
+      "subtopic": "Steps of scientific inquiry"
+    }
+  ]
+}

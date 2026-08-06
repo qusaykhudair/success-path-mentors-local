@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "strand": "Writing",
+    "recordCount": 10,
+    "status": "excluded-from-grade-pages",
+    "reason": "No explicit Grade 1–12 value was supplied. No grade was inferred from age, IELTS, or adult status."
+  },
+  "records": [
+    {
+      "sourceRow": 289,
+      "gradeLevel": "Age 5 / Grade not stated",
+      "strand": "Writing",
+      "sourceMainTopic": "Writing Practice",
+      "mainTopic": "Writing Practice",
+      "sourceSubtopic": "General writing practice",
+      "subtopic": "General writing practice"
+    },
+    {
+      "sourceRow": 290,
+      "gradeLevel": "Age 13 / Grade not stated",
+      "strand": "Writing",
+      "sourceMainTopic": "Modes of Writing",
+      "mainTopic": "Modes of Writing",
+      "sourceSubtopic": "Creative writing",
+      "subtopic": "Creative writing"
+    },
+    {
+      "sourceRow": 291,
+      "gradeLevel": "Age 13 / Grade not stated",
+      "strand": "Writing",
+      "sourceMainTopic": "Paragraph Writing",
+      "mainTopic": "Paragraph Writing",
+      "sourceSubtopic": "Paragraph structure",
+      "subtopic": "Paragraph structure"
+    },
+    {
+      "sourceRow": 292,
+      "gradeLevel": "Age 13 / Grade not stated",
+      "strand": "Writing",
+      "sourceMainTopic": "Writing Process",
+      "mainTopic": "Writing Process",
+      "sourceSubtopic": "Editing and proofreading",
+      "subtopic": "Editing and proofreading"
+    },
+    {
+      "sourceRow": 293,
+      "gradeLevel": "Age 17 / Grade not stated",
+      "strand": "Writing",
+      "sourceMainTopic": "Writing Practice",
+      "mainTopic": "Writing Practice",
+      "sourceSubtopic": "General writing practice",
+      "subtopic": "General writing practice"
+    },
+    {
+      "sourceRow": 294,
+      "gradeLevel": "Adult / IELTS",
+      "strand": "Writing",
+      "sourceMainTopic": "Writing Practice",
+      "mainTopic": "Writing Practice",
+      "sourceSubtopic": "General writing practice",
+      "subtopic": "General writing practice"
+    },
+    {
+      "sourceRow": 295,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Writing",
+      "sourceMainTopic": "Essay Writing",
+      "mainTopic": "Essay Writing",
+      "sourceSubtopic": "Essay writing",
+      "subtopic": "Essay writing"
+    },
+    {
+      "sourceRow": 296,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Writing",
+      "sourceMainTopic": "Paragraph Writing",
+      "mainTopic": "Paragraph Writing",
+      "sourceSubtopic": "Paragraph structure",
+      "subtopic": "Paragraph structure"
+    },
+    {
+      "sourceRow": 297,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Writing",
+      "sourceMainTopic": "Writing Foundations",
+      "mainTopic": "Writing Foundations",
+      "sourceSubtopic": "Sentence writing",
+      "subtopic": "Sentence writing"
+    },
+    {
+      "sourceRow": 298,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Writing",
+      "sourceMainTopic": "Writing Practice",
+      "mainTopic": "Writing Practice",
+      "sourceSubtopic": "General writing practice",
+      "subtopic": "General writing practice"
+    }
+  ]
+}
