@@ -505,7 +505,7 @@ export async function SiteHeader() {
           <a
             href="tel:+16477875999"
             aria-label={currentLocale === 'ar' ? 'اتصل بنا على الرقم +1 647 787 5999' : 'Call us at +1 647 787 5999'}
-            className="hidden items-center gap-1.5 rounded-button border border-border/70 bg-background px-2.5 py-2 text-[0.78rem] font-bold text-foreground shadow-xs transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 2xl:inline-flex"
+            className="hidden items-center gap-1.5 rounded-full border border-border/70 bg-background px-2.5 py-2 text-[0.78rem] font-bold text-foreground shadow-xs transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 2xl:inline-flex"
           >
             <Phone aria-hidden="true" className="h-4 w-4 text-accent" />
             <span dir="ltr" className="whitespace-nowrap">{WHATSAPP_DISPLAY_NUMBER}</span>
