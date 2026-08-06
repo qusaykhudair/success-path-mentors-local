@@ -179,25 +179,33 @@ export async function SiteFooter() {
   const legalLinks: FooterLink[] = [
     {
       href:
-        `${homeHref}/privacy`,
+        routePath.privacy(
+          currentLocale
+        ),
       label:
         t('legal.privacy'),
     },
     {
       href:
-        `${homeHref}/terms`,
+        routePath.terms(
+          currentLocale
+        ),
       label:
         t('legal.terms'),
     },
     {
       href:
-        `${homeHref}/cancellation-policy`,
+        routePath.cancellationPolicy(
+          currentLocale
+        ),
       label:
         t('legal.cancellation'),
     },
     {
       href:
-        `${homeHref}/data-deletion`,
+        routePath.dataDeletion(
+          currentLocale
+        ),
       label:
         currentLocale === 'ar'
           ? 'حذف البيانات'

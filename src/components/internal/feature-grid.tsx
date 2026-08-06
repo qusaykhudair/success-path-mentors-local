@@ -31,6 +31,10 @@ function FeatureIcon({
         rounded-xl
         bg-accent
         text-accent-foreground
+        transition-transform
+        duration-300
+        group-hover:scale-110
+        group-hover:rotate-3
       "
     >
       <ResolvedIcon
@@ -67,14 +71,18 @@ export function FeatureGrid({
         <li
           key={item.title}
           className={`
+            group
             rounded-card
             border
             p-6
-            shadow-card
+            transition-all
+            duration-300
+            ease-out
+            hover:-translate-y-1
             ${
               inverse
-                ? 'border-white/10 bg-white/5 text-white'
-                : 'border-border bg-card text-card-foreground'
+                ? 'border-white/10 bg-white/5 text-white hover:border-white/20 hover:bg-white/10'
+                : 'shadow-card border-border bg-card text-card-foreground hover:border-primary/20 hover:shadow-xl'
             }
           `}
         >
