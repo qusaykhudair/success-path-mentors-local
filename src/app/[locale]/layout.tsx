@@ -17,6 +17,7 @@ import { FloatingWhatsAppButton } from '@/components/layout/floating-whatsapp-bu
 import { BackToTopButton } from '@/components/layout/back-to-top-button';
 import { SiteFooter } from '@/components/layout/site-footer';
 import { SiteHeader } from '@/components/layout/site-header';
+import { N8nChat } from '@/components/chat/n8n-chat';
 
 import {
   localeDirection,
@@ -31,6 +32,7 @@ import {
 
 import { dinNext } from '@/lib/fonts';
 
+import '@n8n/chat/style.css';
 import '../globals.css';
 
 interface LocaleLayoutProps {
@@ -322,6 +324,15 @@ export default async function LocaleLayout({
           />
 
           <BackToTopButton
+            locale={
+              locale === 'ar'
+                ? 'ar'
+                : 'en'
+            }
+          />
+
+          <N8nChat
+            key={locale}
             locale={
               locale === 'ar'
                 ? 'ar'
