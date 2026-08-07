@@ -350,9 +350,11 @@ export async function POST(
 
   const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim();
   const emailPassword = process.env.GMAIL_APP_PASSWORD?.trim();
+  const webAppUrl = process.env.APPS_SCRIPT_WEB_APP_URL?.trim();
+  const secret = process.env.APPS_SCRIPT_CONTACT_SECRET?.trim() || '';
 
-  if (!contactEmail || !emailPassword) {
-    console.error('Email configuration is missing');
+  if ((!contactEmail || !emailPassword) && !webAppUrl) {
+    console.error('Email and Apps Script configurations are missing');
     return NextResponse.json(
       { ok: false, error: 'Contact service is not configured' },
       { status: 503 }
@@ -361,7 +363,10 @@ export async function POST(
 
   const inquiryId = `SPM-${Date.now().toString(36).toUpperCase()}`;
 
-  try {
+  const promises: Promise<any>[] = [];
+
+  // 1. Nodemailer Email Delivery
+  if (contactEmail && emailPassword) {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -401,14 +406,68 @@ ${message}
       `.trim(),
     };
 
-    await transporter.sendMail(mailOptions);
+    promises.push(transporter.sendMail(mailOptions));
+  }
+
+  // 2. Google Apps Script Delivery (Google Sheets)
+  if (webAppUrl) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 15000);
+
+    const appsScriptPromise = fetch(webAppUrl, {
+      method: 'POST',
+      redirect: 'follow',
+      cache: 'no-store',
+      signal: controller.signal,
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8',
+      },
+      body: JSON.stringify({
+        secret,
+        locale: cleanText(payload.locale, 5) === 'ar' ? 'ar' : 'en',
+        contactName,
+        email,
+        phone: cleanText(payload.phone, 40),
+        whatsapp: cleanText(payload.whatsapp, 40),
+        studentFirstName: cleanText(payload.studentFirstName, 80),
+        studentAge: cleanText(payload.studentAge, 20),
+        grade: cleanText(payload.grade, 60),
+        subject: cleanText(payload.subject, 100),
+        curriculum: cleanText(payload.curriculum, 120),
+        preferredLanguage: cleanText(payload.preferredLanguage, 40),
+        country: cleanText(payload.country, 100),
+        timeZone: cleanText(payload.timeZone, 100),
+        preferredSchedule: cleanText(payload.preferredSchedule, 240),
+        inquiryType,
+        message,
+        consent: true,
+      }),
+    })
+      .then(async (res) => {
+        if (!res.ok) throw new Error(`Apps Script returned ${res.status}`);
+        return res.text();
+      })
+      .finally(() => clearTimeout(timeout));
+
+    promises.push(appsScriptPromise);
+  }
+
+  try {
+    const results = await Promise.allSettled(promises);
+    
+    // As long as one method succeeded, we consider the request successful.
+    const isSuccess = results.some((r) => r.status === 'fulfilled');
+
+    if (!isSuccess) {
+      throw new Error('All contact delivery methods failed.');
+    }
 
     return NextResponse.json({
       ok: true,
       inquiryId,
     });
   } catch (error) {
-    console.error('Nodemailer request failed', error);
+    console.error('Contact request failed:', error);
 
     return NextResponse.json(
       {
