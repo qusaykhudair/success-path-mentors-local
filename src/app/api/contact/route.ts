@@ -9,7 +9,7 @@ const MAX_REQUESTS = 5;
 const MAX_BODY_BYTES = 24 * 1024;
 const WINDOW_MS =
   10 * 60 * 1000;
-const MIN_FORM_TIME_MS = 2500;
+const MIN_FORM_TIME_MS = 500;
 const MAX_FORM_AGE_MS =
   2 * 60 * 60 * 1000;
 
@@ -240,7 +240,7 @@ export async function POST(
       {
         ok: false,
         error:
-          'Invalid request body',
+          'Invalid request body (JSON parse failed)',
       },
       {
         status: 400,
@@ -284,7 +284,7 @@ export async function POST(
       {
         ok: false,
         error:
-          'Invalid form timing',
+          `Invalid form timing (Elapsed: ${elapsed}ms, Min: ${MIN_FORM_TIME_MS}ms, StartedAt: ${startedAt})`,
       },
       {
         status: 400,
@@ -340,7 +340,7 @@ export async function POST(
       {
         ok: false,
         error:
-          'Required fields are missing or invalid',
+          `Required fields are missing or invalid: name_length=${contactName.length}, valid_email=${isValidEmail(email)}, has_inquiry=${!!inquiryType}, msg_length=${message.length}, consent=${payload.consent}`,
       },
       {
         status: 400,
