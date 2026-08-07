@@ -53,7 +53,7 @@ export const routePath = {
   },
 
   about(locale: SiteLocale): string {
-    return `/${locale}/about`;
+    return locale === 'ar' ? '/ar/عن-المنصة' : '/en/about';
   },
 
   howItWorks(locale: SiteLocale): string {
@@ -63,7 +63,7 @@ export const routePath = {
   },
 
   locations(locale: SiteLocale): string {
-    return `/${locale}/locations`;
+    return locale === 'ar' ? '/ar/المواقع' : '/en/locations';
   },
 
   location(
@@ -74,9 +74,11 @@ export const routePath = {
       .filter(Boolean)
       .join('/');
 
-    return path
-      ? `/${locale}/locations/${path}`
-      : `/${locale}/locations`;
+    if (!path) {
+      return locale === 'ar' ? '/ar/المواقع' : '/en/locations';
+    }
+
+    return locale === 'ar' ? `/ar/المواقع/${path}` : `/en/locations/${path}`;
   },
 
   programs(locale: SiteLocale): string {
@@ -103,6 +105,22 @@ export const routePath = {
     return localizedContactPath(
       locale
     );
+  },
+
+  privacy(locale: SiteLocale): string {
+    return locale === 'ar' ? '/ar/سياسة-الخصوصية' : '/en/privacy';
+  },
+
+  terms(locale: SiteLocale): string {
+    return locale === 'ar' ? '/ar/الشروط-والأحكام' : '/en/terms';
+  },
+
+  dataDeletion(locale: SiteLocale): string {
+    return locale === 'ar' ? '/ar/حذف-البيانات' : '/en/data-deletion';
+  },
+
+  cancellationPolicy(locale: SiteLocale): string {
+    return locale === 'ar' ? '/ar/سياسة-الإلغاء' : '/en/cancellation-policy';
   },
 } as const;
 

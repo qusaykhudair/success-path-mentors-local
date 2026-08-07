@@ -777,3 +777,134 @@
   }
 }
 
+
+/* =========================================================
+   n8n chatbot — Success Path Mentors
+   The official widget is mounted once from the locale layout.
+   ========================================================= */
+
+:root {
+  --chat--color--primary: rgb(var(--primary));
+  --chat--color--primary-shade-50: rgb(var(--primary-hover));
+  --chat--color--primary--shade-100: rgb(var(--primary-active));
+  --chat--color--secondary: rgb(var(--accent));
+  --chat--color-secondary-shade-50: rgb(var(--accent-hover));
+  --chat--color-white: #ffffff;
+  --chat--color-light: #f8fafc;
+  --chat--color-light-shade-50: #e2e8f0;
+  --chat--color-light-shade-100: #cbd5e1;
+  --chat--color-medium: #94a3b8;
+  --chat--color-dark: rgb(var(--primary));
+  --chat--color-disabled: #cbd5e1;
+  --chat--color-typing: #475569;
+
+  --chat--spacing: 1rem;
+  --chat--border-radius: 1rem;
+  --chat--transition-duration: 0.2s;
+  --chat--font-family: var(--font-din), Arial, sans-serif;
+
+  --chat--window--width: min(390px, calc(100vw - 2rem));
+  --chat--window--height: min(650px, calc(100dvh - 7rem));
+  --chat--window--bottom: calc(env(safe-area-inset-bottom, 0px) + 1rem);
+  --chat--window--right: 1rem;
+  --chat--window--z-index: 80;
+  --chat--window--border: 1px solid rgb(var(--border));
+  --chat--window--border-radius: 1.25rem;
+  --chat--window--margin-bottom: 0.75rem;
+
+  --chat--header--padding: 1rem 1.125rem;
+  --chat--header--background: rgb(var(--primary));
+  --chat--header--color: #ffffff;
+  --chat--header--border-top: none;
+  --chat--header--border-bottom: none;
+  --chat--header--border-left: none;
+  --chat--header--border-right: none;
+  --chat--heading--font-size: 1.25rem;
+  --chat--subtitle--font-size: 0.875rem;
+  --chat--subtitle--line-height: 1.6;
+
+  --chat--message--font-size: 0.95rem;
+  --chat--message--padding: 0.8rem 0.9rem;
+  --chat--message--border-radius: 0.9rem;
+  --chat--message-line-height: 1.6;
+  --chat--message--margin-bottom: 0.75rem;
+  --chat--message--bot--background: #ffffff;
+  --chat--message--bot--color: rgb(var(--foreground));
+  --chat--message--bot--border: 1px solid rgb(var(--border));
+  --chat--message--user--background: rgb(var(--accent));
+  --chat--message--user--color: rgb(var(--primary-active));
+  --chat--message--user--border: none;
+  --chat--message--pre--background: rgb(15 23 42 / 0.06);
+  --chat--messages-list--padding: 1rem;
+
+  --chat--toggle--size: 3rem;
+  --chat--toggle--width: var(--chat--toggle--size);
+  --chat--toggle--height: var(--chat--toggle--size);
+  --chat--toggle--border-radius: 9999px;
+  --chat--toggle--background: rgb(var(--primary));
+  --chat--toggle--hover--background: rgb(var(--primary-hover));
+  --chat--toggle--active--background: rgb(var(--primary-active));
+  --chat--toggle--color: #ffffff;
+
+  --chat--textarea--height: 3.25rem;
+  --chat--textarea--max-height: 12rem;
+  --chat--input--font-size: 1rem;
+  --chat--input--border: 1px solid rgb(var(--border));
+  --chat--input--border-radius: 0.8rem;
+  --chat--input--padding: 0.75rem;
+  --chat--input--background: #ffffff;
+  --chat--input--text-color: rgb(var(--foreground));
+  --chat--input--line-height: 1.5;
+  --chat--input--placeholder--font-size: 0.95rem;
+  --chat--input--border-active: 1px solid rgb(var(--accent));
+
+  --chat--body--background: #f8fafc;
+  --chat--footer--background: #ffffff;
+  --chat--footer--color: rgb(var(--foreground));
+}
+
+#n8n-chat[data-locale='ar'] {
+  direction: rtl;
+  text-align: right;
+}
+
+#n8n-chat[data-locale='ar'] input,
+#n8n-chat[data-locale='ar'] textarea,
+#n8n-chat[data-locale='ar'] button {
+  font-family: inherit;
+}
+
+#n8n-chat[data-locale='ar'] input,
+#n8n-chat[data-locale='ar'] textarea {
+  direction: rtl;
+  text-align: right;
+}
+
+#n8n-chat[data-locale='en'] {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Keep the chat clear of mobile browser chrome and the back-to-top button. */
+@media (min-width: 640px) {
+  :root {
+    --chat--toggle--size: 3.5rem;
+    --chat--window--right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --chat--window--bottom: calc(env(safe-area-inset-bottom, 0px) + 1.75rem);
+    --chat--window--right: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --chat--window--width: calc(100vw - 1rem);
+    --chat--window--height: min(78dvh, 640px);
+    --chat--window--right: 0.5rem;
+    --chat--window--bottom: calc(env(safe-area-inset-bottom, 0px) + 0.5rem);
+  }
+}

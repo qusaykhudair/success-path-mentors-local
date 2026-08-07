@@ -39,6 +39,5 @@ export type AppPathname = keyof typeof pathnames;
 export const routing = defineRouting({
   locales,
   defaultLocale,
-  localePrefix: 'always', // /en/... and /ar/... — required for clean localized URLs + hreflang
-  pathnames,
+  localePrefix: 'always',
 });
