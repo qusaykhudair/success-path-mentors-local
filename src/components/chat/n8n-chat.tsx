@@ -103,7 +103,15 @@ export function N8nChat({ locale }: N8nChatProps) {
           mode: 'window',
           chatInputKey: 'chatInput',
           chatSessionKey: 'sessionId',
-          loadPreviousSession: true,
+          /*
+           * This webhook is configured for normal `sendMessage` requests but
+           * does not reliably return the history payload expected by the
+           * widget's `loadPreviousSession` action. When that request fails,
+           * the widget can remain without a current session and render the
+           * footer without the message input. Starting a fresh chat session
+           * creates the session ID immediately and keeps the input available.
+           */
+          loadPreviousSession: false,
           metadata: {
             source: 'success-path-mentors-website',
             locale,

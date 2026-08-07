@@ -12,6 +12,9 @@ import {
   ProgrammeFrancaisIcon,
 } from '@/components/programme-francais/programme-francais-icon';
 import {
+  FrenchReferenceResources,
+} from '@/components/programme-francais/french-reference-resources';
+import {
   getProgrammeFrancaisBookingHref,
   programmeFrancaisRoutes,
 } from '@/lib/programme-francais/routes';
@@ -289,6 +292,8 @@ export function FrenchProgramOverview({
           </div>
         </div>
       </section>
+
+      <FrenchReferenceResources />
 
       <section
         className="

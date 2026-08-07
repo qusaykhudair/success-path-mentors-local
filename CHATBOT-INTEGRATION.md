@@ -50,3 +50,8 @@ Then test both:
 - `http://localhost:3000/ar`
 
 If the widget appears but sending a message fails, check the browser Network tab for CORS errors and verify the n8n workflow execution log.
+
+
+## Input-field fix in this build
+
+The embedded widget uses `loadPreviousSession: false`. The configured webhook does not reliably return the history response expected for `action=loadPreviousSession`; enabling it can leave the widget without a session ID and hide the message input. A fresh session is therefore created immediately, while n8n can still maintain memory for messages sent during that session through `sessionId`.

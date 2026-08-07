@@ -250,6 +250,7 @@ export default async function LocaleLayout({
       lang={locale}
       dir={dir}
       className={dinNext.variable}
+      suppressHydrationWarning
     >
       <body
         className="
