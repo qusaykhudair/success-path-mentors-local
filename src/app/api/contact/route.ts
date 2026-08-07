@@ -168,20 +168,6 @@ function sameOrigin(
   }
 }
 
-function getRequiredEnvironmentValue(
-  name: string
-): string {
-  const value =
-    process.env[name]?.trim();
-
-  if (!value) {
-    throw new Error(
-      `Missing environment variable: ${name}`
-    );
-  }
-
-  return value;
-}
 
 export async function POST(
   request: Request
@@ -363,7 +349,7 @@ export async function POST(
 
   const inquiryId = `SPM-${Date.now().toString(36).toUpperCase()}`;
 
-  const promises: Promise<any>[] = [];
+  const promises: Promise<unknown>[] = [];
 
   // 1. Nodemailer Email Delivery
   if (contactEmail && emailPassword) {
