@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+export const maxDuration = 60;
 
 const MAX_REQUESTS = 5;
 const MAX_BODY_BYTES = 24 * 1024;
@@ -10,8 +12,6 @@ const WINDOW_MS =
 const MIN_FORM_TIME_MS = 2500;
 const MAX_FORM_AGE_MS =
   2 * 60 * 60 * 1000;
-const APPS_SCRIPT_TIMEOUT_MS =
-  15000;
 
 type RateLimitRecord = {
   count: number;
@@ -38,17 +38,6 @@ type ContactPayload = {
   consent?: unknown;
   website?: unknown;
   startedAt?: unknown;
-};
-
-type AppsScriptResponse = {
-  ok?: boolean;
-  inquiryId?: string;
-  error?: string;
-  delivery?: {
-    gmail?: string;
-    sheet?: string;
-    confirmation?: string;
-  };
 };
 
 const globalContactState =
@@ -359,208 +348,80 @@ export async function POST(
     );
   }
 
-  let webAppUrl: string;
-  let secret: string;
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim();
+  const emailPassword = process.env.GMAIL_APP_PASSWORD?.trim();
 
-  try {
-    webAppUrl =
-      getRequiredEnvironmentValue(
-        'APPS_SCRIPT_WEB_APP_URL'
-      );
-
-    secret =
-      getRequiredEnvironmentValue(
-        'APPS_SCRIPT_CONTACT_SECRET'
-      );
-  } catch (error) {
-    console.error(
-      'Apps Script configuration is missing',
-      error
-    );
-
+  if (!contactEmail || !emailPassword) {
+    console.error('Email configuration is missing');
     return NextResponse.json(
-      {
-        ok: false,
-        error:
-          'Contact service is not configured',
-      },
-      {
-        status: 503,
-      }
+      { ok: false, error: 'Contact service is not configured' },
+      { status: 503 }
     );
   }
 
-  const controller =
-    new AbortController();
-
-  const timeout =
-    setTimeout(
-      () =>
-        controller.abort(),
-      APPS_SCRIPT_TIMEOUT_MS
-    );
+  const inquiryId = `SPM-${Date.now().toString(36).toUpperCase()}`;
 
   try {
-    const response =
-      await fetch(webAppUrl, {
-        method: 'POST',
-        redirect: 'follow',
-        cache: 'no-store',
-        signal:
-          controller.signal,
-        headers: {
-          'Content-Type':
-            'text/plain;charset=utf-8',
-        },
-        body: JSON.stringify({
-          secret,
-          locale:
-            cleanText(
-              payload.locale,
-              5
-            ) === 'ar'
-              ? 'ar'
-              : 'en',
-          contactName,
-          email,
-          phone:
-            cleanText(
-              payload.phone,
-              40
-            ),
-          whatsapp:
-            cleanText(
-              payload.whatsapp,
-              40
-            ),
-          studentFirstName:
-            cleanText(
-              payload.studentFirstName,
-              80
-            ),
-          studentAge:
-            cleanText(
-              payload.studentAge,
-              20
-            ),
-          grade:
-            cleanText(
-              payload.grade,
-              60
-            ),
-          subject:
-            cleanText(
-              payload.subject,
-              100
-            ),
-          curriculum:
-            cleanText(
-              payload.curriculum,
-              120
-            ),
-          preferredLanguage:
-            cleanText(
-              payload.preferredLanguage,
-              40
-            ),
-          country:
-            cleanText(
-              payload.country,
-              100
-            ),
-          timeZone:
-            cleanText(
-              payload.timeZone,
-              100
-            ),
-          preferredSchedule:
-            cleanText(
-              payload.preferredSchedule,
-              240
-            ),
-          inquiryType,
-          message,
-          consent: true,
-        }),
-      });
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: contactEmail,
+        pass: emailPassword,
+      },
+    });
 
-    const responseText =
-      await response.text();
+    const mailOptions = {
+      from: contactEmail,
+      to: contactEmail,
+      replyTo: email,
+      subject: `New Contact Request: ${inquiryId} - ${inquiryType}`,
+      text: `
+New contact request from the Success Path Mentors website
+Inquiry ID: ${inquiryId}
+Locale: ${cleanText(payload.locale, 5) === 'ar' ? 'ar' : 'en'}
 
-    let result:
-      AppsScriptResponse;
+Contact name: ${contactName}
+Email: ${email}
+Phone: ${cleanText(payload.phone, 40) || '—'}
+WhatsApp: ${cleanText(payload.whatsapp, 40) || '—'}
 
-    try {
-      result =
-        JSON.parse(
-          responseText
-        ) as AppsScriptResponse;
-    } catch {
-      throw new Error(
-        'Apps Script returned an invalid response'
-      );
-    }
+Student: ${cleanText(payload.studentFirstName, 80) || '—'}
+Age: ${cleanText(payload.studentAge, 20) || '—'}
+Grade: ${cleanText(payload.grade, 60) || '—'}
+Subject: ${cleanText(payload.subject, 100) || '—'}
+Curriculum: ${cleanText(payload.curriculum, 120) || '—'}
+Teaching language: ${cleanText(payload.preferredLanguage, 40) || '—'}
+Country: ${cleanText(payload.country, 100) || '—'}
+Time zone: ${cleanText(payload.timeZone, 100) || '—'}
+Preferred schedule: ${cleanText(payload.preferredSchedule, 240) || '—'}
+Inquiry type: ${inquiryType}
 
-    if (
-      !response.ok ||
-      result.ok !== true
-    ) {
-      console.error(
-        'Apps Script contact request failed',
-        {
-          status:
-            response.status,
-          result,
-        }
-      );
+Message:
+${message}
+      `.trim(),
+    };
 
-      return NextResponse.json(
-        {
-          ok: false,
-          error:
-            result.error ||
-            'Contact delivery failed',
-        },
-        {
-          status: 502,
-        }
-      );
-    }
+    await transporter.sendMail(mailOptions);
 
     return NextResponse.json({
       ok: true,
-      inquiryId:
-        result.inquiryId,
-      delivery:
-        result.delivery,
+      inquiryId,
     });
   } catch (error) {
-    const message =
-      error instanceof Error
-        ? error.message
-        : 'Unknown Apps Script error';
-
-    console.error(
-      'Apps Script request failed',
-      error
-    );
+    console.error('Nodemailer request failed', error);
 
     return NextResponse.json(
       {
         ok: false,
-        error:
-          'Contact delivery failed',
+        error: 'Contact delivery failed',
         diagnostic:
-          process.env.NODE_ENV ===
-          'development'
-            ? message
+          process.env.NODE_ENV === 'development'
+            ? error instanceof Error ? error.message : 'Unknown Error'
             : undefined,
       },
       {
         status: 502,
       }
     );
-  } finally {
-    clearTimeout(timeout);
   }
 }
