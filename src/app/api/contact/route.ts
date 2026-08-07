@@ -5,10 +5,10 @@ export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 export const maxDuration = 60;
 
-const MAX_REQUESTS = 5;
+const MAX_REQUESTS = 50;
 const MAX_BODY_BYTES = 24 * 1024;
 const WINDOW_MS =
-  10 * 60 * 1000;
+  5 * 60 * 1000;
 const MIN_FORM_TIME_MS = 500;
 const MAX_FORM_AGE_MS =
   2 * 60 * 60 * 1000;
