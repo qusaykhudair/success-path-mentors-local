@@ -1,0 +1,170 @@
+{
+  "metadata": {
+    "subject": "Physics",
+    "subjectSlug": "physics",
+    "strand": "Measurement, Vectors, and Modeling",
+    "strandSlug": "measurement-vectors-modeling",
+    "gradeRange": {
+      "min": 11,
+      "max": 12
+    },
+    "gradeLevels": [
+      11,
+      12
+    ],
+    "sourceRecordCount": 3,
+    "gradedSourceRecordCount": 2,
+    "nonGradedSourceRecordCount": 1,
+    "mainTopicCount": 2,
+    "subtopicCount": 2,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "measurement-vectors-modeling",
+    "title": {
+      "en": "Measurement, Vectors, and Modeling",
+      "ar": "القياس والمتجهات والنمذجة"
+    },
+    "description": {
+      "en": "Vector components, resultants, quantitative representation, and mathematical modeling used in physics.",
+      "ar": "مركبات المتجهات والمحصلات والتمثيل الكمي والنمذجة الرياضية المستخدمة في الفيزياء."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-vectors",
+          "title": "Vectors",
+          "subtopics": [
+            {
+              "id": "vector-components-and-resultants",
+              "title": "Vector components and resultants"
+            }
+          ],
+          "sourceRows": [
+            78
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-vectors",
+          "title": "Vectors",
+          "subtopics": [
+            {
+              "id": "vector-components-and-resultants",
+              "title": "Vector components and resultants"
+            }
+          ],
+          "sourceRows": [
+            120
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    }
+  ]
+}

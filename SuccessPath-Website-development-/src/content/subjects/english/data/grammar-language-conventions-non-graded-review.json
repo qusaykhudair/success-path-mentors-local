@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "strand": "Grammar and Language Conventions",
+    "recordCount": 11,
+    "status": "excluded-from-grade-pages",
+    "reason": "No explicit Grade 1–12 value was supplied."
+  },
+  "records": [
+    {
+      "sourceRow": 792,
+      "gradeLevel": "Age 10 / Grade not stated",
+      "strand": "Grammar and Language Conventions",
+      "sourceMainTopic": "Language Review",
+      "mainTopic": "Language Review",
+      "subtopic": "Grammar review and practice"
+    },
+    {
+      "sourceRow": 793,
+      "gradeLevel": "Age 10 / Grade not stated",
+      "strand": "Grammar and Language Conventions",
+      "sourceMainTopic": "Parts of Speech",
+      "mainTopic": "Parts of Speech",
+      "subtopic": "Verbs"
+    },
+    {
+      "sourceRow": 794,
+      "gradeLevel": "Age 13 / Grade not stated",
+      "strand": "Grammar and Language Conventions",
+      "sourceMainTopic": "Language Review",
+      "mainTopic": "Language Review",
+      "subtopic": "Grammar review and practice"
+    },
+    {
+      "sourceRow": 795,
+      "gradeLevel": "Age 13 / Grade not stated",
+      "strand": "Grammar and Language Conventions",
+      "sourceMainTopic": "Sentence Structure",
+      "mainTopic": "Sentence Structure",
+      "subtopic": "Complete sentences"
+    },
+    {
+      "sourceRow": 796,
+      "gradeLevel": "Age 13 / Grade not stated",
+      "strand": "Grammar and Language Conventions",
+      "sourceMainTopic": "Sentence Structure",
+      "mainTopic": "Sentence Structure",
+      "subtopic": "Fragments and run-on sentences"
+    },
+    {
+      "sourceRow": 797,
+      "gradeLevel": "Age 13 / Grade not stated",
+      "strand": "Grammar and Language Conventions",
+      "sourceMainTopic": "Sentence Structure",
+      "mainTopic": "Sentence Structure",
+      "subtopic": "Simple sentences"
+    },
+    {
+      "sourceRow": 798,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Grammar and Language Conventions",
+      "sourceMainTopic": "Language Review",
+      "mainTopic": "Language Review",
+      "subtopic": "Grammar review and practice"
+    },
+    {
+      "sourceRow": 799,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Grammar and Language Conventions",
+      "sourceMainTopic": "Parts of Speech",
+      "mainTopic": "Parts of Speech",
+      "subtopic": "Prepositions"
+    },
+    {
+      "sourceRow": 800,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Grammar and Language Conventions",
+      "sourceMainTopic": "Parts of Speech",
+      "mainTopic": "Parts of Speech",
+      "subtopic": "Verbs"
+    },
+    {
+      "sourceRow": 801,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Grammar and Language Conventions",
+      "sourceMainTopic": "Verb Usage",
+      "mainTopic": "Verb Usage",
+      "subtopic": "Verb tenses"
+    },
+    {
+      "sourceRow": 802,
+      "gradeLevel": "Grade not stated",
+      "strand": "Grammar and Language Conventions",
+      "sourceMainTopic": "Parts of Speech",
+      "mainTopic": "Parts of Speech",
+      "subtopic": "Adverbs"
+    }
+  ]
+}

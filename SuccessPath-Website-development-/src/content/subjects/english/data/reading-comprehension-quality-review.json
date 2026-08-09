@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "strand": "Reading Comprehension",
+    "incompleteSourceRows": 1,
+    "caseOnlyNormalizations": 3,
+    "exactDuplicatesRemoved": 0
+  },
+  "incompleteSourceRows": [
+    {
+      "sourceRow": 95,
+      "gradeLevel": "Grade 4",
+      "strand": "Reading Comprehension",
+      "sourceMainTopic": "Point of view",
+      "mainTopic": "Point of view",
+      "subtopic": "",
+      "grade": "G4",
+      "status": "incomplete-source-row",
+      "reason": "The source row does not contain a Subtopic / Skill value."
+    }
+  ],
+  "caseOnlyMainTopicNormalizations": [
+    {
+      "sourceRow": 175,
+      "grade": "G6",
+      "sourceMainTopic": "Comparing texts",
+      "displayMainTopic": "Comparing Texts",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 211,
+      "grade": "G7",
+      "sourceMainTopic": "Comparing texts",
+      "displayMainTopic": "Comparing Texts",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 244,
+      "grade": "G8",
+      "sourceMainTopic": "Comparing texts",
+      "displayMainTopic": "Comparing Texts",
+      "reason": "Case-only title normalization; meaning unchanged."
+    }
+  ],
+  "removedExactDuplicates": [],
+  "sourceObservations": [
+    {
+      "sourceRow": 114,
+      "status": "preserved-as-supplied",
+      "observation": "The Theme skill contains two phrases in one source cell. It was not split because the source does not explicitly separate them."
+    }
+  ]
+}

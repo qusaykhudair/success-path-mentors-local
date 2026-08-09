@@ -1,0 +1,26 @@
+{
+  "metadata": {
+    "subject": "General Science",
+    "recordCount": 2,
+    "status": "excluded-from-grade-pages",
+    "reason": "Postsecondary records are preserved for a future advanced-program page."
+  },
+  "records": [
+    {
+      "sourceRow": 82,
+      "subject": "General Science",
+      "gradeLevel": "Postsecondary",
+      "strand": "Life Science",
+      "mainTopic": "Genetics and Heredity",
+      "subtopic": "DNA replication and gene expression"
+    },
+    {
+      "sourceRow": 83,
+      "subject": "General Science",
+      "gradeLevel": "Postsecondary",
+      "strand": "Life Science",
+      "mainTopic": "Genetics and Heredity",
+      "subtopic": "Mendelian genetics and Punnett squares"
+    }
+  ]
+}

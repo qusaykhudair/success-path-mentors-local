@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 type N8nChatLocale = 'en' | 'ar';
 
@@ -9,6 +10,19 @@ interface N8nChatProps {
 }
 
 const tabSessionStorageKey = 'spm-chat/sessionId';
+
+interface N8nChatController {
+  sendMessage: (text: string) => Promise<unknown>;
+}
+
+interface N8nChatApp {
+  config: {
+    globalProperties: {
+      $chat?: N8nChatController;
+    };
+  };
+  unmount: () => void;
+}
 
 function getPersistentSessionId(): string {
   try {
@@ -44,6 +58,17 @@ const chatCopy = {
       'Welcome to Success Path Mentors 👋',
       'How can we help you today?',
     ],
+    categoriesLabel: 'Choose a topic',
+    categories: [
+      ['Pricing and plans', 'What pricing and plans are available?'],
+      ['Subjects and grades', 'What subjects and grade levels are available?'],
+      ['Free trial lesson', 'How can I book a free trial lesson?'],
+      ['Registration', 'How can I register and start studying?'],
+      ['Tutors', 'Tell me about the tutors and how the right tutor is selected.'],
+      ['Schedules', 'How can I check the available lesson times?'],
+      ['Payment and policies', 'What are the payment methods and the booking and cancellation policies?'],
+      ['Contact the team', 'I would like to contact the Success Path Mentors team.'],
+    ],
   },
   ar: {
     title: 'مساعد Success Path Mentors',
@@ -55,6 +80,17 @@ const chatCopy = {
       'مرحباً بك في Success Path Mentors 👋',
       'كيف يمكننا مساعدتك اليوم؟',
     ],
+    categoriesLabel: 'اختر الموضوع',
+    categories: [
+      ['الأسعار والباقات', 'ما الأسعار والباقات المتاحة؟'],
+      ['المواد والمراحل', 'ما المواد والمراحل الدراسية المتاحة؟'],
+      ['الحصة التجريبية', 'كيف أحجز حصة تجريبية مجانية؟'],
+      ['التسجيل', 'كيف يمكنني التسجيل وبدء الدراسة؟'],
+      ['المعلمون', 'أخبرني عن المعلمين وطريقة اختيار المعلم المناسب.'],
+      ['المواعيد', 'كيف يمكنني معرفة مواعيد الحصص المتاحة؟'],
+      ['الدفع والسياسات', 'ما طرق الدفع وسياسات الحجز والإلغاء؟'],
+      ['التواصل مع الفريق', 'أريد التواصل مع فريق Success Path Mentors.'],
+    ],
   },
 } as const;
 
@@ -63,6 +99,10 @@ const chatCopy = {
  * The webhook URL remains configurable through .env.local / hosting settings.
  */
 export function N8nChat({ locale }: N8nChatProps) {
+  const chatControllerRef = useRef<N8nChatController | null>(null);
+  const [categoriesHost, setCategoriesHost] = useState<HTMLElement | null>(null);
+  const [isSendingCategory, setIsSendingCategory] = useState(false);
+
   useEffect(() => {
     const target = document.getElementById('n8n-chat');
     const webhookUrl = process.env.NEXT_PUBLIC_N8N_CHAT_WEBHOOK_URL?.trim();
@@ -106,7 +146,22 @@ export function N8nChat({ locale }: N8nChatProps) {
     target.dataset.initialized = 'true';
 
     let cancelled = false;
-    let chatApp: { unmount: () => void } | null = null;
+    let chatApp: N8nChatApp | null = null;
+    let footerObserver: MutationObserver | null = null;
+    let categoriesElement: HTMLDivElement | null = null;
+
+    const attachCategories = () => {
+      const footer = target.querySelector<HTMLElement>('.chat-footer');
+
+      if (!footer || categoriesElement) {
+        return;
+      }
+
+      categoriesElement = document.createElement('div');
+      categoriesElement.className = 'spm-chat-categories-host';
+      footer.prepend(categoriesElement);
+      setCategoriesHost(categoriesElement);
+    };
 
     const initializeChat = async () => {
       try {
@@ -161,6 +216,16 @@ export function N8nChat({ locale }: N8nChatProps) {
           },
           allowFileUploads: false,
           enableStreaming: false,
+        }) as N8nChatApp;
+
+        chatControllerRef.current =
+          chatApp.config.globalProperties.$chat ?? null;
+
+        attachCategories();
+        footerObserver = new MutationObserver(attachCategories);
+        footerObserver.observe(target, {
+          childList: true,
+          subtree: true,
         });
       } catch (error) {
         target.dataset.initialized = 'false';
@@ -172,18 +237,70 @@ export function N8nChat({ locale }: N8nChatProps) {
 
     return () => {
       cancelled = true;
+      footerObserver?.disconnect();
+      chatControllerRef.current = null;
+      setCategoriesHost(null);
       chatApp?.unmount();
       target.replaceChildren();
       delete target.dataset.initialized;
     };
   }, [locale]);
 
+  const sendCategoryQuestion = async (question: string) => {
+    const chatController = chatControllerRef.current;
+
+    if (!chatController || isSendingCategory) {
+      return;
+    }
+
+    setIsSendingCategory(true);
+
+    try {
+      await chatController.sendMessage(question);
+    } catch (error) {
+      console.error('N8nChat: Failed to send a category question.', error);
+    } finally {
+      setIsSendingCategory(false);
+    }
+  };
+
+  const copy = chatCopy[locale];
+
   return (
-    <div
-      id="n8n-chat"
-      data-locale={locale}
-      dir={locale === 'ar' ? 'rtl' : 'ltr'}
-      aria-live="polite"
-    />
+    <>
+      <div
+        id="n8n-chat"
+        data-locale={locale}
+        dir={locale === 'ar' ? 'rtl' : 'ltr'}
+        aria-live="polite"
+      />
+
+      {categoriesHost
+        ? createPortal(
+            <nav
+              className="spm-chat-categories"
+              aria-label={copy.categoriesLabel}
+            >
+              <p className="spm-chat-categories__title">
+                {copy.categoriesLabel}
+              </p>
+              <div className="spm-chat-categories__grid">
+                {copy.categories.map(([label, question]) => (
+                  <button
+                    key={label}
+                    type="button"
+                    className="spm-chat-category"
+                    disabled={isSendingCategory}
+                    onClick={() => void sendCategoryQuestion(question)}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            </nav>,
+            categoriesHost
+          )
+        : null}
+    </>
   );
 }

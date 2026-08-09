@@ -1,0 +1,1005 @@
+{
+  "metadata": {
+    "programme": "Programme français",
+    "matiere": "Français",
+    "matiereSlug": "francais",
+    "domaine": "A. Liens et mise en application en littératie",
+    "domaineSlug": "liens-litteratie",
+    "niveaux": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 56,
+    "publicRecordCount": 51,
+    "nonStandardRecordCount": 5,
+    "mainTopicPlacementCount": 36,
+    "subtopicPlacementCount": 51,
+    "observedRecordCount": 15,
+    "referenceRecordCount": 36,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Les sujets principaux et les sous-sujets sont comptés par niveau. Les répétitions entre niveaux sont conservées comme progression pédagogique.",
+    "integrityRules": [
+      "Les répétitions entre niveaux sont conservées.",
+      "Seuls les doublons exacts Niveau + Domaine + Sujet principal + Sous-sujet peuvent être supprimés.",
+      "Les niveaux CECRL, adultes, secondaires parallèles et non précisés sont conservés dans les fichiers de révision.",
+      "Les niveaux sans contenu sont conservés dans le JSON mais masqués sur le site."
+    ]
+  },
+  "domaine": {
+    "slug": "liens-litteratie",
+    "titre": "Liens et mise en application en littératie",
+    "titreSource": "A. Liens et mise en application en littératie",
+    "description": "Communication orale, pensée critique, médias, autorégulation et transfert des apprentissages en littératie.",
+    "iconKey": "litteratie"
+  },
+  "niveaux": [
+    {
+      "niveau": 1,
+      "label": "1re année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-1-autoregulation-et-consolidation",
+          "titre": "Autorégulation et consolidation",
+          "sousSujets": [
+            {
+              "id": "francais-general-evaluation-ou-revision",
+              "titre": "Français général : évaluation ou révision",
+              "competence": "Diagnostiquer et consolider les compétences langagières",
+              "activite": "Support numérique ou visuel; Évaluation diagnostique, activités ciblées et rétroaction",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 5
+            }
+          ],
+          "sourceRows": [
+            5
+          ]
+        },
+        {
+          "id": "niveau-1-communication-orale",
+          "titre": "Communication orale",
+          "sousSujets": [
+            {
+              "id": "interaction-ecoute-et-prise-de-parole",
+              "titre": "Interaction, écoute et prise de parole",
+              "competence": "Écouter activement, s’exprimer clairement et adapter le registre",
+              "activite": "Interaction orale ou présentation; Jeu de rôle, exposé bref, entretien et rétroaction; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 6
+            },
+            {
+              "id": "presentation-et-expression",
+              "titre": "Présentation et expression",
+              "competence": "Présenter une idée en phrases simples avec un vocabulaire familier",
+              "activite": "Mini-exposé, présentation d’un livre, capsule audio ou vidéo",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 7
+            },
+            {
+              "id": "ecoute-active-et-interaction",
+              "titre": "Écoute active et interaction",
+              "competence": "Écouter une consigne courte, répondre clairement et respecter les tours de parole",
+              "activite": "Jeu de rôle, discussion dirigée, reformulation et grille d’écoute",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 8
+            }
+          ],
+          "sourceRows": [
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "id": "niveau-1-pensee-critique-et-medias",
+          "titre": "Pensée critique et médias",
+          "sousSujets": [
+            {
+              "id": "fiabilite-intention-et-point-de-vue",
+              "titre": "Fiabilité, intention et point de vue",
+              "competence": "Distinguer information et imagination dans des messages simples",
+              "activite": "Comparer deux messages, analyser une publicité ou une publication numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 9
+            }
+          ],
+          "sourceRows": [
+            9
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 5
+    },
+    {
+      "niveau": 2,
+      "label": "2e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-2-communication-orale",
+          "titre": "Communication orale",
+          "sousSujets": [
+            {
+              "id": "interaction-ecoute-et-prise-de-parole",
+              "titre": "Interaction, écoute et prise de parole",
+              "competence": "Écouter activement, s’exprimer clairement et adapter le registre",
+              "activite": "Interaction orale ou présentation; Jeu de rôle, exposé bref, entretien et rétroaction; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Production écrite guidée; Support numérique ou visuel; Écriture guidée à partir d’un plan, grille de révision et publication",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 27
+            },
+            {
+              "id": "presentation-et-expression",
+              "titre": "Présentation et expression",
+              "competence": "Présenter une idée en phrases simples avec un vocabulaire familier",
+              "activite": "Mini-exposé, présentation d’un livre, capsule audio ou vidéo",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 28
+            },
+            {
+              "id": "ecoute-active-et-interaction",
+              "titre": "Écoute active et interaction",
+              "competence": "Écouter une consigne courte, répondre clairement et respecter les tours de parole",
+              "activite": "Jeu de rôle, discussion dirigée, reformulation et grille d’écoute",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 29
+            }
+          ],
+          "sourceRows": [
+            27,
+            28,
+            29
+          ]
+        },
+        {
+          "id": "niveau-2-pensee-critique-et-medias",
+          "titre": "Pensée critique et médias",
+          "sousSujets": [
+            {
+              "id": "fiabilite-intention-et-point-de-vue",
+              "titre": "Fiabilité, intention et point de vue",
+              "competence": "Distinguer information et imagination dans des messages simples",
+              "activite": "Comparer deux messages, analyser une publicité ou une publication numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 30
+            }
+          ],
+          "sourceRows": [
+            30
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 2,
+      "nombreSousSujets": 4
+    },
+    {
+      "niveau": 3,
+      "label": "3e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-3-communication-orale",
+          "titre": "Communication orale",
+          "sousSujets": [
+            {
+              "id": "presentation-et-expression",
+              "titre": "Présentation et expression",
+              "competence": "Organiser une présentation structurée, utiliser des exemples et répondre aux questions",
+              "activite": "Mini-exposé, présentation d’un livre, capsule audio ou vidéo",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 62
+            },
+            {
+              "id": "ecoute-active-et-interaction",
+              "titre": "Écoute active et interaction",
+              "competence": "Résumer les propos d’autrui, poser des questions pertinentes et adapter sa prise de parole au contexte",
+              "activite": "Jeu de rôle, discussion dirigée, reformulation et grille d’écoute",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 63
+            }
+          ],
+          "sourceRows": [
+            62,
+            63
+          ]
+        },
+        {
+          "id": "niveau-3-pensee-critique-et-medias",
+          "titre": "Pensée critique et médias",
+          "sousSujets": [
+            {
+              "id": "fiabilite-intention-et-point-de-vue",
+              "titre": "Fiabilité, intention et point de vue",
+              "competence": "Identifier l’intention, le point de vue, les biais et la fiabilité de sources variées",
+              "activite": "Comparer deux messages, analyser une publicité ou une publication numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 64
+            }
+          ],
+          "sourceRows": [
+            64
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 2,
+      "nombreSousSujets": 3
+    },
+    {
+      "niveau": 4,
+      "label": "4e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-4-autoregulation-et-consolidation",
+          "titre": "Autorégulation et consolidation",
+          "sousSujets": [
+            {
+              "id": "francais-general-evaluation-ou-revision",
+              "titre": "Français général : évaluation ou révision",
+              "competence": "Diagnostiquer et consolider les compétences langagières",
+              "activite": "Exercices d’application gradués; Lecture guidée et questions de compréhension; Support numérique ou visuel; Évaluation diagnostique, activités ciblées et rétroaction",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 88
+            },
+            {
+              "id": "evaluation-revision-et-remediation",
+              "titre": "Évaluation, révision et remédiation",
+              "competence": "Identifier les acquis et les besoins, corriger et réinvestir",
+              "activite": "Classement, enrichissement de groupes nominaux et production de phrases; Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Frise chronologique, récit au passé et exercices de choix d’auxiliaire; Jeu de situations, conseils et phrases hypothétiques; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Phrases à trous, justification grammaticale et dictée ciblée; Production écrite guidée; Repérage dans un texte, classement par groupe et conjugaison; Rédiger une lettre, répondre à un courriel et corriger avec une grille; Support numérique ou visuel; Table de conjugaison, phrases contextualisées et jeu de rapidité; Tableau comparatif, ligne du temps et transformation de phrases; Transformation présent-imparfait et rédaction d’un souvenir; Tri de phrases, transformation et création de titres; Écriture guidée à partir d’un plan, grille de révision et publication; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 89
+            }
+          ],
+          "sourceRows": [
+            88,
+            89
+          ]
+        },
+        {
+          "id": "niveau-4-communication-orale",
+          "titre": "Communication orale",
+          "sousSujets": [
+            {
+              "id": "interaction-ecoute-et-prise-de-parole",
+              "titre": "Interaction, écoute et prise de parole",
+              "competence": "Écouter activement, s’exprimer clairement et adapter le registre",
+              "activite": "Carte de mots, familles lexicales, synonymes-antonymes et phrase contextualisée; Interaction orale ou présentation; Jeu de rôle, exposé bref, entretien et rétroaction; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 90
+            },
+            {
+              "id": "presentation-et-expression",
+              "titre": "Présentation et expression",
+              "competence": "Organiser une présentation structurée, utiliser des exemples et répondre aux questions",
+              "activite": "Mini-exposé, présentation d’un livre, capsule audio ou vidéo",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 91
+            },
+            {
+              "id": "ecoute-active-et-interaction",
+              "titre": "Écoute active et interaction",
+              "competence": "Résumer les propos d’autrui, poser des questions pertinentes et adapter sa prise de parole au contexte",
+              "activite": "Jeu de rôle, discussion dirigée, reformulation et grille d’écoute",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 92
+            }
+          ],
+          "sourceRows": [
+            90,
+            91,
+            92
+          ]
+        },
+        {
+          "id": "niveau-4-pensee-critique-et-medias",
+          "titre": "Pensée critique et médias",
+          "sousSujets": [
+            {
+              "id": "fiabilite-intention-et-point-de-vue",
+              "titre": "Fiabilité, intention et point de vue",
+              "competence": "Identifier l’intention, le point de vue, les biais et la fiabilité de sources variées",
+              "activite": "Comparer deux messages, analyser une publicité ou une publication numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 93
+            }
+          ],
+          "sourceRows": [
+            93
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 6
+    },
+    {
+      "niveau": 5,
+      "label": "5e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-5-autoregulation-et-consolidation",
+          "titre": "Autorégulation et consolidation",
+          "sousSujets": [
+            {
+              "id": "francais-general-evaluation-ou-revision",
+              "titre": "Français général : évaluation ou révision",
+              "competence": "Diagnostiquer et consolider les compétences langagières",
+              "activite": "Exercices d’application gradués; Support numérique ou visuel; Évaluation diagnostique ou formative; Évaluation diagnostique, activités ciblées et rétroaction",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 127
+            },
+            {
+              "id": "evaluation-revision-et-remediation",
+              "titre": "Évaluation, révision et remédiation",
+              "competence": "Identifier les acquis et les besoins, corriger et réinvestir",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Production écrite guidée; Support numérique ou visuel; Tri de groupes nominaux et remplacement de déterminants; Écriture guidée à partir d’un plan, grille de révision et publication; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 128
+            }
+          ],
+          "sourceRows": [
+            127,
+            128
+          ]
+        },
+        {
+          "id": "niveau-5-communication-orale",
+          "titre": "Communication orale",
+          "sousSujets": [
+            {
+              "id": "presentation-et-expression",
+              "titre": "Présentation et expression",
+              "competence": "Organiser une présentation structurée, utiliser des exemples et répondre aux questions",
+              "activite": "Mini-exposé, présentation d’un livre, capsule audio ou vidéo",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 129
+            },
+            {
+              "id": "ecoute-active-et-interaction",
+              "titre": "Écoute active et interaction",
+              "competence": "Résumer les propos d’autrui, poser des questions pertinentes et adapter sa prise de parole au contexte",
+              "activite": "Jeu de rôle, discussion dirigée, reformulation et grille d’écoute",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 130
+            }
+          ],
+          "sourceRows": [
+            129,
+            130
+          ]
+        },
+        {
+          "id": "niveau-5-pensee-critique-et-medias",
+          "titre": "Pensée critique et médias",
+          "sousSujets": [
+            {
+              "id": "fiabilite-intention-et-point-de-vue",
+              "titre": "Fiabilité, intention et point de vue",
+              "competence": "Identifier l’intention, le point de vue, les biais et la fiabilité de sources variées",
+              "activite": "Comparer deux messages, analyser une publicité ou une publication numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 131
+            }
+          ],
+          "sourceRows": [
+            131
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 5
+    },
+    {
+      "niveau": 6,
+      "label": "6e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-6-autoregulation-et-consolidation",
+          "titre": "Autorégulation et consolidation",
+          "sousSujets": [
+            {
+              "id": "evaluation-revision-et-remediation",
+              "titre": "Évaluation, révision et remédiation",
+              "competence": "Identifier les acquis et les besoins, corriger et réinvestir",
+              "activite": "Carte de mots, familles lexicales, synonymes-antonymes et phrase contextualisée; Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Enrichissement de phrases et classement par sens; Exercices d’application gradués; Frise chronologique, récit au passé et exercices de choix d’auxiliaire; Fusion de phrases, découpage en propositions et réécriture; Lecture d’infographie, plan explicatif et rédaction d’un court texte documentaire; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Phrases à trous, justification grammaticale et dictée ciblée; Repérage dans un texte, classement par groupe et conjugaison; Support numérique ou visuel; Table de conjugaison, phrases contextualisées et jeu de rapidité; Tableau comparatif, ligne du temps et transformation de phrases; Tri de groupes nominaux et remplacement de déterminants; Tri de phrases, transformation et création de titres; Écriture guidée à partir d’un plan, grille de révision et publication; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 160
+            }
+          ],
+          "sourceRows": [
+            160
+          ]
+        },
+        {
+          "id": "niveau-6-communication-orale",
+          "titre": "Communication orale",
+          "sousSujets": [
+            {
+              "id": "interaction-ecoute-et-prise-de-parole",
+              "titre": "Interaction, écoute et prise de parole",
+              "competence": "Écouter activement, s’exprimer clairement et adapter le registre",
+              "activite": "Interaction orale ou présentation; Jeu de rôle, exposé bref, entretien et rétroaction; Prévisions, projet personnel et phrases à compléter; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 161
+            },
+            {
+              "id": "presentation-et-expression",
+              "titre": "Présentation et expression",
+              "competence": "Organiser une présentation structurée, utiliser des exemples et répondre aux questions",
+              "activite": "Mini-exposé, présentation d’un livre, capsule audio ou vidéo",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 162
+            },
+            {
+              "id": "ecoute-active-et-interaction",
+              "titre": "Écoute active et interaction",
+              "competence": "Résumer les propos d’autrui, poser des questions pertinentes et adapter sa prise de parole au contexte",
+              "activite": "Jeu de rôle, discussion dirigée, reformulation et grille d’écoute",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 163
+            }
+          ],
+          "sourceRows": [
+            161,
+            162,
+            163
+          ]
+        },
+        {
+          "id": "niveau-6-pensee-critique-et-medias",
+          "titre": "Pensée critique et médias",
+          "sousSujets": [
+            {
+              "id": "fiabilite-intention-et-point-de-vue",
+              "titre": "Fiabilité, intention et point de vue",
+              "competence": "Identifier l’intention, le point de vue, les biais et la fiabilité de sources variées",
+              "activite": "Comparer deux messages, analyser une publicité ou une publication numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 164
+            }
+          ],
+          "sourceRows": [
+            164
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 5
+    },
+    {
+      "niveau": 7,
+      "label": "7e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-7-communication-orale",
+          "titre": "Communication orale",
+          "sousSujets": [
+            {
+              "id": "presentation-et-expression",
+              "titre": "Présentation et expression",
+              "competence": "Organiser une présentation structurée, utiliser des exemples et répondre aux questions",
+              "activite": "Mini-exposé, présentation d’un livre, capsule audio ou vidéo",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 201
+            },
+            {
+              "id": "ecoute-active-et-interaction",
+              "titre": "Écoute active et interaction",
+              "competence": "Résumer les propos d’autrui, poser des questions pertinentes et adapter sa prise de parole au contexte",
+              "activite": "Jeu de rôle, discussion dirigée, reformulation et grille d’écoute",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 202
+            }
+          ],
+          "sourceRows": [
+            201,
+            202
+          ]
+        },
+        {
+          "id": "niveau-7-pensee-critique-et-medias",
+          "titre": "Pensée critique et médias",
+          "sousSujets": [
+            {
+              "id": "fiabilite-intention-et-point-de-vue",
+              "titre": "Fiabilité, intention et point de vue",
+              "competence": "Identifier l’intention, le point de vue, les biais et la fiabilité de sources variées",
+              "activite": "Comparer deux messages, analyser une publicité ou une publication numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 203
+            }
+          ],
+          "sourceRows": [
+            203
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 2,
+      "nombreSousSujets": 3
+    },
+    {
+      "niveau": 8,
+      "label": "8e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-8-autoregulation-et-consolidation",
+          "titre": "Autorégulation et consolidation",
+          "sousSujets": [
+            {
+              "id": "francais-general-evaluation-ou-revision",
+              "titre": "Français général : évaluation ou révision",
+              "competence": "Diagnostiquer et consolider les compétences langagières",
+              "activite": "Lecture guidée et questions de compréhension; Support numérique ou visuel; Évaluation diagnostique, activités ciblées et rétroaction",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 225
+            }
+          ],
+          "sourceRows": [
+            225
+          ]
+        },
+        {
+          "id": "niveau-8-communication-orale",
+          "titre": "Communication orale",
+          "sousSujets": [
+            {
+              "id": "presentation-et-expression",
+              "titre": "Présentation et expression",
+              "competence": "Organiser une présentation structurée, utiliser des exemples et répondre aux questions",
+              "activite": "Mini-exposé, présentation d’un livre, capsule audio ou vidéo",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 226
+            },
+            {
+              "id": "ecoute-active-et-interaction",
+              "titre": "Écoute active et interaction",
+              "competence": "Résumer les propos d’autrui, poser des questions pertinentes et adapter sa prise de parole au contexte",
+              "activite": "Jeu de rôle, discussion dirigée, reformulation et grille d’écoute",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 227
+            }
+          ],
+          "sourceRows": [
+            226,
+            227
+          ]
+        },
+        {
+          "id": "niveau-8-pensee-critique-et-medias",
+          "titre": "Pensée critique et médias",
+          "sousSujets": [
+            {
+              "id": "fiabilite-intention-et-point-de-vue",
+              "titre": "Fiabilité, intention et point de vue",
+              "competence": "Identifier l’intention, le point de vue, les biais et la fiabilité de sources variées",
+              "activite": "Comparer deux messages, analyser une publicité ou une publication numérique",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 228
+            }
+          ],
+          "sourceRows": [
+            228
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 4
+    },
+    {
+      "niveau": 9,
+      "label": "9e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-9-autoregulation",
+          "titre": "Autorégulation",
+          "sousSujets": [
+            {
+              "id": "portfolio-objectifs-et-strategies",
+              "titre": "Portfolio, objectifs et stratégies",
+              "competence": "Évaluer ses progrès et ajuster ses stratégies de lecture, d’écriture et d’oral",
+              "activite": "Portfolio, autoévaluation, entretien et plan d’amélioration",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 256
+            }
+          ],
+          "sourceRows": [
+            256
+          ]
+        },
+        {
+          "id": "niveau-9-autoregulation-et-consolidation",
+          "titre": "Autorégulation et consolidation",
+          "sousSujets": [
+            {
+              "id": "evaluation-revision-et-remediation",
+              "titre": "Évaluation, révision et remédiation",
+              "competence": "Identifier les acquis et les besoins, corriger et réinvestir",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Frise chronologique, récit au passé et exercices de choix d’auxiliaire; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Repérage dans un texte, classement par groupe et conjugaison; Tableau comparatif, ligne du temps et transformation de phrases; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 257
+            }
+          ],
+          "sourceRows": [
+            257
+          ]
+        },
+        {
+          "id": "niveau-9-communication-orale",
+          "titre": "Communication orale",
+          "sousSujets": [
+            {
+              "id": "debat-discussion-et-presentation",
+              "titre": "Débat, discussion et présentation",
+              "competence": "Organiser un discours, soutenir une idée et interagir de façon constructive",
+              "activite": "Débat, exposé argumenté, balado et rétroaction par les pairs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 258
+            }
+          ],
+          "sourceRows": [
+            258
+          ]
+        },
+        {
+          "id": "niveau-9-litteratie-mediatique",
+          "titre": "Littératie médiatique",
+          "sousSujets": [
+            {
+              "id": "medias-sources-biais-et-desinformation",
+              "titre": "Médias, sources, biais et désinformation",
+              "competence": "Évaluer la crédibilité, l’intention et les procédés de persuasion",
+              "activite": "Analyse comparative de nouvelles, publicité et vérification des faits",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 259
+            }
+          ],
+          "sourceRows": [
+            259
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 4,
+      "nombreSousSujets": 4
+    },
+    {
+      "niveau": 10,
+      "label": "10e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-10-autoregulation",
+          "titre": "Autorégulation",
+          "sousSujets": [
+            {
+              "id": "portfolio-objectifs-et-strategies",
+              "titre": "Portfolio, objectifs et stratégies",
+              "competence": "Évaluer ses progrès et ajuster ses stratégies de lecture, d’écriture et d’oral avec un degré croissant d’autonomie et de complexité",
+              "activite": "Portfolio, autoévaluation, entretien et plan d’amélioration",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 280
+            }
+          ],
+          "sourceRows": [
+            280
+          ]
+        },
+        {
+          "id": "niveau-10-communication-orale",
+          "titre": "Communication orale",
+          "sousSujets": [
+            {
+              "id": "debat-discussion-et-presentation",
+              "titre": "Débat, discussion et présentation",
+              "competence": "Organiser un discours, soutenir une idée et interagir de façon constructive avec un degré croissant d’autonomie et de complexité",
+              "activite": "Débat, exposé argumenté, balado et rétroaction par les pairs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 281
+            }
+          ],
+          "sourceRows": [
+            281
+          ]
+        },
+        {
+          "id": "niveau-10-litteratie-mediatique",
+          "titre": "Littératie médiatique",
+          "sousSujets": [
+            {
+              "id": "medias-sources-biais-et-desinformation",
+              "titre": "Médias, sources, biais et désinformation",
+              "competence": "Évaluer la crédibilité, l’intention et les procédés de persuasion avec un degré croissant d’autonomie et de complexité",
+              "activite": "Analyse comparative de nouvelles, publicité et vérification des faits",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 282
+            }
+          ],
+          "sourceRows": [
+            282
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 3
+    },
+    {
+      "niveau": 11,
+      "label": "11e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-11-autoregulation",
+          "titre": "Autorégulation",
+          "sousSujets": [
+            {
+              "id": "portfolio-objectifs-et-strategies",
+              "titre": "Portfolio, objectifs et stratégies",
+              "competence": "Évaluer ses progrès et ajuster ses stratégies de lecture, d’écriture et d’oral avec un degré croissant d’autonomie et de complexité",
+              "activite": "Portfolio, autoévaluation, entretien et plan d’amélioration",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 294
+            }
+          ],
+          "sourceRows": [
+            294
+          ]
+        },
+        {
+          "id": "niveau-11-autoregulation-et-consolidation",
+          "titre": "Autorégulation et consolidation",
+          "sousSujets": [
+            {
+              "id": "evaluation-revision-et-remediation",
+              "titre": "Évaluation, révision et remédiation",
+              "competence": "Identifier les acquis et les besoins, corriger et réinvestir",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Encadrement, remplacement, déplacement et construction de phrases; Exercices d’application gradués; Interaction orale ou présentation; Jeu de rôle, exposé bref, entretien et rétroaction; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Manipulations de phrases, remplacement du sujet et correction d’erreurs; Repérage dans un texte, classement par groupe et conjugaison; Schéma narratif, remise en ordre d’événements et réécriture d’une fin; Écriture guidée à partir d’un plan, grille de révision et publication; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 295
+            }
+          ],
+          "sourceRows": [
+            295
+          ]
+        },
+        {
+          "id": "niveau-11-communication-orale",
+          "titre": "Communication orale",
+          "sousSujets": [
+            {
+              "id": "debat-discussion-et-presentation",
+              "titre": "Débat, discussion et présentation",
+              "competence": "Organiser un discours, soutenir une idée et interagir de façon constructive avec un degré croissant d’autonomie et de complexité",
+              "activite": "Débat, exposé argumenté, balado et rétroaction par les pairs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 296
+            },
+            {
+              "id": "interaction-ecoute-et-prise-de-parole",
+              "titre": "Interaction, écoute et prise de parole",
+              "competence": "Écouter activement, s’exprimer clairement et adapter le registre",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Interaction orale ou présentation; Jeu de rôle, exposé bref, entretien et rétroaction; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 297
+            }
+          ],
+          "sourceRows": [
+            296,
+            297
+          ]
+        },
+        {
+          "id": "niveau-11-litteratie-mediatique",
+          "titre": "Littératie médiatique",
+          "sousSujets": [
+            {
+              "id": "medias-sources-biais-et-desinformation",
+              "titre": "Médias, sources, biais et désinformation",
+              "competence": "Évaluer la crédibilité, l’intention et les procédés de persuasion avec un degré croissant d’autonomie et de complexité",
+              "activite": "Analyse comparative de nouvelles, publicité et vérification des faits",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 298
+            }
+          ],
+          "sourceRows": [
+            298
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 4,
+      "nombreSousSujets": 5
+    },
+    {
+      "niveau": 12,
+      "label": "12e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-12-autoregulation",
+          "titre": "Autorégulation",
+          "sousSujets": [
+            {
+              "id": "portfolio-objectifs-et-strategies",
+              "titre": "Portfolio, objectifs et stratégies",
+              "competence": "Évaluer ses progrès et ajuster ses stratégies de lecture, d’écriture et d’oral avec un degré croissant d’autonomie et de complexité",
+              "activite": "Portfolio, autoévaluation, entretien et plan d’amélioration",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 318
+            }
+          ],
+          "sourceRows": [
+            318
+          ]
+        },
+        {
+          "id": "niveau-12-autoregulation-et-consolidation",
+          "titre": "Autorégulation et consolidation",
+          "sousSujets": [
+            {
+              "id": "evaluation-revision-et-remediation",
+              "titre": "Évaluation, révision et remédiation",
+              "competence": "Identifier les acquis et les besoins, corriger et réinvestir",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 319
+            }
+          ],
+          "sourceRows": [
+            319
+          ]
+        },
+        {
+          "id": "niveau-12-communication-orale",
+          "titre": "Communication orale",
+          "sousSujets": [
+            {
+              "id": "debat-discussion-et-presentation",
+              "titre": "Débat, discussion et présentation",
+              "competence": "Organiser un discours, soutenir une idée et interagir de façon constructive avec un degré croissant d’autonomie et de complexité",
+              "activite": "Débat, exposé argumenté, balado et rétroaction par les pairs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 320
+            }
+          ],
+          "sourceRows": [
+            320
+          ]
+        },
+        {
+          "id": "niveau-12-litteratie-mediatique",
+          "titre": "Littératie médiatique",
+          "sousSujets": [
+            {
+              "id": "medias-sources-biais-et-desinformation",
+              "titre": "Médias, sources, biais et désinformation",
+              "competence": "Évaluer la crédibilité, l’intention et les procédés de persuasion avec un degré croissant d’autonomie et de complexité",
+              "activite": "Analyse comparative de nouvelles, publicité et vérification des faits",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 321
+            }
+          ],
+          "sourceRows": [
+            321
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 4,
+      "nombreSousSujets": 4
+    }
+  ]
+}

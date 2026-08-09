@@ -1,0 +1,1159 @@
+{
+  "metadata": {
+    "programme": "Programme français",
+    "matiere": "Mathématiques en français",
+    "matiereSlug": "mathematiques-en-francais",
+    "domaine": "A. Processus mathématiques",
+    "domaineSlug": "processus-mathematiques",
+    "niveaux": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 63,
+    "publicRecordCount": 57,
+    "nonStandardRecordCount": 6,
+    "mainTopicPlacementCount": 47,
+    "subtopicPlacementCount": 57,
+    "observedRecordCount": 20,
+    "referenceRecordCount": 37,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Les sujets principaux et les sous-sujets sont comptés par niveau. Les répétitions entre niveaux sont conservées comme progression pédagogique.",
+    "integrityRules": [
+      "Les répétitions entre niveaux sont conservées.",
+      "Seuls les doublons exacts Niveau + Domaine + Sujet principal + Sous-sujet peuvent être supprimés.",
+      "Les niveaux CECRL, adultes, secondaires parallèles et non précisés sont conservés dans les fichiers de révision.",
+      "Les niveaux sans contenu sont conservés dans le JSON mais masqués sur le site."
+    ]
+  },
+  "domaine": {
+    "slug": "processus-mathematiques",
+    "titre": "Processus mathématiques",
+    "titreSource": "A. Processus mathématiques",
+    "description": "Résolution de problèmes, raisonnement, communication, modélisation, codage et consolidation des stratégies.",
+    "iconKey": "processus"
+  },
+  "niveaux": [
+    {
+      "niveau": 1,
+      "label": "1re année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-1-codage-et-pensee-algorithmique",
+          "titre": "Codage et pensée algorithmique",
+          "sousSujets": [
+            {
+              "id": "sequences-conditions-et-debogage",
+              "titre": "Séquences, conditions et débogage",
+              "competence": "Créer et corriger une suite d’instructions adaptée au niveau",
+              "activite": "Déplacement sur quadrillage, robot ou programmation par blocs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 5
+            }
+          ],
+          "sourceRows": [
+            5
+          ]
+        },
+        {
+          "id": "niveau-1-fluidite-et-consolidation",
+          "titre": "Fluidité et consolidation",
+          "sousSujets": [
+            {
+              "id": "calcul-mental-estimation-et-revision",
+              "titre": "Calcul mental, estimation et révision",
+              "competence": "Développer des automatismes sans perdre le sens des nombres",
+              "activite": "Rituel de calcul mental, jeu du nombre cible et autoévaluation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 6
+            }
+          ],
+          "sourceRows": [
+            6
+          ]
+        },
+        {
+          "id": "niveau-1-raisonnement-et-communication",
+          "titre": "Raisonnement et communication",
+          "sousSujets": [
+            {
+              "id": "justification-et-vocabulaire-mathematique",
+              "titre": "Justification et vocabulaire mathématique",
+              "competence": "Décrire une démarche avec mots, symboles, modèles et exemples",
+              "activite": "Entretien mathématique, solution commentée et galerie de stratégies",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 7
+            }
+          ],
+          "sourceRows": [
+            7
+          ]
+        },
+        {
+          "id": "niveau-1-resolution-de-problemes",
+          "titre": "Résolution de problèmes",
+          "sousSujets": [
+            {
+              "id": "comprendre-representer-resoudre-et-verifier",
+              "titre": "Comprendre, représenter, résoudre et vérifier",
+              "competence": "Choisir une stratégie, expliquer le raisonnement et vérifier la vraisemblance",
+              "activite": "Problème ouvert, schéma, matériel et comparaison de stratégies",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 8
+            }
+          ],
+          "sourceRows": [
+            8
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 4,
+      "nombreSousSujets": 4
+    },
+    {
+      "niveau": 2,
+      "label": "2e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-2-autoregulation-et-consolidation",
+          "titre": "Autorégulation et consolidation",
+          "sousSujets": [
+            {
+              "id": "mathematiques-generales-evaluation-ou-revision",
+              "titre": "Mathématiques générales : évaluation ou révision",
+              "competence": "Diagnostiquer et consolider les compétences mathématiques",
+              "activite": "Exercices d’application gradués; Support numérique ou visuel; Évaluation diagnostique ou formative; Évaluation diagnostique, exercices gradués et correction",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 23
+            },
+            {
+              "id": "evaluation-revision-et-consolidation",
+              "titre": "Évaluation, révision et consolidation",
+              "competence": "Identifier les acquis, corriger les erreurs et choisir une stratégie",
+              "activite": "Correction, révision et remédiation; Exercices d’application gradués; Support numérique ou visuel; Évaluation diagnostique, correction expliquée et parcours de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 24
+            }
+          ],
+          "sourceRows": [
+            23,
+            24
+          ]
+        },
+        {
+          "id": "niveau-2-codage-et-pensee-algorithmique",
+          "titre": "Codage et pensée algorithmique",
+          "sousSujets": [
+            {
+              "id": "sequences-conditions-et-debogage",
+              "titre": "Séquences, conditions et débogage",
+              "competence": "Créer et corriger une suite d’instructions adaptée au niveau",
+              "activite": "Déplacement sur quadrillage, robot ou programmation par blocs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 25
+            }
+          ],
+          "sourceRows": [
+            25
+          ]
+        },
+        {
+          "id": "niveau-2-fluidite-et-consolidation",
+          "titre": "Fluidité et consolidation",
+          "sousSujets": [
+            {
+              "id": "calcul-mental-estimation-et-revision",
+              "titre": "Calcul mental, estimation et révision",
+              "competence": "Développer des automatismes sans perdre le sens des nombres",
+              "activite": "Rituel de calcul mental, jeu du nombre cible et autoévaluation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 26
+            }
+          ],
+          "sourceRows": [
+            26
+          ]
+        },
+        {
+          "id": "niveau-2-raisonnement-et-communication",
+          "titre": "Raisonnement et communication",
+          "sousSujets": [
+            {
+              "id": "justification-et-vocabulaire-mathematique",
+              "titre": "Justification et vocabulaire mathématique",
+              "competence": "Décrire une démarche avec mots, symboles, modèles et exemples",
+              "activite": "Entretien mathématique, solution commentée et galerie de stratégies",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 27
+            }
+          ],
+          "sourceRows": [
+            27
+          ]
+        },
+        {
+          "id": "niveau-2-resolution-de-problemes",
+          "titre": "Résolution de problèmes",
+          "sousSujets": [
+            {
+              "id": "comprendre-representer-resoudre-et-verifier",
+              "titre": "Comprendre, représenter, résoudre et vérifier",
+              "competence": "Choisir une stratégie, expliquer le raisonnement et vérifier la vraisemblance",
+              "activite": "Problème ouvert, schéma, matériel et comparaison de stratégies",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 28
+            }
+          ],
+          "sourceRows": [
+            28
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 6
+    },
+    {
+      "niveau": 3,
+      "label": "3e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-3-codage-et-pensee-algorithmique",
+          "titre": "Codage et pensée algorithmique",
+          "sousSujets": [
+            {
+              "id": "sequences-conditions-et-debogage",
+              "titre": "Séquences, conditions et débogage",
+              "competence": "Créer et corriger une suite d’instructions adaptée au niveau",
+              "activite": "Déplacement sur quadrillage, robot ou programmation par blocs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 50
+            }
+          ],
+          "sourceRows": [
+            50
+          ]
+        },
+        {
+          "id": "niveau-3-fluidite-et-consolidation",
+          "titre": "Fluidité et consolidation",
+          "sousSujets": [
+            {
+              "id": "calcul-mental-estimation-et-revision",
+              "titre": "Calcul mental, estimation et révision",
+              "competence": "Développer des automatismes sans perdre le sens des nombres",
+              "activite": "Rituel de calcul mental, jeu du nombre cible et autoévaluation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 51
+            }
+          ],
+          "sourceRows": [
+            51
+          ]
+        },
+        {
+          "id": "niveau-3-raisonnement-et-communication",
+          "titre": "Raisonnement et communication",
+          "sousSujets": [
+            {
+              "id": "justification-et-vocabulaire-mathematique",
+              "titre": "Justification et vocabulaire mathématique",
+              "competence": "Décrire une démarche avec mots, symboles, modèles et exemples",
+              "activite": "Entretien mathématique, solution commentée et galerie de stratégies",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 52
+            }
+          ],
+          "sourceRows": [
+            52
+          ]
+        },
+        {
+          "id": "niveau-3-resolution-de-problemes",
+          "titre": "Résolution de problèmes",
+          "sousSujets": [
+            {
+              "id": "comprendre-representer-resoudre-et-verifier",
+              "titre": "Comprendre, représenter, résoudre et vérifier",
+              "competence": "Choisir une stratégie, expliquer le raisonnement et vérifier la vraisemblance",
+              "activite": "Problème ouvert, schéma, matériel et comparaison de stratégies",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 53
+            }
+          ],
+          "sourceRows": [
+            53
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 4,
+      "nombreSousSujets": 4
+    },
+    {
+      "niveau": 4,
+      "label": "4e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-4-autoregulation-et-consolidation",
+          "titre": "Autorégulation et consolidation",
+          "sousSujets": [
+            {
+              "id": "mathematiques-generales-evaluation-ou-revision",
+              "titre": "Mathématiques générales : évaluation ou révision",
+              "competence": "Diagnostiquer et consolider les compétences mathématiques",
+              "activite": "Support numérique ou visuel; Évaluation diagnostique, exercices gradués et correction",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 77
+            },
+            {
+              "id": "evaluation-revision-et-consolidation",
+              "titre": "Évaluation, révision et consolidation",
+              "competence": "Identifier les acquis, corriger les erreurs et choisir une stratégie",
+              "activite": "Correction, révision et remédiation; Exercices d’application gradués; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles; Évaluation diagnostique ou formative; Évaluation diagnostique, correction expliquée et parcours de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 78
+            }
+          ],
+          "sourceRows": [
+            77,
+            78
+          ]
+        },
+        {
+          "id": "niveau-4-codage-et-pensee-algorithmique",
+          "titre": "Codage et pensée algorithmique",
+          "sousSujets": [
+            {
+              "id": "sequences-conditions-et-debogage",
+              "titre": "Séquences, conditions et débogage",
+              "competence": "Créer et corriger une suite d’instructions adaptée au niveau",
+              "activite": "Déplacement sur quadrillage, robot ou programmation par blocs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 79
+            }
+          ],
+          "sourceRows": [
+            79
+          ]
+        },
+        {
+          "id": "niveau-4-fluidite-et-consolidation",
+          "titre": "Fluidité et consolidation",
+          "sousSujets": [
+            {
+              "id": "calcul-mental-estimation-et-revision",
+              "titre": "Calcul mental, estimation et révision",
+              "competence": "Développer des automatismes sans perdre le sens des nombres",
+              "activite": "Rituel de calcul mental, jeu du nombre cible et autoévaluation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 80
+            }
+          ],
+          "sourceRows": [
+            80
+          ]
+        },
+        {
+          "id": "niveau-4-raisonnement-et-communication",
+          "titre": "Raisonnement et communication",
+          "sousSujets": [
+            {
+              "id": "justification-et-vocabulaire-mathematique",
+              "titre": "Justification et vocabulaire mathématique",
+              "competence": "Décrire une démarche avec mots, symboles, modèles et exemples",
+              "activite": "Entretien mathématique, solution commentée et galerie de stratégies",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 81
+            }
+          ],
+          "sourceRows": [
+            81
+          ]
+        },
+        {
+          "id": "niveau-4-resolution-de-problemes",
+          "titre": "Résolution de problèmes",
+          "sousSujets": [
+            {
+              "id": "comprendre-representer-resoudre-et-verifier",
+              "titre": "Comprendre, représenter, résoudre et vérifier",
+              "competence": "Choisir une stratégie, expliquer le raisonnement et vérifier la vraisemblance",
+              "activite": "Problème ouvert, schéma, matériel et comparaison de stratégies",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 82
+            },
+            {
+              "id": "modelisation-et-resolution-de-problemes",
+              "titre": "Modélisation et résolution de problèmes",
+              "competence": "Comprendre, planifier, représenter, résoudre et vérifier",
+              "activite": "Calcul mental, algorithmes, matériel manipulable et problèmes; Droite numérique, matériel et problèmes de comparaison; Décomposition, calcul mental et problèmes additifs; Problème ouvert, schéma, estimation, solution expliquée et comparaison de méthodes; Résolution de problèmes contextualisés; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 83
+            }
+          ],
+          "sourceRows": [
+            82,
+            83
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 7
+    },
+    {
+      "niveau": 5,
+      "label": "5e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-5-autoregulation-et-consolidation",
+          "titre": "Autorégulation et consolidation",
+          "sousSujets": [
+            {
+              "id": "mathematiques-generales-evaluation-ou-revision",
+              "titre": "Mathématiques générales : évaluation ou révision",
+              "competence": "Diagnostiquer et consolider les compétences mathématiques",
+              "activite": "Lecture guidée et questions de compréhension; Support numérique ou visuel; Évaluation diagnostique, exercices gradués et correction",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 117
+            },
+            {
+              "id": "evaluation-revision-et-consolidation",
+              "titre": "Évaluation, révision et consolidation",
+              "competence": "Identifier les acquis, corriger les erreurs et choisir une stratégie",
+              "activite": "Correction, révision et remédiation; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles; Évaluation diagnostique ou formative; Évaluation diagnostique, correction expliquée et parcours de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 118
+            }
+          ],
+          "sourceRows": [
+            117,
+            118
+          ]
+        },
+        {
+          "id": "niveau-5-codage-et-pensee-algorithmique",
+          "titre": "Codage et pensée algorithmique",
+          "sousSujets": [
+            {
+              "id": "sequences-conditions-et-debogage",
+              "titre": "Séquences, conditions et débogage",
+              "competence": "Créer et corriger une suite d’instructions adaptée au niveau",
+              "activite": "Déplacement sur quadrillage, robot ou programmation par blocs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 119
+            }
+          ],
+          "sourceRows": [
+            119
+          ]
+        },
+        {
+          "id": "niveau-5-fluidite-et-consolidation",
+          "titre": "Fluidité et consolidation",
+          "sousSujets": [
+            {
+              "id": "calcul-mental-estimation-et-revision",
+              "titre": "Calcul mental, estimation et révision",
+              "competence": "Développer des automatismes sans perdre le sens des nombres",
+              "activite": "Rituel de calcul mental, jeu du nombre cible et autoévaluation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 120
+            }
+          ],
+          "sourceRows": [
+            120
+          ]
+        },
+        {
+          "id": "niveau-5-raisonnement-et-communication",
+          "titre": "Raisonnement et communication",
+          "sousSujets": [
+            {
+              "id": "justification-et-vocabulaire-mathematique",
+              "titre": "Justification et vocabulaire mathématique",
+              "competence": "Décrire une démarche avec mots, symboles, modèles et exemples",
+              "activite": "Entretien mathématique, solution commentée et galerie de stratégies",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 121
+            }
+          ],
+          "sourceRows": [
+            121
+          ]
+        },
+        {
+          "id": "niveau-5-resolution-de-problemes",
+          "titre": "Résolution de problèmes",
+          "sousSujets": [
+            {
+              "id": "comprendre-representer-resoudre-et-verifier",
+              "titre": "Comprendre, représenter, résoudre et vérifier",
+              "competence": "Choisir une stratégie, expliquer le raisonnement et vérifier la vraisemblance",
+              "activite": "Problème ouvert, schéma, matériel et comparaison de stratégies",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 122
+            }
+          ],
+          "sourceRows": [
+            122
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 6
+    },
+    {
+      "niveau": 6,
+      "label": "6e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-6-autoregulation-et-consolidation",
+          "titre": "Autorégulation et consolidation",
+          "sousSujets": [
+            {
+              "id": "mathematiques-generales-evaluation-ou-revision",
+              "titre": "Mathématiques générales : évaluation ou révision",
+              "competence": "Diagnostiquer et consolider les compétences mathématiques",
+              "activite": "Exercices d’application gradués; Lecture guidée et questions de compréhension; Support numérique ou visuel; Évaluation diagnostique, exercices gradués et correction",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 148
+            },
+            {
+              "id": "evaluation-revision-et-consolidation",
+              "titre": "Évaluation, révision et consolidation",
+              "competence": "Identifier les acquis, corriger les erreurs et choisir une stratégie",
+              "activite": "Correction, révision et remédiation; Exercices d’application gradués; Mesure d’objets, plans et problèmes de clôture; Sondage, tableau, diagramme, moyenne-médiane-mode et conclusion; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles; Évaluation diagnostique ou formative; Évaluation diagnostique, correction expliquée et parcours de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 149
+            }
+          ],
+          "sourceRows": [
+            148,
+            149
+          ]
+        },
+        {
+          "id": "niveau-6-codage-et-pensee-algorithmique",
+          "titre": "Codage et pensée algorithmique",
+          "sousSujets": [
+            {
+              "id": "sequences-conditions-et-debogage",
+              "titre": "Séquences, conditions et débogage",
+              "competence": "Créer et corriger une suite d’instructions adaptée au niveau",
+              "activite": "Déplacement sur quadrillage, robot ou programmation par blocs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 150
+            }
+          ],
+          "sourceRows": [
+            150
+          ]
+        },
+        {
+          "id": "niveau-6-fluidite-et-consolidation",
+          "titre": "Fluidité et consolidation",
+          "sousSujets": [
+            {
+              "id": "calcul-mental-estimation-et-revision",
+              "titre": "Calcul mental, estimation et révision",
+              "competence": "Développer des automatismes sans perdre le sens des nombres",
+              "activite": "Rituel de calcul mental, jeu du nombre cible et autoévaluation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 151
+            }
+          ],
+          "sourceRows": [
+            151
+          ]
+        },
+        {
+          "id": "niveau-6-raisonnement-et-communication",
+          "titre": "Raisonnement et communication",
+          "sousSujets": [
+            {
+              "id": "justification-et-vocabulaire-mathematique",
+              "titre": "Justification et vocabulaire mathématique",
+              "competence": "Décrire une démarche avec mots, symboles, modèles et exemples",
+              "activite": "Entretien mathématique, solution commentée et galerie de stratégies",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 152
+            }
+          ],
+          "sourceRows": [
+            152
+          ]
+        },
+        {
+          "id": "niveau-6-resolution-de-problemes",
+          "titre": "Résolution de problèmes",
+          "sousSujets": [
+            {
+              "id": "comprendre-representer-resoudre-et-verifier",
+              "titre": "Comprendre, représenter, résoudre et vérifier",
+              "competence": "Choisir une stratégie, expliquer le raisonnement et vérifier la vraisemblance",
+              "activite": "Problème ouvert, schéma, matériel et comparaison de stratégies",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 153
+            },
+            {
+              "id": "modelisation-et-resolution-de-problemes",
+              "titre": "Modélisation et résolution de problèmes",
+              "competence": "Comprendre, planifier, représenter, résoudre et vérifier",
+              "activite": "Bandes de fractions, droite numérique et jeux d’équivalence; Manipulation d’objets, schémas en barres et problèmes de partage; Problème ouvert, schéma, estimation, solution expliquée et comparaison de méthodes; Résolution de problèmes contextualisés; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles; Évaluation diagnostique ou formative",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 154
+            }
+          ],
+          "sourceRows": [
+            153,
+            154
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 7
+    },
+    {
+      "niveau": 7,
+      "label": "7e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-7-autoregulation-et-consolidation",
+          "titre": "Autorégulation et consolidation",
+          "sousSujets": [
+            {
+              "id": "mathematiques-generales-evaluation-ou-revision",
+              "titre": "Mathématiques générales : évaluation ou révision",
+              "competence": "Diagnostiquer et consolider les compétences mathématiques",
+              "activite": "Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Support numérique ou visuel; Évaluation diagnostique, exercices gradués et correction",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 193
+            }
+          ],
+          "sourceRows": [
+            193
+          ]
+        },
+        {
+          "id": "niveau-7-codage-et-pensee-algorithmique",
+          "titre": "Codage et pensée algorithmique",
+          "sousSujets": [
+            {
+              "id": "sequences-conditions-et-debogage",
+              "titre": "Séquences, conditions et débogage",
+              "competence": "Créer et corriger une suite d’instructions adaptée au niveau",
+              "activite": "Déplacement sur quadrillage, robot ou programmation par blocs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 194
+            }
+          ],
+          "sourceRows": [
+            194
+          ]
+        },
+        {
+          "id": "niveau-7-fluidite-et-consolidation",
+          "titre": "Fluidité et consolidation",
+          "sousSujets": [
+            {
+              "id": "calcul-mental-estimation-et-revision",
+              "titre": "Calcul mental, estimation et révision",
+              "competence": "Développer des automatismes sans perdre le sens des nombres",
+              "activite": "Rituel de calcul mental, jeu du nombre cible et autoévaluation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 195
+            }
+          ],
+          "sourceRows": [
+            195
+          ]
+        },
+        {
+          "id": "niveau-7-raisonnement-et-communication",
+          "titre": "Raisonnement et communication",
+          "sousSujets": [
+            {
+              "id": "justification-et-vocabulaire-mathematique",
+              "titre": "Justification et vocabulaire mathématique",
+              "competence": "Décrire une démarche avec mots, symboles, modèles et exemples",
+              "activite": "Entretien mathématique, solution commentée et galerie de stratégies",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 196
+            }
+          ],
+          "sourceRows": [
+            196
+          ]
+        },
+        {
+          "id": "niveau-7-resolution-de-problemes",
+          "titre": "Résolution de problèmes",
+          "sousSujets": [
+            {
+              "id": "comprendre-representer-resoudre-et-verifier",
+              "titre": "Comprendre, représenter, résoudre et vérifier",
+              "competence": "Choisir une stratégie, expliquer le raisonnement et vérifier la vraisemblance",
+              "activite": "Problème ouvert, schéma, matériel et comparaison de stratégies",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 197
+            },
+            {
+              "id": "modelisation-et-resolution-de-problemes",
+              "titre": "Modélisation et résolution de problèmes",
+              "competence": "Comprendre, planifier, représenter, résoudre et vérifier",
+              "activite": "Problème ouvert, schéma, estimation, solution expliquée et comparaison de méthodes; Résolution de problèmes contextualisés; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 198
+            }
+          ],
+          "sourceRows": [
+            197,
+            198
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 6
+    },
+    {
+      "niveau": 8,
+      "label": "8e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-8-autoregulation-et-consolidation",
+          "titre": "Autorégulation et consolidation",
+          "sousSujets": [
+            {
+              "id": "mathematiques-generales-evaluation-ou-revision",
+              "titre": "Mathématiques générales : évaluation ou révision",
+              "competence": "Diagnostiquer et consolider les compétences mathématiques",
+              "activite": "Lecture guidée et questions de compréhension; Support numérique ou visuel; Évaluation diagnostique ou formative; Évaluation diagnostique, exercices gradués et correction",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 226
+            }
+          ],
+          "sourceRows": [
+            226
+          ]
+        },
+        {
+          "id": "niveau-8-codage-et-pensee-algorithmique",
+          "titre": "Codage et pensée algorithmique",
+          "sousSujets": [
+            {
+              "id": "sequences-conditions-et-debogage",
+              "titre": "Séquences, conditions et débogage",
+              "competence": "Créer et corriger une suite d’instructions adaptée au niveau",
+              "activite": "Déplacement sur quadrillage, robot ou programmation par blocs",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 227
+            }
+          ],
+          "sourceRows": [
+            227
+          ]
+        },
+        {
+          "id": "niveau-8-fluidite-et-consolidation",
+          "titre": "Fluidité et consolidation",
+          "sousSujets": [
+            {
+              "id": "calcul-mental-estimation-et-revision",
+              "titre": "Calcul mental, estimation et révision",
+              "competence": "Développer des automatismes sans perdre le sens des nombres",
+              "activite": "Rituel de calcul mental, jeu du nombre cible et autoévaluation",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 228
+            }
+          ],
+          "sourceRows": [
+            228
+          ]
+        },
+        {
+          "id": "niveau-8-raisonnement-et-communication",
+          "titre": "Raisonnement et communication",
+          "sousSujets": [
+            {
+              "id": "justification-et-vocabulaire-mathematique",
+              "titre": "Justification et vocabulaire mathématique",
+              "competence": "Décrire une démarche avec mots, symboles, modèles et exemples",
+              "activite": "Entretien mathématique, solution commentée et galerie de stratégies",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 229
+            }
+          ],
+          "sourceRows": [
+            229
+          ]
+        },
+        {
+          "id": "niveau-8-resolution-de-problemes",
+          "titre": "Résolution de problèmes",
+          "sousSujets": [
+            {
+              "id": "comprendre-representer-resoudre-et-verifier",
+              "titre": "Comprendre, représenter, résoudre et vérifier",
+              "competence": "Choisir une stratégie, expliquer le raisonnement et vérifier la vraisemblance",
+              "activite": "Problème ouvert, schéma, matériel et comparaison de stratégies",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 230
+            },
+            {
+              "id": "modelisation-et-resolution-de-problemes",
+              "titre": "Modélisation et résolution de problèmes",
+              "competence": "Comprendre, planifier, représenter, résoudre et vérifier",
+              "activite": "Problème ouvert, schéma, estimation, solution expliquée et comparaison de méthodes; Résolution de problèmes contextualisés; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 231
+            }
+          ],
+          "sourceRows": [
+            230,
+            231
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 6
+    },
+    {
+      "niveau": 9,
+      "label": "9e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-9-autoregulation-et-consolidation",
+          "titre": "Autorégulation et consolidation",
+          "sousSujets": [
+            {
+              "id": "mathematiques-generales-evaluation-ou-revision",
+              "titre": "Mathématiques générales : évaluation ou révision",
+              "competence": "Diagnostiquer et consolider les compétences mathématiques",
+              "activite": "Interaction orale ou présentation; Support numérique ou visuel; Évaluation diagnostique, exercices gradués et correction",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 265
+            },
+            {
+              "id": "evaluation-revision-et-consolidation",
+              "titre": "Évaluation, révision et consolidation",
+              "competence": "Identifier les acquis, corriger les erreurs et choisir une stratégie",
+              "activite": "Correction, révision et remédiation; Dés, cartes, simulation et comparaison théorie-expérience; Exercices d’application gradués; Sondage, tableau, diagramme, moyenne-médiane-mode et conclusion; Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles; Tuiles algébriques, organisation verticale et vérification; Évaluation diagnostique ou formative; Évaluation diagnostique, correction expliquée et parcours de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 266
+            }
+          ],
+          "sourceRows": [
+            265,
+            266
+          ]
+        },
+        {
+          "id": "niveau-9-resolution-de-problemes",
+          "titre": "Résolution de problèmes",
+          "sousSujets": [
+            {
+              "id": "modelisation-et-resolution-de-problemes",
+              "titre": "Modélisation et résolution de problèmes",
+              "competence": "Comprendre, planifier, représenter, résoudre et vérifier",
+              "activite": "Problème ouvert, schéma, estimation, solution expliquée et comparaison de méthodes; Résolution de problèmes contextualisés; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 267
+            }
+          ],
+          "sourceRows": [
+            267
+          ]
+        },
+        {
+          "id": "niveau-9-resolution-de-problemes-et-modelisation",
+          "titre": "Résolution de problèmes et modélisation",
+          "sousSujets": [
+            {
+              "id": "choix-de-modele-hypotheses-et-validation",
+              "titre": "Choix de modèle, hypothèses et validation",
+              "competence": "Construire, tester et communiquer un modèle mathématique",
+              "activite": "Étude de cas, tableur/graphique, comparaison de modèles et rapport",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 268
+            }
+          ],
+          "sourceRows": [
+            268
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 4
+    },
+    {
+      "niveau": 10,
+      "label": "10e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-10-autoregulation-et-consolidation",
+          "titre": "Autorégulation et consolidation",
+          "sousSujets": [
+            {
+              "id": "mathematiques-generales-evaluation-ou-revision",
+              "titre": "Mathématiques générales : évaluation ou révision",
+              "competence": "Diagnostiquer et consolider les compétences mathématiques",
+              "activite": "Support numérique ou visuel; Évaluation diagnostique, exercices gradués et correction",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 308
+            },
+            {
+              "id": "evaluation-revision-et-consolidation",
+              "titre": "Évaluation, révision et consolidation",
+              "competence": "Identifier les acquis, corriger les erreurs et choisir une stratégie",
+              "activite": "Support numérique ou visuel; Tableaux de rapports, recettes, cartes et échelles; Évaluation diagnostique ou formative; Évaluation diagnostique, correction expliquée et parcours de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 309
+            }
+          ],
+          "sourceRows": [
+            308,
+            309
+          ]
+        },
+        {
+          "id": "niveau-10-resolution-de-problemes",
+          "titre": "Résolution de problèmes",
+          "sousSujets": [
+            {
+              "id": "modelisation-et-resolution-de-problemes",
+              "titre": "Modélisation et résolution de problèmes",
+              "competence": "Comprendre, planifier, représenter, résoudre et vérifier",
+              "activite": "Balance algébrique, tuiles, vérification et problèmes; Problème ouvert, schéma, estimation, solution expliquée et comparaison de méthodes; Résolution de problèmes contextualisés",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 310
+            }
+          ],
+          "sourceRows": [
+            310
+          ]
+        },
+        {
+          "id": "niveau-10-resolution-de-problemes-et-modelisation",
+          "titre": "Résolution de problèmes et modélisation",
+          "sousSujets": [
+            {
+              "id": "choix-de-modele-hypotheses-et-validation",
+              "titre": "Choix de modèle, hypothèses et validation",
+              "competence": "Construire, tester et communiquer un modèle mathématique",
+              "activite": "Étude de cas, tableur/graphique, comparaison de modèles et rapport",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 311
+            }
+          ],
+          "sourceRows": [
+            311
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 3,
+      "nombreSousSujets": 4
+    },
+    {
+      "niveau": 11,
+      "label": "11e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-11-resolution-de-problemes-et-modelisation",
+          "titre": "Résolution de problèmes et modélisation",
+          "sousSujets": [
+            {
+              "id": "choix-de-modele-hypotheses-et-validation",
+              "titre": "Choix de modèle, hypothèses et validation",
+              "competence": "Construire, tester et communiquer un modèle mathématique",
+              "activite": "Étude de cas, tableur/graphique, comparaison de modèles et rapport",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 340
+            }
+          ],
+          "sourceRows": [
+            340
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 1,
+      "nombreSousSujets": 1
+    },
+    {
+      "niveau": 12,
+      "label": "12e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-12-preuve-modelisation-et-communication",
+          "titre": "Preuve, modélisation et communication",
+          "sousSujets": [
+            {
+              "id": "preuve-modelisation-et-communication",
+              "titre": "Preuve, modélisation et communication",
+              "competence": "Construire une solution rigoureuse et communiquer les hypothèses",
+              "activite": "Problème contextualisé, représentation multiple, technologie dynamique et justification écrite",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 348
+            }
+          ],
+          "sourceRows": [
+            348
+          ]
+        },
+        {
+          "id": "niveau-12-resolution-de-problemes-et-modelisation",
+          "titre": "Résolution de problèmes et modélisation",
+          "sousSujets": [
+            {
+              "id": "choix-de-modele-hypotheses-et-validation",
+              "titre": "Choix de modèle, hypothèses et validation",
+              "competence": "Construire, tester et communiquer un modèle mathématique",
+              "activite": "Étude de cas, tableur/graphique, comparaison de modèles et rapport",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 349
+            }
+          ],
+          "sourceRows": [
+            349
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 2,
+      "nombreSousSujets": 2
+    }
+  ]
+}

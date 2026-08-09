@@ -1,0 +1,196 @@
+{
+  "metadata": {
+    "subject": "Chemistry",
+    "subjectSlug": "chemistry",
+    "strand": "States of Matter and Gases",
+    "strandSlug": "states-matter-gases",
+    "gradeRange": {
+      "min": 11,
+      "max": 11
+    },
+    "gradeLevels": [
+      11
+    ],
+    "sourceRecordCount": 5,
+    "gradedSourceRecordCount": 4,
+    "nonGradedSourceRecordCount": 1,
+    "mainTopicCount": 4,
+    "subtopicCount": 4,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "states-matter-gases",
+    "title": {
+      "en": "States of Matter and Gases",
+      "ar": "حالات المادة والغازات"
+    },
+    "description": {
+      "en": "Gas behavior and variables, pressure and temperature conversions, gas laws, molar volume, and gas stoichiometry.",
+      "ar": "سلوك الغازات ومتغيراتها وتحويلات الضغط والحرارة وقوانين الغازات والحجم المولي وحسابات الغازات."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-gas-behavior",
+          "title": "Gas Behavior",
+          "subtopics": [
+            {
+              "id": "gases-and-gas-properties",
+              "title": "Gases and gas properties"
+            }
+          ],
+          "sourceRows": [
+            81
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-gas-laws",
+          "title": "Gas Laws",
+          "subtopics": [
+            {
+              "id": "boyle-charles-gay-lussac-combined-and-ideal-gas-laws",
+              "title": "Boyle, Charles, Gay-Lussac, combined, and ideal gas laws"
+            }
+          ],
+          "sourceRows": [
+            82
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-gas-stoichiometry",
+          "title": "Gas Stoichiometry",
+          "subtopics": [
+            {
+              "id": "molar-volume-dalton-s-law-and-gas-stoichiometry",
+              "title": "Molar volume, Dalton's law, and gas stoichiometry"
+            }
+          ],
+          "sourceRows": [
+            83
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-gas-variables",
+          "title": "Gas Variables",
+          "subtopics": [
+            {
+              "id": "pressure-and-temperature-conversions",
+              "title": "Pressure and temperature conversions"
+            }
+          ],
+          "sourceRows": [
+            84
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 4,
+      "subtopicCount": 4
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    }
+  ]
+}

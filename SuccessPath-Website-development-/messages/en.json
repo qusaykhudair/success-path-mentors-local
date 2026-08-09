@@ -1,0 +1,761 @@
+{
+  "seo": {
+    "home": {
+      "title": "Online Tutoring & Academic Mentorship",
+      "description": "Professional online tutoring platform helping students achieve academic excellence.",
+      "keywords": "online tutoring, math tutoring, science tutoring"
+    }
+  },
+  "meta": {
+    "siteName": "Mustafa Academy",
+    "tagline": "Success Path Mentors"
+  },
+    "accessibility": {
+    "skipToContent": "Skip to main content"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "Our Story",
+    "programs": "Programs",
+    "testimonials": "Testimonials",
+    "services": "Services",
+    "challenges": "Common Challenges",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "bookFreeSession": "Book a Free Session",
+    "whatsappBookingMessage": "Hello, I would like to purchase a free token share 🙌",
+      "primaryNavigation": "Primary navigation",
+"openMenu": "Open menu",
+"closeMenu": "Close menu",
+"subjectsMenu": {
+  "trigger": "Subjects",
+  "categories": [
+    { "key": "k5", "label": "K-5 Subjects", "href": "/subjects#k5",
+      "children": [
+        { "label": "Elementary Math", "href": "/subjects#k5-math" },
+        { "label": "Phonics", "href": "/subjects#phonics" },
+        { "label": "Reading", "href": "/subjects#k5-reading" },
+        { "label": "Writing", "href": "/subjects#k5-writing" } ] },
+    { "key": "math", "label": "Math", "href": "/subjects#math",
+      "children": [
+        { "label": "All Math", "href": "/subjects#math" },
+        { "label": "Algebra", "href": "/subjects#algebra" },
+        { "label": "Calculus", "href": "/subjects#calculus" },
+        { "label": "Geometry", "href": "/subjects#geometry" },
+        { "label": "Statistics", "href": "/subjects#statistics" },
+        { "label": "Trigonometry", "href": "/subjects#trigonometry" } ] },
+    { "key": "science", "label": "Science", "href": "/subjects#science",
+      "children": [
+        { "label": "All Science", "href": "/subjects#science" },
+        { "label": "Biology", "href": "/subjects#biology" },
+        { "label": "Chemistry", "href": "/subjects#chemistry" },
+        { "label": "Physics", "href": "/subjects#physics" },
+        { "label": "Physiology", "href": "/subjects#physiology" } ] },
+    { "key": "ap", "label": "AP", "href": "/subjects#ap",
+      "children": [
+        { "label": "AP Biology", "href": "/subjects#ap-biology" },
+        { "label": "AP Calculus", "href": "/subjects#ap-calculus" },
+        { "label": "AP Chemistry", "href": "/subjects#ap-chemistry" },
+        { "label": "AP Physics", "href": "/subjects#ap-physics" },
+        { "label": "AP History", "href": "/subjects#ap-history" } ] },
+    { "key": "testprep", "label": "Test Prep", "href": "/subjects#test-prep",
+      "children": [
+        { "label": "All Test Prep", "href": "/subjects#test-prep" },
+        { "label": "SAT", "href": "/subjects#sat" },
+        { "label": "ACT", "href": "/subjects#act" },
+        { "label": "PSAT", "href": "/subjects#psat" },
+        { "label": "ISEE", "href": "/subjects#isee" } ] },
+    { "key": "gradTestPrep", "label": "Graduate Test Prep", "href": "/subjects#grad-test-prep",
+      "children": [
+        { "label": "GRE", "href": "/subjects#gre" },
+        { "label": "GMAT", "href": "/subjects#gmat" },
+        { "label": "LSAT", "href": "/subjects#lsat" },
+        { "label": "MCAT", "href": "/subjects#mcat" } ] },
+    { "key": "english", "label": "English", "href": "/subjects#english",
+      "children": [
+        { "label": "All English", "href": "/subjects#english" },
+        { "label": "Reading", "href": "/subjects#reading" },
+        { "label": "Writing", "href": "/subjects#writing" },
+        { "label": "Literature", "href": "/subjects#literature" },
+        { "label": "Essay Editing", "href": "/subjects#essay-editing" } ] },
+    { "key": "languages", "label": "Languages", "href": "/subjects#languages",
+      "children": [
+        { "label": "All Languages", "href": "/subjects#languages" },
+        { "label": "Arabic", "href": "/subjects#arabic" },
+        { "label": "French", "href": "/subjects#french" },
+        { "label": "Spanish", "href": "/subjects#spanish" },
+        { "label": "German", "href": "/subjects#german" } ] },
+    { "key": "business", "label": "Business", "href": "/subjects#business",
+      "children": [
+        { "label": "All Business", "href": "/subjects#business" },
+        { "label": "Accounting", "href": "/subjects#accounting" },
+        { "label": "Economics", "href": "/subjects#economics" },
+        { "label": "Finance", "href": "/subjects#finance" },
+        { "label": "Marketing", "href": "/subjects#marketing" } ] },
+    { "key": "tech", "label": "Technology & Coding", "href": "/subjects#tech",
+      "children": [
+        { "label": "All Technology & Coding", "href": "/subjects#tech" },
+        { "label": "Computer Science", "href": "/subjects#computer-science" },
+        { "label": "Python", "href": "/subjects#python" },
+        { "label": "Java", "href": "/subjects#java" },
+        { "label": "SQL", "href": "/subjects#sql" } ] },
+    { "key": "social", "label": "Social Studies", "href": "/subjects#social-studies",
+      "children": [
+        { "label": "All Social Studies", "href": "/subjects#social-studies" },
+        { "label": "History", "href": "/subjects#history" },
+        { "label": "AP History", "href": "/subjects#ap-history-2" },
+        { "label": "AP Human Geography", "href": "/subjects#ap-human-geography" } ] },
+    { "key": "humanities", "label": "Humanities", "href": "/subjects#humanities",
+      "children": [
+        { "label": "Essay Editing", "href": "/subjects#humanities-essay" },
+        { "label": "History", "href": "/subjects#humanities-history" },
+        { "label": "Law", "href": "/subjects#law" },
+        { "label": "Literature", "href": "/subjects#humanities-literature" },
+        { "label": "Theology", "href": "/subjects#theology" } ] },
+    { "key": "learningDiff", "label": "Learning Differences", "href": "/subjects#learning-differences",
+      "children": [
+        { "label": "All Learning Differences", "href": "/subjects#learning-differences" },
+        { "label": "Special Education", "href": "/subjects#special-education" } ] },
+    { "key": "popular", "label": "Popular Subjects", "href": "/subjects#popular",
+      "children": [
+        { "label": "Algebra", "href": "/subjects#algebra" },
+        { "label": "Calculus", "href": "/subjects#calculus" },
+        { "label": "Chemistry", "href": "/subjects#chemistry" },
+        { "label": "Physics", "href": "/subjects#physics" },
+        { "label": "SAT Prep", "href": "/subjects#sat" },
+        { "label": "Spanish", "href": "/subjects#spanish" } ] }
+  ]
+}
+  },
+
+  "notFound": {
+    "heading": "Page not found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "backHome": "Back to home",
+    "contactUs": "Contact us"
+  },
+  "hero": {
+  "eyebrow": "Personalized Online Tutoring • Grades 1–12",
+"heading": "One-to-One Online Tutoring That Builds Real Academic Confidence",
+"subheading": "Personalized Math, English, Science, and French tutoring aligned with Canadian and American curricula.",
+"ctaPrimary": "Book Your Free Trial",
+"ctaSecondary": "Explore Our Programs",
+"whatsappBookingMessage": "Hello, I would like to book a free trial lesson with Mustafa Academy.",
+  "stats": [
+  {
+    "value": 150,
+    "suffix": "+",
+    "label": "Active Students"
+  },
+  {
+    "value": 700,
+    "suffix": "+",
+    "label": "Monthly Sessions"
+  },
+  {
+    "value": 30,
+    "suffix": "+",
+    "label": "Specialized Tutors"
+  }
+],
+          "socialProof": "Join {count} learners already growing with us",
+  "rating": {
+    "value": "4.9",
+    "count": "2,000+ reviews"
+  },
+  "achievement": {
+    "label": "Course completion rate"
+  },
+  "imageAlt": "Students collaborating in a classroom at Success path Mentors",
+"enrollment": {
+  "title": "Get Started — Enroll in Just One Minute",
+  "reassurance": "Your information is 100% secure",
+  "next": "Next",
+  "back": "Back",
+  "submit": "Submit",
+  "submitting": "Submitting...",
+  "successTitle": "Request Received!",
+  "successBody": "We'll contact you on WhatsApp shortly.",
+  "stepOf": "Step #CURRENT# of #TOTAL#",
+  "labels": {
+    "parentName": "Parent's Name",
+    "whatsapp": "WhatsApp Number",
+    "email": "Email Address",
+    "studentAge": "Student's Age",
+    "country": "Country",
+    "province": "State / Province",
+    "subjects": "Subject(s) Needed",
+    "teachingLanguage": "Preferred Teaching Language",
+    "notes": "Additional Notes"
+  },
+  "placeholders": {
+    "parentName": "Enter parent's name",
+    "whatsapp": "Enter WhatsApp number",
+    "email": "Enter email address",
+    "studentAge": "Enter student's age",
+    "province": "Enter state or province",
+    "notes": "Write any additional notes here..."
+  },
+  "errors": {
+    "required": "This field is required.",
+    "email": "Please enter a valid email address.",
+    "age": "Please enter a valid age.",
+    "subjects": "Please select at least one subject."
+  },
+  "countries": [
+    { "value": "usa", "label": "United States" },
+    { "value": "canada", "label": "Canada" }
+  ],
+  "subjectOptions": [
+    { "value": "english", "label": "English" },
+    { "value": "french", "label": "French" },
+    { "value": "math", "label": "Mathematics" },
+    { "value": "physics", "label": "Physics" },
+    { "value": "science", "label": "Science" },
+    { "value": "chemistry", "label": "Chemistry" },
+    { "value": "biology", "label": "Biology" },
+    { "value": "other", "label": "Other Subject" }
+  ],
+  "languages": [
+    { "value": "english", "label": "English" },
+    { "value": "french", "label": "French" }
+  ]
+}
+  
+  },
+ "programs": {
+  "eyebrow": "Programs for Every Learning Path",
+  "heading": "Personalized Programs Built Around Each Student",
+  "subheading": "Choose from curriculum-aligned tutoring, language learning, academic mentoring, and exam-preparation programs designed around each learner's goals.",
+"items": [
+  {
+    "title": "Canadian Curriculum Tutoring",
+    "description": "Personalized academic support aligned with provincial Canadian curricula.",
+    "icon": "canadianCurriculum"
+  },
+  {
+    "title": "American Curriculum Tutoring",
+    "description": "One-to-one support aligned with American grade-level standards and learning goals.",
+    "icon": "americanCurriculum"
+  },
+  {
+    "title": "French and Language Programs",
+    "description": "Individual support in French, English, and Arabic for school and everyday communication.",
+    "icon": "languages"
+  },
+  {
+    "title": "Academic Mentoring",
+    "description": "Structured guidance that helps students improve confidence, organization, and study habits.",
+    "icon": "mentoring"
+  },
+  {
+    "title": "Exam Preparation",
+    "description": "Focused preparation for school exams and selected standardized tests.",
+    "icon": "examPrep"
+  },
+  {
+    "title": "Learning Path Guidance",
+    "description": "Support for students who need a clear plan to strengthen their academic foundations.",
+    "icon": "guidance"
+  }
+],
+  "imageAlt": "A student participating in a live one-to-one online tutoring session",
+  "liveLabel": "Live online lessons",
+  "badge": {
+    "value": "700+",
+    "label": "Online sessions delivered monthly"
+  }
+},
+  "testimonials": {
+  "eyebrow": "Stories from Our Learning Community",
+  "heading": "What Parents and Students Say About Their Experience",
+  "subheading": "Real feedback from families and learners who have experienced personalized online tutoring with Mustafa Academy.",
+  "verified": "Verified feedback",
+  "carouselLabel": "Parent and student experiences",
+"feedbackLabel": "Community feedback",
+"previous": "View previous testimonial",
+"next": "View next testimonial",
+"viewTestimonial": "View testimonial",
+"ratingLabel": "{rating} out of 5 stars",
+
+"items": [
+  {
+    "name": "Eya Ad",
+    "role": "Facebook comment",
+    "quote": "A team that deserves every thanks and encouragement. They are highly professional, punctual, respectful in their communication, attentive, and committed to consistent follow-up."
+    ,"rating": 5
+  },
+  {
+    "name": "Zain Al",
+    "role": "Facebook comment",
+    "quote": "Thank you to everyone and to Mr. Mustafa for their respectful communication, excellent cooperation, and friendly approach. My son is very happy learning with them."
+   ,"rating": 5
+  },
+  {
+    "name": "Abir Joulan",
+    "role": "Facebook comment",
+    "quote": "Thank you for your efforts and commitment to lesson times. The teaching has been excellent, and special thanks to Ms. Shaimaa for teaching my daughter. We truly appreciate everything you provide."
+    ,"rating": 5
+  },
+  {
+    "name": "Zozaa Zena",
+    "role": "Facebook comment",
+    "quote": "Thank you to Mr. Mustafa and the entire teaching team. Their communication and treatment of families are among the best. Thank you all."
+    ,"rating": 5
+  },
+  {
+    "name": "Mohamad Alsakka",
+    "role": "Facebook comment",
+    "quote": "An excellent approach, reasonable prices, and a team that works closely with parents to improve each child's educational level."
+   ,"rating": 5
+  },
+  {
+    "name": "Kal Ebrahim",
+    "role": "Facebook comment",
+    "quote": "Thank you to Mr. Mustafa for his teaching approach and cooperation with students. His engaging method motivates students to study, understand the subject more easily, and work toward higher grades."
+    ,"rating": 5
+  },
+  {
+    "name": "Alaa Badran",
+    "role": "Facebook comment",
+    "quote": "They are among the best teachers—honest and extremely cooperative. My children really like them, and they have helped us overcome many learning challenges."
+    ,"rating": 5
+  },
+  {
+    "name": "Kenda Sal",
+    "role": "Facebook comment",
+    "quote": "Many thanks to the outstanding and cooperative teaching team for understanding students' circumstances. My son Mohammad began to enjoy mathematics and his level improved because of his teacher's engaging and enjoyable teaching style."
+    ,"rating": 5
+  }
+]
+},
+ "steps": {
+  "eyebrow": "A Clear and Simple Learning Journey",
+  "heading": "How Personalized Tutoring Works at Mustafa Academy",
+  "subheading": "From understanding the student's needs to measuring progress, every stage is organized to provide clear, consistent, and personalized academic support.",
+
+  "panelBadge": "Five structured steps",
+  "panelTitle": "A Learning Process Built Around the Student",
+  "panelDescription": "We do more than schedule lessons. We identify the student's needs, select the right tutor, build a focused plan, and adjust support as progress develops.",
+
+  "benefits": [
+    "A learning plan based on the student's current level and goals",
+    "One-to-one lessons with a tutor suited to the student's needs",
+    "Clear follow-up and practical updates throughout the program"
+  ],
+
+  "cta": "Book a Free Trial",
+  "ctaReassurance": "No long-term commitment is required to begin.",
+  "whatsappMessage": "Hello, I would like to book a free trial lesson and learn more about how tutoring works at Mustafa Academy.",
+
+  "items": [
+    {
+      "number": 1,
+      "title": "Tell Us About the Student",
+      "description": "Share the student's grade, subject, learning goals, current challenges, preferred language, and suitable lesson times."
+    },
+    {
+      "number": 2,
+      "title": "Assess the Current Learning Level",
+      "description": "We review the student's needs and identify strengths, learning gaps, and the skills that should receive priority."
+    },
+    {
+      "number": 3,
+      "title": "Match the Student with the Right Tutor",
+      "description": "We select a qualified tutor based on the subject, curriculum, grade level, learning needs, and preferred teaching language."
+    },
+    {
+      "number": 4,
+      "title": "Begin Personalized Lessons and Follow-Up",
+      "description": "The student begins one-to-one lessons supported by focused practice, feedback, and homework follow-up when appropriate."
+    },
+    {
+      "number": 5,
+      "title": "Monitor Progress and Refine the Plan",
+      "description": "We follow the student's development, communicate relevant updates, and adjust priorities as academic needs change."
+    }
+  ]
+} ,
+ "services": {
+  "eyebrow": "Personalized Support at Every Step",
+  "heading": "A Complete Learning Experience Designed Around Every Student",
+  "subheading": "From private lessons and curriculum support to progress reporting, homework follow-up, and flexible scheduling, every service is designed to help students learn with clarity, confidence, and consistency.",
+
+  "items": [
+  {
+    "title": "Private One-to-One Online Tutoring",
+    "description": "Each student learns individually with a qualified tutor who adapts the lesson to their level, pace, learning style, and academic goals."
+  },
+  {
+    "title": "Canadian and American Curriculum Support",
+    "description": "Lessons are aligned with Canadian and American curricula, helping students understand key concepts, strengthen subject knowledge, and prepare for different assessment formats."
+  },
+  {
+    "title": "Clear Progress Reports",
+    "description": "Parents receive practical updates on the student's strengths, areas for improvement, completed work, and recommended next steps."
+  },
+  {
+    "title": "Homework and Lesson Follow-Up",
+    "description": "Students receive focused practice after lessons when appropriate, with follow-up and feedback to reinforce understanding and address learning gaps."
+  },
+  {
+    "title": "Focused Exam Preparation",
+    "description": "Students practise important concepts and a variety of question formats while developing the confidence and problem-solving skills needed for exams."
+  },
+  {
+    "title": "Flexible Lesson Scheduling",
+    "description": "Lesson times are arranged around the student's availability, making it easier for families to maintain a consistent and manageable learning routine."
+  },
+  {
+    "title": "Personalized Learning Plan",
+    "description": "We create a clear learning plan based on the student's current level, academic goals, priority skills, and progress throughout the tutoring program."
+  }
+],
+
+  "imageAlt": "An online tutor delivering a personalized one-to-one lesson to a student",
+
+  "panelBadge": "Personalized academic support",
+  "panelTitle": "Support That Continues Beyond Every Lesson",
+  "panelDescription": "Every lesson is connected to a clear learning goal, with structured follow-up, practical feedback, and ongoing communication to support steady academic progress.",
+
+  "float": {
+    "satisfaction": {
+      "value": "Parent Communication",
+      "label": "Clear updates on learning progress"
+    },
+    "flexible": {
+      "value": "Flexible Scheduling",
+      "label": "Lessons arranged around student availability"
+    }
+  },
+
+  "whatsappCta": "Ask About a Free Trial",
+  "whatsappMessage": "Hello, I would like to learn more about Mustafa Academy's tutoring services and arrange a free trial lesson."
+},
+
+"videoTestimonials": {
+  "eyebrow": "Video Experiences",
+  "heading": "Hear Directly from Parents and Students",
+  "subheading": "Watch genuine experiences from our learning community and discover how personalized lessons and structured follow-up supported students' learning journeys.",
+"invalidVideo": "This YouTube link could not be read. Please check the video URL.",
+  "galleryLabel": "Parent and student video experiences",
+  "watchVideo": "Play video",
+  "stopVideo": "Stop video and return to cover",
+  "selectVideo": "Select video",
+  "nowPlaying": "Currently featured experience",
+  "moreVideos": "More video experiences",
+  "youtubeLabel": "YouTube video",
+
+  "items": [
+    {
+      "name": "Mohammad's Parent",
+      "role": "Parent — Grade 5",
+      "quote": "My son's level improved significantly within two months.",
+      "videoSrc": "https://youtu.be/Abguz4XunJA?si=4SyHnvvwwofNFIgB"
+
+    },
+    {
+      "name": "Khaled Al-Harawi",
+      "role": "Parent — Grade 9",
+      "quote": "The regular follow-up made a real difference for my son.",
+      "videoSrc": "https://youtu.be/Abguz4XunJA?si=4SyHnvvwwofNFIgB"
+    },
+    {
+      "name": "Sarah Ahmad",
+      "role": "Parent — Grade 3",
+      "quote": "A professional teacher and excellent communication.",
+      "videoSrc": "https://youtu.be/Abguz4XunJA?si=4SyHnvvwwofNFIgB"
+
+    }
+  ]
+},
+  "whyMustafa": {
+  "eyebrow": "Why Families Choose Mustafa Academy",
+  "heading": "A Focused Response to the Learning Challenges Families Face",
+  "subheading": "Every learner faces different obstacles. Our approach combines individual teaching, appropriate tutor matching, structured follow-up, and flexible scheduling to provide support that fits the student.",
+
+  "challengeLabel": "Common challenge",
+  "solutionLabel": "Our approach",
+
+  "items": [
+    {
+      "title": "Lessons That Move Too Quickly",
+      "challenge": "Students may struggle when classroom explanations move forward before they fully understand the previous concept.",
+      "solution": "The tutor adjusts the pace, explanation, examples, and practice to match the student's current understanding."
+    },
+    {
+      "title": "Learning Gaps That Build Over Time",
+      "challenge": "Missing foundational skills can make new lessons more difficult and gradually reduce confidence.",
+      "solution": "We identify priority gaps and include the necessary foundational skills within a clear and focused learning plan."
+    },
+    {
+      "title": "Difficulty Finding the Right Tutor",
+      "challenge": "A tutor may understand the subject well but may not match the student's curriculum, language, or learning style.",
+      "solution": "Tutor selection considers the subject, grade, curriculum, preferred language, and the student's individual learning needs."
+    },
+    {
+      "title": "Limited Visibility for Parents",
+      "challenge": "Families may not always know what the student is learning, where progress is occurring, or what still needs attention.",
+      "solution": "Parents receive practical communication and relevant updates about learning priorities, completed work, and recommended next steps."
+    },
+    {
+      "title": "Schedules That Are Difficult to Maintain",
+      "challenge": "School, family responsibilities, and time-zone differences can make regular tutoring difficult to organize.",
+      "solution": "Online lessons are arranged around student availability to support a consistent and manageable learning routine."
+    },
+    {
+      "title": "Low Confidence and Learning Motivation",
+      "challenge": "Repeated difficulty can make students hesitant to participate, ask questions, or attempt challenging work.",
+      "solution": "One-to-one lessons provide a supportive environment where the student can ask questions, practise, and progress without classroom pressure."
+    }
+  ],
+
+  "ctaTitle": "Not Sure Where the Student Should Begin?",
+  "ctaDescription": "Tell us about the student's grade, subject, current challenges, and learning goals. We will help identify a suitable starting point.",
+  "cta": "Discuss the Student's Needs",
+
+  "whatsappMessage": "Hello, I would like to discuss my child's learning needs and find a suitable tutoring plan with Mustafa Academy."
+},
+  "pricing": {
+  "eyebrow": "Flexible Tutoring Packages",
+  "heading": "Choose a Lesson Package That Matches the Student's Goals",
+  "subheading": "Start with a focused package or choose additional lessons for more consistent academic support. Every package includes personalized one-to-one online tutoring.",
+
+  "highlights": [
+    "Personalized one-to-one lessons",
+    "Flexible online scheduling",
+    "Academic follow-up throughout the package"
+  ],
+
+  "recommendedBadge": "Recommended",
+  "packageLabel": "{lessons} lesson package",
+  "packageTotal": "package total",
+  "pricePerLesson": "Price per lesson",
+  "lessonCount": "Lessons",
+  "includes": "This package includes",
+
+  "cta": "Ask About This Package",
+
+  "note": "All prices are shown in Canadian dollars (CAD). Packages are based on the stated number of lessons and are not displayed as monthly subscriptions.",
+
+  "termsNote": "Please confirm lesson duration, applicable taxes, payment arrangements, renewal, rescheduling, and cancellation terms before completing payment.",
+
+  "whatsappMessage": "Hello, I would like to learn more about the {plan} package, which includes {lessons} lessons, and arrange a free trial lesson.",
+
+  "plans": [
+    {
+      "name": "Starter Package",
+      "description": "A focused starting option for students who need short-term support or want to experience personalized tutoring.",
+      "lessons": 4,
+      "price": 110,
+      "features": [
+        "Four personalized one-to-one lessons",
+        "Tutor selection based on subject and grade",
+        "Flexible online lesson scheduling",
+        "Focused support for current learning priorities"
+      ]
+    },
+    {
+      "name": "Consistency Package",
+      "description": "A balanced option for students who benefit from regular lessons, continued practice, and structured academic support.",
+      "lessons": 8,
+      "price": 220,
+      "recommended": true,
+      "features": [
+        "Eight personalized one-to-one lessons",
+        "Tutor matching based on the student's needs",
+        "Structured lesson planning and practice",
+        "Homework follow-up when appropriate",
+        "Relevant progress communication"
+      ]
+    },
+    {
+      "name": "Progress Package",
+      "description": "A more comprehensive option for students working toward sustained improvement across several learning priorities.",
+      "lessons": 12,
+      "price": 280,
+      "features": [
+        "Twelve personalized one-to-one lessons",
+        "Focused learning plan for priority skills",
+        "Consistent practice and lesson follow-up",
+        "Support for homework and upcoming assessments",
+        "Ongoing review of academic priorities"
+      ]
+    }
+  ]
+},
+  "faq": {
+  "eyebrow": "Frequently Asked Questions",
+  "heading": "Everything Families Need to Know Before Getting Started",
+  "subheading": "Find clear answers about the free trial, tutor selection, lesson scheduling, curricula, payments, follow-up, and package policies.",
+
+  "panelBadge": "Need more information?",
+  "panelTitle": "Clear Answers Before You Begin",
+  "panelDescription": "We want families to understand how tutoring works before choosing a package or arranging regular lessons.",
+
+  "supportPoints": [
+    "Ask about subjects, grades, and curriculum coverage",
+    "Discuss suitable lesson times and student availability",
+    "Confirm package, payment, and scheduling details before paying"
+  ],
+
+  "ctaTitle": "Still Have a Question?",
+  "ctaDescription": "Send us the student's grade, subject, and main learning need, and our team will respond with the relevant information.",
+  "cta": "Ask Us on WhatsApp",
+
+  "whatsappMessage": "Hello, I have a question about Mustafa Academy's online tutoring services.",
+
+  "items": [
+    {
+      "question": "How do I get started with Mustafa Academy?",
+      "answer": "Contact us through WhatsApp and share the student's grade, subject, curriculum, preferred teaching language, current learning challenges, and available times. Our team will review the information and help arrange the appropriate next step."
+    },
+    {
+      "question": "Is the trial lesson free?",
+      "answer": "A free trial lesson may be arranged for eligible new students before beginning a regular package. The purpose is to understand the student's needs, introduce the tutoring experience, and help determine an appropriate tutor and starting point."
+    },
+    {
+      "question": "How is the tutor selected?",
+      "answer": "Tutor selection considers the subject, grade level, curriculum, preferred teaching language, student availability, and individual learning needs. The goal is to provide a suitable match rather than assigning the same tutor profile to every student."
+    },
+    {
+      "question": "How long is each lesson?",
+      "answer": "Lesson duration can vary according to the student's age, subject, program, and selected arrangement. The exact lesson duration is confirmed with the family before regular lessons or package payment begins."
+    },
+    {
+      "question": "Are lesson times flexible?",
+      "answer": "Yes. Lessons are arranged online according to tutor availability, student availability, school commitments, and time-zone differences. Regular attendance is encouraged to support consistent progress."
+    },
+    {
+      "question": "Which subjects and curricula are available?",
+      "answer": "Mustafa Academy supports a range of subjects including Mathematics, English, Science, Physics, Chemistry, French, Arabic, and other available programs. Support may include Canadian, American, Quebec, and other curricula depending on the grade, subject, and available tutor."
+    },
+    {
+      "question": "Can we request a different tutor?",
+      "answer": "Families may contact the support team when the current match does not meet the student's academic or communication needs. The situation will be reviewed and an alternative tutor may be considered based on availability."
+    },
+    {
+      "question": "How is the student's progress followed?",
+      "answer": "Progress may be followed through lesson feedback, completed work, priority skills, homework follow-up when applicable, and communication with the family. The level of reporting depends on the student's program and tutoring arrangement."
+    },
+    {
+      "question": "What happens if a lesson needs to be rescheduled or cancelled?",
+      "answer": "Families should contact the team as early as possible when a lesson cannot be attended. Rescheduling, cancellation, late-notice, and missed-lesson conditions are confirmed before payment and are handled according to the applicable policy."
+    },
+    {
+      "question": "How are package payments handled?",
+      "answer": "Package prices are shown in Canadian dollars. Before payment, the family should confirm the number and duration of lessons, payment method, applicable taxes, renewal arrangements, and the relevant cancellation or refund conditions."
+    }
+  ]
+},
+  "trustBadges": {
+    "moneyBack": "Money-Back Guarantee",
+    "fastReply": "Fast Reply",
+    "contactUs": "Contact Us"
+  },
+  "contact": {
+    "heading": "Contact Us",
+    "subheading": "If you have questions about your child's level or want to start with an assessment session, leave your details in the form and we'll reach out soon. The Mustafa Academy team is ready to answer every question and guide you to the right plan for your child, step by step.",
+    "form": {
+      "parentName": "Parent's Name",
+      "whatsapp": "WhatsApp Number",
+      "email": "Email Address",
+      "childAge": "Child's Age",
+      "country": "Country",
+      "countryOptions": ["United States", "Canada"],
+      "state": "State / Province",
+      "subject": "Subject You Need Help With",
+      "subjectOptions": ["English", "French", "Math", "Physics", "Science", "Chemistry", "Biology", "Other Subject"],
+      "teachingLanguage": "Preferred Teaching Language",
+      "teachingLanguageOptions": ["English", "French"],
+      "notes": "Write any notes here...",
+      "submit": "Submit"
+    }
+  },
+  "closingCta": {
+    "heading": "Together, We Build Success",
+    "subheading": "Don't put off a decision that could change your child's level for the better",
+    "cta": "Enroll Your Child Now"
+  },
+  "finalCta": {
+  "eyebrow": "Start with a Clear Next Step",
+  "heading": "Take the First Step Toward More Focused and Confident Learning",
+  "description": "Tell us the student's grade, subject, curriculum, and current learning needs. Our team will help arrange a trial lesson and identify a suitable starting point.",
+
+  "trustPoints": [
+    "Personalized one-to-one online tutoring",
+    "Tutor matching based on student needs",
+    "Flexible scheduling around availability"
+  ],
+
+  "primaryCta": "Book a Free Trial",
+  "secondaryCta": "View Lesson Packages",
+
+  "reassurance": "Trial lesson availability and eligibility are confirmed with the family before scheduling. No long-term commitment is required to begin the conversation.",
+
+  "panelEyebrow": "What happens next?",
+  "panelTitle": "A Simple Start in Three Steps",
+
+  "nextSteps": [
+    {
+      "title": "Share the Student's Needs",
+      "description": "Send the student's grade, subject, curriculum, preferred language, and suitable lesson times."
+    },
+    {
+      "title": "Review and Tutor Matching",
+      "description": "Our team reviews the information and identifies a tutor and starting approach suited to the student."
+    },
+    {
+      "title": "Arrange the Trial Lesson",
+      "description": "We confirm the tutor, lesson time, and the practical details needed before the first session."
+    }
+  ],
+
+  "panelNote": "You can ask questions about subjects, scheduling, packages, and lesson arrangements before making any payment.",
+
+  "whatsappMessage": "Hello, I would like to arrange a free trial lesson with Mustafa Academy. The student's grade is: ____. The subject is: ____. The main learning need is: ____. Preferred times are: ____."
+},
+  "footer": {
+    "ariaLabel": "Website footer",
+    "logoAlt": "Mustafa Academy — Success Path Mentors",
+    "logoLinkLabel": "Return to the Mustafa Academy homepage",
+    "description": "One-to-one online tutoring for students across elementary, middle, and high school levels, with support in core academic subjects and languages.",
+    "brandNote": "Lessons, tutor matching, scheduling, and communication are coordinated through Success Path Mentors.",
+    "quickLinks": "Explore",
+    "supportTitle": "Contact and support",
+    "whatsappLabel": "WhatsApp",
+    "whatsappMessage": "Hello Success Path Mentors, I would like to ask about online tutoring.",
+    "emailLabel": "Email",
+    "contactPageLabel": "Contact form",
+    "contactPageDescription": "Send a detailed inquiry",
+    "languageSwitch": "View the website in Arabic",
+    "socialTitle": "Follow Success Path Mentors",
+    "socialDescription": "Follow academy updates, educational content, and tutoring information.",
+    "socialNotConfigured": "This social link is not configured yet.",
+    "rightsReserved": "All rights reserved",
+    "legalLabel": "Legal policies",
+    "backToTop": "Back to the top of the page",
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "howItWorks": "How It Works",
+      "tutorMatching": "Tutor Matching",
+      "programs": "Programs",
+      "services": "Services",
+      "pricing": "Pricing",
+      "faq": "Frequently Asked Questions",
+      "contact": "Contact"
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms and Conditions",
+      "cancellation": "Cancellation Policy"
+    },
+    "social": {
+      "facebook": "Success Path Mentors on Facebook",
+      "instagram": "Success Path Mentors on Instagram",
+      "youtube": "Success Path Mentors on YouTube"
+    }
+  }
+}

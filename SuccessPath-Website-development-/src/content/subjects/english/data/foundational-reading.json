@@ -1,0 +1,1988 @@
+{
+  "metadata": {
+    "subject": "English",
+    "strand": "Foundational Reading",
+    "strandSlug": "foundational-reading",
+    "gradeRange": {
+      "min": 1,
+      "max": 12
+    },
+    "sourceRecordCount": 239,
+    "gradedSourceRecordCount": 208,
+    "nonGradedSourceRecordCount": 31,
+    "mainTopicCount": 89,
+    "subtopicCount": 208,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "integrityRules": [
+      "Only explicit Grade 1–12 records are included in the graded public curriculum.",
+      "Age-only, adult, and grade-not-stated records are never assigned to a grade by inference.",
+      "A Main Topic or Subtopic may appear in multiple grades as curriculum complexity increases.",
+      "Only an exact duplicate inside the same Grade, Main Topic, and Subtopic is removed.",
+      "Similar umbrella and detailed topics inside the same grade remain separate unless the source is explicitly revised."
+    ],
+    "countingRule": "Main Topics and Subtopics are counted by grade placement; repetition across different grades is intentional progression."
+  },
+  "strand": {
+    "slug": "foundational-reading",
+    "title": {
+      "en": "Foundational Reading",
+      "ar": "مهارات القراءة التأسيسية"
+    },
+    "description": {
+      "en": "Build decoding, phonics, phonological awareness, spelling, syllabication, and automatic word recognition.",
+      "ar": "بناء مهارات فك الرموز والصوتيات والوعي الصوتي والتهجئة وتقسيم المقاطع والتعرف التلقائي على الكلمات."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g1-decoding-and-word-recognition",
+          "title": "Decoding and Word Recognition",
+          "subtopics": [
+            {
+              "id": "decoding-unfamiliar-words",
+              "title": "Decoding unfamiliar words"
+            }
+          ],
+          "sourceRows": [
+            2
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g1-phonics",
+          "title": "Phonics",
+          "subtopics": [
+            {
+              "id": "consonant-blends",
+              "title": "Consonant blends"
+            },
+            {
+              "id": "long-vowels-and-silent-e-patterns",
+              "title": "Long vowels and silent-e patterns"
+            },
+            {
+              "id": "short-vowels",
+              "title": "Short vowels"
+            }
+          ],
+          "sourceRows": [
+            3,
+            4,
+            5
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g1-phonological-awareness",
+          "title": "Phonological Awareness",
+          "subtopics": [
+            {
+              "id": "phonemes-and-phonemic-awareness",
+              "title": "Phonemes and phonemic awareness"
+            }
+          ],
+          "sourceRows": [
+            6
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g1-spelling-and-encoding",
+          "title": "Spelling and Encoding",
+          "subtopics": [
+            {
+              "id": "spelling-patterns-and-word-lists",
+              "title": "Spelling patterns and word lists"
+            }
+          ],
+          "sourceRows": [
+            7
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g1-word-recognition",
+          "title": "Word Recognition",
+          "subtopics": [
+            {
+              "id": "fry-word-lists",
+              "title": "Fry word lists"
+            },
+            {
+              "id": "sight-words",
+              "title": "Sight words"
+            }
+          ],
+          "sourceRows": [
+            8,
+            9
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 5,
+      "subtopicCount": 8
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g2-alphabet-knowledge",
+          "title": "Alphabet Knowledge",
+          "subtopics": [
+            {
+              "id": "english-alphabet-and-letter-recognition",
+              "title": "English alphabet and letter recognition"
+            },
+            {
+              "id": "letter-names-and-alphabet-sequence",
+              "title": "Letter names and alphabet sequence"
+            }
+          ],
+          "sourceRows": [
+            10,
+            11
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-consonant-blends-and-digraphs",
+          "title": "Consonant blends and digraphs",
+          "subtopics": [
+            {
+              "id": "complete-the-sentence-with-a-three-letter-consonant-blend-word",
+              "title": "Complete the sentence with a three-letter consonant blend word"
+            },
+            {
+              "id": "complete-the-word-with-a-three-letter-consonant-blend",
+              "title": "Complete the word with a three-letter consonant blend"
+            },
+            {
+              "id": "complete-the-word-with-the-correct-digraph-ch-sh-th",
+              "title": "Complete the word with the correct digraph: ch, sh, th"
+            },
+            {
+              "id": "complete-the-word-with-the-correct-digraph-ph-qu-wh",
+              "title": "Complete the word with the correct digraph: ph, qu, wh"
+            },
+            {
+              "id": "complete-the-word-with-the-correct-final-consonant-blend",
+              "title": "Complete the word with the correct final consonant blend"
+            },
+            {
+              "id": "complete-the-word-with-the-correct-initial-consonant-blend",
+              "title": "Complete the word with the correct initial consonant blend"
+            },
+            {
+              "id": "complete-the-words-with-silent-letters",
+              "title": "Complete the words with silent letters"
+            },
+            {
+              "id": "sort-by-initial-consonant-blend-or-digraph",
+              "title": "Sort by initial consonant blend or digraph"
+            },
+            {
+              "id": "spell-the-digraph-word-ch-sh-th",
+              "title": "Spell the digraph word: ch, sh, th"
+            },
+            {
+              "id": "spell-the-digraph-word-ph-qu-wh",
+              "title": "Spell the digraph word: ph, qu, wh"
+            },
+            {
+              "id": "spell-the-word-with-a-consonant-blend",
+              "title": "Spell the word with a consonant blend"
+            }
+          ],
+          "sourceRows": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-consonant-l-e",
+          "title": "Consonant-l-e",
+          "subtopics": [
+            {
+              "id": "choose-the-correct-spelling-of-the-consonant-l-e-word",
+              "title": "Choose the correct spelling of the consonant-l-e word"
+            },
+            {
+              "id": "complete-the-consonant-l-e-words",
+              "title": "Complete the consonant-l-e words"
+            },
+            {
+              "id": "spell-the-consonant-l-e-word",
+              "title": "Spell the consonant-l-e word"
+            }
+          ],
+          "sourceRows": [
+            23,
+            24,
+            25
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-diphthongs-oi-oy-ou-ow",
+          "title": "Diphthongs: oi, oy, ou, ow",
+          "subtopics": [
+            {
+              "id": "choose-the-diphthong-sentence-that-matches-the-picture",
+              "title": "Choose the diphthong sentence that matches the picture"
+            },
+            {
+              "id": "choose-the-diphthong-word-that-matches-the-picture",
+              "title": "Choose the diphthong word that matches the picture"
+            },
+            {
+              "id": "complete-the-word-with-the-correct-diphthong-oi-oy-ou-ow",
+              "title": "Complete the word with the correct diphthong: oi, oy, ou, ow"
+            }
+          ],
+          "sourceRows": [
+            26,
+            27,
+            28
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-long-vowel-patterns",
+          "title": "Long vowel patterns",
+          "subtopics": [
+            {
+              "id": "choose-the-words-with-a-given-long-vowel",
+              "title": "Choose the words with a given long vowel"
+            },
+            {
+              "id": "spell-the-long-a-word-silent-e-ai-ay",
+              "title": "Spell the long a word: silent e, ai, ay"
+            },
+            {
+              "id": "spell-the-long-e-word-ee-ea",
+              "title": "Spell the long e word: ee, ea"
+            },
+            {
+              "id": "spell-the-long-i-word-silent-e-ie-y",
+              "title": "Spell the long i word: silent e, ie, y"
+            },
+            {
+              "id": "spell-the-long-o-word-silent-e-oa-ow",
+              "title": "Spell the long o word: silent e, oa, ow"
+            },
+            {
+              "id": "spell-the-long-u-word-silent-e-ue-oo-ew",
+              "title": "Spell the long u word: silent e, ue, oo, ew"
+            }
+          ],
+          "sourceRows": [
+            29,
+            30,
+            31,
+            32,
+            33,
+            34
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-phonics",
+          "title": "Phonics",
+          "subtopics": [
+            {
+              "id": "consonant-blends",
+              "title": "Consonant blends"
+            },
+            {
+              "id": "long-vowels-and-silent-e-patterns",
+              "title": "Long vowels and silent-e patterns"
+            },
+            {
+              "id": "short-vowels",
+              "title": "Short vowels"
+            }
+          ],
+          "sourceRows": [
+            35,
+            36,
+            37
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-r-controlled-vowels",
+          "title": "R-controlled vowels",
+          "subtopics": [
+            {
+              "id": "choose-the-r-control-sentence-that-matches-the-picture",
+              "title": "Choose the r-control sentence that matches the picture"
+            },
+            {
+              "id": "choose-the-r-control-word-that-matches-the-picture",
+              "title": "Choose the r-control word that matches the picture"
+            },
+            {
+              "id": "complete-the-word-with-the-correct-r-controlled-vowel-ar-er-ir-or-ur",
+              "title": "Complete the word with the correct r-controlled vowel: ar, er, ir, or, ur"
+            },
+            {
+              "id": "complete-the-word-with-the-correct-r-controlled-vowel-er-ir-ur",
+              "title": "Complete the word with the correct r-controlled vowel: er, ir, ur"
+            }
+          ],
+          "sourceRows": [
+            38,
+            39,
+            40,
+            41
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-rhyming",
+          "title": "Rhyming",
+          "subtopics": [
+            {
+              "id": "choose-the-picture-that-rhymes-with-the-word",
+              "title": "Choose the picture that rhymes with the word"
+            },
+            {
+              "id": "complete-the-poem-with-a-word-that-rhymes",
+              "title": "Complete the poem with a word that rhymes"
+            },
+            {
+              "id": "complete-the-rhyme",
+              "title": "Complete the rhyme"
+            },
+            {
+              "id": "spell-rhyming-words-to-answer-riddles",
+              "title": "Spell rhyming words to answer riddles"
+            },
+            {
+              "id": "which-word-does-not-rhyme",
+              "title": "Which word does not rhyme?"
+            }
+          ],
+          "sourceRows": [
+            42,
+            43,
+            44,
+            45,
+            46
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-short-and-long-vowel-patterns",
+          "title": "Short and long vowel patterns",
+          "subtopics": [
+            {
+              "id": "choose-the-short-i-or-long-i-word-that-matches-the-picture",
+              "title": "Choose the short i or long i word that matches the picture"
+            },
+            {
+              "id": "choose-the-short-o-or-long-o-word-that-matches-the-picture",
+              "title": "Choose the short o or long o word that matches the picture"
+            },
+            {
+              "id": "choose-the-short-u-or-long-u-word-that-matches-the-picture",
+              "title": "Choose the short u or long u word that matches the picture"
+            },
+            {
+              "id": "complete-the-sentence-with-the-correct-ild-ind-old-olt-or-ost-word",
+              "title": "Complete the sentence with the correct -ild, -ind, -old, -olt or -ost word"
+            },
+            {
+              "id": "is-the-syllable-open-or-closed",
+              "title": "Is the syllable open or closed?"
+            },
+            {
+              "id": "match-the-short-a-and-long-a-words-to-pictures",
+              "title": "Match the short a and long a words to pictures"
+            },
+            {
+              "id": "match-the-short-e-and-long-e-words-to-pictures",
+              "title": "Match the short e and long e words to pictures"
+            },
+            {
+              "id": "sort-short-and-long-vowel-words",
+              "title": "Sort short and long vowel words"
+            },
+            {
+              "id": "spell-words-with-open-and-closed-syllables",
+              "title": "Spell words with open and closed syllables"
+            },
+            {
+              "id": "use-spelling-patterns-to-sort-long-and-short-vowel-words",
+              "title": "Use spelling patterns to sort long and short vowel words"
+            }
+          ],
+          "sourceRows": [
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-short-vowels",
+          "title": "Short vowels",
+          "subtopics": [
+            {
+              "id": "complete-the-word-with-the-correct-short-vowel",
+              "title": "Complete the word with the correct short vowel"
+            },
+            {
+              "id": "spell-the-short-a-word",
+              "title": "Spell the short a word"
+            },
+            {
+              "id": "spell-the-short-e-word",
+              "title": "Spell the short e word"
+            },
+            {
+              "id": "spell-the-short-i-word",
+              "title": "Spell the short i word"
+            },
+            {
+              "id": "spell-the-short-o-word",
+              "title": "Spell the short o word"
+            },
+            {
+              "id": "spell-the-short-u-word",
+              "title": "Spell the short u word"
+            }
+          ],
+          "sourceRows": [
+            57,
+            58,
+            59,
+            60,
+            61,
+            62
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-sight-words",
+          "title": "Sight words",
+          "subtopics": [
+            {
+              "id": "choose-the-sight-word-that-you-hear",
+              "title": "Choose the sight word that you hear"
+            },
+            {
+              "id": "complete-the-sentence-with-the-correct-sight-word",
+              "title": "Complete the sentence with the correct sight word"
+            },
+            {
+              "id": "spell-the-sight-word",
+              "title": "Spell the sight word"
+            }
+          ],
+          "sourceRows": [
+            63,
+            64,
+            65
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-silent-e",
+          "title": "Silent e",
+          "subtopics": [
+            {
+              "id": "choose-the-silent-e-word-that-matches-the-picture",
+              "title": "Choose the silent e word that matches the picture"
+            },
+            {
+              "id": "complete-the-silent-e-words",
+              "title": "Complete the silent e words"
+            },
+            {
+              "id": "spell-the-silent-e-word",
+              "title": "Spell the silent e word"
+            }
+          ],
+          "sourceRows": [
+            66,
+            67,
+            68
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-soft-g-and-c",
+          "title": "Soft g and c",
+          "subtopics": [
+            {
+              "id": "choose-the-soft-g-or-soft-c-sentence-that-matches-the-picture",
+              "title": "Choose the soft g or soft c sentence that matches the picture"
+            },
+            {
+              "id": "pick-the-soft-g-or-soft-c-word-that-matches-the-picture",
+              "title": "Pick the soft g or soft c word that matches the picture"
+            },
+            {
+              "id": "sort-soft-and-hard-g-words-and-soft-and-hard-c-words",
+              "title": "Sort soft and hard g words and soft and hard c words"
+            },
+            {
+              "id": "spell-the-soft-g-or-soft-c-word",
+              "title": "Spell the soft g or soft c word"
+            }
+          ],
+          "sourceRows": [
+            69,
+            70,
+            71,
+            72
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-spelling-and-encoding",
+          "title": "Spelling and Encoding",
+          "subtopics": [
+            {
+              "id": "spelling-patterns-and-word-lists",
+              "title": "Spelling patterns and word lists"
+            }
+          ],
+          "sourceRows": [
+            73
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-syllabication",
+          "title": "Syllabication",
+          "subtopics": [
+            {
+              "id": "counting-and-dividing-syllables",
+              "title": "Counting and dividing syllables"
+            }
+          ],
+          "sourceRows": [
+            74
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-syllables",
+          "title": "Syllables",
+          "subtopics": [
+            {
+              "id": "how-many-syllables-does-the-word-have",
+              "title": "How many syllables does the word have?"
+            },
+            {
+              "id": "sort-by-the-number-of-syllables",
+              "title": "Sort by the number of syllables"
+            }
+          ],
+          "sourceRows": [
+            75,
+            76
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-two-syllable-words",
+          "title": "Two-syllable words",
+          "subtopics": [
+            {
+              "id": "complete-the-sentence-with-a-two-syllable-word",
+              "title": "Complete the sentence with a two-syllable word"
+            },
+            {
+              "id": "complete-the-two-syllable-words",
+              "title": "Complete the two-syllable words"
+            },
+            {
+              "id": "put-two-syllables-together-to-create-a-word-easier",
+              "title": "Put two syllables together to create a word: easier"
+            },
+            {
+              "id": "put-two-syllables-together-to-create-a-word-harder",
+              "title": "Put two syllables together to create a word: harder"
+            }
+          ],
+          "sourceRows": [
+            77,
+            78,
+            79,
+            80
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-variant-vowels",
+          "title": "Variant vowels",
+          "subtopics": [
+            {
+              "id": "complete-words-with-variant-vowels",
+              "title": "Complete words with variant vowels"
+            },
+            {
+              "id": "which-word-has-a-different-vowel-sound",
+              "title": "Which word has a different vowel sound?"
+            }
+          ],
+          "sourceRows": [
+            81,
+            82
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-vowel-teams",
+          "title": "Vowel teams",
+          "subtopics": [
+            {
+              "id": "choose-the-picture-that-matches-the-vowel-team-word",
+              "title": "Choose the picture that matches the vowel team word"
+            },
+            {
+              "id": "choose-the-vowel-team-sentence-that-matches-the-picture",
+              "title": "Choose the vowel team sentence that matches the picture"
+            },
+            {
+              "id": "complete-the-vowel-team-words",
+              "title": "Complete the vowel team words"
+            },
+            {
+              "id": "complete-the-word-with-the-correct-vowel-team",
+              "title": "Complete the word with the correct vowel team"
+            }
+          ],
+          "sourceRows": [
+            83,
+            84,
+            85,
+            86
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-word-recognition",
+          "title": "Word Recognition",
+          "subtopics": [
+            {
+              "id": "fry-word-lists",
+              "title": "Fry word lists"
+            },
+            {
+              "id": "sight-words",
+              "title": "Sight words"
+            }
+          ],
+          "sourceRows": [
+            87,
+            88
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-word-structure",
+          "title": "Word Structure",
+          "subtopics": [
+            {
+              "id": "compound-words",
+              "title": "Compound words"
+            }
+          ],
+          "sourceRows": [
+            89
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 21,
+      "subtopicCount": 80
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g3-alphabet-knowledge",
+          "title": "Alphabet Knowledge",
+          "subtopics": [
+            {
+              "id": "letter-names-and-alphabet-sequence",
+              "title": "Letter names and alphabet sequence"
+            }
+          ],
+          "sourceRows": [
+            90
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-blends",
+          "title": "Blends",
+          "subtopics": [
+            {
+              "id": "complete-the-word-with-a-three-letter-consonant-blend",
+              "title": "Complete the word with a three-letter consonant blend"
+            }
+          ],
+          "sourceRows": [
+            91
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-decoding-and-word-recognition",
+          "title": "Decoding and Word Recognition",
+          "subtopics": [
+            {
+              "id": "decoding-unfamiliar-words",
+              "title": "Decoding unfamiliar words"
+            }
+          ],
+          "sourceRows": [
+            92
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-diphthongs-and-r-vowel-patterns",
+          "title": "Diphthongs and r vowel patterns",
+          "subtopics": [
+            {
+              "id": "spell-words-with-r-vowel-patterns",
+              "title": "Spell words with r vowel patterns"
+            },
+            {
+              "id": "spell-words-with-vowel-diphthong-patterns",
+              "title": "Spell words with vowel diphthong patterns"
+            }
+          ],
+          "sourceRows": [
+            93,
+            94
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-irregular-words",
+          "title": "Irregular words",
+          "subtopics": [
+            {
+              "id": "spell-the-sight-word",
+              "title": "Spell the sight word"
+            }
+          ],
+          "sourceRows": [
+            95
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-multisyllabic-words",
+          "title": "Multisyllabic words",
+          "subtopics": [
+            {
+              "id": "spell-consonant-l-e-words",
+              "title": "Spell consonant-l-e words"
+            },
+            {
+              "id": "spell-words-with-open-and-closed-syllables",
+              "title": "Spell words with open and closed syllables"
+            }
+          ],
+          "sourceRows": [
+            96,
+            97
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-phonics",
+          "title": "Phonics",
+          "subtopics": [
+            {
+              "id": "consonant-blends",
+              "title": "Consonant blends"
+            },
+            {
+              "id": "long-vowels-and-silent-e-patterns",
+              "title": "Long vowels and silent-e patterns"
+            },
+            {
+              "id": "short-vowels",
+              "title": "Short vowels"
+            }
+          ],
+          "sourceRows": [
+            98,
+            99,
+            100
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-short-and-long-vowels",
+          "title": "Short and long vowels",
+          "subtopics": [
+            {
+              "id": "spell-rhyming-words-to-answer-riddles",
+              "title": "Spell rhyming words to answer riddles"
+            },
+            {
+              "id": "spell-the-long-a-word-silent-e-ai-ay-ea-ey-eigh",
+              "title": "Spell the long a word: silent e, ai, ay, ea, ey, eigh"
+            },
+            {
+              "id": "spell-the-long-i-word-silent-e-ie-y-igh-ind-ild",
+              "title": "Spell the long i word: silent e, ie, y, igh, ind, ild"
+            },
+            {
+              "id": "spell-the-long-o-word-silent-e-oa-ow-old-ost-olt",
+              "title": "Spell the long o word: silent e, oa, ow, old, ost, olt"
+            },
+            {
+              "id": "spell-the-long-u-word-silent-e-ue-oo-ew-ui",
+              "title": "Spell the long u word: silent e, ue, oo, ew, ui"
+            },
+            {
+              "id": "use-spelling-patterns-to-sort-long-and-short-vowel-words",
+              "title": "Use spelling patterns to sort long and short vowel words"
+            }
+          ],
+          "sourceRows": [
+            101,
+            102,
+            103,
+            104,
+            105,
+            106
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-spelling-and-encoding",
+          "title": "Spelling and Encoding",
+          "subtopics": [
+            {
+              "id": "double-consonants",
+              "title": "Double consonants"
+            },
+            {
+              "id": "spelling-patterns-and-word-lists",
+              "title": "Spelling patterns and word lists"
+            }
+          ],
+          "sourceRows": [
+            107,
+            108
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-syllabication",
+          "title": "Syllabication",
+          "subtopics": [
+            {
+              "id": "counting-and-dividing-syllables",
+              "title": "Counting and dividing syllables"
+            }
+          ],
+          "sourceRows": [
+            109
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-word-recognition",
+          "title": "Word Recognition",
+          "subtopics": [
+            {
+              "id": "fry-word-lists",
+              "title": "Fry word lists"
+            },
+            {
+              "id": "high-frequency-words",
+              "title": "High-frequency words"
+            },
+            {
+              "id": "sight-words",
+              "title": "Sight words"
+            }
+          ],
+          "sourceRows": [
+            110,
+            111,
+            112
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-word-structure",
+          "title": "Word Structure",
+          "subtopics": [
+            {
+              "id": "compound-words",
+              "title": "Compound words"
+            },
+            {
+              "id": "multisyllabic-words",
+              "title": "Multisyllabic words"
+            }
+          ],
+          "sourceRows": [
+            113,
+            114
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 12,
+      "subtopicCount": 25
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g4-alphabet-knowledge",
+          "title": "Alphabet Knowledge",
+          "subtopics": [
+            {
+              "id": "english-alphabet-and-letter-recognition",
+              "title": "English alphabet and letter recognition"
+            }
+          ],
+          "sourceRows": [
+            115
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-decoding-and-word-recognition",
+          "title": "Decoding and Word Recognition",
+          "subtopics": [
+            {
+              "id": "decoding-unfamiliar-words",
+              "title": "Decoding unfamiliar words"
+            }
+          ],
+          "sourceRows": [
+            116
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-phonics",
+          "title": "Phonics",
+          "subtopics": [
+            {
+              "id": "consonant-blends",
+              "title": "Consonant blends"
+            },
+            {
+              "id": "consonant-digraphs-and-trigraphs",
+              "title": "Consonant digraphs and trigraphs"
+            },
+            {
+              "id": "long-vowels-and-silent-e-patterns",
+              "title": "Long vowels and silent-e patterns"
+            },
+            {
+              "id": "open-and-closed-syllables",
+              "title": "Open and closed syllables"
+            },
+            {
+              "id": "short-vowels",
+              "title": "Short vowels"
+            }
+          ],
+          "sourceRows": [
+            117,
+            118,
+            119,
+            120,
+            121
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-phonological-awareness",
+          "title": "Phonological Awareness",
+          "subtopics": [
+            {
+              "id": "phonemes-and-phonemic-awareness",
+              "title": "Phonemes and phonemic awareness"
+            },
+            {
+              "id": "rhyming-words",
+              "title": "Rhyming words"
+            }
+          ],
+          "sourceRows": [
+            122,
+            123
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-spelling-and-encoding",
+          "title": "Spelling and Encoding",
+          "subtopics": [
+            {
+              "id": "spelling-patterns-and-word-lists",
+              "title": "Spelling patterns and word lists"
+            }
+          ],
+          "sourceRows": [
+            124
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-syllabication",
+          "title": "Syllabication",
+          "subtopics": [
+            {
+              "id": "counting-and-dividing-syllables",
+              "title": "Counting and dividing syllables"
+            }
+          ],
+          "sourceRows": [
+            125
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-word-recognition",
+          "title": "Word Recognition",
+          "subtopics": [
+            {
+              "id": "fry-word-lists",
+              "title": "Fry word lists"
+            },
+            {
+              "id": "high-frequency-words",
+              "title": "High-frequency words"
+            },
+            {
+              "id": "sight-words",
+              "title": "Sight words"
+            }
+          ],
+          "sourceRows": [
+            126,
+            127,
+            128
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-word-structure",
+          "title": "Word Structure",
+          "subtopics": [
+            {
+              "id": "compound-words",
+              "title": "Compound words"
+            },
+            {
+              "id": "multisyllabic-words",
+              "title": "Multisyllabic words"
+            },
+            {
+              "id": "words-with-silent-letters",
+              "title": "Words with silent letters"
+            }
+          ],
+          "sourceRows": [
+            129,
+            130,
+            131
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 8,
+      "subtopicCount": 17
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g5-alphabet-knowledge",
+          "title": "Alphabet Knowledge",
+          "subtopics": [
+            {
+              "id": "english-alphabet-and-letter-recognition",
+              "title": "English alphabet and letter recognition"
+            }
+          ],
+          "sourceRows": [
+            132
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-decoding-and-word-recognition",
+          "title": "Decoding and Word Recognition",
+          "subtopics": [
+            {
+              "id": "decoding-unfamiliar-words",
+              "title": "Decoding unfamiliar words"
+            }
+          ],
+          "sourceRows": [
+            133
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-phonics",
+          "title": "Phonics",
+          "subtopics": [
+            {
+              "id": "consonant-blends",
+              "title": "Consonant blends"
+            },
+            {
+              "id": "long-vowels-and-silent-e-patterns",
+              "title": "Long vowels and silent-e patterns"
+            },
+            {
+              "id": "short-vowels",
+              "title": "Short vowels"
+            }
+          ],
+          "sourceRows": [
+            134,
+            135,
+            136
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-phonological-awareness",
+          "title": "Phonological Awareness",
+          "subtopics": [
+            {
+              "id": "rhyming-words",
+              "title": "Rhyming words"
+            }
+          ],
+          "sourceRows": [
+            137
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-spelling-and-encoding",
+          "title": "Spelling and Encoding",
+          "subtopics": [
+            {
+              "id": "spelling-patterns-and-word-lists",
+              "title": "Spelling patterns and word lists"
+            }
+          ],
+          "sourceRows": [
+            138
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-syllabication",
+          "title": "Syllabication",
+          "subtopics": [
+            {
+              "id": "counting-and-dividing-syllables",
+              "title": "Counting and dividing syllables"
+            }
+          ],
+          "sourceRows": [
+            139
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-word-recognition",
+          "title": "Word Recognition",
+          "subtopics": [
+            {
+              "id": "fry-word-lists",
+              "title": "Fry word lists"
+            },
+            {
+              "id": "high-frequency-words",
+              "title": "High-frequency words"
+            },
+            {
+              "id": "sight-words",
+              "title": "Sight words"
+            }
+          ],
+          "sourceRows": [
+            140,
+            141,
+            142
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-word-structure",
+          "title": "Word Structure",
+          "subtopics": [
+            {
+              "id": "compound-words",
+              "title": "Compound words"
+            },
+            {
+              "id": "multisyllabic-words",
+              "title": "Multisyllabic words"
+            },
+            {
+              "id": "words-with-silent-letters",
+              "title": "Words with silent letters"
+            }
+          ],
+          "sourceRows": [
+            143,
+            144,
+            145
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 8,
+      "subtopicCount": 14
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g6-alphabet-knowledge",
+          "title": "Alphabet Knowledge",
+          "subtopics": [
+            {
+              "id": "letter-names-and-alphabet-sequence",
+              "title": "Letter names and alphabet sequence"
+            }
+          ],
+          "sourceRows": [
+            146
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-phonics",
+          "title": "Phonics",
+          "subtopics": [
+            {
+              "id": "consonant-blends",
+              "title": "Consonant blends"
+            },
+            {
+              "id": "long-vowels-and-silent-e-patterns",
+              "title": "Long vowels and silent-e patterns"
+            },
+            {
+              "id": "short-vowels",
+              "title": "Short vowels"
+            },
+            {
+              "id": "soft-c-and-soft-g",
+              "title": "Soft c and soft g"
+            }
+          ],
+          "sourceRows": [
+            147,
+            148,
+            149,
+            150
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-phonological-awareness",
+          "title": "Phonological Awareness",
+          "subtopics": [
+            {
+              "id": "rhyming-words",
+              "title": "Rhyming words"
+            }
+          ],
+          "sourceRows": [
+            151
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-spelling-and-encoding",
+          "title": "Spelling and Encoding",
+          "subtopics": [
+            {
+              "id": "double-consonants",
+              "title": "Double consonants"
+            },
+            {
+              "id": "spelling-patterns-and-word-lists",
+              "title": "Spelling patterns and word lists"
+            }
+          ],
+          "sourceRows": [
+            152,
+            153
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-syllabication",
+          "title": "Syllabication",
+          "subtopics": [
+            {
+              "id": "counting-and-dividing-syllables",
+              "title": "Counting and dividing syllables"
+            }
+          ],
+          "sourceRows": [
+            154
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-word-recognition",
+          "title": "Word Recognition",
+          "subtopics": [
+            {
+              "id": "fry-word-lists",
+              "title": "Fry word lists"
+            },
+            {
+              "id": "sight-words",
+              "title": "Sight words"
+            }
+          ],
+          "sourceRows": [
+            155,
+            156
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-word-structure",
+          "title": "Word Structure",
+          "subtopics": [
+            {
+              "id": "compound-words",
+              "title": "Compound words"
+            },
+            {
+              "id": "multisyllabic-words",
+              "title": "Multisyllabic words"
+            },
+            {
+              "id": "words-with-silent-letters",
+              "title": "Words with silent letters"
+            }
+          ],
+          "sourceRows": [
+            157,
+            158,
+            159
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 7,
+      "subtopicCount": 14
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g7-phonics",
+          "title": "Phonics",
+          "subtopics": [
+            {
+              "id": "consonant-blends",
+              "title": "Consonant blends"
+            },
+            {
+              "id": "long-vowels-and-silent-e-patterns",
+              "title": "Long vowels and silent-e patterns"
+            },
+            {
+              "id": "short-vowels",
+              "title": "Short vowels"
+            }
+          ],
+          "sourceRows": [
+            160,
+            161,
+            162
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-spelling-and-encoding",
+          "title": "Spelling and Encoding",
+          "subtopics": [
+            {
+              "id": "double-consonants",
+              "title": "Double consonants"
+            },
+            {
+              "id": "spelling-patterns-and-word-lists",
+              "title": "Spelling patterns and word lists"
+            }
+          ],
+          "sourceRows": [
+            163,
+            164
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-syllabication",
+          "title": "Syllabication",
+          "subtopics": [
+            {
+              "id": "counting-and-dividing-syllables",
+              "title": "Counting and dividing syllables"
+            }
+          ],
+          "sourceRows": [
+            165
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-word-recognition",
+          "title": "Word Recognition",
+          "subtopics": [
+            {
+              "id": "fry-word-lists",
+              "title": "Fry word lists"
+            },
+            {
+              "id": "sight-words",
+              "title": "Sight words"
+            }
+          ],
+          "sourceRows": [
+            166,
+            167
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-word-structure",
+          "title": "Word Structure",
+          "subtopics": [
+            {
+              "id": "multisyllabic-words",
+              "title": "Multisyllabic words"
+            },
+            {
+              "id": "words-with-silent-letters",
+              "title": "Words with silent letters"
+            }
+          ],
+          "sourceRows": [
+            168,
+            169
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 5,
+      "subtopicCount": 10
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g8-phonics",
+          "title": "Phonics",
+          "subtopics": [
+            {
+              "id": "consonant-blends",
+              "title": "Consonant blends"
+            }
+          ],
+          "sourceRows": [
+            170
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-spelling-and-encoding",
+          "title": "Spelling and Encoding",
+          "subtopics": [
+            {
+              "id": "spelling-patterns-and-word-lists",
+              "title": "Spelling patterns and word lists"
+            }
+          ],
+          "sourceRows": [
+            171
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-word-recognition",
+          "title": "Word Recognition",
+          "subtopics": [
+            {
+              "id": "fry-word-lists",
+              "title": "Fry word lists"
+            },
+            {
+              "id": "high-frequency-words",
+              "title": "High-frequency words"
+            },
+            {
+              "id": "sight-words",
+              "title": "Sight words"
+            }
+          ],
+          "sourceRows": [
+            172,
+            173,
+            174
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-word-structure",
+          "title": "Word Structure",
+          "subtopics": [
+            {
+              "id": "compound-words",
+              "title": "Compound words"
+            },
+            {
+              "id": "words-with-silent-letters",
+              "title": "Words with silent letters"
+            }
+          ],
+          "sourceRows": [
+            175,
+            176
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 4,
+      "subtopicCount": 7
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-alphabet-knowledge",
+          "title": "Alphabet Knowledge",
+          "subtopics": [
+            {
+              "id": "english-alphabet-and-letter-recognition",
+              "title": "English alphabet and letter recognition"
+            }
+          ],
+          "sourceRows": [
+            177
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-decoding-and-word-recognition",
+          "title": "Decoding and Word Recognition",
+          "subtopics": [
+            {
+              "id": "decoding-unfamiliar-words",
+              "title": "Decoding unfamiliar words"
+            }
+          ],
+          "sourceRows": [
+            178
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-phonics",
+          "title": "Phonics",
+          "subtopics": [
+            {
+              "id": "consonant-blends",
+              "title": "Consonant blends"
+            },
+            {
+              "id": "consonant-digraphs-and-trigraphs",
+              "title": "Consonant digraphs and trigraphs"
+            },
+            {
+              "id": "long-vowels-and-silent-e-patterns",
+              "title": "Long vowels and silent-e patterns"
+            },
+            {
+              "id": "open-and-closed-syllables",
+              "title": "Open and closed syllables"
+            },
+            {
+              "id": "short-vowels",
+              "title": "Short vowels"
+            }
+          ],
+          "sourceRows": [
+            179,
+            180,
+            181,
+            182,
+            183
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-phonological-awareness",
+          "title": "Phonological Awareness",
+          "subtopics": [
+            {
+              "id": "rhyming-words",
+              "title": "Rhyming words"
+            }
+          ],
+          "sourceRows": [
+            184
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-spelling-and-encoding",
+          "title": "Spelling and Encoding",
+          "subtopics": [
+            {
+              "id": "double-consonants",
+              "title": "Double consonants"
+            },
+            {
+              "id": "spelling-patterns-and-word-lists",
+              "title": "Spelling patterns and word lists"
+            }
+          ],
+          "sourceRows": [
+            185,
+            186
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-syllabication",
+          "title": "Syllabication",
+          "subtopics": [
+            {
+              "id": "counting-and-dividing-syllables",
+              "title": "Counting and dividing syllables"
+            }
+          ],
+          "sourceRows": [
+            187
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-word-recognition",
+          "title": "Word Recognition",
+          "subtopics": [
+            {
+              "id": "fry-word-lists",
+              "title": "Fry word lists"
+            },
+            {
+              "id": "high-frequency-words",
+              "title": "High-frequency words"
+            },
+            {
+              "id": "sight-words",
+              "title": "Sight words"
+            }
+          ],
+          "sourceRows": [
+            188,
+            189,
+            190
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-word-structure",
+          "title": "Word Structure",
+          "subtopics": [
+            {
+              "id": "compound-words",
+              "title": "Compound words"
+            },
+            {
+              "id": "multisyllabic-words",
+              "title": "Multisyllabic words"
+            },
+            {
+              "id": "words-with-silent-letters",
+              "title": "Words with silent letters"
+            }
+          ],
+          "sourceRows": [
+            191,
+            192,
+            193
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 8,
+      "subtopicCount": 17
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-phonics",
+          "title": "Phonics",
+          "subtopics": [
+            {
+              "id": "consonant-blends",
+              "title": "Consonant blends"
+            },
+            {
+              "id": "long-vowels-and-silent-e-patterns",
+              "title": "Long vowels and silent-e patterns"
+            }
+          ],
+          "sourceRows": [
+            194,
+            195
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-phonological-awareness",
+          "title": "Phonological Awareness",
+          "subtopics": [
+            {
+              "id": "phonemes-and-phonemic-awareness",
+              "title": "Phonemes and phonemic awareness"
+            }
+          ],
+          "sourceRows": [
+            196
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-spelling-and-encoding",
+          "title": "Spelling and Encoding",
+          "subtopics": [
+            {
+              "id": "double-consonants",
+              "title": "Double consonants"
+            },
+            {
+              "id": "spelling-patterns-and-word-lists",
+              "title": "Spelling patterns and word lists"
+            }
+          ],
+          "sourceRows": [
+            197,
+            198
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-syllabication",
+          "title": "Syllabication",
+          "subtopics": [
+            {
+              "id": "counting-and-dividing-syllables",
+              "title": "Counting and dividing syllables"
+            }
+          ],
+          "sourceRows": [
+            199
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-word-recognition",
+          "title": "Word Recognition",
+          "subtopics": [
+            {
+              "id": "sight-words",
+              "title": "Sight words"
+            }
+          ],
+          "sourceRows": [
+            200
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-word-structure",
+          "title": "Word Structure",
+          "subtopics": [
+            {
+              "id": "compound-words",
+              "title": "Compound words"
+            },
+            {
+              "id": "words-with-silent-letters",
+              "title": "Words with silent letters"
+            }
+          ],
+          "sourceRows": [
+            201,
+            202
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 6,
+      "subtopicCount": 9
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-alphabet-knowledge",
+          "title": "Alphabet Knowledge",
+          "subtopics": [
+            {
+              "id": "letter-names-and-alphabet-sequence",
+              "title": "Letter names and alphabet sequence"
+            }
+          ],
+          "sourceRows": [
+            203
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-decoding-and-word-recognition",
+          "title": "Decoding and Word Recognition",
+          "subtopics": [
+            {
+              "id": "decoding-unfamiliar-words",
+              "title": "Decoding unfamiliar words"
+            }
+          ],
+          "sourceRows": [
+            204
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-phonics",
+          "title": "Phonics",
+          "subtopics": [
+            {
+              "id": "consonant-blends",
+              "title": "Consonant blends"
+            }
+          ],
+          "sourceRows": [
+            205
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-word-recognition",
+          "title": "Word Recognition",
+          "subtopics": [
+            {
+              "id": "fry-word-lists",
+              "title": "Fry word lists"
+            },
+            {
+              "id": "high-frequency-words",
+              "title": "High-frequency words"
+            },
+            {
+              "id": "sight-words",
+              "title": "Sight words"
+            }
+          ],
+          "sourceRows": [
+            206,
+            207,
+            208
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 4,
+      "subtopicCount": 6
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-spelling-and-encoding",
+          "title": "Spelling and Encoding",
+          "subtopics": [
+            {
+              "id": "spelling-patterns-and-word-lists",
+              "title": "Spelling patterns and word lists"
+            }
+          ],
+          "sourceRows": [
+            209
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    }
+  ]
+}

@@ -1,0 +1,3355 @@
+{
+  "metadata": {
+    "subject": "English",
+    "strand": "Vocabulary and Word Study",
+    "strandSlug": "vocabulary-word-study",
+    "gradeRange": {
+      "min": 1,
+      "max": 12
+    },
+    "sourceRecordCount": 422,
+    "gradedSourceRecordCount": 404,
+    "nonGradedSourceRecordCount": 18,
+    "mainTopicCount": 132,
+    "subtopicCount": 404,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Skills are counted by grade placement. Repetition across different grades is preserved as intentional curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Main Topic + Subtopic duplicates are removed.",
+      "Clearly mismatched Main Topic labels are corrected only at the display layer and logged.",
+      "Age-only, adult, IELTS, and grade-not-stated records remain outside Grade 1–12 pages.",
+      "Empty grade sections remain in the JSON structure but are hidden from public pages."
+    ]
+  },
+  "strand": {
+    "slug": "vocabulary-word-study",
+    "title": {
+      "en": "Vocabulary and Word Study",
+      "ar": "المفردات ودراسة الكلمات"
+    },
+    "description": {
+      "en": "Academic and thematic vocabulary, context clues, word relationships, roots, prefixes, suffixes, reference skills, nuance, connotation, and precise word usage.",
+      "ar": "المفردات الأكاديمية والموضوعية وقرائن السياق والعلاقات بين الكلمات والجذور والبادئات واللواحق والمهارات المرجعية ودقة المعنى والاستخدام."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g1-academic-and-thematic-vocabulary",
+          "title": "Academic and Thematic Vocabulary",
+          "subtopics": [
+            {
+              "id": "thematic-vocabulary",
+              "title": "Thematic vocabulary"
+            }
+          ],
+          "sourceRows": [
+            1
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g1-meaning-in-context",
+          "title": "Meaning in Context",
+          "subtopics": [
+            {
+              "id": "context-clues",
+              "title": "Context clues"
+            }
+          ],
+          "sourceRows": [
+            2
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g1-word-relationships",
+          "title": "Word Relationships",
+          "subtopics": [
+            {
+              "id": "antonyms",
+              "title": "Antonyms"
+            },
+            {
+              "id": "synonyms",
+              "title": "Synonyms"
+            }
+          ],
+          "sourceRows": [
+            3,
+            4
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 3,
+      "subtopicCount": 4
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g2-academic-and-thematic-vocabulary",
+          "title": "Academic and Thematic Vocabulary",
+          "subtopics": [
+            {
+              "id": "thematic-vocabulary",
+              "title": "Thematic vocabulary"
+            }
+          ],
+          "sourceRows": [
+            5
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-categories",
+          "title": "Categories",
+          "subtopics": [
+            {
+              "id": "sort-words-into-categories",
+              "title": "Sort words into categories"
+            },
+            {
+              "id": "which-word-is-not-like-the-others",
+              "title": "Which word is not like the others?"
+            }
+          ],
+          "sourceRows": [
+            6,
+            7
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-compound-words",
+          "title": "Compound words",
+          "subtopics": [
+            {
+              "id": "form-and-use-compound-words",
+              "title": "Form and use compound words"
+            },
+            {
+              "id": "form-compound-words",
+              "title": "Form compound words"
+            }
+          ],
+          "sourceRows": [
+            8,
+            9
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-reference-skills",
+          "title": "Reference skills",
+          "subtopics": [
+            {
+              "id": "order-alphabetically-based-on-the-first-letter",
+              "title": "Order alphabetically based on the first letter"
+            },
+            {
+              "id": "order-alphabetically-based-on-the-first-three-letters",
+              "title": "Order alphabetically based on the first three letters"
+            },
+            {
+              "id": "order-alphabetically-based-on-the-first-two-letters",
+              "title": "Order alphabetically based on the first two letters"
+            },
+            {
+              "id": "use-dictionary-entries",
+              "title": "Use dictionary entries"
+            },
+            {
+              "id": "use-guide-words",
+              "title": "Use guide words"
+            }
+          ],
+          "sourceRows": [
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-homophones",
+          "title": "Homophones",
+          "subtopics": [
+            {
+              "id": "homophones-with-pictures",
+              "title": "Homophones with pictures"
+            },
+            {
+              "id": "identify-homophones",
+              "title": "Identify homophones"
+            },
+            {
+              "id": "use-the-correct-homophone",
+              "title": "Use the correct homophone"
+            }
+          ],
+          "sourceRows": [
+            15,
+            16,
+            17
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-idioms",
+          "title": "Idioms",
+          "subtopics": [
+            {
+              "id": "choose-the-picture-that-matches-the-idiomatic-expression",
+              "title": "Choose the picture that matches the idiomatic expression"
+            }
+          ],
+          "sourceRows": [
+            18
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-multiple-meaning-words",
+          "title": "Multiple-meaning words",
+          "subtopics": [
+            {
+              "id": "multiple-meaning-words-with-pictures",
+              "title": "Multiple-meaning words with pictures"
+            }
+          ],
+          "sourceRows": [
+            19
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-prefixes-and-suffixes",
+          "title": "Prefixes and suffixes",
+          "subtopics": [
+            {
+              "id": "complete-the-word-with-the-ending-that-you-hear",
+              "title": "Complete the word with the ending that you hear"
+            },
+            {
+              "id": "determine-the-meaning-of-a-word-with-ful-or-less",
+              "title": "Determine the meaning of a word with -ful or -less"
+            },
+            {
+              "id": "determine-the-meaning-of-a-word-with-pre-re-or-mis",
+              "title": "Determine the meaning of a word with pre-, re- or mis"
+            },
+            {
+              "id": "identify-base-words-prefixes-and-suffixes",
+              "title": "Identify base words, prefixes and suffixes"
+            },
+            {
+              "id": "prefixes-and-suffixes-review",
+              "title": "Prefixes and suffixes: review"
+            },
+            {
+              "id": "use-the-prefixes-pre-re-and-mis",
+              "title": "Use the prefixes pre-, re- and mis"
+            }
+          ],
+          "sourceRows": [
+            20,
+            21,
+            22,
+            23,
+            24,
+            25
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-shades-of-meaning",
+          "title": "Shades of meaning",
+          "subtopics": [
+            {
+              "id": "describe-the-difference-between-related-words",
+              "title": "Describe the difference between related words"
+            },
+            {
+              "id": "find-the-words-with-related-meanings",
+              "title": "Find the words with related meanings"
+            },
+            {
+              "id": "order-related-words-based-on-meaning",
+              "title": "Order related words based on meaning"
+            }
+          ],
+          "sourceRows": [
+            26,
+            27,
+            28
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-synonyms-and-antonyms",
+          "title": "Synonyms and antonyms",
+          "subtopics": [
+            {
+              "id": "choose-the-synonym",
+              "title": "Choose the synonym"
+            },
+            {
+              "id": "find-antonyms-in-context",
+              "title": "Find antonyms in context"
+            },
+            {
+              "id": "find-synonyms-in-context",
+              "title": "Find synonyms in context"
+            },
+            {
+              "id": "which-sentence-has-the-same-meaning",
+              "title": "Which sentence has the same meaning?"
+            },
+            {
+              "id": "which-sentence-uses-an-antonym",
+              "title": "Which sentence uses an antonym?"
+            }
+          ],
+          "sourceRows": [
+            29,
+            30,
+            31,
+            32,
+            33
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g2-word-relationships",
+          "title": "Word Relationships",
+          "subtopics": [
+            {
+              "id": "antonyms",
+              "title": "Antonyms"
+            },
+            {
+              "id": "homophones",
+              "title": "Homophones"
+            }
+          ],
+          "sourceRows": [
+            34,
+            35
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 11,
+      "subtopicCount": 31
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g3-academic-and-thematic-vocabulary",
+          "title": "Academic and Thematic Vocabulary",
+          "subtopics": [
+            {
+              "id": "academic-vocabulary",
+              "title": "Academic vocabulary"
+            },
+            {
+              "id": "thematic-vocabulary",
+              "title": "Thematic vocabulary"
+            }
+          ],
+          "sourceRows": [
+            36,
+            37
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-categories",
+          "title": "Categories",
+          "subtopics": [
+            {
+              "id": "select-the-members-of-a-group",
+              "title": "Select the members of a group"
+            },
+            {
+              "id": "select-the-words-that-don-t-belong",
+              "title": "Select the words that don't belong"
+            }
+          ],
+          "sourceRows": [
+            38,
+            39
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-compound-words",
+          "title": "Compound words",
+          "subtopics": [
+            {
+              "id": "form-and-use-compound-words",
+              "title": "Form and use compound words"
+            },
+            {
+              "id": "form-compound-words",
+              "title": "Form compound words"
+            }
+          ],
+          "sourceRows": [
+            40,
+            41
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-context-clues",
+          "title": "Context clues",
+          "subtopics": [
+            {
+              "id": "determine-the-meaning-of-words-using-synonyms-in-context",
+              "title": "Determine the meaning of words using synonyms in context"
+            },
+            {
+              "id": "use-context-to-identify-the-meaning-of-a-word",
+              "title": "Use context to identify the meaning of a word"
+            }
+          ],
+          "sourceRows": [
+            42,
+            43
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-greek-and-latin-roots",
+          "title": "Greek and Latin roots",
+          "subtopics": [
+            {
+              "id": "determine-the-meanings-of-greek-and-latin-roots",
+              "title": "Determine the meanings of Greek and Latin roots"
+            },
+            {
+              "id": "determine-the-meanings-of-words-with-greek-and-latin-roots",
+              "title": "Determine the meanings of words with Greek and Latin roots"
+            },
+            {
+              "id": "use-greek-and-latin-roots-as-clues-to-the-meanings-of-words",
+              "title": "Use Greek and Latin roots as clues to the meanings of words"
+            }
+          ],
+          "sourceRows": [
+            44,
+            45,
+            46
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-homophones",
+          "title": "Homophones",
+          "subtopics": [
+            {
+              "id": "homophones-with-pictures",
+              "title": "Homophones with pictures"
+            },
+            {
+              "id": "identify-homophones",
+              "title": "Identify homophones"
+            },
+            {
+              "id": "use-the-correct-homophone",
+              "title": "Use the correct homophone"
+            }
+          ],
+          "sourceRows": [
+            47,
+            48,
+            49
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-idioms",
+          "title": "Idioms",
+          "subtopics": [
+            {
+              "id": "choose-the-picture-that-matches-the-idiomatic-expression",
+              "title": "Choose the picture that matches the idiomatic expression"
+            }
+          ],
+          "sourceRows": [
+            50
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-meaning-in-context",
+          "title": "Meaning in Context",
+          "subtopics": [
+            {
+              "id": "context-clues",
+              "title": "Context clues"
+            }
+          ],
+          "sourceRows": [
+            51
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-morphology",
+          "title": "Morphology",
+          "subtopics": [
+            {
+              "id": "greek-and-latin-roots",
+              "title": "Greek and Latin roots"
+            },
+            {
+              "id": "prefixes",
+              "title": "Prefixes"
+            },
+            {
+              "id": "suffixes",
+              "title": "Suffixes"
+            }
+          ],
+          "sourceRows": [
+            52,
+            53,
+            54
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-multiple-meaning-words",
+          "title": "Multiple-meaning words",
+          "subtopics": [
+            {
+              "id": "which-definition-matches-the-sentence",
+              "title": "Which definition matches the sentence?"
+            },
+            {
+              "id": "which-sentence-matches-the-definition",
+              "title": "Which sentence matches the definition?"
+            }
+          ],
+          "sourceRows": [
+            55,
+            56
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-prefixes-and-suffixes",
+          "title": "Prefixes and suffixes",
+          "subtopics": [
+            {
+              "id": "determine-the-meaning-of-a-word-with-able-or-ment",
+              "title": "Determine the meaning of a word with -able or -ment"
+            },
+            {
+              "id": "determine-the-meaning-of-a-word-with-ful-or-less",
+              "title": "Determine the meaning of a word with -ful or -less"
+            },
+            {
+              "id": "determine-the-meaning-of-a-word-with-ly-or-ness",
+              "title": "Determine the meaning of a word with -ly or -ness"
+            },
+            {
+              "id": "determine-the-meaning-of-a-word-with-a-suffix-review",
+              "title": "Determine the meaning of a word with a suffix: review"
+            },
+            {
+              "id": "determine-the-meaning-of-a-word-with-pre-re-or-mis",
+              "title": "Determine the meaning of a word with pre-, re- or mis"
+            },
+            {
+              "id": "determine-the-meanings-of-words-with-prefixes-and-suffixes-review",
+              "title": "Determine the meanings of words with prefixes and suffixes: review"
+            },
+            {
+              "id": "identify-base-words-prefixes-and-suffixes",
+              "title": "Identify base words, prefixes and suffixes"
+            },
+            {
+              "id": "use-the-prefixes-pre-re-and-mis",
+              "title": "Use the prefixes pre-, re- and mis"
+            }
+          ],
+          "sourceRows": [
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-reference-skills",
+          "title": "Reference skills",
+          "subtopics": [
+            {
+              "id": "order-alphabetically-based-on-the-first-letter",
+              "title": "Order alphabetically based on the first letter"
+            },
+            {
+              "id": "order-alphabetically-based-on-the-first-three-letters",
+              "title": "Order alphabetically based on the first three letters"
+            },
+            {
+              "id": "order-alphabetically-based-on-the-first-two-letters",
+              "title": "Order alphabetically based on the first two letters"
+            },
+            {
+              "id": "order-alphabetically-challenge",
+              "title": "Order alphabetically: challenge"
+            },
+            {
+              "id": "use-dictionary-definitions",
+              "title": "Use dictionary definitions"
+            },
+            {
+              "id": "use-dictionary-entries",
+              "title": "Use dictionary entries"
+            },
+            {
+              "id": "use-guide-words",
+              "title": "Use guide words"
+            }
+          ],
+          "sourceRows": [
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-shades-of-meaning",
+          "title": "Shades of meaning",
+          "subtopics": [
+            {
+              "id": "describe-the-difference-between-related-words",
+              "title": "Describe the difference between related words"
+            },
+            {
+              "id": "positive-and-negative-connotation",
+              "title": "Positive and negative connotation"
+            }
+          ],
+          "sourceRows": [
+            72,
+            73
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-synonyms-and-antonyms",
+          "title": "Synonyms and antonyms",
+          "subtopics": [
+            {
+              "id": "choose-the-antonym",
+              "title": "Choose the antonym"
+            },
+            {
+              "id": "choose-the-synonym",
+              "title": "Choose the synonym"
+            },
+            {
+              "id": "find-antonyms-in-context",
+              "title": "Find antonyms in context"
+            },
+            {
+              "id": "find-synonyms-in-context",
+              "title": "Find synonyms in context"
+            },
+            {
+              "id": "which-sentence-has-the-same-meaning",
+              "title": "Which sentence has the same meaning?"
+            },
+            {
+              "id": "which-sentence-uses-an-antonym",
+              "title": "Which sentence uses an antonym?"
+            }
+          ],
+          "sourceRows": [
+            74,
+            75,
+            76,
+            77,
+            78,
+            79
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g3-word-relationships",
+          "title": "Word Relationships",
+          "subtopics": [
+            {
+              "id": "antonyms",
+              "title": "Antonyms"
+            },
+            {
+              "id": "categories-and-classification",
+              "title": "Categories and classification"
+            },
+            {
+              "id": "homographs",
+              "title": "Homographs"
+            },
+            {
+              "id": "homonyms",
+              "title": "Homonyms"
+            },
+            {
+              "id": "homophones",
+              "title": "Homophones"
+            },
+            {
+              "id": "synonyms",
+              "title": "Synonyms"
+            }
+          ],
+          "sourceRows": [
+            80,
+            81,
+            82,
+            83,
+            84,
+            85
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 15,
+      "subtopicCount": 50
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g4-academic-and-thematic-vocabulary",
+          "title": "Academic and Thematic Vocabulary",
+          "subtopics": [
+            {
+              "id": "academic-vocabulary",
+              "title": "Academic vocabulary"
+            },
+            {
+              "id": "thematic-vocabulary",
+              "title": "Thematic vocabulary"
+            }
+          ],
+          "sourceRows": [
+            86,
+            87
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-categories",
+          "title": "Categories",
+          "subtopics": [
+            {
+              "id": "select-the-members-of-a-group",
+              "title": "Select the members of a group"
+            },
+            {
+              "id": "select-the-words-that-don-t-belong",
+              "title": "Select the words that don't belong"
+            }
+          ],
+          "sourceRows": [
+            88,
+            89
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-compound-words",
+          "title": "Compound words",
+          "subtopics": [
+            {
+              "id": "form-and-use-compound-words",
+              "title": "Form and use compound words"
+            },
+            {
+              "id": "form-compound-words",
+              "title": "Form compound words"
+            }
+          ],
+          "sourceRows": [
+            90,
+            91
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-context-clues",
+          "title": "Context clues",
+          "subtopics": [
+            {
+              "id": "determine-the-meaning-of-domain-specific-words-with-pictures",
+              "title": "Determine the meaning of domain-specific words with pictures"
+            },
+            {
+              "id": "determine-the-meaning-of-words-using-synonyms-in-context",
+              "title": "Determine the meaning of words using synonyms in context"
+            },
+            {
+              "id": "find-words-using-context",
+              "title": "Find words using context"
+            },
+            {
+              "id": "use-context-to-identify-the-meaning-of-a-word",
+              "title": "Use context to identify the meaning of a word"
+            }
+          ],
+          "sourceRows": [
+            92,
+            93,
+            94,
+            95
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-greek-and-latin-roots",
+          "title": "Greek and Latin roots",
+          "subtopics": [
+            {
+              "id": "determine-the-meanings-of-greek-and-latin-roots",
+              "title": "Determine the meanings of Greek and Latin roots"
+            },
+            {
+              "id": "determine-the-meanings-of-words-with-greek-and-latin-roots",
+              "title": "Determine the meanings of words with Greek and Latin roots"
+            },
+            {
+              "id": "match-words-with-greek-and-latin-roots-to-their-meanings",
+              "title": "Match words with Greek and Latin roots to their meanings"
+            },
+            {
+              "id": "sort-words-by-shared-greek-or-latin-roots",
+              "title": "Sort words by shared Greek or Latin roots"
+            },
+            {
+              "id": "use-greek-and-latin-roots-as-clues-to-the-meanings-of-words",
+              "title": "Use Greek and Latin roots as clues to the meanings of words"
+            },
+            {
+              "id": "use-the-meanings-of-words-as-clues-to-the-meanings-of-greek-and-latin-roots",
+              "title": "Use the meanings of words as clues to the meanings of Greek and Latin roots"
+            }
+          ],
+          "sourceRows": [
+            96,
+            97,
+            98,
+            99,
+            100,
+            101
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-homophones",
+          "title": "Homophones",
+          "subtopics": [
+            {
+              "id": "homophones-with-pictures",
+              "title": "Homophones with pictures"
+            },
+            {
+              "id": "identify-homophones",
+              "title": "Identify homophones"
+            },
+            {
+              "id": "use-the-correct-homophone",
+              "title": "Use the correct homophone"
+            }
+          ],
+          "sourceRows": [
+            102,
+            103,
+            104
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-idioms-and-adages",
+          "title": "Idioms and adages",
+          "subtopics": [
+            {
+              "id": "determine-the-meaning-of-idioms-from-context-set",
+              "title": "Determine the meaning of idioms from context: set"
+            },
+            {
+              "id": "identify-the-meaning-of-idioms-and-adages-set",
+              "title": "Identify the meaning of idioms and adages: set"
+            }
+          ],
+          "sourceRows": [
+            105,
+            106
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-meaning-in-context",
+          "title": "Meaning in Context",
+          "subtopics": [
+            {
+              "id": "context-clues",
+              "title": "Context clues"
+            }
+          ],
+          "sourceRows": [
+            107
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-morphology",
+          "title": "Morphology",
+          "subtopics": [
+            {
+              "id": "prefixes",
+              "title": "Prefixes"
+            },
+            {
+              "id": "suffixes",
+              "title": "Suffixes"
+            }
+          ],
+          "sourceRows": [
+            108,
+            109
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-multiple-meaning-words",
+          "title": "Multiple-meaning words",
+          "subtopics": [
+            {
+              "id": "which-definition-matches-the-sentence",
+              "title": "Which definition matches the sentence?"
+            },
+            {
+              "id": "which-sentence-matches-the-definition",
+              "title": "Which sentence matches the definition?"
+            }
+          ],
+          "sourceRows": [
+            110,
+            111
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-prefixes-and-suffixes",
+          "title": "Prefixes and suffixes",
+          "subtopics": [
+            {
+              "id": "determine-the-meaning-of-a-word-with-able-or-ment",
+              "title": "Determine the meaning of a word with -able or -ment"
+            },
+            {
+              "id": "determine-the-meaning-of-a-word-with-ful-or-less",
+              "title": "Determine the meaning of a word with -ful or -less"
+            },
+            {
+              "id": "determine-the-meaning-of-a-word-with-ly-or-ness",
+              "title": "Determine the meaning of a word with -ly or -ness"
+            },
+            {
+              "id": "determine-the-meaning-of-a-word-with-a-suffix-review",
+              "title": "Determine the meaning of a word with a suffix: review"
+            },
+            {
+              "id": "determine-the-meaning-of-a-word-with-pre-re-or-mis",
+              "title": "Determine the meaning of a word with pre-, re- or mis"
+            },
+            {
+              "id": "determine-the-meanings-of-words-with-prefixes-and-suffixes-review",
+              "title": "Determine the meanings of words with prefixes and suffixes: review"
+            },
+            {
+              "id": "identify-base-words-prefixes-and-suffixes",
+              "title": "Identify base words, prefixes and suffixes"
+            },
+            {
+              "id": "use-the-prefixes-pre-re-and-mis",
+              "title": "Use the prefixes pre-, re- and mis"
+            }
+          ],
+          "sourceRows": [
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-reference-skills",
+          "title": "Reference skills",
+          "subtopics": [
+            {
+              "id": "order-alphabetically-based-on-the-first-letter",
+              "title": "Order alphabetically based on the first letter"
+            },
+            {
+              "id": "order-alphabetically-based-on-the-first-three-letters",
+              "title": "Order alphabetically based on the first three letters"
+            },
+            {
+              "id": "order-alphabetically-based-on-the-first-two-letters",
+              "title": "Order alphabetically based on the first two letters"
+            },
+            {
+              "id": "order-alphabetically-challenge",
+              "title": "Order alphabetically: challenge"
+            },
+            {
+              "id": "use-dictionary-definitions",
+              "title": "Use dictionary definitions"
+            },
+            {
+              "id": "use-dictionary-entries",
+              "title": "Use dictionary entries"
+            },
+            {
+              "id": "use-guide-words",
+              "title": "Use guide words"
+            },
+            {
+              "id": "use-thesaurus-entries",
+              "title": "Use thesaurus entries"
+            }
+          ],
+          "sourceRows": [
+            120,
+            121,
+            122,
+            123,
+            124,
+            125,
+            126,
+            127
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-shades-of-meaning",
+          "title": "Shades of meaning",
+          "subtopics": [
+            {
+              "id": "describe-the-difference-between-related-words",
+              "title": "Describe the difference between related words"
+            },
+            {
+              "id": "positive-and-negative-connotation",
+              "title": "Positive and negative connotation"
+            }
+          ],
+          "sourceRows": [
+            128,
+            129
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-synonyms-and-antonyms",
+          "title": "Synonyms and antonyms",
+          "subtopics": [
+            {
+              "id": "choose-the-antonym",
+              "title": "Choose the antonym"
+            },
+            {
+              "id": "choose-the-synonym",
+              "title": "Choose the synonym"
+            },
+            {
+              "id": "find-antonyms-in-context",
+              "title": "Find antonyms in context"
+            },
+            {
+              "id": "find-synonyms-in-context",
+              "title": "Find synonyms in context"
+            },
+            {
+              "id": "which-sentence-has-the-same-meaning",
+              "title": "Which sentence has the same meaning?"
+            },
+            {
+              "id": "which-sentence-uses-an-antonym",
+              "title": "Which sentence uses an antonym?"
+            }
+          ],
+          "sourceRows": [
+            130,
+            131,
+            132,
+            133,
+            134,
+            135
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g4-word-relationships",
+          "title": "Word Relationships",
+          "subtopics": [
+            {
+              "id": "antonyms",
+              "title": "Antonyms"
+            },
+            {
+              "id": "categories-and-classification",
+              "title": "Categories and classification"
+            },
+            {
+              "id": "homographs",
+              "title": "Homographs"
+            },
+            {
+              "id": "homonyms",
+              "title": "Homonyms"
+            },
+            {
+              "id": "homophones",
+              "title": "Homophones"
+            },
+            {
+              "id": "synonyms",
+              "title": "Synonyms"
+            }
+          ],
+          "sourceRows": [
+            136,
+            137,
+            138,
+            139,
+            140,
+            141
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 15,
+      "subtopicCount": 56
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g5-academic-and-thematic-vocabulary",
+          "title": "Academic and Thematic Vocabulary",
+          "subtopics": [
+            {
+              "id": "thematic-vocabulary",
+              "title": "Thematic vocabulary"
+            }
+          ],
+          "sourceRows": [
+            142
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-analogies",
+          "title": "Analogies",
+          "subtopics": [
+            {
+              "id": "analogies",
+              "title": "Analogies"
+            }
+          ],
+          "sourceRows": [
+            143
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-categories",
+          "title": "Categories",
+          "subtopics": [
+            {
+              "id": "select-the-members-of-a-group",
+              "title": "Select the members of a group"
+            },
+            {
+              "id": "select-the-words-that-don-t-belong",
+              "title": "Select the words that don't belong"
+            }
+          ],
+          "sourceRows": [
+            144,
+            145
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-context-clues",
+          "title": "Context clues",
+          "subtopics": [
+            {
+              "id": "determine-the-meaning-of-domain-specific-words-with-pictures",
+              "title": "Determine the meaning of domain-specific words with pictures"
+            },
+            {
+              "id": "determine-the-meaning-of-words-using-synonyms-in-context",
+              "title": "Determine the meaning of words using synonyms in context"
+            },
+            {
+              "id": "find-words-using-context",
+              "title": "Find words using context"
+            },
+            {
+              "id": "use-context-to-identify-the-meaning-of-a-word",
+              "title": "Use context to identify the meaning of a word"
+            }
+          ],
+          "sourceRows": [
+            146,
+            147,
+            148,
+            149
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-figurative-and-idiomatic-language",
+          "title": "Figurative and Idiomatic Language",
+          "subtopics": [
+            {
+              "id": "idioms-and-adages",
+              "title": "Idioms and adages"
+            }
+          ],
+          "sourceRows": [
+            150
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-greek-and-latin-roots",
+          "title": "Greek and Latin roots",
+          "subtopics": [
+            {
+              "id": "determine-the-meanings-of-greek-and-latin-roots",
+              "title": "Determine the meanings of Greek and Latin roots"
+            },
+            {
+              "id": "determine-the-meanings-of-words-with-greek-and-latin-roots",
+              "title": "Determine the meanings of words with Greek and Latin roots"
+            },
+            {
+              "id": "match-words-with-greek-and-latin-roots-to-their-meanings",
+              "title": "Match words with Greek and Latin roots to their meanings"
+            },
+            {
+              "id": "sort-words-by-shared-greek-or-latin-roots",
+              "title": "Sort words by shared Greek or Latin roots"
+            },
+            {
+              "id": "use-greek-and-latin-roots-as-clues-to-the-meanings-of-words",
+              "title": "Use Greek and Latin roots as clues to the meanings of words"
+            },
+            {
+              "id": "use-the-meanings-of-words-as-clues-to-the-meanings-of-greek-and-latin-roots",
+              "title": "Use the meanings of words as clues to the meanings of Greek and Latin roots"
+            },
+            {
+              "id": "use-words-as-clues-to-the-meanings-of-greek-and-latin-roots",
+              "title": "Use words as clues to the meanings of Greek and Latin roots"
+            }
+          ],
+          "sourceRows": [
+            151,
+            152,
+            153,
+            154,
+            155,
+            156,
+            157
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-homophones",
+          "title": "Homophones",
+          "subtopics": [
+            {
+              "id": "use-the-correct-homophone",
+              "title": "Use the correct homophone"
+            }
+          ],
+          "sourceRows": [
+            158
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-idioms-and-adages",
+          "title": "Idioms and adages",
+          "subtopics": [
+            {
+              "id": "determine-the-meaning-of-idioms-from-context-set",
+              "title": "Determine the meaning of idioms from context: set"
+            },
+            {
+              "id": "identify-the-meaning-of-idioms-and-adages-set",
+              "title": "Identify the meaning of idioms and adages: set"
+            }
+          ],
+          "sourceRows": [
+            159,
+            160
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-meaning-and-nuance",
+          "title": "Meaning and Nuance",
+          "subtopics": [
+            {
+              "id": "shades-of-meaning",
+              "title": "Shades of meaning"
+            }
+          ],
+          "sourceRows": [
+            161
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-meaning-in-context",
+          "title": "Meaning in Context",
+          "subtopics": [
+            {
+              "id": "context-clues",
+              "title": "Context clues"
+            }
+          ],
+          "sourceRows": [
+            162
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-morphology",
+          "title": "Morphology",
+          "subtopics": [
+            {
+              "id": "prefixes",
+              "title": "Prefixes"
+            },
+            {
+              "id": "suffixes",
+              "title": "Suffixes"
+            }
+          ],
+          "sourceRows": [
+            163,
+            164
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-multiple-meaning-words",
+          "title": "Multiple-meaning words",
+          "subtopics": [
+            {
+              "id": "which-definition-matches-the-sentence",
+              "title": "Which definition matches the sentence?"
+            },
+            {
+              "id": "which-sentence-matches-the-definition",
+              "title": "Which sentence matches the definition?"
+            }
+          ],
+          "sourceRows": [
+            165,
+            166
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-prefixes-and-suffixes",
+          "title": "Prefixes and suffixes",
+          "subtopics": [
+            {
+              "id": "words-with-able-and-ible",
+              "title": "Words with -able and -ible"
+            },
+            {
+              "id": "words-with-ful",
+              "title": "Words with -ful"
+            },
+            {
+              "id": "words-with-less",
+              "title": "Words with -less"
+            },
+            {
+              "id": "words-with-mis",
+              "title": "Words with mis"
+            },
+            {
+              "id": "words-with-pre",
+              "title": "Words with pre"
+            },
+            {
+              "id": "words-with-re",
+              "title": "Words with re"
+            },
+            {
+              "id": "words-with-sub",
+              "title": "Words with sub"
+            },
+            {
+              "id": "words-with-un-dis-in-im-and-non",
+              "title": "Words with un-, dis-, in-, im- and non"
+            }
+          ],
+          "sourceRows": [
+            167,
+            168,
+            169,
+            170,
+            171,
+            172,
+            173,
+            174
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-reference-skills",
+          "title": "Reference skills",
+          "subtopics": [
+            {
+              "id": "order-alphabetically-based-on-the-first-three-letters",
+              "title": "Order alphabetically based on the first three letters"
+            },
+            {
+              "id": "order-alphabetically-based-on-the-first-two-letters",
+              "title": "Order alphabetically based on the first two letters"
+            },
+            {
+              "id": "order-alphabetically-challenge",
+              "title": "Order alphabetically: challenge"
+            },
+            {
+              "id": "use-dictionary-definitions",
+              "title": "Use dictionary definitions"
+            },
+            {
+              "id": "use-dictionary-entries",
+              "title": "Use dictionary entries"
+            },
+            {
+              "id": "use-guide-words",
+              "title": "Use guide words"
+            },
+            {
+              "id": "use-thesaurus-entries",
+              "title": "Use thesaurus entries"
+            }
+          ],
+          "sourceRows": [
+            175,
+            176,
+            177,
+            178,
+            179,
+            180,
+            181
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-shades-of-meaning",
+          "title": "Shades of meaning",
+          "subtopics": [
+            {
+              "id": "describe-the-difference-between-related-words",
+              "title": "Describe the difference between related words"
+            },
+            {
+              "id": "positive-and-negative-connotation",
+              "title": "Positive and negative connotation"
+            }
+          ],
+          "sourceRows": [
+            182,
+            183
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-synonyms-and-antonyms",
+          "title": "Synonyms and antonyms",
+          "subtopics": [
+            {
+              "id": "choose-the-antonym",
+              "title": "Choose the antonym"
+            },
+            {
+              "id": "choose-the-synonym",
+              "title": "Choose the synonym"
+            },
+            {
+              "id": "find-antonyms-in-context",
+              "title": "Find antonyms in context"
+            },
+            {
+              "id": "find-synonyms-in-context",
+              "title": "Find synonyms in context"
+            }
+          ],
+          "sourceRows": [
+            184,
+            185,
+            186,
+            187
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g5-word-relationships",
+          "title": "Word Relationships",
+          "subtopics": [
+            {
+              "id": "antonyms",
+              "title": "Antonyms"
+            },
+            {
+              "id": "homographs",
+              "title": "Homographs"
+            },
+            {
+              "id": "homonyms",
+              "title": "Homonyms"
+            },
+            {
+              "id": "homophones",
+              "title": "Homophones"
+            },
+            {
+              "id": "synonyms",
+              "title": "Synonyms"
+            }
+          ],
+          "sourceRows": [
+            188,
+            189,
+            190,
+            191,
+            192
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 17,
+      "subtopicCount": 51
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g6-academic-and-thematic-vocabulary",
+          "title": "Academic and Thematic Vocabulary",
+          "subtopics": [
+            {
+              "id": "academic-vocabulary",
+              "title": "Academic vocabulary"
+            },
+            {
+              "id": "thematic-vocabulary",
+              "title": "Thematic vocabulary"
+            }
+          ],
+          "sourceRows": [
+            193,
+            194
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-analogies",
+          "title": "Analogies",
+          "subtopics": [
+            {
+              "id": "analogies",
+              "title": "Analogies"
+            },
+            {
+              "id": "analogies-challenge",
+              "title": "Analogies: challenge"
+            }
+          ],
+          "sourceRows": [
+            195,
+            196
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-context-clues",
+          "title": "Context clues",
+          "subtopics": [
+            {
+              "id": "determine-the-meaning-of-domain-specific-words-with-pictures",
+              "title": "Determine the meaning of domain-specific words with pictures"
+            },
+            {
+              "id": "determine-the-meaning-of-words-using-antonyms-in-context",
+              "title": "Determine the meaning of words using antonyms in context"
+            },
+            {
+              "id": "determine-the-meaning-of-words-using-synonyms-in-context",
+              "title": "Determine the meaning of words using synonyms in context"
+            },
+            {
+              "id": "find-words-using-context",
+              "title": "Find words using context"
+            },
+            {
+              "id": "use-context-to-identify-the-meaning-of-a-word",
+              "title": "Use context to identify the meaning of a word"
+            }
+          ],
+          "sourceRows": [
+            197,
+            198,
+            199,
+            200,
+            201
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-greek-and-latin-roots",
+          "title": "Greek and Latin roots",
+          "subtopics": [
+            {
+              "id": "determine-the-meanings-of-greek-and-latin-roots",
+              "title": "Determine the meanings of Greek and Latin roots"
+            },
+            {
+              "id": "determine-the-meanings-of-words-with-greek-and-latin-roots",
+              "title": "Determine the meanings of words with Greek and Latin roots"
+            },
+            {
+              "id": "use-greek-and-latin-roots-as-clues-to-the-meanings-of-words",
+              "title": "Use Greek and Latin roots as clues to the meanings of words"
+            },
+            {
+              "id": "use-the-meanings-of-words-as-clues-to-the-meanings-of-greek-and-latin-roots",
+              "title": "Use the meanings of words as clues to the meanings of Greek and Latin roots"
+            },
+            {
+              "id": "use-words-as-clues-to-the-meanings-of-greek-and-latin-roots",
+              "title": "Use words as clues to the meanings of Greek and Latin roots"
+            }
+          ],
+          "sourceRows": [
+            202,
+            203,
+            204,
+            205,
+            206
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-homophones",
+          "title": "Homophones",
+          "subtopics": [
+            {
+              "id": "use-the-correct-homophone",
+              "title": "Use the correct homophone"
+            }
+          ],
+          "sourceRows": [
+            207
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-multiple-meaning-words",
+          "title": "Multiple-meaning words",
+          "subtopics": [
+            {
+              "id": "which-definition-matches-the-sentence",
+              "title": "Which definition matches the sentence?"
+            },
+            {
+              "id": "which-sentence-matches-the-definition",
+              "title": "Which sentence matches the definition?"
+            }
+          ],
+          "sourceRows": [
+            208,
+            209
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-idioms-and-adages",
+          "title": "Idioms and adages",
+          "subtopics": [
+            {
+              "id": "determine-the-meaning-of-idioms-from-context-set",
+              "title": "Determine the meaning of idioms from context: set"
+            },
+            {
+              "id": "identify-the-meaning-of-idioms-and-adages-set",
+              "title": "Identify the meaning of idioms and adages: set"
+            }
+          ],
+          "sourceRows": [
+            210,
+            211
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-meaning-in-context",
+          "title": "Meaning in Context",
+          "subtopics": [
+            {
+              "id": "context-clues",
+              "title": "Context clues"
+            }
+          ],
+          "sourceRows": [
+            212
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-morphology",
+          "title": "Morphology",
+          "subtopics": [
+            {
+              "id": "prefixes",
+              "title": "Prefixes"
+            },
+            {
+              "id": "suffixes",
+              "title": "Suffixes"
+            }
+          ],
+          "sourceRows": [
+            213,
+            214
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-prefixes-and-suffixes",
+          "title": "Prefixes and suffixes",
+          "subtopics": [
+            {
+              "id": "words-with-able-and-ible",
+              "title": "Words with -able and -ible"
+            },
+            {
+              "id": "words-with-ful",
+              "title": "Words with -ful"
+            },
+            {
+              "id": "words-with-less",
+              "title": "Words with -less"
+            },
+            {
+              "id": "words-with-mis",
+              "title": "Words with mis"
+            },
+            {
+              "id": "words-with-pre",
+              "title": "Words with pre"
+            },
+            {
+              "id": "words-with-re",
+              "title": "Words with re"
+            },
+            {
+              "id": "words-with-sub",
+              "title": "Words with sub"
+            },
+            {
+              "id": "words-with-un-dis-in-im-and-non",
+              "title": "Words with un-, dis-, in-, im- and non"
+            }
+          ],
+          "sourceRows": [
+            215,
+            216,
+            217,
+            218,
+            219,
+            220,
+            221,
+            222
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-reference-skills",
+          "title": "Reference skills",
+          "subtopics": [
+            {
+              "id": "alphabetical-order",
+              "title": "Alphabetical order"
+            },
+            {
+              "id": "use-dictionary-definitions",
+              "title": "Use dictionary definitions"
+            },
+            {
+              "id": "use-dictionary-entries",
+              "title": "Use dictionary entries"
+            },
+            {
+              "id": "use-guide-words",
+              "title": "Use guide words"
+            },
+            {
+              "id": "use-thesaurus-entries",
+              "title": "Use thesaurus entries"
+            }
+          ],
+          "sourceRows": [
+            223,
+            224,
+            225,
+            226,
+            227
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-shades-of-meaning",
+          "title": "Shades of meaning",
+          "subtopics": [
+            {
+              "id": "describe-the-difference-between-related-words",
+              "title": "Describe the difference between related words"
+            },
+            {
+              "id": "positive-and-negative-connotation",
+              "title": "Positive and negative connotation"
+            }
+          ],
+          "sourceRows": [
+            228,
+            229
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-synonyms-and-antonyms",
+          "title": "Synonyms and antonyms",
+          "subtopics": [
+            {
+              "id": "choose-the-antonym",
+              "title": "Choose the antonym"
+            },
+            {
+              "id": "choose-the-synonym",
+              "title": "Choose the synonym"
+            },
+            {
+              "id": "find-antonyms-in-context",
+              "title": "Find antonyms in context"
+            },
+            {
+              "id": "find-synonyms-in-context",
+              "title": "Find synonyms in context"
+            }
+          ],
+          "sourceRows": [
+            230,
+            231,
+            232,
+            233
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g6-word-relationships",
+          "title": "Word Relationships",
+          "subtopics": [
+            {
+              "id": "analogies",
+              "title": "Analogies"
+            },
+            {
+              "id": "antonyms",
+              "title": "Antonyms"
+            },
+            {
+              "id": "homographs",
+              "title": "Homographs"
+            },
+            {
+              "id": "homonyms",
+              "title": "Homonyms"
+            },
+            {
+              "id": "homophones",
+              "title": "Homophones"
+            },
+            {
+              "id": "synonyms",
+              "title": "Synonyms"
+            }
+          ],
+          "sourceRows": [
+            234,
+            235,
+            236,
+            237,
+            238,
+            239
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 14,
+      "subtopicCount": 47
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g7-academic-and-thematic-vocabulary",
+          "title": "Academic and Thematic Vocabulary",
+          "subtopics": [
+            {
+              "id": "thematic-vocabulary",
+              "title": "Thematic vocabulary"
+            }
+          ],
+          "sourceRows": [
+            240
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-analogies",
+          "title": "Analogies",
+          "subtopics": [
+            {
+              "id": "analogies",
+              "title": "Analogies"
+            },
+            {
+              "id": "analogies-challenge",
+              "title": "Analogies: challenge"
+            }
+          ],
+          "sourceRows": [
+            241,
+            242
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-context-clues",
+          "title": "Context clues",
+          "subtopics": [
+            {
+              "id": "determine-the-meaning-of-words-using-antonyms-in-context",
+              "title": "Determine the meaning of words using antonyms in context"
+            },
+            {
+              "id": "determine-the-meaning-of-words-using-synonyms-in-context",
+              "title": "Determine the meaning of words using synonyms in context"
+            },
+            {
+              "id": "find-words-using-context",
+              "title": "Find words using context"
+            },
+            {
+              "id": "use-context-to-identify-the-meaning-of-a-word",
+              "title": "Use context to identify the meaning of a word"
+            }
+          ],
+          "sourceRows": [
+            243,
+            244,
+            245,
+            246
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-domain-specific-vocabulary",
+          "title": "Domain-specific vocabulary",
+          "subtopics": [
+            {
+              "id": "determine-the-meaning-of-domain-specific-words-with-pictures",
+              "title": "Determine the meaning of domain-specific words with pictures"
+            }
+          ],
+          "sourceRows": [
+            247
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-figurative-and-idiomatic-language",
+          "title": "Figurative and Idiomatic Language",
+          "subtopics": [
+            {
+              "id": "idioms-and-adages",
+              "title": "Idioms and adages"
+            }
+          ],
+          "sourceRows": [
+            248
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-greek-and-latin-roots",
+          "title": "Greek and Latin roots",
+          "subtopics": [
+            {
+              "id": "determine-the-meanings-of-greek-and-latin-roots",
+              "title": "Determine the meanings of Greek and Latin roots"
+            },
+            {
+              "id": "determine-the-meanings-of-words-with-greek-and-latin-roots",
+              "title": "Determine the meanings of words with Greek and Latin roots"
+            },
+            {
+              "id": "use-greek-and-latin-roots-as-clues-to-the-meanings-of-words",
+              "title": "Use Greek and Latin roots as clues to the meanings of words"
+            },
+            {
+              "id": "use-words-as-clues-to-the-meanings-of-greek-and-latin-roots",
+              "title": "Use words as clues to the meanings of Greek and Latin roots"
+            }
+          ],
+          "sourceRows": [
+            249,
+            250,
+            251,
+            252
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-homophones",
+          "title": "Homophones",
+          "subtopics": [
+            {
+              "id": "use-the-correct-homophone",
+              "title": "Use the correct homophone"
+            },
+            {
+              "id": "which-definition-matches-the-sentence",
+              "title": "Which definition matches the sentence?"
+            },
+            {
+              "id": "which-sentence-matches-the-definition",
+              "title": "Which sentence matches the definition?"
+            }
+          ],
+          "sourceRows": [
+            253,
+            254,
+            255
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-meaning-in-context",
+          "title": "Meaning in Context",
+          "subtopics": [
+            {
+              "id": "context-clues",
+              "title": "Context clues"
+            }
+          ],
+          "sourceRows": [
+            256
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-morphology",
+          "title": "Morphology",
+          "subtopics": [
+            {
+              "id": "greek-and-latin-roots",
+              "title": "Greek and Latin roots"
+            },
+            {
+              "id": "prefixes",
+              "title": "Prefixes"
+            },
+            {
+              "id": "suffixes",
+              "title": "Suffixes"
+            }
+          ],
+          "sourceRows": [
+            257,
+            258,
+            259
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-prefixes-and-suffixes",
+          "title": "Prefixes and suffixes",
+          "subtopics": [
+            {
+              "id": "words-with-able-and-ible",
+              "title": "Words with -able and -ible"
+            },
+            {
+              "id": "words-with-ful",
+              "title": "Words with -ful"
+            },
+            {
+              "id": "words-with-less",
+              "title": "Words with -less"
+            },
+            {
+              "id": "words-with-mis",
+              "title": "Words with mis"
+            },
+            {
+              "id": "words-with-pre",
+              "title": "Words with pre"
+            },
+            {
+              "id": "words-with-re",
+              "title": "Words with re"
+            },
+            {
+              "id": "words-with-sub",
+              "title": "Words with sub"
+            },
+            {
+              "id": "words-with-un-dis-in-im-and-non",
+              "title": "Words with un-, dis-, in-, im- and non"
+            }
+          ],
+          "sourceRows": [
+            260,
+            261,
+            262,
+            263,
+            264,
+            265,
+            266,
+            267
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-reference-skills",
+          "title": "Reference skills",
+          "subtopics": [
+            {
+              "id": "alphabetical-order",
+              "title": "Alphabetical order"
+            },
+            {
+              "id": "use-dictionary-definitions",
+              "title": "Use dictionary definitions"
+            },
+            {
+              "id": "use-dictionary-entries",
+              "title": "Use dictionary entries"
+            },
+            {
+              "id": "use-guide-words",
+              "title": "Use guide words"
+            },
+            {
+              "id": "use-thesaurus-entries",
+              "title": "Use thesaurus entries"
+            }
+          ],
+          "sourceRows": [
+            268,
+            269,
+            270,
+            271,
+            272
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-shades-of-meaning",
+          "title": "Shades of meaning",
+          "subtopics": [
+            {
+              "id": "describe-the-difference-between-related-words",
+              "title": "Describe the difference between related words"
+            },
+            {
+              "id": "positive-and-negative-connotation",
+              "title": "Positive and negative connotation"
+            }
+          ],
+          "sourceRows": [
+            273,
+            274
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-synonyms-and-antonyms",
+          "title": "Synonyms and antonyms",
+          "subtopics": [
+            {
+              "id": "choose-the-antonym",
+              "title": "Choose the antonym"
+            },
+            {
+              "id": "choose-the-synonym",
+              "title": "Choose the synonym"
+            }
+          ],
+          "sourceRows": [
+            275,
+            276
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g7-word-relationships",
+          "title": "Word Relationships",
+          "subtopics": [
+            {
+              "id": "antonyms",
+              "title": "Antonyms"
+            },
+            {
+              "id": "homographs",
+              "title": "Homographs"
+            },
+            {
+              "id": "homonyms",
+              "title": "Homonyms"
+            },
+            {
+              "id": "homophones",
+              "title": "Homophones"
+            },
+            {
+              "id": "synonyms",
+              "title": "Synonyms"
+            }
+          ],
+          "sourceRows": [
+            277,
+            278,
+            279,
+            280,
+            281
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 14,
+      "subtopicCount": 42
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g8-academic-and-thematic-vocabulary",
+          "title": "Academic and Thematic Vocabulary",
+          "subtopics": [
+            {
+              "id": "thematic-vocabulary",
+              "title": "Thematic vocabulary"
+            }
+          ],
+          "sourceRows": [
+            282
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-analogies",
+          "title": "Analogies",
+          "subtopics": [
+            {
+              "id": "analogies",
+              "title": "Analogies"
+            },
+            {
+              "id": "analogies-challenge",
+              "title": "Analogies: challenge"
+            }
+          ],
+          "sourceRows": [
+            283,
+            284
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-context-clues",
+          "title": "Context clues",
+          "subtopics": [
+            {
+              "id": "determine-the-meaning-of-words-using-antonyms-in-context",
+              "title": "Determine the meaning of words using antonyms in context"
+            },
+            {
+              "id": "determine-the-meaning-of-words-using-synonyms-in-context",
+              "title": "Determine the meaning of words using synonyms in context"
+            },
+            {
+              "id": "find-words-using-context",
+              "title": "Find words using context"
+            },
+            {
+              "id": "use-context-to-identify-the-meaning-of-a-word",
+              "title": "Use context to identify the meaning of a word"
+            }
+          ],
+          "sourceRows": [
+            285,
+            286,
+            287,
+            288
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-domain-specific-vocabulary",
+          "title": "Domain-specific vocabulary",
+          "subtopics": [
+            {
+              "id": "determine-the-meaning-of-domain-specific-words-with-pictures",
+              "title": "Determine the meaning of domain-specific words with pictures"
+            }
+          ],
+          "sourceRows": [
+            289
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-greek-and-latin-roots",
+          "title": "Greek and Latin roots",
+          "subtopics": [
+            {
+              "id": "determine-the-meanings-of-greek-and-latin-roots",
+              "title": "Determine the meanings of Greek and Latin roots"
+            },
+            {
+              "id": "determine-the-meanings-of-words-with-greek-and-latin-roots",
+              "title": "Determine the meanings of words with Greek and Latin roots"
+            },
+            {
+              "id": "use-greek-and-latin-roots-as-clues-to-the-meanings-of-words",
+              "title": "Use Greek and Latin roots as clues to the meanings of words"
+            },
+            {
+              "id": "use-words-as-clues-to-the-meanings-of-greek-and-latin-roots",
+              "title": "Use words as clues to the meanings of Greek and Latin roots"
+            }
+          ],
+          "sourceRows": [
+            290,
+            291,
+            292,
+            293
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-homophones",
+          "title": "Homophones",
+          "subtopics": [
+            {
+              "id": "use-the-correct-homophone",
+              "title": "Use the correct homophone"
+            },
+            {
+              "id": "which-definition-matches-the-sentence",
+              "title": "Which definition matches the sentence?"
+            },
+            {
+              "id": "which-sentence-matches-the-definition",
+              "title": "Which sentence matches the definition?"
+            }
+          ],
+          "sourceRows": [
+            294,
+            295,
+            296
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-meaning-and-nuance",
+          "title": "Meaning and Nuance",
+          "subtopics": [
+            {
+              "id": "denotation-and-connotation",
+              "title": "Denotation and connotation"
+            }
+          ],
+          "sourceRows": [
+            297
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-meaning-in-context",
+          "title": "Meaning in Context",
+          "subtopics": [
+            {
+              "id": "context-clues",
+              "title": "Context clues"
+            }
+          ],
+          "sourceRows": [
+            298
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-morphology",
+          "title": "Morphology",
+          "subtopics": [
+            {
+              "id": "prefixes",
+              "title": "Prefixes"
+            }
+          ],
+          "sourceRows": [
+            299
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-prefixes-and-suffixes",
+          "title": "Prefixes and suffixes",
+          "subtopics": [
+            {
+              "id": "words-with-able-and-ible",
+              "title": "Words with -able and -ible"
+            },
+            {
+              "id": "words-with-ful",
+              "title": "Words with -ful"
+            },
+            {
+              "id": "words-with-less",
+              "title": "Words with -less"
+            },
+            {
+              "id": "words-with-mis",
+              "title": "Words with mis"
+            },
+            {
+              "id": "words-with-pre",
+              "title": "Words with pre"
+            },
+            {
+              "id": "words-with-re",
+              "title": "Words with re"
+            },
+            {
+              "id": "words-with-sub",
+              "title": "Words with sub"
+            },
+            {
+              "id": "words-with-un-dis-in-im-and-non",
+              "title": "Words with un-, dis-, in-, im- and non"
+            }
+          ],
+          "sourceRows": [
+            300,
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-reference-skills",
+          "title": "Reference skills",
+          "subtopics": [
+            {
+              "id": "alphabetical-order",
+              "title": "Alphabetical order"
+            },
+            {
+              "id": "use-dictionary-definitions",
+              "title": "Use dictionary definitions"
+            },
+            {
+              "id": "use-dictionary-entries",
+              "title": "Use dictionary entries"
+            },
+            {
+              "id": "use-guide-words",
+              "title": "Use guide words"
+            },
+            {
+              "id": "use-thesaurus-entries",
+              "title": "Use thesaurus entries"
+            }
+          ],
+          "sourceRows": [
+            308,
+            309,
+            310,
+            311,
+            312
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-synonyms-and-antonyms",
+          "title": "Synonyms and antonyms",
+          "subtopics": [
+            {
+              "id": "choose-the-antonym",
+              "title": "Choose the antonym"
+            },
+            {
+              "id": "choose-the-synonym",
+              "title": "Choose the synonym"
+            }
+          ],
+          "sourceRows": [
+            313,
+            314
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-word-choice-and-usage",
+          "title": "Word choice and usage",
+          "subtopics": [
+            {
+              "id": "describe-the-difference-between-related-words",
+              "title": "Describe the difference between related words"
+            },
+            {
+              "id": "positive-and-negative-connotation",
+              "title": "Positive and negative connotation"
+            }
+          ],
+          "sourceRows": [
+            315,
+            316
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g8-word-relationships",
+          "title": "Word Relationships",
+          "subtopics": [
+            {
+              "id": "antonyms",
+              "title": "Antonyms"
+            },
+            {
+              "id": "homographs",
+              "title": "Homographs"
+            },
+            {
+              "id": "homophones",
+              "title": "Homophones"
+            },
+            {
+              "id": "synonyms",
+              "title": "Synonyms"
+            }
+          ],
+          "sourceRows": [
+            317,
+            318,
+            319,
+            320
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 14,
+      "subtopicCount": 39
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-academic-and-thematic-vocabulary",
+          "title": "Academic and Thematic Vocabulary",
+          "subtopics": [
+            {
+              "id": "thematic-vocabulary",
+              "title": "Thematic vocabulary"
+            }
+          ],
+          "sourceRows": [
+            321
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-analogies",
+          "title": "Analogies",
+          "subtopics": [
+            {
+              "id": "analogies",
+              "title": "Analogies"
+            },
+            {
+              "id": "analogies-challenge",
+              "title": "Analogies: challenge"
+            }
+          ],
+          "sourceRows": [
+            322,
+            323
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-context-clues",
+          "title": "Context clues",
+          "subtopics": [
+            {
+              "id": "determine-the-meaning-of-words-using-antonyms-in-context",
+              "title": "Determine the meaning of words using antonyms in context"
+            },
+            {
+              "id": "determine-the-meaning-of-words-using-synonyms-in-context",
+              "title": "Determine the meaning of words using synonyms in context"
+            },
+            {
+              "id": "use-context-to-identify-the-meaning-of-a-word",
+              "title": "Use context to identify the meaning of a word"
+            }
+          ],
+          "sourceRows": [
+            324,
+            325,
+            326
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-foreign-words-and-expressions",
+          "title": "Foreign words and expressions",
+          "subtopics": [
+            {
+              "id": "use-context-as-a-clue-to-the-meanings-of-foreign-expressions",
+              "title": "Use context as a clue to the meanings of foreign expressions"
+            },
+            {
+              "id": "use-etymologies-to-determine-the-meanings-of-words",
+              "title": "Use etymologies to determine the meanings of words"
+            },
+            {
+              "id": "use-the-correct-foreign-expression",
+              "title": "Use the correct foreign expression"
+            }
+          ],
+          "sourceRows": [
+            327,
+            328,
+            329
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-greek-and-latin-roots",
+          "title": "Greek and Latin roots",
+          "subtopics": [
+            {
+              "id": "determine-the-meanings-of-greek-and-latin-roots",
+              "title": "Determine the meanings of Greek and Latin roots"
+            },
+            {
+              "id": "determine-the-meanings-of-words-with-greek-and-latin-roots",
+              "title": "Determine the meanings of words with Greek and Latin roots"
+            },
+            {
+              "id": "sort-words-by-shared-greek-or-latin-roots",
+              "title": "Sort words by shared Greek or Latin roots"
+            },
+            {
+              "id": "use-greek-and-latin-roots-as-clues-to-the-meanings-of-words",
+              "title": "Use Greek and Latin roots as clues to the meanings of words"
+            },
+            {
+              "id": "use-words-as-clues-to-the-meanings-of-greek-and-latin-roots",
+              "title": "Use words as clues to the meanings of Greek and Latin roots"
+            }
+          ],
+          "sourceRows": [
+            330,
+            331,
+            332,
+            333,
+            334
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-homophones",
+          "title": "Homophones",
+          "subtopics": [
+            {
+              "id": "identify-and-correct-errors-with-homophones",
+              "title": "Identify and correct errors with homophones"
+            },
+            {
+              "id": "use-the-correct-homophone",
+              "title": "Use the correct homophone"
+            }
+          ],
+          "sourceRows": [
+            335,
+            336
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-meaning-and-nuance",
+          "title": "Meaning and Nuance",
+          "subtopics": [
+            {
+              "id": "denotation-and-connotation",
+              "title": "Denotation and connotation"
+            }
+          ],
+          "sourceRows": [
+            337
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-meaning-in-context",
+          "title": "Meaning in Context",
+          "subtopics": [
+            {
+              "id": "context-clues",
+              "title": "Context clues"
+            }
+          ],
+          "sourceRows": [
+            338
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-prefixes-and-suffixes",
+          "title": "Prefixes and suffixes",
+          "subtopics": [
+            {
+              "id": "word-pattern-analogies",
+              "title": "Word pattern analogies"
+            },
+            {
+              "id": "word-pattern-sentences",
+              "title": "Word pattern sentences"
+            },
+            {
+              "id": "words-with-able-and-ible",
+              "title": "Words with -able and -ible"
+            },
+            {
+              "id": "words-with-ful",
+              "title": "Words with -ful"
+            },
+            {
+              "id": "words-with-less",
+              "title": "Words with -less"
+            },
+            {
+              "id": "words-with-mis",
+              "title": "Words with mis"
+            },
+            {
+              "id": "words-with-pre",
+              "title": "Words with pre"
+            },
+            {
+              "id": "words-with-re",
+              "title": "Words with re"
+            },
+            {
+              "id": "words-with-sub",
+              "title": "Words with sub"
+            },
+            {
+              "id": "words-with-un-dis-in-im-and-non",
+              "title": "Words with un-, dis-, in-, im- and non"
+            }
+          ],
+          "sourceRows": [
+            339,
+            340,
+            341,
+            342,
+            343,
+            344,
+            345,
+            346,
+            347,
+            348
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-reference-skills",
+          "title": "Reference skills",
+          "subtopics": [
+            {
+              "id": "use-dictionary-definitions",
+              "title": "Use dictionary definitions"
+            },
+            {
+              "id": "use-dictionary-entries",
+              "title": "Use dictionary entries"
+            },
+            {
+              "id": "use-dictionary-entries-to-determine-correct-usage",
+              "title": "Use dictionary entries to determine correct usage"
+            },
+            {
+              "id": "use-thesaurus-entries",
+              "title": "Use thesaurus entries"
+            }
+          ],
+          "sourceRows": [
+            349,
+            350,
+            351,
+            352
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-word-relationships",
+          "title": "Word Relationships",
+          "subtopics": [
+            {
+              "id": "antonyms",
+              "title": "Antonyms"
+            },
+            {
+              "id": "homographs",
+              "title": "Homographs"
+            },
+            {
+              "id": "homonyms",
+              "title": "Homonyms"
+            },
+            {
+              "id": "homophones",
+              "title": "Homophones"
+            },
+            {
+              "id": "synonyms",
+              "title": "Synonyms"
+            }
+          ],
+          "sourceRows": [
+            353,
+            354,
+            355,
+            356,
+            357
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g9-word-usage-and-nuance",
+          "title": "Word usage and nuance",
+          "subtopics": [
+            {
+              "id": "choose-the-word-whose-connotation-and-denotation-best-match-the-sentence",
+              "title": "Choose the word whose connotation and denotation best match the sentence"
+            },
+            {
+              "id": "explore-words-with-new-or-contested-usages",
+              "title": "Explore words with new or contested usages"
+            },
+            {
+              "id": "replace-words-using-a-thesaurus",
+              "title": "Replace words using a thesaurus"
+            },
+            {
+              "id": "use-words-accurately-and-precisely",
+              "title": "Use words accurately and precisely"
+            }
+          ],
+          "sourceRows": [
+            358,
+            359,
+            360,
+            361
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 12,
+      "subtopicCount": 41
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-academic-and-thematic-vocabulary",
+          "title": "Academic and Thematic Vocabulary",
+          "subtopics": [
+            {
+              "id": "thematic-vocabulary",
+              "title": "Thematic vocabulary"
+            }
+          ],
+          "sourceRows": [
+            362
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-analogies",
+          "title": "Analogies",
+          "subtopics": [
+            {
+              "id": "analogies",
+              "title": "Analogies"
+            },
+            {
+              "id": "analogies-challenge",
+              "title": "Analogies: challenge"
+            }
+          ],
+          "sourceRows": [
+            363,
+            364
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-context-clues",
+          "title": "Context clues",
+          "subtopics": [
+            {
+              "id": "determine-the-meaning-of-words-using-antonyms-in-context",
+              "title": "Determine the meaning of words using antonyms in context"
+            },
+            {
+              "id": "determine-the-meaning-of-words-using-synonyms-in-context",
+              "title": "Determine the meaning of words using synonyms in context"
+            },
+            {
+              "id": "use-context-to-identify-the-meaning-of-a-word",
+              "title": "Use context to identify the meaning of a word"
+            }
+          ],
+          "sourceRows": [
+            365,
+            366,
+            367
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-foreign-words-and-expressions",
+          "title": "Foreign words and expressions",
+          "subtopics": [
+            {
+              "id": "use-context-as-a-clue-to-the-meanings-of-foreign-expressions",
+              "title": "Use context as a clue to the meanings of foreign expressions"
+            },
+            {
+              "id": "use-etymologies-to-determine-the-meanings-of-words",
+              "title": "Use etymologies to determine the meanings of words"
+            },
+            {
+              "id": "use-the-correct-foreign-expression",
+              "title": "Use the correct foreign expression"
+            }
+          ],
+          "sourceRows": [
+            368,
+            369,
+            370
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-greek-and-latin-roots",
+          "title": "Greek and Latin roots",
+          "subtopics": [
+            {
+              "id": "determine-the-meanings-of-greek-and-latin-roots",
+              "title": "Determine the meanings of Greek and Latin roots"
+            },
+            {
+              "id": "determine-the-meanings-of-words-with-greek-and-latin-roots",
+              "title": "Determine the meanings of words with Greek and Latin roots"
+            },
+            {
+              "id": "sort-words-by-shared-greek-or-latin-roots",
+              "title": "Sort words by shared Greek or Latin roots"
+            },
+            {
+              "id": "use-greek-and-latin-roots-as-clues-to-the-meanings-of-words",
+              "title": "Use Greek and Latin roots as clues to the meanings of words"
+            },
+            {
+              "id": "use-words-as-clues-to-the-meanings-of-greek-and-latin-roots",
+              "title": "Use words as clues to the meanings of Greek and Latin roots"
+            }
+          ],
+          "sourceRows": [
+            371,
+            372,
+            373,
+            374,
+            375
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-homophones",
+          "title": "Homophones",
+          "subtopics": [
+            {
+              "id": "identify-and-correct-errors-with-homophones",
+              "title": "Identify and correct errors with homophones"
+            },
+            {
+              "id": "use-the-correct-homophone",
+              "title": "Use the correct homophone"
+            }
+          ],
+          "sourceRows": [
+            376,
+            377
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-meaning-in-context",
+          "title": "Meaning in Context",
+          "subtopics": [
+            {
+              "id": "context-clues",
+              "title": "Context clues"
+            }
+          ],
+          "sourceRows": [
+            378
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-morphology",
+          "title": "Morphology",
+          "subtopics": [
+            {
+              "id": "prefixes",
+              "title": "Prefixes"
+            }
+          ],
+          "sourceRows": [
+            379
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-prefixes-and-suffixes",
+          "title": "Prefixes and suffixes",
+          "subtopics": [
+            {
+              "id": "word-pattern-analogies",
+              "title": "Word pattern analogies"
+            },
+            {
+              "id": "word-pattern-sentences",
+              "title": "Word pattern sentences"
+            },
+            {
+              "id": "words-with-able-and-ible",
+              "title": "Words with -able and -ible"
+            },
+            {
+              "id": "words-with-ful",
+              "title": "Words with -ful"
+            },
+            {
+              "id": "words-with-less",
+              "title": "Words with -less"
+            },
+            {
+              "id": "words-with-mis",
+              "title": "Words with mis"
+            },
+            {
+              "id": "words-with-pre",
+              "title": "Words with pre"
+            },
+            {
+              "id": "words-with-re",
+              "title": "Words with re"
+            },
+            {
+              "id": "words-with-sub",
+              "title": "Words with sub"
+            },
+            {
+              "id": "words-with-un-dis-in-im-and-non",
+              "title": "Words with un-, dis-, in-, im- and non"
+            }
+          ],
+          "sourceRows": [
+            380,
+            381,
+            382,
+            383,
+            384,
+            385,
+            386,
+            387,
+            388,
+            389
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-reference-skills",
+          "title": "Reference skills",
+          "subtopics": [
+            {
+              "id": "use-dictionary-definitions",
+              "title": "Use dictionary definitions"
+            },
+            {
+              "id": "use-dictionary-entries",
+              "title": "Use dictionary entries"
+            },
+            {
+              "id": "use-dictionary-entries-to-determine-correct-usage",
+              "title": "Use dictionary entries to determine correct usage"
+            },
+            {
+              "id": "use-thesaurus-entries",
+              "title": "Use thesaurus entries"
+            }
+          ],
+          "sourceRows": [
+            390,
+            391,
+            392,
+            393
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-word-relationships",
+          "title": "Word Relationships",
+          "subtopics": [
+            {
+              "id": "homophones",
+              "title": "Homophones"
+            }
+          ],
+          "sourceRows": [
+            394
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-word-usage-and-nuance",
+          "title": "Word usage and nuance",
+          "subtopics": [
+            {
+              "id": "choose-the-word-whose-connotation-and-denotation-best-match-the-sentence",
+              "title": "Choose the word whose connotation and denotation best match the sentence"
+            },
+            {
+              "id": "explore-words-with-new-or-contested-usages",
+              "title": "Explore words with new or contested usages"
+            },
+            {
+              "id": "replace-words-using-a-thesaurus",
+              "title": "Replace words using a thesaurus"
+            },
+            {
+              "id": "use-words-accurately-and-precisely",
+              "title": "Use words accurately and precisely"
+            }
+          ],
+          "sourceRows": [
+            395,
+            396,
+            397,
+            398
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 12,
+      "subtopicCount": 37
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-academic-and-thematic-vocabulary",
+          "title": "Academic and Thematic Vocabulary",
+          "subtopics": [
+            {
+              "id": "thematic-vocabulary",
+              "title": "Thematic vocabulary"
+            }
+          ],
+          "sourceRows": [
+            399
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-meaning-in-context",
+          "title": "Meaning in Context",
+          "subtopics": [
+            {
+              "id": "context-clues",
+              "title": "Context clues"
+            }
+          ],
+          "sourceRows": [
+            400
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-word-relationships",
+          "title": "Word Relationships",
+          "subtopics": [
+            {
+              "id": "synonyms",
+              "title": "Synonyms"
+            }
+          ],
+          "sourceRows": [
+            401
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 3,
+      "subtopicCount": 3
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-academic-and-thematic-vocabulary",
+          "title": "Academic and Thematic Vocabulary",
+          "subtopics": [
+            {
+              "id": "academic-vocabulary",
+              "title": "Academic vocabulary"
+            },
+            {
+              "id": "thematic-vocabulary",
+              "title": "Thematic vocabulary"
+            }
+          ],
+          "sourceRows": [
+            402,
+            403
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-meaning-in-context",
+          "title": "Meaning in Context",
+          "subtopics": [
+            {
+              "id": "context-clues",
+              "title": "Context clues"
+            }
+          ],
+          "sourceRows": [
+            404
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 3
+    }
+  ]
+}

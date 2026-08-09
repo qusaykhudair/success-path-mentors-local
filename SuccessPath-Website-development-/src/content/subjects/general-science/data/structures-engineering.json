@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "subject": "General Science",
+    "subjectSlug": "general-science",
+    "strand": "Structures and Engineering",
+    "strandSlug": "structures-engineering",
+    "gradeRange": {
+      "min": 7,
+      "max": 7
+    },
+    "gradeLevels": [
+      7
+    ],
+    "sourceRecordCount": 2,
+    "gradedSourceRecordCount": 2,
+    "nonGradedSourceRecordCount": 0,
+    "mainTopicCount": 1,
+    "subtopicCount": 2,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in JSON but are hidden from public pages."
+    ]
+  },
+  "strand": {
+    "slug": "structures-engineering",
+    "title": {
+      "en": "Structures and Engineering",
+      "ar": "الهياكل والهندسة"
+    },
+    "description": {
+      "en": "The types, classification, design, function, and applications of structures and buildings.",
+      "ar": "أنواع الهياكل وتصنيفها وتصميمها ووظائفها وتطبيقاتها في المباني والهندسة."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g7-structures",
+          "title": "Structures",
+          "subtopics": [
+            {
+              "id": "structures-and-buildings",
+              "title": "Structures and buildings"
+            },
+            {
+              "id": "types-classification-and-function-of-structures",
+              "title": "Types, classification, and function of structures"
+            }
+          ],
+          "sourceRows": [
+            24,
+            25
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 2
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    }
+  ]
+}

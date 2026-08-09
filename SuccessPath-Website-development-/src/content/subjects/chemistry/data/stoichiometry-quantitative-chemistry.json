@@ -1,0 +1,314 @@
+{
+  "metadata": {
+    "subject": "Chemistry",
+    "subjectSlug": "chemistry",
+    "strand": "Stoichiometry and Quantitative Chemistry",
+    "strandSlug": "stoichiometry-quantitative-chemistry",
+    "gradeRange": {
+      "min": 9,
+      "max": 12
+    },
+    "gradeLevels": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 15,
+    "gradedSourceRecordCount": 12,
+    "nonGradedSourceRecordCount": 3,
+    "mainTopicCount": 12,
+    "subtopicCount": 12,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "stoichiometry-quantitative-chemistry",
+    "title": {
+      "en": "Stoichiometry and Quantitative Chemistry",
+      "ar": "الحسابات الستوكيومترية والكيمياء الكمية"
+    },
+    "description": {
+      "en": "The mole concept, molar mass, composition calculations, reaction ratios, limiting reactants, and percent yield.",
+      "ar": "مفهوم المول والكتلة المولية وحسابات التركيب ونسب التفاعل والمتفاعلات المحددة والمردود المئوي."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g9-reaction-stoichiometry",
+          "title": "Reaction Stoichiometry",
+          "subtopics": [
+            {
+              "id": "stoichiometric-calculations-and-mole-ratios",
+              "title": "Stoichiometric calculations and mole ratios"
+            }
+          ],
+          "sourceRows": [
+            20
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-limiting-reactants-and-yield",
+          "title": "Limiting Reactants and Yield",
+          "subtopics": [
+            {
+              "id": "limiting-excess-reactants-and-percent-yield",
+              "title": "Limiting/excess reactants and percent yield"
+            }
+          ],
+          "sourceRows": [
+            45
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-mole-concept",
+          "title": "Mole Concept",
+          "subtopics": [
+            {
+              "id": "moles-molar-mass-and-particle-relationships",
+              "title": "Moles, molar mass, and particle relationships"
+            }
+          ],
+          "sourceRows": [
+            46
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g10-reaction-stoichiometry",
+          "title": "Reaction Stoichiometry",
+          "subtopics": [
+            {
+              "id": "stoichiometric-calculations-and-mole-ratios",
+              "title": "Stoichiometric calculations and mole ratios"
+            }
+          ],
+          "sourceRows": [
+            47
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 3,
+      "subtopicCount": 3
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-composition-calculations",
+          "title": "Composition Calculations",
+          "subtopics": [
+            {
+              "id": "percent-composition-and-empirical-molecular-formulas",
+              "title": "Percent composition and empirical/molecular formulas"
+            }
+          ],
+          "sourceRows": [
+            85
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-limiting-reactants-and-yield",
+          "title": "Limiting Reactants and Yield",
+          "subtopics": [
+            {
+              "id": "limiting-excess-reactants-and-percent-yield",
+              "title": "Limiting/excess reactants and percent yield"
+            }
+          ],
+          "sourceRows": [
+            86
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-mole-concept",
+          "title": "Mole Concept",
+          "subtopics": [
+            {
+              "id": "moles-molar-mass-and-particle-relationships",
+              "title": "Moles, molar mass, and particle relationships"
+            }
+          ],
+          "sourceRows": [
+            87
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-reaction-stoichiometry",
+          "title": "Reaction Stoichiometry",
+          "subtopics": [
+            {
+              "id": "stoichiometric-calculations-and-mole-ratios",
+              "title": "Stoichiometric calculations and mole ratios"
+            }
+          ],
+          "sourceRows": [
+            88
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 4,
+      "subtopicCount": 4
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-composition-calculations",
+          "title": "Composition Calculations",
+          "subtopics": [
+            {
+              "id": "percent-composition-and-empirical-molecular-formulas",
+              "title": "Percent composition and empirical/molecular formulas"
+            }
+          ],
+          "sourceRows": [
+            132
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-limiting-reactants-and-yield",
+          "title": "Limiting Reactants and Yield",
+          "subtopics": [
+            {
+              "id": "limiting-excess-reactants-and-percent-yield",
+              "title": "Limiting/excess reactants and percent yield"
+            }
+          ],
+          "sourceRows": [
+            133
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-mole-concept",
+          "title": "Mole Concept",
+          "subtopics": [
+            {
+              "id": "moles-molar-mass-and-particle-relationships",
+              "title": "Moles, molar mass, and particle relationships"
+            }
+          ],
+          "sourceRows": [
+            134
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-reaction-stoichiometry",
+          "title": "Reaction Stoichiometry",
+          "subtopics": [
+            {
+              "id": "stoichiometric-calculations-and-mole-ratios",
+              "title": "Stoichiometric calculations and mole ratios"
+            }
+          ],
+          "sourceRows": [
+            135
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 4,
+      "subtopicCount": 4
+    }
+  ]
+}

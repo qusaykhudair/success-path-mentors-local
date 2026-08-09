@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "strand": "Assessment and Test Preparation",
+    "recordCount": 4,
+    "status": "excluded-from-grade-pages",
+    "reason": "No explicit Grade 1–12 value was supplied."
+  },
+  "records": [
+    {
+      "sourceRow": 13,
+      "gradeLevel": "Age 17 / Grade not stated",
+      "strand": "Assessment and Test Preparation",
+      "mainTopic": "ELA / Provincial Exams",
+      "sourceMainTopic": "ELA / Provincial Exams",
+      "subtopic": "ELA exam and practice-test preparation"
+    },
+    {
+      "sourceRow": 14,
+      "gradeLevel": "Age 17 / Grade not stated",
+      "strand": "Assessment and Test Preparation",
+      "mainTopic": "PET",
+      "sourceMainTopic": "PET",
+      "subtopic": "Cambridge PET preparation"
+    },
+    {
+      "sourceRow": 15,
+      "gradeLevel": "Age 17 / Grade not stated",
+      "strand": "Assessment and Test Preparation",
+      "mainTopic": "PTE",
+      "sourceMainTopic": "PTE",
+      "subtopic": "Pearson Test of English preparation"
+    },
+    {
+      "sourceRow": 16,
+      "gradeLevel": "Adult / IELTS",
+      "strand": "Assessment and Test Preparation",
+      "mainTopic": "IELTS",
+      "sourceMainTopic": "IELTS",
+      "subtopic": "IELTS reading, writing, speaking, and listening"
+    }
+  ]
+}

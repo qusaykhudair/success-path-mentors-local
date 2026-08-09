@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "strand": "Writing",
+    "displayCorrectionCount": 1,
+    "exactDuplicateRowsRemoved": 0,
+    "emptyPublicGrades": [
+      "G1"
+    ]
+  },
+  "displayCorrections": [
+    {
+      "sourceRow": 58,
+      "grade": "G4",
+      "mainTopic": "Organizing writing",
+      "sourceSubtopic": "Remove the sentence that does not belon",
+      "displaySubtopic": "Remove the sentence that does not belong",
+      "reason": "Clear truncated word in the supplied skill title; only the display text was corrected."
+    }
+  ],
+  "removedExactDuplicates": [],
+  "preservedStructuralOverlaps": [
+    {
+      "examples": [
+        "Argument and Evidence / Developing and supporting arguments",
+        "Writing Process / Editing and revising",
+        "Essay Writing / Modes of Writing"
+      ],
+      "decision": "Preserved because the source presents them as separate instructional Main Topics with different skill groupings."
+    }
+  ]
+}

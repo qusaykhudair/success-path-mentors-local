@@ -1,0 +1,1373 @@
+{
+  "metadata": {
+    "programme": "Programme français",
+    "matiere": "Français",
+    "matiereSlug": "francais",
+    "domaine": "D. Rédaction : expression d’idées et création de textes",
+    "domaineSlug": "redaction-creation-textes",
+    "niveaux": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 70,
+    "publicRecordCount": 67,
+    "nonStandardRecordCount": 3,
+    "mainTopicPlacementCount": 60,
+    "subtopicPlacementCount": 67,
+    "observedRecordCount": 11,
+    "referenceRecordCount": 56,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Les sujets principaux et les sous-sujets sont comptés par niveau. Les répétitions entre niveaux sont conservées comme progression pédagogique.",
+    "integrityRules": [
+      "Les répétitions entre niveaux sont conservées.",
+      "Seuls les doublons exacts Niveau + Domaine + Sujet principal + Sous-sujet peuvent être supprimés.",
+      "Les niveaux CECRL, adultes, secondaires parallèles et non précisés sont conservés dans les fichiers de révision.",
+      "Les niveaux sans contenu sont conservés dans le JSON mais masqués sur le site."
+    ]
+  },
+  "domaine": {
+    "slug": "redaction-creation-textes",
+    "titre": "Rédaction et création de textes",
+    "titreSource": "D. Rédaction : expression d’idées et création de textes",
+    "description": "Planification, organisation, rédaction, révision, correction et création de différents genres de textes.",
+    "iconKey": "redaction"
+  },
+  "niveaux": [
+    {
+      "niveau": 1,
+      "label": "1re année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-1-communication-fonctionnelle",
+          "titre": "Communication fonctionnelle",
+          "sousSujets": [
+            {
+              "id": "consigne-lettre-courriel-resume-ou-compte-rendu",
+              "titre": "Consigne, lettre, courriel, résumé ou compte rendu",
+              "competence": "Écrire une liste, une invitation ou une courte consigne",
+              "activite": "Courriel, lettre, recette, règlement, résumé ou compte rendu",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 22
+            }
+          ],
+          "sourceRows": [
+            22
+          ]
+        },
+        {
+          "id": "niveau-1-processus-d-ecriture",
+          "titre": "Processus d’écriture",
+          "sousSujets": [
+            {
+              "id": "planifier-rediger-reviser-corriger-et-publier",
+              "titre": "Planifier, rédiger, réviser, corriger et publier",
+              "competence": "Écrire des phrases liées à une idée et les relire",
+              "activite": "Plan graphique, premier jet, conférence d’écriture et grille de révision",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 23
+            }
+          ],
+          "sourceRows": [
+            23
+          ]
+        },
+        {
+          "id": "niveau-1-ecriture-d-opinion-et-argumentation",
+          "titre": "Écriture d’opinion et argumentation",
+          "sousSujets": [
+            {
+              "id": "opinion-raisons-arguments-et-preuves",
+              "titre": "Opinion, raisons, arguments et preuves",
+              "competence": "Exprimer une préférence et donner une raison",
+              "activite": "Débat préparatoire, paragraphe d’opinion et lettre persuasive",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 24
+            }
+          ],
+          "sourceRows": [
+            24
+          ]
+        },
+        {
+          "id": "niveau-1-ecriture-informative-descriptive",
+          "titre": "Écriture informative/descriptive",
+          "sousSujets": [
+            {
+              "id": "organisation-des-idees-et-vocabulaire-precis",
+              "titre": "Organisation des idées et vocabulaire précis",
+              "competence": "Décrire une personne, un objet ou un lieu",
+              "activite": "Fiche descriptive, paragraphe documentaire et création d’une infographie",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 25
+            }
+          ],
+          "sourceRows": [
+            25
+          ]
+        },
+        {
+          "id": "niveau-1-ecriture-narrative",
+          "titre": "Écriture narrative",
+          "sousSujets": [
+            {
+              "id": "personnages-evenements-temps-et-coherence",
+              "titre": "Personnages, événements, temps et cohérence",
+              "competence": "Écrire un court récit avec début, milieu et fin",
+              "activite": "Images séquentielles, schéma narratif et atelier de réécriture",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 26
+            }
+          ],
+          "sourceRows": [
+            26
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 5
+    },
+    {
+      "niveau": 2,
+      "label": "2e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-2-communication-fonctionnelle",
+          "titre": "Communication fonctionnelle",
+          "sousSujets": [
+            {
+              "id": "consigne-lettre-courriel-resume-ou-compte-rendu",
+              "titre": "Consigne, lettre, courriel, résumé ou compte rendu",
+              "competence": "Écrire une liste, une invitation ou une courte consigne",
+              "activite": "Courriel, lettre, recette, règlement, résumé ou compte rendu",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 56
+            }
+          ],
+          "sourceRows": [
+            56
+          ]
+        },
+        {
+          "id": "niveau-2-processus-d-ecriture",
+          "titre": "Processus d’écriture",
+          "sousSujets": [
+            {
+              "id": "planification-redaction-revision-et-publication",
+              "titre": "Planification, rédaction, révision et publication",
+              "competence": "Développer des idées, organiser le contenu, réviser et corriger",
+              "activite": "Encadrement, remplacement, déplacement et construction de phrases; Exercices d’application gradués; Interaction orale ou présentation; Jeu de rôle, exposé bref, entretien et rétroaction; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Phrases à compléter et description spatiale; Portrait enrichi, expansions du nom et correction d’accords; Portrait, description d’un lieu et enrichissement par adjectifs; Production écrite guidée; Support numérique ou visuel; Table de conjugaison, phrases contextualisées et jeu de rapidité; Tableau comparatif, ligne du temps et transformation de phrases; Écriture guidée à partir d’un plan, grille de révision et publication",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 57
+            },
+            {
+              "id": "planifier-rediger-reviser-corriger-et-publier",
+              "titre": "Planifier, rédiger, réviser, corriger et publier",
+              "competence": "Écrire des phrases liées à une idée et les relire",
+              "activite": "Plan graphique, premier jet, conférence d’écriture et grille de révision",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 58
+            }
+          ],
+          "sourceRows": [
+            57,
+            58
+          ]
+        },
+        {
+          "id": "niveau-2-ecriture-d-opinion-et-argumentation",
+          "titre": "Écriture d’opinion et argumentation",
+          "sousSujets": [
+            {
+              "id": "opinion-raisons-arguments-et-preuves",
+              "titre": "Opinion, raisons, arguments et preuves",
+              "competence": "Exprimer une préférence et donner une raison",
+              "activite": "Débat préparatoire, paragraphe d’opinion et lettre persuasive",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 59
+            }
+          ],
+          "sourceRows": [
+            59
+          ]
+        },
+        {
+          "id": "niveau-2-ecriture-informative-descriptive",
+          "titre": "Écriture informative/descriptive",
+          "sousSujets": [
+            {
+              "id": "organisation-des-idees-et-vocabulaire-precis",
+              "titre": "Organisation des idées et vocabulaire précis",
+              "competence": "Décrire une personne, un objet ou un lieu",
+              "activite": "Fiche descriptive, paragraphe documentaire et création d’une infographie",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 60
+            }
+          ],
+          "sourceRows": [
+            60
+          ]
+        },
+        {
+          "id": "niveau-2-ecriture-narrative",
+          "titre": "Écriture narrative",
+          "sousSujets": [
+            {
+              "id": "personnages-evenements-temps-et-coherence",
+              "titre": "Personnages, événements, temps et cohérence",
+              "competence": "Écrire un court récit avec début, milieu et fin",
+              "activite": "Images séquentielles, schéma narratif et atelier de réécriture",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 61
+            }
+          ],
+          "sourceRows": [
+            61
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 6
+    },
+    {
+      "niveau": 3,
+      "label": "3e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-3-communication-fonctionnelle",
+          "titre": "Communication fonctionnelle",
+          "sousSujets": [
+            {
+              "id": "consigne-lettre-courriel-resume-ou-compte-rendu",
+              "titre": "Consigne, lettre, courriel, résumé ou compte rendu",
+              "competence": "Adapter format, registre et contenu à une situation authentique",
+              "activite": "Courriel, lettre, recette, règlement, résumé ou compte rendu",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 82
+            }
+          ],
+          "sourceRows": [
+            82
+          ]
+        },
+        {
+          "id": "niveau-3-processus-d-ecriture",
+          "titre": "Processus d’écriture",
+          "sousSujets": [
+            {
+              "id": "planification-redaction-revision-et-publication",
+              "titre": "Planification, rédaction, révision et publication",
+              "competence": "Développer des idées, organiser le contenu, réviser et corriger",
+              "activite": "Portrait, description d’un lieu et enrichissement par adjectifs; Support numérique ou visuel; Écriture guidée à partir d’un plan, grille de révision et publication",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 83
+            },
+            {
+              "id": "planifier-rediger-reviser-corriger-et-publier",
+              "titre": "Planifier, rédiger, réviser, corriger et publier",
+              "competence": "Développer, organiser et réviser un texte selon intention, genre et destinataire",
+              "activite": "Plan graphique, premier jet, conférence d’écriture et grille de révision",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 84
+            }
+          ],
+          "sourceRows": [
+            83,
+            84
+          ]
+        },
+        {
+          "id": "niveau-3-ecriture-d-opinion-et-argumentation",
+          "titre": "Écriture d’opinion et argumentation",
+          "sousSujets": [
+            {
+              "id": "opinion-raisons-arguments-et-preuves",
+              "titre": "Opinion, raisons, arguments et preuves",
+              "competence": "Défendre une opinion avec arguments, exemples, connecteurs et conclusion",
+              "activite": "Débat préparatoire, paragraphe d’opinion et lettre persuasive",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 85
+            }
+          ],
+          "sourceRows": [
+            85
+          ]
+        },
+        {
+          "id": "niveau-3-ecriture-informative-descriptive",
+          "titre": "Écriture informative/descriptive",
+          "sousSujets": [
+            {
+              "id": "organisation-des-idees-et-vocabulaire-precis",
+              "titre": "Organisation des idées et vocabulaire précis",
+              "competence": "Rédiger un texte informatif structuré avec faits, exemples et éléments visuels",
+              "activite": "Fiche descriptive, paragraphe documentaire et création d’une infographie",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 86
+            }
+          ],
+          "sourceRows": [
+            86
+          ]
+        },
+        {
+          "id": "niveau-3-ecriture-narrative",
+          "titre": "Écriture narrative",
+          "sousSujets": [
+            {
+              "id": "personnages-evenements-temps-et-coherence",
+              "titre": "Personnages, événements, temps et cohérence",
+              "competence": "Écrire un court récit avec début, milieu et fin",
+              "activite": "Images séquentielles, schéma narratif et atelier de réécriture",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 87
+            }
+          ],
+          "sourceRows": [
+            87
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 6
+    },
+    {
+      "niveau": 4,
+      "label": "4e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-4-communication-fonctionnelle",
+          "titre": "Communication fonctionnelle",
+          "sousSujets": [
+            {
+              "id": "consigne-lettre-courriel-resume-ou-compte-rendu",
+              "titre": "Consigne, lettre, courriel, résumé ou compte rendu",
+              "competence": "Adapter format, registre et contenu à une situation authentique",
+              "activite": "Courriel, lettre, recette, règlement, résumé ou compte rendu",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 120
+            }
+          ],
+          "sourceRows": [
+            120
+          ]
+        },
+        {
+          "id": "niveau-4-formes-de-communication-ecrite",
+          "titre": "Formes de communication écrite",
+          "sousSujets": [
+            {
+              "id": "lettre-et-courriel",
+              "titre": "Lettre et courriel",
+              "competence": "Respecter la structure, le ton, le destinataire et l’intention",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Jeu de situations, conseils et phrases hypothétiques; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Lecture répétée, enregistrement audio et rétroaction ciblée; Rédiger une lettre, répondre à un courriel et corriger avec une grille; Table de conjugaison, phrases contextualisées et jeu de rapidité; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 121
+            }
+          ],
+          "sourceRows": [
+            121
+          ]
+        },
+        {
+          "id": "niveau-4-processus-d-ecriture",
+          "titre": "Processus d’écriture",
+          "sousSujets": [
+            {
+              "id": "planification-redaction-revision-et-publication",
+              "titre": "Planification, rédaction, révision et publication",
+              "competence": "Développer des idées, organiser le contenu, réviser et corriger",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Production écrite guidée; Support numérique ou visuel; Écriture guidée à partir d’un plan, grille de révision et publication; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne; Élevée",
+              "sourceRow": 122
+            },
+            {
+              "id": "planifier-rediger-reviser-corriger-et-publier",
+              "titre": "Planifier, rédiger, réviser, corriger et publier",
+              "competence": "Développer, organiser et réviser un texte selon intention, genre et destinataire",
+              "activite": "Plan graphique, premier jet, conférence d’écriture et grille de révision",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 123
+            }
+          ],
+          "sourceRows": [
+            122,
+            123
+          ]
+        },
+        {
+          "id": "niveau-4-ecriture-d-opinion-et-argumentation",
+          "titre": "Écriture d’opinion et argumentation",
+          "sousSujets": [
+            {
+              "id": "opinion-raisons-arguments-et-preuves",
+              "titre": "Opinion, raisons, arguments et preuves",
+              "competence": "Défendre une opinion avec arguments, exemples, connecteurs et conclusion",
+              "activite": "Débat préparatoire, paragraphe d’opinion et lettre persuasive",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 124
+            }
+          ],
+          "sourceRows": [
+            124
+          ]
+        },
+        {
+          "id": "niveau-4-ecriture-informative-descriptive",
+          "titre": "Écriture informative/descriptive",
+          "sousSujets": [
+            {
+              "id": "organisation-des-idees-et-vocabulaire-precis",
+              "titre": "Organisation des idées et vocabulaire précis",
+              "competence": "Rédiger un texte informatif structuré avec faits, exemples et éléments visuels",
+              "activite": "Fiche descriptive, paragraphe documentaire et création d’une infographie",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 125
+            }
+          ],
+          "sourceRows": [
+            125
+          ]
+        },
+        {
+          "id": "niveau-4-ecriture-narrative",
+          "titre": "Écriture narrative",
+          "sousSujets": [
+            {
+              "id": "personnages-evenements-temps-et-coherence",
+              "titre": "Personnages, événements, temps et cohérence",
+              "competence": "Créer un récit structuré avec descriptions, dialogue, point de vue et rythme",
+              "activite": "Images séquentielles, schéma narratif et atelier de réécriture",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 126
+            }
+          ],
+          "sourceRows": [
+            126
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 6,
+      "nombreSousSujets": 7
+    },
+    {
+      "niveau": 5,
+      "label": "5e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-5-communication-fonctionnelle",
+          "titre": "Communication fonctionnelle",
+          "sousSujets": [
+            {
+              "id": "consigne-lettre-courriel-resume-ou-compte-rendu",
+              "titre": "Consigne, lettre, courriel, résumé ou compte rendu",
+              "competence": "Adapter format, registre et contenu à une situation authentique",
+              "activite": "Courriel, lettre, recette, règlement, résumé ou compte rendu",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 154
+            }
+          ],
+          "sourceRows": [
+            154
+          ]
+        },
+        {
+          "id": "niveau-5-processus-d-ecriture",
+          "titre": "Processus d’écriture",
+          "sousSujets": [
+            {
+              "id": "planification-redaction-revision-et-publication",
+              "titre": "Planification, rédaction, révision et publication",
+              "competence": "Développer des idées, organiser le contenu, réviser et corriger",
+              "activite": "Classement de cas, justification de l’accord et correction de texte; Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Production écrite guidée; Support numérique ou visuel; Tableau comparatif, ligne du temps et transformation de phrases; Écriture guidée à partir d’un plan, grille de révision et publication; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 155
+            },
+            {
+              "id": "planifier-rediger-reviser-corriger-et-publier",
+              "titre": "Planifier, rédiger, réviser, corriger et publier",
+              "competence": "Développer, organiser et réviser un texte selon intention, genre et destinataire",
+              "activite": "Plan graphique, premier jet, conférence d’écriture et grille de révision",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 156
+            }
+          ],
+          "sourceRows": [
+            155,
+            156
+          ]
+        },
+        {
+          "id": "niveau-5-ecriture-d-opinion-et-argumentation",
+          "titre": "Écriture d’opinion et argumentation",
+          "sousSujets": [
+            {
+              "id": "opinion-raisons-arguments-et-preuves",
+              "titre": "Opinion, raisons, arguments et preuves",
+              "competence": "Défendre une opinion avec arguments, exemples, connecteurs et conclusion",
+              "activite": "Débat préparatoire, paragraphe d’opinion et lettre persuasive",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 157
+            }
+          ],
+          "sourceRows": [
+            157
+          ]
+        },
+        {
+          "id": "niveau-5-ecriture-informative-descriptive",
+          "titre": "Écriture informative/descriptive",
+          "sousSujets": [
+            {
+              "id": "organisation-des-idees-et-vocabulaire-precis",
+              "titre": "Organisation des idées et vocabulaire précis",
+              "competence": "Rédiger un texte informatif structuré avec faits, exemples et éléments visuels",
+              "activite": "Fiche descriptive, paragraphe documentaire et création d’une infographie",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 158
+            }
+          ],
+          "sourceRows": [
+            158
+          ]
+        },
+        {
+          "id": "niveau-5-ecriture-narrative",
+          "titre": "Écriture narrative",
+          "sousSujets": [
+            {
+              "id": "personnages-evenements-temps-et-coherence",
+              "titre": "Personnages, événements, temps et cohérence",
+              "competence": "Créer un récit structuré avec descriptions, dialogue, point de vue et rythme",
+              "activite": "Images séquentielles, schéma narratif et atelier de réécriture",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 159
+            }
+          ],
+          "sourceRows": [
+            159
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 6
+    },
+    {
+      "niveau": 6,
+      "label": "6e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-6-communication-fonctionnelle",
+          "titre": "Communication fonctionnelle",
+          "sousSujets": [
+            {
+              "id": "consigne-lettre-courriel-resume-ou-compte-rendu",
+              "titre": "Consigne, lettre, courriel, résumé ou compte rendu",
+              "competence": "Adapter format, registre et contenu à une situation authentique",
+              "activite": "Courriel, lettre, recette, règlement, résumé ou compte rendu",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 195
+            }
+          ],
+          "sourceRows": [
+            195
+          ]
+        },
+        {
+          "id": "niveau-6-processus-d-ecriture",
+          "titre": "Processus d’écriture",
+          "sousSujets": [
+            {
+              "id": "planification-redaction-revision-et-publication",
+              "titre": "Planification, rédaction, révision et publication",
+              "competence": "Développer des idées, organiser le contenu, réviser et corriger",
+              "activite": "Carte de mots, familles lexicales, synonymes-antonymes et phrase contextualisée; Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Lecture d’infographie, plan explicatif et rédaction d’un court texte documentaire; Lecture guidée et questions de compréhension; Phrases à trous, justification grammaticale et dictée ciblée; Repérage dans un texte, classement par groupe et conjugaison; Tableau comparatif, ligne du temps et transformation de phrases; Tri de groupes nominaux et remplacement de déterminants; Écriture guidée à partir d’un plan, grille de révision et publication; Évaluation diagnostique ou formative; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 196
+            },
+            {
+              "id": "planifier-rediger-reviser-corriger-et-publier",
+              "titre": "Planifier, rédiger, réviser, corriger et publier",
+              "competence": "Développer, organiser et réviser un texte selon intention, genre et destinataire",
+              "activite": "Plan graphique, premier jet, conférence d’écriture et grille de révision",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 197
+            }
+          ],
+          "sourceRows": [
+            196,
+            197
+          ]
+        },
+        {
+          "id": "niveau-6-ecriture-d-opinion-et-argumentation",
+          "titre": "Écriture d’opinion et argumentation",
+          "sousSujets": [
+            {
+              "id": "opinion-raisons-arguments-et-preuves",
+              "titre": "Opinion, raisons, arguments et preuves",
+              "competence": "Défendre une opinion avec arguments, exemples, connecteurs et conclusion",
+              "activite": "Débat préparatoire, paragraphe d’opinion et lettre persuasive",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 198
+            }
+          ],
+          "sourceRows": [
+            198
+          ]
+        },
+        {
+          "id": "niveau-6-ecriture-informative-descriptive",
+          "titre": "Écriture informative/descriptive",
+          "sousSujets": [
+            {
+              "id": "organisation-des-idees-et-vocabulaire-precis",
+              "titre": "Organisation des idées et vocabulaire précis",
+              "competence": "Rédiger un texte informatif structuré avec faits, exemples et éléments visuels",
+              "activite": "Fiche descriptive, paragraphe documentaire et création d’une infographie",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 199
+            }
+          ],
+          "sourceRows": [
+            199
+          ]
+        },
+        {
+          "id": "niveau-6-ecriture-narrative",
+          "titre": "Écriture narrative",
+          "sousSujets": [
+            {
+              "id": "personnages-evenements-temps-et-coherence",
+              "titre": "Personnages, événements, temps et cohérence",
+              "competence": "Créer un récit structuré avec descriptions, dialogue, point de vue et rythme",
+              "activite": "Images séquentielles, schéma narratif et atelier de réécriture",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 200
+            }
+          ],
+          "sourceRows": [
+            200
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 6
+    },
+    {
+      "niveau": 7,
+      "label": "7e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-7-communication-fonctionnelle",
+          "titre": "Communication fonctionnelle",
+          "sousSujets": [
+            {
+              "id": "consigne-lettre-courriel-resume-ou-compte-rendu",
+              "titre": "Consigne, lettre, courriel, résumé ou compte rendu",
+              "competence": "Adapter format, registre et contenu à une situation authentique",
+              "activite": "Courriel, lettre, recette, règlement, résumé ou compte rendu",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 219
+            }
+          ],
+          "sourceRows": [
+            219
+          ]
+        },
+        {
+          "id": "niveau-7-processus-d-ecriture",
+          "titre": "Processus d’écriture",
+          "sousSujets": [
+            {
+              "id": "planification-redaction-revision-et-publication",
+              "titre": "Planification, rédaction, révision et publication",
+              "competence": "Développer des idées, organiser le contenu, réviser et corriger",
+              "activite": "Production écrite guidée; Support numérique ou visuel; Écriture guidée à partir d’un plan, grille de révision et publication",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 220
+            },
+            {
+              "id": "planifier-rediger-reviser-corriger-et-publier",
+              "titre": "Planifier, rédiger, réviser, corriger et publier",
+              "competence": "Développer, organiser et réviser un texte selon intention, genre et destinataire",
+              "activite": "Plan graphique, premier jet, conférence d’écriture et grille de révision",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 221
+            }
+          ],
+          "sourceRows": [
+            220,
+            221
+          ]
+        },
+        {
+          "id": "niveau-7-ecriture-d-opinion-et-argumentation",
+          "titre": "Écriture d’opinion et argumentation",
+          "sousSujets": [
+            {
+              "id": "opinion-raisons-arguments-et-preuves",
+              "titre": "Opinion, raisons, arguments et preuves",
+              "competence": "Défendre une opinion avec arguments, exemples, connecteurs et conclusion",
+              "activite": "Débat préparatoire, paragraphe d’opinion et lettre persuasive",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 222
+            }
+          ],
+          "sourceRows": [
+            222
+          ]
+        },
+        {
+          "id": "niveau-7-ecriture-informative-descriptive",
+          "titre": "Écriture informative/descriptive",
+          "sousSujets": [
+            {
+              "id": "organisation-des-idees-et-vocabulaire-precis",
+              "titre": "Organisation des idées et vocabulaire précis",
+              "competence": "Rédiger un texte informatif structuré avec faits, exemples et éléments visuels",
+              "activite": "Fiche descriptive, paragraphe documentaire et création d’une infographie",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 223
+            }
+          ],
+          "sourceRows": [
+            223
+          ]
+        },
+        {
+          "id": "niveau-7-ecriture-narrative",
+          "titre": "Écriture narrative",
+          "sousSujets": [
+            {
+              "id": "personnages-evenements-temps-et-coherence",
+              "titre": "Personnages, événements, temps et cohérence",
+              "competence": "Créer un récit structuré avec descriptions, dialogue, point de vue et rythme",
+              "activite": "Images séquentielles, schéma narratif et atelier de réécriture",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 224
+            }
+          ],
+          "sourceRows": [
+            224
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 6
+    },
+    {
+      "niveau": 8,
+      "label": "8e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-8-communication-fonctionnelle",
+          "titre": "Communication fonctionnelle",
+          "sousSujets": [
+            {
+              "id": "consigne-lettre-courriel-resume-ou-compte-rendu",
+              "titre": "Consigne, lettre, courriel, résumé ou compte rendu",
+              "competence": "Adapter format, registre et contenu à une situation authentique",
+              "activite": "Courriel, lettre, recette, règlement, résumé ou compte rendu",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 241
+            }
+          ],
+          "sourceRows": [
+            241
+          ]
+        },
+        {
+          "id": "niveau-8-organisation-du-texte",
+          "titre": "Organisation du texte",
+          "sousSujets": [
+            {
+              "id": "construction-du-paragraphe",
+              "titre": "Construction du paragraphe",
+              "competence": "Écrire une phrase-thème, développer des idées et utiliser des connecteurs",
+              "activite": "Assembler des phrases en paragraphe et améliorer la cohésion; Support numérique ou visuel",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 242
+            }
+          ],
+          "sourceRows": [
+            242
+          ]
+        },
+        {
+          "id": "niveau-8-processus-d-ecriture",
+          "titre": "Processus d’écriture",
+          "sousSujets": [
+            {
+              "id": "planification-redaction-revision-et-publication",
+              "titre": "Planification, rédaction, révision et publication",
+              "competence": "Développer des idées, organiser le contenu, réviser et corriger",
+              "activite": "Lecture guidée et questions de compréhension; Lecture guidée, questions graduées, surlignage des indices et résumé; Production écrite guidée; Support numérique ou visuel; Écriture guidée à partir d’un plan, grille de révision et publication",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 243
+            },
+            {
+              "id": "planifier-rediger-reviser-corriger-et-publier",
+              "titre": "Planifier, rédiger, réviser, corriger et publier",
+              "competence": "Développer, organiser et réviser un texte selon intention, genre et destinataire",
+              "activite": "Plan graphique, premier jet, conférence d’écriture et grille de révision",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 244
+            }
+          ],
+          "sourceRows": [
+            243,
+            244
+          ]
+        },
+        {
+          "id": "niveau-8-ecriture-d-opinion-et-argumentation",
+          "titre": "Écriture d’opinion et argumentation",
+          "sousSujets": [
+            {
+              "id": "opinion-raisons-arguments-et-preuves",
+              "titre": "Opinion, raisons, arguments et preuves",
+              "competence": "Défendre une opinion avec arguments, exemples, connecteurs et conclusion",
+              "activite": "Débat préparatoire, paragraphe d’opinion et lettre persuasive",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 245
+            }
+          ],
+          "sourceRows": [
+            245
+          ]
+        },
+        {
+          "id": "niveau-8-ecriture-informative-descriptive",
+          "titre": "Écriture informative/descriptive",
+          "sousSujets": [
+            {
+              "id": "organisation-des-idees-et-vocabulaire-precis",
+              "titre": "Organisation des idées et vocabulaire précis",
+              "competence": "Rédiger un texte informatif structuré avec faits, exemples et éléments visuels",
+              "activite": "Fiche descriptive, paragraphe documentaire et création d’une infographie",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 246
+            }
+          ],
+          "sourceRows": [
+            246
+          ]
+        },
+        {
+          "id": "niveau-8-ecriture-narrative",
+          "titre": "Écriture narrative",
+          "sousSujets": [
+            {
+              "id": "personnages-evenements-temps-et-coherence",
+              "titre": "Personnages, événements, temps et cohérence",
+              "competence": "Créer un récit structuré avec descriptions, dialogue, point de vue et rythme",
+              "activite": "Images séquentielles, schéma narratif et atelier de réécriture",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 247
+            }
+          ],
+          "sourceRows": [
+            247
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 6,
+      "nombreSousSujets": 7
+    },
+    {
+      "niveau": 9,
+      "label": "9e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-9-communication-academique-et-professionnelle",
+          "titre": "Communication académique et professionnelle",
+          "sousSujets": [
+            {
+              "id": "resume-rapport-courriel-et-presentation",
+              "titre": "Résumé, rapport, courriel et présentation",
+              "competence": "Produire des textes clairs, concis et conformes aux conventions",
+              "activite": "Résumé critique, rapport, CV/lettre et présentation formelle",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 274
+            }
+          ],
+          "sourceRows": [
+            274
+          ]
+        },
+        {
+          "id": "niveau-9-processus-d-ecriture",
+          "titre": "Processus d’écriture",
+          "sousSujets": [
+            {
+              "id": "planification-redaction-revision-et-publication",
+              "titre": "Planification, rédaction, révision et publication",
+              "competence": "Développer des idées, organiser le contenu, réviser et corriger",
+              "activite": "Production écrite guidée; Support numérique ou visuel; Écriture guidée à partir d’un plan, grille de révision et publication",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Moyenne",
+              "sourceRow": 275
+            }
+          ],
+          "sourceRows": [
+            275
+          ]
+        },
+        {
+          "id": "niveau-9-ecriture-analytique",
+          "titre": "Écriture analytique",
+          "sousSujets": [
+            {
+              "id": "commentaire-et-analyse-litteraire",
+              "titre": "Commentaire et analyse littéraire",
+              "competence": "Construire une interprétation appuyée sur des preuves textuelles",
+              "activite": "Paragraphe analytique, commentaire composé et conférence d’écriture",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 276
+            }
+          ],
+          "sourceRows": [
+            276
+          ]
+        },
+        {
+          "id": "niveau-9-ecriture-argumentative",
+          "titre": "Écriture argumentative",
+          "sousSujets": [
+            {
+              "id": "these-arguments-contre-arguments-et-conclusion",
+              "titre": "Thèse, arguments, contre-arguments et conclusion",
+              "competence": "Rédiger une argumentation cohérente, documentée et adaptée au destinataire",
+              "activite": "Plan dialectique, essai, lettre ouverte et révision par critères",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 277
+            }
+          ],
+          "sourceRows": [
+            277
+          ]
+        },
+        {
+          "id": "niveau-9-ecriture-creative",
+          "titre": "Écriture créative",
+          "sousSujets": [
+            {
+              "id": "narration-description-dialogue-et-voix",
+              "titre": "Narration, description, dialogue et voix",
+              "competence": "Expérimenter des choix de style, de structure et de point de vue",
+              "activite": "Nouvelle, scène théâtrale, poésie ou récit multimédia",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 278
+            }
+          ],
+          "sourceRows": [
+            278
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 5
+    },
+    {
+      "niveau": 10,
+      "label": "10e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-10-communication-academique-et-professionnelle",
+          "titre": "Communication académique et professionnelle",
+          "sousSujets": [
+            {
+              "id": "resume-rapport-courriel-et-presentation",
+              "titre": "Résumé, rapport, courriel et présentation",
+              "competence": "Produire des textes clairs, concis et conformes aux conventions avec un degré croissant d’autonomie et de complexité",
+              "activite": "Résumé critique, rapport, CV/lettre et présentation formelle",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 290
+            }
+          ],
+          "sourceRows": [
+            290
+          ]
+        },
+        {
+          "id": "niveau-10-ecriture-analytique",
+          "titre": "Écriture analytique",
+          "sousSujets": [
+            {
+              "id": "commentaire-et-analyse-litteraire",
+              "titre": "Commentaire et analyse littéraire",
+              "competence": "Construire une interprétation appuyée sur des preuves textuelles avec un degré croissant d’autonomie et de complexité",
+              "activite": "Paragraphe analytique, commentaire composé et conférence d’écriture",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 291
+            }
+          ],
+          "sourceRows": [
+            291
+          ]
+        },
+        {
+          "id": "niveau-10-ecriture-argumentative",
+          "titre": "Écriture argumentative",
+          "sousSujets": [
+            {
+              "id": "these-arguments-contre-arguments-et-conclusion",
+              "titre": "Thèse, arguments, contre-arguments et conclusion",
+              "competence": "Rédiger une argumentation cohérente, documentée et adaptée au destinataire avec un degré croissant d’autonomie et de complexité",
+              "activite": "Plan dialectique, essai, lettre ouverte et révision par critères",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 292
+            }
+          ],
+          "sourceRows": [
+            292
+          ]
+        },
+        {
+          "id": "niveau-10-ecriture-creative",
+          "titre": "Écriture créative",
+          "sousSujets": [
+            {
+              "id": "narration-description-dialogue-et-voix",
+              "titre": "Narration, description, dialogue et voix",
+              "competence": "Expérimenter des choix de style, de structure et de point de vue avec un degré croissant d’autonomie et de complexité",
+              "activite": "Nouvelle, scène théâtrale, poésie ou récit multimédia",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 293
+            }
+          ],
+          "sourceRows": [
+            293
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 4,
+      "nombreSousSujets": 4
+    },
+    {
+      "niveau": 11,
+      "label": "11e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-11-communication-academique-et-professionnelle",
+          "titre": "Communication académique et professionnelle",
+          "sousSujets": [
+            {
+              "id": "resume-rapport-courriel-et-presentation",
+              "titre": "Résumé, rapport, courriel et présentation",
+              "competence": "Produire des textes clairs, concis et conformes aux conventions avec un degré croissant d’autonomie et de complexité",
+              "activite": "Résumé critique, rapport, CV/lettre et présentation formelle",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 313
+            }
+          ],
+          "sourceRows": [
+            313
+          ]
+        },
+        {
+          "id": "niveau-11-processus-d-ecriture",
+          "titre": "Processus d’écriture",
+          "sousSujets": [
+            {
+              "id": "planification-redaction-revision-et-publication",
+              "titre": "Planification, rédaction, révision et publication",
+              "competence": "Développer des idées, organiser le contenu, réviser et corriger",
+              "activite": "Correction, révision et remédiation; Dictée préparée ou évaluative; Dictée préparée, dictée négociée, correction codée et réécriture; Exercices d’application gradués; Schéma narratif, remise en ordre d’événements et réécriture d’une fin; Écriture guidée à partir d’un plan, grille de révision et publication; Évaluation diagnostique, correction commentée et plan de remédiation",
+              "statut": "observe",
+              "statutSource": "Observé dans les rapports quotidiens",
+              "confiance": "Élevée",
+              "sourceRow": 314
+            }
+          ],
+          "sourceRows": [
+            314
+          ]
+        },
+        {
+          "id": "niveau-11-ecriture-analytique",
+          "titre": "Écriture analytique",
+          "sousSujets": [
+            {
+              "id": "commentaire-et-analyse-litteraire",
+              "titre": "Commentaire et analyse littéraire",
+              "competence": "Construire une interprétation appuyée sur des preuves textuelles avec un degré croissant d’autonomie et de complexité",
+              "activite": "Paragraphe analytique, commentaire composé et conférence d’écriture",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 315
+            }
+          ],
+          "sourceRows": [
+            315
+          ]
+        },
+        {
+          "id": "niveau-11-ecriture-argumentative",
+          "titre": "Écriture argumentative",
+          "sousSujets": [
+            {
+              "id": "these-arguments-contre-arguments-et-conclusion",
+              "titre": "Thèse, arguments, contre-arguments et conclusion",
+              "competence": "Rédiger une argumentation cohérente, documentée et adaptée au destinataire avec un degré croissant d’autonomie et de complexité",
+              "activite": "Plan dialectique, essai, lettre ouverte et révision par critères",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 316
+            }
+          ],
+          "sourceRows": [
+            316
+          ]
+        },
+        {
+          "id": "niveau-11-ecriture-creative",
+          "titre": "Écriture créative",
+          "sousSujets": [
+            {
+              "id": "narration-description-dialogue-et-voix",
+              "titre": "Narration, description, dialogue et voix",
+              "competence": "Expérimenter des choix de style, de structure et de point de vue avec un degré croissant d’autonomie et de complexité",
+              "activite": "Nouvelle, scène théâtrale, poésie ou récit multimédia",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 317
+            }
+          ],
+          "sourceRows": [
+            317
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 5,
+      "nombreSousSujets": 5
+    },
+    {
+      "niveau": 12,
+      "label": "12e année",
+      "statut": "disponible",
+      "sujetsPrincipaux": [
+        {
+          "id": "niveau-12-communication-academique-et-professionnelle",
+          "titre": "Communication académique et professionnelle",
+          "sousSujets": [
+            {
+              "id": "resume-rapport-courriel-et-presentation",
+              "titre": "Résumé, rapport, courriel et présentation",
+              "competence": "Produire des textes clairs, concis et conformes aux conventions avec un degré croissant d’autonomie et de complexité",
+              "activite": "Résumé critique, rapport, CV/lettre et présentation formelle",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 335
+            }
+          ],
+          "sourceRows": [
+            335
+          ]
+        },
+        {
+          "id": "niveau-12-ecriture-analytique",
+          "titre": "Écriture analytique",
+          "sousSujets": [
+            {
+              "id": "commentaire-et-analyse-litteraire",
+              "titre": "Commentaire et analyse littéraire",
+              "competence": "Construire une interprétation appuyée sur des preuves textuelles avec un degré croissant d’autonomie et de complexité",
+              "activite": "Paragraphe analytique, commentaire composé et conférence d’écriture",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 336
+            }
+          ],
+          "sourceRows": [
+            336
+          ]
+        },
+        {
+          "id": "niveau-12-ecriture-argumentative",
+          "titre": "Écriture argumentative",
+          "sousSujets": [
+            {
+              "id": "these-arguments-contre-arguments-et-conclusion",
+              "titre": "Thèse, arguments, contre-arguments et conclusion",
+              "competence": "Rédiger une argumentation cohérente, documentée et adaptée au destinataire avec un degré croissant d’autonomie et de complexité",
+              "activite": "Plan dialectique, essai, lettre ouverte et révision par critères",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 337
+            }
+          ],
+          "sourceRows": [
+            337
+          ]
+        },
+        {
+          "id": "niveau-12-ecriture-creative",
+          "titre": "Écriture créative",
+          "sousSujets": [
+            {
+              "id": "narration-description-dialogue-et-voix",
+              "titre": "Narration, description, dialogue et voix",
+              "competence": "Expérimenter des choix de style, de structure et de point de vue avec un degré croissant d’autonomie et de complexité",
+              "activite": "Nouvelle, scène théâtrale, poésie ou récit multimédia",
+              "statut": "reference",
+              "statutSource": "Enrichissement de référence",
+              "confiance": "Référence par niveau",
+              "sourceRow": 338
+            }
+          ],
+          "sourceRows": [
+            338
+          ]
+        }
+      ],
+      "nombreSujetsPrincipaux": 4,
+      "nombreSousSujets": 4
+    }
+  ]
+}

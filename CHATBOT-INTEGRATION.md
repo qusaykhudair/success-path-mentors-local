@@ -58,3 +58,10 @@ If the widget appears but sending a message fails, check the browser Network tab
 The embedded widget uses `loadPreviousSession: true`. The website owns a tab-scoped session ID under `spm-chat/sessionId` in browser `sessionStorage` and passes it explicitly to `createChat`. The ID survives a full page refresh in the same tab, while a newly opened tab receives an independent conversation. The n8n Chat Trigger then loads the matching Redis history. The Chat Trigger must use **Load Previous Session → From Memory**, and its memory connection must use the same Redis-backed session ID as the AI Agent.
 
 To verify persistence and isolation, send a test name, refresh the same tab, and ask for the name again. Then open the site in a new tab: it must start an independent session and must not know the first tab's test data. A private/incognito window must also remain independent.
+# Quick topic buttons
+
+The chat footer includes localized Arabic and English topic buttons for pricing,
+subjects, trial lessons, registration, tutors, schedules, policies, and contact.
+Clicking a button sends its full question through the existing n8n chat
+controller, so it uses the same webhook, session ID, and Redis memory as typed
+messages. The standard text input remains available for custom questions.

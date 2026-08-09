@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "subject": "Physics",
+    "subjectSlug": "physics",
+    "strand": "Momentum and Collisions",
+    "strandSlug": "momentum-collisions",
+    "gradeRange": {
+      "min": 11,
+      "max": 12
+    },
+    "gradeLevels": [
+      11,
+      12
+    ],
+    "sourceRecordCount": 4,
+    "gradedSourceRecordCount": 3,
+    "nonGradedSourceRecordCount": 1,
+    "mainTopicCount": 3,
+    "subtopicCount": 3,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "momentum-collisions",
+    "title": {
+      "en": "Momentum and Collisions",
+      "ar": "الزخم والتصادمات"
+    },
+    "description": {
+      "en": "Linear momentum, impulse, conservation of momentum, and the analysis of collisions.",
+      "ar": "الزخم الخطي والدفع وحفظ الزخم وتحليل التصادمات."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-momentum-and-impulse",
+          "title": "Momentum and Impulse",
+          "subtopics": [
+            {
+              "id": "linear-momentum-and-impulse",
+              "title": "Linear momentum and impulse"
+            }
+          ],
+          "sourceRows": [
+            81
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-collisions",
+          "title": "Collisions",
+          "subtopics": [
+            {
+              "id": "conservation-of-momentum-and-collisions",
+              "title": "Conservation of momentum and collisions"
+            }
+          ],
+          "sourceRows": [
+            126
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-momentum-and-impulse",
+          "title": "Momentum and Impulse",
+          "subtopics": [
+            {
+              "id": "linear-momentum-and-impulse",
+              "title": "Linear momentum and impulse"
+            }
+          ],
+          "sourceRows": [
+            127
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    }
+  ]
+}

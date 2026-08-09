@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "strand": "Literature and Literary Analysis",
+    "recordCount": 7,
+    "status": "excluded-from-grade-pages",
+    "reason": "No explicit Grade 1–12 value was supplied."
+  },
+  "records": [
+    {
+      "sourceRow": 122,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Literature and Literary Analysis",
+      "mainTopic": "Genres",
+      "sourceMainTopic": "Genres",
+      "subtopic": "Short stories"
+    },
+    {
+      "sourceRow": 123,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Literature and Literary Analysis",
+      "mainTopic": "Literary Devices",
+      "sourceMainTopic": "Literary Devices",
+      "subtopic": "Alliteration and onomatopoeia"
+    },
+    {
+      "sourceRow": 124,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Literature and Literary Analysis",
+      "mainTopic": "Literary Devices",
+      "sourceMainTopic": "Literary Devices",
+      "subtopic": "Hyperbole"
+    },
+    {
+      "sourceRow": 125,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Literature and Literary Analysis",
+      "mainTopic": "Literary Devices",
+      "sourceMainTopic": "Literary Devices",
+      "subtopic": "Idiomatic expressions"
+    },
+    {
+      "sourceRow": 126,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Literature and Literary Analysis",
+      "mainTopic": "Literary Devices",
+      "sourceMainTopic": "Literary Devices",
+      "subtopic": "Personification"
+    },
+    {
+      "sourceRow": 127,
+      "gradeLevel": "Adult / Non-graded",
+      "strand": "Literature and Literary Analysis",
+      "mainTopic": "Literary Devices",
+      "sourceMainTopic": "Literary Devices",
+      "subtopic": "Simile and metaphor"
+    },
+    {
+      "sourceRow": 128,
+      "gradeLevel": "Grade not stated",
+      "strand": "Literature and Literary Analysis",
+      "mainTopic": "Genres",
+      "sourceMainTopic": "Genres",
+      "subtopic": "Short stories"
+    }
+  ]
+}

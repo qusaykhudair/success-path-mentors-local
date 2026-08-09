@@ -1,0 +1,378 @@
+{
+  "metadata": {
+    "subject": "Chemistry",
+    "recordCount": 46,
+    "status": "excluded-from-grade-pages",
+    "reason": "No Grade 1–12 value was supplied, so no grade was inferred."
+  },
+  "records": [
+    {
+      "sourceRow": 171,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Acids, Bases, and Aqueous Equilibria",
+      "mainTopic": "Acid–Base Concepts",
+      "subtopic": "Acid–base definitions and reactions"
+    },
+    {
+      "sourceRow": 172,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Acids, Bases, and Aqueous Equilibria",
+      "mainTopic": "Acid–Base Concepts",
+      "subtopic": "Arrhenius, Brønsted–Lowry, and Lewis acids/bases"
+    },
+    {
+      "sourceRow": 173,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Acids, Bases, and Aqueous Equilibria",
+      "mainTopic": "Acid–Base Equilibria",
+      "subtopic": "Acid–base equilibria"
+    },
+    {
+      "sourceRow": 174,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Acids, Bases, and Aqueous Equilibria",
+      "mainTopic": "Acid–Base Equilibria",
+      "subtopic": "Ka, Kb, Kw, salts, and hydrolysis"
+    },
+    {
+      "sourceRow": 175,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Acids, Bases, and Aqueous Equilibria",
+      "mainTopic": "pH and pOH",
+      "subtopic": "Strong and weak acid/base calculations"
+    },
+    {
+      "sourceRow": 176,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Atomic Structure and Periodicity",
+      "mainTopic": "Atomic Models",
+      "subtopic": "Historical and modern atomic models"
+    },
+    {
+      "sourceRow": 177,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Atomic Structure and Periodicity",
+      "mainTopic": "Electron Configuration",
+      "subtopic": "Electron configurations and energy-level diagrams"
+    },
+    {
+      "sourceRow": 178,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Atomic Structure and Periodicity",
+      "mainTopic": "Periodic Table",
+      "subtopic": "Periodic-table organization"
+    },
+    {
+      "sourceRow": 179,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Atomic Structure and Periodicity",
+      "mainTopic": "Quantum Model",
+      "subtopic": "Quantum numbers and orbitals"
+    },
+    {
+      "sourceRow": 180,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Chemical Bonding and Molecular Structure",
+      "mainTopic": "Bonding Models",
+      "subtopic": "Hybridization and valence-bond theory"
+    },
+    {
+      "sourceRow": 181,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Chemical Bonding and Molecular Structure",
+      "mainTopic": "Ionic and Covalent Bonding",
+      "subtopic": "Ionic, covalent, and metallic bonding"
+    },
+    {
+      "sourceRow": 182,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Chemical Bonding and Molecular Structure",
+      "mainTopic": "Lewis Structures",
+      "subtopic": "Lewis electron-dot structures"
+    },
+    {
+      "sourceRow": 183,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Chemical Bonding and Molecular Structure",
+      "mainTopic": "Molecular Geometry",
+      "subtopic": "VSEPR and molecular shapes"
+    },
+    {
+      "sourceRow": 184,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Chemical Bonding and Molecular Structure",
+      "mainTopic": "Polarity and Intermolecular Forces",
+      "subtopic": "Molecular polarity and intermolecular forces"
+    },
+    {
+      "sourceRow": 185,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Chemical Equilibrium",
+      "mainTopic": "Equilibrium Concepts",
+      "subtopic": "Dynamic equilibrium and equilibrium constants"
+    },
+    {
+      "sourceRow": 186,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Chemical Equilibrium",
+      "mainTopic": "Equilibrium Concepts",
+      "subtopic": "Factors affecting equilibrium"
+    },
+    {
+      "sourceRow": 187,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Chemical Equilibrium",
+      "mainTopic": "Solubility Equilibria",
+      "subtopic": "Ksp and common-ion effect"
+    },
+    {
+      "sourceRow": 188,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Chemical Kinetics",
+      "mainTopic": "Rate Laws",
+      "subtopic": "Rate laws and reaction order"
+    },
+    {
+      "sourceRow": 189,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Chemical Kinetics",
+      "mainTopic": "Reaction Mechanisms",
+      "subtopic": "Collision theory, activation energy, and mechanisms"
+    },
+    {
+      "sourceRow": 190,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Chemical Kinetics",
+      "mainTopic": "Reaction Rates",
+      "subtopic": "Chemical kinetics"
+    },
+    {
+      "sourceRow": 191,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Chemical Kinetics",
+      "mainTopic": "Reaction Rates",
+      "subtopic": "Factors affecting reaction rate"
+    },
+    {
+      "sourceRow": 192,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Chemical Nomenclature and Formulas",
+      "mainTopic": "Chemical Formulas",
+      "subtopic": "Writing formulas and polyatomic ions"
+    },
+    {
+      "sourceRow": 193,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Chemical Nomenclature and Formulas",
+      "mainTopic": "Chemical Nomenclature",
+      "subtopic": "Naming ionic and molecular compounds"
+    },
+    {
+      "sourceRow": 194,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Chemical Reactions and Equations",
+      "mainTopic": "Chemical Equations",
+      "subtopic": "Writing and balancing equations"
+    },
+    {
+      "sourceRow": 195,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Chemical Reactions and Equations",
+      "mainTopic": "Chemical Reactions",
+      "subtopic": "General chemical reaction concepts"
+    },
+    {
+      "sourceRow": 196,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Chemical Reactions and Equations",
+      "mainTopic": "Ionic and Precipitation Reactions",
+      "subtopic": "Net ionic equations and precipitation"
+    },
+    {
+      "sourceRow": 197,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Chemical Reactions and Equations",
+      "mainTopic": "Predicting Products",
+      "subtopic": "Predicting products of reactions"
+    },
+    {
+      "sourceRow": 198,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Chemical Reactions and Equations",
+      "mainTopic": "Reaction Types",
+      "subtopic": "Synthesis, decomposition, combustion, and displacement reactions"
+    },
+    {
+      "sourceRow": 199,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Matter and Chemical Properties",
+      "mainTopic": "Classification of Matter",
+      "subtopic": "Elements, compounds, mixtures, and properties"
+    },
+    {
+      "sourceRow": 200,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Matter and Chemical Properties",
+      "mainTopic": "Physical and Chemical Changes",
+      "subtopic": "Physical and chemical changes"
+    },
+    {
+      "sourceRow": 201,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Matter and Chemical Properties",
+      "mainTopic": "Physical and Chemical Changes",
+      "subtopic": "Physical changes"
+    },
+    {
+      "sourceRow": 202,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Organic Chemistry",
+      "mainTopic": "Functional Groups",
+      "subtopic": "Functional groups and organic nomenclature"
+    },
+    {
+      "sourceRow": 203,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Organic Chemistry",
+      "mainTopic": "Hydrocarbons",
+      "subtopic": "Alkanes, alkenes, alkynes, cycloalkanes, and aromatics"
+    },
+    {
+      "sourceRow": 204,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Organic Chemistry",
+      "mainTopic": "Organic Chemistry",
+      "subtopic": "Organic chemistry concepts"
+    },
+    {
+      "sourceRow": 205,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Redox and Electrochemistry",
+      "mainTopic": "Applications of Redox",
+      "subtopic": "Corrosion, smelting, and electrochemical applications"
+    },
+    {
+      "sourceRow": 206,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Redox and Electrochemistry",
+      "mainTopic": "Electrochemical Cells",
+      "subtopic": "Galvanic and electrolytic cells"
+    },
+    {
+      "sourceRow": 207,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Redox and Electrochemistry",
+      "mainTopic": "Oxidation–Reduction",
+      "subtopic": "Oxidation numbers and balancing redox reactions"
+    },
+    {
+      "sourceRow": 208,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Solutions and Solubility",
+      "mainTopic": "Dilution",
+      "subtopic": "Dilution calculations"
+    },
+    {
+      "sourceRow": 209,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Solutions and Solubility",
+      "mainTopic": "Solubility",
+      "subtopic": "Solubility curves, saturation, and factors affecting solubility"
+    },
+    {
+      "sourceRow": 210,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Solutions and Solubility",
+      "mainTopic": "Solutions and Concentration",
+      "subtopic": "Solution formation and concentration units"
+    },
+    {
+      "sourceRow": 211,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Stoichiometry and Quantitative Chemistry",
+      "mainTopic": "Composition Calculations",
+      "subtopic": "Percent composition and empirical/molecular formulas"
+    },
+    {
+      "sourceRow": 212,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Stoichiometry and Quantitative Chemistry",
+      "mainTopic": "Mole Concept",
+      "subtopic": "Moles, molar mass, and particle relationships"
+    },
+    {
+      "sourceRow": 213,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Stoichiometry and Quantitative Chemistry",
+      "mainTopic": "Reaction Stoichiometry",
+      "subtopic": "Stoichiometric calculations and mole ratios"
+    },
+    {
+      "sourceRow": 214,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Thermochemistry",
+      "mainTopic": "Calorimetry",
+      "subtopic": "Heat transfer and calorimetry"
+    },
+    {
+      "sourceRow": 215,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Thermochemistry",
+      "mainTopic": "Enthalpy and Energy Changes",
+      "subtopic": "Enthalpy changes and thermochemical equations"
+    },
+    {
+      "sourceRow": 216,
+      "subject": "Chemistry",
+      "gradeLevel": "Grade not stated",
+      "strand": "Thermochemistry",
+      "mainTopic": "Hess's Law",
+      "subtopic": "Hess's law and standard enthalpies"
+    }
+  ]
+}

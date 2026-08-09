@@ -1,0 +1,487 @@
+{
+  "metadata": {
+    "strand": "Grammar and Language Conventions",
+    "correctionCount": 47,
+    "exactDuplicateRowsRemoved": 10
+  },
+  "displayCorrections": [
+    {
+      "sourceRow": 99,
+      "grade": "G3",
+      "sourceMainTopic": "Conjunctions",
+      "displayMainTopic": "Prepositions",
+      "subtopic": "Identify prepositional phrases",
+      "reason": "The supplied skill explicitly teaches prepositions or prepositional phrases."
+    },
+    {
+      "sourceRow": 100,
+      "grade": "G3",
+      "sourceMainTopic": "Conjunctions",
+      "displayMainTopic": "Prepositions",
+      "subtopic": "Identify prepositions",
+      "reason": "The supplied skill explicitly teaches prepositions or prepositional phrases."
+    },
+    {
+      "sourceRow": 101,
+      "grade": "G3",
+      "sourceMainTopic": "Conjunctions",
+      "displayMainTopic": "Prepositions",
+      "subtopic": "Identify prepositions and their objects",
+      "reason": "The supplied skill explicitly teaches prepositions or prepositional phrases."
+    },
+    {
+      "sourceRow": 103,
+      "grade": "G3",
+      "sourceMainTopic": "Conjunctions",
+      "displayMainTopic": "Prepositions",
+      "subtopic": "Prepositions: review",
+      "reason": "The supplied skill explicitly teaches prepositions or prepositional phrases."
+    },
+    {
+      "sourceRow": 118,
+      "grade": "G3",
+      "sourceMainTopic": "Pronouns",
+      "displayMainTopic": "Nouns",
+      "subtopic": "Form and use irregular plurals",
+      "reason": "The supplied skill is noun morphology or noun recognition, not pronoun usage."
+    },
+    {
+      "sourceRow": 119,
+      "grade": "G3",
+      "sourceMainTopic": "Pronouns",
+      "displayMainTopic": "Nouns",
+      "subtopic": "Form regular plurals with -s, -es and -ies",
+      "reason": "The supplied skill is noun morphology or noun recognition, not pronoun usage."
+    },
+    {
+      "sourceRow": 120,
+      "grade": "G3",
+      "sourceMainTopic": "Pronouns",
+      "displayMainTopic": "Nouns",
+      "subtopic": "Form the singular or plural possessive",
+      "reason": "The supplied skill is noun morphology or noun recognition, not pronoun usage."
+    },
+    {
+      "sourceRow": 121,
+      "grade": "G3",
+      "sourceMainTopic": "Pronouns",
+      "displayMainTopic": "Nouns",
+      "subtopic": "Identify and correct errors with plural and possessive nouns",
+      "reason": "The supplied skill is noun morphology or noun recognition, not pronoun usage."
+    },
+    {
+      "sourceRow": 122,
+      "grade": "G3",
+      "sourceMainTopic": "Pronouns",
+      "displayMainTopic": "Nouns",
+      "subtopic": "Identify common and proper nouns",
+      "reason": "The supplied skill is noun morphology or noun recognition, not pronoun usage."
+    },
+    {
+      "sourceRow": 123,
+      "grade": "G3",
+      "sourceMainTopic": "Pronouns",
+      "displayMainTopic": "Nouns",
+      "subtopic": "Identify nouns",
+      "reason": "The supplied skill is noun morphology or noun recognition, not pronoun usage."
+    },
+    {
+      "sourceRow": 124,
+      "grade": "G3",
+      "sourceMainTopic": "Pronouns",
+      "displayMainTopic": "Nouns",
+      "subtopic": "Identify nouns – with abstract nouns",
+      "reason": "The supplied skill is noun morphology or noun recognition, not pronoun usage."
+    },
+    {
+      "sourceRow": 125,
+      "grade": "G3",
+      "sourceMainTopic": "Pronouns",
+      "displayMainTopic": "Nouns",
+      "subtopic": "Identify plurals, singular possessives and plural possessives",
+      "reason": "The supplied skill is noun morphology or noun recognition, not pronoun usage."
+    },
+    {
+      "sourceRow": 126,
+      "grade": "G3",
+      "sourceMainTopic": "Pronouns",
+      "displayMainTopic": "Nouns",
+      "subtopic": "Is the noun singular or plural?",
+      "reason": "The supplied skill is noun morphology or noun recognition, not pronoun usage."
+    },
+    {
+      "sourceRow": 127,
+      "grade": "G3",
+      "sourceMainTopic": "Pronouns",
+      "displayMainTopic": "Nouns",
+      "subtopic": "Use regular plurals with -s, -es and -ies",
+      "reason": "The supplied skill is noun morphology or noun recognition, not pronoun usage."
+    },
+    {
+      "sourceRow": 128,
+      "grade": "G3",
+      "sourceMainTopic": "Pronouns",
+      "displayMainTopic": "Nouns",
+      "subtopic": "Which word is a noun?",
+      "reason": "The supplied skill is noun morphology or noun recognition, not pronoun usage."
+    },
+    {
+      "sourceRow": 287,
+      "grade": "G5",
+      "sourceMainTopic": "Prepositions",
+      "displayMainTopic": "Verb tense",
+      "subtopic": "Choose between the past tense and past participle",
+      "reason": "The supplied skill teaches verb tense and verb forms, not prepositions."
+    },
+    {
+      "sourceRow": 288,
+      "grade": "G5",
+      "sourceMainTopic": "Prepositions",
+      "displayMainTopic": "Verb tense",
+      "subtopic": "Correct inappropriate shifts in verb tense",
+      "reason": "The supplied skill teaches verb tense and verb forms, not prepositions."
+    },
+    {
+      "sourceRow": 289,
+      "grade": "G5",
+      "sourceMainTopic": "Prepositions",
+      "displayMainTopic": "Verb tense",
+      "subtopic": "Form and use the irregular past tense",
+      "reason": "The supplied skill teaches verb tense and verb forms, not prepositions."
+    },
+    {
+      "sourceRow": 290,
+      "grade": "G5",
+      "sourceMainTopic": "Prepositions",
+      "displayMainTopic": "Verb tense",
+      "subtopic": "Form and use the regular past tense",
+      "reason": "The supplied skill teaches verb tense and verb forms, not prepositions."
+    },
+    {
+      "sourceRow": 291,
+      "grade": "G5",
+      "sourceMainTopic": "Prepositions",
+      "displayMainTopic": "Verb tense",
+      "subtopic": "Form and use the simple past, present and future tense",
+      "reason": "The supplied skill teaches verb tense and verb forms, not prepositions."
+    },
+    {
+      "sourceRow": 292,
+      "grade": "G5",
+      "sourceMainTopic": "Prepositions",
+      "displayMainTopic": "Verb tense",
+      "subtopic": "Form the perfect verb tenses",
+      "reason": "The supplied skill teaches verb tense and verb forms, not prepositions."
+    },
+    {
+      "sourceRow": 293,
+      "grade": "G5",
+      "sourceMainTopic": "Prepositions",
+      "displayMainTopic": "Verb tense",
+      "subtopic": "Form the progressive verb tenses",
+      "reason": "The supplied skill teaches verb tense and verb forms, not prepositions."
+    },
+    {
+      "sourceRow": 294,
+      "grade": "G5",
+      "sourceMainTopic": "Prepositions",
+      "displayMainTopic": "Verb tense",
+      "subtopic": "Is the sentence in the past, present or future tense?",
+      "reason": "The supplied skill teaches verb tense and verb forms, not prepositions."
+    },
+    {
+      "sourceRow": 295,
+      "grade": "G5",
+      "sourceMainTopic": "Prepositions",
+      "displayMainTopic": "Verb tense",
+      "subtopic": "Use the perfect verb tenses",
+      "reason": "The supplied skill teaches verb tense and verb forms, not prepositions."
+    },
+    {
+      "sourceRow": 296,
+      "grade": "G5",
+      "sourceMainTopic": "Prepositions",
+      "displayMainTopic": "Verb tense",
+      "subtopic": "Use the progressive verb tenses",
+      "reason": "The supplied skill teaches verb tense and verb forms, not prepositions."
+    },
+    {
+      "sourceRow": 474,
+      "grade": "G7",
+      "sourceMainTopic": "Phrases and clauses",
+      "displayMainTopic": "Phrases and Clauses",
+      "subtopic": "Combine sentences using relative clauses",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 475,
+      "grade": "G7",
+      "sourceMainTopic": "Phrases and clauses",
+      "displayMainTopic": "Phrases and Clauses",
+      "subtopic": "Identify appositives and appositive phrases",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 476,
+      "grade": "G7",
+      "sourceMainTopic": "Phrases and clauses",
+      "displayMainTopic": "Phrases and Clauses",
+      "subtopic": "Identify dependent and independent clauses",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 478,
+      "grade": "G7",
+      "sourceMainTopic": "Phrases and clauses",
+      "displayMainTopic": "Phrases and Clauses",
+      "subtopic": "Is it a phrase or a clause?",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 479,
+      "grade": "G7",
+      "sourceMainTopic": "Phrases and clauses",
+      "displayMainTopic": "Phrases and Clauses",
+      "subtopic": "Is the sentence simple, compound, complex or compound-complex?",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 556,
+      "grade": "G8",
+      "sourceMainTopic": "Phrases and clauses",
+      "displayMainTopic": "Phrases and Clauses",
+      "subtopic": "Combine sentences using relative clauses",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 557,
+      "grade": "G8",
+      "sourceMainTopic": "Phrases and clauses",
+      "displayMainTopic": "Phrases and Clauses",
+      "subtopic": "Identify appositives and appositive phrases",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 558,
+      "grade": "G8",
+      "sourceMainTopic": "Phrases and clauses",
+      "displayMainTopic": "Phrases and Clauses",
+      "subtopic": "Identify dependent and independent clauses",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 559,
+      "grade": "G8",
+      "sourceMainTopic": "Phrases and clauses",
+      "displayMainTopic": "Phrases and Clauses",
+      "subtopic": "Is it a phrase or a clause?",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 560,
+      "grade": "G8",
+      "sourceMainTopic": "Phrases and clauses",
+      "displayMainTopic": "Phrases and Clauses",
+      "subtopic": "Is the sentence simple, compound, complex or compound-complex?",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 639,
+      "grade": "G9",
+      "sourceMainTopic": "Phrases and clauses",
+      "displayMainTopic": "Phrases and Clauses",
+      "subtopic": "Combine sentences using relative clauses",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 640,
+      "grade": "G9",
+      "sourceMainTopic": "Phrases and clauses",
+      "displayMainTopic": "Phrases and Clauses",
+      "subtopic": "Identify appositives and appositive phrases",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 641,
+      "grade": "G9",
+      "sourceMainTopic": "Phrases and clauses",
+      "displayMainTopic": "Phrases and Clauses",
+      "subtopic": "Identify dependent and independent clauses",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 642,
+      "grade": "G9",
+      "sourceMainTopic": "Phrases and clauses",
+      "displayMainTopic": "Phrases and Clauses",
+      "subtopic": "Identify prepositional phrases",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 644,
+      "grade": "G9",
+      "sourceMainTopic": "Phrases and clauses",
+      "displayMainTopic": "Phrases and Clauses",
+      "subtopic": "Is it a phrase or a clause?",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 645,
+      "grade": "G9",
+      "sourceMainTopic": "Phrases and clauses",
+      "displayMainTopic": "Phrases and Clauses",
+      "subtopic": "Is the sentence simple, compound, complex or compound-complex?",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 715,
+      "grade": "G10",
+      "sourceMainTopic": "Phrases and clauses",
+      "displayMainTopic": "Phrases and Clauses",
+      "subtopic": "Combine sentences using relative clauses",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 716,
+      "grade": "G10",
+      "sourceMainTopic": "Phrases and clauses",
+      "displayMainTopic": "Phrases and Clauses",
+      "subtopic": "Identify appositives and appositive phrases",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 717,
+      "grade": "G10",
+      "sourceMainTopic": "Phrases and clauses",
+      "displayMainTopic": "Phrases and Clauses",
+      "subtopic": "Identify dependent and independent clauses",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 718,
+      "grade": "G10",
+      "sourceMainTopic": "Phrases and clauses",
+      "displayMainTopic": "Phrases and Clauses",
+      "subtopic": "Identify prepositional phrases",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 720,
+      "grade": "G10",
+      "sourceMainTopic": "Phrases and clauses",
+      "displayMainTopic": "Phrases and Clauses",
+      "subtopic": "Is it a phrase or a clause?",
+      "reason": "Case-only title normalization; meaning unchanged."
+    },
+    {
+      "sourceRow": 721,
+      "grade": "G10",
+      "sourceMainTopic": "Phrases and clauses",
+      "displayMainTopic": "Phrases and Clauses",
+      "subtopic": "Is the sentence simple, compound, complex or compound-complex?",
+      "reason": "Case-only title normalization; meaning unchanged."
+    }
+  ],
+  "removedExactDuplicates": [
+    {
+      "sourceRow": 323,
+      "gradeLevel": "Grade 5",
+      "strand": "Grammar and Language Conventions",
+      "sourceMainTopic": "Verb tense",
+      "mainTopic": "Verb tense",
+      "subtopic": "Choose between the past tense and past participle",
+      "grade": "G5",
+      "classificationStatus": "source-aligned"
+    },
+    {
+      "sourceRow": 324,
+      "gradeLevel": "Grade 5",
+      "strand": "Grammar and Language Conventions",
+      "sourceMainTopic": "Verb tense",
+      "mainTopic": "Verb tense",
+      "subtopic": "Correct inappropriate shifts in verb tense",
+      "grade": "G5",
+      "classificationStatus": "source-aligned"
+    },
+    {
+      "sourceRow": 325,
+      "gradeLevel": "Grade 5",
+      "strand": "Grammar and Language Conventions",
+      "sourceMainTopic": "Verb tense",
+      "mainTopic": "Verb tense",
+      "subtopic": "Form and use the irregular past tense",
+      "grade": "G5",
+      "classificationStatus": "source-aligned"
+    },
+    {
+      "sourceRow": 326,
+      "gradeLevel": "Grade 5",
+      "strand": "Grammar and Language Conventions",
+      "sourceMainTopic": "Verb tense",
+      "mainTopic": "Verb tense",
+      "subtopic": "Form and use the regular past tense",
+      "grade": "G5",
+      "classificationStatus": "source-aligned"
+    },
+    {
+      "sourceRow": 327,
+      "gradeLevel": "Grade 5",
+      "strand": "Grammar and Language Conventions",
+      "sourceMainTopic": "Verb tense",
+      "mainTopic": "Verb tense",
+      "subtopic": "Form and use the simple past, present and future tense",
+      "grade": "G5",
+      "classificationStatus": "source-aligned"
+    },
+    {
+      "sourceRow": 328,
+      "gradeLevel": "Grade 5",
+      "strand": "Grammar and Language Conventions",
+      "sourceMainTopic": "Verb tense",
+      "mainTopic": "Verb tense",
+      "subtopic": "Form the perfect verb tenses",
+      "grade": "G5",
+      "classificationStatus": "source-aligned"
+    },
+    {
+      "sourceRow": 329,
+      "gradeLevel": "Grade 5",
+      "strand": "Grammar and Language Conventions",
+      "sourceMainTopic": "Verb tense",
+      "mainTopic": "Verb tense",
+      "subtopic": "Form the progressive verb tenses",
+      "grade": "G5",
+      "classificationStatus": "source-aligned"
+    },
+    {
+      "sourceRow": 330,
+      "gradeLevel": "Grade 5",
+      "strand": "Grammar and Language Conventions",
+      "sourceMainTopic": "Verb tense",
+      "mainTopic": "Verb tense",
+      "subtopic": "Is the sentence in the past, present or future tense?",
+      "grade": "G5",
+      "classificationStatus": "source-aligned"
+    },
+    {
+      "sourceRow": 331,
+      "gradeLevel": "Grade 5",
+      "strand": "Grammar and Language Conventions",
+      "sourceMainTopic": "Verb tense",
+      "mainTopic": "Verb tense",
+      "subtopic": "Use the perfect verb tenses",
+      "grade": "G5",
+      "classificationStatus": "source-aligned"
+    },
+    {
+      "sourceRow": 332,
+      "gradeLevel": "Grade 5",
+      "strand": "Grammar and Language Conventions",
+      "sourceMainTopic": "Verb tense",
+      "mainTopic": "Verb tense",
+      "subtopic": "Use the progressive verb tenses",
+      "grade": "G5",
+      "classificationStatus": "source-aligned"
+    }
+  ]
+}

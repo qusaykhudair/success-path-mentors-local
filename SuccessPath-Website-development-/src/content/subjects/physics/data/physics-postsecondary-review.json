@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "subject": "Physics",
+    "recordCount": 13,
+    "status": "excluded-from-grade-pages",
+    "reason": "Postsecondary records are preserved for a future advanced-program page."
+  },
+  "records": [
+    {
+      "sourceRow": 138,
+      "subject": "Physics",
+      "gradeLevel": "Postsecondary",
+      "strand": "Dynamics and Forces",
+      "mainTopic": "Circular Motion",
+      "subtopic": "Centripetal force and circular motion"
+    },
+    {
+      "sourceRow": 139,
+      "subject": "Physics",
+      "gradeLevel": "Postsecondary",
+      "strand": "Dynamics and Forces",
+      "mainTopic": "Forces",
+      "subtopic": "Force concepts"
+    },
+    {
+      "sourceRow": 140,
+      "subject": "Physics",
+      "gradeLevel": "Postsecondary",
+      "strand": "Dynamics and Forces",
+      "mainTopic": "Forces",
+      "subtopic": "Forces review"
+    },
+    {
+      "sourceRow": 141,
+      "subject": "Physics",
+      "gradeLevel": "Postsecondary",
+      "strand": "Dynamics and Forces",
+      "mainTopic": "Friction and Contact Forces",
+      "subtopic": "Friction, normal force, applied force, and tension"
+    },
+    {
+      "sourceRow": 142,
+      "subject": "Physics",
+      "gradeLevel": "Postsecondary",
+      "strand": "Dynamics and Forces",
+      "mainTopic": "Newton's Laws",
+      "subtopic": "Newton's laws and force–acceleration relationships"
+    },
+    {
+      "sourceRow": 143,
+      "subject": "Physics",
+      "gradeLevel": "Postsecondary",
+      "strand": "Electrostatics and Electromagnetism",
+      "mainTopic": "Electromagnetism",
+      "subtopic": "Electricity–magnetism relationships and applications"
+    },
+    {
+      "sourceRow": 144,
+      "subject": "Physics",
+      "gradeLevel": "Postsecondary",
+      "strand": "Integrated Physics",
+      "mainTopic": "Physics Review",
+      "subtopic": "General physics review"
+    },
+    {
+      "sourceRow": 145,
+      "subject": "Physics",
+      "gradeLevel": "Postsecondary",
+      "strand": "Kinematics",
+      "mainTopic": "Kinematic Equations",
+      "subtopic": "One-dimensional kinematics and SUVAT"
+    },
+    {
+      "sourceRow": 146,
+      "subject": "Physics",
+      "gradeLevel": "Postsecondary",
+      "strand": "Kinematics",
+      "mainTopic": "Motion Description",
+      "subtopic": "Displacement, speed, velocity, and acceleration"
+    },
+    {
+      "sourceRow": 147,
+      "subject": "Physics",
+      "gradeLevel": "Postsecondary",
+      "strand": "Kinematics",
+      "mainTopic": "Projectile and Two-Dimensional Motion",
+      "subtopic": "Projectile and curvilinear motion"
+    },
+    {
+      "sourceRow": 148,
+      "subject": "Physics",
+      "gradeLevel": "Postsecondary",
+      "strand": "Modern Physics",
+      "mainTopic": "Quantum and Particle Physics",
+      "subtopic": "Quantum theory, photoelectric effect, and particle physics"
+    },
+    {
+      "sourceRow": 149,
+      "subject": "Physics",
+      "gradeLevel": "Postsecondary",
+      "strand": "Momentum and Collisions",
+      "mainTopic": "Momentum and Impulse",
+      "subtopic": "Linear momentum and impulse"
+    },
+    {
+      "sourceRow": 150,
+      "subject": "Physics",
+      "gradeLevel": "Postsecondary",
+      "strand": "Work, Energy, and Power",
+      "mainTopic": "Mechanical Energy",
+      "subtopic": "Kinetic, potential, and mechanical energy"
+    }
+  ]
+}

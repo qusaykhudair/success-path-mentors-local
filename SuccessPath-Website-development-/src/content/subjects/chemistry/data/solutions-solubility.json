@@ -1,0 +1,228 @@
+{
+  "metadata": {
+    "subject": "Chemistry",
+    "subjectSlug": "chemistry",
+    "strand": "Solutions and Solubility",
+    "strandSlug": "solutions-solubility",
+    "gradeRange": {
+      "min": 10,
+      "max": 12
+    },
+    "gradeLevels": [
+      10,
+      11,
+      12
+    ],
+    "sourceRecordCount": 14,
+    "gradedSourceRecordCount": 6,
+    "nonGradedSourceRecordCount": 8,
+    "mainTopicCount": 6,
+    "subtopicCount": 6,
+    "exactDuplicateRowsRemoved": 0,
+    "publicStatus": "approved",
+    "countingRule": "Main Topics and Subtopics are counted by grade placement. Repetition across different grades is preserved as curriculum progression.",
+    "integrityRules": [
+      "Repeated topics and skills across different grades are preserved.",
+      "Only exact Grade + Strand + Main Topic + Subtopic duplicates are removed.",
+      "Postsecondary records remain outside the Grade 1–12 public pages.",
+      "Grade-not-stated records remain outside the Grade 1–12 public pages.",
+      "Empty grade sections remain in the JSON structure but are hidden publicly."
+    ]
+  },
+  "strand": {
+    "slug": "solutions-solubility",
+    "title": {
+      "en": "Solutions and Solubility",
+      "ar": "المحاليل والذوبانية"
+    },
+    "description": {
+      "en": "Solution formation, concentration units, dilution, solubility curves, saturation, and colligative properties.",
+      "ar": "تكوّن المحاليل ووحدات التركيز والتخفيف ومنحنيات الذوبانية والتشبع والخواص الجامعة."
+    }
+  },
+  "grades": [
+    {
+      "grade": "G1",
+      "label": "Grade 1",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G2",
+      "label": "Grade 2",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G3",
+      "label": "Grade 3",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G4",
+      "label": "Grade 4",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G5",
+      "label": "Grade 5",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G6",
+      "label": "Grade 6",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G7",
+      "label": "Grade 7",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G8",
+      "label": "Grade 8",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G9",
+      "label": "Grade 9",
+      "status": "pending-data",
+      "topics": [],
+      "mainTopicCount": 0,
+      "subtopicCount": 0
+    },
+    {
+      "grade": "G10",
+      "label": "Grade 10",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g10-solubility",
+          "title": "Solubility",
+          "subtopics": [
+            {
+              "id": "solubility-curves-saturation-and-factors-affecting-solubility",
+              "title": "Solubility curves, saturation, and factors affecting solubility"
+            }
+          ],
+          "sourceRows": [
+            44
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 1,
+      "subtopicCount": 1
+    },
+    {
+      "grade": "G11",
+      "label": "Grade 11",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g11-dilution",
+          "title": "Dilution",
+          "subtopics": [
+            {
+              "id": "dilution-calculations",
+              "title": "Dilution calculations"
+            }
+          ],
+          "sourceRows": [
+            78
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-solubility",
+          "title": "Solubility",
+          "subtopics": [
+            {
+              "id": "solubility-curves-saturation-and-factors-affecting-solubility",
+              "title": "Solubility curves, saturation, and factors affecting solubility"
+            }
+          ],
+          "sourceRows": [
+            79
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g11-solutions-and-concentration",
+          "title": "Solutions and Concentration",
+          "subtopics": [
+            {
+              "id": "solution-formation-and-concentration-units",
+              "title": "Solution formation and concentration units"
+            }
+          ],
+          "sourceRows": [
+            80
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 3,
+      "subtopicCount": 3
+    },
+    {
+      "grade": "G12",
+      "label": "Grade 12",
+      "status": "available",
+      "topics": [
+        {
+          "id": "g12-solubility",
+          "title": "Solubility",
+          "subtopics": [
+            {
+              "id": "solubility-curves-saturation-and-factors-affecting-solubility",
+              "title": "Solubility curves, saturation, and factors affecting solubility"
+            }
+          ],
+          "sourceRows": [
+            130
+          ],
+          "status": "approved-source"
+        },
+        {
+          "id": "g12-solutions-and-concentration",
+          "title": "Solutions and Concentration",
+          "subtopics": [
+            {
+              "id": "solution-formation-and-concentration-units",
+              "title": "Solution formation and concentration units"
+            }
+          ],
+          "sourceRows": [
+            131
+          ],
+          "status": "approved-source"
+        }
+      ],
+      "mainTopicCount": 2,
+      "subtopicCount": 2
+    }
+  ]
+}
