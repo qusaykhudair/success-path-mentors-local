@@ -8,6 +8,32 @@ interface N8nChatProps {
   locale: N8nChatLocale;
 }
 
+const persistentSessionStorageKey = 'spm-chat/sessionId';
+const n8nSessionStorageKey = 'n8n-chat/sessionId';
+
+function getPersistentSessionId(): string {
+  try {
+    const existingSessionId =
+      window.localStorage.getItem(persistentSessionStorageKey) ??
+      window.localStorage.getItem(n8nSessionStorageKey);
+    const sessionId = existingSessionId ?? window.crypto.randomUUID();
+
+    /*
+     * Keep an application-owned copy and synchronise the key used by the
+     * official widget. Passing the same value to createChat prevents the
+     * widget from rotating the session during a full page reload.
+     */
+    window.localStorage.setItem(persistentSessionStorageKey, sessionId);
+    window.localStorage.setItem(n8nSessionStorageKey, sessionId);
+
+    return sessionId;
+  } catch {
+    // Storage can be unavailable in locked-down browsers. The chat still works,
+    // but persistence is limited to the current page in that exceptional case.
+    return window.crypto.randomUUID();
+  }
+}
+
 const chatCopy = {
   en: {
     title: 'Success Path Mentors Assistant',
@@ -92,6 +118,7 @@ export function N8nChat({ locale }: N8nChatProps) {
         }
 
         const copy = chatCopy[locale];
+        const sessionId = getPersistentSessionId();
 
         chatApp = createChat({
           webhookUrl,
@@ -103,15 +130,14 @@ export function N8nChat({ locale }: N8nChatProps) {
           mode: 'window',
           chatInputKey: 'chatInput',
           chatSessionKey: 'sessionId',
+          sessionId,
           /*
-           * This webhook is configured for normal `sendMessage` requests but
-           * does not reliably return the history payload expected by the
-           * widget's `loadPreviousSession` action. When that request fails,
-           * the widget can remain without a current session and render the
-           * footer without the message input. Starting a fresh chat session
-           * creates the session ID immediately and keeps the input available.
+           * Reuse the session ID stored by @n8n/chat and ask the Chat Trigger
+           * to restore the matching Redis history. This keeps a visitor's
+           * conversation available after a refresh while preserving the
+           * widget's per-browser session isolation.
            */
-          loadPreviousSession: false,
+          loadPreviousSession: true,
           metadata: {
             source: 'success-path-mentors-website',
             locale,
