@@ -25,6 +25,7 @@ In the n8n workflow:
    - Any active preview/staging domain used for testing.
 4. Keep the expected input keys as `chatInput` and `sessionId`, or update both the workflow and `src/components/chat/n8n-chat.tsx` together.
 5. Streaming is disabled in the website code. Enable it in both the Chat Trigger and the component only when the workflow is configured for streaming responses.
+6. Set **Load Previous Session** to **From Memory** and connect the Chat Trigger and AI Agent to Redis chat memory configured for the connected Chat Trigger session ID.
 
 ## Files added or changed
 
@@ -52,6 +53,8 @@ Then test both:
 If the widget appears but sending a message fails, check the browser Network tab for CORS errors and verify the n8n workflow execution log.
 
 
-## Input-field fix in this build
+## Persistent chat sessions
 
-The embedded widget uses `loadPreviousSession: false`. The configured webhook does not reliably return the history response expected for `action=loadPreviousSession`; enabling it can leave the widget without a session ID and hide the message input. A fresh session is therefore created immediately, while n8n can still maintain memory for messages sent during that session through `sessionId`.
+The embedded widget uses `loadPreviousSession: true`. The website owns a tab-scoped session ID under `spm-chat/sessionId` in browser `sessionStorage` and passes it explicitly to `createChat`. The ID survives a full page refresh in the same tab, while a newly opened tab receives an independent conversation. The n8n Chat Trigger then loads the matching Redis history. The Chat Trigger must use **Load Previous Session → From Memory**, and its memory connection must use the same Redis-backed session ID as the AI Agent.
+
+To verify persistence and isolation, send a test name, refresh the same tab, and ask for the name again. Then open the site in a new tab: it must start an independent session and must not know the first tab's test data. A private/incognito window must also remain independent.
