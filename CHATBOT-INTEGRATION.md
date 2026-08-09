@@ -55,20 +55,6 @@ If the widget appears but sending a message fails, check the browser Network tab
 
 ## Persistent chat sessions
 
-<<<<<<< HEAD
 The embedded widget uses `loadPreviousSession: true`. The website owns a tab-scoped session ID under `spm-chat/sessionId` in browser `sessionStorage` and passes it explicitly to `createChat`. The ID survives a full page refresh in the same tab, while a newly opened tab receives an independent conversation. The n8n Chat Trigger then loads the matching Redis history. The Chat Trigger must use **Load Previous Session → From Memory**, and its memory connection must use the same Redis-backed session ID as the AI Agent.
 
 To verify persistence and isolation, send a test name, refresh the same tab, and ask for the name again. Then open the site in a new tab: it must start an independent session and must not know the first tab's test data. A private/incognito window must also remain independent.
-=======
-<<<<<<< HEAD
-The embedded widget uses `loadPreviousSession: true`. The website owns a persistent session ID under `spm-chat/sessionId`, mirrors it to the widget's `n8n-chat/sessionId` key, and passes it explicitly to `createChat`. This prevents the widget from rotating the session ID during a full page refresh. The n8n Chat Trigger then loads the matching Redis history. The Chat Trigger must use **Load Previous Session → From Memory**, and its memory connection must use the same Redis-backed session ID as the AI Agent.
-=======
-<<<<<<< HEAD
-The embedded widget uses `loadPreviousSession: true`. The website owns a persistent session ID under `spm-chat/sessionId`, mirrors it to the widget's `n8n-chat/sessionId` key, and passes it explicitly to `createChat`. This prevents the widget from rotating the session ID during a full page refresh. The n8n Chat Trigger then loads the matching Redis history. The Chat Trigger must use **Load Previous Session → From Memory**, and its memory connection must use the same Redis-backed session ID as the AI Agent.
-=======
-The embedded widget uses `loadPreviousSession: true`. The official widget keeps its session ID in browser local storage and asks the n8n Chat Trigger to load the matching history after a refresh. The Chat Trigger must use **Load Previous Session → From Memory**, and its memory connection must use the same Redis-backed session ID as the AI Agent.
->>>>>>> 2b7611bb2f85aa887dfd1ba1b4bd5b13063439f7
->>>>>>> 73cdef5df10d954b02428de758347ee2876ccc7b
-
-To verify persistence, send a message containing a test name, refresh the same browser tab, and ask for the name again. A private/incognito window must start with a different session and must not know the first window's test data.
->>>>>>> 1eb919df77211fc805e53ac8d692b978860a8d10

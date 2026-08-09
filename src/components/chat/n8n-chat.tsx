@@ -8,17 +8,11 @@ interface N8nChatProps {
   locale: N8nChatLocale;
 }
 
-<<<<<<< HEAD
 const tabSessionStorageKey = 'spm-chat/sessionId';
-=======
-const persistentSessionStorageKey = 'spm-chat/sessionId';
-const n8nSessionStorageKey = 'n8n-chat/sessionId';
->>>>>>> 1eb919df77211fc805e53ac8d692b978860a8d10
 
 function getPersistentSessionId(): string {
   try {
     const existingSessionId =
-<<<<<<< HEAD
       window.sessionStorage.getItem(tabSessionStorageKey);
     const sessionId = existingSessionId ?? window.crypto.randomUUID();
 
@@ -30,19 +24,6 @@ function getPersistentSessionId(): string {
     window.sessionStorage.setItem(tabSessionStorageKey, sessionId);
     // Remove the application-owned localStorage key from the previous build.
     window.localStorage.removeItem(tabSessionStorageKey);
-=======
-      window.localStorage.getItem(persistentSessionStorageKey) ??
-      window.localStorage.getItem(n8nSessionStorageKey);
-    const sessionId = existingSessionId ?? window.crypto.randomUUID();
-
-    /*
-     * Keep an application-owned copy and synchronise the key used by the
-     * official widget. Passing the same value to createChat prevents the
-     * widget from rotating the session during a full page reload.
-     */
-    window.localStorage.setItem(persistentSessionStorageKey, sessionId);
-    window.localStorage.setItem(n8nSessionStorageKey, sessionId);
->>>>>>> 1eb919df77211fc805e53ac8d692b978860a8d10
 
     return sessionId;
   } catch {
