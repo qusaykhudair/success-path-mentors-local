@@ -885,70 +885,6 @@
   text-align: left;
 }
 
-/* Quick-topic buttons keep common questions one click away while retaining
-   the standard n8n text input for questions outside these categories. */
-.spm-chat-categories-host {
-  flex: 0 0 auto;
-  border-top: 1px solid rgb(var(--border));
-  background: #ffffff;
-}
-
-.spm-chat-categories {
-  padding: 0.65rem 0.75rem 0.55rem;
-}
-
-.spm-chat-categories__title {
-  margin: 0 0 0.45rem;
-  color: rgb(var(--muted-foreground));
-  font-size: 0.78rem;
-  font-weight: 700;
-}
-
-.spm-chat-categories__grid {
-  display: grid;
-  max-height: 7.5rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.4rem;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  scrollbar-width: thin;
-}
-
-.spm-chat-category {
-  min-height: 2.25rem;
-  border: 1px solid rgb(var(--accent) / 0.45);
-  border-radius: 0.7rem;
-  background: rgb(var(--accent) / 0.08);
-  color: rgb(var(--primary));
-  cursor: pointer;
-  font: inherit;
-  font-size: 0.78rem;
-  font-weight: 700;
-  line-height: 1.3;
-  padding: 0.45rem 0.55rem;
-  text-align: inherit;
-  transition:
-    background-color 0.15s ease,
-    border-color 0.15s ease,
-    transform 0.15s ease;
-}
-
-.spm-chat-category:hover:not(:disabled) {
-  border-color: rgb(var(--accent));
-  background: rgb(var(--accent) / 0.16);
-  transform: translateY(-1px);
-}
-
-.spm-chat-category:focus-visible {
-  outline: 2px solid rgb(var(--accent));
-  outline-offset: 2px;
-}
-
-.spm-chat-category:disabled {
-  cursor: wait;
-  opacity: 0.55;
-}
-
 /* Keep the chat clear of mobile browser chrome and the back-to-top button. */
 @media (min-width: 640px) {
   :root {
@@ -970,11 +906,5 @@
     --chat--window--height: min(78dvh, 640px);
     --chat--window--right: 0.5rem;
     --chat--window--bottom: calc(env(safe-area-inset-bottom, 0px) + 0.5rem);
-  }
-}
-
-@media (max-width: 350px) {
-  .spm-chat-categories__grid {
-    grid-template-columns: 1fr;
   }
 }
