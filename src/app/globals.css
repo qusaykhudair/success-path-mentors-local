@@ -885,6 +885,18 @@
   text-align: left;
 }
 
+/* =========================================================
+   Bidi Rendering Fixes for Mixed Content
+   Force chat bubbles to determine their own RTL/LTR direction
+   using unicode-bidi and native dir attributes.
+   ========================================================= */
+#n8n-chat .chat-message,
+#n8n-chat .chat-message .n8n-markdown,
+#n8n-chat .chat-message p {
+  unicode-bidi: plaintext !important;
+  text-align: start !important;
+}
+
 /* Keep the chat clear of mobile browser chrome and the back-to-top button. */
 @media (min-width: 640px) {
   :root {

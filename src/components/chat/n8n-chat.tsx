@@ -118,6 +118,7 @@ export function N8nChat({ locale }: N8nChatProps) {
 
     let cancelled = false;
     let chatApp: { unmount: () => void } | null = null;
+    let observer: MutationObserver | null = null;
 
     const initializeChat = async () => {
       try {
@@ -201,6 +202,28 @@ export function N8nChat({ locale }: N8nChatProps) {
           allowFileUploads: false,
           enableStreaming: false,
         });
+
+        // Ensure newly injected messages dynamically configure their Bidi layout
+        const applyMessageDirection = () => {
+          const messages = target.querySelectorAll('.chat-message');
+          messages.forEach((element) => {
+            if (!element.hasAttribute('dir')) {
+              element.setAttribute('dir', 'auto');
+            }
+          });
+        };
+
+        applyMessageDirection();
+
+        observer = new MutationObserver(() => {
+          applyMessageDirection();
+        });
+
+        observer.observe(target, {
+          childList: true,
+          subtree: true,
+        });
+
       } catch (error) {
         target.dataset.initialized = 'false';
         console.error('N8nChat: Failed to initialize the n8n chat widget.', error);
@@ -211,6 +234,7 @@ export function N8nChat({ locale }: N8nChatProps) {
 
     return () => {
       cancelled = true;
+      observer?.disconnect();
       chatApp?.unmount();
       target.replaceChildren();
       delete target.dataset.initialized;
