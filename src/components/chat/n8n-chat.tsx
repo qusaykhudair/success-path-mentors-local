@@ -65,18 +65,47 @@ const chatCopy = {
 export function N8nChat({ locale }: N8nChatProps) {
   useEffect(() => {
     const target = document.getElementById('n8n-chat');
-    const webhookUrl = process.env.NEXT_PUBLIC_N8N_CHAT_WEBHOOK_URL?.trim();
+
+    const prodWebhookUrl =
+      process.env.NEXT_PUBLIC_N8N_CHAT_WEBHOOK_URL?.trim();
+
+    const canaryWebhookUrl =
+      process.env.NEXT_PUBLIC_CANARY_CHAT_WEBHOOK_URL?.trim();
 
     if (!target) {
       return;
     }
 
-    if (!webhookUrl) {
+    if (!prodWebhookUrl) {
       console.error(
         'N8nChat: NEXT_PUBLIC_N8N_CHAT_WEBHOOK_URL is not configured.'
       );
       return;
     }
+
+    /*
+     * Use the existing persistent chat session ID to make the canary
+     * assignment sticky. The same session will always go to the same workflow.
+     */
+    const sessionId = getPersistentSessionId();
+
+    const getCanaryBucket = (value: string) => {
+      let hash = 0;
+
+      for (let i = 0; i < value.length; i += 1) {
+        hash = (hash * 31 + value.charCodeAt(i)) >>> 0;
+      }
+
+      return hash % 100;
+    };
+
+    const isCanarySession =
+      Boolean(canaryWebhookUrl) &&
+      getCanaryBucket(sessionId) < 5;
+
+    const webhookUrl = isCanarySession
+      ? canaryWebhookUrl!
+      : prodWebhookUrl;
 
     try {
       const parsedWebhookUrl = new URL(webhookUrl);
@@ -89,7 +118,7 @@ export function N8nChat({ locale }: N8nChatProps) {
       }
     } catch (error) {
       console.error(
-        'N8nChat: NEXT_PUBLIC_N8N_CHAT_WEBHOOK_URL is not a valid URL.',
+        'N8nChat: Selected webhook URL is not a valid URL.',
         error
       );
       return;
@@ -117,7 +146,6 @@ export function N8nChat({ locale }: N8nChatProps) {
         }
 
         const copy = chatCopy[locale];
-        const sessionId = getPersistentSessionId();
 
         chatApp = createChat({
           webhookUrl,
@@ -130,25 +158,29 @@ export function N8nChat({ locale }: N8nChatProps) {
           chatInputKey: 'chatInput',
           chatSessionKey: 'sessionId',
           sessionId,
-          /*
-           * Reuse the session ID stored by @n8n/chat and ask the Chat Trigger
-           * to restore the matching Redis history. This keeps a visitor's
-           * conversation available after a refresh while preserving the
-           * widget's per-browser session isolation.
-           */
+
           loadPreviousSession: true,
+
           metadata: {
             source: 'success-path-mentors-website',
             locale,
             page: window.location.pathname,
+
+            /*
+             * Useful during the canary period so we can verify which route
+             * handled the conversation.
+             */
+            releaseChannel: isCanarySession
+              ? 'canary-rc4-2'
+              : 'production',
           },
+
           showWelcomeScreen: false,
-          /*
-           * The n8n widget currently uses the `en` translation slot for custom
-           * copy. We fill that slot with the active website language.
-           */
+
           defaultLanguage: 'en',
+
           initialMessages: [...copy.initialMessages],
+
           i18n: {
             en: {
               title: copy.title,
@@ -159,12 +191,16 @@ export function N8nChat({ locale }: N8nChatProps) {
               closeButtonTooltip: copy.closeButtonTooltip,
             },
           },
+
           allowFileUploads: false,
           enableStreaming: false,
         });
       } catch (error) {
         target.dataset.initialized = 'false';
-        console.error('N8nChat: Failed to initialize the n8n chat widget.', error);
+        console.error(
+          'N8nChat: Failed to initialize the n8n chat widget.',
+          error
+        );
       }
     };
 
