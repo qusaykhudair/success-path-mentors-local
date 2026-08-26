@@ -11,10 +11,21 @@ interface N8nChatProps {
 const tabSessionStorageKey = 'spm-chat/sessionId';
 
 function getPersistentSessionId(): string {
+  const getUUID = () => {
+    if (typeof window !== 'undefined' && window.crypto && window.crypto.randomUUID) {
+      return window.crypto.randomUUID();
+    }
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+      const r = (Math.random() * 16) | 0;
+      const v = c === 'x' ? r : (r & 0x3) | 0x8;
+      return v.toString(16);
+    });
+  };
+
   try {
     const existingSessionId =
       window.sessionStorage.getItem(tabSessionStorageKey);
-    const sessionId = existingSessionId ?? window.crypto.randomUUID();
+    const sessionId = existingSessionId ?? getUUID();
 
     /*
      * sessionStorage survives a refresh but is isolated per browser tab.
@@ -29,7 +40,7 @@ function getPersistentSessionId(): string {
   } catch {
     // Storage can be unavailable in locked-down browsers. The chat still works,
     // but persistence is limited to the current page in that exceptional case.
-    return window.crypto.randomUUID();
+    return getUUID();
   }
 }
 
