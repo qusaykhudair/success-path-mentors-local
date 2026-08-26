@@ -903,8 +903,54 @@
 @media (max-width: 480px) {
   :root {
     --chat--window--width: calc(100vw - 1rem);
-    --chat--window--height: min(78dvh, 640px);
+    
+    /* Safari fallback using 100vh and -webkit-fill-available */
+    --chat--window--height: calc(100vh - env(safe-area-inset-bottom, 0px) - 5rem);
+    --chat--window--height: calc(-webkit-fill-available - env(safe-area-inset-bottom, 0px) - 5rem);
+    
+    /* Modern viewport units for supported browsers */
+    @supports (height: 100dvh) {
+      --chat--window--height: calc(100dvh - env(safe-area-inset-bottom, 0px) - 5rem);
+    }
+    
     --chat--window--right: 0.5rem;
     --chat--window--bottom: calc(env(safe-area-inset-bottom, 0px) + 0.5rem);
   }
+}
+
+/* =========================================================
+   Safari iOS Layout Fixes for n8n Chat
+   Ensure the input footer isn't clipped by the bottom bar.
+   ========================================================= */
+
+#n8n-chat,
+#n8n-chat > div {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+#n8n-chat .chat-window {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 0 !important;
+}
+
+#n8n-chat .chat-layout {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto;
+  min-height: 0 !important;
+}
+
+#n8n-chat .chat-messages {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  padding-bottom: env(safe-area-inset-bottom, 0.5rem) !important;
+}
+
+#n8n-chat .chat-footer {
+  flex-shrink: 0 !important;
+  padding-bottom: env(safe-area-inset-bottom, 0.5rem) !important;
 }
