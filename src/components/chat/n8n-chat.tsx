@@ -130,6 +130,10 @@ export function N8nChat({ locale }: N8nChatProps) {
         const copy = chatCopy[locale];
         const sessionId = getPersistentSessionId();
 
+        if (process.env.NODE_ENV === 'development') {
+          console.debug('[N8nChat] sessionId:', sessionId);
+        }
+
         chatApp = createChat({
           webhookUrl,
           webhookConfig: {
