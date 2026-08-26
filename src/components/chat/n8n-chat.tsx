@@ -132,6 +132,30 @@ export function N8nChat({ locale }: N8nChatProps) {
 
         if (process.env.NODE_ENV === 'development') {
           console.debug('[N8nChat] sessionId:', sessionId);
+          // Temporary fetch interceptor to log loadPreviousSession request and response
+          if (!window.__fetchIntercepted) {
+            window.__fetchIntercepted = true;
+            const originalFetch = window.fetch;
+            window.fetch = async (...args) => {
+              const url = args[0];
+              if (typeof url === 'string' && url.includes('/chat')) {
+                const options = args[1];
+                if (options && options.body && typeof options.body === 'string') {
+                  const body = JSON.parse(options.body);
+                  if (body.action === 'loadPreviousSession') {
+                    console.debug('[N8nChat DEBUG] loadPreviousSession Payload:', body);
+                    const response = await originalFetch(...args);
+                    const clone = response.clone();
+                    const respText = await clone.text();
+                    console.debug('[N8nChat DEBUG] loadPreviousSession Response Status:', response.status);
+                    console.debug('[N8nChat DEBUG] loadPreviousSession Response Body:', respText);
+                    return response;
+                  }
+                }
+              }
+              return originalFetch(...args);
+            };
+          }
         }
 
         chatApp = createChat({
