@@ -29,12 +29,14 @@ In the n8n workflow:
 
 ## Files added or changed
 
+- `src/app/api/chat/route.ts` (Next.js same-origin API proxy to prevent CORS, Safari ITP, and network failures)
 - `src/components/chat/n8n-chat.tsx`
 - `src/app/[locale]/layout.tsx`
 - `src/app/globals.css`
 - `src/components/layout/back-to-top-button.tsx`
 
 The back-to-top button is positioned above the chatbot button to prevent overlap. The WhatsApp button remains on the left side.
+Chat requests route through `/api/chat` for same-origin security and resilience across mobile Safari and desktop browsers.
 
 ## Local verification
 

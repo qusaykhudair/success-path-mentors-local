@@ -10,6 +10,73 @@ interface N8nChatProps {
 
 const tabSessionStorageKey = 'spm-chat/sessionId';
 
+/**
+ * Safely polyfills/wraps storage so that Safari Private Browsing mode
+ * or locked-down storage policies never throw QuotaExceededError or SecurityError.
+ */
+function ensureSafeStorage(): void {
+  if (typeof window === 'undefined') return;
+
+  const memoryStore = new Map<string, string>();
+
+  const isStorageWorking = (storage: Storage): boolean => {
+    try {
+      const testKey = '__spm_storage_test__';
+      storage.setItem(testKey, '1');
+      storage.removeItem(testKey);
+      return true;
+    } catch {
+      return false;
+    }
+  };
+
+  try {
+    if (!isStorageWorking(window.localStorage)) {
+      const fallbackStorage: Partial<Storage> = {
+        getItem: (key: string) => memoryStore.get(key) ?? null,
+        setItem: (key: string, value: string) => {
+          memoryStore.set(key, String(value));
+        },
+        removeItem: (key: string) => {
+          memoryStore.delete(key);
+        },
+        clear: () => {
+          memoryStore.clear();
+        },
+        key: (index: number) => Array.from(memoryStore.keys())[index] ?? null,
+        get length() {
+          return memoryStore.size;
+        },
+      };
+
+      try {
+        Object.defineProperty(window, 'localStorage', {
+          value: fallbackStorage,
+          configurable: true,
+          writable: true,
+        });
+      } catch {
+        // Direct assignment fallback
+        (window as unknown as { localStorage: typeof fallbackStorage }).localStorage = fallbackStorage;
+      }
+    }
+  } catch {
+    // If full replacement fails, safely patch setItem to prevent crashes
+    try {
+      const originalSetItem = window.localStorage.setItem.bind(window.localStorage);
+      window.localStorage.setItem = (key: string, value: string) => {
+        try {
+          originalSetItem(key, value);
+        } catch {
+          memoryStore.set(key, String(value));
+        }
+      };
+    } catch {
+      // Ignore
+    }
+  }
+}
+
 function getPersistentSessionId(): string {
   const getUUID = () => {
     if (typeof window !== 'undefined' && window.crypto && window.crypto.randomUUID) {
@@ -33,13 +100,11 @@ function getPersistentSessionId(): string {
      * active tab's session with its origin-wide localStorage value.
      */
     window.sessionStorage.setItem(tabSessionStorageKey, sessionId);
-    // Remove the application-owned localStorage key from the previous build.
     window.localStorage.removeItem(tabSessionStorageKey);
 
     return sessionId;
   } catch {
-    // Storage can be unavailable in locked-down browsers. The chat still works,
-    // but persistence is limited to the current page in that exceptional case.
+    // Storage can be unavailable in locked-down browsers.
     return getUUID();
   }
 }
@@ -71,38 +136,15 @@ const chatCopy = {
 
 /**
  * Loads the official n8n chat widget only in the browser.
- * The webhook URL remains configurable through .env.local / hosting settings.
+ * Uses /api/chat proxy to eliminate CORS & Safari ITP issues,
+ * and safeguards loadPreviousSession to ensure the message input field
+ * always renders reliably.
  */
 export function N8nChat({ locale }: N8nChatProps) {
   useEffect(() => {
     const target = document.getElementById('n8n-chat');
-    const webhookUrl = process.env.NEXT_PUBLIC_N8N_CHAT_WEBHOOK_URL?.trim();
 
     if (!target) {
-      return;
-    }
-
-    if (!webhookUrl) {
-      console.error(
-        'N8nChat: NEXT_PUBLIC_N8N_CHAT_WEBHOOK_URL is not configured.'
-      );
-      return;
-    }
-
-    try {
-      const parsedWebhookUrl = new URL(webhookUrl);
-
-      if (
-        parsedWebhookUrl.protocol !== 'https:' &&
-        parsedWebhookUrl.protocol !== 'http:'
-      ) {
-        throw new Error('Unsupported webhook protocol.');
-      }
-    } catch (error) {
-      console.error(
-        'N8nChat: NEXT_PUBLIC_N8N_CHAT_WEBHOOK_URL is not a valid URL.',
-        error
-      );
       return;
     }
 
@@ -116,9 +158,73 @@ export function N8nChat({ locale }: N8nChatProps) {
 
     target.dataset.initialized = 'true';
 
+    // Ensure Safari Private Browsing doesn't crash on localStorage operations
+    ensureSafeStorage();
+
+    // Use internal /api/chat proxy for same-origin reliability (zero CORS, zero Safari ITP blocks)
+    const webhookUrl = `${window.location.origin}/api/chat`;
+
     let cancelled = false;
     let chatApp: { unmount: () => void } | null = null;
     let observer: MutationObserver | null = null;
+
+    /*
+     * Resilient fetch interceptor for @n8n/chat:
+     * Guarantees that if loadPreviousSession experiences a network error,
+     * timeout, or server error, it gracefully returns { data: [] } with status 200.
+     * This prevents @n8n/chat from crashing or leaving the session in an uninitialized
+     * state where "Powered by n8n" replaces the message input field.
+     */
+    if (!window.__fetchIntercepted) {
+      window.__fetchIntercepted = true;
+      const originalFetch = window.fetch;
+
+      window.fetch = async (...args: Parameters<typeof fetch>): Promise<Response> => {
+        const url = args[0];
+        const options = args[1];
+
+        const isChatCall =
+          typeof url === 'string' &&
+          (url.includes('/api/chat') || url.includes('/chat'));
+
+        if (isChatCall && options && typeof options.body === 'string') {
+          try {
+            const body = JSON.parse(options.body) as Record<string, unknown>;
+
+            if (body.action === 'loadPreviousSession') {
+              try {
+                const response = await originalFetch(...args);
+                if (response.ok) {
+                  return response;
+                }
+                console.warn(
+                  '[N8nChat] loadPreviousSession returned non-200 status:',
+                  response.status
+                );
+                // Return safe empty session fallback so the input box renders immediately
+                return new Response(JSON.stringify({ data: [] }), {
+                  status: 200,
+                  headers: { 'Content-Type': 'application/json' },
+                });
+              } catch (networkError) {
+                console.warn(
+                  '[N8nChat] loadPreviousSession fetch failed, using fallback:',
+                  networkError
+                );
+                return new Response(JSON.stringify({ data: [] }), {
+                  status: 200,
+                  headers: { 'Content-Type': 'application/json' },
+                });
+              }
+            }
+          } catch {
+            // Not a JSON payload, proceed normally
+          }
+        }
+
+        return originalFetch(...args);
+      };
+    }
 
     const initializeChat = async () => {
       try {
@@ -130,34 +236,6 @@ export function N8nChat({ locale }: N8nChatProps) {
 
         const copy = chatCopy[locale];
         const sessionId = getPersistentSessionId();
-
-        if (process.env.NODE_ENV === 'development') {
-          console.debug('[N8nChat] sessionId:', sessionId);
-          // Temporary fetch interceptor to log loadPreviousSession request and response
-          if (!window.__fetchIntercepted) {
-            window.__fetchIntercepted = true;
-            const originalFetch = window.fetch;
-            window.fetch = async (...args) => {
-              const url = args[0];
-              if (typeof url === 'string' && url.includes('/chat')) {
-                const options = args[1];
-                if (options && options.body && typeof options.body === 'string') {
-                  const body = JSON.parse(options.body);
-                  if (body.action === 'loadPreviousSession') {
-                    console.debug('[N8nChat DEBUG] loadPreviousSession Payload:', body);
-                    const response = await originalFetch(...args);
-                    const clone = response.clone();
-                    const respText = await clone.text();
-                    console.debug('[N8nChat DEBUG] loadPreviousSession Response Status:', response.status);
-                    console.debug('[N8nChat DEBUG] loadPreviousSession Response Body:', respText);
-                    return response;
-                  }
-                }
-              }
-              return originalFetch(...args);
-            };
-          }
-        }
 
         chatApp = createChat({
           webhookUrl,
@@ -171,10 +249,7 @@ export function N8nChat({ locale }: N8nChatProps) {
           chatSessionKey: 'sessionId',
           sessionId,
           /*
-           * Reuse the session ID stored by @n8n/chat and ask the Chat Trigger
-           * to restore the matching Redis history. This keeps a visitor's
-           * conversation available after a refresh while preserving the
-           * widget's per-browser session isolation.
+           * Reuses session ID stored per tab to maintain context across refreshes.
            */
           loadPreviousSession: true,
           metadata: {
@@ -183,10 +258,6 @@ export function N8nChat({ locale }: N8nChatProps) {
             page: window.location.pathname,
           },
           showWelcomeScreen: false,
-          /*
-           * The n8n widget currently uses the `en` translation slot for custom
-           * copy. We fill that slot with the active website language.
-           */
           defaultLanguage: 'en',
           initialMessages: [...copy.initialMessages],
           i18n: {
@@ -223,7 +294,6 @@ export function N8nChat({ locale }: N8nChatProps) {
           childList: true,
           subtree: true,
         });
-
       } catch (error) {
         target.dataset.initialized = 'false';
         console.error('N8nChat: Failed to initialize the n8n chat widget.', error);
