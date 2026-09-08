@@ -1,6 +1,8 @@
 // src/app/[locale]/layout.tsx
 
 import type { Metadata } from 'next';
+import { getDefaultMarket } from '@/config/markets';
+import { getDefaultOpenGraphLocale } from '@/lib/market-display';
 import type { ReactNode } from 'react';
 
 import { NextIntlClientProvider } from 'next-intl';
@@ -11,7 +13,7 @@ import {
   setRequestLocale,
 } from 'next-intl/server';
 
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 
 import { FloatingWhatsAppButton } from '@/components/layout/floating-whatsapp-button';
 import { BackToTopButton } from '@/components/layout/back-to-top-button';
@@ -103,15 +105,10 @@ export async function generateMetadata({
     openGraph: {
       siteName: t('siteName'),
 
-      locale:
-        locale === 'ar'
-          ? 'ar_CA'
-          : 'en_CA',
+      locale: getDefaultOpenGraphLocale(locale),
 
       alternateLocale: [
-        locale === 'ar'
-          ? 'en_CA'
-          : 'ar_CA',
+        getDefaultOpenGraphLocale(locale === 'ar' ? 'en' : 'ar'),
       ],
 
       type: 'website',
@@ -128,6 +125,10 @@ export default async function LocaleLayout({
   params,
 }: LocaleLayoutProps) {
   const { locale } = await params;
+
+  if (locale === 'fr') {
+    redirect('/fr/programme-francais');
+  }
 
   const isSupportedLocale = (
     routing.locales as readonly string[]
@@ -202,10 +203,7 @@ export default async function LocaleLayout({
         }
       : {}),
 
-    areaServed: [
-      { '@type': 'Country', name: 'Canada' },
-      { '@type': 'Country', name: 'United States' },
-    ],
+    areaServed: getDefaultMarket().organization.areaServed,
 
     knowsAbout: [
       'K-12 online tutoring',
@@ -223,10 +221,10 @@ export default async function LocaleLayout({
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer support',
-      telephone: '+1-647-787-5999',
-      email: 'successpathmentors@gmail.com',
+      telephone: getDefaultMarket().contact.phone?.replace(/\s/g, '-'),
+      email: getDefaultMarket().contact.publishedEmail,
       availableLanguage: ['English', 'Arabic'],
-      areaServed: ['CA', 'US'],
+      areaServed: getDefaultMarket().supportedCountries,
     },
   };
 
@@ -250,6 +248,7 @@ export default async function LocaleLayout({
       lang={locale}
       dir={dir}
       className={dinNext.variable}
+      suppressHydrationWarning
     >
       <body
         className="

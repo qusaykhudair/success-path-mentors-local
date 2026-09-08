@@ -10,6 +10,8 @@
  * -----------------------------------------------------------------------------
  */
 
+import { getDefaultMarket } from '@/config/markets';
+
 export const SITE_URL = 'https://successpathmentors.net';
 
 /**
@@ -23,7 +25,7 @@ export const SITE = {
   name: 'Success Path Mentors',
 
   /** Registered / legal business name */
-  legalName: 'Commenda Inc. operating as Success Path Mentors',
+  legalName: getDefaultMarket().organization.legalName,
 
   /** Brand slogan */
   tagline: 'Empowering Students. Inspiring Success.',
@@ -90,17 +92,17 @@ export const ORGANIZATION = {
  */
 
 export const CONTACT = {
-  phone: '+1 647 787 5999',
+  phone: getDefaultMarket().contact.phone,
 
-  whatsapp: '+1 647 787 5999',
+  whatsapp: getDefaultMarket().contact.whatsappDisplay,
 
-  email: 'successpathmentors@gmail.com',
+  email: getDefaultMarket().contact.publishedEmail,
 
   address: '',
 
   city: '',
 
-  country: 'Canada',
+  country: getDefaultMarket().registration.countryValue,
 
   postalCode: '',
 } as const;

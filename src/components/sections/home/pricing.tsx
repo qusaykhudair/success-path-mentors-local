@@ -27,6 +27,7 @@ import {
 import { cn } from '@/lib/utils';
 import { buildPackageInquiryMessage, buildWhatsAppHref } from '@/lib/whatsapp';
 import { pricingPlans } from '@/content/pricing-plans';
+import { formatMarketPrice } from '@/lib/market-display';
 
 interface Plan {
   name: string;
@@ -50,22 +51,7 @@ export async function Pricing() {
     return null;
   }
 
-  const dollarNumber =
-    new Intl.NumberFormat(
-      'en-US',
-      {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 2,
-      }
-    );
-
-  function formatDollar(
-    value: number
-  ): string {
-    return `$${dollarNumber.format(
-      value
-    )}`;
-  }
+  const formatDollar = formatMarketPrice;
 
   function whatsappHref(plan: Plan): string {
     return buildWhatsAppHref(

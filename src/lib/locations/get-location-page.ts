@@ -2,6 +2,9 @@ import type {
   SiteLocale,
 } from '@/config/site';
 import {
+  getLocationEducationResources,
+} from '@/content/locations/education-resources';
+import {
   getLocationDefinitionById,
   getLocationDefinitionBySegments,
   localizeLocationPage,
@@ -9,6 +12,42 @@ import {
 import type {
   LocalizedLocationPage,
 } from '@/types/location';
+
+function withEducationResources(
+  page: LocalizedLocationPage,
+  locale: SiteLocale
+): LocalizedLocationPage {
+  const additionalResources =
+    getLocationEducationResources(
+      page.id,
+      locale
+    );
+
+  if (additionalResources.length === 0) {
+    return page;
+  }
+
+  const resourcesByUrl = new Map(
+    page.resources.map((resource) => [
+      resource.url,
+      resource,
+    ])
+  );
+
+  for (const resource of additionalResources) {
+    resourcesByUrl.set(
+      resource.url,
+      resource
+    );
+  }
+
+  return {
+    ...page,
+    resources: Array.from(
+      resourcesByUrl.values()
+    ),
+  };
+}
 
 export function getLocalizedLocationPage(
   locale: SiteLocale,
@@ -19,12 +58,17 @@ export function getLocalizedLocationPage(
       segments
     );
 
-  return definition
-    ? localizeLocationPage(
-        definition,
-        locale
-      )
-    : null;
+  if (!definition) {
+    return null;
+  }
+
+  return withEducationResources(
+    localizeLocationPage(
+      definition,
+      locale
+    ),
+    locale
+  );
 }
 
 export function getLocalizedLocationPageById(
@@ -34,12 +78,17 @@ export function getLocalizedLocationPageById(
   const definition =
     getLocationDefinitionById(id);
 
-  return definition
-    ? localizeLocationPage(
-        definition,
-        locale
-      )
-    : null;
+  if (!definition) {
+    return null;
+  }
+
+  return withEducationResources(
+    localizeLocationPage(
+      definition,
+      locale
+    ),
+    locale
+  );
 }
 
 export function getLocationAncestors(

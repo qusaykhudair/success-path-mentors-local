@@ -1,4 +1,5 @@
 'use client';
+import { getDefaultTelephoneHref } from '@/lib/market-display';
 
 import {
   useCallback,
@@ -51,6 +52,10 @@ interface MobileNavProps {
   closeMenuLabel: string;
   phoneLabel: string;
   phoneNumber: string;
+  loginLabel: string;
+  loginHref: string;
+  registerLabel: string;
+  registerHref: string;
 }
 
 function getFocusableElements(
@@ -95,6 +100,10 @@ export function MobileNav({
   closeMenuLabel,
   phoneLabel,
   phoneNumber,
+  loginLabel,
+  loginHref,
+  registerLabel,
+  registerHref,
 }: MobileNavProps) {
   const [open, setOpen] =
     useState(false);
@@ -781,9 +790,34 @@ export function MobileNav({
             pt-5
           "
         >
+          <div className="mb-4 grid grid-cols-2 gap-2">
+            <a
+              href={loginHref}
+              onClick={() => closeAll()}
+              className={buttonVariants({
+                variant: 'outline',
+                size: 'md',
+                className: 'w-full',
+              })}
+            >
+              {loginLabel}
+            </a>
+            <a
+              href={registerHref}
+              onClick={() => closeAll()}
+              className={buttonVariants({
+                variant: 'accent',
+                size: 'md',
+                className: 'w-full',
+              })}
+            >
+              {registerLabel}
+            </a>
+          </div>
+
           <div className="mb-3 grid grid-cols-[auto_1fr] gap-2">
             <a
-              href="tel:+16477875999"
+              href={getDefaultTelephoneHref()}
               onClick={() => closeAll()}
               aria-label={`${phoneLabel} ${phoneNumber}`}
               className="inline-flex min-h-touch min-w-touch items-center justify-center rounded-button border border-border bg-background text-accent transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
@@ -791,7 +825,7 @@ export function MobileNav({
               <Phone aria-hidden="true" className="h-5 w-5" />
             </a>
             <a
-              href="tel:+16477875999"
+              href={getDefaultTelephoneHref()}
               onClick={() => closeAll()}
               className="flex min-h-touch flex-col items-start justify-center rounded-button border border-border bg-background px-3 text-start transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >

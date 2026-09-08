@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { getDefaultOpenGraphLocale } from '@/lib/market-display';
 
 import {
   isSupportedLocale,
@@ -14,17 +15,13 @@ import {
 function getOpenGraphLocale(
   locale: string
 ): string {
-  return locale === 'ar'
-    ? 'ar_CA'
-    : 'en_CA';
+  return getDefaultOpenGraphLocale(locale);
 }
 
 function getAlternateOpenGraphLocale(
   locale: string
 ): string {
-  return locale === 'ar'
-    ? 'en_CA'
-    : 'ar_CA';
+  return getDefaultOpenGraphLocale(locale === 'ar' ? 'en' : 'ar');
 }
 
 export function buildPageMetadata({

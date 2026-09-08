@@ -8,6 +8,31 @@ interface N8nChatProps {
   locale: N8nChatLocale;
 }
 
+const tabSessionStorageKey = 'spm-chat/sessionId';
+
+function getPersistentSessionId(): string {
+  try {
+    const existingSessionId =
+      window.sessionStorage.getItem(tabSessionStorageKey);
+    const sessionId = existingSessionId ?? window.crypto.randomUUID();
+
+    /*
+     * sessionStorage survives a refresh but is isolated per browser tab.
+     * Passing the value explicitly prevents @n8n/chat from replacing the
+     * active tab's session with its origin-wide localStorage value.
+     */
+    window.sessionStorage.setItem(tabSessionStorageKey, sessionId);
+    // Remove the application-owned localStorage key from the previous build.
+    window.localStorage.removeItem(tabSessionStorageKey);
+
+    return sessionId;
+  } catch {
+    // Storage can be unavailable in locked-down browsers. The chat still works,
+    // but persistence is limited to the current page in that exceptional case.
+    return window.crypto.randomUUID();
+  }
+}
+
 const chatCopy = {
   en: {
     title: 'Success Path Mentors Assistant',
@@ -92,6 +117,7 @@ export function N8nChat({ locale }: N8nChatProps) {
         }
 
         const copy = chatCopy[locale];
+        const sessionId = getPersistentSessionId();
 
         chatApp = createChat({
           webhookUrl,
@@ -103,6 +129,13 @@ export function N8nChat({ locale }: N8nChatProps) {
           mode: 'window',
           chatInputKey: 'chatInput',
           chatSessionKey: 'sessionId',
+          sessionId,
+          /*
+           * Reuse the session ID stored by @n8n/chat and ask the Chat Trigger
+           * to restore the matching Redis history. This keeps a visitor's
+           * conversation available after a refresh while preserving the
+           * widget's per-browser session isolation.
+           */
           loadPreviousSession: true,
           metadata: {
             source: 'success-path-mentors-website',

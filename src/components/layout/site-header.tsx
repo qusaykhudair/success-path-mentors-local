@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { getDefaultMarket } from '@/config/markets';
+import { getDefaultTelephoneHref } from '@/lib/market-display';
 import { Phone } from 'lucide-react';
 
 import {
@@ -79,6 +81,10 @@ const navigationCopy = {
       'Packages',
     primaryNavigation:
       'Primary navigation',
+    login:
+      'Log in',
+    createAccount:
+      'Sign up',
   },
   ar: {
     subjects: 'المواد الدراسية',
@@ -106,6 +112,10 @@ const navigationCopy = {
       'الباقات',
     primaryNavigation:
       'التنقل الرئيسي',
+    login:
+      'تسجيل الدخول',
+    createAccount:
+      'إنشاء حساب',
   },
 } as const;
 
@@ -503,8 +513,22 @@ export async function SiteHeader() {
           </div>
 
           <a
-            href="tel:+16477875999"
-            aria-label={currentLocale === 'ar' ? 'اتصل بنا على الرقم +1 647 787 5999' : 'Call us at +1 647 787 5999'}
+            href={routePath.login(currentLocale)}
+            className="hidden min-h-touch items-center rounded-full border border-primary-200 bg-background px-4 text-[0.78rem] font-black text-primary shadow-xs transition-colors hover:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring 2xl:inline-flex"
+          >
+            {copy.login}
+          </a>
+
+          <a
+            href={routePath.register(currentLocale)}
+            className="hidden min-h-touch items-center rounded-full bg-accent px-4 text-[0.78rem] font-black text-primary-950 shadow-button-accent transition-colors hover:bg-accent-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring 2xl:inline-flex"
+          >
+            {copy.createAccount}
+          </a>
+
+          <a
+            href={getDefaultTelephoneHref()}
+            aria-label={currentLocale === 'ar' ? `اتصل بنا على الرقم ${getDefaultMarket().contact.phone}` : `Call us at ${getDefaultMarket().contact.phone}`}
             className="hidden items-center gap-1.5 rounded-full border border-border/70 bg-background px-2.5 py-2 text-[0.78rem] font-bold text-foreground shadow-xs transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 2xl:inline-flex"
           >
             <Phone aria-hidden="true" className="h-4 w-4 text-accent" />
@@ -598,6 +622,10 @@ export async function SiteHeader() {
             }
             phoneLabel={currentLocale === 'ar' ? 'اتصل بنا' : 'Call us'}
             phoneNumber={WHATSAPP_DISPLAY_NUMBER}
+            loginLabel={copy.login}
+            loginHref={routePath.login(currentLocale)}
+            registerLabel={copy.createAccount}
+            registerHref={routePath.register(currentLocale)}
           />
         </div>
       </Container>

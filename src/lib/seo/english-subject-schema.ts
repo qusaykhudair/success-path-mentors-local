@@ -1,3 +1,4 @@
+import { getDefaultMarket } from '@/config/markets';
 import {
   siteConfig,
 } from '@/config/site';
@@ -32,10 +33,7 @@ export function buildEnglishServiceSchema({
     description,
     serviceType:
       'One-to-one online English tutoring',
-    areaServed: [
-      'Canada',
-      'United States',
-    ],
+    areaServed: getDefaultMarket().organization.areaServed.map((country) => country.name),
     provider: {
       '@type':
         'EducationalOrganization',

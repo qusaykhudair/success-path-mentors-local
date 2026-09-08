@@ -107,6 +107,14 @@ export const routePath = {
     );
   },
 
+  login(locale: SiteLocale): string {
+    return `/${locale}/login`;
+  },
+
+  register(locale: SiteLocale): string {
+    return `/${locale}/register`;
+  },
+
   privacy(locale: SiteLocale): string {
     return locale === 'ar' ? '/ar/سياسة-الخصوصية' : '/en/privacy';
   },

@@ -1,7 +1,8 @@
 import type { SiteLocale } from '@/config/site';
+import { getDefaultMarket } from '@/config/markets';
 
-export const WHATSAPP_NUMBER = '16477875999';
-export const WHATSAPP_DISPLAY_NUMBER = '+1 647 787 5999';
+export const WHATSAPP_NUMBER = getDefaultMarket().contact.whatsapp;
+export const WHATSAPP_DISPLAY_NUMBER = getDefaultMarket().contact.whatsappDisplay;
 
 export type WhatsAppLocale = SiteLocale | 'fr';
 

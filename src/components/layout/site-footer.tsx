@@ -1,4 +1,5 @@
 import { buildGeneralInquiryMessage, buildWhatsAppHref } from '@/lib/whatsapp';
+import { getDefaultMarket } from '@/config/markets';
 // Server Component
 
 import {
@@ -27,7 +28,7 @@ import {
 } from '@/config/routes';
 
 const CONTACT_EMAIL =
-  'successpathmentors@gmail.com';
+  getDefaultMarket().contact.publishedEmail;
 
 interface FooterLink {
   href: string;
@@ -530,7 +531,7 @@ export async function SiteFooter() {
                 dir="ltr"
                 className="text-caption font-bold"
               >
-                +1 647 787 5999
+                {getDefaultMarket().contact.whatsappDisplay}
               </span>
             </a>
 

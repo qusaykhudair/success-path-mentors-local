@@ -1,6 +1,7 @@
 
 
 import type { Metadata } from 'next';
+import { getDefaultOpenGraphLocale } from '@/lib/market-display';
 
 import {
   getTranslations,
@@ -74,14 +75,10 @@ export async function generateMetadata({
     );
 
   const openGraphLocale =
-    locale === 'ar'
-      ? 'ar_CA'
-      : 'en_CA';
+    getDefaultOpenGraphLocale(locale);
 
   const alternateOpenGraphLocale =
-    locale === 'ar'
-      ? 'en_CA'
-      : 'ar_CA';
+    getDefaultOpenGraphLocale(locale === 'ar' ? 'en' : 'ar');
 
   return {
     /*

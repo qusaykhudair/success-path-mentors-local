@@ -22,6 +22,7 @@ const nextConfig = {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
   async rewrites() {
+    const apiBaseUrl = (process.env.NEXT_PUBLIC_API_BASE_URL || 'http://143.244.170.205').trim().replace(/\/+$/, '');
     return {
       beforeFiles: [
         { source: '/ar/%D8%B9%D9%86-%D8%A7%D9%84%D9%85%D9%86%D8%B5%D8%A9', destination: '/ar/about' },
@@ -41,7 +42,12 @@ const nextConfig = {
         { source: '/ar/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9-%D8%A7%D9%84%D8%A5%D9%84%D8%BA%D8%A7%D8%A1', destination: '/ar/cancellation-policy' },
         { source: '/ar/%D8%AD%D8%B0%D9%81-%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA', destination: '/ar/data-deletion' },
       ],
-      afterFiles: [],
+      afterFiles: [
+        {
+          source: '/api/portal/:path*',
+          destination: `${apiBaseUrl}/api/portal/:path*`,
+        },
+      ],
       fallback: [],
     };
   }

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { WHATSAPP_NUMBER } from '@/lib/whatsapp';
 import {
   type FormEvent,
   useRef,
@@ -20,9 +21,6 @@ interface ContactApiResponse {
   ok?: boolean;
   inquiryId?: string;
 }
-
-const PLATFORM_WHATSAPP_NUMBER =
-  '16477875999';
 
 const inputClassName = `
   min-h-12
@@ -239,7 +237,7 @@ function createWhatsAppHref(
   message: string
 ): string {
   return (
-    `https://wa.me/${PLATFORM_WHATSAPP_NUMBER}` +
+    `https://wa.me/${WHATSAPP_NUMBER}` +
     `?text=${encodeURIComponent(message)}`
   );
 }

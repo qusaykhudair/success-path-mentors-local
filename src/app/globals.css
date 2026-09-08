@@ -1,8 +1,28 @@
-@import "tw-animate-css";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'DIN Next LT Arabic';
+  src: url('../assets/din-next-lt-arabic/DINNextLTArabic-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'DIN Next LT Arabic';
+  src: url('../assets/din-next-lt-arabic/DINNextLTArabic-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'DIN Next LT Arabic';
+  src: url('../assets/din-next-lt-arabic/DINNextLTArabic-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* =========================================================
    SUCCESS PATH MENTORS — GLOBAL DESIGN SYSTEM
@@ -12,6 +32,7 @@
 
 @layer base {
   :root {
+    --font-din: 'DIN Next LT Arabic';
     color-scheme: light;
 
     /* -----------------------------------------------------
@@ -775,6 +796,12 @@
     border: 1px solid #cbd5e1 !important;
     box-shadow: none !important;
   }
+}
+
+/* Authentication routes use a focused surface without the support chat
+   covering OTP and registration controls. The main website keeps the widget. */
+body:has([data-auth-page]) #n8n-chat {
+  display: none;
 }
 
 

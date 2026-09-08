@@ -42,9 +42,9 @@ const labels = {
     explore: 'Explore locations',
     book: 'Book a free trial',
     howItWorks: 'How tutoring works',
-    officialResources: 'Helpful curriculum resources',
+    officialResources: 'Education and assessment references',
     officialDisclaimer:
-      'Use these official links to review curriculum expectations, assessments, and school-system information that may help you prepare for tutoring.',
+      'These external references include government and school-board resources, plus clearly identified independent practice guides. Confirm current requirements with the relevant school or education authority.',
     related: 'Related location pages',
     onlineOnly:
       'Online service — no physical office or local-centre claim',
@@ -64,9 +64,9 @@ const labels = {
     explore: 'استكشف المواقع',
     book: 'احجز حصة تجريبية',
     howItWorks: 'آلية العمل',
-    officialResources: 'روابط مفيدة للمنهاج والتعليم',
+    officialResources: 'مراجع التعليم والمناهج والاختبارات',
     officialDisclaimer:
-      'استخدم هذه الروابط الرسمية للاطلاع على توقعات المنهاج والاختبارات ومعلومات النظام المدرسي التي قد تساعد في التحضير للدروس.',
+      'تشمل هذه المراجع الخارجية مصادر حكومية ومصادر مجالس المدارس، إضافة إلى أدلة تدريب مستقلة موضحة بوضوح. يجب تأكيد المتطلبات الحالية مع المدرسة أو الجهة التعليمية المختصة.',
     related: 'صفحات مواقع مرتبطة',
     onlineOnly:
       'خدمة أونلاين — دون ادعاء وجود مكتب أو مركز محلي',

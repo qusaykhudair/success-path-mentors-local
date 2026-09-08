@@ -27,6 +27,8 @@ export const pathnames = {
   '/blog': { en: '/blog', ar: '/المدونة' },
   '/faq': { en: '/faq', ar: '/الأسئلة-الشائعة' },
   '/contact': { en: '/contact', ar: '/تواصل-معنا' },
+  '/login': { en: '/login', ar: '/login' },
+  '/register': { en: '/register', ar: '/register' },
   '/become-tutor': { en: '/become-tutor', ar: '/انضم-كمعلم' },
   '/find-tutor': { en: '/find-tutor', ar: '/ابحث-عن-معلم' },
   '/privacy': { en: '/privacy', ar: '/سياسة-الخصوصية' },

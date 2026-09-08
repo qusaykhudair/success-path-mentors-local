@@ -1,3 +1,4 @@
+import { getDefaultMarket } from '@/config/markets';
 import type {
   PageHighlight,
 } from '@/types/internal-page';
@@ -1047,7 +1048,7 @@ export const contactPageContent = {
         'The website sends the complete inquiry to the official Success Path Mentors Gmail account. The sender’s email is set as the reply address, so the academy can respond directly from Gmail.',
       emailLabel: 'Official email',
       emailValue:
-        'successpathmentors@gmail.com',
+        getDefaultMarket().contact.publishedEmail,
       replyLabel: 'Reply method',
       replyValue:
         'Email or telephone details provided in the form',
@@ -1965,7 +1966,7 @@ export const contactPageContent = {
         'يرسل الموقع الاستفسار كاملًا إلى حساب Success Path Mentors الرسمي على Gmail، ويضع بريد المرسل كعنوان للرد حتى تستطيع الأكاديمية الرد مباشرة من Gmail.',
       emailLabel: 'البريد الرسمي',
       emailValue:
-        'successpathmentors@gmail.com',
+        getDefaultMarket().contact.publishedEmail,
       replyLabel: 'طريقة الرد',
       replyValue:
         'البريد أو رقم التواصل الذي يتم إدخاله في النموذج',
