@@ -123,7 +123,7 @@ test('proxy bypasses global next-intl only for whole registered market namespace
     assert.equal(response.headers.get('X-Content-Type-Options'), 'nosniff');
   }
   assert.deepEqual(intlCalls, []);
-  for (const path of ['/', '/en', '/ar', '/en/login', '/ar/register', '/deutsch', '/debug', '/en/de']) {
+  for (const path of ['/', '/en', '/ar', '/en/login', '/ar/login', '/en/register', '/ar/register', '/deutsch', '/debug', '/en/de']) {
     assert.equal(proxy(request(path)).headers.get('x-test-intl'), '1');
     assert.equal(routing.isReservedMarketPathname(path), false);
   }
@@ -133,6 +133,52 @@ test('proxy bypasses global next-intl only for whole registered market namespace
   }
   assert.equal(new URL(proxy(request('/fr/other')).headers.get('location')).pathname, '/fr/programme-francais');
   assert.equal(intlCalls.length, beforeFrench);
+});
+
+test('proxy is the only request convention and preserves security on every response branch', () => {
+  for (const directory of ['', 'src/']) {
+    for (const extension of ['ts', 'tsx', 'js', 'jsx']) {
+      assert.equal(existsSync(new URL(`../${directory}middleware.${extension}`, import.meta.url)), false);
+      assert.equal(existsSync(new URL(`../${directory}proxy.${extension}`, import.meta.url)), directory === 'src/' && extension === 'ts');
+    }
+  }
+  const saved = process.env.NODE_ENV;
+  try {
+    for (const environment of ['production', 'development']) {
+      process.env.NODE_ENV = environment;
+      const proxyLoad = createLoader(root, {
+        'next-intl/middleware': () => () => new Response(null),
+      });
+      const { default: proxy, config } = proxyLoad('src/proxy.ts');
+      assert.deepEqual(config.matcher, ['/((?!api|_next|_vercel|.*\\..*).*)']);
+      for (const pathname of ['/de', '/de/fr', '/en', '/ar', '/en/login', '/ar/login', '/en/register', '/ar/register', '/fr', '/fr/programme-francais', '/fr/other']) {
+        const url = new URL(`https://successpathmentors.net${pathname}`);
+        const { headers } = proxy({ url: url.href, nextUrl: url });
+        const expectedCsp = [
+          "default-src 'self'", "base-uri 'self'", "form-action 'self'",
+          "frame-ancestors 'none'", "object-src 'none'", "img-src 'self' data: blob: https:",
+          "font-src 'self' data:", "style-src 'self' 'unsafe-inline'",
+          `script-src 'self' 'unsafe-inline'${environment === 'development' ? " 'unsafe-eval'" : ''}`,
+          "connect-src 'self' https:", "media-src 'self' https:", "worker-src 'self' blob:",
+          'upgrade-insecure-requests',
+        ].join('; ');
+        assert.equal(headers.get('Content-Security-Policy'), expectedCsp);
+        for (const [name, value] of Object.entries({
+          'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
+          'X-Content-Type-Options': 'nosniff',
+          'X-Frame-Options': 'DENY',
+          'Referrer-Policy': 'strict-origin-when-cross-origin',
+          'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), browsing-topics=()',
+          'Cross-Origin-Opener-Policy': 'same-origin',
+          'Cross-Origin-Resource-Policy': 'same-origin',
+          'X-DNS-Prefetch-Control': 'on',
+        })) assert.equal(headers.get(name), value, `${environment}/${pathname}/${name}`);
+      }
+    }
+  } finally {
+    if (saved === undefined) delete process.env.NODE_ENV;
+    else process.env.NODE_ENV = saved;
+  }
 });
 
 test('North America and French route contracts remain outside Germany language routing', () => {
