@@ -8,7 +8,9 @@ GER-WEB-003 — Germany Routing Foundation — APPROVED
 
 GER-WEB-003A — Middleware/Proxy Consolidation & Production Routing Verification — APPROVED
 
-UI-WEB-001 — Germany Competitor, Branding & Current Website Deep Visual Audit — READY FOR REVIEW
+UI-WEB-001 — Germany Competitor, Branding & Current Website Deep Visual Audit — READY FOR FINAL REVIEW
+
+UI-WEB-001A — GoStudent Hero Lead Journey Browser Audit & SPM Adaptation — READY FOR REVIEW
 
 UI-WEB-002 — NOT STARTED
 

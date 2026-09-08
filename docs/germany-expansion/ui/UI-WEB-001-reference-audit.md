@@ -90,6 +90,7 @@ At 1440×900 and 390×844, inspect each competitor's top viewport, navigation op
 - [Brand asset inventory](brand-assets-inventory.md)
 - [Visual direction and fourteen-section assessment](visual-direction.md)
 - [V1 scope and publication gates](v1-scope-freeze.md)
+- [Hero Lead Journey Audit](gostudent-hero-form-journey-audit.md)
 
 Before approval: review the visual evidence gap, lead-capture finding, claim register, brand master gaps and trial eligibility. Germany stays disabled; GER-WEB-004 and UI-WEB-002 are not started.
 
