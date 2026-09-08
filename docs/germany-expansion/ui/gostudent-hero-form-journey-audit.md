@@ -128,7 +128,10 @@ The current SPM Hero `src/components/sections/home/hero.tsx` features an inline 
 | **Mobile friction** | High (Scrolling inline form) | Low (Auto-advance cards) | Low (Auto-advance choices) |
 
 ## 16. Recommended First Hero Interaction
-**Recommendation:** Service Selection (e.g., "Which language do you want to learn?").
+**Recommendation:** Service Selection.
+*Clarification Note:* The first interaction is SERVICE SELECTION, not globally "Which language do you want to learn?". 
+- Germany services: German / English / Arabic / French
+- North America uses its own market-specific services.
 **Explanation:** This is an extremely low-friction question that immediately communicates SPM's core offering (Languages). It qualifies the user instantly, works universally across markets, and establishes the "intent" for analytics before any other interaction.
 
 ## 17. Proposed SPM Step Sequence
@@ -175,7 +178,7 @@ A shared architecture is crucial for maintainability.
 `SharedHeroLeadJourney` should orchestrate the flow.
 - **Shared Logic:** Sequence controller, validation rules, state management, and back/next mechanics.
 - **Market Config:** Defines which services are available (e.g., NA vs Germany) and default country codes for phone inputs.
-- **Locale Translations:** UI copy, button text, error messages (managed via `next-intl`).
+- **Locale Translations:** UI copy, button text, error messages. *Clarification Note:* Shared Hero localization must support a market-scoped localization adapter. Do NOT add German to global `next-intl` locales.
 - **Submission Adapter:** Transforms the unified frontend state into the specific backend CRM payload.
 - **UI Layer:** Dumb presentational components (Cards, Inputs, Progress Bar).
 
@@ -199,6 +202,7 @@ The language the user navigates the website in (UI Locale) is strictly independe
 
 ## 25. Backend Submission Decision
 **Recommendation:** C. Staged lead → coordination → full registration.
+*Clarification Note:* Target terminology is: Lead → Operations/Customer Coordination → Teacher Matching → Trial → Full Registration when qualified. The architecture should be CRM-ready but must not assume a CRM currently exists.
 **Scores:**
 - Conversion friction: 5 (Excellent, very low friction)
 - Operations workflow: 5 (Allows human touch)
