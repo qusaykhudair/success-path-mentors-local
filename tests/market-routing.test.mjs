@@ -216,5 +216,5 @@ test('North America and French route contracts remain outside Germany language r
   assert.throws(() => routing.getMarketLocalePath('north-america', 'de'), RangeError);
   assert.equal(load('src/lib/programme-francais/routes.ts').programmeFrancaisRoutes.home, '/fr/programme-francais');
   assert.equal(existsSync(new URL('../messages/de.json', import.meta.url)), false);
-  assert.equal(existsSync(new URL('../messages/markets/germany', import.meta.url)), false);
+  assert.equal(existsSync(new URL('../messages/markets/germany', import.meta.url)), true);
 });

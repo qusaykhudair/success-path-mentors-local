@@ -1,0 +1,64 @@
+{
+  "common": {
+    "continue": "متابعة",
+    "back": "رجوع",
+    "submit": "إرسال",
+    "optional": "(اختياري)",
+    "required": "مطلوب",
+    "success": "نجاح"
+  },
+  "navigation": {
+    "home": "الرئيسية"
+  },
+  "hero": {
+    "entryQuestion": "بم تود أن نساعدك؟",
+    "freeTrial": "جلسة تجريبية مجانية",
+    "personalizedTutoring": "دروس خصوصية فردية",
+    "customerSupport": "التنسيق ودعم العملاء"
+  },
+  "services": {
+    "german": "الألمانية",
+    "english": "الإنجليزية",
+    "arabic": "العربية",
+    "french": "الفرنسية"
+  },
+  "trust": {
+    "title": "موثوق من قبل الآباء"
+  },
+  "useCases": {
+    "title": "كيف نساعدك"
+  },
+  "teacherQuality": {
+    "title": "معلمونا"
+  },
+  "howItWorks": {
+    "title": "آلية العمل"
+  },
+  "leadJourney": {
+    "stepServiceSelection": "اختيار الخدمة",
+    "stepLearnerContext": "معلومات الطالب",
+    "stepLearningGoal": "الهدف التعليمي",
+    "stepContact": "بيانات التواصل وطلب الجلسة التجريبية",
+    "stepSuccess": "نجاح"
+  },
+  "testimonials": {
+    "title": "آراء العملاء"
+  },
+  "faq": {
+    "title": "الأسئلة الشائعة"
+  },
+  "contact": {
+    "title": "اتصل بنا"
+  },
+  "footer": {
+    "rights": "جميع الحقوق محفوظة."
+  },
+  "errors": {
+    "validation": "يرجى التحقق من إدخالاتك.",
+    "temporary": "حدث خطأ مؤقت. يرجى المحاولة مرة أخرى.",
+    "duplicate": "لقد قمت بإرسال طلب بالفعل."
+  },
+  "success": {
+    "message": "تم استلام طلبك بنجاح."
+  }
+}
