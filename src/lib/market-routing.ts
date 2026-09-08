@@ -11,7 +11,7 @@ export interface MarketRoute {
   readonly direction: 'ltr' | 'rtl';
 }
 
-export function isMarketLanguage(id: MarketId, value: string): value is MarketLanguage {
+export function isMarketLanguage(id: MarketId, value: unknown): value is MarketLanguage {
   return getMarketConfig(id).supportedLanguages.some((language) => language === value);
 }
 
@@ -36,12 +36,18 @@ export function getMarketLanguageDirection(language: MarketLanguage): 'ltr' | 'r
 }
 
 /** Registered slugs are reserved even while disabled. Match whole path segments. */
-export function isReservedMarketPathname(pathname: string): boolean {
-  return marketIds.some((id) => {
-    if (!getMarketConfig(id).publicSlug) return false;
+export function getMarketFromPathname(pathname: string): MarketConfig | undefined {
+  for (const id of marketIds) {
+    const market = getMarketConfig(id);
+    if (!market.publicSlug) continue;
     const root = getMarketRootPath(id);
-    return pathname === root || pathname.startsWith(`${root}/`);
-  });
+    if (pathname === root || pathname.startsWith(`${root}/`)) return market;
+  }
+  return undefined;
+}
+
+export function isReservedMarketPathname(pathname: string): boolean {
+  return getMarketFromPathname(pathname) !== undefined;
 }
 
 /** Only entry and language roots exist in this unit; deeper content is not defined. */
