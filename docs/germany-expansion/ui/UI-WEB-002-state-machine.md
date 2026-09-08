@@ -9,8 +9,8 @@ The frontend handles strict states to ensure data integrity and prevent false su
 - `VALIDATING`: Validating constraints before moving to next step or submitting.
 - `SUBMITTING`: HTTP request in flight. CTA is disabled with a loading indicator.
 - `SUCCESS`: Backend explicitly returned 201 Created. Renders confirmation UI.
-- `RECOVERABLE_ERROR`: Backend returned 400 (Validation) or 429 (Rate Limit). Allows user to fix data and resubmit.
-- `DUPLICATE_OR_EXISTING_LEAD`: Backend indicates lead exists. Inform user they will be contacted soon.
+- `RECOVERABLE_ERROR`: Backend returned 400 (Validation) or 429 (Rate Limit). For 400 VALIDATION_ERROR, return the user to correct the invalid field(s). For 429 RATE_LIMITED, preserve form state and tell the user to retry later or use supported contact fallback. For 5xx TEMPORARY_UNAVAILABLE, preserve form state and provide retry/support path.
+- `DUPLICATE_OR_EXISTING_LEAD`: Backend returns 409 DUPLICATE_LEAD. UI enters duplicate/existing-lead state with server-guided safe next action. UI explains that a request already exists and offers a supported recovery/contact path (e.g., continue on WhatsApp, contact team). Do not promise proactive contact unless backend rules guarantee it.
 
 ## 2. State Machine Diagram
 

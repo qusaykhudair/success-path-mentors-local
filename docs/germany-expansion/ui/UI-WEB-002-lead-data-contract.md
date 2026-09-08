@@ -44,9 +44,9 @@ This is the unified data structure sent from the `SharedHeroLeadJourney` to the 
 ## 3. Lead vs Full Registration Boundary
 | Domain | Lead Data | Registration Data (Later) |
 |---|---|---|
-| **Identity** | Name, Phone, Email | Address, Passport/ID, Portal Auth |
-| **Academic** | Age, Grade, Goal, Service | Detailed curriculum, school name, transcripts |
-| **Financial** | None | Payment method, Billing address |
+| **Identity** | Name, Phone, Email | Uses existing approved registration workflow (may collect additional data required for enrollment/account setup) |
+| **Academic** | Age, Grade, Goal, Service | Uses existing approved registration workflow |
+| **Financial** | None | Uses existing approved registration workflow |
 
 ## 4. Operations Handoff Payload
 The CRM (or email fallback) requires:

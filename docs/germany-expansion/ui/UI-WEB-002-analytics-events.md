@@ -15,6 +15,6 @@
 
 ## 2. Attribution Strategy
 **First Touch vs Current Touch:**
-- **First Touch:** Captured via session cookie/localStorage upon initial entry (e.g., `utm_source=meta`). Sent in the API payload to credit the acquiring campaign.
+- **First Touch:** Captured via session cookie/localStorage upon initial entry (e.g., `utm_source=meta`). Sent in the API payload to credit the acquiring campaign. *Note:* Storage behavior must respect applicable consent/privacy rules. Necessary operational session state and marketing attribution must be treated separately. Do not assume marketing attribution storage is always allowed before consent.
 - **Current Touch:** Derived from the current session or URL parameters if the user left and came back via a retargeting link.
 - **Fields:** `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `landing_page`, `referrer`, `session_id`.
