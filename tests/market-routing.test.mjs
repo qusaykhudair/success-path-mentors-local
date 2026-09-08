@@ -36,13 +36,25 @@ test('Germany market slug, languages, default entry and RTL are distinct concept
   assert.equal(existsSync(new URL(`../src/app${routing.getMarketRootPath('germany')}/[[...marketSegments]]/page.tsx`, import.meta.url)), true);
 });
 
-test('unsupported languages and undefined deeper routes are rejected', () => {
+test('unsupported languages are rejected', () => {
   for (const language of ['fr', 'es', 'xyz', 'foo', '', 'DE', '../en', undefined, null, 0, {}]) {
     assert.equal(routing.isMarketLanguage('germany', language), false);
     assert.equal(routing.resolveMarketRoute('germany', [language]), undefined);
     if (language !== undefined) assert.throws(() => routing.getMarketLocalePath('germany', language), RangeError);
   }
-  assert.equal(routing.resolveMarketRoute('germany', ['en', 'contact']), undefined);
+});
+
+test('child routes are structurally resolved and generated for supported languages', () => {
+  for (const language of germany.supportedLanguages) {
+    const route = routing.resolveMarketRoute('germany', [language, 'trial']);
+    assert.equal(route.kind, 'child');
+    assert.equal(route.language, language);
+    assert.deepEqual(route.childSegments, ['trial']);
+    assert.equal(routing.getMarketChildPath('germany', language, ['trial']), `/de/${language}/trial`);
+  }
+  const contactRoute = routing.resolveMarketRoute('germany', ['en', 'contact']);
+  assert.equal(contactRoute.kind, 'child');
+  assert.deepEqual(contactRoute.childSegments, ['contact']);
 });
 
 test('namespace classification reserves disabled markets independently of language validity', () => {
@@ -59,7 +71,7 @@ test('namespace classification reserves disabled markets independently of langua
 test('all disabled Germany requests stop at the actual page boundary without redirecting', async () => {
   const boundaryLoad = createLoader(root, { 'next/navigation': navigation });
   const page = boundaryLoad('src/app/de/[[...marketSegments]]/page.tsx').default;
-  for (const segments of [undefined, [], ['de'], ['en'], ['ar'], ['fr'], ['es'], ['xyz'], ['en', 'contact']]) {
+  for (const segments of [undefined, [], ['de'], ['en'], ['ar'], ['fr'], ['es'], ['xyz'], ['en', 'contact'], ['de', 'trial']]) {
     await assert.rejects(page({ params: Promise.resolve({ marketSegments: segments }) }), (error) => error === notFoundError);
   }
   const localNotFound = boundaryLoad('src/app/de/not-found.tsx').default;
@@ -79,6 +91,7 @@ test('an isolated enabled fixture follows configured entry behavior, but still r
   await assert.rejects(page({ params: Promise.resolve({}) }), (error) => error.message === 'REDIRECT' && error.path === '/de/de');
   for (const language of germany.supportedLanguages) {
     assert.equal(await page({ params: Promise.resolve({ marketSegments: [language] }) }), null);
+    await assert.rejects(page({ params: Promise.resolve({ marketSegments: [language, 'trial'] }) }), (error) => error === notFoundError);
   }
   await assert.rejects(page({ params: Promise.resolve({ marketSegments: ['fr'] }) }), (error) => error === notFoundError);
   assert.equal(markets.getMarketConfig('germany').enabled, false);
