@@ -16,6 +16,7 @@ const navigation = {
 };
 
 test('Germany market slug, languages, default entry and RTL are distinct concepts', () => {
+  assert.equal(germany.publicSlug, 'de');
   assert.equal(germany.enabled, false);
   assert.equal(germany.defaultLanguage, 'de');
   assert.deepEqual(germany.supportedLanguages, ['de', 'ar', 'en']);
@@ -36,12 +37,23 @@ test('Germany market slug, languages, default entry and RTL are distinct concept
 });
 
 test('unsupported languages and undefined deeper routes are rejected', () => {
-  for (const language of ['fr', 'es', 'xyz', '', 'DE', '../en']) {
+  for (const language of ['fr', 'es', 'xyz', 'foo', '', 'DE', '../en', undefined, null, 0, {}]) {
     assert.equal(routing.isMarketLanguage('germany', language), false);
     assert.equal(routing.resolveMarketRoute('germany', [language]), undefined);
-    assert.throws(() => routing.getMarketLocalePath('germany', language), RangeError);
+    if (language !== undefined) assert.throws(() => routing.getMarketLocalePath('germany', language), RangeError);
   }
   assert.equal(routing.resolveMarketRoute('germany', ['en', 'contact']), undefined);
+});
+
+test('namespace classification reserves disabled markets independently of language validity', () => {
+  for (const path of ['/de', '/de/', '/de/de', '/de/en', '/de/ar', '/de/fr', '/de/anything']) {
+    assert.equal(routing.getMarketFromPathname(path), germany);
+    assert.equal(routing.isReservedMarketPathname(path), true);
+  }
+  for (const path of ['/en', '/ar', '/fr', '/fr/programme-francais', '/', '/deutsch', '/debug', '/en/de', 'de']) {
+    assert.equal(routing.getMarketFromPathname(path), undefined);
+    assert.equal(routing.isReservedMarketPathname(path), false);
+  }
 });
 
 test('all disabled Germany requests stop at the actual page boundary without redirecting', async () => {
@@ -85,6 +97,7 @@ test('helpers derive slug, supported languages and default from configuration', 
   assert.equal(helpers.getMarketRootPath('germany'), '/example-market');
   assert.equal(helpers.getMarketLocalePath('germany'), '/example-market/en');
   assert.equal(helpers.isReservedMarketPathname('/example-market/fr'), true);
+  assert.equal(helpers.getMarketFromPathname('/example-market/fr').id, germany.id);
   assert.equal(helpers.isReservedMarketPathname('/de'), false);
   assert.equal(helpers.isMarketLanguage('germany', 'de'), false);
 });
@@ -102,7 +115,7 @@ test('proxy bypasses global next-intl only for whole registered market namespace
   });
   const proxy = proxyLoad('src/proxy.ts').default;
   const request = (pathname) => ({ url: `https://successpathmentors.net${pathname}`, nextUrl: new URL(`https://successpathmentors.net${pathname}`) });
-  for (const path of ['/de', '/de/', '/de/de', '/de/en', '/de/ar', '/de/fr', '/de/es', '/de/en/contact']) {
+  for (const path of ['/de', '/de/', '/de/de', '/de/en', '/de/ar', '/de/fr', '/de/es', '/de/anything', '/de/en/contact']) {
     const response = proxy(request(path));
     assert.equal(response.headers.get('x-middleware-next'), '1');
     assert.equal(response.headers.get('location'), null);
@@ -132,6 +145,7 @@ test('North America and French route contracts remain outside Germany language r
   assert.equal(isSupportedLocale('de'), false);
   assert.equal(markets.getDefaultMarket().id, 'north-america');
   for (const language of ['en', 'ar']) {
+    assert.equal(isSupportedLocale(language), true);
     const route = routing.resolveMarketRoute('north-america', [language]);
     assert.equal(route.market.id, 'north-america');
     assert.equal(route.language, language);
