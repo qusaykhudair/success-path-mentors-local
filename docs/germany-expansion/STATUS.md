@@ -16,9 +16,11 @@ UI-WEB-002 — APPROVED
 
 UI-WEB-002A — APPROVED
 
-UI-WEB-003 — READY FOR FINAL REVIEW
+UI-WEB-003 — APPROVED
 
-UI-WEB-003A — READY FOR REVIEW
+UI-WEB-003A — APPROVED
+
+GER-WEB-003B — NEXT
 
 GER-WEB-004 — Germany Localization Foundation — NOT STARTED
 
@@ -31,3 +33,14 @@ GER-WEB-005 — Market/Language Navigation — NOT STARTED
 TypeScript error: `Property 'to' does not exist on type 'unknown'`.
 
 The clean production build compiled successfully, then failed TypeScript validation at this existing endpoint. This blocker is unrelated to GER-WEB-003/003A and was not fixed during integration.
+
+## GER-WEB-003B
+**Germany Market Child Route Foundation**
+
+**Purpose:**
+Extend the existing Germany market-routing foundation so approved child routes such as:
+- `/de/de/trial`
+- `/de/en/trial`
+- `/de/ar/trial`
+
+can eventually be supported without altering global locale behavior.
