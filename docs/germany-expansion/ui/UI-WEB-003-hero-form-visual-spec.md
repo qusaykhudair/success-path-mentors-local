@@ -6,10 +6,23 @@
 - **Behavior:** Sticky on scroll (lightweight). Mobile uses a hamburger menu containing identical routing.
 
 ## 2. Desktop Hero Visual Hierarchy
+The layout is explicitly a **SPLIT HERO**.
+
+**LEFT (Content side):**
 1. Value Proposition (H1)
 2. Supporting Copy (Short description)
 3. Trust/Support Context (Microcopy under CTA/Cards)
+
+**RIGHT (Interaction side):**
 4. Inline Service Selection (First interaction)
+
+## 2.1 Mobile Hero Visual Hierarchy
+The layout is explicitly **STACKED**. The conversion interaction must remain prominent without excessive oversized images pushing it below the fold.
+1. Value Proposition (H1)
+2. Short Supporting Copy
+3. Inline Service Selection
+4. Explicit Continue CTA
+5. Minimal trust/support context (where appropriate)
 
 ## 3. Shared Hero Service Selector
 - **Question:** "What would you like help with?" (Translated via `next-intl`).
@@ -21,10 +34,14 @@
 ## 4. Hero CTA Behavior
 - **Explicit Continue vs Auto-Advance:** **Explicit Continue.**
 - **Justification:** Avoids accidental taps on mobile, gives users time to read their selection, improves accessibility by not unexpectedly stealing focus or changing routes, and provides a clear intent `submit` event for analytics before navigating to the dedicated lead flow.
+- **Transition Flow:** Hero Service Selection → Explicit Continue → Dedicated market-aware lead-flow route.
 - **State:** "Continue" CTA is disabled until a service is selected.
 
 ## 5. Progressive Lead Flow Visual System
-- **Shell:** Dedicated route (`/[locale]/trial`). Clean, minimal header (Logo + secure lock/trust indicator).
+- **Shell:** Dedicated market-aware lead-flow route. Clean, minimal header (Logo + secure lock/trust indicator).
+  - *North America:* `/en/trial`, `/ar/trial`
+  - *Germany Future Contract:* `/de/de/trial`, `/de/en/trial`, `/de/ar/trial`
+  - *Germany Limitation:* Current Germany routing does NOT yet support deeper child routes. The child-route dependency must be implemented in a future work unit before Germany trial-route implementation.
 - **Progress Indicator:** **Progress Bar.** (Thin, accent-colored bar at the top of the form shell, showing percentage completion. Works flawlessly for RTL/LTR and any language length).
 - **Form Control States:** Hover (border darken), Focus (ring offset), Filled (subtle check or active text color), Error (red border + message below). Minimum 44px touch targets for all cards, inputs, and buttons.
 

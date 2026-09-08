@@ -16,11 +16,11 @@
 - **Rules:** No fixed-height containers for text or cards. Avoid narrow fixed-width buttons. Use `break-words` or `hyphens: auto` where appropriate. Allow text to wrap naturally without breaking the flex/grid layout.
 
 ## 3. RTL (Arabic) Rules
-- **Logical Flow:** The UI visually mirrors direction-sensitive affordances, preserving correct logical DOM interaction semantics.
+- **Logical Flow:** RTL visually mirrors direction-sensitive affordances where appropriate while preserving logical DOM order, keyboard/tab order, focus progression, screen-reader semantics, and form progression semantics.
 - **RTL Application:** Applied at the layout level (`dir="rtl"`). 
-- **Typography:** Arabic labels and content align right.
-- **Navigation:** Next button is positioned on the visual Left. Back button on the visual Right.
-- **Icons:** Directional arrows (e.g., Next chevron) are mirrored using `rtl:-scale-x-100`.
-- **Progress:** Progress bar fills from Right to Left.
-- **Forced LTR Islands:** Phone numbers, Emails, and URLs must be wrapped in `dir="ltr"` to prevent mixed-script corruption (e.g., country code shifting sides).
-- **Keyboard:** Tab order must flow naturally through the DOM; do not mechanically reverse DOM nodes just because the locale is Arabic.
+- **Typography:** Arabic content is right-aligned.
+- **Interaction/Layout:** Use logical layout concepts (`inline-start`, `inline-end`, content side, interaction side) instead of physical left/right rules.
+- **Icons:** Directional icons (e.g., Next chevron) may mirror visually using `rtl:-scale-x-100`.
+- **Progress:** Progress bar adapts to locale without changing logical workflow semantics.
+- **Forced LTR Islands:** Phone numbers, Emails, and URLs must be wrapped in `dir="ltr"` islands to prevent mixed-script corruption.
+- **Keyboard:** Tab order must flow naturally through the DOM. Do NOT mechanically reverse DOM nodes just because the locale is Arabic.

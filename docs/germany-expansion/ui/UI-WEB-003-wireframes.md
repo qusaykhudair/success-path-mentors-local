@@ -1,6 +1,6 @@
 # UI-WEB-003 — Wireframes & Page Architecture
 
-## 1. Desktop Hero Concept (LTR)
+## 1. Desktop Hero Concept (SPLIT HERO - LTR)
 ```text
 ┌────────────────────────────────────────────────────────────────────────┐
 │ [Logo]                Services   Teachers   FAQ              [Trial]   │
@@ -18,7 +18,7 @@
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
-## 2. Arabic RTL Hero Concept
+## 2. Arabic RTL Hero Concept (SPLIT HERO - Mirrored)
 ```text
 ┌────────────────────────────────────────────────────────────────────────┐
 │  [Trial]              FAQ   Teachers   Services                 [Logo] │
