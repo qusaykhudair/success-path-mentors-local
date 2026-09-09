@@ -12,7 +12,6 @@ import {
   KeyRound,
   Mail,
   MapPin,
-  MessageCircleMore,
   ShieldAlert,
   ShieldCheck,
   UserRound,
@@ -21,10 +20,12 @@ import { useEffect, useMemo, useState } from 'react';
 import { useForm, type FieldPath } from 'react-hook-form';
 import { z } from 'zod';
 
+import { SocialAuthButtons } from './social-auth-buttons';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { getDefaultMarket } from '@/config/markets';
-import { getRegistrationCountries, getRegistrationTimezone, getRegistrationTimezones } from './registration-options';
+import { PhoneInput } from '@/components/ui/phone-input';
+import { allTimezones, countryName, countryTimezone, defaultPhoneCountry, localPhone, phoneCountries, phoneDefaults, type CountryCode } from '@/lib/phone';
 
 import { authApi, isMockAuthApi } from './auth-api';
 import { getAuthCopy } from './auth-copy';
@@ -83,7 +84,7 @@ const optionSets = {
     ['Arabic', 'العربية'],
     ['French', 'الفرنسية'],
   ],
-  countries: getRegistrationCountries(),
+  countries: phoneCountries.map((code) => [countryName(code), countryName(code, 'ar')] as const),
   days: [
     ['Monday', 'الاثنين'],
     ['Tuesday', 'الثلاثاء'],
@@ -101,14 +102,6 @@ const stepFields: FieldPath<RegistrationFormValues>[][] = [
   ['subject', 'curriculum', 'preferred_language', 'country', 'timezone', 'preferred_day', 'preferred_time'],
   ['privacy_consent'],
 ];
-
-function phoneIsValid(value: string): boolean {
-  return /^\+?[1-9][\d\s().-]{7,20}$/.test(value.trim());
-}
-
-function normalizePhone(value: string): string {
-  return value.trim().replace(/[\s().-]/g, '');
-}
 
 function friendlyError(error: unknown, copy: ReturnType<typeof getAuthCopy>): string {
   if (!(error instanceof AuthApiError)) return copy.common.apiError;
@@ -147,7 +140,7 @@ function SelectField({
       <FieldLabel htmlFor={id} label={label} requirement={required} />
       <select
         id={id}
-        defaultValue={value || ''}
+        value={value || ''}
         aria-invalid={Boolean(error)}
         aria-describedby={`${id}-error`}
         className={cn(authInputClass, 'appearance-none')}
@@ -185,14 +178,17 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
   const ForwardIcon = isRtl ? ArrowLeft : ArrowRight;
   const BackIcon = isRtl ? ArrowRight : ArrowLeft;
   const languageIndex = isRtl ? 1 : 0;
+  const [phoneCountry, setPhoneCountry] = useState<CountryCode>(defaultPhoneCountry);
+  const [telephoneCountry, setTelephoneCountry] = useState<CountryCode>(defaultPhoneCountry);
+  const [manualTimezone, setManualTimezone] = useState(false);
 
   const schema = useMemo(
     () => z.object({
       parent_name: z.string().trim().min(2, copy.register.errors.required).max(100),
       guardian_relationship: z.string().min(1, copy.register.errors.required),
       email: z.string().trim().email(copy.register.errors.email).max(160),
-      whatsapp: z.string().trim().refine(phoneIsValid, copy.register.errors.phone),
-      telephone: z.string().trim().refine((value) => !value || phoneIsValid(value), copy.register.errors.phone),
+      whatsapp: z.string().trim().refine((value) => Boolean(localPhone(value, phoneCountry)), copy.register.errors.phone),
+      telephone: z.string().trim().refine((value) => !value || Boolean(localPhone(value, telephoneCountry)), copy.register.errors.phone),
       student_first_name: z.string().trim().min(2, copy.register.errors.required).max(60),
       grade: z.string().min(1, copy.register.errors.required),
       subject: z.string().min(1, copy.register.errors.required),
@@ -204,15 +200,11 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
       preferred_time: z.string().min(1, copy.register.errors.required),
       privacy_consent: z.literal(true, { errorMap: () => ({ message: copy.register.errors.consent }) }),
     }),
-    [copy.register.errors]
+    [copy.register.errors, phoneCountry, telephoneCountry]
   );
 
-  const detectedTimezone = useMemo(() => getRegistrationTimezone(), []);
-
-  const availableTimezones = useMemo(
-    () => getRegistrationTimezones(detectedTimezone),
-    [detectedTimezone]
-  );
+  const detectedTimezone = countryTimezone(defaultPhoneCountry);
+  const availableTimezones = allTimezones;
 
   const form = useForm<RegistrationFormValues>({
     resolver: zodResolver(schema),
@@ -256,6 +248,12 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
   }, [resendSeconds]);
 
   const values = form.watch();
+  function selectPhoneCountry(country: CountryCode) {
+    setPhoneCountry(country);
+    const defaults = phoneDefaults(country, form.getValues('timezone'), manualTimezone);
+    form.setValue('country', defaults.country, { shouldDirty: true });
+    form.setValue('timezone', defaults.timezone, { shouldDirty: true });
+  }
 
   async function nextStep() {
     const valid = await form.trigger(stepFields[step], { shouldFocus: true });
@@ -273,8 +271,8 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
       parent_name: formValues.parent_name.trim(),
       guardian_relationship: formValues.guardian_relationship,
       email: formValues.email.trim().toLowerCase(),
-      whatsapp: normalizePhone(formValues.whatsapp),
-      telephone: formValues.telephone ? normalizePhone(formValues.telephone) : undefined,
+      whatsapp: localPhone(formValues.whatsapp, phoneCountry)!.phoneE164,
+      telephone: formValues.telephone ? localPhone(formValues.telephone, telephoneCountry)!.phoneE164 : undefined,
       student_first_name: formValues.student_first_name.trim(),
       grade: formValues.grade,
       subject: formValues.subject,
@@ -531,6 +529,8 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
           <fieldset>
             <legend className="text-h3 font-black text-primary-950">{copy.register.guardianTitle}</legend>
             <p className="mt-2 text-small leading-7 text-muted-foreground">{copy.register.guardianDescription}</p>
+
+            <SocialAuthButtons locale={locale} />
             <div className="mt-6 grid gap-5 sm:grid-cols-2">
               <div className="sm:col-span-2">
                 <FieldLabel htmlFor="parent_name" label={copy.register.parentName} requirement={copy.common.required} />
@@ -557,16 +557,11 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
               </div>
               <div>
                 <FieldLabel htmlFor="whatsapp" label={copy.register.whatsapp} requirement={copy.common.required} />
-                <div className="relative">
-                  <MessageCircleMore aria-hidden="true" className="pointer-events-none absolute start-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
-                  <input id="whatsapp" type="tel" autoComplete="tel" dir="ltr" placeholder={getDefaultMarket().phonePlaceholder} aria-invalid={Boolean(form.formState.errors.whatsapp)} aria-describedby="whatsapp-hint whatsapp-error" className={cn(authInputClass, 'ps-12')} {...form.register('whatsapp')} />
-                </div>
-                <FieldError id="whatsapp-error">{form.formState.errors.whatsapp?.message}</FieldError>
+                <PhoneInput id="whatsapp" label={copy.register.whatsapp} locale={locale} country={phoneCountry} value={values.whatsapp} onCountryChange={selectPhoneCountry} onChange={(value) => form.setValue('whatsapp', value, { shouldDirty: true, shouldValidate: true })} onBlur={() => void form.trigger('whatsapp')} inputRef={form.register('whatsapp').ref} error={form.formState.errors.whatsapp?.message} required className={authInputClass} />
               </div>
               <div>
                 <FieldLabel htmlFor="telephone" label={copy.register.telephone} requirement={copy.common.optional} />
-                <input id="telephone" type="tel" autoComplete="tel" dir="ltr" placeholder={getDefaultMarket().phonePlaceholder} aria-invalid={Boolean(form.formState.errors.telephone)} aria-describedby="telephone-hint telephone-error" className={authInputClass} {...form.register('telephone')} />
-                <FieldError id="telephone-error">{form.formState.errors.telephone?.message}</FieldError>
+                <PhoneInput id="telephone" label={copy.register.telephone} locale={locale} country={telephoneCountry} value={values.telephone} onCountryChange={setTelephoneCountry} onChange={(value) => form.setValue('telephone', value, { shouldDirty: true, shouldValidate: true })} onBlur={() => void form.trigger('telephone')} inputRef={form.register('telephone').ref} error={form.formState.errors.telephone?.message} className={authInputClass} />
               </div>
             </div>
             <p id="whatsapp-hint" className="mt-4 flex items-center gap-2 text-caption font-semibold text-muted-foreground">
@@ -604,7 +599,11 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
               <SelectField id="curriculum" label={copy.register.curriculum} placeholder={copy.register.select} value={values.curriculum} options={optionSets.curricula.map((item) => [item[0], item[languageIndex]] as const)} error={form.formState.errors.curriculum?.message} required={copy.common.required} register={form.register} />
               <SelectField id="preferred_language" label={copy.register.language} placeholder={copy.register.select} value={values.preferred_language} options={optionSets.languages.map((item) => [item[0], item[languageIndex]] as const)} error={form.formState.errors.preferred_language?.message} required={copy.common.required} register={form.register} />
               <SelectField id="country" label={copy.register.country} placeholder={copy.register.select} value={values.country} options={optionSets.countries.map((item) => [item[0], item[languageIndex]] as const)} error={form.formState.errors.country?.message} required={copy.common.required} register={form.register} />
-              <SelectField id="timezone" label={copy.register.timezone} placeholder={copy.register.select} value={values.timezone} options={availableTimezones} error={form.formState.errors.timezone?.message} required={copy.common.required} register={form.register} />
+              <div onChange={() => setManualTimezone(true)}>
+                <SelectField id="timezone" label={copy.register.timezone} placeholder={copy.register.select} value={values.timezone} options={availableTimezones} error={form.formState.errors.timezone?.message} required={copy.common.required} register={form.register} />
+                <p className="mt-2 text-small text-muted-foreground">{isRtl ? 'منطقة زمنية افتراضية للدولة وليست موقعك الدقيق. يمكنك تغييرها.' : 'A country default, not your exact location. You can change it.'}</p>
+                <button type="button" className="mt-2 text-small underline" onClick={() => { setManualTimezone(false); form.setValue('timezone', countryTimezone(phoneCountry), { shouldDirty: true }); }}>{isRtl ? 'استعادة المنطقة الزمنية الافتراضية' : 'Reset to country timezone'}</button>
+              </div>
               <SelectField id="preferred_day" label={copy.register.preferredDay} placeholder={copy.register.select} value={values.preferred_day} options={optionSets.days.map((item) => [item[0], item[languageIndex]] as const)} error={form.formState.errors.preferred_day?.message} required={copy.common.required} register={form.register} />
               <div>
                 <FieldLabel htmlFor="preferred_time" label={copy.register.preferredTime} requirement={copy.common.required} />

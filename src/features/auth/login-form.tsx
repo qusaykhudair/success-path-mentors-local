@@ -16,6 +16,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
+import { SocialAuthButtons } from './social-auth-buttons';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -206,6 +207,7 @@ export function LoginForm({ locale }: { locale: AuthLocale }) {
 
       {errorMessage ? <div className="mt-6"><Notice variant="error">{errorMessage}</Notice></div> : null}
 
+      {stage === 'identifier' && <SocialAuthButtons locale={locale} />}
       {stage === 'identifier' ? (
         <form onSubmit={identifierForm.handleSubmit(requestCode)} className="mt-8" noValidate>
           <FieldLabel htmlFor="login-identifier" label={copy.login.identifierLabel} requirement={copy.common.required} />
