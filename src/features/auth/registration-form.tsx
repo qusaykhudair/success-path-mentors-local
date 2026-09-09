@@ -1,6 +1,8 @@
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
+import { FaWhatsapp, FaFacebook } from 'react-icons/fa6';
+import { FcGoogle } from 'react-icons/fc';
 import {
   ArrowLeft,
   ArrowRight,
@@ -173,19 +175,20 @@ function ReviewRow({ label, value, icon: Icon }: { label: string; value: string;
   );
 }
 
-export function RegistrationForm({ locale }: { locale: AuthLocale }) {
+export function RegistrationForm({ locale, demo = false }: { locale: AuthLocale; demo?: boolean }) {
+  if (demo) return <DemoRegistration locale={locale} />;
   return <SignupMethods locale={locale} />;
 }
 
 // Retained completion UI; not mounted by any public route until the backend
 // supports a server-verified registration session and completion contract.
-export function RegistrationCompletionForm({ locale }: { locale: AuthLocale }) {
+export function RegistrationCompletionForm({ locale, demoIdentity, onDemoComplete }: { locale: AuthLocale; demoIdentity?: { email?: string; phone?: string; country: CountryCode }; onDemoComplete?: () => void }) {
   const copy = getAuthCopy(locale);
   const isRtl = locale === 'ar';
   const ForwardIcon = isRtl ? ArrowLeft : ArrowRight;
   const BackIcon = isRtl ? ArrowRight : ArrowLeft;
   const languageIndex = isRtl ? 1 : 0;
-  const [phoneCountry, setPhoneCountry] = useState<CountryCode>(defaultPhoneCountry);
+  const [phoneCountry, setPhoneCountry] = useState<CountryCode>(demoIdentity?.country || defaultPhoneCountry);
   const [telephoneCountry, setTelephoneCountry] = useState<CountryCode>(defaultPhoneCountry);
   const [manualTimezone, setManualTimezone] = useState(false);
 
@@ -219,8 +222,8 @@ export function RegistrationCompletionForm({ locale }: { locale: AuthLocale }) {
     defaultValues: {
       parent_name: '',
       guardian_relationship: '',
-      email: '',
-      whatsapp: '',
+      email: demoIdentity?.email || '',
+      whatsapp: demoIdentity?.phone || '',
       telephone: '',
       student_first_name: '',
       grade: '',
@@ -273,6 +276,10 @@ export function RegistrationCompletionForm({ locale }: { locale: AuthLocale }) {
 
   async function submitRegistration(formValues: RegistrationFormValues) {
     setApiError('');
+    if (demoIdentity) {
+      onDemoComplete?.();
+      return;
+    }
 
     const payload: RegistrationPayload = {
       parent_name: formValues.parent_name.trim(),
@@ -537,7 +544,7 @@ export function RegistrationCompletionForm({ locale }: { locale: AuthLocale }) {
             <legend className="text-h3 font-black text-primary-950">{copy.register.guardianTitle}</legend>
             <p className="mt-2 text-small leading-7 text-muted-foreground">{copy.register.guardianDescription}</p>
 
-            <SocialAuthButtons locale={locale} />
+            {!demoIdentity && <SocialAuthButtons locale={locale} />}
             <div className="mt-6 grid gap-5 sm:grid-cols-2">
               <div className="sm:col-span-2">
                 <FieldLabel htmlFor="parent_name" label={copy.register.parentName} requirement={copy.common.required} />
