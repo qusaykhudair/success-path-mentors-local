@@ -29,9 +29,11 @@ Switching markets defaults to the target market's `publicSlug` and `defaultLangu
 - North America → Germany: `/de/de`
 - Germany → North America: `/en`
 Cross-market child path mappings are avoided to prevent routing failures on market-specific pages unless mapped explicitly in the future.
+**Safety**: `getMarketSwitchPath` throws an error by default if the target market is disabled in configuration. Internal routines can bypass this by explicitly providing `{ includeDisabled: true }`.
 
 ## 7. Disabled-Market Behavior
-The `getMarketNavigationOptions` helper returns an `isEnabled` boolean matching `MarketConfig`. Germany remains disabled (`isEnabled: false`), allowing the future Header UI to hide the Germany option from public production traffic.
+The `getMarketNavigationOptions` helper defaults to returning *only* enabled markets to guarantee public UI safety. The Future Header UI requires no manual filtering logic.
+Internal features or preview environments can explicitly request disabled markets via `{ includeDisabled: true }`, which returns them flagged with `isEnabled: false`.
 
 ## 8. French Programme Boundary
 The `/fr` programme is detected separately. `isFrenchProgramme` flags this route to prevent erroneous language switching options. Calling language switch logic while on `/fr` explicitly throws an error.

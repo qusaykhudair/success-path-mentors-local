@@ -29,6 +29,7 @@ const LANGUAGE_DISPLAY_NAMES: Record<string, string> = {
   de: 'Deutsch',
   en: 'English',
   ar: 'العربية',
+  // French is NOT a market-locale option. It is retained internally for separate-programme handling.
   fr: 'Français',
 };
 
@@ -122,12 +123,29 @@ export function getLanguageSwitchPath(context: NavigationContext, targetLocale: 
   return `/${targetLocale}${childPath ? `/${childPath}` : ''}`;
 }
 
+export interface MarketNavigationOptionsConfig {
+  /** 
+   * If true, includes options or allows switching to markets that are currently disabled.
+   * Default is false, enforcing public safety boundaries.
+   */
+  readonly includeDisabled?: boolean;
+}
+
 /**
  * Gets a safe destination path when switching to an entirely different market.
  * We default to the market root / default locale to avoid 404s, unless we build explicit mappings.
+ * Throws an error if the target market is disabled, unless explicitly permitted.
  */
-export function getMarketSwitchPath(targetMarketId: MarketId): string {
+export function getMarketSwitchPath(
+  targetMarketId: MarketId,
+  options: MarketNavigationOptionsConfig = {}
+): string {
   const market = getMarketConfig(targetMarketId);
+  
+  if (!market.enabled && !options.includeDisabled) {
+    throw new Error(`Market '${targetMarketId}' is disabled and cannot be publicly switched to.`);
+  }
+
   if (targetMarketId === 'germany') {
     return `/${market.publicSlug}/${market.defaultLanguage}`;
   }
@@ -159,15 +177,21 @@ export function getLanguageNavigationOptions(context: NavigationContext): Langua
  * Returns available market options to build a market switcher UI.
  * Respects the 'enabled' configuration to prevent exposing disabled markets in production.
  */
-export function getMarketNavigationOptions(context: NavigationContext): MarketNavigationOption[] {
-  return marketIds.map(id => {
-    const market = getMarketConfig(id);
-    return {
-      id: market.id,
-      displayName: market.name,
-      destination: getMarketSwitchPath(id),
-      isActive: context.marketId === id,
-      isEnabled: market.enabled,
-    };
-  });
+export function getMarketNavigationOptions(
+  context: NavigationContext,
+  options: MarketNavigationOptionsConfig = {}
+): MarketNavigationOption[] {
+  return marketIds
+    .map(id => {
+      const market = getMarketConfig(id);
+      return {
+        id: market.id,
+        displayName: market.name,
+        // Calculate destination safely internally so the object is fully formed
+        destination: getMarketSwitchPath(id, { includeDisabled: true }),
+        isActive: context.marketId === id,
+        isEnabled: market.enabled,
+      };
+    })
+    .filter(option => option.isEnabled || options.includeDisabled);
 }

@@ -89,19 +89,28 @@ test('getLanguageSwitchPath handles unsupported and invalid cases deterministica
 });
 
 test('getMarketSwitchPath routes to market defaults', () => {
-  assert.equal(getMarketSwitchPath('germany'), '/de/de');
   assert.equal(getMarketSwitchPath('north-america'), '/en');
 });
 
-test('getMarketNavigationOptions respects enabled flag', () => {
-  const ctx = parseNavigationContext('/en');
-  const options = getMarketNavigationOptions(ctx);
-  
-  const na = options.find(o => o.id === 'north-america');
-  assert.equal(na.isEnabled, true);
+test('getMarketSwitchPath rejects switching to a disabled market by default', () => {
+  assert.throws(() => getMarketSwitchPath('germany'), /Market 'germany' is disabled and cannot be publicly switched to/);
+});
 
-  const de = options.find(o => o.id === 'germany');
-  assert.equal(de.isEnabled, false); // Germany is disabled in config
+test('getMarketSwitchPath allows switching to a disabled market when explicitly requested', () => {
+  assert.equal(getMarketSwitchPath('germany', { includeDisabled: true }), '/de/de');
+});
+
+test('getMarketNavigationOptions respects enabled flag and defaults to safe public options', () => {
+  const ctx = parseNavigationContext('/en');
+  
+  // Default behavior (Public safety)
+  const publicOptions = getMarketNavigationOptions(ctx);
+  assert.equal(publicOptions.find(o => o.id === 'north-america')?.isEnabled, true);
+  assert.equal(publicOptions.find(o => o.id === 'germany'), undefined, 'Disabled Germany must not be in public options');
+
+  // Internal / explicit override behavior
+  const internalOptions = getMarketNavigationOptions(ctx, { includeDisabled: true });
+  assert.equal(internalOptions.find(o => o.id === 'germany')?.isEnabled, false, 'Germany is included but remains disabled');
 });
 
 test('getLanguageNavigationOptions exposes RTL correctly', () => {
