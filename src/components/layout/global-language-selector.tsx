@@ -24,15 +24,24 @@ export function GlobalLanguageSelector({ isGermanyContext = false }: GlobalLangu
   const router = useRouter();
   const pathname = usePathname();
 
-  // Close dropdown on click outside
+  // Close dropdown on click outside or escape key
   React.useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
     }
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') {
+        setIsOpen(false);
+      }
+    }
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
   }, []);
 
   const languages = [
@@ -80,7 +89,7 @@ export function GlobalLanguageSelector({ isGermanyContext = false }: GlobalLangu
       >
         <div className="flex items-center gap-2">
           <Globe className="h-4 w-4 shrink-0 text-accent-600 transition-transform duration-300 group-hover:rotate-12" />
-          <span className="text-sm">{currentLabel}</span>
+          <span className="text-sm font-semibold whitespace-nowrap">{currentLabel}</span>
         </div>
         <ChevronDown 
           className={cn(
@@ -91,7 +100,7 @@ export function GlobalLanguageSelector({ isGermanyContext = false }: GlobalLangu
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 z-50 mt-2 w-48 origin-top-right rounded-xl border border-primary-100 bg-white p-1 shadow-lg ring-1 ring-black/5 focus:outline-none">
+        <div className="absolute end-0 z-50 mt-2 w-48 origin-top-right rounded-xl border border-primary-100 bg-white p-1 shadow-lg ring-1 ring-black/5 focus:outline-none animate-in fade-in-0 zoom-in-95">
           <div className="flex flex-col gap-1" role="menu" aria-orientation="vertical">
             {languages.map((lang) => {
               const isActive = lang.code === locale;

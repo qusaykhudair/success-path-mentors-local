@@ -95,10 +95,8 @@ export function HeroServiceSelector() {
         )}
       </button>
 
-      <div className="flex items-center justify-center gap-2 text-sm font-medium text-primary-500 mt-2">
-        <span>No credit card required</span>
-        <span>•</span>
-        <span>Cancel anytime</span>
+      <div className="flex items-center justify-center text-xs font-semibold text-primary-500 mt-2 text-center">
+        <span>{t('microcopy', { fallback: '100% Free Trial • No Commitment' })}</span>
       </div>
     </div>
   );

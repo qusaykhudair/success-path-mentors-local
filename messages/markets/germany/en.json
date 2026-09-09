@@ -28,7 +28,8 @@
         "french": "French"
       },
       "continue": "Continue",
-      "processing": "Processing..."
+      "processing": "Processing...",
+      "microcopy": "100% Free Trial Session • No Commitment"
     },
     "eyebrow": "Premium Online Tutoring",
     "benefits": [
@@ -296,8 +297,82 @@
   },
   "header": {
     "services": "Subjects",
-    "howItWorks": "How it works",
     "whySpm": "Why SPM",
-    "faq": "FAQ"
+    "teacherQuality": "Tutors",
+    "howItWorks": "How It Works",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "login": "Log in",
+    "register": "Sign up",
+    "contact": "Contact"
+  },
+  "pricing": {
+    "eyebrow": "Transparent Plans",
+    "headline": "Flexible Plans for Every Learning Goal",
+    "subheadline": "Choose the learning package tailored for personalized instruction and lasting academic success.",
+    "pendingNote": "Tailored pricing provided following your free introductory trial lesson.",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "subtitle": "4 Tutoring Sessions",
+        "description": "Ideal for trial periods, targeted exam preparation, or short-term concept reinforcement.",
+        "sessions": "4 Sessions (1-on-1)",
+        "priceLabel": "On Request",
+        "badge": "Getting Started",
+        "features": [
+          "1-on-1 online tutoring",
+          "Personalized teacher matching",
+          "Flexible scheduling",
+          "Regular learning feedback"
+        ],
+        "cta": "Book Free Trial"
+      },
+      "progress": {
+        "name": "Progress",
+        "subtitle": "8 Tutoring Sessions",
+        "description": "Our most popular plan for steady academic progress and stronger subject mastery.",
+        "sessions": "8 Sessions (1-on-1)",
+        "priceLabel": "On Request",
+        "badge": "Most Popular",
+        "features": [
+          "1-on-1 online tutoring",
+          "Individual learning roadmap",
+          "Dedicated coordination support",
+          "Monthly progress report",
+          "Adaptable across subjects"
+        ],
+        "cta": "Get Started"
+      },
+      "momentum": {
+        "name": "Intensive",
+        "subtitle": "12 Tutoring Sessions",
+        "description": "Comprehensive academic support for significant grade improvement and exam success.",
+        "sessions": "12 Sessions (1-on-1)",
+        "priceLabel": "On Request",
+        "badge": "Maximum Impact",
+        "features": [
+          "1-on-1 online tutoring",
+          "Priority tutor matching",
+          "Targeted exam preparation",
+          "Dedicated educational advisor",
+          "Homework & ongoing mentorship"
+        ],
+        "cta": "Choose Intensive"
+      }
+    }
+  },
+  "contactSection": {
+    "eyebrow": "Personal Support",
+    "headline": "We Are Here to Help",
+    "subheadline": "Have questions about our tutoring programs or need personal guidance? Our dedicated European support team is ready to assist you.",
+    "whatsappTitle": "WhatsApp Support",
+    "whatsappDesc": "Quick and easy assistance directly via WhatsApp chat.",
+    "whatsappAction": "Start WhatsApp Chat",
+    "emailTitle": "Email Inquiries",
+    "emailDesc": "Send us a message anytime. We reply within 24 hours.",
+    "emailAction": "Send Email",
+    "hoursTitle": "Support Hours",
+    "hoursDesc": "Monday – Friday: 09:00 – 19:00 (CET)",
+    "coordinatorBadge": "Human Educational Mentorship"
   }
 }

@@ -9,8 +9,10 @@ import { WhySpm } from '@/components/germany/why-spm';
 import { UseCases } from '@/components/germany/use-cases';
 import { TeacherQuality } from '@/components/germany/teacher-quality';
 import { HowItWorks } from '@/components/germany/how-it-works';
+import { PricingSection } from '@/components/germany/pricing-section';
 import { Testimonials } from '@/components/germany/testimonials';
 import { FaqSection } from '@/components/germany/faq-section';
+import { ContactSection } from '@/components/germany/contact-section';
 import { GermanyConversionCTA } from '@/components/germany/germany-conversion-cta';
 import { TrialFlow } from '@/components/germany/trial-flow';
 
@@ -46,8 +48,10 @@ export default async function MarketPage({ params }: {
       <UseCases />
       <TeacherQuality />
       <HowItWorks />
+      <PricingSection />
       <Testimonials />
       <FaqSection />
+      <ContactSection />
       <GermanyConversionCTA />
     </>
   );
