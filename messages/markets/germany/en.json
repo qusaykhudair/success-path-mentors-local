@@ -14,13 +14,44 @@
     "entryQuestion": "What would you like help with?",
     "freeTrial": "Free Trial",
     "personalizedTutoring": "Personalized 1-to-1 tutoring",
-    "customerSupport": "Customer coordination and support"
+    "customerSupport": "Customer coordination and support",
+    "headline": "Unlock Your Potential",
+    "subheadline": "Personalized 1-to-1 tutoring designed for your success.",
+    "trustContext": "Trusted by over 10,000 students",
+    "selector": {
+      "question": "What would you like help with?",
+      "instruction": "Select a subject to continue",
+      "services": {
+        "german": "German",
+        "english": "English",
+        "arabic": "Arabic",
+        "french": "French"
+      },
+      "continue": "Continue",
+      "processing": "Processing..."
+    }
   },
   "services": {
-    "german": "German",
-    "english": "English",
-    "arabic": "Arabic",
-    "french": "French"
+    "headline": "Our Core Programs",
+    "subheadline": "Expert tutoring across key disciplines",
+    "items": {
+      "german": {
+        "title": "German",
+        "description": "Master the language"
+      },
+      "english": {
+        "title": "English",
+        "description": "Fluency and grammar"
+      },
+      "arabic": {
+        "title": "Arabic",
+        "description": "Native language support"
+      },
+      "french": {
+        "title": "French",
+        "description": "Comprehensive curriculum"
+      }
+    }
   },
   "trust": {
     "title": "Trusted by parents"
@@ -32,7 +63,21 @@
     "title": "Our tutors"
   },
   "howItWorks": {
-    "title": "How it works"
+    "headline": "How It Works",
+    "items": {
+      "step1": {
+        "title": "Tell us what you need",
+        "description": "Choose your subject"
+      },
+      "step2": {
+        "title": "We match you",
+        "description": "Find the best tutor"
+      },
+      "step3": {
+        "title": "Start learning",
+        "description": "Begin your trial"
+      }
+    }
   },
   "leadJourney": {
     "stepServiceSelection": "Service Selection",
@@ -51,7 +96,21 @@
     "title": "Contact Us"
   },
   "footer": {
-    "rights": "All rights reserved."
+    "brandDescription": "Empowering students to achieve academic excellence.",
+    "servicesTitle": "Services",
+    "contactTitle": "Contact",
+    "legalTitle": "Legal",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "allRightsReserved": "All rights reserved.",
+    "services": {
+      "german": "German",
+      "english": "English",
+      "arabic": "Arabic",
+      "french": "French"
+    }
   },
   "errors": {
     "validation": "Please check your input.",
@@ -60,5 +119,29 @@
   },
   "success": {
     "message": "Your request has been received."
+  },
+  "nav": {
+    "home": "Home",
+    "bookFreeSession": "Free Trial"
+  },
+  "trustStrip": {
+    "item1": {
+      "title": "Personalized matching",
+      "subtitle": "Find the perfect tutor"
+    },
+    "item2": {
+      "title": "Verified quality",
+      "subtitle": "Expert educators"
+    },
+    "item3": {
+      "title": "Flexible scheduling",
+      "subtitle": "Learn anytime"
+    }
+  },
+  "cta": {
+    "headline": "Ready to start?",
+    "subheadline": "Join thousands of successful students today.",
+    "primaryAction": "Start Free Trial",
+    "secondaryAction": "Chat on WhatsApp"
   }
 }

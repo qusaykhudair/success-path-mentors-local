@@ -14,13 +14,44 @@
     "entryQuestion": "Wobei brauchst du Hilfe?",
     "freeTrial": "Kostenlose Probestunde",
     "personalizedTutoring": "Persönliche 1-zu-1 Nachhilfe",
-    "customerSupport": "Kundenkoordination und Support"
+    "customerSupport": "Kundenkoordination und Support",
+    "headline": "Entfalte dein Potenzial",
+    "subheadline": "Individuelle 1-zu-1-Nachhilfe für deinen Erfolg.",
+    "trustContext": "Von Eltern vertraut",
+    "selector": {
+      "question": "Wobei möchtest du Hilfe?",
+      "instruction": "Wähle ein Fach, um fortzufahren",
+      "services": {
+        "german": "Deutsch",
+        "english": "Englisch",
+        "arabic": "Arabisch",
+        "french": "Französisch"
+      },
+      "continue": "Weiter",
+      "processing": "Wird bearbeitet..."
+    }
   },
   "services": {
-    "german": "Deutsch",
-    "english": "Englisch",
-    "arabic": "Arabisch",
-    "french": "Französisch"
+    "headline": "Our Core Programs",
+    "subheadline": "Expert tutoring across key disciplines",
+    "items": {
+      "german": {
+        "title": "German",
+        "description": "Master the language"
+      },
+      "english": {
+        "title": "English",
+        "description": "Fluency and grammar"
+      },
+      "arabic": {
+        "title": "Arabic",
+        "description": "Native language support"
+      },
+      "french": {
+        "title": "French",
+        "description": "Comprehensive curriculum"
+      }
+    }
   },
   "trust": {
     "title": "Von Eltern vertraut"
@@ -32,7 +63,21 @@
     "title": "Unsere Nachhilfelehrer"
   },
   "howItWorks": {
-    "title": "Wie es funktioniert"
+    "headline": "How It Works",
+    "items": {
+      "step1": {
+        "title": "Tell us what you need",
+        "description": "Choose your subject"
+      },
+      "step2": {
+        "title": "We match you",
+        "description": "Find the best tutor"
+      },
+      "step3": {
+        "title": "Start learning",
+        "description": "Begin your trial"
+      }
+    }
   },
   "leadJourney": {
     "stepServiceSelection": "Serviceauswahl",
@@ -51,7 +96,21 @@
     "title": "Kontakt"
   },
   "footer": {
-    "rights": "Alle Rechte vorbehalten."
+    "brandDescription": "Empowering students to achieve academic excellence.",
+    "servicesTitle": "Services",
+    "contactTitle": "Contact",
+    "legalTitle": "Legal",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "allRightsReserved": "All rights reserved.",
+    "services": {
+      "german": "Deutsch",
+      "english": "Englisch",
+      "arabic": "Arabisch",
+      "french": "Französisch"
+    }
   },
   "errors": {
     "validation": "Bitte überprüfe deine Eingabe.",
@@ -60,5 +119,29 @@
   },
   "success": {
     "message": "Deine Anfrage wurde empfangen."
+  },
+  "nav": {
+    "home": "Startseite",
+    "bookFreeSession": "Kostenlose Probestunde"
+  },
+  "trustStrip": {
+    "item1": {
+      "title": "Personalized matching",
+      "subtitle": "Find the perfect tutor"
+    },
+    "item2": {
+      "title": "Verified quality",
+      "subtitle": "Expert educators"
+    },
+    "item3": {
+      "title": "Flexible scheduling",
+      "subtitle": "Learn anytime"
+    }
+  },
+  "cta": {
+    "headline": "Ready to start?",
+    "subheadline": "Join thousands of successful students today.",
+    "primaryAction": "Start Free Trial",
+    "secondaryAction": "Chat on WhatsApp"
   }
 }

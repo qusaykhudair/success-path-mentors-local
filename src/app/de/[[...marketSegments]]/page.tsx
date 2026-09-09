@@ -1,6 +1,7 @@
 import { redirect, notFound } from 'next/navigation';
 import { requireMarketRoute } from '@/lib/market-route-boundary';
 import { getMarketLocalePath } from '@/lib/market-routing';
+import GermanyPreviewHarness from './preview-layout';
 
 // The static folder reserves the configured Germany slug. Tests enforce parity.
 // Catch all descendants so invalid/deeper paths cannot fall into the NA boundary.
@@ -8,6 +9,15 @@ export default async function MarketPage({ params }: {
   params: Promise<{ marketSegments?: string[] }>;
 }) {
   const { marketSegments } = await params;
+
+  // DEVELOPMENT ONLY - VISUAL MVP HARNESS
+  if (process.env.NODE_ENV === 'development') {
+    const locale = (marketSegments && marketSegments[0]) || 'de';
+    // Very basic route matching just for visual review in dev
+    if (!['de', 'en', 'ar'].includes(locale)) notFound();
+    return <GermanyPreviewHarness locale={locale} />;
+  }
+
   const route = requireMarketRoute('germany', marketSegments);
   if (route.kind === 'entry') redirect(getMarketLocalePath(route.market.id, route.language));
   // Prevent silent rendering of child routes unless a real specific route handles them.
