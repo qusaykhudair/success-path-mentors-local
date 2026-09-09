@@ -191,6 +191,11 @@
       "english": "Englisch",
       "arabic": "Arabisch",
       "french": "Französisch"
+    },
+    "northAmericaBanner": {
+      "title": "Hauptwebsite für Nordamerika (Kanada & USA)",
+      "description": "Suchen Sie nach Schul- und Hochschullehrplänen für Kanada und die USA? Besuchen Sie unsere Hauptplattform.",
+      "button": "Zur Hauptwebsite"
     }
   },
   "errors": {
@@ -222,10 +227,34 @@
     }
   },
   "cta": {
-    "headline": "Bereit anzufangen?",
-    "subheadline": "Beginne noch heute deine persönliche Lernreise.",
+    "eyebrow": "Starten Sie jetzt",
+    "headline": "Bereit für echte Lernerfolge?",
+    "subheadline": "Starten Sie Ihre persönliche Lernreise mit einer kostenlosen, unverbindlichen Probestunde.",
     "primaryAction": "Kostenlose Probestunde starten",
-    "secondaryAction": "Auf WhatsApp chatten"
+    "secondaryAction": "Auf WhatsApp beraten lassen",
+    "reassurance": "100% unverbindlich • Keine Kreditkarte erforderlich • Schnelle Zuordnung",
+    "trustPoints": [
+      "1-zu-1 Einzelunterricht",
+      "Kostenlose Probestunde ohne Risiko",
+      "Flexible Online-Termine"
+    ],
+    "panelEyebrow": "Einfacher Ablauf",
+    "panelTitle": "In 3 Schritten zum Unterricht",
+    "panelNote": "Unser Beratungsteam antwortet in der Regel innerhalb weniger Stunden.",
+    "nextSteps": [
+      {
+        "title": "Anfrage senden",
+        "description": "Wählen Sie Fach und Wunschzeit für die Probestunde."
+      },
+      {
+        "title": "Passende Lehrkraft",
+        "description": "Wir wählen den idealen Tutor für Ihre individuellen Lernziele."
+      },
+      {
+        "title": "Online durchstarten",
+        "description": "Lernen Sie unverbindlich in Ihrer ersten Unterrichtseinheit."
+      }
+    ]
   },
   "whySpm": {
     "eyebrow": "Warum Success Path Mentors",

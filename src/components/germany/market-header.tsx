@@ -139,7 +139,7 @@ export function MarketHeader() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp Support"
-            className="hidden items-center gap-1.5 rounded-full border border-border/70 bg-white px-2.5 py-1.5 text-xs font-bold text-foreground shadow-2xs transition-colors hover:bg-muted focus-visible:outline-none 2xl:inline-flex whitespace-nowrap"
+            className="hidden min-h-touch items-center gap-2 rounded-full border border-primary-200 bg-white px-3.5 py-1.5 text-xs font-bold text-primary-900 shadow-2xs transition-colors hover:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring xl:inline-flex whitespace-nowrap"
           >
             <Phone className="h-3.5 w-3.5 text-accent-600 shrink-0" />
             <span dir="ltr" className="whitespace-nowrap">{marketConfig.contact.whatsappDisplay}</span>

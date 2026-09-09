@@ -191,6 +191,11 @@
       "english": "English",
       "arabic": "Arabic",
       "french": "French"
+    },
+    "northAmericaBanner": {
+      "title": "Main Website for North America (Canada & USA)",
+      "description": "Looking for Canadian and US school or university curricula? Visit our core platform.",
+      "button": "Go to Main Website"
     }
   },
   "errors": {
@@ -222,10 +227,34 @@
     }
   },
   "cta": {
-    "headline": "Ready to start?",
-    "subheadline": "Start your personalized learning journey today.",
-    "primaryAction": "Start Free Trial",
-    "secondaryAction": "Chat on WhatsApp"
+    "eyebrow": "Start Now",
+    "headline": "Ready for genuine academic progress?",
+    "subheadline": "Begin your personalized learning journey today with a risk-free free trial lesson.",
+    "primaryAction": "Book Free Trial Lesson",
+    "secondaryAction": "Chat on WhatsApp",
+    "reassurance": "100% commitment-free • No credit card required • Fast coordinator matching",
+    "trustPoints": [
+      "1-on-1 personalized tutoring",
+      "Zero-risk trial lesson",
+      "Flexible online schedules"
+    ],
+    "panelEyebrow": "Simple Process",
+    "panelTitle": "Get started in 3 easy steps",
+    "panelNote": "Our coordination team typically responds within a few hours.",
+    "nextSteps": [
+      {
+        "title": "Submit your request",
+        "description": "Select your subject and preferred time slot."
+      },
+      {
+        "title": "Tutor matching",
+        "description": "We match the ideal certified tutor tailored to your goals."
+      },
+      {
+        "title": "Start learning",
+        "description": "Meet your tutor online and experience real 1-on-1 mentorship."
+      }
+    ]
   },
   "whySpm": {
     "eyebrow": "Why Success Path Mentors",

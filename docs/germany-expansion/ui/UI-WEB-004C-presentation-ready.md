@@ -36,8 +36,9 @@ The Germany homepage now follows a complete 14-part visual hierarchy:
 | 10 | `Testimonials` | Pure White (`#testimonials`) | 3 authentic, verified community feedback cards with star ratings & avatars |
 | 11 | `FaqSection` | Soft Slate Neutral (`#faq`) | 6-item interactive accordion with smooth chevron rotation & ARIA attributes |
 | 12 | `ContactSection` | Pure White (`#contact`) | WhatsApp direct (+49 1512 3974353), Email support, Service hours |
-| 13 | `GermanyConversionCTA` | Vibrant Turquoise / Navy Card | High-impact card with glow orbs, noise texture, and dual CTAs |
-| 14 | `MarketFooter` | Deep Navy Structured | Brand statement, Services, Explore links, Account/Legal links, Language selector |
+| 13 | `GermanyConversionCTA` | Deep Navy Brand Gradient | Luminous turquoise glow, 3 trust badges, dual high-impact CTAs, and 3-step "What happens next" timeline |
+| 14 | `MarketFooter` | Deep Navy Structured | Brand statement, Services, Explore links, Account/Legal links, North America (Canada & USA) core website banner |
+| 15 | `MarketFloatingWidgets` | Screen Floating Layer | WhatsApp on the RIGHT (+49 1512 3974353), SPM Assistant Chatbot on the LEFT with quick action modal |
 
 ---
 
@@ -116,6 +117,13 @@ Captured during visual verification and available in project artifacts:
 21. `de_de_mobile_hero_1788989260689.png` — Germany Mobile Hero at 390px.
 22. `de_de_mobile_menu_open_1788989273020.png` — Germany Mobile navigation drawer open with section links and auth buttons.
 23. `de_ar_mobile_rtl_1788989603734.png` — Germany Mobile Arabic RTL at 390px.
+24. `de_de_header_1788991035856.png` — Germany Header showing standardized phone button dimensions matching other actions.
+25. `de_final_cta_full_1788990779033.png` — Upgraded German Conversion CTA with brand gradient, trust badges & next-steps panel.
+26. `de_footer_and_widgets_1788990793655.png` — German Footer with North America core banner, floating WhatsApp on right, Chatbot on left.
+27. `de_chatbot_dialog_open_1788990855443.png` — German Chatbot Assistant dialog open on bottom-left.
+28. `ar_final_cta_1788990912177.png` — Upgraded Arabic RTL Conversion CTA.
+29. `ar_footer_and_widgets_1788990926674.png` — Arabic RTL Footer with North America banner, floating WhatsApp & Chatbot.
+30. `ar_chatbot_dialog_open_1788990949461.png` — Arabic RTL Chatbot Assistant dialog open on bottom-left.
 
 ---
 

@@ -574,7 +574,7 @@ export async function SiteHeader() {
           <a
             href={getDefaultTelephoneHref()}
             aria-label={currentLocale === 'ar' ? `اتصل بنا على الرقم ${getDefaultMarket().contact.phone}` : `Call us at ${getDefaultMarket().contact.phone}`}
-            className="hidden items-center gap-1.5 rounded-full border border-border/70 bg-background px-2.5 py-1.5 text-xs font-bold text-foreground shadow-xs transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 whitespace-nowrap 2xl:inline-flex"
+            className="hidden min-h-touch items-center gap-2 rounded-full border border-border/70 bg-background px-3.5 py-1.5 text-xs font-bold text-foreground shadow-xs transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 whitespace-nowrap 2xl:inline-flex"
           >
             <Phone aria-hidden="true" className="h-3.5 w-3.5 text-accent shrink-0" />
             <span dir="ltr" className="whitespace-nowrap">{WHATSAPP_DISPLAY_NUMBER}</span>
