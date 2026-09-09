@@ -28,7 +28,8 @@
         "french": "Französisch"
       },
       "continue": "Weiter",
-      "processing": "Wird bearbeitet..."
+      "processing": "Wird bearbeitet...",
+      "microcopy": "100% kostenlose Probestunde • Unverbindlich"
     },
     "eyebrow": "Premium Online Nachhilfe",
     "benefits": [
@@ -296,8 +297,82 @@
   },
   "header": {
     "services": "Fächer",
-    "howItWorks": "So funktioniert es",
     "whySpm": "Warum SPM",
-    "faq": "FAQ"
+    "teacherQuality": "Lehrkräfte",
+    "howItWorks": "Ablauf",
+    "pricing": "Preise",
+    "faq": "FAQ",
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "contact": "Kontakt"
+  },
+  "pricing": {
+    "eyebrow": "Transparente Pläne",
+    "headline": "Flexible Pläne für jedes Lernziel",
+    "subheadline": "Wählen Sie das passende Lernpaket für individuelle Förderung und nachhaltigen Lernerfolg.",
+    "pendingNote": "Individuelle Preisgestaltung nach unverbindlicher Einstufung und kostenloser Probestunde.",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "subtitle": "4 Unterrichtseinheiten",
+        "description": "Ideal zum Kennenlernen, für gezielte Klausurvorbereitung oder kurzfristige Unterstützung.",
+        "sessions": "4 Einheiten (1-zu-1)",
+        "priceLabel": "Auf Anfrage",
+        "badge": "Einstieg",
+        "features": [
+          "1-zu-1 Einzelunterricht online",
+          "Passende Lehrerauswahl",
+          "Flexible Terminabstimmung",
+          "Regelmäßiges Lernfeedback"
+        ],
+        "cta": "Probestunde anfragen"
+      },
+      "progress": {
+        "name": "Progress",
+        "subtitle": "8 Unterrichtseinheiten",
+        "description": "Unser bewährtes Paket für kontinuierliche Leistungssteigerung und Schulerfolg.",
+        "sessions": "8 Einheiten (1-zu-1)",
+        "priceLabel": "Auf Anfrage",
+        "badge": "Beliebteste Wahl",
+        "features": [
+          "1-zu-1 Einzelunterricht online",
+          "Individueller Lern- und Förderplan",
+          "Persönliche Betreuung & Koordination",
+          "Monatlicher Fortschrittsbericht",
+          "Fächerübergreifend anpassbar"
+        ],
+        "cta": "Jetzt durchstarten"
+      },
+      "momentum": {
+        "name": "Intensiv",
+        "subtitle": "12 Unterrichtseinheiten",
+        "description": "Umfassende Begleitung für nachhaltige Notenverbesserung und Prüfungsvorbereitung.",
+        "sessions": "12 Einheiten (1-zu-1)",
+        "priceLabel": "Auf Anfrage",
+        "badge": "Maximaler Erfolg",
+        "features": [
+          "1-zu-1 Einzelunterricht online",
+          "Prioritäre Lehrervermittlung",
+          "Gezielte Prüfungsvorbereitung",
+          "Feste Betreuungskoordination",
+          "Hausaufgaben- und Lernbegleitung"
+        ],
+        "cta": "Intensivplan sichern"
+      }
+    }
+  },
+  "contactSection": {
+    "eyebrow": "Persönliche Beratung",
+    "headline": "Wir sind für Sie da",
+    "subheadline": "Haben Sie Fragen zu unserem Angebot oder wünschen Sie eine individuelle Beratung? Unser Team berät Sie gerne unverbindlich.",
+    "whatsappTitle": "WhatsApp Beratung",
+    "whatsappDesc": "Schnell und unkompliziert direkt per Chat antworten lassen.",
+    "whatsappAction": "WhatsApp Chat starten",
+    "emailTitle": "E-Mail Anfrage",
+    "emailDesc": "Schreiben Sie uns jederzeit. Wir melden uns innerhalb von 24 Stunden.",
+    "emailAction": "E-Mail schreiben",
+    "hoursTitle": "Erreichbarkeit",
+    "hoursDesc": "Montag – Freitag: 09:00 – 19:00 Uhr (MEZ)",
+    "coordinatorBadge": "Persönliche Bildungsberatung"
   }
 }

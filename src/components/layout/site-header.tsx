@@ -41,6 +41,9 @@ import {
 } from '@/content/subjects/physics/physics-strands';
 
 import {
+  MoreMenu,
+} from './more-menu';
+import {
   GlobalLanguageSelector,
 } from './global-language-selector';
 import {
@@ -85,6 +88,8 @@ const navigationCopy = {
       'Log in',
     createAccount:
       'Sign up',
+    more:
+      'More',
   },
   ar: {
     subjects: 'المواد الدراسية',
@@ -116,6 +121,8 @@ const navigationCopy = {
       'تسجيل الدخول',
     createAccount:
       'إنشاء حساب',
+    more:
+      'المزيد',
   },
 } as const;
 
@@ -435,8 +442,8 @@ export async function SiteHeader() {
             items-center
             flex-1
             justify-center
-            gap-0
-            xl:flex
+            gap-1
+            lg:flex
           "
         >
           <SubjectsMenu
@@ -456,15 +463,8 @@ export async function SiteHeader() {
             }
           />
 
-          <LocationsMenu
-            triggerLabel={copy.locations}
-            overviewHref={routePath.locations(currentLocale)}
-            overviewLabel={currentLocale === 'ar' ? 'عرض جميع المواقع' : 'View all locations'}
-            countries={locationNavigation}
-            locale={currentLocale}
-          />
-
-          {sectionLinks.map(
+          {/* Primary links: Programs, Services, Packages, How It Works */}
+          {sectionLinks.slice(0, 4).map(
             (link) => (
               <a
                 key={link.href}
@@ -473,7 +473,7 @@ export async function SiteHeader() {
                   navLinkClass
                 }
               >
-                {link.label}
+                <span className="whitespace-nowrap">{link.label}</span>
 
                 <span
                   aria-hidden="true"
@@ -494,6 +494,55 @@ export async function SiteHeader() {
               </a>
             )
           )}
+
+          {/* Secondary links: Locations, About, FAQ directly visible on 1536px+ */}
+          <div className="hidden items-center gap-1 2xl:flex">
+            <LocationsMenu
+              triggerLabel={copy.locations}
+              overviewHref={routePath.locations(currentLocale)}
+              overviewLabel={currentLocale === 'ar' ? 'عرض جميع المواقع' : 'View all locations'}
+              countries={locationNavigation}
+              locale={currentLocale}
+            />
+
+            {sectionLinks.slice(4).map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className={navLinkClass}
+              >
+                <span className="whitespace-nowrap">{link.label}</span>
+                <span
+                  aria-hidden="true"
+                  className="
+                    absolute
+                    inset-x-3
+                    bottom-1
+                    h-0.5
+                    origin-center
+                    scale-x-0
+                    rounded-full
+                    bg-accent
+                    transition-transform
+                    duration-200
+                    group-hover:scale-x-100
+                  "
+                />
+              </a>
+            ))}
+          </div>
+
+          {/* Secondary links collapsed into MoreMenu for 1280px-1535px */}
+          <div className="2xl:hidden">
+            <MoreMenu
+              label={copy.more}
+              items={[
+                { label: copy.locations, href: routePath.locations(currentLocale) },
+                { label: copy.about, href: routePath.about(currentLocale) },
+                { label: t('faq'), href: routePath.faq(currentLocale) },
+              ]}
+            />
+          </div>
         </nav>
 
         <div
@@ -501,27 +550,23 @@ export async function SiteHeader() {
             flex
             items-center
             gap-2
-            sm:gap-3
+            sm:gap-2.5
           "
         >
-          <div className="hidden items-center gap-4 xl:flex">
-            <GlobalLanguageSelector />
-          </div>
-
-          <div className="xl:hidden">
+          <div className="shrink-0">
             <GlobalLanguageSelector />
           </div>
 
           <a
             href={routePath.login(currentLocale)}
-            className="hidden min-h-touch items-center rounded-full border border-primary-200 bg-background px-4 text-[0.78rem] font-black text-primary shadow-xs transition-colors hover:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring 2xl:inline-flex"
+            className="hidden min-h-touch items-center rounded-full border border-primary-200 bg-background px-3.5 py-1.5 text-xs font-bold text-primary shadow-xs transition-colors hover:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap lg:inline-flex"
           >
             {copy.login}
           </a>
 
           <a
             href={routePath.register(currentLocale)}
-            className="hidden min-h-touch items-center rounded-full bg-accent px-4 text-[0.78rem] font-black text-primary-950 shadow-button-accent transition-colors hover:bg-accent-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring 2xl:inline-flex"
+            className="hidden min-h-touch items-center rounded-full bg-accent px-4 py-1.5 text-xs font-bold text-primary-950 shadow-button-accent transition-colors hover:bg-accent-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap lg:inline-flex"
           >
             {copy.createAccount}
           </a>
@@ -529,9 +574,9 @@ export async function SiteHeader() {
           <a
             href={getDefaultTelephoneHref()}
             aria-label={currentLocale === 'ar' ? `اتصل بنا على الرقم ${getDefaultMarket().contact.phone}` : `Call us at ${getDefaultMarket().contact.phone}`}
-            className="hidden items-center gap-1.5 rounded-full border border-border/70 bg-background px-2.5 py-2 text-[0.78rem] font-bold text-foreground shadow-xs transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 2xl:inline-flex"
+            className="hidden items-center gap-1.5 rounded-full border border-border/70 bg-background px-2.5 py-1.5 text-xs font-bold text-foreground shadow-xs transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 whitespace-nowrap 2xl:inline-flex"
           >
-            <Phone aria-hidden="true" className="h-4 w-4 text-accent" />
+            <Phone aria-hidden="true" className="h-3.5 w-3.5 text-accent shrink-0" />
             <span dir="ltr" className="whitespace-nowrap">{WHATSAPP_DISPLAY_NUMBER}</span>
           </a>
 
@@ -544,7 +589,7 @@ export async function SiteHeader() {
                 variant: 'accent',
                 size: 'sm',
                 className:
-                  'hidden min-[1680px]:inline-flex',
+                  'hidden min-[1180px]:inline-flex whitespace-nowrap font-bold shadow-sm',
               })
             }
           >
