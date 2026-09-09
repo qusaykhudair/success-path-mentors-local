@@ -13,7 +13,7 @@ const React = require('react');
 const { createRoot } = require('react-dom/client');
 const load = createLoader(fileURLToPath(new URL('../', import.meta.url)));
 const { PhoneInput } = load('src/components/ui/phone-input.tsx');
-const { RegistrationForm } = load('src/features/auth/registration-form.tsx');
+const { RegistrationForm, RegistrationCompletionForm } = load('src/features/auth/registration-form.tsx');
 const { LoginForm } = load('src/features/auth/login-form.tsx');
 
 async function change(input, value) {
@@ -28,6 +28,7 @@ test('signup starts with four methods and never treats an unavailable challenge 
   const root = createRoot(container);
   await React.act(async () => root.render(React.createElement(RegistrationForm, { locale: 'en' })));
   assert.equal(container.querySelector('#parent_name'), null);
+  assert.doesNotMatch(container.textContent, /Use the current registration form/);
   for (const label of ['Sign up with Email', 'Sign up with WhatsApp']) {
     const button = [...container.querySelectorAll('button')].find((node) => node.textContent === label);
     assert.ok(button.querySelector('svg'), `${label} needs its icon`);
@@ -89,14 +90,11 @@ test('search, country selection, untouched local input, native validity and cano
   assert.equal(container.querySelector('input[name=phone]').value, '+201001234567');
   await React.act(async () => root.unmount()); container.remove();
 });
-test('registration fills country/timezone, preserves manual overrides across steps and resets explicitly', async () => {
+test('unmounted completion UI fills country/timezone, preserves manual overrides across steps and resets explicitly', async () => {
   window.scrollTo = () => {};
   const container = document.createElement('div'); document.body.append(container);
   const root = createRoot(container);
-  await React.act(async () => root.render(React.createElement(RegistrationForm, { locale: 'en' })));
-  assert.match(container.textContent, /Sign up with Email/);
-  assert.match(container.textContent, /Sign up with WhatsApp/);
-  await React.act(async () => [...container.querySelectorAll('button')].find((node) => node.textContent === 'Use the current registration form').click());
+  await React.act(async () => root.render(React.createElement(RegistrationCompletionForm, { locale: 'en' })));
   await change(container.querySelector('select[aria-label="WhatsApp number: Country and calling code"]') || container.querySelector('select[aria-label$="Country and calling code"]'), 'PS');
   // Use the actual form controls to advance the registration wizard.
   for (const [id, value] of [['parent_name', 'Test Parent'], ['guardian_relationship', 'MOTHER'], ['email', 'test@example.com'], ['whatsapp', '599123456']]) {

@@ -174,7 +174,12 @@ function ReviewRow({ label, value, icon: Icon }: { label: string; value: string;
 }
 
 export function RegistrationForm({ locale }: { locale: AuthLocale }) {
-  const [showExistingForm, setShowExistingForm] = useState(false);
+  return <SignupMethods locale={locale} />;
+}
+
+// Retained completion UI; not mounted by any public route until the backend
+// supports a server-verified registration session and completion contract.
+export function RegistrationCompletionForm({ locale }: { locale: AuthLocale }) {
   const copy = getAuthCopy(locale);
   const isRtl = locale === 'ar';
   const ForwardIcon = isRtl ? ArrowLeft : ArrowRight;
@@ -483,11 +488,8 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
     );
   }
 
-  if (!showExistingForm) return <SignupMethods locale={locale} onExistingForm={() => setShowExistingForm(true)} />;
-
   return (
     <div className="mx-auto w-full max-w-2xl">
-      <button type="button" onClick={() => setShowExistingForm(false)} className="mb-5 text-small font-bold text-accent-700 underline underline-offset-4">{isRtl ? 'العودة إلى طرق إنشاء الحساب' : 'Back to sign-up methods'}</button>
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
           <div className="inline-flex items-center gap-2 rounded-full bg-primary-50 px-3 py-1.5 text-caption font-bold text-primary-800">
