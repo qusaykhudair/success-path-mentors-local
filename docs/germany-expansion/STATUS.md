@@ -22,9 +22,9 @@ UI-WEB-003A — APPROVED
 
 GER-WEB-003B — APPROVED
 
-GER-WEB-004 — READY FOR REVIEW
+GER-WEB-004 — APPROVED
 
-GER-WEB-005 — Market/Language Navigation — NOT STARTED
+GER-WEB-005 — NEXT
 
 ## Known Unrelated Project Build Blocker
 
