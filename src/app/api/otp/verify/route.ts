@@ -1,3 +1,4 @@
+import { redactAuthResponse } from '@/lib/auth-response';
 import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
@@ -34,7 +35,7 @@ export async function POST(request: Request) {
 
     const data = await response.json().catch(() => ({}));
 
-    return NextResponse.json(data, { status: response.status });
+    return NextResponse.json(redactAuthResponse(data), { status: response.status, headers: { 'Cache-Control': 'no-store', ...(response.headers.get('retry-after') ? { 'Retry-After': response.headers.get('retry-after')! } : {}) } });
   } catch (error) {
     console.error('Error proxying OTP verify request:', error);
     return NextResponse.json(

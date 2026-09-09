@@ -1,4 +1,6 @@
+import { redactAuthResponse } from '@/lib/auth-response';
 import { NextResponse } from 'next/server';
+import { validateRegistrationPhone } from '@/lib/registration-phone';
 
 export async function POST(request: Request) {
   const apiKey = process.env.REGISTRATION_API_KEY;
@@ -21,7 +23,12 @@ export async function POST(request: Request) {
   }
 
   try {
-    const body = await request.json();
+    let body: Record<string, unknown>;
+    try {
+      body = validateRegistrationPhone(await request.json());
+    } catch (error) {
+      return NextResponse.json({ code: 'VALIDATION_ERROR', error: error instanceof Error ? error.message : 'Invalid registration' }, { status: 400 });
+    }
 
     const response = await fetch(`${baseUrl}/api/registrations`, {
       method: 'POST',
@@ -34,7 +41,7 @@ export async function POST(request: Request) {
 
     const data = await response.json().catch(() => ({}));
 
-    return NextResponse.json(data, { status: response.status });
+    return NextResponse.json(redactAuthResponse(data), { status: response.status, headers: { 'Cache-Control': 'no-store', ...(response.headers.get('retry-after') ? { 'Retry-After': response.headers.get('retry-after')! } : {}) } });
   } catch (error) {
     console.error('Error proxying registration request:', error);
     return NextResponse.json(

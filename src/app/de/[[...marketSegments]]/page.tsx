@@ -1,4 +1,4 @@
-import { redirect } from 'next/navigation';
+import { redirect, notFound } from 'next/navigation';
 import { requireMarketRoute } from '@/lib/market-route-boundary';
 import { getMarketLocalePath } from '@/lib/market-routing';
 
@@ -10,6 +10,8 @@ export default async function MarketPage({ params }: {
   const { marketSegments } = await params;
   const route = requireMarketRoute('germany', marketSegments);
   if (route.kind === 'entry') redirect(getMarketLocalePath(route.market.id, route.language));
+  // Prevent silent rendering of child routes unless a real specific route handles them.
+  if (route.kind === 'child') notFound();
 
   // Future market-scoped content/messages belong here, not in global next-intl.
   // Even an enabled fixture renders no marketing UI in this infrastructure unit.

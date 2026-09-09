@@ -1,0 +1,64 @@
+{
+  "common": {
+    "continue": "Continue",
+    "back": "Back",
+    "submit": "Submit",
+    "optional": "(Optional)",
+    "required": "Required",
+    "success": "Success"
+  },
+  "navigation": {
+    "home": "Home"
+  },
+  "hero": {
+    "entryQuestion": "What would you like help with?",
+    "freeTrial": "Free Trial",
+    "personalizedTutoring": "Personalized 1-to-1 tutoring",
+    "customerSupport": "Customer coordination and support"
+  },
+  "services": {
+    "german": "German",
+    "english": "English",
+    "arabic": "Arabic",
+    "french": "French"
+  },
+  "trust": {
+    "title": "Trusted by parents"
+  },
+  "useCases": {
+    "title": "How we help"
+  },
+  "teacherQuality": {
+    "title": "Our tutors"
+  },
+  "howItWorks": {
+    "title": "How it works"
+  },
+  "leadJourney": {
+    "stepServiceSelection": "Service Selection",
+    "stepLearnerContext": "Learner Context",
+    "stepLearningGoal": "Learning Goal",
+    "stepContact": "Contact & Trial Request",
+    "stepSuccess": "Success"
+  },
+  "testimonials": {
+    "title": "Testimonials"
+  },
+  "faq": {
+    "title": "FAQ"
+  },
+  "contact": {
+    "title": "Contact Us"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "errors": {
+    "validation": "Please check your input.",
+    "temporary": "A temporary error occurred. Please try again.",
+    "duplicate": "You have already submitted a request."
+  },
+  "success": {
+    "message": "Your request has been received."
+  }
+}

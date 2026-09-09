@@ -1,0 +1,64 @@
+{
+  "common": {
+    "continue": "Weiter",
+    "back": "Zurück",
+    "submit": "Absenden",
+    "optional": "(Optional)",
+    "required": "Erforderlich",
+    "success": "Erfolg"
+  },
+  "navigation": {
+    "home": "Startseite"
+  },
+  "hero": {
+    "entryQuestion": "Wobei brauchst du Hilfe?",
+    "freeTrial": "Kostenlose Probestunde",
+    "personalizedTutoring": "Persönliche 1-zu-1 Nachhilfe",
+    "customerSupport": "Kundenkoordination und Support"
+  },
+  "services": {
+    "german": "Deutsch",
+    "english": "Englisch",
+    "arabic": "Arabisch",
+    "french": "Französisch"
+  },
+  "trust": {
+    "title": "Von Eltern vertraut"
+  },
+  "useCases": {
+    "title": "Wie wir helfen"
+  },
+  "teacherQuality": {
+    "title": "Unsere Nachhilfelehrer"
+  },
+  "howItWorks": {
+    "title": "Wie es funktioniert"
+  },
+  "leadJourney": {
+    "stepServiceSelection": "Serviceauswahl",
+    "stepLearnerContext": "Lernkontext",
+    "stepLearningGoal": "Lernziel",
+    "stepContact": "Kontakt & Probestunde",
+    "stepSuccess": "Erfolg"
+  },
+  "testimonials": {
+    "title": "Erfahrungsberichte"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen"
+  },
+  "contact": {
+    "title": "Kontakt"
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "errors": {
+    "validation": "Bitte überprüfe deine Eingabe.",
+    "temporary": "Ein temporärer Fehler ist aufgetreten. Bitte versuche es erneut.",
+    "duplicate": "Du hast bereits eine Anfrage gesendet."
+  },
+  "success": {
+    "message": "Deine Anfrage wurde empfangen."
+  }
+}

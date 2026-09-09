@@ -1,6 +1,7 @@
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
+import { FaWhatsapp } from 'react-icons/fa6';
 import {
   ArrowLeft,
   ArrowRight,
@@ -16,6 +17,9 @@ import { useEffect, useMemo, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
+import { PhoneInput } from '@/components/ui/phone-input';
+import { defaultPhoneCountry, localPhone, type CountryCode } from '@/lib/phone';
+import { SocialAuthButtons } from './social-auth-buttons';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -26,20 +30,6 @@ import type { AuthLocale } from './auth-contracts';
 import { authInputClass, FieldError, FieldLabel, Notice, SubmitLabel } from './auth-ui';
 
 type LoginStage = 'identifier' | 'otp' | 'success';
-
-function isLoginIdentifier(value: string): boolean {
-  const normalized = value.trim();
-  const email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const phone = /^\+?[1-9][\d\s().-]{7,20}$/;
-  return email.test(normalized) || phone.test(normalized);
-}
-
-function normalizeIdentifier(value: string): string {
-  const trimmed = value.trim();
-  return trimmed.includes('@')
-    ? trimmed.toLowerCase()
-    : trimmed.replace(/[\s().-]/g, '');
-}
 
 function friendlyError(error: unknown, copy: ReturnType<typeof getAuthCopy>): string {
   if (!(error instanceof AuthApiError)) return copy.common.apiError;
@@ -57,12 +47,18 @@ export function LoginForm({ locale }: { locale: AuthLocale }) {
   const isRtl = locale === 'ar';
   const ForwardIcon = isRtl ? ArrowLeft : ArrowRight;
   const BackIcon = isRtl ? ArrowRight : ArrowLeft;
+  const [socialPending, setSocialPending] = useState(false);
+  const [method, setMethod] = useState<'email' | 'whatsapp'>('email');
+  const [phoneCountry, setPhoneCountry] = useState<CountryCode>(defaultPhoneCountry);
+  const [drafts, setDrafts] = useState({ email: '', whatsapp: '' });
+  const normalizeIdentifier = (value: string) => method === 'email' ? value.trim().toLowerCase() : localPhone(value, phoneCountry)?.phoneE164 || '';
+  const methodLabel = method === 'email' ? (isRtl ? 'البريد الإلكتروني' : 'Email') : 'WhatsApp';
 
   const identifierSchema = useMemo(
     () => z.object({
-      identifier: z.string().trim().refine(isLoginIdentifier, copy.login.identifierHint),
+      identifier: z.string().trim().refine((value) => method === 'email' ? z.string().email().safeParse(value).success : Boolean(localPhone(value, phoneCountry)), method === 'email' ? copy.register.errors.email : copy.register.errors.phone),
     }),
-    [copy.login.identifierHint]
+    [method, phoneCountry, copy.register.errors.email, copy.register.errors.phone]
   );
   const otpSchema = useMemo(
     () => z.object({ otp: z.string().regex(/^\d{6}$/, copy.common.invalidOtp) }),
@@ -206,33 +202,30 @@ export function LoginForm({ locale }: { locale: AuthLocale }) {
 
       {errorMessage ? <div className="mt-6"><Notice variant="error">{errorMessage}</Notice></div> : null}
 
+      {stage === 'identifier' && <>
+        <SocialAuthButtons locale={locale} disabled={socialPending || identifierForm.formState.isSubmitting} onPendingChange={setSocialPending} />
+        <div className="grid grid-cols-2 gap-3" role="group" aria-label={isRtl ? 'طريقة الدخول' : 'Sign-in method'}>
+          {(['email', 'whatsapp'] as const).map((choice) => <button key={choice} type="button" disabled={socialPending || identifierForm.formState.isSubmitting} aria-pressed={method === choice} className={buttonVariants({ variant: method === choice ? 'accent' : 'outline', className: 'w-full' })} onClick={() => {
+            const outgoingIdentifier = identifierForm.getValues('identifier');
+            setDrafts((current) => ({ ...current, [method]: outgoingIdentifier }));
+            setMethod(choice); identifierForm.setValue('identifier', choice === method ? identifierForm.getValues('identifier') : drafts[choice]); identifierForm.clearErrors(); setErrorMessage('');
+          }}>{choice === 'email' ? <Mail aria-hidden="true" className="h-5 w-5 shrink-0" /> : <FaWhatsapp aria-hidden="true" className="h-5 w-5 shrink-0" />}{choice === 'email' ? (isRtl ? 'المتابعة بالبريد' : 'Continue with Email') : (isRtl ? 'المتابعة بواتساب' : 'Continue with WhatsApp')}</button>)}
+        </div>
+      </>}
       {stage === 'identifier' ? (
         <form onSubmit={identifierForm.handleSubmit(requestCode)} className="mt-8" noValidate>
-          <FieldLabel htmlFor="login-identifier" label={copy.login.identifierLabel} requirement={copy.common.required} />
-          <div className="relative">
-            <Mail aria-hidden="true" className="pointer-events-none absolute start-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
-            <input
-              id="login-identifier"
-              type="text"
-              inputMode="email"
-              autoComplete="username"
-              dir="ltr"
-              placeholder={copy.login.identifierPlaceholder}
-              aria-invalid={Boolean(identifierForm.formState.errors.identifier)}
-              aria-describedby="login-identifier-hint login-identifier-error"
-              className={cn(authInputClass, 'ps-12')}
-              {...identifierForm.register('identifier')}
-            />
-          </div>
-          <p id="login-identifier-hint" className="mt-2 flex items-center gap-2 text-caption font-semibold text-muted-foreground">
-            <ShieldCheck aria-hidden="true" className="h-4 w-4 text-accent-700" />
-            {copy.login.identifierHint}
-          </p>
-          <FieldError id="login-identifier-error">{identifierForm.formState.errors.identifier?.message}</FieldError>
+          <FieldLabel htmlFor="login-identifier" label={methodLabel} requirement={copy.common.required} />
+          {method === 'whatsapp' ? <PhoneInput id="login-identifier" disabled={socialPending || identifierForm.formState.isSubmitting} label="WhatsApp" locale={locale} country={phoneCountry} value={identifierForm.watch('identifier')} onCountryChange={setPhoneCountry} onChange={(value) => identifierForm.setValue('identifier', value, { shouldDirty: true, shouldValidate: true })} onBlur={() => void identifierForm.trigger('identifier')} inputRef={identifierForm.register('identifier').ref} required error={identifierForm.formState.errors.identifier?.message} className={authInputClass} /> : <>
+            <div className="relative">
+              <Mail aria-hidden="true" className="pointer-events-none absolute start-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
+              <input id="login-identifier" disabled={socialPending || identifierForm.formState.isSubmitting} type="email" inputMode="email" autoComplete="email" dir="ltr" aria-invalid={Boolean(identifierForm.formState.errors.identifier)} aria-describedby="login-identifier-error" className={cn(authInputClass, 'ps-12')} name="identifier" ref={identifierForm.register('identifier').ref} value={identifierForm.watch('identifier')} onChange={(event) => identifierForm.setValue('identifier', event.target.value, { shouldDirty: true })} onBlur={() => void identifierForm.trigger('identifier')} />
+            </div>
+            <FieldError id="login-identifier-error">{identifierForm.formState.errors.identifier?.message}</FieldError>
+          </>}
 
           <button
             type="submit"
-            disabled={identifierForm.formState.isSubmitting}
+            disabled={socialPending || identifierForm.formState.isSubmitting}
             className={buttonVariants({ variant: 'accent', size: 'lg', className: 'mt-7 w-full' })}
           >
             <SubmitLabel

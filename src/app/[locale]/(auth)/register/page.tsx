@@ -9,6 +9,7 @@ import { routing } from '@/i18n/routing';
 
 interface RegisterPageProps {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ demo?: string }>;
 }
 
 function getLocale(value: string): AuthLocale {
@@ -33,12 +34,12 @@ export async function generateMetadata({ params }: RegisterPageProps): Promise<M
   };
 }
 
-export default async function RegisterPage({ params }: RegisterPageProps) {
+export default async function RegisterPage({ params, searchParams }: RegisterPageProps) {
   const locale = getLocale((await params).locale);
 
   return (
     <AuthShell locale={locale}>
-      <RegistrationForm locale={locale} />
+      <RegistrationForm locale={locale} demo={(await searchParams).demo === '1'} />
     </AuthShell>
   );
 }
