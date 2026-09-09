@@ -7,6 +7,7 @@ import { Container } from '@/components/ui/container';
 import { getMarketConfig } from '@/config/markets';
 import { parseNavigationContext } from '@/lib/market-navigation';
 import { Phone, Mail, ArrowRight, ArrowLeft, Globe } from 'lucide-react';
+import { SupportedCountries } from '@/components/ui/supported-countries';
 
 export function MarketFooter() {
   const t = useTranslations('footer');
@@ -148,8 +149,11 @@ export function MarketFooter() {
           </div>
         </div>
 
+        {/* Supported Countries Flag Strip */}
+        <SupportedCountries locale={locale} className="mt-16 pt-10 border-t border-white/10" />
+
         {/* North America Core Website Callout */}
-        <div className="mt-14 rounded-2xl border border-white/15 bg-white/5 p-6 backdrop-blur-sm transition-colors hover:border-accent-400/40 sm:p-8">
+        <div className="mt-10 rounded-2xl border border-white/15 bg-white/5 p-6 backdrop-blur-sm transition-colors hover:border-accent-400/40 sm:p-8">
           <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
             <div className="flex items-start gap-4">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent-500/20 text-accent-300">

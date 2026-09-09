@@ -935,15 +935,3 @@ body:has([data-auth-page]) #n8n-chat {
     --chat--window--bottom: calc(env(safe-area-inset-bottom, 0px) + 0.5rem);
   }
 }
-
-/* Germany market context: Chatbot on the left, WhatsApp on the right */
-html[lang='de'] #n8n-chat,
-body:has([aria-label="Germany market navigation"]) #n8n-chat {
-  --chat--window--right: auto;
-  --chat--window--left: 1.5rem;
-}
-html[lang='de'] .chat-toggle,
-body:has([aria-label="Germany market navigation"]) .chat-toggle {
-  right: auto !important;
-  left: 1.5rem !important;
-}
