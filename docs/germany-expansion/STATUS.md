@@ -24,7 +24,7 @@ GER-WEB-003B — APPROVED
 
 GER-WEB-004 — APPROVED
 
-GER-WEB-005 — NEXT
+GER-WEB-005 — READY FOR REVIEW
 
 ## Known Unrelated Project Build Blocker
 
