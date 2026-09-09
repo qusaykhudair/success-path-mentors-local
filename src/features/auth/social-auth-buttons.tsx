@@ -8,7 +8,7 @@ import { Notice, SubmitLabel } from './auth-ui';
 import type { AuthLocale } from './auth-contracts';
 import { configuredSocialStartUrl, type SocialProvider } from './social-auth';
 
-export function SocialAuthButtons({ locale }: { locale: AuthLocale }) {
+export function SocialAuthButtons({ locale, disabled = false, onPendingChange }: { locale: AuthLocale; disabled?: boolean; onPendingChange?: (pending: boolean) => void }) {
   const [pending, setPending] = useState<SocialProvider | null>(null);
   const [error, setError] = useState(false);
   const requestRef = useRef<AbortController | null>(null);
@@ -20,11 +20,12 @@ export function SocialAuthButtons({ locale }: { locale: AuthLocale }) {
   }, []);
 
   async function start(provider: SocialProvider) {
-    if (requestRef.current) return;
+    if (disabled || requestRef.current) return;
     const controller = new AbortController();
     requestRef.current = controller;
     const timeout = window.setTimeout(() => controller.abort(), 15_000);
     setPending(provider);
+    onPendingChange?.(true);
     setError(false);
     try {
       const response = await fetch(`/api/auth/social/start?provider=${provider}`, {
@@ -43,18 +44,19 @@ export function SocialAuthButtons({ locale }: { locale: AuthLocale }) {
       if (requestRef.current === controller) {
         requestRef.current = null;
         setPending(null);
+        onPendingChange?.(false);
       }
     }
   }
 
   return (
     <div className="mt-6 space-y-3" aria-busy={Boolean(pending)}>
-      <button type="button" disabled={Boolean(pending)} onClick={() => void start('google')}
+      <button type="button" disabled={disabled || Boolean(pending)} onClick={() => void start('google')}
         className={buttonVariants({ variant: 'outline', size: 'lg', className: 'w-full gap-3' })}>
         <FcGoogle aria-hidden="true" className="h-5 w-5" />
         <SubmitLabel loading={pending === 'google'} idle={ar ? 'المتابعة باستخدام Google' : 'Continue with Google'} pending={ar ? 'جارٍ الاتصال…' : 'Connecting…'} />
       </button>
-      <button type="button" disabled={Boolean(pending)} onClick={() => void start('facebook')}
+      <button type="button" disabled={disabled || Boolean(pending)} onClick={() => void start('facebook')}
         className={buttonVariants({ variant: 'outline', size: 'lg', className: 'w-full gap-3' })}>
         <FaFacebook aria-hidden="true" className="h-5 w-5 text-[#1877F2]" />
         <SubmitLabel loading={pending === 'facebook'} idle={ar ? 'المتابعة باستخدام Facebook' : 'Continue with Facebook'} pending={ar ? 'جارٍ الاتصال…' : 'Connecting…'} />

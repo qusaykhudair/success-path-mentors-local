@@ -98,88 +98,20 @@ async function requestJson<T>(
   }
 }
 
-function wait(ms = 550): Promise<void> {
-  return new Promise((resolve) => window.setTimeout(resolve, ms));
-}
-
-function createId(prefix: string): string {
-  const randomPart = window.crypto
-    .randomUUID()
-    .replaceAll('-', '')
-    .slice(0, 12)
-    .toUpperCase();
-
-  return `${prefix}-${randomPart}`;
-}
-
-function maskIdentifier(identifier: string): {
-  channel: LoginChallenge['channel'];
-  destination: string;
-} {
-  if (identifier.includes('@')) {
-    const [name = '', domain = ''] = identifier.split('@');
-    const visibleName = name.slice(0, 2);
-
-    return {
-      channel: 'EMAIL',
-      destination: `${visibleName}${'*'.repeat(Math.max(3, name.length - 2))}@${domain}`,
-    };
-  }
-
-  const digits = identifier.replace(/\D/g, '');
-  return {
-    channel: 'WHATSAPP',
-    destination: `+${'*'.repeat(Math.max(5, digits.length - 4))}${digits.slice(-4)}`,
-  };
-}
-
-async function mockRequestLogin(
-  payload: LoginRequestPayload
-): Promise<LoginChallenge> {
-  throw new Error("Mock API disabled");
-}
-
-async function mockVerifyLogin(
-  payload: LoginVerifyPayload,
-  locale: 'en' | 'ar'
-): Promise<AuthenticatedUser> {
-  throw new Error("Mock API disabled");
-}
-
-async function mockSubmitRegistration(
-  payload: RegistrationPayload
-): Promise<RegistrationResult> {
-  throw new Error("Mock API disabled");
-}
-
-async function mockVerifyRegistration(
-  payload: RegistrationVerifyPayload,
-  registrationId: string
-): Promise<RegistrationConfirmation> {
-  throw new Error("Mock API disabled");
-}
-
 export const authApi = {
   requestLogin(payload: LoginRequestPayload): Promise<LoginChallenge> {
-    if (isMockAuthApi) {
-      return mockRequestLogin(payload);
-    }
 
     return requestJson<{
       masked_contact: string;
       contact_method_id: number;
       contact_method: string;
       message: string;
-      _dev_otp?: string;
     }>(
       '/api/portal/auth/login/request',
       { method: 'POST', body: JSON.stringify({ identifier: payload.identifier }) },
       payload.locale,
       true
     ).then((res) => {
-      if (res._dev_otp) {
-        console.log('Backend returned DEV OTP code (Login):', res._dev_otp);
-      }
       return {
         challenge_id: res.contact_method_id.toString(),
         channel: res.contact_method as any,
@@ -194,9 +126,6 @@ export const authApi = {
     payload: LoginVerifyPayload,
     locale: 'en' | 'ar'
   ): Promise<AuthenticatedUser> {
-    if (isMockAuthApi) {
-      return mockVerifyLogin(payload, locale);
-    }
 
     return requestJson<{
       portal_token: string;
@@ -238,9 +167,6 @@ export const authApi = {
   submitRegistration(
     payload: RegistrationPayload
   ): Promise<RegistrationResult> {
-    if (isMockAuthApi) {
-      return mockSubmitRegistration(payload);
-    }
 
     const backendPayload = {
       guardian: {
@@ -294,12 +220,11 @@ export const authApi = {
 
       if (res.verification_required && res.contact_methods && res.contact_methods.length > 0) {
         const contact = res.contact_methods[0]!;
-        
+
         let sendRes: {
           success: boolean;
           message: string;
           expires_in_minutes: number;
-          _dev_otp?: string;
         } | null = null;
 
         try {
@@ -308,7 +233,6 @@ export const authApi = {
             success: boolean;
             message: string;
             expires_in_minutes: number;
-            _dev_otp?: string;
           }>(
             '/api/otp/send',
             { method: 'POST', body: JSON.stringify({ contact_method_id: contact.contact_method_id }) },
@@ -317,10 +241,6 @@ export const authApi = {
           );
         } catch (err) {
           console.warn('Initial OTP send failed, but registration succeeded. Proceeding to verification screen.', err);
-        }
-
-        if (sendRes?._dev_otp) {
-          console.log('Backend returned DEV OTP code:', sendRes._dev_otp);
         }
 
         verification = {
@@ -349,9 +269,6 @@ export const authApi = {
     registrationId: string,
     locale: 'en' | 'ar'
   ): Promise<RegistrationConfirmation> {
-    if (isMockAuthApi) {
-      return mockVerifyRegistration(payload, registrationId);
-    }
 
     return requestJson<{
       success: boolean;
@@ -368,42 +285,28 @@ export const authApi = {
       },
       locale,
       true // use proxy
-    ).then(() => ({
-      registration_id: registrationId,
-      status: 'ACCOUNT_VERIFIED' as any,
-      trial_status: 'WAITING_FOR_ASSIGNMENT' as any,
-    }));
+    ).then((res): RegistrationConfirmation => {
+      if (!res.success || !res.account_activated) {
+        throw new AuthApiError({ code: 'REGISTRATION_INCOMPLETE' }, 409);
+      }
+      return { registration_id: registrationId, status: 'ACCOUNT_VERIFIED', trial_status: 'WAITING_FOR_ASSIGNMENT' };
+    });
   },
 
   async resendRegistrationVerification(
     contactId: string,
     locale: 'en' | 'ar'
   ): Promise<LoginChallenge> {
-    if (isMockAuthApi) {
-      await wait();
-      return {
-        challenge_id: createId('CHL'),
-        channel: 'EMAIL',
-        masked_destination: 'ac*****@example.com',
-        expires_in_seconds: 300,
-        resend_after_seconds: 45,
-      };
-    }
-
     return requestJson<{
       success: boolean;
       message: string;
       expires_in_minutes: number;
-      _dev_otp?: string;
     }>(
       `/api/otp/send`,
       { method: 'POST', body: JSON.stringify({ contact_method_id: parseInt(contactId, 10) }) },
       locale,
       true // use proxy
     ).then((res) => {
-      if (res._dev_otp) {
-        console.log('Backend returned DEV OTP code (Resend):', res._dev_otp);
-      }
       return {
         challenge_id: contactId,
         channel: 'EMAIL',

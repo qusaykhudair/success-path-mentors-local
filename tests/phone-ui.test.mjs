@@ -14,6 +14,7 @@ const { createRoot } = require('react-dom/client');
 const load = createLoader(fileURLToPath(new URL('../', import.meta.url)));
 const { PhoneInput } = load('src/components/ui/phone-input.tsx');
 const { RegistrationForm } = load('src/features/auth/registration-form.tsx');
+const { LoginForm } = load('src/features/auth/login-form.tsx');
 
 async function change(input, value) {
   await React.act(async () => {
@@ -22,6 +23,31 @@ async function change(input, value) {
     input.dispatchEvent(new dom.window.Event(input.tagName === 'SELECT' ? 'change' : 'input', { bubbles: true }));
   });
 }
+test('login exposes four methods and preserves separate email and phone drafts', async () => {
+  const container = document.createElement('div'); document.body.append(container);
+  const root = createRoot(container);
+  await React.act(async () => root.render(React.createElement(LoginForm, { locale: 'en' })));
+  const choose = async (label) => {
+    const button = [...container.querySelectorAll('button')].find((node) => node.textContent.includes(label));
+    assert.ok(button, `missing ${label}`);
+    await React.act(async () => button.click());
+  };
+  assert.match(container.textContent, /Google/);
+  assert.match(container.textContent, /Facebook/);
+  await change(container.querySelector('input[type=email]'), 'parent@example.com');
+  await choose('Continue with WhatsApp');
+  await change(container.querySelector('select[aria-label$="Country and calling code"]'), 'PS');
+  await change(container.querySelector('input[type=tel]'), '599123456');
+  assert.equal(container.querySelector('input[type=tel]').validity.valid, true);
+  await choose('Continue with Email');
+  assert.equal(container.querySelector('input[type=email]').value, 'parent@example.com');
+  await choose('Continue with WhatsApp');
+  assert.equal(container.querySelector('input[type=tel]').value, '599123456');
+  assert.equal(container.querySelector('select[aria-label$="Country and calling code"]').value, 'PS');
+  await change(container.querySelector('input[type=tel]'), '123');
+  assert.equal(container.querySelector('input[type=tel]').validity.valid, false);
+  await React.act(async () => root.unmount()); container.remove();
+});
 test('search, country selection, untouched local input, native validity and canonical form value', async () => {
   const container = document.createElement('div'); document.body.append(container);
   const root = createRoot(container);
