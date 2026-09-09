@@ -2,6 +2,10 @@
 
 ## Delivery status
 
+Latest UI correction: registration now opens `SignupMethods` with Google, Facebook, Email and WhatsApp choices before the guardian form. Email and WhatsApp reveal their respective contact inputs; their verification-send control is explicitly unavailable because no pre-registration challenge contract exists. No verification or pending identity is fabricated. The existing registration form is retained under an explicit link and can return to method selection without discarding its mounted form state. Both login method buttons and signup method buttons include the email/WhatsApp icons. This is still a partial workflow, not functional verification-first signup.
+
+Follow-up checks: baseline focused suite passed; updated component suite passes including initial method selection, icon presence and prevention of false verification. Localized registration/login HTTP responses are 200; the initial registration HTML no longer contains guardian inputs. New signup component and login ESLint pass. Broader registration-form lint reports existing `as any` and unused `isMockAuthApi` (confirmed in the preceding commit), not introduced by this correction. Files for this correction: created `src/features/auth/signup-methods.tsx`; modified registration/login forms, `tests/phone-ui.test.mjs`, and this report. No deleted files or backend/schema changes.
+
 This is a partial implementation against the existing website contract, not a completed authentication system. The backend source and test database were not found in the workspace. No backend, database, provider delivery, or end-to-end success is asserted. No persistence or successful authentication was mocked.
 
 Preview: `http://localhost:3011/en/register`, `/ar/register`, `/en/login`, `/ar/login`. These changes are in `.worktrees/auth-phone-social-ui` on `fix/auth-phone-social-ui`. Port 3000 belongs to a separate checkout; opening it will not show this branch. No production deployment was made.

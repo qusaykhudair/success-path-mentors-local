@@ -23,6 +23,22 @@ async function change(input, value) {
     input.dispatchEvent(new dom.window.Event(input.tagName === 'SELECT' ? 'change' : 'input', { bubbles: true }));
   });
 }
+test('signup starts with four methods and never treats an unavailable challenge as verified', async () => {
+  const container = document.createElement('div'); document.body.append(container);
+  const root = createRoot(container);
+  await React.act(async () => root.render(React.createElement(RegistrationForm, { locale: 'en' })));
+  assert.equal(container.querySelector('#parent_name'), null);
+  for (const label of ['Sign up with Email', 'Sign up with WhatsApp']) {
+    const button = [...container.querySelectorAll('button')].find((node) => node.textContent === label);
+    assert.ok(button.querySelector('svg'), `${label} needs its icon`);
+    await React.act(async () => button.click());
+    assert.match(container.textContent, /No code has been sent/);
+    assert.ok([...container.querySelectorAll('button')].find((node) => node.textContent.includes('Send verification code')).disabled);
+    assert.equal(container.querySelector('#parent_name'), null);
+  }
+  assert.ok(container.querySelector('#signup-whatsapp'));
+  await React.act(async () => root.unmount()); container.remove();
+});
 test('login exposes four methods and preserves separate email and phone drafts', async () => {
   const container = document.createElement('div'); document.body.append(container);
   const root = createRoot(container);
@@ -30,6 +46,7 @@ test('login exposes four methods and preserves separate email and phone drafts',
   const choose = async (label) => {
     const button = [...container.querySelectorAll('button')].find((node) => node.textContent.includes(label));
     assert.ok(button, `missing ${label}`);
+    assert.ok(button.querySelector('svg'), `${label} needs its icon`);
     await React.act(async () => button.click());
   };
   assert.match(container.textContent, /Google/);
@@ -77,6 +94,9 @@ test('registration fills country/timezone, preserves manual overrides across ste
   const container = document.createElement('div'); document.body.append(container);
   const root = createRoot(container);
   await React.act(async () => root.render(React.createElement(RegistrationForm, { locale: 'en' })));
+  assert.match(container.textContent, /Sign up with Email/);
+  assert.match(container.textContent, /Sign up with WhatsApp/);
+  await React.act(async () => [...container.querySelectorAll('button')].find((node) => node.textContent === 'Use the current registration form').click());
   await change(container.querySelector('select[aria-label="WhatsApp number: Country and calling code"]') || container.querySelector('select[aria-label$="Country and calling code"]'), 'PS');
   // Use the actual form controls to advance the registration wizard.
   for (const [id, value] of [['parent_name', 'Test Parent'], ['guardian_relationship', 'MOTHER'], ['email', 'test@example.com'], ['whatsapp', '599123456']]) {

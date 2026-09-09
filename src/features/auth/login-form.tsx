@@ -1,6 +1,7 @@
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
+import { FaWhatsapp } from 'react-icons/fa6';
 import {
   ArrowLeft,
   ArrowRight,
@@ -208,7 +209,7 @@ export function LoginForm({ locale }: { locale: AuthLocale }) {
             const outgoingIdentifier = identifierForm.getValues('identifier');
             setDrafts((current) => ({ ...current, [method]: outgoingIdentifier }));
             setMethod(choice); identifierForm.setValue('identifier', choice === method ? identifierForm.getValues('identifier') : drafts[choice]); identifierForm.clearErrors(); setErrorMessage('');
-          }}>{choice === 'email' ? (isRtl ? 'المتابعة بالبريد' : 'Continue with Email') : (isRtl ? 'المتابعة بواتساب' : 'Continue with WhatsApp')}</button>)}
+          }}>{choice === 'email' ? <Mail aria-hidden="true" className="h-5 w-5 shrink-0" /> : <FaWhatsapp aria-hidden="true" className="h-5 w-5 shrink-0" />}{choice === 'email' ? (isRtl ? 'المتابعة بالبريد' : 'Continue with Email') : (isRtl ? 'المتابعة بواتساب' : 'Continue with WhatsApp')}</button>)}
         </div>
       </>}
       {stage === 'identifier' ? (
