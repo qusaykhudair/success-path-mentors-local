@@ -3,8 +3,11 @@ import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { MarketHeader } from '@/components/germany/market-header';
 import { MarketFooter } from '@/components/germany/market-footer';
+import { MarketFloatingWidgets } from '@/components/germany/market-floating-widgets';
+import { N8nChat } from '@/components/chat/n8n-chat';
 import { getMarketMessages } from '@/lib/market-messages';
 import { cn } from '@/lib/utils';
+import '@n8n/chat/style.css';
 
 export default async function MarketSegmentsLayout({
   children,
@@ -37,8 +40,10 @@ export default async function MarketSegmentsLayout({
       )}
     >
       <NextIntlClientProvider locale={locale} messages={messages}>
-        <div className="flex min-h-screen flex-col">
+        <div className="flex min-h-screen flex-col relative">
           <MarketHeader />
+          <MarketFloatingWidgets />
+          <N8nChat key={locale} locale={locale === 'ar' ? 'ar' : 'en'} />
           <main className="flex-1">{children}</main>
           <MarketFooter />
         </div>
