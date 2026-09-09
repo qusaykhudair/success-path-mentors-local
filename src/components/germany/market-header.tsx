@@ -26,7 +26,7 @@ export function MarketHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/90 shadow-xs backdrop-blur-xl">
-      <Container className="flex min-h-16 items-center justify-between gap-2 xl:min-h-[4.5rem]">
+      <Container className="flex min-h-[4.5rem] items-center justify-between gap-2 xl:min-h-[5rem]">
         {/* Logo */}
         <a
           href={`/de/${context.locale}`}
@@ -36,11 +36,11 @@ export function MarketHeader() {
           <Image
             src="/images/logo.png"
             alt="Success Path Mentors"
-            width={145}
-            height={47}
+            width={160}
+            height={52}
             priority
-            sizes="(max-width: 1024px) 122px, 145px"
-            className="h-8 w-auto object-contain transition-transform duration-300 ease-out group-hover:scale-[1.03] xl:h-8"
+            sizes="(max-width: 1024px) 130px, 160px"
+            className="h-9 w-auto object-contain transition-transform duration-300 ease-out group-hover:scale-[1.03] xl:h-10"
           />
         </a>
 

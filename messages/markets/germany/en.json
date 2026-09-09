@@ -17,7 +17,7 @@
     "customerSupport": "Customer coordination and support",
     "headline": "Unlock Your Potential",
     "subheadline": "Personalized 1-to-1 tutoring designed for your success.",
-    "trustContext": "Trusted by over 10,000 students",
+    "trustContext": "Personalized Learning",
     "selector": {
       "question": "What would you like help with?",
       "instruction": "Select a subject to continue",
@@ -126,21 +126,21 @@
   },
   "trustStrip": {
     "item1": {
-      "title": "Personalized matching",
-      "subtitle": "Find the perfect tutor"
+      "title": "1-to-1 Tutoring",
+      "subtitle": "Dedicated personal support"
     },
     "item2": {
-      "title": "Verified quality",
-      "subtitle": "Expert educators"
+      "title": "Human Coordination",
+      "subtitle": "We manage your learning journey"
     },
     "item3": {
-      "title": "Flexible scheduling",
-      "subtitle": "Learn anytime"
+      "title": "Online Learning",
+      "subtitle": "Learn comfortably from anywhere"
     }
   },
   "cta": {
     "headline": "Ready to start?",
-    "subheadline": "Join thousands of successful students today.",
+    "subheadline": "Start your personalized learning journey today.",
     "primaryAction": "Start Free Trial",
     "secondaryAction": "Chat on WhatsApp"
   }

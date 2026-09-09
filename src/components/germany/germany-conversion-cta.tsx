@@ -13,14 +13,14 @@ export function GermanyConversionCTA() {
   const marketConfig = getMarketConfig('germany');
 
   return (
-    <section className="bg-primary-950 py-16 md:py-24 text-center">
+    <section className="bg-primary-950 py-20 md:py-32 text-center">
       <Container>
-        <div className="mx-auto max-w-3xl flex flex-col items-center gap-8">
-          <div className="flex flex-col gap-4">
-            <h2 className="text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl text-balance">
+        <div className="mx-auto max-w-4xl flex flex-col items-center gap-10">
+          <div className="flex flex-col gap-6">
+            <h2 className="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl text-balance leading-tight">
               {t('headline')}
             </h2>
-            <p className="text-lg text-primary-200 text-balance">
+            <p className="text-xl text-primary-200 text-balance leading-relaxed">
               {t('subheadline')}
             </p>
           </div>

@@ -17,7 +17,7 @@
     "customerSupport": "التنسيق ودعم العملاء",
     "headline": "أطلق العنان لإمكانياتك",
     "subheadline": "دروس خصوصية مخصصة لنجاحك.",
-    "trustContext": "موثوق به من قبل الآباء والطلاب",
+    "trustContext": "تعلم مخصص",
     "selector": {
       "question": "بماذا تريد المساعدة؟",
       "instruction": "اختر الخدمة للمتابعة",
@@ -32,24 +32,24 @@
     }
   },
   "services": {
-    "headline": "Our Core Programs",
-    "subheadline": "Expert tutoring across key disciplines",
+    "headline": "برامجنا الأساسية",
+    "subheadline": "دروس تقوية من خبراء في التخصصات الرئيسية",
     "items": {
       "german": {
-        "title": "German",
-        "description": "Master the language"
+        "title": "الألمانية",
+        "description": "أتقن اللغة"
       },
       "english": {
-        "title": "English",
-        "description": "Fluency and grammar"
+        "title": "الإنجليزية",
+        "description": "الطلاقة والقواعد"
       },
       "arabic": {
-        "title": "Arabic",
-        "description": "Native language support"
+        "title": "العربية",
+        "description": "دعم اللغة الأم"
       },
       "french": {
-        "title": "French",
-        "description": "Comprehensive curriculum"
+        "title": "الفرنسية",
+        "description": "منهج شامل"
       }
     }
   },
@@ -63,19 +63,19 @@
     "title": "معلمونا"
   },
   "howItWorks": {
-    "headline": "How It Works",
+    "headline": "كيف تعمل المنصة",
     "items": {
       "step1": {
-        "title": "Tell us what you need",
-        "description": "Choose your subject"
+        "title": "أخبرنا باحتياجاتك",
+        "description": "اختر مادتك"
       },
       "step2": {
-        "title": "We match you",
-        "description": "Find the best tutor"
+        "title": "نوصلك بالمعلم",
+        "description": "ابحث عن المعلم الأنسب"
       },
       "step3": {
-        "title": "Start learning",
-        "description": "Begin your trial"
+        "title": "ابدأ التعلم",
+        "description": "ابدأ حصتك التجريبية"
       }
     }
   },
@@ -96,15 +96,15 @@
     "title": "اتصل بنا"
   },
   "footer": {
-    "brandDescription": "Empowering students to achieve academic excellence.",
-    "servicesTitle": "Services",
-    "contactTitle": "Contact",
-    "legalTitle": "Legal",
+    "brandDescription": "تمكين الطلاب من تحقيق التفوق الأكاديمي.",
+    "servicesTitle": "الخدمات",
+    "contactTitle": "تواصل معنا",
+    "legalTitle": "قانوني",
     "legal": {
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service"
+      "privacy": "سياسة الخصوصية",
+      "terms": "شروط الخدمة"
     },
-    "allRightsReserved": "All rights reserved.",
+    "allRightsReserved": "جميع الحقوق محفوظة.",
     "services": {
       "german": "الألمانية",
       "english": "الإنجليزية",
@@ -126,22 +126,22 @@
   },
   "trustStrip": {
     "item1": {
-      "title": "Personalized matching",
-      "subtitle": "Find the perfect tutor"
+      "title": "دروس خصوصية فردية",
+      "subtitle": "دعم شخصي مخصص"
     },
     "item2": {
-      "title": "Verified quality",
-      "subtitle": "Expert educators"
+      "title": "تنسيق بشري",
+      "subtitle": "ندير رحلتك التعليمية"
     },
     "item3": {
-      "title": "Flexible scheduling",
-      "subtitle": "Learn anytime"
+      "title": "التعلم عبر الإنترنت",
+      "subtitle": "تعلم براحة من أي مكان"
     }
   },
   "cta": {
-    "headline": "Ready to start?",
-    "subheadline": "Join thousands of successful students today.",
-    "primaryAction": "Start Free Trial",
-    "secondaryAction": "Chat on WhatsApp"
+    "headline": "هل أنت مستعد للبدء؟",
+    "subheadline": "ابدأ رحلتك التعليمية المخصصة اليوم.",
+    "primaryAction": "ابدأ الحصة التجريبية",
+    "secondaryAction": "تحدث عبر واتساب"
   }
 }

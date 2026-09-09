@@ -17,7 +17,7 @@
     "customerSupport": "Kundenkoordination und Support",
     "headline": "Entfalte dein Potenzial",
     "subheadline": "Individuelle 1-zu-1-Nachhilfe für deinen Erfolg.",
-    "trustContext": "Von Eltern vertraut",
+    "trustContext": "Personalisiertes Lernen",
     "selector": {
       "question": "Wobei möchtest du Hilfe?",
       "instruction": "Wähle ein Fach, um fortzufahren",
@@ -32,24 +32,24 @@
     }
   },
   "services": {
-    "headline": "Our Core Programs",
-    "subheadline": "Expert tutoring across key disciplines",
+    "headline": "Unsere Kernprogramme",
+    "subheadline": "Experten-Nachhilfe in wichtigen Fächern",
     "items": {
       "german": {
-        "title": "German",
-        "description": "Master the language"
+        "title": "Deutsch",
+        "description": "Sprache meistern"
       },
       "english": {
-        "title": "English",
-        "description": "Fluency and grammar"
+        "title": "Englisch",
+        "description": "Fließend sprechen & Grammatik"
       },
       "arabic": {
-        "title": "Arabic",
-        "description": "Native language support"
+        "title": "Arabisch",
+        "description": "Muttersprachliche Unterstützung"
       },
       "french": {
-        "title": "French",
-        "description": "Comprehensive curriculum"
+        "title": "Französisch",
+        "description": "Umfassender Lehrplan"
       }
     }
   },
@@ -63,19 +63,19 @@
     "title": "Unsere Nachhilfelehrer"
   },
   "howItWorks": {
-    "headline": "How It Works",
+    "headline": "Wie es funktioniert",
     "items": {
       "step1": {
-        "title": "Tell us what you need",
-        "description": "Choose your subject"
+        "title": "Sag uns, was du brauchst",
+        "description": "Wähle dein Fach"
       },
       "step2": {
-        "title": "We match you",
-        "description": "Find the best tutor"
+        "title": "Wir finden deinen Lehrer",
+        "description": "Erhalte den besten Nachhilfelehrer"
       },
       "step3": {
-        "title": "Start learning",
-        "description": "Begin your trial"
+        "title": "Fang an zu lernen",
+        "description": "Starte deine Probestunde"
       }
     }
   },
@@ -96,15 +96,15 @@
     "title": "Kontakt"
   },
   "footer": {
-    "brandDescription": "Empowering students to achieve academic excellence.",
-    "servicesTitle": "Services",
-    "contactTitle": "Contact",
-    "legalTitle": "Legal",
+    "brandDescription": "Wir stärken Schüler, um akademische Exzellenz zu erreichen.",
+    "servicesTitle": "Dienstleistungen",
+    "contactTitle": "Kontakt",
+    "legalTitle": "Rechtliches",
     "legal": {
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service"
+      "privacy": "Datenschutz",
+      "terms": "Nutzungsbedingungen"
     },
-    "allRightsReserved": "All rights reserved.",
+    "allRightsReserved": "Alle Rechte vorbehalten.",
     "services": {
       "german": "Deutsch",
       "english": "Englisch",
@@ -126,22 +126,22 @@
   },
   "trustStrip": {
     "item1": {
-      "title": "Personalized matching",
-      "subtitle": "Find the perfect tutor"
+      "title": "1-zu-1 Nachhilfe",
+      "subtitle": "Engagierte persönliche Betreuung"
     },
     "item2": {
-      "title": "Verified quality",
-      "subtitle": "Expert educators"
+      "title": "Persönliche Koordination",
+      "subtitle": "Wir organisieren deinen Lernweg"
     },
     "item3": {
-      "title": "Flexible scheduling",
-      "subtitle": "Learn anytime"
+      "title": "Online-Lernen",
+      "subtitle": "Bequem von überall lernen"
     }
   },
   "cta": {
-    "headline": "Ready to start?",
-    "subheadline": "Join thousands of successful students today.",
-    "primaryAction": "Start Free Trial",
-    "secondaryAction": "Chat on WhatsApp"
+    "headline": "Bereit anzufangen?",
+    "subheadline": "Beginne noch heute deine persönliche Lernreise.",
+    "primaryAction": "Kostenlose Probestunde starten",
+    "secondaryAction": "Auf WhatsApp chatten"
   }
 }

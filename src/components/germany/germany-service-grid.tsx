@@ -15,13 +15,13 @@ export function GermanyServiceGrid() {
   const t = useTranslations('services');
 
   return (
-    <section className="bg-muted/30 py-16 md:py-24">
+    <section className="bg-muted/30 py-20 md:py-32">
       <Container>
-        <div className="flex flex-col items-center gap-4 text-center mb-12">
-          <h2 className="text-3xl font-black tracking-tight text-foreground sm:text-4xl text-balance">
+        <div className="flex flex-col items-center gap-6 text-center mb-16">
+          <h2 className="text-4xl font-black tracking-tight text-foreground sm:text-5xl text-balance">
             {t('headline')}
           </h2>
-          <p className="max-w-2xl text-lg text-muted-foreground text-balance">
+          <p className="max-w-3xl text-xl text-muted-foreground text-balance">
             {t('subheadline')}
           </p>
         </div>

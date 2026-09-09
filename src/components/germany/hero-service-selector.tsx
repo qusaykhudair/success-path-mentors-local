@@ -68,7 +68,11 @@ export function HeroServiceSelector() {
               </span>
               
               {isSelected && (
-                <div className="absolute top-2 end-2 h-2 w-2 rounded-full bg-primary" />
+                <div className="absolute top-2 end-2 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-sm">
+                  <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
               )}
             </button>
           );

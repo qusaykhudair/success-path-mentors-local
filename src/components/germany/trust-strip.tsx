@@ -8,11 +8,11 @@ export function TrustStrip() {
   const t = useTranslations('trustStrip');
 
   return (
-    <section className="border-b border-border/50 bg-background py-8">
+    <section className="border-b border-border/50 bg-background py-12">
       <Container>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 sm:gap-8">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-12">
           
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-5">
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-accent/20 text-accent-700">
               <Users className="h-6 w-6" />
             </div>
@@ -22,7 +22,7 @@ export function TrustStrip() {
             </div>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-5">
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
               <ShieldCheck className="h-6 w-6" />
             </div>
@@ -32,7 +32,7 @@ export function TrustStrip() {
             </div>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-5">
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-turquoise/20 text-turquoise-700">
               <Clock className="h-6 w-6" />
             </div>

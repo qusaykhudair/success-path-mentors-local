@@ -14,12 +14,10 @@ export default async function GermanyPreviewHarness({
   const dir = getMarketLanguageDirection(locale as any);
 
   return (
-    <html lang={locale} dir={dir} className={dinNext.variable}>
-      <body className="min-h-screen bg-background text-foreground antialiased font-sans">
-        <NextIntlClientProvider messages={messages} locale={locale}>
-          <GermanyVisualPreview locale={locale} />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <div dir={dir} className={`${dinNext.variable} min-h-screen bg-background text-foreground antialiased font-sans`}>
+      <NextIntlClientProvider messages={messages} locale={locale}>
+        <GermanyVisualPreview locale={locale} />
+      </NextIntlClientProvider>
+    </div>
   );
 }
