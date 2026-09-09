@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 
-type N8nChatLocale = 'en' | 'ar';
+type N8nChatLocale = 'en' | 'ar' | 'de';
 
 interface N8nChatProps {
   locale: N8nChatLocale;
@@ -56,6 +56,17 @@ const chatCopy = {
       'كيف يمكننا مساعدتك اليوم؟',
     ],
   },
+  de: {
+    title: 'Success Path Mentors Assistent',
+    subtitle: 'Fragen Sie nach Fächern, Preisen, Lehrern oder Ihrer Probestunde.',
+    getStarted: 'Gespräch beginnen',
+    inputPlaceholder: 'Schreiben Sie Ihre Frage hier...',
+    closeButtonTooltip: 'Chat schließen',
+    initialMessages: [
+      'Willkommen bei Success Path Mentors 👋',
+      'Wie können wir Ihnen heute helfen?',
+    ],
+  },
 } as const;
 
 /**
@@ -65,7 +76,9 @@ const chatCopy = {
 export function N8nChat({ locale }: N8nChatProps) {
   useEffect(() => {
     const target = document.getElementById('n8n-chat');
-    const webhookUrl = process.env.NEXT_PUBLIC_N8N_CHAT_WEBHOOK_URL?.trim();
+    const webhookUrl =
+      process.env.NEXT_PUBLIC_N8N_CHAT_WEBHOOK_URL?.trim() ||
+      'https://n8n.successpathmentors.net/webhook/spm-chat';
 
     if (!target) {
       return;

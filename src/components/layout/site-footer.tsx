@@ -24,6 +24,9 @@ import {
   Container,
 } from '@/components/ui/container';
 import {
+  SupportedCountries,
+} from '@/components/ui/supported-countries';
+import {
   routePath,
 } from '@/config/routes';
 
@@ -647,6 +650,14 @@ export async function SiteFooter() {
             </span>
           </Link>
         </section>
+      </Container>
+
+      {/* Supported Countries Flag Strip */}
+      <Container className="pb-10">
+        <SupportedCountries
+          locale={currentLocale}
+          className="pt-10 border-t border-white/10"
+        />
       </Container>
 
       <div

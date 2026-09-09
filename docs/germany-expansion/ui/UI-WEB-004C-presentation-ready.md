@@ -37,8 +37,8 @@ The Germany homepage now follows a complete 14-part visual hierarchy:
 | 11 | `FaqSection` | Soft Slate Neutral (`#faq`) | 6-item interactive accordion with smooth chevron rotation & ARIA attributes |
 | 12 | `ContactSection` | Pure White (`#contact`) | WhatsApp direct (+49 1512 3974353), Email support, Service hours |
 | 13 | `GermanyConversionCTA` | Deep Navy Brand Gradient | Luminous turquoise glow, 3 trust badges, dual high-impact CTAs, and 3-step "What happens next" timeline |
-| 14 | `MarketFooter` | Deep Navy Structured | Brand statement, Services, Explore links, Account/Legal links, North America (Canada & USA) core website banner |
-| 15 | `MarketFloatingWidgets` | Screen Floating Layer | WhatsApp on the RIGHT (+49 1512 3974353), SPM Assistant Chatbot on the LEFT with quick action modal |
+| 14 | `MarketFooter` | Deep Navy Structured | Brand statement, Services, Explore links, Account/Legal links, Supported Countries Flag Strip (Canada, USA, UK, Australia) & North America core banner |
+| 15 | `FloatingWidgets` | Screen Floating Layer | Official `FloatingWhatsAppButton` on the LEFT, Official `N8nChat` on the RIGHT matching main site |
 
 ---
 
