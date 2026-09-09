@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { Container } from '@/components/ui/container';
 import { getMarketConfig } from '@/config/markets';
 import { parseNavigationContext } from '@/lib/market-navigation';
-import { Phone, Mail, ArrowRight, ArrowLeft, Globe } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 import { SupportedCountries } from '@/components/ui/supported-countries';
 
 export function MarketFooter() {
@@ -16,8 +16,6 @@ export function MarketFooter() {
   const pathname = usePathname() || '';
   const context = parseNavigationContext(pathname);
   const locale = (context.locale as 'de' | 'en' | 'ar') || 'de';
-  const isRtl = locale === 'ar';
-  const ArrowIcon = isRtl ? ArrowLeft : ArrowRight;
 
   const authLocale = locale === 'ar' ? 'ar' : 'en';
 
@@ -151,32 +149,6 @@ export function MarketFooter() {
 
         {/* Supported Countries Flag Strip */}
         <SupportedCountries locale={locale} className="mt-16 pt-10 border-t border-white/10" />
-
-        {/* North America Core Website Callout */}
-        <div className="mt-10 rounded-2xl border border-white/15 bg-white/5 p-6 backdrop-blur-sm transition-colors hover:border-accent-400/40 sm:p-8">
-          <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
-            <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent-500/20 text-accent-300">
-                <Globe className="h-6 w-6" />
-              </div>
-              <div className="flex flex-col gap-1">
-                <h4 className="text-base font-bold text-white sm:text-lg">
-                  {t('northAmericaBanner.title')}
-                </h4>
-                <p className="max-w-2xl text-xs text-primary-200 leading-relaxed sm:text-sm">
-                  {t('northAmericaBanner.description')}
-                </p>
-              </div>
-            </div>
-            <a
-              href={locale === 'ar' ? '/ar' : '/en'}
-              className="inline-flex min-h-touch shrink-0 items-center gap-2 rounded-xl bg-accent-600 px-5 py-2.5 text-xs font-bold text-white shadow-sm transition-all hover:bg-accent-500 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:text-sm whitespace-nowrap"
-            >
-              <span>{t('northAmericaBanner.button')}</span>
-              <ArrowIcon className="h-4 w-4" />
-            </a>
-          </div>
-        </div>
 
         {/* Bottom Bar: Copyright */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
