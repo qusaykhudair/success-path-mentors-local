@@ -12,6 +12,7 @@ import {
 
 import { Container } from '@/components/ui/container';
 import { getMarketConfig } from '@/config/markets';
+import { GlobalLanguageSelector } from '@/components/layout/global-language-selector';
 
 export function MarketHeader() {
   const pathname = usePathname() || '';
@@ -46,33 +47,13 @@ export function MarketHeader() {
 
         {/* Right side actions */}
         <div className="flex items-center gap-2 sm:gap-3">
-          {/* Language Switcher MVP */}
-          {languageOptions.length > 0 && (
-            <div className="relative group">
-              <button 
-                className="inline-flex items-center gap-1.5 min-h-touch rounded-button px-3 text-sm font-medium text-foreground hover:bg-muted focus-visible:outline-none"
-                aria-haspopup="true"
-              >
-                <Globe className="h-4 w-4 text-muted-foreground" />
-                <span className="hidden sm:inline">{currentLanguage?.label || 'Language'}</span>
-                <span className="sm:hidden">{currentLanguage?.code.toUpperCase()}</span>
-                <ChevronDown className="h-3 w-3 text-muted-foreground opacity-50" />
-              </button>
-              
-              <div className="absolute top-full end-0 mt-1 hidden min-w-[150px] flex-col rounded-xl border border-border bg-background p-1 shadow-lg group-hover:flex focus-within:flex">
-                {languageOptions.map((opt) => (
-                  <a
-                    key={opt.code}
-                    href={opt.destination}
-                    dir={opt.direction}
-                    className={`rounded-button px-3 py-2 text-sm text-start hover:bg-muted ${opt.isActive ? 'bg-primary-50 text-primary font-bold' : 'text-foreground'}`}
-                  >
-                    {opt.label}
-                  </a>
-                ))}
-              </div>
-            </div>
-          )}
+          <div className="hidden items-center gap-4 xl:flex">
+            <GlobalLanguageSelector isGermanyContext={true} />
+          </div>
+
+          <div className="xl:hidden">
+            <GlobalLanguageSelector isGermanyContext={true} />
+          </div>
 
           <a
             href={`https://wa.me/${marketConfig.contact.whatsapp}`}

@@ -41,8 +41,8 @@ import {
 } from '@/content/subjects/physics/physics-strands';
 
 import {
-  LocaleSwitcher,
-} from './locale-switcher';
+  GlobalLanguageSelector,
+} from './global-language-selector';
 import {
   MobileNav,
 } from './mobile-nav';
@@ -504,12 +504,12 @@ export async function SiteHeader() {
             sm:gap-3
           "
         >
-          <div className="hidden xl:block">
-            <LocaleSwitcher />
+          <div className="hidden items-center gap-4 xl:flex">
+            <GlobalLanguageSelector />
           </div>
 
           <div className="xl:hidden">
-            <LocaleSwitcher variant="compact" />
+            <GlobalLanguageSelector />
           </div>
 
           <a

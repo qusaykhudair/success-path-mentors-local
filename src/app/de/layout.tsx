@@ -5,6 +5,12 @@ import type { ReactNode } from 'react';
 // No content, providers, translations or market SEO are introduced here.
 export const metadata: Metadata = { robots: { index: false, follow: false } };
 
+import '../globals.css';
+
 export default function MarketNamespaceLayout({ children }: { children: ReactNode }) {
-  return <html><body>{children}</body></html>;
+  return (
+    <html suppressHydrationWarning>
+      <body suppressHydrationWarning>{children}</body>
+    </html>
+  );
 }

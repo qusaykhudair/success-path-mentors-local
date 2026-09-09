@@ -32,15 +32,15 @@ export function GermanyServiceGrid() {
             return (
               <div
                 key={service.id}
-                className="group flex flex-col items-center rounded-3xl bg-background p-8 text-center shadow-xs ring-1 ring-border/50 transition-all duration-300 hover:shadow-xl hover:ring-primary/20"
+                className="group flex flex-col items-center rounded-3xl bg-white p-8 text-center shadow-sm border border-primary-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-accent-200"
               >
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-50 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-50 text-primary-500 transition-colors group-hover:bg-accent-500 group-hover:text-white">
                   <Icon className="h-8 w-8" />
                 </div>
-                <h3 className="mb-3 text-xl font-bold text-foreground">
+                <h3 className="mb-3 text-xl font-bold text-primary-950">
                   {t(`items.${service.tKey}.title`)}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-base text-primary-600 leading-relaxed">
                   {t(`items.${service.tKey}.description`)}
                 </p>
               </div>

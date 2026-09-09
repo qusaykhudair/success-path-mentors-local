@@ -1,5 +1,5 @@
-import { getMarketConfig, marketIds, type MarketId, type MarketLanguage } from '@/config/markets';
-import { getMarketFromPathname, isMarketLanguage, getMarketChildPath, getMarketLanguageDirection, getMarketLocalePath } from '@/lib/market-routing';
+import { getMarketConfig, marketIds, type MarketId } from '@/config/markets';
+import { getMarketFromPathname, isMarketLanguage, getMarketChildPath, getMarketLanguageDirection, getMarketLocalePath, type MarketLanguage } from '@/lib/market-routing';
 
 export interface LanguageNavigationOption {
   readonly code: MarketLanguage;
@@ -77,7 +77,7 @@ export function parseNavigationContext(pathname: string): NavigationContext {
   const globalLocales = ['en', 'ar']; // Matches routing.ts locales
   const potentialLocale = segments[0];
 
-  if (globalLocales.includes(potentialLocale)) {
+  if (potentialLocale && globalLocales.includes(potentialLocale)) {
     return {
       marketId: 'north-america',
       locale: potentialLocale,

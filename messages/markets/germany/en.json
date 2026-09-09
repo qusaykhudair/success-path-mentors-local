@@ -29,7 +29,13 @@
       },
       "continue": "Continue",
       "processing": "Processing..."
-    }
+    },
+    "eyebrow": "Premium Online Tutoring",
+    "benefits": [
+      "Personalized 1-to-1 learning",
+      "Flexible online lessons",
+      "Expert human coordination"
+    ]
   },
   "services": {
     "headline": "Our Core Programs",
@@ -57,25 +63,55 @@
     "title": "Trusted by parents"
   },
   "useCases": {
-    "title": "How we help"
+    "eyebrow": "Who we are here for",
+    "headline": "Support for every goal",
+    "subheadline": "Whether student, family or adult – we have the right program for you.",
+    "cases": [
+      {
+        "title": "Families in Germany",
+        "description": "Support for children with the German language or everyday school life so that they are successfully integrated into the school system."
+      },
+      {
+        "title": "Students & Pupils",
+        "description": "Tutoring and language support in English or French to prepare for exams or studies."
+      },
+      {
+        "title": "Adult Learners",
+        "description": "Tailor-made language courses and academic support for professionals who want to expand their skills."
+      }
+    ]
   },
   "teacherQuality": {
-    "title": "Our tutors"
+    "eyebrow": "Our Teachers",
+    "headline": "Quality you can rely on",
+    "subheadline": "We carefully select our teachers to ensure you get the best support.",
+    "points": [
+      "Careful selection process",
+      "Professional competence",
+      "Pedagogical skill",
+      "Passion for teaching"
+    ],
+    "matching": {
+      "title": "How we find your teacher",
+      "description": "We analyze your needs, learning goals, and personality to make the perfect match with one of our qualified teachers."
+    }
   },
   "howItWorks": {
-    "headline": "How It Works",
-    "items": {
+    "eyebrow": "Getting Started is Easy",
+    "headline": "3 Steps to Success",
+    "subheadline": "The fastest way to the right teacher.",
+    "steps": {
       "step1": {
-        "title": "Tell us what you need",
-        "description": "Choose your subject"
+        "title": "Sign up for free",
+        "description": "Fill out our short form."
       },
       "step2": {
-        "title": "We match you",
-        "description": "Find the best tutor"
+        "title": "Find a teacher",
+        "description": "We match you with the perfect teacher."
       },
       "step3": {
-        "title": "Start learning",
-        "description": "Begin your trial"
+        "title": "Learn successfully",
+        "description": "Start your lessons online."
       }
     }
   },
@@ -87,10 +123,54 @@
     "stepSuccess": "Success"
   },
   "testimonials": {
-    "title": "Testimonials"
+    "eyebrow": "Testimonials",
+    "headline": "What our students say",
+    "subheadline": "Success stories from people who have learned with us.",
+    "items": [
+      {
+        "name": "Eya Ad",
+        "quote": "A team that deserves every thanks and encouragement. They are highly professional, punctual, respectful in their communication, attentive, and committed to consistent follow-up."
+      },
+      {
+        "name": "Zain Al",
+        "quote": "Thank you to everyone and to Mr. Mustafa for their respectful communication, excellent cooperation, and friendly approach. My son is very happy learning with them."
+      },
+      {
+        "name": "Abir Joulan",
+        "quote": "Thank you for your efforts and commitment to lesson times. The teaching has been excellent, and special thanks to Ms. Shaimaa for teaching my daughter. We truly appreciate everything you provide."
+      }
+    ]
   },
   "faq": {
-    "title": "FAQ"
+    "eyebrow": "Frequently Asked Questions",
+    "headline": "Do you have any questions?",
+    "subheadline": "Here you will find answers to the most important questions about our offer.",
+    "questions": [
+      {
+        "q": "How does the free trial lesson work?",
+        "a": "You register, we discuss your goals and match you with a suitable teacher for a non-binding first session."
+      },
+      {
+        "q": "How do you find the right teacher for me?",
+        "a": "We use your information on learning goals, subject, and preferred times to select the ideal teacher from our network."
+      },
+      {
+        "q": "Where do the lessons take place?",
+        "a": "Lessons take place entirely online via a user-friendly video platform."
+      },
+      {
+        "q": "Which languages are offered?",
+        "a": "We currently offer German, English, Arabic, and French."
+      },
+      {
+        "q": "How flexible is scheduling?",
+        "a": "Very flexible. You arrange the appointments directly with your teacher to fit your schedule."
+      },
+      {
+        "q": "Who is the offer suitable for?",
+        "a": "For students of all ages, university students, and adults who want to improve their language or subject skills."
+      }
+    ]
   },
   "contact": {
     "title": "Contact Us"
@@ -122,20 +202,22 @@
   },
   "nav": {
     "home": "Home",
-    "bookFreeSession": "Free Trial"
+    "bookFreeSession": "Book free session"
   },
   "trustStrip": {
-    "item1": {
-      "title": "1-to-1 Tutoring",
-      "subtitle": "Dedicated personal support"
-    },
-    "item2": {
-      "title": "Human Coordination",
-      "subtitle": "We manage your learning journey"
-    },
-    "item3": {
-      "title": "Online Learning",
-      "subtitle": "Learn comfortably from anywhere"
+    "items": {
+      "item1": {
+        "title": "1-to-1 Tutoring",
+        "subtitle": "Dedicated personal support"
+      },
+      "item2": {
+        "title": "Human Coordination",
+        "subtitle": "We manage your learning journey"
+      },
+      "item3": {
+        "title": "Online Learning",
+        "subtitle": "Learn comfortably from anywhere"
+      }
     }
   },
   "cta": {
@@ -143,5 +225,79 @@
     "subheadline": "Start your personalized learning journey today.",
     "primaryAction": "Start Free Trial",
     "secondaryAction": "Chat on WhatsApp"
+  },
+  "whySpm": {
+    "eyebrow": "Why Success Path Mentors",
+    "headline": "Your success is our goal",
+    "subheadline": "We combine personal support with flexible technology to achieve the best results for every student.",
+    "features": [
+      {
+        "title": "Personalized 1-to-1 Support",
+        "description": "Individual learning plan for every student."
+      },
+      {
+        "title": "Human Coordination",
+        "description": "We take care of everything – from finding a tutor to scheduling."
+      },
+      {
+        "title": "Perfect Tutor Matching",
+        "description": "We find the ideal tutor based on your needs and goals."
+      },
+      {
+        "title": "Flexible Online Formats",
+        "description": "Learn from anywhere, at flexible times that fit into your daily life."
+      }
+    ]
+  },
+  "trialFlow": {
+    "back": "Back",
+    "continue": "Continue",
+    "step1Title": "Which subject would you like to learn?",
+    "step2Title": "Who is the lesson for?",
+    "step3Title": "What is your main goal?",
+    "step4Title": "How can we reach you?",
+    "learner": {
+      "myself": {
+        "title": "For myself",
+        "desc": "I want to improve my own skills"
+      },
+      "child": {
+        "title": "For my child",
+        "desc": "Support for school or language skills"
+      }
+    },
+    "goals": {
+      "grades": {
+        "title": "Improve grades",
+        "desc": "Achieve better results in school"
+      },
+      "speaking": {
+        "title": "Speak more fluently",
+        "desc": "Communicate more confidently"
+      },
+      "exam": {
+        "title": "Exam preparation",
+        "desc": "Targeted training for upcoming tests"
+      },
+      "basics": {
+        "title": "Learn the basics",
+        "desc": "Find a solid introduction"
+      }
+    },
+    "contact": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "submit": "Request Free Trial Lesson",
+      "privacy": "Your data is transmitted securely and will not be passed on to third parties.",
+      "success": "Your request has been sent successfully! We will contact you shortly."
+    }
+  },
+  "header": {
+    "services": "Subjects",
+    "howItWorks": "How it works",
+    "whySpm": "Why SPM",
+    "faq": "FAQ"
   }
 }

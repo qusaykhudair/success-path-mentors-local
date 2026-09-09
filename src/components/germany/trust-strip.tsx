@@ -1,49 +1,48 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Container } from '@/components/ui/container';
 import { ShieldCheck, Users, Clock } from 'lucide-react';
 
 export function TrustStrip() {
   const t = useTranslations('trustStrip');
 
   return (
-    <section className="border-b border-border/50 bg-background py-12">
-      <Container>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-12">
+    <section className="relative -mt-8 z-20 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div className="rounded-3xl border border-primary-100 bg-white p-6 shadow-xl sm:p-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:divide-x md:divide-primary-100">
           
-          <div className="flex items-center gap-5">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-accent/20 text-accent-700">
+          <div className="flex items-start gap-4 md:px-6">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-accent-50 text-accent-600 ring-1 ring-accent-100">
               <Users className="h-6 w-6" />
             </div>
-            <div className="flex flex-col">
-              <span className="text-sm font-bold text-foreground">{t('item1.title')}</span>
-              <span className="text-xs text-muted-foreground">{t('item1.subtitle')}</span>
+            <div className="flex flex-col gap-1">
+              <h3 className="font-bold text-primary-950">{t('items.item1.title')}</h3>
+              <p className="text-sm text-primary-600">{t('items.item1.subtitle')}</p>
             </div>
           </div>
 
-          <div className="flex items-center gap-5">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+          <div className="flex items-start gap-4 md:px-6">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary-50 text-primary-600 ring-1 ring-primary-100">
               <ShieldCheck className="h-6 w-6" />
             </div>
-            <div className="flex flex-col">
-              <span className="text-sm font-bold text-foreground">{t('item2.title')}</span>
-              <span className="text-xs text-muted-foreground">{t('item2.subtitle')}</span>
+            <div className="flex flex-col gap-1">
+              <h3 className="font-bold text-primary-950">{t('items.item2.title')}</h3>
+              <p className="text-sm text-primary-600">{t('items.item2.subtitle')}</p>
             </div>
           </div>
 
-          <div className="flex items-center gap-5">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-turquoise/20 text-turquoise-700">
+          <div className="flex items-start gap-4 md:px-6">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-accent-50 text-accent-600 ring-1 ring-accent-100">
               <Clock className="h-6 w-6" />
             </div>
-            <div className="flex flex-col">
-              <span className="text-sm font-bold text-foreground">{t('item3.title')}</span>
-              <span className="text-xs text-muted-foreground">{t('item3.subtitle')}</span>
+            <div className="flex flex-col gap-1">
+              <h3 className="font-bold text-primary-950">{t('items.item3.title')}</h3>
+              <p className="text-sm text-primary-600">{t('items.item3.subtitle')}</p>
             </div>
           </div>
 
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

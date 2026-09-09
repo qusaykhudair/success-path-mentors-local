@@ -114,7 +114,7 @@ const germany = {
   name: 'Germany',
   countryCode: 'DE',
   publicSlug: 'de',
-  enabled: false,
+  enabled: true,
   defaultLanguage: 'de',
   supportedLanguages: ['de', 'ar', 'en'],
   defaultCountry: 'DE',

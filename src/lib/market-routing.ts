@@ -1,5 +1,6 @@
 import { getMarketConfig, marketIds, type MarketConfig, type MarketId } from '@/config/markets';
 
+export type { MarketId };
 export type MarketSlug = NonNullable<MarketConfig['publicSlug']>;
 export type MarketLanguage = MarketConfig['supportedLanguages'][number];
 export type MarketPath = `/${string}`;
