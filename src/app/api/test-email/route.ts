@@ -9,7 +9,8 @@ export async function POST(request: Request) {
   }
 
   try {
-    const { to } = await request.json();
+    const body = (await request.json()) as { to?: string };
+    const to = body?.to;
 
     if (!to) {
       return NextResponse.json({ error: 'Missing "to" email address in body.' }, { status: 400 });
