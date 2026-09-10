@@ -61,7 +61,7 @@
     }
   },
   "trust": {
-    "title": "Trusted by parents"
+    "title": "Dedicated Tutor Support"
   },
   "useCases": {
     "eyebrow": "Who we are here for",
@@ -94,13 +94,13 @@
     ],
     "matching": {
       "title": "How we find your teacher",
-      "description": "We analyze your needs, learning goals, and personality to make the perfect match with one of our qualified teachers."
+      "description": "We analyze your learning goals and individual requirements to find a qualified teacher suited to your needs."
     }
   },
   "howItWorks": {
     "eyebrow": "Getting Started is Easy",
     "headline": "3 Steps to Success",
-    "subheadline": "The fastest way to the right teacher.",
+    "subheadline": "Simple steps to reach the right teacher.",
     "steps": {
       "step1": {
         "title": "Sign up for free",
@@ -108,7 +108,7 @@
       },
       "step2": {
         "title": "Find a teacher",
-        "description": "We match you with the perfect teacher."
+        "description": "We match you with a suitable teacher for your needs."
       },
       "step3": {
         "title": "Learn successfully",
@@ -125,6 +125,7 @@
   },
   "testimonials": {
     "eyebrow": "Testimonials",
+    "feedbackLabel": "Parent Feedback",
     "headline": "What our students say",
     "subheadline": "Success stories from people who have learned with us.",
     "items": [
@@ -179,6 +180,9 @@
   "footer": {
     "brandDescription": "Empowering students to achieve academic excellence.",
     "servicesTitle": "Services",
+    "aboutTitle": "Explore",
+    "accountTitle": "Account & Legal",
+    "freeTrial": "Free Trial Lesson",
     "contactTitle": "Contact",
     "legalTitle": "Legal",
     "legal": {
@@ -229,10 +233,10 @@
   "cta": {
     "eyebrow": "Start Now",
     "headline": "Ready for genuine academic progress?",
-    "subheadline": "Begin your personalized learning journey today with a risk-free free trial lesson.",
+    "subheadline": "Begin your personalized learning journey today with a free trial lesson.",
     "primaryAction": "Book Free Trial Lesson",
     "secondaryAction": "Chat on WhatsApp",
-    "reassurance": "100% commitment-free • No credit card required • Fast coordinator matching",
+    "reassurance": "Personalized 1-to-1 tutoring • Flexible online scheduling • Direct human coordination",
     "trustPoints": [
       "1-on-1 personalized tutoring",
       "Free trial lesson with no commitment",
@@ -259,7 +263,7 @@
   "whySpm": {
     "eyebrow": "Why Success Path Mentors",
     "headline": "Your success is our goal",
-    "subheadline": "We combine personal support with flexible technology to achieve the best results for every student.",
+    "subheadline": "We combine personal support with flexible technology to support every student individually.",
     "features": [
       {
         "title": "Personalized 1-to-1 Support",
@@ -270,8 +274,8 @@
         "description": "We take care of everything – from finding a tutor to scheduling."
       },
       {
-        "title": "Perfect Tutor Matching",
-        "description": "We find the ideal tutor based on your needs and goals."
+        "title": "Tutor Matching",
+        "description": "We find a suitable tutor based on your learning needs and goals."
       },
       {
         "title": "Flexible Online Formats",
@@ -319,9 +323,28 @@
       "lastName": "Last Name",
       "email": "Email Address",
       "phone": "Phone Number",
-      "submit": "Request Free Trial Lesson",
+      "submit": "Prepare Request",
       "privacy": "Your data is transmitted securely and will not be passed on to third parties.",
       "success": "Your request has been sent successfully! We will contact you shortly."
+    },
+    "subjectLabel": "Subject",
+    "learnerLabel": "Learner",
+    "goalLabel": "Goal",
+    "nameLabel": "Name",
+    "phoneLabel": "Phone",
+    "step4Description": "Enter your contact details to coordinate your trial session with our team.",
+    "subjects": {
+      "german": "German",
+      "english": "English",
+      "arabic": "Arabic",
+      "french": "French"
+    },
+    "contactReady": {
+      "title": "Request Ready",
+      "description": "Your request details are assembled. Continue directly on WhatsApp with our educational coordination team to confirm your free trial schedule.",
+      "whatsappButton": "Continue on WhatsApp",
+      "whatsAppGreeting": "Hello Success Path Mentors, I would like to book a free trial lesson:",
+      "backHome": "Go back to Home"
     }
   },
   "header": {
@@ -401,7 +424,7 @@
     "emailDesc": "Send us a message anytime. Our coordination team will get back to you promptly.",
     "emailAction": "Send Email",
     "hoursTitle": "Support Hours",
-    "hoursDesc": "Monday – Friday: 09:00 – 19:00 (CET)",
+    "hoursDesc": "Contact our coordination team via WhatsApp or email.",
     "coordinatorBadge": "Human Educational Mentorship"
   }
 }

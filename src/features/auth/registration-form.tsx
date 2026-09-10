@@ -23,14 +23,19 @@ import { z } from 'zod';
 
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { getDefaultMarket } from '@/config/markets';
-import { getRegistrationCountries, getRegistrationTimezone, getRegistrationTimezones } from './registration-options';
+import { getDefaultMarket, getMarketConfig, type MarketId } from '@/config/markets';
+import {
+  getRegistrationCountries,
+  getRegistrationTimezone,
+  getRegistrationTimezones,
+} from './registration-options';
 
 import { authApi, isMockAuthApi } from './auth-api';
 import { getAuthCopy } from './auth-copy';
 import {
   AuthApiError,
-  type AuthLocale,
+  toAuthApiLocale,
+  type AuthUiLocale,
   type RegistrationConfirmation,
   type RegistrationPayload,
   type RegistrationResult,
@@ -57,41 +62,61 @@ interface RegistrationFormValues {
 
 const grades = Array.from({ length: 12 }, (_, index) => String(index + 1));
 
-const optionSets = {
-  subjects: [
-    ['Mathematics', 'الرياضيات'],
-    ['English', 'اللغة الإنجليزية'],
-    ['General Science', 'العلوم العامة'],
-    ['Chemistry', 'الكيمياء'],
-    ['Physics', 'الفيزياء'],
-    ['French', 'اللغة الفرنسية'],
-    ['Arabic', 'اللغة العربية'],
-    ['Quran & Islamic Studies', 'القرآن والدراسات الإسلامية'],
-  ],
-  curricula: [
-    ['Ontario', 'أونتاريو'],
-    ['Alberta', 'ألبرتا'],
-    ['British Columbia', 'بريتش كولومبيا'],
-    ['Quebec', 'كيبيك'],
-    ['US Common Core', 'المنهج الأمريكي'],
-    ['British', 'المنهج البريطاني'],
-    ['IB', 'البكالوريا الدولية IB'],
-    ['Other', 'منهج آخر'],
-  ],
+const optionSetsByMarket = {
+  'north-america': {
+    subjects: [
+      ['Mathematics', 'الرياضيات', 'Mathematik'],
+      ['English', 'اللغة الإنجليزية', 'Englisch'],
+      ['General Science', 'العلوم العامة', 'Naturwissenschaften'],
+      ['Chemistry', 'الكيمياء', 'Chemie'],
+      ['Physics', 'الفيزياء', 'Physik'],
+      ['French', 'اللغة الفرنسية', 'Französisch'],
+      ['Arabic', 'اللغة العربية', 'Arabisch'],
+      ['Quran & Islamic Studies', 'القرآن والدراسات الإسلامية', 'Koran & Islamstudien'],
+    ],
+    curricula: [
+      ['Ontario', 'أونتاريو', 'Ontario'],
+      ['Alberta', 'ألبرتا', 'Alberta'],
+      ['British Columbia', 'بريتش كولومبيا', 'British Columbia'],
+      ['Quebec', 'كيبيك', 'Quebec'],
+      ['US Common Core', 'المنهج الأمريكي', 'US Common Core'],
+      ['British', 'المنهج البريطاني', 'Britisches Curriculum'],
+      ['IB', 'البكالوريا الدولية IB', 'IB (International Baccalaureate)'],
+      ['Other', 'منهج آخر', 'Anderer Lehrplan'],
+    ],
+  },
+  germany: {
+    subjects: [
+      ['German', 'اللغة الألمانية', 'Deutsch'],
+      ['English', 'اللغة الإنجليزية', 'Englisch'],
+      ['Arabic', 'اللغة العربية', 'Arabisch'],
+      ['French', 'اللغة الفرنسية', 'Französisch'],
+    ],
+    curricula: [
+      ['German School Curriculum', 'المنهج المدرسي الألماني', 'Deutsches Schulcurriculum'],
+      ['International / IB', 'البكالوريا الدولية IB', 'International / IB Curriculum'],
+      ['British Curriculum', 'المنهج البريطاني', 'Britisches Curriculum'],
+      ['General Tutoring', 'تدريس لغات ومتابعة عامة', 'Sprach- & Nachhilfeunterricht'],
+      ['Other', 'منهج آخر', 'Anderer Lehrplan'],
+    ],
+  },
+} as const;
+
+const sharedOptionSets = {
   languages: [
-    ['English', 'الإنجليزية'],
-    ['Arabic', 'العربية'],
-    ['French', 'الفرنسية'],
+    ['English', 'الإنجليزية', 'Englisch'],
+    ['Arabic', 'العربية', 'Arabisch'],
+    ['German', 'الألمانية', 'Deutsch'],
+    ['French', 'الفرنسية', 'Französisch'],
   ],
-  countries: getRegistrationCountries(),
   days: [
-    ['Monday', 'الاثنين'],
-    ['Tuesday', 'الثلاثاء'],
-    ['Wednesday', 'الأربعاء'],
-    ['Thursday', 'الخميس'],
-    ['Friday', 'الجمعة'],
-    ['Saturday', 'السبت'],
-    ['Sunday', 'الأحد'],
+    ['Monday', 'الاثنين', 'Montag'],
+    ['Tuesday', 'الثلاثاء', 'Dienstag'],
+    ['Wednesday', 'الأربعاء', 'Mittwoch'],
+    ['Thursday', 'الخميس', 'Donnerstag'],
+    ['Friday', 'الجمعة', 'Freitag'],
+    ['Saturday', 'السبت', 'Samstag'],
+    ['Sunday', 'الأحد', 'Sonntag'],
   ],
 } as const;
 
@@ -179,12 +204,40 @@ function ReviewRow({ label, value, icon: Icon }: { label: string; value: string;
   );
 }
 
-export function RegistrationForm({ locale }: { locale: AuthLocale }) {
+export function RegistrationForm({
+  locale,
+  marketId = 'north-america',
+  loginHref,
+  homeHref,
+}: {
+  locale: AuthUiLocale;
+  marketId?: MarketId;
+  loginHref?: string;
+  homeHref?: string;
+}) {
   const copy = getAuthCopy(locale);
   const isRtl = locale === 'ar';
   const ForwardIcon = isRtl ? ArrowLeft : ArrowRight;
   const BackIcon = isRtl ? ArrowRight : ArrowLeft;
-  const languageIndex = isRtl ? 1 : 0;
+  const languageIndex = locale === 'ar' ? 1 : locale === 'de' ? 2 : 0;
+
+  const market = getMarketConfig(marketId);
+  const detectedTimezone = useMemo(() => getRegistrationTimezone(market), [market]);
+  const availableTimezones = useMemo(
+    () => getRegistrationTimezones(detectedTimezone, market),
+    [detectedTimezone, market]
+  );
+  const availableCountries = useMemo(
+    () => getRegistrationCountries(market, locale),
+    [market, locale]
+  );
+  const marketOptions = optionSetsByMarket[marketId] || optionSetsByMarket['north-america'];
+  const effectiveLoginHref =
+    loginHref ||
+    (marketId === 'germany' ? `/de/${locale}/login` : `/${locale}/login`);
+  const effectiveHomeHref =
+    homeHref ||
+    (marketId === 'germany' ? `/de/${locale}` : `/${locale}`);
 
   const schema = useMemo(
     () => z.object({
@@ -207,13 +260,6 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
     [copy.register.errors]
   );
 
-  const detectedTimezone = useMemo(() => getRegistrationTimezone(), []);
-
-  const availableTimezones = useMemo(
-    () => getRegistrationTimezones(detectedTimezone),
-    [detectedTimezone]
-  );
-
   const form = useForm<RegistrationFormValues>({
     resolver: zodResolver(schema),
     mode: 'onTouched',
@@ -227,8 +273,8 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
       grade: '',
       subject: '',
       curriculum: '',
-      preferred_language: locale === 'ar' ? 'Arabic' : 'English',
-      country: getDefaultMarket().registration.countryValue,
+      preferred_language: locale === 'de' ? 'German' : locale === 'ar' ? 'Arabic' : 'English',
+      country: market.registration.countryValue,
       timezone: detectedTimezone,
       preferred_day: '',
       preferred_time: '',
@@ -285,7 +331,7 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
       preferred_day: formValues.preferred_day,
       preferred_time: formValues.preferred_time,
       source: 'WEBSITE',
-      locale,
+      locale: toAuthApiLocale(locale),
       privacy_consent: true,
     };
 
@@ -336,7 +382,7 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
           otp,
         },
         result.registration_id,
-        locale
+        toAuthApiLocale(locale)
       );
       setConfirmation(nextConfirmation);
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -356,7 +402,7 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
     try {
       const challenge = await authApi.resendRegistrationVerification(
         verification.contact_id,
-        locale
+        toAuthApiLocale(locale)
       );
       setResult({
         ...result,
@@ -392,7 +438,7 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
             {copy.register.registrationId}: <strong className="font-black text-primary-950" dir="ltr">{confirmation.registration_id}</strong>
           </p>
         </div>
-        <a href={`/${locale}`} className={buttonVariants({ variant: 'accent', size: 'lg', className: 'mx-auto mt-8 min-w-64' })}>
+        <a href={effectiveHomeHref} className={buttonVariants({ variant: 'accent', size: 'lg', className: 'mx-auto mt-8 min-w-64' })}>
           {copy.register.returnHome}
           <ForwardIcon aria-hidden="true" className="h-5 w-5" />
         </a>
@@ -413,7 +459,7 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
             {copy.register.registrationId}: <strong className="font-black text-primary-950" dir="ltr">{result.registration_id}</strong>
           </p>
         </div>
-        <a href={`/${locale}`} className={buttonVariants({ variant: 'primary', size: 'lg', className: 'mx-auto mt-8 min-w-64' })}>
+        <a href={effectiveHomeHref} className={buttonVariants({ variant: 'primary', size: 'lg', className: 'mx-auto mt-8 min-w-64' })}>
           {copy.register.returnHome}
         </a>
       </div>
@@ -496,9 +542,39 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
         </div>
         <p className="text-small font-semibold text-muted-foreground">
           {copy.register.existing}{' '}
-          <a href={`/${locale}/login`} className="font-black text-accent-700 underline-offset-4 hover:underline">{copy.register.existingLink}</a>
+          <a href={effectiveLoginHref} className="font-black text-accent-700 underline-offset-4 hover:underline">{copy.register.existingLink}</a>
         </p>
       </div>
+
+      {marketId === 'germany' && (
+        <div className="mt-6 rounded-2xl border border-accent-200/80 bg-accent-50/60 p-4.5 text-small">
+          <div className="flex items-start gap-3">
+            <ShieldCheck className="h-5 w-5 text-accent-700 shrink-0 mt-0.5" />
+            <div className="flex flex-col gap-1">
+              <p className="font-bold text-primary-950">
+                {locale === 'de'
+                  ? 'Hinweis für Familien & erwachsene Lernende'
+                  : locale === 'ar'
+                  ? 'تنبيه للعائلات والمتعلمين البالغين'
+                  : 'Notice for Families & Adult Learners'}
+              </p>
+              <p className="text-xs text-primary-700 leading-relaxed">
+                {locale === 'de'
+                  ? 'Die Online-Kontoerstellung ist für Familien- und Schülerprofile ausgelegt. Erwachsene Einzellernende können ihr Programm direkt unverbindlich mit unserem Koordinationsteam per WhatsApp abstimmen.'
+                  : locale === 'ar'
+                  ? 'تم تصميم التسجيل الإلكتروني لحسابات العائلات والطلاب. بالنسبة للمتعلمين البالغين، يمكنكم تنسيق البرنامج التعليمي مباشرة عبر واتساب مع فريق التنسيق.'
+                  : 'Online account registration is designed for family and student profiles. Adult independent learners can coordinate their personalized program directly with our team.'}
+              </p>
+              <a
+                href={`/de/${locale}/trial`}
+                className="mt-1 inline-flex items-center gap-1 text-xs font-black text-accent-800 underline-offset-4 hover:underline"
+              >
+                {locale === 'de' ? 'Hier Probestunde abstimmen →' : locale === 'ar' ? 'تنسيق الحصة التجريبية مباشرة ←' : 'Coordinate trial session directly →'}
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="mt-8">
         <div className="flex items-center justify-between gap-2" aria-label={copy.register.stepLabel.replace('{current}', String(step + 1)).replace('{total}', '4')}>
@@ -600,12 +676,12 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
             <legend className="text-h3 font-black text-primary-950">{copy.register.learningTitle}</legend>
             <p className="mt-2 text-small leading-7 text-muted-foreground">{copy.register.learningDescription}</p>
             <div className="mt-6 grid gap-5 sm:grid-cols-2">
-              <SelectField id="subject" label={copy.register.subject} placeholder={copy.register.select} value={values.subject} options={optionSets.subjects.map((item) => [item[0], item[languageIndex]] as const)} error={form.formState.errors.subject?.message} required={copy.common.required} register={form.register} />
-              <SelectField id="curriculum" label={copy.register.curriculum} placeholder={copy.register.select} value={values.curriculum} options={optionSets.curricula.map((item) => [item[0], item[languageIndex]] as const)} error={form.formState.errors.curriculum?.message} required={copy.common.required} register={form.register} />
-              <SelectField id="preferred_language" label={copy.register.language} placeholder={copy.register.select} value={values.preferred_language} options={optionSets.languages.map((item) => [item[0], item[languageIndex]] as const)} error={form.formState.errors.preferred_language?.message} required={copy.common.required} register={form.register} />
-              <SelectField id="country" label={copy.register.country} placeholder={copy.register.select} value={values.country} options={optionSets.countries.map((item) => [item[0], item[languageIndex]] as const)} error={form.formState.errors.country?.message} required={copy.common.required} register={form.register} />
+              <SelectField id="subject" label={copy.register.subject} placeholder={copy.register.select} value={values.subject} options={marketOptions.subjects.map((item) => [item[0], item[languageIndex]] as const)} error={form.formState.errors.subject?.message} required={copy.common.required} register={form.register} />
+              <SelectField id="curriculum" label={copy.register.curriculum} placeholder={copy.register.select} value={values.curriculum} options={marketOptions.curricula.map((item) => [item[0], item[languageIndex]] as const)} error={form.formState.errors.curriculum?.message} required={copy.common.required} register={form.register} />
+              <SelectField id="preferred_language" label={copy.register.language} placeholder={copy.register.select} value={values.preferred_language} options={sharedOptionSets.languages.map((item) => [item[0], item[languageIndex]] as const)} error={form.formState.errors.preferred_language?.message} required={copy.common.required} register={form.register} />
+              <SelectField id="country" label={copy.register.country} placeholder={copy.register.select} value={values.country} options={availableCountries} error={form.formState.errors.country?.message} required={copy.common.required} register={form.register} />
               <SelectField id="timezone" label={copy.register.timezone} placeholder={copy.register.select} value={values.timezone} options={availableTimezones} error={form.formState.errors.timezone?.message} required={copy.common.required} register={form.register} />
-              <SelectField id="preferred_day" label={copy.register.preferredDay} placeholder={copy.register.select} value={values.preferred_day} options={optionSets.days.map((item) => [item[0], item[languageIndex]] as const)} error={form.formState.errors.preferred_day?.message} required={copy.common.required} register={form.register} />
+              <SelectField id="preferred_day" label={copy.register.preferredDay} placeholder={copy.register.select} value={values.preferred_day} options={sharedOptionSets.days.map((item) => [item[0], item[languageIndex]] as const)} error={form.formState.errors.preferred_day?.message} required={copy.common.required} register={form.register} />
               <div>
                 <FieldLabel htmlFor="preferred_time" label={copy.register.preferredTime} requirement={copy.common.required} />
                 <div className="relative">

@@ -1,6 +1,16 @@
 export type AuthLocale = 'en' | 'ar';
+export type AuthUiLocale = 'de' | 'en' | 'ar';
+export type AuthApiLocale = 'en' | 'ar';
 
 export type LoginChannel = 'EMAIL' | 'WHATSAPP' | 'SMS';
+
+/**
+ * Safely maps UI locale to an existing supported backend Auth API locale ('en' | 'ar').
+ * German UI ('de') maps to 'en' for backend auth communication.
+ */
+export function toAuthApiLocale(uiLocale: AuthUiLocale): AuthApiLocale {
+  return uiLocale === 'ar' ? 'ar' : 'en';
+}
 
 export interface ApiFieldError {
   field: string;

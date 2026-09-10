@@ -51,14 +51,12 @@ function TrialFlowContent() {
     else if (step === 4) setStep(3);
   };
 
-  // Human-readable labels for WhatsApp summary
+  // Human-readable labels for WhatsApp summary and display
   const getSubjectLabel = (id: string) => {
-    switch (id) {
-      case 'german': return 'Deutsch';
-      case 'english': return 'English';
-      case 'arabic': return 'العربية';
-      case 'french': return 'Français';
-      default: return id;
+    try {
+      return t(`subjects.${id}`);
+    } catch {
+      return id;
     }
   };
 
@@ -82,18 +80,14 @@ function TrialFlowContent() {
 
   const constructWhatsAppMessage = () => {
     const lines = [
-      locale === 'de'
-        ? 'Hallo Success Path Mentors, ich möchte eine kostenlose Probestunde vereinbaren:'
-        : locale === 'ar'
-        ? 'مرحباً Success Path Mentors، أود حجز حصة تجريبية مجانية:'
-        : 'Hello Success Path Mentors, I would like to book a free trial lesson:',
-      `- ${locale === 'de' ? 'Fach' : locale === 'ar' ? 'المادة' : 'Subject'}: ${getSubjectLabel(formData.subject)}`,
-      `- ${locale === 'de' ? 'Für wen' : locale === 'ar' ? 'المتعلم' : 'Learner'}: ${getLearnerLabel(formData.learner)}`,
-      `- ${locale === 'de' ? 'Ziel' : locale === 'ar' ? 'الهدف' : 'Goal'}: ${getGoalLabel(formData.goal)}`,
-      `- ${locale === 'de' ? 'Name' : locale === 'ar' ? 'الاسم' : 'Name'}: ${formData.firstName} ${formData.lastName}`,
+      t('contactReady.whatsAppGreeting'),
+      `- ${t('subjectLabel')}: ${getSubjectLabel(formData.subject)}`,
+      `- ${t('learnerLabel')}: ${getLearnerLabel(formData.learner)}`,
+      `- ${t('goalLabel')}: ${getGoalLabel(formData.goal)}`,
+      `- ${t('nameLabel')}: ${formData.firstName} ${formData.lastName}`,
     ];
     if (formData.phone) {
-      lines.push(`- ${locale === 'de' ? 'Telefon' : locale === 'ar' ? 'الهاتف' : 'Phone'}: ${formData.phone}`);
+      lines.push(`- ${t('phoneLabel')}: ${formData.phone}`);
     }
     return lines.join('\n');
   };
@@ -140,16 +134,16 @@ function TrialFlowContent() {
                 {t('step1Title')}
               </h2>
               <p className="text-sm text-primary-500">
-                {locale === 'de' ? 'Wählen Sie das Fach für Ihre kostenlose Probestunde.' : locale === 'ar' ? 'اختر المادة للحصة التجريبية المجانية.' : 'Select the subject for your free trial session.'}
+                {t('subheadline', { fallback: 'Select the subject for your free trial session.' })}
               </p>
             </div>
             
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               {[
-                { id: 'german', icon: Speech, label: 'Deutsch' },
-                { id: 'english', icon: Speech, label: 'English' },
-                { id: 'arabic', icon: BookOpen, label: 'العربية' },
-                { id: 'french', icon: Speech, label: 'Français' },
+                { id: 'german', icon: Speech, label: t('subjects.german') },
+                { id: 'english', icon: Speech, label: t('subjects.english') },
+                { id: 'arabic', icon: BookOpen, label: t('subjects.arabic') },
+                { id: 'french', icon: Speech, label: t('subjects.french') },
               ].map((subject) => {
                 const Icon = subject.icon;
                 const isSelected = formData.subject === subject.id;
@@ -198,7 +192,7 @@ function TrialFlowContent() {
                 {t('step2Title')}
               </h2>
               <p className="text-sm text-primary-500">
-                {locale === 'de' ? 'Fach:' : locale === 'ar' ? 'المادة:' : 'Subject:'} <strong className="text-primary-900">{getSubjectLabel(formData.subject)}</strong>
+                {t('subjectLabel')}: <strong className="text-primary-900">{getSubjectLabel(formData.subject)}</strong>
               </p>
             </div>
 
@@ -312,11 +306,7 @@ function TrialFlowContent() {
                 {t('step4Title')}
               </h2>
               <p className="text-sm text-primary-500">
-                {locale === 'de'
-                  ? 'Geben Sie Ihre Kontaktdaten ein, um die Probestunde persönlich abzustimmen.'
-                  : locale === 'ar'
-                  ? 'أدخل بيانات التواصل لتنسيق الحصة التجريبية مباشرة مع فريق التنسيق.'
-                  : 'Enter your contact details to coordinate your trial session with our team.'}
+                {t('step4Description')}
               </p>
             </div>
 
@@ -392,14 +382,10 @@ function TrialFlowContent() {
 
             <div className="flex flex-col gap-2 max-w-md">
               <h2 className="text-2xl font-bold text-primary-950 sm:text-3xl">
-                {locale === 'de' ? 'Anfrage vorbereitet' : locale === 'ar' ? 'تفاصيل الطلب جاهزة' : 'Request Ready'}
+                {t('contactReady.title')}
               </h2>
               <p className="text-sm text-primary-600 leading-relaxed">
-                {locale === 'de'
-                  ? 'Ihre Angaben wurden zusammengestellt. Schließen Sie die Terminabstimmung für Ihre kostenlose Probestunde direkt per WhatsApp mit unserem Koordinationsteam ab.'
-                  : locale === 'ar'
-                  ? 'تم تجهيز تفاصيل طلبك بنجاح. تواصل الآن مباشرة عبر واتساب مع فريق التنسيق التعليمي لتأكيد وتثبيت موعد الحصة التجريبية.'
-                  : 'Your request details are assembled. Continue directly on WhatsApp with our educational coordination team to confirm your free trial schedule.'}
+                {t('contactReady.description')}
               </p>
             </div>
 
@@ -411,14 +397,14 @@ function TrialFlowContent() {
                 className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-xl bg-emerald-600 px-6 py-3.5 text-base font-bold text-white shadow-md transition-all hover:bg-emerald-500 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 <MessageCircle className="h-5 w-5" />
-                <span>{locale === 'de' ? 'Auf WhatsApp abschließen' : locale === 'ar' ? 'المتابعة عبر واتساب' : 'Continue on WhatsApp'}</span>
+                <span>{t('contactReady.whatsappButton')}</span>
               </a>
 
               <a 
                 href={`/de/${locale}`}
                 className="inline-flex min-h-[44px] items-center justify-center rounded-xl bg-primary-100 px-6 py-2.5 text-sm font-bold text-primary-800 transition-colors hover:bg-primary-200"
               >
-                {t('back', { fallback: 'Go back to Home' })}
+                {t('contactReady.backHome')}
               </a>
             </div>
           </div>

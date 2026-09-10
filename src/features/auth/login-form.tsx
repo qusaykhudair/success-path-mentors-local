@@ -21,8 +21,13 @@ import { cn } from '@/lib/utils';
 
 import { authApi, isMockAuthApi } from './auth-api';
 import { getAuthCopy } from './auth-copy';
-import { AuthApiError, type AuthenticatedUser, type LoginChallenge } from './auth-contracts';
-import type { AuthLocale } from './auth-contracts';
+import {
+  AuthApiError,
+  toAuthApiLocale,
+  type AuthenticatedUser,
+  type LoginChallenge,
+  type AuthUiLocale,
+} from './auth-contracts';
 import { authInputClass, FieldError, FieldLabel, Notice, SubmitLabel } from './auth-ui';
 
 type LoginStage = 'identifier' | 'otp' | 'success';
@@ -52,7 +57,17 @@ function friendlyError(error: unknown, copy: ReturnType<typeof getAuthCopy>): st
   return copy.common.apiError;
 }
 
-export function LoginForm({ locale }: { locale: AuthLocale }) {
+export function LoginForm({
+  locale,
+  marketId = 'north-america',
+  registerHref,
+  contactHref,
+}: {
+  locale: AuthUiLocale;
+  marketId?: string;
+  registerHref?: string;
+  contactHref?: string;
+}) {
   const copy = getAuthCopy(locale);
   const isRtl = locale === 'ar';
   const ForwardIcon = isRtl ? ArrowLeft : ArrowRight;
@@ -102,7 +117,7 @@ export function LoginForm({ locale }: { locale: AuthLocale }) {
     try {
       const nextChallenge = await authApi.requestLogin({
         identifier: normalizeIdentifier(values.identifier),
-        locale,
+        locale: toAuthApiLocale(locale),
       });
       setChallenge(nextChallenge);
       setSecondsToResend(nextChallenge.resend_after_seconds);
@@ -120,7 +135,7 @@ export function LoginForm({ locale }: { locale: AuthLocale }) {
     try {
       const authenticatedUser = await authApi.verifyLogin(
         { challenge_id: challenge.challenge_id, otp: values.otp },
-        locale
+        toAuthApiLocale(locale)
       );
       setUser(authenticatedUser);
       setStage('success');
@@ -137,7 +152,7 @@ export function LoginForm({ locale }: { locale: AuthLocale }) {
     try {
       const nextChallenge = await authApi.requestLogin({
         identifier: normalizeIdentifier(identifierForm.getValues('identifier')),
-        locale,
+        locale: toAuthApiLocale(locale),
       });
       setChallenge(nextChallenge);
       setSecondsToResend(nextChallenge.resend_after_seconds);
@@ -305,30 +320,41 @@ export function LoginForm({ locale }: { locale: AuthLocale }) {
 
       <div className="my-8 h-px bg-border" />
 
-      <div className="grid gap-3 sm:grid-cols-2">
-        <a href={`/${locale}/register`} className="group rounded-2xl border border-border p-4 transition-colors hover:border-accent-300 hover:bg-accent-50/60">
-          <div className="flex items-center gap-3">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-accent-100 text-accent-800">
-              <MessageCircleMore aria-hidden="true" className="h-5 w-5" />
-            </span>
-            <div>
-              <p className="text-caption font-semibold text-muted-foreground">{copy.login.createAccount}</p>
-              <p className="text-small font-black text-primary-950 group-hover:text-accent-800">{copy.login.createAccountLink}</p>
-            </div>
+      {(() => {
+        const effectiveRegisterHref =
+          registerHref ||
+          (marketId === 'germany' ? `/de/${locale}/register` : `/${locale}/register`);
+        const effectiveContactHref =
+          contactHref ||
+          (marketId === 'germany' ? `/de/${locale}#contact` : `/${locale}/contact`);
+
+        return (
+          <div className="grid gap-3 sm:grid-cols-2">
+            <a href={effectiveRegisterHref} className="group rounded-2xl border border-border p-4 transition-colors hover:border-accent-300 hover:bg-accent-50/60">
+              <div className="flex items-center gap-3">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-accent-100 text-accent-800">
+                  <MessageCircleMore aria-hidden="true" className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="text-caption font-semibold text-muted-foreground">{copy.login.createAccount}</p>
+                  <p className="text-small font-black text-primary-950 group-hover:text-accent-800">{copy.login.createAccountLink}</p>
+                </div>
+              </div>
+            </a>
+            <a href={effectiveContactHref} className="group rounded-2xl border border-border p-4 transition-colors hover:border-primary-300 hover:bg-primary-50/60">
+              <div className="flex items-center gap-3">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary-50 text-primary">
+                  <Smartphone aria-hidden="true" className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="text-caption font-semibold text-muted-foreground">{copy.login.recovery}</p>
+                  <p className="text-small font-black text-primary-950 group-hover:text-primary-700">{copy.login.recoveryLink}</p>
+                </div>
+              </div>
+            </a>
           </div>
-        </a>
-        <a href={`/${locale}/contact`} className="group rounded-2xl border border-border p-4 transition-colors hover:border-primary-300 hover:bg-primary-50/60">
-          <div className="flex items-center gap-3">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary-50 text-primary">
-              <Smartphone aria-hidden="true" className="h-5 w-5" />
-            </span>
-            <div>
-              <p className="text-caption font-semibold text-muted-foreground">{copy.login.recovery}</p>
-              <p className="text-small font-black text-primary-950 group-hover:text-primary-700">{copy.login.recoveryLink}</p>
-            </div>
-          </div>
-        </a>
-      </div>
+        );
+      })()}
     </div>
   );
 }

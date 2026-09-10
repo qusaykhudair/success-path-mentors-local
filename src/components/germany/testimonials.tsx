@@ -3,17 +3,12 @@
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { Star, Quote, MessageSquare } from 'lucide-react';
-import { usePathname } from 'next/navigation';
-import { parseNavigationContext } from '@/lib/market-navigation';
 import { ScrollReveal } from './scroll-reveal';
 
 export function Testimonials() {
   const t = useTranslations('testimonials');
-  const pathname = usePathname() || '';
-  const context = parseNavigationContext(pathname);
   const items = t.raw('items') as { name: string; quote: string }[];
-
-  const feedbackLabel = context.locale === 'de' ? 'Rückmeldung von Eltern' : context.locale === 'ar' ? 'رأي أولياء الأمور' : 'Parent Feedback';
+  const feedbackLabel = t('feedbackLabel');
 
   return (
     <section id="testimonials" className="relative scroll-mt-20 bg-white py-20 md:py-32">
