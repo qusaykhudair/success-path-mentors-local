@@ -235,12 +235,12 @@
     "reassurance": "100% unverbindlich • Keine Kreditkarte erforderlich • Schnelle Zuordnung",
     "trustPoints": [
       "1-zu-1 Einzelunterricht",
-      "Kostenlose Probestunde ohne Risiko",
+      "Unverbindliche kostenlose Probestunde",
       "Flexible Online-Termine"
     ],
     "panelEyebrow": "Einfacher Ablauf",
     "panelTitle": "In 3 Schritten zum Unterricht",
-    "panelNote": "Unser Beratungsteam antwortet in der Regel innerhalb weniger Stunden.",
+    "panelNote": "Unser Beratungsteam stimmt die Probestunde gerne persönlich mit Ihnen ab.",
     "nextSteps": [
       {
         "title": "Anfrage senden",
@@ -248,7 +248,7 @@
       },
       {
         "title": "Passende Lehrkraft",
-        "description": "Wir wählen den idealen Tutor für Ihre individuellen Lernziele."
+        "description": "Wir wählen eine passende Lehrkraft für Ihre individuellen Lernziele."
       },
       {
         "title": "Online durchstarten",
@@ -359,34 +359,34 @@
       "progress": {
         "name": "Progress",
         "subtitle": "8 Unterrichtseinheiten",
-        "description": "Unser bewährtes Paket für kontinuierliche Leistungssteigerung und Schulerfolg.",
+        "description": "Unser bewährtes Paket für kontinuierliche Lernbegleitung und Schulerfolg.",
         "sessions": "8 Einheiten (1-zu-1)",
         "priceLabel": "Auf Anfrage",
-        "badge": "Beliebteste Wahl",
+        "badge": "8 Einheiten",
         "features": [
           "1-zu-1 Einzelunterricht online",
           "Individueller Lern- und Förderplan",
           "Persönliche Betreuung & Koordination",
-          "Monatlicher Fortschrittsbericht",
+          "Regelmäßiges Lernfeedback",
           "Fächerübergreifend anpassbar"
         ],
-        "cta": "Jetzt durchstarten"
+        "cta": "Jetzt anfragen"
       },
       "momentum": {
         "name": "Intensiv",
         "subtitle": "12 Unterrichtseinheiten",
-        "description": "Umfassende Begleitung für nachhaltige Notenverbesserung und Prüfungsvorbereitung.",
+        "description": "Umfassende Begleitung für gezielte Lernförderung und Prüfungsvorbereitung.",
         "sessions": "12 Einheiten (1-zu-1)",
         "priceLabel": "Auf Anfrage",
-        "badge": "Maximaler Erfolg",
+        "badge": "12 Einheiten",
         "features": [
           "1-zu-1 Einzelunterricht online",
-          "Prioritäre Lehrervermittlung",
+          "Individuelle Lehrerabstimmung",
           "Gezielte Prüfungsvorbereitung",
-          "Feste Betreuungskoordination",
+          "Direkte Betreuungskoordination",
           "Hausaufgaben- und Lernbegleitung"
         ],
-        "cta": "Intensivplan sichern"
+        "cta": "Intensivplan anfragen"
       }
     }
   },
@@ -398,7 +398,7 @@
     "whatsappDesc": "Schnell und unkompliziert direkt per Chat antworten lassen.",
     "whatsappAction": "WhatsApp Chat starten",
     "emailTitle": "E-Mail Anfrage",
-    "emailDesc": "Schreiben Sie uns jederzeit. Wir melden uns innerhalb von 24 Stunden.",
+    "emailDesc": "Schreiben Sie uns jederzeit. Wir melden uns verlässlich bei Ihnen zurück.",
     "emailAction": "E-Mail schreiben",
     "hoursTitle": "Erreichbarkeit",
     "hoursDesc": "Montag – Freitag: 09:00 – 19:00 Uhr (MEZ)",

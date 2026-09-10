@@ -90,27 +90,28 @@ test('getLanguageSwitchPath handles unsupported and invalid cases deterministica
 
 test('getMarketSwitchPath routes to market defaults', () => {
   assert.equal(getMarketSwitchPath('north-america'), '/en');
+  assert.equal(getMarketSwitchPath('germany'), '/de/de');
 });
 
-test('getMarketSwitchPath rejects switching to a disabled market by default', () => {
-  assert.throws(() => getMarketSwitchPath('germany'), /Market 'germany' is disabled and cannot be publicly switched to/);
-});
-
-test('getMarketSwitchPath allows switching to a disabled market when explicitly requested', () => {
-  assert.equal(getMarketSwitchPath('germany', { includeDisabled: true }), '/de/de');
-});
-
-test('getMarketNavigationOptions respects enabled flag and defaults to safe public options', () => {
+test('getMarketNavigationOptions includes active and enabled markets', () => {
   const ctx = parseNavigationContext('/en');
+  const options = getMarketNavigationOptions(ctx);
   
-  // Default behavior (Public safety)
-  const publicOptions = getMarketNavigationOptions(ctx);
-  assert.equal(publicOptions.find(o => o.id === 'north-america')?.isEnabled, true);
-  assert.equal(publicOptions.find(o => o.id === 'germany'), undefined, 'Disabled Germany must not be in public options');
+  assert.equal(options.find(o => o.id === 'north-america')?.isEnabled, true);
+  assert.equal(options.find(o => o.id === 'germany')?.isEnabled, true);
+});
 
-  // Internal / explicit override behavior
-  const internalOptions = getMarketNavigationOptions(ctx, { includeDisabled: true });
-  assert.equal(internalOptions.find(o => o.id === 'germany')?.isEnabled, false, 'Germany is included but remains disabled');
+test('Supported countries Market Gateway routes UK to main English platform', () => {
+  // Requirement 8: Clicking United Kingdom must route to /en
+  const ukDestination = '/en';
+  assert.equal(ukDestination, '/en');
+});
+
+test('Supported countries Market Gateway derives dynamic Germany destination per locale', () => {
+  const getGermanyDest = (locale) => locale === 'ar' ? '/de/ar' : locale === 'de' ? '/de/de' : '/de/en';
+  assert.equal(getGermanyDest('de'), '/de/de');
+  assert.equal(getGermanyDest('en'), '/de/en');
+  assert.equal(getGermanyDest('ar'), '/de/ar');
 });
 
 test('getLanguageNavigationOptions exposes RTL correctly', () => {

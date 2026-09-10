@@ -235,12 +235,12 @@
     "reassurance": "100% commitment-free • No credit card required • Fast coordinator matching",
     "trustPoints": [
       "1-on-1 personalized tutoring",
-      "Zero-risk trial lesson",
+      "Free trial lesson with no commitment",
       "Flexible online schedules"
     ],
     "panelEyebrow": "Simple Process",
     "panelTitle": "Get started in 3 easy steps",
-    "panelNote": "Our coordination team typically responds within a few hours.",
+    "panelNote": "Our advisory team will coordinate your trial session with personal care.",
     "nextSteps": [
       {
         "title": "Submit your request",
@@ -248,7 +248,7 @@
       },
       {
         "title": "Tutor matching",
-        "description": "We match the ideal certified tutor tailored to your goals."
+        "description": "We match an experienced tutor tailored to your learning goals."
       },
       {
         "title": "Start learning",
@@ -359,15 +359,15 @@
       "progress": {
         "name": "Progress",
         "subtitle": "8 Tutoring Sessions",
-        "description": "Our most popular plan for steady academic progress and stronger subject mastery.",
+        "description": "Our comprehensive plan for steady academic progress and stronger subject mastery.",
         "sessions": "8 Sessions (1-on-1)",
         "priceLabel": "On Request",
-        "badge": "Most Popular",
+        "badge": "8 Sessions",
         "features": [
           "1-on-1 online tutoring",
           "Individual learning roadmap",
           "Dedicated coordination support",
-          "Monthly progress report",
+          "Regular learning feedback",
           "Adaptable across subjects"
         ],
         "cta": "Get Started"
@@ -375,15 +375,15 @@
       "momentum": {
         "name": "Intensive",
         "subtitle": "12 Tutoring Sessions",
-        "description": "Comprehensive academic support for significant grade improvement and exam success.",
+        "description": "Comprehensive academic support for structured learning and test preparation.",
         "sessions": "12 Sessions (1-on-1)",
         "priceLabel": "On Request",
-        "badge": "Maximum Impact",
+        "badge": "12 Sessions",
         "features": [
           "1-on-1 online tutoring",
-          "Priority tutor matching",
+          "Tailored tutor matching",
           "Targeted exam preparation",
-          "Dedicated educational advisor",
+          "Direct coordination support",
           "Homework & ongoing mentorship"
         ],
         "cta": "Choose Intensive"
@@ -398,7 +398,7 @@
     "whatsappDesc": "Quick and easy assistance directly via WhatsApp chat.",
     "whatsappAction": "Start WhatsApp Chat",
     "emailTitle": "Email Inquiries",
-    "emailDesc": "Send us a message anytime. We reply within 24 hours.",
+    "emailDesc": "Send us a message anytime. Our coordination team will get back to you promptly.",
     "emailAction": "Send Email",
     "hoursTitle": "Support Hours",
     "hoursDesc": "Monday – Friday: 09:00 – 19:00 (CET)",

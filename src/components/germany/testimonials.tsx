@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
-import { Star, Quote, CheckCircle } from 'lucide-react';
+import { Star, Quote, MessageSquare } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { parseNavigationContext } from '@/lib/market-navigation';
 import { ScrollReveal } from './scroll-reveal';
@@ -13,14 +13,14 @@ export function Testimonials() {
   const context = parseNavigationContext(pathname);
   const items = t.raw('items') as { name: string; quote: string }[];
 
-  const verifiedLabel = context.locale === 'de' ? 'Verifizierte Rückmeldung' : context.locale === 'ar' ? 'تقييم موثق من أولياء الأمور' : 'Verified Community Feedback';
+  const feedbackLabel = context.locale === 'de' ? 'Rückmeldung von Eltern' : context.locale === 'ar' ? 'رأي أولياء الأمور' : 'Parent Feedback';
 
   return (
     <section id="testimonials" className="relative scroll-mt-20 bg-white py-20 md:py-32">
       <Container>
         <ScrollReveal className="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center">
           <div className="inline-flex items-center gap-2 rounded-full bg-accent-50 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-accent-700 ring-1 ring-accent-200/80">
-            <CheckCircle className="h-3.5 w-3.5 text-accent-600" />
+            <MessageSquare className="h-3.5 w-3.5 text-accent-600" />
             <span>{t('eyebrow')}</span>
           </div>
 
@@ -61,7 +61,7 @@ export function Testimonials() {
                     </div>
                     <div>
                       <p className="font-bold text-primary-950 text-sm">{review.name}</p>
-                      <p className="text-xs text-primary-500 font-medium">{verifiedLabel}</p>
+                      <p className="text-xs text-primary-500 font-medium">{feedbackLabel}</p>
                     </div>
                   </div>
                 </div>

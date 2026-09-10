@@ -1,21 +1,31 @@
 'use client';
 
 import * as React from 'react';
-import { useTranslations } from 'next-intl';
-import { ChevronRight, ArrowLeft, User, Users, GraduationCap, Target, Speech, BookOpen, CheckCircle2 } from 'lucide-react';
+import { useSearchParams } from 'next/navigation';
+import { useTranslations, useLocale } from 'next-intl';
+import { ArrowLeft, ArrowRight, User, Users, GraduationCap, Target, Speech, BookOpen, MessageCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { useLocale } from 'next-intl';
+import { buildWhatsAppHref } from '@/lib/whatsapp';
 
-type Step = 1 | 2 | 3 | 4 | 'success';
+type Step = 1 | 2 | 3 | 4 | 'contactReady';
 
-export function TrialFlow() {
+const VALID_SUBJECTS = ['german', 'english', 'arabic', 'french'] as const;
+type ValidSubject = typeof VALID_SUBJECTS[number];
+
+function TrialFlowContent() {
   const t = useTranslations('trialFlow');
   const locale = useLocale();
   const isRtl = locale === 'ar';
+  const NextIcon = isRtl ? ArrowLeft : ArrowRight;
+  const BackIcon = isRtl ? ArrowRight : ArrowLeft;
   
-  const [step, setStep] = React.useState<Step>(1);
+  const searchParams = useSearchParams();
+  const subjectParam = searchParams.get('subject')?.toLowerCase() as ValidSubject | undefined;
+  const initialSubject = subjectParam && VALID_SUBJECTS.includes(subjectParam) ? subjectParam : '';
+
+  const [step, setStep] = React.useState<Step>(initialSubject ? 2 : 1);
   const [formData, setFormData] = React.useState({
-    subject: '',
+    subject: initialSubject,
     learner: '',
     goal: '',
     firstName: '',
@@ -29,10 +39,10 @@ export function TrialFlow() {
   };
 
   const nextStep = () => {
-    if (step === 1) setStep(2);
-    else if (step === 2) setStep(3);
-    else if (step === 3) setStep(4);
-    else if (step === 4) setStep('success');
+    if (step === 1 && formData.subject) setStep(2);
+    else if (step === 2 && formData.learner) setStep(3);
+    else if (step === 3 && formData.goal) setStep(4);
+    else if (step === 4) setStep('contactReady');
   };
 
   const prevStep = () => {
@@ -41,42 +51,99 @@ export function TrialFlow() {
     else if (step === 4) setStep(3);
   };
 
+  // Human-readable labels for WhatsApp summary
+  const getSubjectLabel = (id: string) => {
+    switch (id) {
+      case 'german': return 'Deutsch';
+      case 'english': return 'English';
+      case 'arabic': return 'العربية';
+      case 'french': return 'Français';
+      default: return id;
+    }
+  };
+
+  const getLearnerLabel = (id: string) => {
+    switch (id) {
+      case 'myself': return t('learner.myself.title');
+      case 'child': return t('learner.child.title');
+      default: return id;
+    }
+  };
+
+  const getGoalLabel = (id: string) => {
+    switch (id) {
+      case 'grades': return t('goals.grades.title');
+      case 'speaking': return t('goals.speaking.title');
+      case 'exam': return t('goals.exam.title');
+      case 'basics': return t('goals.basics.title');
+      default: return id;
+    }
+  };
+
+  const constructWhatsAppMessage = () => {
+    const lines = [
+      locale === 'de'
+        ? 'Hallo Success Path Mentors, ich möchte eine kostenlose Probestunde vereinbaren:'
+        : locale === 'ar'
+        ? 'مرحباً Success Path Mentors، أود حجز حصة تجريبية مجانية:'
+        : 'Hello Success Path Mentors, I would like to book a free trial lesson:',
+      `- ${locale === 'de' ? 'Fach' : locale === 'ar' ? 'المادة' : 'Subject'}: ${getSubjectLabel(formData.subject)}`,
+      `- ${locale === 'de' ? 'Für wen' : locale === 'ar' ? 'المتعلم' : 'Learner'}: ${getLearnerLabel(formData.learner)}`,
+      `- ${locale === 'de' ? 'Ziel' : locale === 'ar' ? 'الهدف' : 'Goal'}: ${getGoalLabel(formData.goal)}`,
+      `- ${locale === 'de' ? 'Name' : locale === 'ar' ? 'الاسم' : 'Name'}: ${formData.firstName} ${formData.lastName}`,
+    ];
+    if (formData.phone) {
+      lines.push(`- ${locale === 'de' ? 'Telefon' : locale === 'ar' ? 'الهاتف' : 'Phone'}: ${formData.phone}`);
+    }
+    return lines.join('\n');
+  };
+
+  const currentStepNumber = typeof step === 'number' ? step : 4;
+
   return (
-    <div className="relative overflow-hidden rounded-[2rem] bg-white p-8 shadow-2xl ring-1 ring-primary-900/5 sm:p-12">
-      {step !== 'success' && (
+    <div className="relative overflow-hidden rounded-[2rem] bg-white p-6 shadow-2xl ring-1 ring-primary-900/5 sm:p-10">
+      {step !== 'contactReady' && (
         <div className="mb-8">
           <div className="flex items-center justify-between">
             {step > 1 ? (
               <button
+                type="button"
                 onClick={prevStep}
-                className="flex items-center gap-2 text-sm font-medium text-primary-500 hover:text-primary-900 transition-colors"
+                className="inline-flex min-h-[44px] items-center gap-2 text-sm font-semibold text-primary-600 hover:text-primary-950 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
-                <ArrowLeft className="h-4 w-4" />
-                {t('back')}
+                <BackIcon className="h-4 w-4" />
+                <span>{t('back')}</span>
               </button>
             ) : (
-              <div /> // placeholder for layout
+              <div />
             )}
-            <div className="text-sm font-medium text-primary-400">
-              {step} / 4
+            <div className="text-sm font-bold text-primary-400">
+              {currentStepNumber} / 4
             </div>
           </div>
           
-          <div className="mt-6 flex h-2 w-full overflow-hidden rounded-full bg-primary-50">
+          <div className="mt-4 flex h-2 w-full overflow-hidden rounded-full bg-primary-100">
             <div 
-              className="h-full bg-accent-500 transition-all duration-500 ease-out"
-              style={{ width: `${(step as number) * 25}%` }}
+              className="h-full bg-accent-500 transition-all duration-300 ease-out"
+              style={{ width: `${currentStepNumber * 25}%` }}
             />
           </div>
         </div>
       )}
 
-      <div className="min-h-[400px]">
+      <div className="min-h-[380px]">
+        {/* Step 1: Service Selection */}
         {step === 1 && (
-          <div className="flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <h2 className="text-2xl font-bold text-primary-950 sm:text-3xl">
-              {t('step1Title')}
-            </h2>
+          <div className="flex flex-col gap-6 animate-in fade-in duration-300">
+            <div className="flex flex-col gap-1">
+              <h2 className="text-2xl font-bold text-primary-950 sm:text-3xl">
+                {t('step1Title')}
+              </h2>
+              <p className="text-sm text-primary-500">
+                {locale === 'de' ? 'Wählen Sie das Fach für Ihre kostenlose Probestunde.' : locale === 'ar' ? 'اختر المادة للحصة التجريبية المجانية.' : 'Select the subject for your free trial session.'}
+              </p>
+            </div>
+            
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               {[
                 { id: 'german', icon: Speech, label: 'Deutsch' },
@@ -89,31 +156,52 @@ export function TrialFlow() {
                 return (
                   <button
                     key={subject.id}
-                    onClick={() => { updateForm('subject', subject.id); setTimeout(nextStep, 300); }}
+                    type="button"
+                    onClick={() => updateForm('subject', subject.id)}
                     className={cn(
-                      "flex items-center gap-4 rounded-xl border-2 p-4 text-left transition-all hover:border-accent-200 hover:bg-accent-50",
-                      isSelected ? "border-accent-500 bg-accent-50 ring-1 ring-accent-500" : "border-primary-100 bg-white"
+                      "flex min-h-[44px] items-center gap-4 rounded-xl border-2 p-4 text-left transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+                      isSelected ? "border-accent-500 bg-accent-50 ring-1 ring-accent-500 shadow-sm" : "border-primary-100 bg-white hover:border-primary-300 hover:bg-primary-50/50"
                     )}
                   >
                     <div className={cn(
-                      "flex h-12 w-12 items-center justify-center rounded-lg transition-colors",
-                      isSelected ? "bg-accent-500 text-white" : "bg-primary-50 text-primary-500"
+                      "flex h-11 w-11 items-center justify-center rounded-lg transition-colors shrink-0",
+                      isSelected ? "bg-accent-500 text-white" : "bg-primary-100 text-primary-600"
                     )}>
-                      <Icon className="h-6 w-6" />
+                      <Icon className="h-5 w-5" />
                     </div>
-                    <span className="font-bold text-primary-900">{subject.label}</span>
+                    <span className="font-bold text-primary-900 text-base">{subject.label}</span>
                   </button>
                 );
               })}
             </div>
+
+            {/* Explicit Continue Button */}
+            <div className="pt-4 border-t border-primary-100">
+              <button
+                type="button"
+                onClick={nextStep}
+                disabled={!formData.subject}
+                className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-xl bg-accent-600 py-3 text-base font-bold text-white shadow-sm transition-all hover:bg-accent-700 disabled:opacity-40 disabled:pointer-events-none"
+              >
+                <span>{t('continue')}</span>
+                <NextIcon className="h-4 w-4" />
+              </button>
+            </div>
           </div>
         )}
 
+        {/* Step 2: Learner Context */}
         {step === 2 && (
-          <div className="flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <h2 className="text-2xl font-bold text-primary-950 sm:text-3xl">
-              {t('step2Title')}
-            </h2>
+          <div className="flex flex-col gap-6 animate-in fade-in duration-300">
+            <div className="flex flex-col gap-1">
+              <h2 className="text-2xl font-bold text-primary-950 sm:text-3xl">
+                {t('step2Title')}
+              </h2>
+              <p className="text-sm text-primary-500">
+                {locale === 'de' ? 'Fach:' : locale === 'ar' ? 'المادة:' : 'Subject:'} <strong className="text-primary-900">{getSubjectLabel(formData.subject)}</strong>
+              </p>
+            </div>
+
             <div className="grid grid-cols-1 gap-3">
               {[
                 { id: 'myself', icon: User, label: t('learner.myself.title'), desc: t('learner.myself.desc') },
@@ -124,31 +212,46 @@ export function TrialFlow() {
                 return (
                   <button
                     key={learner.id}
-                    onClick={() => { updateForm('learner', learner.id); setTimeout(nextStep, 300); }}
+                    type="button"
+                    onClick={() => updateForm('learner', learner.id)}
                     className={cn(
-                      "flex items-center gap-4 rounded-xl border-2 p-4 text-left transition-all hover:border-accent-200 hover:bg-accent-50",
-                      isSelected ? "border-accent-500 bg-accent-50 ring-1 ring-accent-500" : "border-primary-100 bg-white"
+                      "flex min-h-[44px] items-center gap-4 rounded-xl border-2 p-4 text-left transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+                      isSelected ? "border-accent-500 bg-accent-50 ring-1 ring-accent-500 shadow-sm" : "border-primary-100 bg-white hover:border-primary-300 hover:bg-primary-50/50"
                     )}
                   >
                     <div className={cn(
-                      "flex h-12 w-12 items-center justify-center rounded-lg transition-colors shrink-0",
-                      isSelected ? "bg-accent-500 text-white" : "bg-primary-50 text-primary-500"
+                      "flex h-11 w-11 items-center justify-center rounded-lg transition-colors shrink-0",
+                      isSelected ? "bg-accent-500 text-white" : "bg-primary-100 text-primary-600"
                     )}>
-                      <Icon className="h-6 w-6" />
+                      <Icon className="h-5 w-5" />
                     </div>
-                    <div className="flex flex-col gap-1">
-                      <span className="font-bold text-primary-900">{learner.label}</span>
-                      <span className="text-sm text-primary-500">{learner.desc}</span>
+                    <div className="flex flex-col gap-0.5">
+                      <span className="font-bold text-primary-900 text-base">{learner.label}</span>
+                      <span className="text-xs text-primary-500">{learner.desc}</span>
                     </div>
                   </button>
                 );
               })}
             </div>
+
+            {/* Explicit Continue Button */}
+            <div className="pt-4 border-t border-primary-100">
+              <button
+                type="button"
+                onClick={nextStep}
+                disabled={!formData.learner}
+                className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-xl bg-accent-600 py-3 text-base font-bold text-white shadow-sm transition-all hover:bg-accent-700 disabled:opacity-40 disabled:pointer-events-none"
+              >
+                <span>{t('continue')}</span>
+                <NextIcon className="h-4 w-4" />
+              </button>
+            </div>
           </div>
         )}
 
+        {/* Step 3: Learning Goal */}
         {step === 3 && (
-          <div className="flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div className="flex flex-col gap-6 animate-in fade-in duration-300">
             <h2 className="text-2xl font-bold text-primary-950 sm:text-3xl">
               {t('step3Title')}
             </h2>
@@ -164,90 +267,115 @@ export function TrialFlow() {
                 return (
                   <button
                     key={goal.id}
-                    onClick={() => { updateForm('goal', goal.id); setTimeout(nextStep, 300); }}
+                    type="button"
+                    onClick={() => updateForm('goal', goal.id)}
                     className={cn(
-                      "flex flex-col gap-4 rounded-xl border-2 p-5 text-left transition-all hover:border-accent-200 hover:bg-accent-50",
-                      isSelected ? "border-accent-500 bg-accent-50 ring-1 ring-accent-500" : "border-primary-100 bg-white"
+                      "flex min-h-[44px] flex-col gap-3 rounded-xl border-2 p-4 text-left transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+                      isSelected ? "border-accent-500 bg-accent-50 ring-1 ring-accent-500 shadow-sm" : "border-primary-100 bg-white hover:border-primary-300 hover:bg-primary-50/50"
                     )}
                   >
                     <div className={cn(
-                      "flex h-10 w-10 items-center justify-center rounded-lg transition-colors",
-                      isSelected ? "bg-accent-500 text-white" : "bg-primary-50 text-primary-500"
+                      "flex h-9 w-9 items-center justify-center rounded-lg transition-colors",
+                      isSelected ? "bg-accent-500 text-white" : "bg-primary-100 text-primary-600"
                     )}>
                       <Icon className="h-5 w-5" />
                     </div>
-                    <div className="flex flex-col gap-1">
-                      <span className="font-bold text-primary-900">{goal.label}</span>
+                    <div className="flex flex-col gap-0.5">
+                      <span className="font-bold text-primary-900 text-sm">{goal.label}</span>
                       <span className="text-xs text-primary-500 leading-tight">{goal.desc}</span>
                     </div>
                   </button>
                 );
               })}
             </div>
+
+            {/* Explicit Continue Button */}
+            <div className="pt-4 border-t border-primary-100">
+              <button
+                type="button"
+                onClick={nextStep}
+                disabled={!formData.goal}
+                className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-xl bg-accent-600 py-3 text-base font-bold text-white shadow-sm transition-all hover:bg-accent-700 disabled:opacity-40 disabled:pointer-events-none"
+              >
+                <span>{t('continue')}</span>
+                <NextIcon className="h-4 w-4" />
+              </button>
+            </div>
           </div>
         )}
 
+        {/* Step 4: Contact Information */}
         {step === 4 && (
-          <div className="flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <h2 className="text-2xl font-bold text-primary-950 sm:text-3xl">
-              {t('step4Title')}
-            </h2>
+          <div className="flex flex-col gap-6 animate-in fade-in duration-300">
+            <div className="flex flex-col gap-1">
+              <h2 className="text-2xl font-bold text-primary-950 sm:text-3xl">
+                {t('step4Title')}
+              </h2>
+              <p className="text-sm text-primary-500">
+                {locale === 'de'
+                  ? 'Geben Sie Ihre Kontaktdaten ein, um die Probestunde persönlich abzustimmen.'
+                  : locale === 'ar'
+                  ? 'أدخل بيانات التواصل لتنسيق الحصة التجريبية مباشرة مع فريق التنسيق.'
+                  : 'Enter your contact details to coordinate your trial session with our team.'}
+              </p>
+            </div>
+
             <form 
               onSubmit={(e) => { e.preventDefault(); nextStep(); }}
               className="flex flex-col gap-4"
             >
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3">
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-sm font-semibold text-primary-900">{t('contact.firstName')}</label>
+                  <label className="text-xs font-bold text-primary-800">{t('contact.firstName')}</label>
                   <input 
                     required
                     type="text" 
                     value={formData.firstName}
                     onChange={(e) => updateForm('firstName', e.target.value)}
-                    className="rounded-lg border border-primary-200 px-4 py-2.5 outline-none transition-colors focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20"
+                    className="rounded-xl border border-primary-200 px-3.5 py-2.5 text-sm outline-none transition-colors focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20"
                   />
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-sm font-semibold text-primary-900">{t('contact.lastName')}</label>
+                  <label className="text-xs font-bold text-primary-800">{t('contact.lastName')}</label>
                   <input 
                     required
                     type="text" 
                     value={formData.lastName}
                     onChange={(e) => updateForm('lastName', e.target.value)}
-                    className="rounded-lg border border-primary-200 px-4 py-2.5 outline-none transition-colors focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20"
+                    className="rounded-xl border border-primary-200 px-3.5 py-2.5 text-sm outline-none transition-colors focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20"
                   />
                 </div>
               </div>
               
               <div className="flex flex-col gap-1.5">
-                <label className="text-sm font-semibold text-primary-900">{t('contact.email')}</label>
+                <label className="text-xs font-bold text-primary-800">{t('contact.email')}</label>
                 <input 
                   required
                   type="email" 
                   value={formData.email}
                   onChange={(e) => updateForm('email', e.target.value)}
-                  className="rounded-lg border border-primary-200 px-4 py-2.5 outline-none transition-colors focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20"
+                  className="rounded-xl border border-primary-200 px-3.5 py-2.5 text-sm outline-none transition-colors focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20"
                 />
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-sm font-semibold text-primary-900">{t('contact.phone')}</label>
+                <label className="text-xs font-bold text-primary-800">{t('contact.phone')}</label>
                 <input 
                   required
                   type="tel" 
                   value={formData.phone}
                   onChange={(e) => updateForm('phone', e.target.value)}
-                  className="rounded-lg border border-primary-200 px-4 py-2.5 outline-none transition-colors focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20"
+                  className="rounded-xl border border-primary-200 px-3.5 py-2.5 text-sm outline-none transition-colors focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20"
                 />
               </div>
 
-              <p className="text-xs text-primary-400 mt-2">
+              <p className="text-xs text-primary-500 mt-1">
                 {t('contact.privacy')}
               </p>
 
               <button
                 type="submit"
-                className="mt-4 flex w-full items-center justify-center rounded-xl bg-accent-600 py-3.5 text-base font-bold text-white shadow-md transition-all hover:bg-accent-700 hover:-translate-y-0.5"
+                className="mt-2 flex min-h-[44px] w-full items-center justify-center rounded-xl bg-accent-600 py-3.5 text-base font-bold text-white shadow-md transition-all hover:bg-accent-700 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 {t('contact.submit')}
               </button>
@@ -255,28 +383,59 @@ export function TrialFlow() {
           </div>
         )}
 
-        {step === 'success' && (
-          <div className="flex h-[400px] flex-col items-center justify-center gap-6 text-center animate-in zoom-in-95 duration-500">
-            <div className="flex h-24 w-24 items-center justify-center rounded-full bg-green-50 text-green-500 ring-8 ring-green-50/50">
-              <CheckCircle2 className="h-12 w-12" />
+        {/* Final Action: Truthful WhatsApp Coordination */}
+        {step === 'contactReady' && (
+          <div className="flex flex-col items-center justify-center gap-6 py-6 text-center animate-in fade-in duration-300">
+            <div className="flex h-18 w-18 items-center justify-center rounded-full bg-accent-50 text-accent-600 ring-8 ring-accent-100">
+              <MessageCircle className="h-9 w-9" />
             </div>
-            <div className="flex flex-col gap-2">
-              <h2 className="text-3xl font-bold text-primary-950">
-                {locale === 'de' ? 'Vielen Dank!' : locale === 'ar' ? 'شكراً لك!' : 'Thank you!'}
+
+            <div className="flex flex-col gap-2 max-w-md">
+              <h2 className="text-2xl font-bold text-primary-950 sm:text-3xl">
+                {locale === 'de' ? 'Anfrage vorbereitet' : locale === 'ar' ? 'تفاصيل الطلب جاهزة' : 'Request Ready'}
               </h2>
-              <p className="max-w-[280px] text-lg text-primary-600">
-                {t('contact.success')}
+              <p className="text-sm text-primary-600 leading-relaxed">
+                {locale === 'de'
+                  ? 'Ihre Angaben wurden zusammengestellt. Schließen Sie die Terminabstimmung für Ihre kostenlose Probestunde direkt per WhatsApp mit unserem Koordinationsteam ab.'
+                  : locale === 'ar'
+                  ? 'تم تجهيز تفاصيل طلبك بنجاح. تواصل الآن مباشرة عبر واتساب مع فريق التنسيق التعليمي لتأكيد وتثبيت موعد الحصة التجريبية.'
+                  : 'Your request details are assembled. Continue directly on WhatsApp with our educational coordination team to confirm your free trial schedule.'}
               </p>
             </div>
-            <a 
-              href={`/de/${locale}`}
-              className="mt-4 rounded-xl bg-primary-50 px-6 py-2.5 font-bold text-primary-700 transition-colors hover:bg-primary-100 hover:text-primary-900"
-            >
-              {t('back', { fallback: 'Go back' })}
-            </a>
+
+            <div className="flex w-full max-w-sm flex-col gap-3">
+              <a 
+                href={buildWhatsAppHref(constructWhatsAppMessage())}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-xl bg-emerald-600 px-6 py-3.5 text-base font-bold text-white shadow-md transition-all hover:bg-emerald-500 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              >
+                <MessageCircle className="h-5 w-5" />
+                <span>{locale === 'de' ? 'Auf WhatsApp abschließen' : locale === 'ar' ? 'المتابعة عبر واتساب' : 'Continue on WhatsApp'}</span>
+              </a>
+
+              <a 
+                href={`/de/${locale}`}
+                className="inline-flex min-h-[44px] items-center justify-center rounded-xl bg-primary-100 px-6 py-2.5 text-sm font-bold text-primary-800 transition-colors hover:bg-primary-200"
+              >
+                {t('back', { fallback: 'Go back to Home' })}
+              </a>
+            </div>
           </div>
         )}
       </div>
     </div>
+  );
+}
+
+export function TrialFlow() {
+  return (
+    <React.Suspense fallback={
+      <div className="flex min-h-[400px] items-center justify-center rounded-[2rem] bg-white p-8 shadow-xl">
+        <div className="h-8 w-8 animate-spin rounded-full border-4 border-accent-500 border-t-transparent" />
+      </div>
+    }>
+      <TrialFlowContent />
+    </React.Suspense>
   );
 }

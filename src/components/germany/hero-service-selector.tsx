@@ -31,7 +31,7 @@ export function HeroServiceSelector() {
     const marketId = context.marketId || 'germany';
     const locale = (context.locale as 'de' | 'en' | 'ar') || 'de';
     const basePath = getMarketLocalePath(marketId, locale);
-    router.push(`${basePath}/trial`);
+    router.push(`${basePath}/trial?subject=${encodeURIComponent(selectedService)}`);
   };
 
   return (
