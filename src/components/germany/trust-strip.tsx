@@ -7,7 +7,7 @@ export function TrustStrip() {
   const t = useTranslations('trustStrip');
 
   return (
-    <section className="relative -mt-8 z-20 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <section className="relative z-20 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 mt-10 sm:mt-14 mb-4 sm:mb-6">
       <div className="rounded-3xl border border-primary-100 bg-white p-6 shadow-xl sm:p-8">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:divide-x md:divide-primary-100">
           

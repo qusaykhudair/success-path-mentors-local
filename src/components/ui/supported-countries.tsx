@@ -300,18 +300,6 @@ export function SupportedCountries({
                 >
                   {country.name}
                 </span>
-
-                {/* Market Label */}
-                <div className="flex items-center gap-1.5">
-                  <span className="text-[10px] sm:text-xs font-medium text-white/60 group-hover:text-white/90 transition-colors">
-                    {country.marketLabel}
-                  </span>
-                  {isActive && (
-                    <span className="rounded-full bg-accent-500/20 px-1.5 py-0.2 text-[9px] font-bold text-accent-300">
-                      {currentCopy.activeLabel}
-                    </span>
-                  )}
-                </div>
               </a>
             );
           })}
