@@ -414,12 +414,14 @@ export async function SiteHeader() {
           <Image
             src="/images/logo.png"
             alt="Success Path Mentors"
-            width={145}
-            height={47}
+            width={180}
+            height={60}
             priority
-            sizes="(max-width: 1024px) 122px, 145px"
+            sizes="(max-width: 1024px) 150px, 180px"
             className="
-              h-8
+              h-10
+              sm:h-11
+              xl:h-12
               w-auto
               object-contain
               transition-transform
@@ -428,7 +430,6 @@ export async function SiteHeader() {
               group-hover:scale-[1.03]
               motion-reduce:transition-none
               motion-reduce:group-hover:scale-100
-              xl:h-8
             "
           />
         </Link>

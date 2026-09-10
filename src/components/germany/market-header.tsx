@@ -89,11 +89,11 @@ export function MarketHeader() {
           <Image
             src="/images/logo.png"
             alt="Success Path Mentors"
-            width={155}
-            height={50}
+            width={180}
+            height={60}
             priority
-            sizes="(max-width: 1024px) 125px, 155px"
-            className="h-8.5 w-auto object-contain transition-transform duration-200 ease-out group-hover:scale-[1.02] xl:h-9"
+            sizes="(max-width: 1024px) 150px, 180px"
+            className="h-10 sm:h-11 xl:h-12 w-auto object-contain transition-transform duration-200 ease-out group-hover:scale-[1.02]"
           />
         </a>
 
