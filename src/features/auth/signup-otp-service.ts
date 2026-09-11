@@ -29,9 +29,20 @@ export interface SignupOtpVerifyResult {
   verified_identity: VerifiedIdentity;
 }
 
-// In-memory challenge store (shared across requests in server process)
-const challengeStore = new Map<string, SignupOtpChallenge>();
-const identifierCooldownStore = new Map<string, { lastSentAt: number; challengeId: string }>();
+// Global in-memory challenge store (persisted across HMR / Fast Refresh in development)
+const globalForOtp = globalThis as unknown as {
+  __spm_challengeStore?: Map<string, SignupOtpChallenge>;
+  __spm_identifierCooldownStore?: Map<string, { lastSentAt: number; challengeId: string }>;
+};
+
+const challengeStore = globalForOtp.__spm_challengeStore ?? new Map<string, SignupOtpChallenge>();
+const identifierCooldownStore =
+  globalForOtp.__spm_identifierCooldownStore ?? new Map<string, { lastSentAt: number; challengeId: string }>();
+
+if (process.env.NODE_ENV !== 'production') {
+  globalForOtp.__spm_challengeStore = challengeStore;
+  globalForOtp.__spm_identifierCooldownStore = identifierCooldownStore;
+}
 
 const OTP_EXPIRY_MS = 10 * 60 * 1000; // 10 minutes
 const RESEND_COOLDOWN_MS = 60 * 1000; // 60 seconds
