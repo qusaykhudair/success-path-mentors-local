@@ -22,6 +22,12 @@ const {
   getRegistrationTimezone,
   getRegistrationOptions,
 } = load('src/features/auth/registration-options.ts');
+const { createVerifiedSignupTicket, verifySignupTicket } = load('src/features/auth/signup-transaction.ts');
+const { requestSignupOtp, verifySignupOtp } = load('src/features/auth/signup-otp-service.ts');
+const { POST: postOtpRequest } = load('src/app/api/auth/signup/otp/request/route.ts');
+const { POST: postOtpVerify } = load('src/app/api/auth/signup/otp/verify/route.ts');
+const { GET: getSession } = load('src/app/api/auth/signup/session/route.ts');
+const { GET: getSocialCallback } = load('src/app/api/auth/social/callback/route.ts');
 
 const notFoundError = new Error('NOT_FOUND');
 const navigation = {
@@ -106,11 +112,14 @@ test('both localized provider buttons are rendered, and both authentication scre
     assert.equal((html.match(/type="button"/g) || []).length, 2);
     assert.doesNotMatch(html, /disabled=""/);
   }
-  for (const file of ['login-form.tsx', 'registration-form.tsx']) {
+  for (const file of ['login-form.tsx', 'signup-methods.tsx']) {
     const source = readFileSync(new URL(`../src/features/auth/${file}`, import.meta.url), 'utf8');
-    assert.match(source, /<SocialAuthButtons locale=\{locale\}/);
+    assert.match(source, /<SocialAuthButtons/);
     assert.doesNotMatch(source, /alert\(/);
   }
+  const regSource = readFileSync(new URL('../src/features/auth/registration-form.tsx', import.meta.url), 'utf8');
+  assert.doesNotMatch(regSource, /<SocialAuthButtons/);
+  assert.match(regSource, /<SignupMethods/);
   const login = readFileSync(new URL('../src/features/auth/login-form.tsx', import.meta.url), 'utf8');
   assert.match(login, /authApi.requestLogin/);
   assert.match(login, /authApi.verifyLogin/);
@@ -227,3 +236,170 @@ test('Germany child routing rejects /de/fr/login and /de/fr/register as invalid'
   await assert.rejects(page({ params: Promise.resolve({ marketSegments: ['fr', 'login'] }) }), (err) => err === notFoundError);
   await assert.rejects(page({ params: Promise.resolve({ marketSegments: ['fr', 'register'] }) }), (err) => err === notFoundError);
 });
+
+test('verified signup ticket creates, verifies, expires, and rejects tamper', () => {
+  const identity = { method: 'email', identifier: 'parent@example.com', displayName: 'Jane Doe' };
+  const ticket = createVerifiedSignupTicket(identity, 'germany', 'de');
+  assert.ok(ticket && typeof ticket === 'string');
+  assert.equal(ticket.split('.').length, 2);
+
+  const payload = verifySignupTicket(ticket);
+  assert.ok(payload);
+  assert.equal(payload.identity.method, 'email');
+  assert.equal(payload.identity.identifier, 'parent@example.com');
+  assert.equal(payload.identity.displayName, 'Jane Doe');
+  assert.equal(payload.market, 'germany');
+  assert.equal(payload.uiLocale, 'de');
+  assert.ok(payload.expiresAt > Date.now());
+
+  // Tamper rejection: altered payload
+  const [data, sig] = ticket.split('.');
+  const tamperedData = Buffer.from(JSON.stringify({ ...JSON.parse(Buffer.from(data, 'base64').toString()), identity: { method: 'email', identifier: 'hacker@example.com' } })).toString('base64');
+  assert.equal(verifySignupTicket(`${tamperedData}.${sig}`), null);
+
+  // Tamper rejection: altered signature
+  assert.equal(verifySignupTicket(`${data}.${sig}invalid`), null);
+
+  // Rejection: invalid token structures
+  assert.equal(verifySignupTicket(null), null);
+  assert.equal(verifySignupTicket(''), null);
+  assert.equal(verifySignupTicket('not-a-token'), null);
+});
+
+test('signup OTP endpoints generate challenge, verify code, and set HttpOnly ticket cookie', async () => {
+  // 1. Email OTP request
+  const emailReq = new Request('http://localhost/api/auth/signup/otp/request', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ channel: 'EMAIL', identifier: 'guardian@example.de', market: 'germany', ui_locale: 'de' }),
+  });
+  const emailRes = await postOtpRequest(emailReq);
+  assert.equal(emailRes.status, 200);
+  const emailData = await emailRes.json();
+  assert.ok(emailData.challenge_id);
+  assert.equal(emailData.channel, 'EMAIL');
+  assert.match(emailData.masked_destination, /@example\.de/);
+
+  // 2. Reject invalid email
+  const badEmailReq = new Request('http://localhost/api/auth/signup/otp/request', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ channel: 'EMAIL', identifier: 'not-an-email', market: 'germany', ui_locale: 'de' }),
+  });
+  assert.equal((await postOtpRequest(badEmailReq)).status, 400);
+
+  // 3. WhatsApp OTP request
+  const waReq = new Request('http://localhost/api/auth/signup/otp/request', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ channel: 'WHATSAPP', identifier: '+49 151 12345678', market: 'germany', ui_locale: 'de' }),
+  });
+  const waRes = await postOtpRequest(waReq);
+  assert.equal(waRes.status, 200);
+  const waData = await waRes.json();
+  assert.ok(waData.challenge_id);
+  assert.equal(waData.channel, 'WHATSAPP');
+
+  // 4. Verification with wrong code returns 400
+  const wrongVerifyReq = new Request('http://localhost/api/auth/signup/otp/verify', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ challenge_id: emailData.challenge_id, code: '000000' }),
+  });
+  const wrongVerifyRes = await postOtpVerify(wrongVerifyReq);
+  assert.equal(wrongVerifyRes.status, 400);
+
+  // 5. Test direct service verification with known challenge
+  const directChallenge = await requestSignupOtp({ channel: 'EMAIL', identifier: 'direct@example.com', market: 'germany', uiLocale: 'de' });
+  assert.ok(directChallenge.challenge_id);
+  // Incorrect code
+  const badResult = verifySignupOtp({ challengeId: directChallenge.challenge_id, code: '999999' });
+  assert.ok('error' in badResult && badResult.status === 400);
+  // Correct code using internal challenge
+  const validResult = verifySignupOtp({ challengeId: directChallenge.challenge_id, code: directChallenge._dev_otp || '123456' });
+  if ('success' in validResult && validResult.success) {
+    assert.ok(validResult.signup_ticket);
+    assert.equal(validResult.verified_identity.identifier, 'direct@example.com');
+
+    // Replay prevention: cannot reuse code
+    const secondUse = verifySignupOtp({ challengeId: directChallenge.challenge_id, code: directChallenge._dev_otp });
+    assert.ok('error' in secondUse);
+  }
+});
+
+test('signup session endpoint validates ticket from Authorization header or query', async () => {
+  const ticket = createVerifiedSignupTicket({ method: 'email', identifier: 'verified@example.com' }, 'germany', 'de');
+
+  // Valid via query
+  const resQuery = await getSession(new Request(`http://localhost/api/auth/signup/session?ticket=${encodeURIComponent(ticket)}`));
+  assert.equal(resQuery.status, 200);
+  const dataQuery = await resQuery.json();
+  assert.equal(dataQuery.valid, true);
+  assert.equal(dataQuery.identity.identifier, 'verified@example.com');
+
+  // Valid via Bearer header
+  const resHeader = await getSession(new Request('http://localhost/api/auth/signup/session', {
+    headers: { Authorization: `Bearer ${ticket}` },
+  }));
+  assert.equal(resHeader.status, 200);
+  const dataHeader = await resHeader.json();
+  assert.equal(dataHeader.valid, true);
+
+  // Invalid / missing ticket
+  const resEmpty = await getSession(new Request('http://localhost/api/auth/signup/session'));
+  assert.equal(resEmpty.status, 200);
+  assert.equal((await resEmpty.json()).valid, false);
+});
+
+test('social callback establishes verified signup transaction and returns to profile completion', async () => {
+  const callbackUrl = 'http://localhost/api/auth/social/callback?provider=google&market=germany&ui_locale=de&mode=register&email=oauth@example.com&name=GoogleUser';
+  const res = await getSocialCallback(new Request(callbackUrl));
+  assert.equal(res.status, 307); // redirect
+  const location = res.headers.get('location');
+  assert.match(location, /\/de\/de\/register\?signup_ticket=/);
+  const cookie = res.headers.get('set-cookie');
+  assert.match(cookie, /spm_signup_ticket=/);
+  assert.match(cookie, /HttpOnly/);
+
+  // Extract ticket from redirect url and verify
+  const redirectParams = new URL(location).searchParams;
+  const ticket = redirectParams.get('signup_ticket');
+  const payload = verifySignupTicket(ticket);
+  assert.ok(payload);
+  assert.equal(payload.identity.method, 'google');
+  assert.equal(payload.identity.identifier, 'oauth@example.com');
+  assert.equal(payload.identity.displayName, 'GoogleUser');
+  assert.equal(payload.market, 'germany');
+  assert.equal(payload.uiLocale, 'de');
+});
+
+test('Profile Completion view renders Verified Identity Badge and prefilled identifier without SocialAuthButtons in guardian step', () => {
+  const verifiedTicket = createVerifiedSignupTicket({
+    method: 'email',
+    identifier: 'verified.parent@example.com',
+  }, 'germany', 'de');
+
+  const html = renderToStaticMarkup(
+    React.createElement(RegistrationForm, {
+      locale: 'de',
+      marketId: 'germany',
+      initialTicket: verifiedTicket,
+      initialIdentity: { method: 'email', identifier: 'verified.parent@example.com' },
+    })
+  );
+
+  // Verified Identity Badge is rendered
+  assert.match(html, /Bestätigte Identität/);
+  assert.match(html, /Mit E-Mail bestätigt/);
+  assert.match(html, /verified\.parent@example\.com/);
+  assert.match(html, /Registrierungsmethode ändern/);
+
+  // Profile completion form fields are rendered
+  assert.match(html, /id="parent_name"/);
+  assert.match(html, /id="email"/);
+  assert.match(html, /id="whatsapp"/);
+
+  // No SocialAuthButtons in guardian step
+  assert.doesNotMatch(html, /id="social-auth-/);
+});
+

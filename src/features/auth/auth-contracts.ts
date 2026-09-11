@@ -75,6 +75,7 @@ export interface RegistrationPayload {
   source: 'WEBSITE';
   locale: AuthLocale;
   privacy_consent: true;
+  signup_ticket?: string;
 }
 
 export type RegistrationStatus =
@@ -110,6 +111,8 @@ export interface RegistrationConfirmation {
   registration_id: string;
   status: 'ACCOUNT_VERIFIED' | 'WAITING_FOR_ADMIN';
   trial_status: 'WAITING_FOR_ASSIGNMENT';
+  guardian_mid?: string;
+  student_mid?: string;
 }
 
 export class AuthApiError extends Error {

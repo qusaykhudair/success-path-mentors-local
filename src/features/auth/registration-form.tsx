@@ -32,8 +32,8 @@ import {
 
 import { authApi, isMockAuthApi } from './auth-api';
 import { getAuthCopy } from './auth-copy';
-import { SocialAuthButtons } from './social-auth-buttons';
 import { SignupMethods } from './signup-methods';
+import type { VerifiedIdentity } from './signup-transaction';
 import {
   AuthApiError,
   toAuthApiLocale,
@@ -212,14 +212,19 @@ export function RegistrationForm({
   loginHref,
   homeHref,
   initialMethod = null,
+  initialTicket = null,
+  initialIdentity = null,
 }: {
   locale: AuthUiLocale;
   marketId?: MarketId;
   loginHref?: string;
   homeHref?: string;
   initialMethod?: 'email' | 'whatsapp' | null;
+  initialTicket?: string | null;
+  initialIdentity?: VerifiedIdentity | null;
 }) {
-  const [selectedMethod, setSelectedMethod] = useState<'email' | 'whatsapp' | null>(initialMethod);
+  const [verifiedTicket, setVerifiedTicket] = useState<string | null>(initialTicket);
+  const [verifiedIdentity, setVerifiedIdentity] = useState<VerifiedIdentity | null>(initialIdentity);
   const copy = getAuthCopy(locale);
   const isRtl = locale === 'ar';
   const ForwardIcon = isRtl ? ArrowLeft : ArrowRight;
@@ -306,6 +311,52 @@ export function RegistrationForm({
     return () => window.clearInterval(interval);
   }, [resendSeconds]);
 
+  useEffect(() => {
+    if (verifiedTicket && verifiedIdentity) return;
+    if (typeof window === 'undefined') return;
+
+    const params = new URLSearchParams(window.location.search);
+    const urlTicket = params.get('signup_ticket') || params.get('ticket');
+
+    if (urlTicket) {
+      fetch(`/api/auth/signup/session?ticket=${encodeURIComponent(urlTicket)}`)
+        .then((res) => (res.ok ? (res.json() as Promise<{ valid?: boolean; identity?: VerifiedIdentity }>) : null))
+        .then((data) => {
+          if (data?.valid && data.identity) {
+            setVerifiedTicket(urlTicket);
+            setVerifiedIdentity(data.identity);
+            if (data.identity.method === 'whatsapp') {
+              form.setValue('whatsapp', data.identity.identifier);
+            } else {
+              form.setValue('email', data.identity.identifier);
+              if (data.identity.displayName) {
+                form.setValue('parent_name', data.identity.displayName);
+              }
+            }
+          }
+        })
+        .catch(() => {});
+    } else {
+      fetch('/api/auth/signup/session')
+        .then((res) => (res.ok ? (res.json() as Promise<{ valid?: boolean; identity?: VerifiedIdentity }>) : null))
+        .then((data) => {
+          if (data?.valid && data.identity) {
+            setVerifiedTicket('cookie-session');
+            setVerifiedIdentity(data.identity);
+            if (data.identity.method === 'whatsapp') {
+              form.setValue('whatsapp', data.identity.identifier);
+            } else {
+              form.setValue('email', data.identity.identifier);
+              if (data.identity.displayName) {
+                form.setValue('parent_name', data.identity.displayName);
+              }
+            }
+          }
+        })
+        .catch(() => {});
+    }
+  }, [form, verifiedTicket, verifiedIdentity]);
+
   const values = form.watch();
 
   async function nextStep() {
@@ -338,6 +389,7 @@ export function RegistrationForm({
       source: 'WEBSITE',
       locale: toAuthApiLocale(locale),
       privacy_consent: true,
+      signup_ticket: verifiedTicket || undefined,
     };
 
     try {
@@ -351,6 +403,8 @@ export function RegistrationForm({
           registration_id: nextResult.registration_id,
           status: 'WAITING_FOR_ADMIN',
           trial_status: nextResult.trial_status as any,
+          guardian_mid: nextResult.guardian_mid,
+          student_mid: nextResult.student_mid,
         });
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -442,6 +496,16 @@ export function RegistrationForm({
           <p className="mt-6 text-caption font-semibold text-muted-foreground">
             {copy.register.registrationId}: <strong className="font-black text-primary-950" dir="ltr">{confirmation.registration_id}</strong>
           </p>
+          {confirmation.guardian_mid ? (
+            <p className="mt-2 text-caption font-semibold text-muted-foreground">
+              Guardian MID: <strong className="font-black text-primary-950" dir="ltr">{confirmation.guardian_mid}</strong>
+            </p>
+          ) : null}
+          {confirmation.student_mid ? (
+            <p className="mt-2 text-caption font-semibold text-muted-foreground">
+              Student MID: <strong className="font-black text-primary-950" dir="ltr">{confirmation.student_mid}</strong>
+            </p>
+          ) : null}
         </div>
         <a href={effectiveHomeHref} className={buttonVariants({ variant: 'accent', size: 'lg', className: 'mx-auto mt-8 min-w-64' })}>
           {copy.register.returnHome}
@@ -534,14 +598,23 @@ export function RegistrationForm({
     );
   }
 
-  if (selectedMethod === null) {
+  if (!verifiedTicket || !verifiedIdentity) {
     return (
       <SignupMethods
         locale={locale}
         marketId={marketId}
         loginHref={effectiveLoginHref}
-        onSelectMethod={(method) => {
-          setSelectedMethod(method);
+        onVerified={({ ticket, identity }) => {
+          setVerifiedTicket(ticket);
+          setVerifiedIdentity(identity);
+          if (identity.method === 'whatsapp') {
+            form.setValue('whatsapp', identity.identifier);
+          } else {
+            form.setValue('email', identity.identifier);
+            if (identity.displayName) {
+              form.setValue('parent_name', identity.displayName);
+            }
+          }
         }}
       />
     );
@@ -549,13 +622,42 @@ export function RegistrationForm({
 
   return (
     <div className="mx-auto w-full max-w-2xl">
-      <div className="mb-4">
+      {/* Verified Identity Badge */}
+      <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-emerald-200 bg-emerald-50/80 p-4">
+        <div className="flex items-center gap-3">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
+            <ShieldCheck className="h-5 w-5" />
+          </span>
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="text-caption font-bold uppercase tracking-wider text-emerald-800">
+                {copy.social.verifiedLabel}
+              </span>
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
+              <span className="text-small font-bold text-emerald-900">
+                {verifiedIdentity.method === 'google'
+                  ? copy.social.verifiedWithGoogle
+                  : verifiedIdentity.method === 'facebook'
+                  ? copy.social.verifiedWithFacebook
+                  : verifiedIdentity.method === 'email'
+                  ? copy.social.verifiedWithEmail
+                  : copy.social.verifiedWithWhatsapp}
+              </span>
+            </div>
+            <p className="mt-0.5 text-small font-black text-primary-950" dir="ltr">
+              {verifiedIdentity.identifier}
+            </p>
+          </div>
+        </div>
         <button
           type="button"
-          onClick={() => setSelectedMethod(null)}
-          className="inline-flex items-center gap-2 text-caption font-bold text-accent-700 hover:text-accent-800"
+          onClick={() => {
+            setVerifiedTicket(null);
+            setVerifiedIdentity(null);
+          }}
+          className="inline-flex items-center gap-1.5 text-caption font-bold text-emerald-800 hover:text-emerald-950 underline-offset-4 hover:underline"
         >
-          <BackIcon className="h-4 w-4" />
+          <BackIcon className="h-3.5 w-3.5" />
           {copy.social.changeMethod}
         </button>
       </div>
@@ -629,7 +731,6 @@ export function RegistrationForm({
             <legend className="text-h3 font-black text-primary-950">{copy.register.guardianTitle}</legend>
             <p className="mt-2 text-small leading-7 text-muted-foreground">{copy.register.guardianDescription}</p>
 
-            <SocialAuthButtons locale={locale} marketId={marketId} mode="register" />
             <div className="mt-6 grid gap-5 sm:grid-cols-2">
               <div className="sm:col-span-2">
                 <FieldLabel htmlFor="parent_name" label={copy.register.parentName} requirement={copy.common.required} />
