@@ -31,6 +31,9 @@ import {
 import { authInputClass, FieldError, FieldLabel, Notice, SubmitLabel } from './auth-ui';
 import { SocialAuthButtons } from './social-auth-buttons';
 import type { MarketId } from '@/config/markets';
+import { FaWhatsapp } from 'react-icons/fa6';
+import { PhoneInput } from '@/components/ui/phone-input';
+import { dialCode, localPhone, type CountryCode } from '@/lib/phone';
 
 type LoginStage = 'identifier' | 'otp' | 'success';
 
@@ -96,6 +99,9 @@ export function LoginForm({
   });
 
   const [stage, setStage] = useState<LoginStage>('identifier');
+  const [loginMethod, setLoginMethod] = useState<'email' | 'whatsapp'>('email');
+  const [phoneCountry, setPhoneCountry] = useState<CountryCode>(marketId === 'germany' ? 'DE' : 'CA');
+  const [whatsappPhone, setWhatsappPhone] = useState('');
   const [challenge, setChallenge] = useState<LoginChallenge | null>(null);
   const [user, setUser] = useState<AuthenticatedUser | null>(null);
   const [errorMessage, setErrorMessage] = useState('');
@@ -229,29 +235,100 @@ export function LoginForm({
             disabled={socialPending || identifierForm.formState.isSubmitting}
             onPendingChange={setSocialPending}
           />
-          <form onSubmit={identifierForm.handleSubmit(requestCode)} className="mt-4" noValidate>
-            <FieldLabel htmlFor="login-identifier" label={copy.login.identifierLabel} requirement={copy.common.required} />
-            <div className="relative">
-              <Mail aria-hidden="true" className="pointer-events-none absolute start-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
-              <input
-                id="login-identifier"
-                type="text"
-                inputMode="email"
-                autoComplete="username"
-                dir="ltr"
-                disabled={socialPending || identifierForm.formState.isSubmitting}
-                placeholder={copy.login.identifierPlaceholder}
-                aria-invalid={Boolean(identifierForm.formState.errors.identifier)}
-                aria-describedby="login-identifier-hint login-identifier-error"
-                className={cn(authInputClass, 'ps-12')}
-                {...identifierForm.register('identifier')}
-              />
-            </div>
-            <p id="login-identifier-hint" className="mt-2 flex items-center gap-2 text-caption font-semibold text-muted-foreground">
-              <ShieldCheck aria-hidden="true" className="h-4 w-4 text-accent-700" />
-              {copy.login.identifierHint}
-            </p>
-            <FieldError id="login-identifier-error">{identifierForm.formState.errors.identifier?.message}</FieldError>
+
+          <div className="mt-6 flex rounded-xl border border-border bg-muted/30 p-1">
+            <button
+              type="button"
+              onClick={() => { setLoginMethod('email'); setErrorMessage(''); }}
+              className={cn(
+                'flex-1 flex items-center justify-center gap-2 rounded-lg py-2 text-small font-bold transition-all',
+                loginMethod === 'email'
+                  ? 'bg-background text-primary shadow-xs'
+                  : 'text-muted-foreground hover:text-foreground'
+              )}
+            >
+              <Mail className="h-4 w-4" />
+              <span>{locale === 'ar' ? 'البريد الإلكتروني' : locale === 'de' ? 'E-Mail' : 'Email'}</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => { setLoginMethod('whatsapp'); setErrorMessage(''); }}
+              className={cn(
+                'flex-1 flex items-center justify-center gap-2 rounded-lg py-2 text-small font-bold transition-all',
+                loginMethod === 'whatsapp'
+                  ? 'bg-background text-primary shadow-xs'
+                  : 'text-muted-foreground hover:text-foreground'
+              )}
+            >
+              <FaWhatsapp className="h-4 w-4 text-[#25D366]" />
+              <span>WhatsApp</span>
+            </button>
+          </div>
+
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (loginMethod === 'email') {
+                void identifierForm.handleSubmit(requestCode)();
+              } else {
+                const parsed = localPhone(whatsappPhone, phoneCountry);
+                if (!parsed && whatsappPhone.replace(/\D/g, '').length < 7) {
+                  setErrorMessage(copy.login.identifierHint);
+                  return;
+                }
+                const target = parsed?.phoneE164 || (whatsappPhone.trim().startsWith('+') ? whatsappPhone.trim() : `${dialCode(phoneCountry)}${whatsappPhone.trim()}`);
+                identifierForm.setValue('identifier', target);
+                void requestCode({ identifier: target });
+              }
+            }}
+            className="mt-6"
+            noValidate
+          >
+            {loginMethod === 'email' ? (
+              <div>
+                <FieldLabel
+                  htmlFor="login-identifier"
+                  label={locale === 'ar' ? 'البريد الإلكتروني' : locale === 'de' ? 'E-Mail' : 'Email'}
+                  requirement={copy.common.required}
+                />
+                <span className="sr-only">{copy.login.identifierLabel}</span>
+                <div className="relative">
+                  <Mail aria-hidden="true" className="pointer-events-none absolute start-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
+                  <input
+                    id="login-identifier"
+                    type="email"
+                    inputMode="email"
+                    autoComplete="username"
+                    dir="ltr"
+                    disabled={socialPending || identifierForm.formState.isSubmitting}
+                    placeholder={copy.login.identifierPlaceholder}
+                    aria-invalid={Boolean(identifierForm.formState.errors.identifier)}
+                    aria-describedby="login-identifier-hint login-identifier-error"
+                    className={cn(authInputClass, 'ps-12')}
+                    {...identifierForm.register('identifier')}
+                  />
+                </div>
+                <FieldError id="login-identifier-error">{identifierForm.formState.errors.identifier?.message}</FieldError>
+              </div>
+            ) : (
+              <div>
+                <FieldLabel htmlFor="login-whatsapp-input" label="WhatsApp" requirement={copy.common.required} />
+                <PhoneInput
+                  id="login-whatsapp-input"
+                  label="WhatsApp"
+                  locale={locale as 'en' | 'ar' | 'de'}
+                  country={phoneCountry}
+                  value={whatsappPhone}
+                  onCountryChange={setPhoneCountry}
+                  onChange={setWhatsappPhone}
+                  disabled={socialPending || identifierForm.formState.isSubmitting}
+                  required
+                  className={authInputClass}
+                />
+                {/* Hidden field for form identification and compatibility */}
+                <input type="hidden" id="login-identifier" value={whatsappPhone} />
+              </div>
+            )}
 
             <button
               type="submit"

@@ -51,7 +51,6 @@ interface RegistrationFormValues {
   guardian_relationship: string;
   email: string;
   whatsapp: string;
-  telephone: string;
   student_first_name: string;
   grade: string;
   subject: string;
@@ -125,7 +124,7 @@ const sharedOptionSets = {
 } as const;
 
 const stepFields: FieldPath<RegistrationFormValues>[][] = [
-  ['parent_name', 'guardian_relationship', 'email', 'whatsapp', 'telephone'],
+  ['parent_name', 'guardian_relationship', 'email', 'whatsapp'],
   ['student_first_name', 'grade'],
   ['subject', 'curriculum', 'preferred_language', 'country', 'timezone', 'preferred_day', 'preferred_time'],
   ['privacy_consent'],
@@ -252,7 +251,6 @@ export function RegistrationForm({
     (marketId === 'germany' ? `/de/${locale}` : `/${locale}`);
 
   const [phoneCountry, setPhoneCountry] = useState<CountryCode>(marketId === 'germany' ? 'DE' : defaultPhoneCountry);
-  const [telephoneCountry, setTelephoneCountry] = useState<CountryCode>(marketId === 'germany' ? 'DE' : defaultPhoneCountry);
 
   const schema = useMemo(
     () => z.object({
@@ -260,7 +258,6 @@ export function RegistrationForm({
       guardian_relationship: z.string().min(1, copy.register.errors.required),
       email: z.string().trim().email(copy.register.errors.email).max(160),
       whatsapp: z.string().trim().refine((value) => Boolean(localPhone(value, phoneCountry)) || phoneIsValid(value), copy.register.errors.phone),
-      telephone: z.string().trim().refine((value) => !value || Boolean(localPhone(value, telephoneCountry)) || phoneIsValid(value), copy.register.errors.phone),
       student_first_name: z.string().trim().min(2, copy.register.errors.required).max(60),
       grade: z.string().min(1, copy.register.errors.required),
       subject: z.string().min(1, copy.register.errors.required),
@@ -272,7 +269,7 @@ export function RegistrationForm({
       preferred_time: z.string().min(1, copy.register.errors.required),
       privacy_consent: z.literal(true, { errorMap: () => ({ message: copy.register.errors.consent }) }),
     }),
-    [copy.register.errors, phoneCountry, telephoneCountry]
+    [copy.register.errors, phoneCountry]
   );
 
   const form = useForm<RegistrationFormValues>({
@@ -283,7 +280,6 @@ export function RegistrationForm({
       guardian_relationship: '',
       email: initialIdentity?.method === 'whatsapp' ? '' : initialIdentity?.identifier || '',
       whatsapp: initialIdentity?.method === 'whatsapp' ? initialIdentity?.identifier || '' : '',
-      telephone: '',
       student_first_name: '',
       grade: '',
       subject: '',
@@ -341,24 +337,6 @@ export function RegistrationForm({
           }
         })
         .catch(() => {});
-    } else {
-      fetch('/api/auth/signup/session')
-        .then((res) => (res.ok ? (res.json() as Promise<{ valid?: boolean; identity?: VerifiedIdentity }>) : null))
-        .then((data) => {
-          if (data?.valid && data.identity) {
-            setVerifiedTicket('cookie-session');
-            setVerifiedIdentity(data.identity);
-            if (data.identity.method === 'whatsapp') {
-              form.setValue('whatsapp', data.identity.identifier);
-            } else {
-              form.setValue('email', data.identity.identifier);
-              if (data.identity.displayName) {
-                form.setValue('parent_name', data.identity.displayName);
-              }
-            }
-          }
-        })
-        .catch(() => {});
     }
   }, [form, verifiedTicket, verifiedIdentity]);
 
@@ -381,7 +359,6 @@ export function RegistrationForm({
       guardian_relationship: formValues.guardian_relationship,
       email: formValues.email.trim().toLowerCase(),
       whatsapp: normalizePhone(formValues.whatsapp),
-      telephone: formValues.telephone ? normalizePhone(formValues.telephone) : undefined,
       student_first_name: formValues.student_first_name.trim(),
       grade: formValues.grade,
       subject: formValues.subject,
@@ -632,10 +609,33 @@ export function RegistrationForm({
           <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-primary-950">{copy.register.title}</h1>
           <p className="mt-1 text-sm text-muted-foreground">{copy.register.description}</p>
         </div>
-        <p className="text-sm font-semibold text-muted-foreground">
-          {copy.register.existing}{' '}
-          <a href={effectiveLoginHref} className="font-bold text-accent-700 underline-offset-4 hover:underline">{copy.register.existingLink}</a>
-        </p>
+        <div className="flex items-center gap-4 text-sm font-semibold text-muted-foreground">
+          <button
+            type="button"
+            onClick={async () => {
+              setVerifiedTicket(null);
+              setVerifiedIdentity(null);
+              try {
+                await fetch('/api/auth/signup/session', { method: 'DELETE' });
+              } catch {}
+              if (typeof window !== 'undefined') {
+                const url = new URL(window.location.href);
+                url.searchParams.delete('signup_ticket');
+                url.searchParams.delete('ticket');
+                window.history.replaceState({}, '', url.toString());
+              }
+            }}
+            className="inline-flex items-center gap-1.5 font-bold text-accent-700 hover:text-accent-800 underline-offset-4 hover:underline"
+          >
+            <BackIcon className="h-3.5 w-3.5" />
+            {copy.social.changeMethod}
+          </button>
+          <span>·</span>
+          <p>
+            {copy.register.existing}{' '}
+            <a href={effectiveLoginHref} className="font-bold text-accent-700 underline-offset-4 hover:underline">{copy.register.existingLink}</a>
+          </p>
+        </div>
       </div>
 
       <div className="mt-6">
@@ -694,7 +694,7 @@ export function RegistrationForm({
                 </div>
                 <FieldError id="email-error">{form.formState.errors.email?.message}</FieldError>
               </div>
-              <div>
+              <div className="sm:col-span-2">
                 <FieldLabel htmlFor="whatsapp" label={copy.register.whatsapp} requirement={copy.common.required} />
                 <PhoneInput
                   id="whatsapp"
@@ -713,22 +713,6 @@ export function RegistrationForm({
                   inputRef={form.register('whatsapp').ref}
                   error={form.formState.errors.whatsapp?.message}
                   required
-                  className={authInputClass}
-                />
-              </div>
-              <div>
-                <FieldLabel htmlFor="telephone" label={copy.register.telephone} requirement={copy.common.optional} />
-                <PhoneInput
-                  id="telephone"
-                  label={copy.register.telephone}
-                  locale={locale as 'en' | 'ar' | 'de'}
-                  country={telephoneCountry}
-                  value={values.telephone}
-                  onCountryChange={setTelephoneCountry}
-                  onChange={(v) => form.setValue('telephone', v, { shouldDirty: true, shouldValidate: true })}
-                  onBlur={() => void form.trigger('telephone')}
-                  inputRef={form.register('telephone').ref}
-                  error={form.formState.errors.telephone?.message}
                   className={authInputClass}
                 />
               </div>

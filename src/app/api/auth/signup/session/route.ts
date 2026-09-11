@@ -46,3 +46,15 @@ export async function GET(request: Request) {
     { headers }
   );
 }
+
+export async function DELETE() {
+  const response = NextResponse.json({ ok: true });
+  response.cookies.set({
+    name: 'spm_signup_ticket',
+    value: '',
+    path: '/',
+    maxAge: 0,
+  });
+  return response;
+}
+

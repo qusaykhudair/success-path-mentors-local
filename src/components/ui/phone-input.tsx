@@ -20,6 +20,23 @@ interface PhoneInputProps {
   className?: string;
 }
 
+function VisualFlag({ country }: { country: CountryCode }) {
+  return (
+    <span className="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-[2px] shadow-2xs">
+      <img
+        src={`https://flagcdn.com/w40/${country.toLowerCase()}.png`}
+        srcSet={`https://flagcdn.com/w80/${country.toLowerCase()}.png 2x`}
+        width="20"
+        height="14"
+        alt=""
+        aria-hidden="true"
+        className="h-3.5 w-5 object-cover"
+        loading="eager"
+      />
+    </span>
+  );
+}
+
 export function PhoneInput({
   id,
   name,
@@ -72,19 +89,24 @@ export function PhoneInput({
   return (
     <div className="min-w-0 space-y-1.5">
       <div className="flex flex-col gap-2 sm:flex-row" dir="ltr">
-        <select
-          aria-label={`${label}: ${ar ? 'الدولة ورمز الاتصال' : de ? 'Land und Vorwahl' : 'Country and calling code'}`}
-          value={country}
-          disabled={disabled}
-          onChange={(event) => onCountryChange(event.target.value as CountryCode)}
-          className={`${className} sm:!w-2/5 font-sans cursor-pointer bg-card text-foreground`}
-        >
-          {countries.map((code) => (
-            <option key={code} value={code}>
-              {countryFlag(code)} {countryName(code, locale)} ({dialCode(code)})
-            </option>
-          ))}
-        </select>
+        <div className="relative sm:!w-2/5 flex items-center">
+          <span className="pointer-events-none absolute start-3 flex items-center z-10">
+            <VisualFlag country={country} />
+          </span>
+          <select
+            aria-label={`${label}: ${ar ? 'الدولة ورمز الاتصال' : de ? 'Land und Vorwahl' : 'Country and calling code'}`}
+            value={country}
+            disabled={disabled}
+            onChange={(event) => onCountryChange(event.target.value as CountryCode)}
+            className={`${className} !w-full ps-11 font-sans cursor-pointer bg-card text-foreground`}
+          >
+            {countries.map((code) => (
+              <option key={code} value={code}>
+                {countryFlag(code)} {countryName(code, locale)} ({dialCode(code)})
+              </option>
+            ))}
+          </select>
+        </div>
         <input
           ref={(node) => {
             localRef.current = node;
