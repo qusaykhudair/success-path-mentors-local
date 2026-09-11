@@ -5,7 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
 import { ArrowLeft, ArrowRight, User, Users, GraduationCap, Target, Speech, BookOpen, MessageCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { buildWhatsAppHref } from '@/lib/whatsapp';
+import { getMarketConfig } from '@/config/markets';
 
 type Step = 1 | 2 | 3 | 4 | 'contactReady';
 
@@ -391,7 +391,7 @@ function TrialFlowContent() {
 
             <div className="flex w-full max-w-sm flex-col gap-3">
               <a 
-                href={buildWhatsAppHref(constructWhatsAppMessage())}
+                href={`https://wa.me/${getMarketConfig('germany').contact.whatsapp}?text=${encodeURIComponent(constructWhatsAppMessage())}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-xl bg-emerald-600 px-6 py-3.5 text-base font-bold text-white shadow-md transition-all hover:bg-emerald-500 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"

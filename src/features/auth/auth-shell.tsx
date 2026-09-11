@@ -3,9 +3,7 @@ import {
   Check,
   ChevronLeft,
   ChevronRight,
-  GraduationCap,
   ShieldCheck,
-  Users,
 } from 'lucide-react';
 import type { ReactNode } from 'react';
 
@@ -79,26 +77,6 @@ export function AuthShell({ locale, homeHref, children }: AuthShellProps) {
                   </li>
                 ))}
               </ul>
-            </div>
-
-            <div className="relative rounded-3xl border border-white/12 bg-white/[0.07] p-5 backdrop-blur-sm">
-              <div className="flex items-center justify-between gap-4">
-                <div className="flex items-center gap-3">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-accent text-primary">
-                    <Users aria-hidden="true" className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <p className="text-small font-black text-white">{copy.shell.family}</p>
-                    <p className="text-caption text-white/55">{copy.shell.guardianA} · {copy.shell.guardianB}</p>
-                  </div>
-                </div>
-                <span className="h-2.5 w-2.5 rounded-full bg-success-500 shadow-[0_0_0_5px_rgba(34,197,94,0.12)]" />
-              </div>
-              <div className="mt-4 flex items-center gap-3 rounded-2xl bg-white/[0.06] px-4 py-3">
-                <GraduationCap aria-hidden="true" className="h-5 w-5 text-accent-300" />
-                <p className="text-caption font-bold text-white/75">{copy.shell.students}</p>
-                <span className="ms-auto rounded-full bg-accent/15 px-2.5 py-1 text-caption font-black text-accent-200">2</span>
-              </div>
             </div>
           </aside>
 

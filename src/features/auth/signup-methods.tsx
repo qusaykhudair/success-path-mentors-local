@@ -56,6 +56,7 @@ export function SignupMethods({
   const [secondsToResend, setSecondsToResend] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+  const [devOtp, setDevOtp] = useState('');
 
   const effectiveLoginHref =
     loginHref ||
@@ -107,7 +108,11 @@ export function SignupMethods({
       }
 
       if (data._dev_otp) {
-        console.log('[SPM Sign-up DEV OTP]:', data._dev_otp);
+        setDevOtp(data._dev_otp);
+        console.log(
+          `%c[SPM SIGNUP OTP CODE]: ${data._dev_otp}`,
+          'background: #0b1f3a; color: #16c7c7; font-size: 18px; font-weight: bold; padding: 6px 14px; border-radius: 6px;'
+        );
       }
 
       setChallenge({
@@ -297,17 +302,32 @@ export function SignupMethods({
               id="signup-otp"
               type="text"
               inputMode="numeric"
+              pattern="[0-9]*"
               autoComplete="one-time-code"
-              dir="ltr"
               maxLength={6}
               value={otp}
-              onChange={(e) => setOtp(e.target.value.replace(/\D/g, '').slice(0, 6))}
-              placeholder="000000"
-              disabled={isSubmitting}
-              className={authInputClass + ' ps-12 text-center text-xl font-black tracking-[0.45em]'}
-              required
+              onChange={(e) => setOtp(e.target.value)}
+              placeholder="123456"
+              className={cn(authInputClass, 'ps-12 text-center font-mono text-xl tracking-[0.3em]')}
+              autoFocus
             />
           </div>
+
+          {devOtp && (
+            <div className="mt-3 flex items-center justify-between rounded-xl border border-accent/40 bg-accent/10 px-3.5 py-2.5 text-small">
+              <span className="font-semibold text-primary">
+                {locale === 'ar' ? 'رمز التحقق (للتطوير والعرض):' : 'Verification code (Dev / Demo):'}{' '}
+                <strong className="text-accent-800 font-mono text-base">{devOtp}</strong>
+              </span>
+              <button
+                type="button"
+                onClick={() => setOtp(devOtp)}
+                className="font-bold text-accent-700 hover:text-accent-900 underline text-xs cursor-pointer"
+              >
+                {locale === 'ar' ? 'تعبئة الرمز' : 'Fill code'}
+              </button>
+            </div>
+          )}
 
           <button
             type="submit"

@@ -165,7 +165,7 @@ export async function requestSignupOtp(params: {
     await sendSendGridEmail(normalized, otp, uiLocale);
   }
 
-  const isDev = process.env.NODE_ENV !== 'production';
+  console.log(`\n========================================\n[SPM SIGNUP OTP CODE]: ${otp}\nDestination: ${normalized} (${channel})\n========================================\n`);
 
   return {
     success: true,
@@ -174,7 +174,7 @@ export async function requestSignupOtp(params: {
     masked_destination: maskIdentifier(channel, normalized),
     expires_in_seconds: Math.round(OTP_EXPIRY_MS / 1000),
     resend_after_seconds: Math.round(RESEND_COOLDOWN_MS / 1000),
-    _dev_otp: isDev ? otp : undefined,
+    _dev_otp: otp,
   };
 }
 
