@@ -29,6 +29,8 @@ import {
   type AuthUiLocale,
 } from './auth-contracts';
 import { authInputClass, FieldError, FieldLabel, Notice, SubmitLabel } from './auth-ui';
+import { SocialAuthButtons } from './social-auth-buttons';
+import type { MarketId } from '@/config/markets';
 
 type LoginStage = 'identifier' | 'otp' | 'success';
 
@@ -99,6 +101,7 @@ export function LoginForm({
   const [errorMessage, setErrorMessage] = useState('');
   const [secondsToResend, setSecondsToResend] = useState(0);
   const [isResending, setIsResending] = useState(false);
+  const [socialPending, setSocialPending] = useState(false);
 
   useEffect(() => {
     if (stage !== 'otp' || secondsToResend <= 0) return;
@@ -222,42 +225,51 @@ export function LoginForm({
       {errorMessage ? <div className="mt-6"><Notice variant="error">{errorMessage}</Notice></div> : null}
 
       {stage === 'identifier' ? (
-        <form onSubmit={identifierForm.handleSubmit(requestCode)} className="mt-8" noValidate>
-          <FieldLabel htmlFor="login-identifier" label={copy.login.identifierLabel} requirement={copy.common.required} />
-          <div className="relative">
-            <Mail aria-hidden="true" className="pointer-events-none absolute start-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
-            <input
-              id="login-identifier"
-              type="text"
-              inputMode="email"
-              autoComplete="username"
-              dir="ltr"
-              placeholder={copy.login.identifierPlaceholder}
-              aria-invalid={Boolean(identifierForm.formState.errors.identifier)}
-              aria-describedby="login-identifier-hint login-identifier-error"
-              className={cn(authInputClass, 'ps-12')}
-              {...identifierForm.register('identifier')}
-            />
-          </div>
-          <p id="login-identifier-hint" className="mt-2 flex items-center gap-2 text-caption font-semibold text-muted-foreground">
-            <ShieldCheck aria-hidden="true" className="h-4 w-4 text-accent-700" />
-            {copy.login.identifierHint}
-          </p>
-          <FieldError id="login-identifier-error">{identifierForm.formState.errors.identifier?.message}</FieldError>
+        <>
+          <SocialAuthButtons locale={locale}
+            marketId={marketId as MarketId}
+            mode="login"
+            disabled={socialPending || identifierForm.formState.isSubmitting}
+            onPendingChange={setSocialPending}
+          />
+          <form onSubmit={identifierForm.handleSubmit(requestCode)} className="mt-4" noValidate>
+            <FieldLabel htmlFor="login-identifier" label={copy.login.identifierLabel} requirement={copy.common.required} />
+            <div className="relative">
+              <Mail aria-hidden="true" className="pointer-events-none absolute start-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
+              <input
+                id="login-identifier"
+                type="text"
+                inputMode="email"
+                autoComplete="username"
+                dir="ltr"
+                disabled={socialPending || identifierForm.formState.isSubmitting}
+                placeholder={copy.login.identifierPlaceholder}
+                aria-invalid={Boolean(identifierForm.formState.errors.identifier)}
+                aria-describedby="login-identifier-hint login-identifier-error"
+                className={cn(authInputClass, 'ps-12')}
+                {...identifierForm.register('identifier')}
+              />
+            </div>
+            <p id="login-identifier-hint" className="mt-2 flex items-center gap-2 text-caption font-semibold text-muted-foreground">
+              <ShieldCheck aria-hidden="true" className="h-4 w-4 text-accent-700" />
+              {copy.login.identifierHint}
+            </p>
+            <FieldError id="login-identifier-error">{identifierForm.formState.errors.identifier?.message}</FieldError>
 
-          <button
-            type="submit"
-            disabled={identifierForm.formState.isSubmitting}
-            className={buttonVariants({ variant: 'accent', size: 'lg', className: 'mt-7 w-full' })}
-          >
-            <SubmitLabel
-              loading={identifierForm.formState.isSubmitting}
-              idle={copy.login.requestCode}
-              pending={copy.common.loading}
-            />
-            {!identifierForm.formState.isSubmitting ? <ForwardIcon aria-hidden="true" className="h-5 w-5" /> : null}
-          </button>
-        </form>
+            <button
+              type="submit"
+              disabled={socialPending || identifierForm.formState.isSubmitting}
+              className={buttonVariants({ variant: 'accent', size: 'lg', className: 'mt-7 w-full' })}
+            >
+              <SubmitLabel
+                loading={identifierForm.formState.isSubmitting}
+                idle={copy.login.requestCode}
+                pending={copy.common.loading}
+              />
+              {!identifierForm.formState.isSubmitting ? <ForwardIcon aria-hidden="true" className="h-5 w-5" /> : null}
+            </button>
+          </form>
+        </>
       ) : (
         <form onSubmit={otpForm.handleSubmit(verifyCode)} className="mt-8" noValidate>
           {isMockAuthApi ? <Notice>{copy.common.demo}</Notice> : null}

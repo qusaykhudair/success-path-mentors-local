@@ -32,6 +32,8 @@ import {
 
 import { authApi, isMockAuthApi } from './auth-api';
 import { getAuthCopy } from './auth-copy';
+import { SocialAuthButtons } from './social-auth-buttons';
+import { SignupMethods } from './signup-methods';
 import {
   AuthApiError,
   toAuthApiLocale,
@@ -209,12 +211,15 @@ export function RegistrationForm({
   marketId = 'north-america',
   loginHref,
   homeHref,
+  initialMethod = null,
 }: {
   locale: AuthUiLocale;
   marketId?: MarketId;
   loginHref?: string;
   homeHref?: string;
+  initialMethod?: 'email' | 'whatsapp' | null;
 }) {
+  const [selectedMethod, setSelectedMethod] = useState<'email' | 'whatsapp' | null>(initialMethod);
   const copy = getAuthCopy(locale);
   const isRtl = locale === 'ar';
   const ForwardIcon = isRtl ? ArrowLeft : ArrowRight;
@@ -529,8 +534,32 @@ export function RegistrationForm({
     );
   }
 
+  if (selectedMethod === null) {
+    return (
+      <SignupMethods
+        locale={locale}
+        marketId={marketId}
+        loginHref={effectiveLoginHref}
+        onSelectMethod={(method) => {
+          setSelectedMethod(method);
+        }}
+      />
+    );
+  }
+
   return (
     <div className="mx-auto w-full max-w-2xl">
+      <div className="mb-4">
+        <button
+          type="button"
+          onClick={() => setSelectedMethod(null)}
+          className="inline-flex items-center gap-2 text-caption font-bold text-accent-700 hover:text-accent-800"
+        >
+          <BackIcon className="h-4 w-4" />
+          {copy.social.changeMethod}
+        </button>
+      </div>
+
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
           <div className="inline-flex items-center gap-2 rounded-full bg-primary-50 px-3 py-1.5 text-caption font-bold text-primary-800">
@@ -552,24 +581,16 @@ export function RegistrationForm({
             <ShieldCheck className="h-5 w-5 text-accent-700 shrink-0 mt-0.5" />
             <div className="flex flex-col gap-1">
               <p className="font-bold text-primary-950">
-                {locale === 'de'
-                  ? 'Hinweis für Familien & erwachsene Lernende'
-                  : locale === 'ar'
-                  ? 'تنبيه للعائلات والمتعلمين البالغين'
-                  : 'Notice for Families & Adult Learners'}
+                {copy.social.adultNoticeTitle}
               </p>
               <p className="text-xs text-primary-700 leading-relaxed">
-                {locale === 'de'
-                  ? 'Die Online-Kontoerstellung ist für Familien- und Schülerprofile ausgelegt. Erwachsene Einzellernende können ihr Programm direkt unverbindlich mit unserem Koordinationsteam per WhatsApp abstimmen.'
-                  : locale === 'ar'
-                  ? 'تم تصميم التسجيل الإلكتروني لحسابات العائلات والطلاب. بالنسبة للمتعلمين البالغين، يمكنكم تنسيق البرنامج التعليمي مباشرة عبر واتساب مع فريق التنسيق.'
-                  : 'Online account registration is designed for family and student profiles. Adult independent learners can coordinate their personalized program directly with our team.'}
+                {copy.social.adultNoticeDescription}
               </p>
               <a
                 href={`/de/${locale}/trial`}
                 className="mt-1 inline-flex items-center gap-1 text-xs font-black text-accent-800 underline-offset-4 hover:underline"
               >
-                {locale === 'de' ? 'Hier Probestunde abstimmen →' : locale === 'ar' ? 'تنسيق الحصة التجريبية مباشرة ←' : 'Coordinate trial session directly →'}
+                {copy.social.adultNoticeAction}
               </a>
             </div>
           </div>
@@ -607,6 +628,8 @@ export function RegistrationForm({
           <fieldset>
             <legend className="text-h3 font-black text-primary-950">{copy.register.guardianTitle}</legend>
             <p className="mt-2 text-small leading-7 text-muted-foreground">{copy.register.guardianDescription}</p>
+
+            <SocialAuthButtons locale={locale} marketId={marketId} mode="register" />
             <div className="mt-6 grid gap-5 sm:grid-cols-2">
               <div className="sm:col-span-2">
                 <FieldLabel htmlFor="parent_name" label={copy.register.parentName} requirement={copy.common.required} />
