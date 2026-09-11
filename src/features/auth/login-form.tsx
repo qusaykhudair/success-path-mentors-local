@@ -204,28 +204,25 @@ export function LoginForm({
   }
 
   return (
-    <div className="mx-auto w-full max-w-xl">
-      <div className="inline-flex items-center gap-2 rounded-full bg-primary-50 px-3 py-1.5 text-caption font-bold text-primary-800">
-        <LockKeyhole aria-hidden="true" className="h-4 w-4 text-accent-700" />
-        {copy.common.secure}
+    <div className="mx-auto w-full max-w-md">
+      <div className="text-center">
+        <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-primary-950">
+          {stage === 'otp' ? copy.login.codeTitle : copy.login.title}
+        </h1>
+        <p className="mt-2 text-sm text-muted-foreground">
+          {stage === 'otp' ? (
+            <>
+              {copy.login.codeDescription}{' '}
+              <strong className="font-bold text-primary-950" dir="ltr">{challenge?.masked_destination}</strong>
+            </>
+          ) : copy.login.description}
+        </p>
       </div>
-
-      <h1 className="mt-5 text-h1 font-black text-primary-950">
-        {stage === 'otp' ? copy.login.codeTitle : copy.login.title}
-      </h1>
-      <p className="mt-4 text-body leading-8 text-muted-foreground">
-        {stage === 'otp' ? (
-          <>
-            {copy.login.codeDescription}{' '}
-            <strong className="font-black text-primary-950" dir="ltr">{challenge?.masked_destination}</strong>
-          </>
-        ) : copy.login.description}
-      </p>
 
       {errorMessage ? <div className="mt-6"><Notice variant="error">{errorMessage}</Notice></div> : null}
 
       {stage === 'identifier' ? (
-        <>
+        <div className="mt-8">
           <SocialAuthButtons locale={locale}
             marketId={marketId as MarketId}
             mode="login"
@@ -269,7 +266,7 @@ export function LoginForm({
               {!identifierForm.formState.isSubmitting ? <ForwardIcon aria-hidden="true" className="h-5 w-5" /> : null}
             </button>
           </form>
-        </>
+        </div>
       ) : (
         <form onSubmit={otpForm.handleSubmit(verifyCode)} className="mt-8" noValidate>
           {isMockAuthApi ? <Notice>{copy.common.demo}</Notice> : null}

@@ -12,6 +12,7 @@ import { Challenges } from '@/components/sections/home/challenges';
 import { Faq } from '@/components/sections/home/faq';
 import { FinalCta } from '@/components/sections/home/final-cta';
 import { Hero } from '@/components/sections/home/hero';
+import { SupportedCountries } from '@/components/ui/supported-countries';
 import { Pricing } from '@/components/sections/home/pricing';
 import { Programs } from '@/components/sections/home/programs';
 import { Services } from '@/components/sections/home/services';
@@ -158,6 +159,7 @@ export default async function HomePage({
   return (
     <>
       <Hero />
+      <SupportedCountries locale={locale as 'en' | 'ar'} />
 
       <Programs />
 

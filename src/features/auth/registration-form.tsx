@@ -34,6 +34,8 @@ import { authApi, isMockAuthApi } from './auth-api';
 import { getAuthCopy } from './auth-copy';
 import { SignupMethods } from './signup-methods';
 import type { VerifiedIdentity } from './signup-transaction';
+import { PhoneInput } from '@/components/ui/phone-input';
+import { defaultPhoneCountry, localPhone, phoneDefaults, type CountryCode } from '@/lib/phone';
 import {
   AuthApiError,
   toAuthApiLocale,
@@ -249,13 +251,16 @@ export function RegistrationForm({
     homeHref ||
     (marketId === 'germany' ? `/de/${locale}` : `/${locale}`);
 
+  const [phoneCountry, setPhoneCountry] = useState<CountryCode>(marketId === 'germany' ? 'DE' : defaultPhoneCountry);
+  const [telephoneCountry, setTelephoneCountry] = useState<CountryCode>(marketId === 'germany' ? 'DE' : defaultPhoneCountry);
+
   const schema = useMemo(
     () => z.object({
       parent_name: z.string().trim().min(2, copy.register.errors.required).max(100),
       guardian_relationship: z.string().min(1, copy.register.errors.required),
       email: z.string().trim().email(copy.register.errors.email).max(160),
-      whatsapp: z.string().trim().refine(phoneIsValid, copy.register.errors.phone),
-      telephone: z.string().trim().refine((value) => !value || phoneIsValid(value), copy.register.errors.phone),
+      whatsapp: z.string().trim().refine((value) => Boolean(localPhone(value, phoneCountry)) || phoneIsValid(value), copy.register.errors.phone),
+      telephone: z.string().trim().refine((value) => !value || Boolean(localPhone(value, telephoneCountry)) || phoneIsValid(value), copy.register.errors.phone),
       student_first_name: z.string().trim().min(2, copy.register.errors.required).max(60),
       grade: z.string().min(1, copy.register.errors.required),
       subject: z.string().min(1, copy.register.errors.required),
@@ -267,17 +272,17 @@ export function RegistrationForm({
       preferred_time: z.string().min(1, copy.register.errors.required),
       privacy_consent: z.literal(true, { errorMap: () => ({ message: copy.register.errors.consent }) }),
     }),
-    [copy.register.errors]
+    [copy.register.errors, phoneCountry, telephoneCountry]
   );
 
   const form = useForm<RegistrationFormValues>({
     resolver: zodResolver(schema),
     mode: 'onTouched',
     defaultValues: {
-      parent_name: '',
+      parent_name: initialIdentity?.displayName || '',
       guardian_relationship: '',
-      email: '',
-      whatsapp: '',
+      email: initialIdentity?.method === 'whatsapp' ? '' : initialIdentity?.identifier || '',
+      whatsapp: initialIdentity?.method === 'whatsapp' ? initialIdentity?.identifier || '' : '',
       telephone: '',
       student_first_name: '',
       grade: '',
@@ -622,92 +627,26 @@ export function RegistrationForm({
 
   return (
     <div className="mx-auto w-full max-w-2xl">
-      {/* Verified Identity Badge */}
-      <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-emerald-200 bg-emerald-50/80 p-4">
-        <div className="flex items-center gap-3">
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
-            <ShieldCheck className="h-5 w-5" />
-          </span>
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="text-caption font-bold uppercase tracking-wider text-emerald-800">
-                {copy.social.verifiedLabel}
-              </span>
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              <span className="text-small font-bold text-emerald-900">
-                {verifiedIdentity.method === 'google'
-                  ? copy.social.verifiedWithGoogle
-                  : verifiedIdentity.method === 'facebook'
-                  ? copy.social.verifiedWithFacebook
-                  : verifiedIdentity.method === 'email'
-                  ? copy.social.verifiedWithEmail
-                  : copy.social.verifiedWithWhatsapp}
-              </span>
-            </div>
-            <p className="mt-0.5 text-small font-black text-primary-950" dir="ltr">
-              {verifiedIdentity.identifier}
-            </p>
-          </div>
-        </div>
-        <button
-          type="button"
-          onClick={() => {
-            setVerifiedTicket(null);
-            setVerifiedIdentity(null);
-          }}
-          className="inline-flex items-center gap-1.5 text-caption font-bold text-emerald-800 hover:text-emerald-950 underline-offset-4 hover:underline"
-        >
-          <BackIcon className="h-3.5 w-3.5" />
-          {copy.social.changeMethod}
-        </button>
-      </div>
-
-      <div className="flex flex-wrap items-start justify-between gap-4">
+      <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-border pb-4">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full bg-primary-50 px-3 py-1.5 text-caption font-bold text-primary-800">
-            <ShieldCheck aria-hidden="true" className="h-4 w-4 text-accent-700" />
-            {copy.common.secure}
-          </div>
-          <h1 className="mt-5 text-h2 font-black text-primary-950">{copy.register.title}</h1>
-          <p className="mt-3 max-w-xl text-small leading-7 text-muted-foreground">{copy.register.description}</p>
+          <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-primary-950">{copy.register.title}</h1>
+          <p className="mt-1 text-sm text-muted-foreground">{copy.register.description}</p>
         </div>
-        <p className="text-small font-semibold text-muted-foreground">
+        <p className="text-sm font-semibold text-muted-foreground">
           {copy.register.existing}{' '}
-          <a href={effectiveLoginHref} className="font-black text-accent-700 underline-offset-4 hover:underline">{copy.register.existingLink}</a>
+          <a href={effectiveLoginHref} className="font-bold text-accent-700 underline-offset-4 hover:underline">{copy.register.existingLink}</a>
         </p>
       </div>
 
-      {marketId === 'germany' && (
-        <div className="mt-6 rounded-2xl border border-accent-200/80 bg-accent-50/60 p-4.5 text-small">
-          <div className="flex items-start gap-3">
-            <ShieldCheck className="h-5 w-5 text-accent-700 shrink-0 mt-0.5" />
-            <div className="flex flex-col gap-1">
-              <p className="font-bold text-primary-950">
-                {copy.social.adultNoticeTitle}
-              </p>
-              <p className="text-xs text-primary-700 leading-relaxed">
-                {copy.social.adultNoticeDescription}
-              </p>
-              <a
-                href={`/de/${locale}/trial`}
-                className="mt-1 inline-flex items-center gap-1 text-xs font-black text-accent-800 underline-offset-4 hover:underline"
-              >
-                {copy.social.adultNoticeAction}
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
-
-      <div className="mt-8">
+      <div className="mt-6">
         <div className="flex items-center justify-between gap-2" aria-label={copy.register.stepLabel.replace('{current}', String(step + 1)).replace('{total}', '4')}>
           {copy.register.steps.map((label, index) => (
             <div key={label} className="flex min-w-0 flex-1 items-center gap-2">
               <span
                 className={cn(
-                  'inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border text-caption font-black transition-colors',
+                  'inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-caption font-black transition-colors',
                   index < step && 'border-accent bg-accent text-primary',
-                  index === step && 'border-primary bg-primary text-white shadow-[0_0_0_5px_rgba(22,199,199,0.13)]',
+                  index === step && 'border-primary bg-primary text-white shadow-[0_0_0_4px_rgba(22,199,199,0.15)]',
                   index > step && 'border-border bg-background text-muted-foreground'
                 )}
               >
@@ -725,11 +664,11 @@ export function RegistrationForm({
 
       {apiError ? <div className="mt-6"><Notice variant="error">{apiError}</Notice></div> : null}
 
-      <form onSubmit={form.handleSubmit(submitRegistration)} className="mt-8" noValidate>
+      <form onSubmit={form.handleSubmit(submitRegistration)} className="mt-6" noValidate>
         {step === 0 ? (
           <fieldset>
-            <legend className="text-h3 font-black text-primary-950">{copy.register.guardianTitle}</legend>
-            <p className="mt-2 text-small leading-7 text-muted-foreground">{copy.register.guardianDescription}</p>
+            <legend className="text-xl font-black text-primary-950">{copy.register.guardianTitle}</legend>
+            <p className="mt-1 text-sm text-muted-foreground">{copy.register.guardianDescription}</p>
 
             <div className="mt-6 grid gap-5 sm:grid-cols-2">
               <div className="sm:col-span-2">
@@ -751,22 +690,47 @@ export function RegistrationForm({
                 <FieldLabel htmlFor="email" label={copy.register.email} requirement={copy.common.required} />
                 <div className="relative">
                   <Mail aria-hidden="true" className="pointer-events-none absolute start-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
-                  <input id="email" type="email" autoComplete="email" dir="ltr" aria-invalid={Boolean(form.formState.errors.email)} aria-describedby="email-error" className={cn(authInputClass, 'ps-12')} {...form.register('email')} />
+                  <input id="email" type="email" autoComplete="email" defaultValue={form.getValues('email')} dir="ltr" aria-invalid={Boolean(form.formState.errors.email)} aria-describedby="email-error" className={cn(authInputClass, 'ps-12')} {...form.register('email')} />
                 </div>
                 <FieldError id="email-error">{form.formState.errors.email?.message}</FieldError>
               </div>
               <div>
                 <FieldLabel htmlFor="whatsapp" label={copy.register.whatsapp} requirement={copy.common.required} />
-                <div className="relative">
-                  <MessageCircleMore aria-hidden="true" className="pointer-events-none absolute start-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
-                  <input id="whatsapp" type="tel" autoComplete="tel" dir="ltr" placeholder={getDefaultMarket().phonePlaceholder} aria-invalid={Boolean(form.formState.errors.whatsapp)} aria-describedby="whatsapp-hint whatsapp-error" className={cn(authInputClass, 'ps-12')} {...form.register('whatsapp')} />
-                </div>
-                <FieldError id="whatsapp-error">{form.formState.errors.whatsapp?.message}</FieldError>
+                <PhoneInput
+                  id="whatsapp"
+                  label={copy.register.whatsapp}
+                  locale={locale as 'en' | 'ar' | 'de'}
+                  country={phoneCountry}
+                  value={values.whatsapp}
+                  onCountryChange={(c) => {
+                    setPhoneCountry(c);
+                    const defaults = phoneDefaults(c, form.getValues('timezone'), false);
+                    form.setValue('country', defaults.country, { shouldDirty: true });
+                    form.setValue('timezone', defaults.timezone, { shouldDirty: true });
+                  }}
+                  onChange={(v) => form.setValue('whatsapp', v, { shouldDirty: true, shouldValidate: true })}
+                  onBlur={() => void form.trigger('whatsapp')}
+                  inputRef={form.register('whatsapp').ref}
+                  error={form.formState.errors.whatsapp?.message}
+                  required
+                  className={authInputClass}
+                />
               </div>
               <div>
                 <FieldLabel htmlFor="telephone" label={copy.register.telephone} requirement={copy.common.optional} />
-                <input id="telephone" type="tel" autoComplete="tel" dir="ltr" placeholder={getDefaultMarket().phonePlaceholder} aria-invalid={Boolean(form.formState.errors.telephone)} aria-describedby="telephone-hint telephone-error" className={authInputClass} {...form.register('telephone')} />
-                <FieldError id="telephone-error">{form.formState.errors.telephone?.message}</FieldError>
+                <PhoneInput
+                  id="telephone"
+                  label={copy.register.telephone}
+                  locale={locale as 'en' | 'ar' | 'de'}
+                  country={telephoneCountry}
+                  value={values.telephone}
+                  onCountryChange={setTelephoneCountry}
+                  onChange={(v) => form.setValue('telephone', v, { shouldDirty: true, shouldValidate: true })}
+                  onBlur={() => void form.trigger('telephone')}
+                  inputRef={form.register('telephone').ref}
+                  error={form.formState.errors.telephone?.message}
+                  className={authInputClass}
+                />
               </div>
             </div>
             <p id="whatsapp-hint" className="mt-4 flex items-center gap-2 text-caption font-semibold text-muted-foreground">

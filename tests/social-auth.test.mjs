@@ -373,7 +373,7 @@ test('social callback establishes verified signup transaction and returns to pro
   assert.equal(payload.uiLocale, 'de');
 });
 
-test('Profile Completion view renders Verified Identity Badge and prefilled identifier without SocialAuthButtons in guardian step', () => {
+test('Profile Completion view renders profile form with prefilled identifier without SocialAuthButtons in guardian step', () => {
   const verifiedTicket = createVerifiedSignupTicket({
     method: 'email',
     identifier: 'verified.parent@example.com',
@@ -388,16 +388,11 @@ test('Profile Completion view renders Verified Identity Badge and prefilled iden
     })
   );
 
-  // Verified Identity Badge is rendered
-  assert.match(html, /Bestätigte Identität/);
-  assert.match(html, /Mit E-Mail bestätigt/);
-  assert.match(html, /verified\.parent@example\.com/);
-  assert.match(html, /Registrierungsmethode ändern/);
-
   // Profile completion form fields are rendered
   assert.match(html, /id="parent_name"/);
   assert.match(html, /id="email"/);
   assert.match(html, /id="whatsapp"/);
+  assert.match(html, /verified\.parent@example\.com/);
 
   // No SocialAuthButtons in guardian step
   assert.doesNotMatch(html, /id="social-auth-/);

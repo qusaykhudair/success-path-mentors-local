@@ -11,6 +11,8 @@ import type { MarketId } from '@/config/markets';
 import { authInputClass, FieldError, FieldLabel, Notice, SubmitLabel } from './auth-ui';
 import { cn } from '@/lib/utils';
 import type { VerifiedIdentity } from './signup-transaction';
+import { PhoneInput } from '@/components/ui/phone-input';
+import { dialCode, localPhone, type CountryCode } from '@/lib/phone';
 
 export interface SignupMethodsProps {
   locale: AuthUiLocale;
@@ -47,6 +49,7 @@ export function SignupMethods({
 
   const [step, setStep] = useState<SignupStep>('method_select');
   const [email, setEmail] = useState('');
+  const [country, setCountry] = useState<CountryCode>(marketId === 'germany' ? 'DE' : 'CA');
   const [phone, setPhone] = useState('');
   const [otp, setOtp] = useState('');
   const [challenge, setChallenge] = useState<OtpChallengeState | null>(null);
@@ -69,16 +72,20 @@ export function SignupMethods({
 
   async function handleRequestOtp(channel: 'EMAIL' | 'WHATSAPP') {
     setErrorMessage('');
-    const identifier = channel === 'EMAIL' ? email.trim() : phone.trim();
-
-    if (channel === 'EMAIL' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(identifier)) {
-      setErrorMessage(copy.register.errors.email);
-      return;
-    }
-
-    if (channel === 'WHATSAPP' && identifier.replace(/\D/g, '').length < 7) {
-      setErrorMessage(copy.register.errors.phone);
-      return;
+    let identifier = '';
+    if (channel === 'EMAIL') {
+      identifier = email.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(identifier)) {
+        setErrorMessage(copy.register.errors.email);
+        return;
+      }
+    } else {
+      const parsed = localPhone(phone, country);
+      if (!parsed && phone.replace(/\D/g, '').length < 7) {
+        setErrorMessage(copy.register.errors.phone);
+        return;
+      }
+      identifier = parsed?.phoneE164 || (phone.trim().startsWith('+') ? phone.trim() : `${dialCode(country)}${phone.trim()}`);
     }
 
     setIsSubmitting(true);
@@ -232,21 +239,18 @@ export function SignupMethods({
 
         <form onSubmit={(e) => { e.preventDefault(); void handleRequestOtp('WHATSAPP'); }} className="mt-6" noValidate>
           <FieldLabel htmlFor="signup-input-whatsapp" label={copy.register.whatsapp} requirement={copy.common.required} />
-          <div className="relative">
-            <FaWhatsapp aria-hidden="true" className="pointer-events-none absolute start-4 top-1/2 h-5 w-5 -translate-y-1/2 text-emerald-600" />
-            <input
-              id="signup-input-whatsapp"
-              type="tel"
-              autoComplete="tel"
-              dir="ltr"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              placeholder={marketId === 'germany' ? '+49 151 23456789' : '+1 555 123 4567'}
-              disabled={isSubmitting}
-              className={cn(authInputClass, 'ps-12')}
-              required
-            />
-          </div>
+          <PhoneInput
+            id="signup-input-whatsapp"
+            label={copy.register.whatsapp}
+            locale={locale as 'en' | 'ar' | 'de'}
+            country={country}
+            value={phone}
+            onCountryChange={setCountry}
+            onChange={setPhone}
+            disabled={isSubmitting}
+            required
+            className={authInputClass}
+          />
 
           <button
             type="submit"
@@ -333,85 +337,62 @@ export function SignupMethods({
 
   // State 1: Method Selection (Default landing)
   return (
-    <div className="mx-auto w-full max-w-xl">
-      <div className="inline-flex items-center gap-2 rounded-full bg-primary-50 px-3 py-1.5 text-caption font-bold text-primary-800">
-        <ShieldCheck aria-hidden="true" className="h-4 w-4 text-accent-700" />
-        {copy.common.secure}
+    <div className="mx-auto w-full max-w-md">
+      <div className="text-center">
+        <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-primary-950">{copy.register.title}</h1>
+        <p className="mt-2 text-sm text-muted-foreground">{socialCopy.signupSubtitle}</p>
       </div>
 
-      <h1 className="mt-5 text-h2 font-black text-primary-950">{copy.register.title}</h1>
-      <p className="mt-3 text-small leading-7 text-muted-foreground">{socialCopy.signupSubtitle}</p>
-
-      <SocialAuthButtons
-        locale={locale}
-        marketId={marketId}
-        mode="register"
-        disabled={disabled || isSubmitting}
-        showOrDivider={true}
-      />
-
-      <div className="space-y-3" role="group" aria-label={socialCopy.signupSubtitle}>
-        <button
-          type="button"
+      <div className="mt-8">
+        <SocialAuthButtons
+          locale={locale}
+          marketId={marketId}
+          mode="register"
           disabled={disabled || isSubmitting}
-          onClick={() => {
-            if (onSelectMethod) onSelectMethod('email');
-            setStep('email_input');
-            setErrorMessage('');
-          }}
-          className={buttonVariants({ variant: 'outline', size: 'lg', className: 'w-full gap-3' })}
-        >
-          <Mail aria-hidden="true" className="h-5 w-5 shrink-0 text-primary-700" />
-          <span>{socialCopy.signupWithEmail}</span>
-        </button>
+          showOrDivider={true}
+        />
 
-        <button
-          type="button"
-          disabled={disabled || isSubmitting}
-          onClick={() => {
-            if (onSelectMethod) onSelectMethod('whatsapp');
-            setStep('whatsapp_input');
-            setErrorMessage('');
-          }}
-          className={buttonVariants({ variant: 'outline', size: 'lg', className: 'w-full gap-3' })}
-        >
-          <FaWhatsapp aria-hidden="true" className="h-5 w-5 shrink-0 text-[#25D366]" />
-          <span>{socialCopy.signupWithWhatsapp}</span>
-        </button>
-      </div>
-
-      {marketId === 'germany' && (
-        <div className="mt-6 rounded-2xl border border-accent-200/80 bg-accent-50/60 p-4.5 text-small">
-          <div className="flex items-start gap-3">
-            <ShieldCheck className="h-5 w-5 text-accent-700 shrink-0 mt-0.5" />
-            <div className="flex flex-col gap-1">
-              <p className="font-bold text-primary-950">
-                {socialCopy.adultNoticeTitle}
-              </p>
-              <p className="text-xs text-primary-700 leading-relaxed">
-                {socialCopy.adultNoticeDescription}
-              </p>
-              <a
-                href={`/de/${locale}/trial`}
-                className="mt-1 inline-flex items-center gap-1 text-xs font-black text-accent-800 underline-offset-4 hover:underline"
-              >
-                {socialCopy.adultNoticeAction}
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
-
-      <div className="mt-8 pt-6 border-t border-border text-small text-muted-foreground">
-        <p>
-          {socialCopy.alreadyHaveAccount}{' '}
-          <a
-            href={effectiveLoginHref}
-            className="font-bold text-accent-700 underline underline-offset-4 hover:text-accent-800"
+        <div className="space-y-3" role="group" aria-label={socialCopy.signupSubtitle}>
+          <button
+            type="button"
+            disabled={disabled || isSubmitting}
+            onClick={() => {
+              if (onSelectMethod) onSelectMethod('email');
+              setStep('email_input');
+              setErrorMessage('');
+            }}
+            className={buttonVariants({ variant: 'outline', size: 'lg', className: 'w-full gap-3 font-semibold' })}
           >
-            {socialCopy.signIn}
-          </a>
-        </p>
+            <Mail aria-hidden="true" className="h-5 w-5 shrink-0 text-primary-700" />
+            <span>{socialCopy.signupWithEmail}</span>
+          </button>
+
+          <button
+            type="button"
+            disabled={disabled || isSubmitting}
+            onClick={() => {
+              if (onSelectMethod) onSelectMethod('whatsapp');
+              setStep('whatsapp_input');
+              setErrorMessage('');
+            }}
+            className={buttonVariants({ variant: 'outline', size: 'lg', className: 'w-full gap-3 font-semibold' })}
+          >
+            <FaWhatsapp aria-hidden="true" className="h-5 w-5 shrink-0 text-[#25D366]" />
+            <span>{socialCopy.signupWithWhatsapp}</span>
+          </button>
+        </div>
+
+        <div className="mt-8 pt-6 border-t border-border text-center text-sm text-muted-foreground">
+          <p>
+            {socialCopy.alreadyHaveAccount}{' '}
+            <a
+              href={effectiveLoginHref}
+              className="font-bold text-accent-700 underline underline-offset-4 hover:text-accent-800"
+            >
+              {socialCopy.signIn}
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );
