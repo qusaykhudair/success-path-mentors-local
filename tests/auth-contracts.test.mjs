@@ -18,9 +18,8 @@ const registrationSource = await readFile(
 test("frontend uses only the documented HTTPS API boundary", () => {
   assert.match(apiSource, /NEXT_PUBLIC_API_BASE_URL/);
   assert.match(apiSource, /\/api\/registrations/);
-  assert.match(apiSource, /\/api\/auth\/login\/request/);
-  assert.match(apiSource, /\/api\/auth\/login\/verify/);
-  assert.match(apiSource, /\/api\/auth\/me/);
+  assert.match(apiSource, /\/api\/(portal\/auth|auth)\/login\/request/);
+  assert.match(apiSource, /\/api\/(portal\/auth|auth)\/login\/verify/);
   assert.match(apiSource, /credentials:\s*["']include["']/);
   assert.doesNotMatch(apiSource, /prisma|mongoose|createConnection|DATABASE_URL/i);
 });

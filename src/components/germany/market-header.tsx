@@ -25,9 +25,6 @@ export function MarketHeader() {
   const isRtl = locale === 'ar';
   const ArrowIcon = isRtl ? ArrowLeft : ArrowRight;
 
-  // Determine auth locale
-  const authLocale = locale === 'ar' ? 'ar' : 'en';
-
   useEffect(() => {
     function handleScroll() {
       setIsScrolled(window.scrollY > 15);
@@ -119,7 +116,7 @@ export function MarketHeader() {
 
           {/* Login Link */}
           <a
-            href={`/${authLocale}/login`}
+            href={`/de/${locale}/login`}
             className="inline-flex min-h-touch items-center rounded-full border border-primary-200 bg-white px-3.5 py-1.5 text-xs font-bold text-primary-900 shadow-2xs transition-colors hover:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap"
           >
             {t('login')}
@@ -127,7 +124,7 @@ export function MarketHeader() {
 
           {/* Sign Up Link */}
           <a
-            href={`/${authLocale}/register`}
+            href={`/de/${locale}/register`}
             className="inline-flex min-h-touch items-center rounded-full bg-accent-500/15 border border-accent-500/30 px-3.5 py-1.5 text-xs font-bold text-accent-800 transition-colors hover:bg-accent-500/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap"
           >
             {t('register')}
@@ -203,13 +200,13 @@ export function MarketHeader() {
             {/* Auth Buttons */}
             <div className="flex flex-col gap-3">
               <a
-                href={`/${authLocale}/login`}
+                href={`/de/${locale}/login`}
                 className="flex min-h-touch w-full items-center justify-center rounded-xl border border-primary-200 bg-white py-3 text-sm font-bold text-primary-900 shadow-xs"
               >
                 {t('login')}
               </a>
               <a
-                href={`/${authLocale}/register`}
+                href={`/de/${locale}/register`}
                 className="flex min-h-touch w-full items-center justify-center rounded-xl bg-primary-100/70 py-3 text-sm font-bold text-primary-900 shadow-xs"
               >
                 {t('register')}

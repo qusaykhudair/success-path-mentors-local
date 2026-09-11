@@ -10,14 +10,15 @@ import {
 import type { ReactNode } from 'react';
 
 import { getAuthCopy } from './auth-copy';
-import type { AuthLocale } from './auth-contracts';
+import type { AuthUiLocale } from './auth-contracts';
 
 interface AuthShellProps {
-  locale: AuthLocale;
+  locale: AuthUiLocale;
+  homeHref?: string;
   children: ReactNode;
 }
 
-export function AuthShell({ locale, children }: AuthShellProps) {
+export function AuthShell({ locale, homeHref, children }: AuthShellProps) {
   const copy = getAuthCopy(locale);
   const isRtl = locale === 'ar';
   const BackIcon = isRtl ? ChevronRight : ChevronLeft;
@@ -34,7 +35,7 @@ export function AuthShell({ locale, children }: AuthShellProps) {
 
       <div className="mx-auto w-full max-w-[1180px]">
         <a
-          href={`/${locale}`}
+          href={homeHref || `/${locale}`}
           className="mb-5 inline-flex min-h-touch items-center gap-2 rounded-full px-3 text-small font-bold text-primary transition-colors hover:bg-background focus-visible:ring-2 focus-visible:ring-accent-500 sm:mb-7"
         >
           <BackIcon aria-hidden="true" className="h-4 w-4" />

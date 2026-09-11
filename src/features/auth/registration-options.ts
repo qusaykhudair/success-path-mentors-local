@@ -1,30 +1,89 @@
-import { countryNames, getDefaultMarket, type CountryCode } from '@/config/markets';
+import {
+  countryNames,
+  getDefaultMarket,
+  getMarketConfig,
+  type CountryCode,
+  type MarketConfig,
+  type MarketId,
+} from '@/config/markets';
 
-// UI labels stay outside MarketConfig. Payload values remain English country names.
-const arabicCountryLabels: Partial<Record<CountryCode, string>> = {
-  CA: 'كندا',
-  US: 'الولايات المتحدة',
+const localizedCountryLabels: Record<string, { ar: string; de: string }> = {
+  CA: { ar: 'كندا', de: 'Kanada' },
+  US: { ar: 'الولايات المتحدة', de: 'USA' },
+  DE: { ar: 'ألمانيا', de: 'Deutschland' },
 };
 
-export function getRegistrationCountries(): readonly (readonly [string, string])[] {
+function resolveMarket(marketOrId?: MarketConfig | MarketId): MarketConfig {
+  if (!marketOrId) return getDefaultMarket();
+  if (typeof marketOrId === 'string') return getMarketConfig(marketOrId);
+  return marketOrId;
+}
+
+export function getRegistrationCountries(
+  marketOrId?: MarketConfig | MarketId,
+  locale?: 'en' | 'ar' | 'de'
+): readonly (readonly [string, string])[] {
+  const market = resolveMarket(marketOrId);
+  const otherLabel = locale === 'en' ? 'Other' : locale === 'de' ? 'Anderes Land' : 'دولة أخرى';
+
   return [
-    ...getDefaultMarket().supportedCountries.map((code) => [
-      countryNames[code], arabicCountryLabels[code] ?? countryNames[code],
-    ] as const),
-    ['Other', 'دولة أخرى'],
+    ...market.supportedCountries.map((code) => {
+      const enName = countryNames[code];
+      const localized =
+        locale === 'en'
+          ? enName
+          : locale === 'de'
+          ? localizedCountryLabels[code]?.de ?? enName
+          : localizedCountryLabels[code]?.ar ?? enName;
+      return [enName, localized] as const;
+    }),
+    ['Other', otherLabel],
   ];
 }
 
 export function getRegistrationTimezone(
-  detect: () => string = () => Intl.DateTimeFormat().resolvedOptions().timeZone,
+  detectOrMarket?: (() => string) | MarketConfig | MarketId,
+  maybeDetect?: () => string,
 ): string {
+  let market: MarketConfig;
+  let detect: () => string;
+
+  if (typeof detectOrMarket === 'function') {
+    detect = detectOrMarket;
+    market = resolveMarket(undefined);
+  } else {
+    market = resolveMarket(detectOrMarket);
+    detect = maybeDetect ?? (() => Intl.DateTimeFormat().resolvedOptions().timeZone);
+  }
+
   try {
-    return detect() || getDefaultMarket().defaultTimezone;
+    return detect() || market.defaultTimezone;
   } catch {
-    return getDefaultMarket().defaultTimezone;
+    return market.defaultTimezone;
   }
 }
 
-export function getRegistrationTimezones(detectedTimezone: string): string[] {
-  return Array.from(new Set([detectedTimezone, ...getDefaultMarket().supportedTimezones]));
+export function getRegistrationTimezones(
+  detectedTimezone: string,
+  marketOrId?: MarketConfig | MarketId,
+): string[] {
+  const market = resolveMarket(marketOrId);
+  return Array.from(new Set([detectedTimezone, ...market.supportedTimezones]));
+}
+
+export function getRegistrationOptions(
+  marketOrId?: MarketConfig | MarketId,
+  preferredTimezone?: string,
+  locale: 'en' | 'ar' | 'de' = 'en',
+) {
+  const market = resolveMarket(marketOrId);
+  const defaultTimezone = preferredTimezone || market.defaultTimezone;
+  return {
+    marketId: market.id,
+    defaultCountry: market.registration.countryValue,
+    defaultTimezone,
+    availableCountries: getRegistrationCountries(market, locale),
+    availableTimezones: getRegistrationTimezones(defaultTimezone, market),
+    phonePlaceholder: market.phonePlaceholder,
+  };
 }

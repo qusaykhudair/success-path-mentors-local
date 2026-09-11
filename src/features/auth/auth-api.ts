@@ -265,6 +265,7 @@ export const authApi = {
         notes: payload.notes,
       },
       source: payload.source,
+      signup_ticket: payload.signup_ticket,
     };
 
     // We call our Next.js API proxy route because the actual backend

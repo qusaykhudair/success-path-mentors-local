@@ -7,7 +7,6 @@ import { Container } from '@/components/ui/container';
 import { getMarketConfig } from '@/config/markets';
 import { parseNavigationContext } from '@/lib/market-navigation';
 import { Phone, Mail } from 'lucide-react';
-import { SupportedCountries } from '@/components/ui/supported-countries';
 
 export function MarketFooter() {
   const t = useTranslations('footer');
@@ -81,7 +80,7 @@ export function MarketFooter() {
           {/* Col 3: Explore */}
           <div className="flex flex-col gap-4">
             <h4 className="text-sm font-bold uppercase tracking-wider text-accent-400">
-              {locale === 'de' ? 'Über uns' : locale === 'ar' ? 'استكشف' : 'Explore'}
+              {t('aboutTitle')}
             </h4>
             <ul className="flex flex-col gap-3 text-sm text-primary-200">
               <li>
@@ -115,22 +114,22 @@ export function MarketFooter() {
           {/* Col 4: Account & Legal */}
           <div className="flex flex-col gap-4">
             <h4 className="text-sm font-bold uppercase tracking-wider text-accent-400">
-              {locale === 'de' ? 'Konto & Rechtliches' : locale === 'ar' ? 'الحساب والشروط' : 'Account & Legal'}
+              {t('accountTitle')}
             </h4>
             <ul className="flex flex-col gap-3 text-sm text-primary-200">
               <li>
-                <a href={`/${authLocale}/login`} className="hover:text-white transition-colors">
+                <a href={`/de/${locale}/login`} className="hover:text-white transition-colors">
                   {tHeader('login')}
                 </a>
               </li>
               <li>
-                <a href={`/${authLocale}/register`} className="hover:text-white transition-colors">
+                <a href={`/de/${locale}/register`} className="hover:text-white transition-colors">
                   {tHeader('register')}
                 </a>
               </li>
               <li>
                 <a href={`/de/${locale}/trial`} className="hover:text-accent-300 font-semibold transition-colors">
-                  {locale === 'de' ? 'Kostenlose Probestunde' : locale === 'ar' ? 'حصة تجريبية مجانية' : 'Free Trial'}
+                  {t('freeTrial')}
                 </a>
               </li>
               <li>
@@ -146,9 +145,6 @@ export function MarketFooter() {
             </ul>
           </div>
         </div>
-
-        {/* Supported Countries Flag Strip */}
-        <SupportedCountries locale={locale} className="mt-16 pt-10 border-t border-white/10" />
 
         {/* Bottom Bar: Copyright */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">

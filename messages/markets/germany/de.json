@@ -61,7 +61,7 @@
     }
   },
   "trust": {
-    "title": "Von Eltern vertraut"
+    "title": "Persönliche Lehrkraft-Betreuung"
   },
   "useCases": {
     "eyebrow": "Für wen wir da sind",
@@ -94,13 +94,13 @@
     ],
     "matching": {
       "title": "So finden wir Ihren Lehrer",
-      "description": "Wir analysieren Ihre Bedürfnisse, Lernziele und Persönlichkeit, um die perfekte Übereinstimmung mit einem unserer qualifizierten Lehrer herzustellen."
+      "description": "Wir analysieren Ihre Lernziele und individuellen Anforderungen, um eine qualifizierte Lehrkraft passend zu Ihren Bedürfnissen zu finden."
     }
   },
   "howItWorks": {
     "eyebrow": "Einfach loslegen",
     "headline": "In 3 Schritten zum Erfolg",
-    "subheadline": "Der schnellste Weg zum passenden Lehrer.",
+    "subheadline": "Einfache Schritte zur passenden Lehrkraft.",
     "steps": {
       "step1": {
         "title": "Kostenlos anmelden",
@@ -108,7 +108,7 @@
       },
       "step2": {
         "title": "Lehrer finden",
-        "description": "Wir matchen Sie mit dem perfekten Lehrer."
+        "description": "Wir wählen eine passende Lehrkraft für Ihre Bedürfnisse aus."
       },
       "step3": {
         "title": "Erfolgreich lernen",
@@ -125,6 +125,7 @@
   },
   "testimonials": {
     "eyebrow": "Erfahrungsberichte",
+    "feedbackLabel": "Rückmeldung von Eltern",
     "headline": "Was unsere Schüler sagen",
     "subheadline": "Erfolgsgeschichten von Menschen, die mit uns gelernt haben.",
     "items": [
@@ -179,6 +180,9 @@
   "footer": {
     "brandDescription": "Wir stärken Schüler, um akademische Exzellenz zu erreichen.",
     "servicesTitle": "Dienstleistungen",
+    "aboutTitle": "Entdecken",
+    "accountTitle": "Konto & Rechtliches",
+    "freeTrial": "Kostenlose Probestunde",
     "contactTitle": "Kontakt",
     "legalTitle": "Rechtliches",
     "legal": {
@@ -229,18 +233,18 @@
   "cta": {
     "eyebrow": "Starten Sie jetzt",
     "headline": "Bereit für echte Lernerfolge?",
-    "subheadline": "Starten Sie Ihre persönliche Lernreise mit einer kostenlosen, unverbindlichen Probestunde.",
+    "subheadline": "Starten Sie Ihre persönliche Lernreise heute mit einer kostenlosen Probestunde.",
     "primaryAction": "Kostenlose Probestunde starten",
     "secondaryAction": "Auf WhatsApp beraten lassen",
-    "reassurance": "100% unverbindlich • Keine Kreditkarte erforderlich • Schnelle Zuordnung",
+    "reassurance": "Individueller 1-zu-1 Unterricht • Flexible Online-Termine • Persönliche Koordination",
     "trustPoints": [
       "1-zu-1 Einzelunterricht",
-      "Kostenlose Probestunde ohne Risiko",
+      "Unverbindliche kostenlose Probestunde",
       "Flexible Online-Termine"
     ],
     "panelEyebrow": "Einfacher Ablauf",
     "panelTitle": "In 3 Schritten zum Unterricht",
-    "panelNote": "Unser Beratungsteam antwortet in der Regel innerhalb weniger Stunden.",
+    "panelNote": "Unser Beratungsteam stimmt die Probestunde gerne persönlich mit Ihnen ab.",
     "nextSteps": [
       {
         "title": "Anfrage senden",
@@ -248,7 +252,7 @@
       },
       {
         "title": "Passende Lehrkraft",
-        "description": "Wir wählen den idealen Tutor für Ihre individuellen Lernziele."
+        "description": "Wir wählen eine passende Lehrkraft für Ihre individuellen Lernziele."
       },
       {
         "title": "Online durchstarten",
@@ -259,7 +263,7 @@
   "whySpm": {
     "eyebrow": "Warum Success Path Mentors",
     "headline": "Ihr Erfolg ist unser Ziel",
-    "subheadline": "Wir kombinieren persönliche Betreuung mit flexibler Technologie, um die besten Ergebnisse für jeden Schüler zu erzielen.",
+    "subheadline": "Wir kombinieren persönliche Betreuung mit flexibler Technologie, um jeden Schüler individuell zu unterstützen.",
     "features": [
       {
         "title": "Persönliche 1-zu-1 Betreuung",
@@ -270,8 +274,8 @@
         "description": "Wir kümmern uns um alles – von der Lehrersuche bis zur Terminplanung."
       },
       {
-        "title": "Perfektes Lehrer-Matching",
-        "description": "Wir finden den idealen Lehrer basierend auf Ihren Bedürfnissen und Zielen."
+        "title": "Passende Lehrerauswahl",
+        "description": "Wir finden eine passende Lehrkraft basierend auf Ihren Lernbedürfnissen und Zielen."
       },
       {
         "title": "Flexible Online-Formate",
@@ -319,9 +323,28 @@
       "lastName": "Nachname",
       "email": "E-Mail-Adresse",
       "phone": "Telefonnummer",
-      "submit": "Kostenlose Probestunde anfragen",
+      "submit": "Anfrage vorbereiten",
       "privacy": "Ihre Daten werden sicher übertragen und nicht an Dritte weitergegeben.",
       "success": "Ihre Anfrage wurde erfolgreich gesendet! Wir werden uns in Kürze bei Ihnen melden."
+    },
+    "subjectLabel": "Fach",
+    "learnerLabel": "Lernender",
+    "goalLabel": "Ziel",
+    "nameLabel": "Name",
+    "phoneLabel": "Telefon",
+    "step4Description": "Geben Sie Ihre Kontaktdaten ein, um Ihre Probestunde mit unserem Team abzustimmen.",
+    "subjects": {
+      "german": "Deutsch",
+      "english": "Englisch",
+      "arabic": "Arabisch",
+      "french": "Französisch"
+    },
+    "contactReady": {
+      "title": "Anfrage vorbereitet",
+      "description": "Ihre Angaben sind zusammengestellt. Setzen Sie Ihre Anfrage direkt auf WhatsApp mit unserem Koordinationsteam fort, um Ihren Termin abzustimmen.",
+      "whatsappButton": "Auf WhatsApp fortfahren",
+      "whatsAppGreeting": "Hallo Success Path Mentors, ich möchte eine kostenlose Probestunde anfragen:",
+      "backHome": "Zurück zur Startseite"
     }
   },
   "header": {
@@ -359,34 +382,34 @@
       "progress": {
         "name": "Progress",
         "subtitle": "8 Unterrichtseinheiten",
-        "description": "Unser bewährtes Paket für kontinuierliche Leistungssteigerung und Schulerfolg.",
+        "description": "Unser bewährtes Paket für kontinuierliche Lernbegleitung und Schulerfolg.",
         "sessions": "8 Einheiten (1-zu-1)",
         "priceLabel": "Auf Anfrage",
-        "badge": "Beliebteste Wahl",
+        "badge": "8 Einheiten",
         "features": [
           "1-zu-1 Einzelunterricht online",
           "Individueller Lern- und Förderplan",
           "Persönliche Betreuung & Koordination",
-          "Monatlicher Fortschrittsbericht",
+          "Regelmäßiges Lernfeedback",
           "Fächerübergreifend anpassbar"
         ],
-        "cta": "Jetzt durchstarten"
+        "cta": "Jetzt anfragen"
       },
       "momentum": {
         "name": "Intensiv",
         "subtitle": "12 Unterrichtseinheiten",
-        "description": "Umfassende Begleitung für nachhaltige Notenverbesserung und Prüfungsvorbereitung.",
+        "description": "Umfassende Begleitung für gezielte Lernförderung und Prüfungsvorbereitung.",
         "sessions": "12 Einheiten (1-zu-1)",
         "priceLabel": "Auf Anfrage",
-        "badge": "Maximaler Erfolg",
+        "badge": "12 Einheiten",
         "features": [
           "1-zu-1 Einzelunterricht online",
-          "Prioritäre Lehrervermittlung",
+          "Individuelle Lehrerabstimmung",
           "Gezielte Prüfungsvorbereitung",
-          "Feste Betreuungskoordination",
+          "Direkte Betreuungskoordination",
           "Hausaufgaben- und Lernbegleitung"
         ],
-        "cta": "Intensivplan sichern"
+        "cta": "Intensivplan anfragen"
       }
     }
   },
@@ -398,10 +421,10 @@
     "whatsappDesc": "Schnell und unkompliziert direkt per Chat antworten lassen.",
     "whatsappAction": "WhatsApp Chat starten",
     "emailTitle": "E-Mail Anfrage",
-    "emailDesc": "Schreiben Sie uns jederzeit. Wir melden uns innerhalb von 24 Stunden.",
+    "emailDesc": "Schreiben Sie uns jederzeit. Wir melden uns verlässlich bei Ihnen zurück.",
     "emailAction": "E-Mail schreiben",
     "hoursTitle": "Erreichbarkeit",
-    "hoursDesc": "Montag – Freitag: 09:00 – 19:00 Uhr (MEZ)",
+    "hoursDesc": "Kontaktieren Sie unser Koordinationsteam per WhatsApp oder E-Mail.",
     "coordinatorBadge": "Persönliche Bildungsberatung"
   }
 }

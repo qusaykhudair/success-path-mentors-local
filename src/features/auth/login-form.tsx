@@ -21,9 +21,19 @@ import { cn } from '@/lib/utils';
 
 import { authApi, isMockAuthApi } from './auth-api';
 import { getAuthCopy } from './auth-copy';
-import { AuthApiError, type AuthenticatedUser, type LoginChallenge } from './auth-contracts';
-import type { AuthLocale } from './auth-contracts';
+import {
+  AuthApiError,
+  toAuthApiLocale,
+  type AuthenticatedUser,
+  type LoginChallenge,
+  type AuthUiLocale,
+} from './auth-contracts';
 import { authInputClass, FieldError, FieldLabel, Notice, SubmitLabel } from './auth-ui';
+import { SocialAuthButtons } from './social-auth-buttons';
+import type { MarketId } from '@/config/markets';
+import { FaWhatsapp } from 'react-icons/fa6';
+import { PhoneInput } from '@/components/ui/phone-input';
+import { dialCode, localPhone, type CountryCode } from '@/lib/phone';
 
 type LoginStage = 'identifier' | 'otp' | 'success';
 
@@ -52,7 +62,17 @@ function friendlyError(error: unknown, copy: ReturnType<typeof getAuthCopy>): st
   return copy.common.apiError;
 }
 
-export function LoginForm({ locale }: { locale: AuthLocale }) {
+export function LoginForm({
+  locale,
+  marketId = 'north-america',
+  registerHref,
+  contactHref,
+}: {
+  locale: AuthUiLocale;
+  marketId?: string;
+  registerHref?: string;
+  contactHref?: string;
+}) {
   const copy = getAuthCopy(locale);
   const isRtl = locale === 'ar';
   const ForwardIcon = isRtl ? ArrowLeft : ArrowRight;
@@ -79,11 +99,15 @@ export function LoginForm({ locale }: { locale: AuthLocale }) {
   });
 
   const [stage, setStage] = useState<LoginStage>('identifier');
+  const [loginMethod, setLoginMethod] = useState<'email' | 'whatsapp'>('email');
+  const [phoneCountry, setPhoneCountry] = useState<CountryCode>(marketId === 'germany' ? 'DE' : 'CA');
+  const [whatsappPhone, setWhatsappPhone] = useState('');
   const [challenge, setChallenge] = useState<LoginChallenge | null>(null);
   const [user, setUser] = useState<AuthenticatedUser | null>(null);
   const [errorMessage, setErrorMessage] = useState('');
   const [secondsToResend, setSecondsToResend] = useState(0);
   const [isResending, setIsResending] = useState(false);
+  const [socialPending, setSocialPending] = useState(false);
 
   useEffect(() => {
     if (stage !== 'otp' || secondsToResend <= 0) return;
@@ -102,7 +126,7 @@ export function LoginForm({ locale }: { locale: AuthLocale }) {
     try {
       const nextChallenge = await authApi.requestLogin({
         identifier: normalizeIdentifier(values.identifier),
-        locale,
+        locale: toAuthApiLocale(locale),
       });
       setChallenge(nextChallenge);
       setSecondsToResend(nextChallenge.resend_after_seconds);
@@ -120,7 +144,7 @@ export function LoginForm({ locale }: { locale: AuthLocale }) {
     try {
       const authenticatedUser = await authApi.verifyLogin(
         { challenge_id: challenge.challenge_id, otp: values.otp },
-        locale
+        toAuthApiLocale(locale)
       );
       setUser(authenticatedUser);
       setStage('success');
@@ -137,7 +161,7 @@ export function LoginForm({ locale }: { locale: AuthLocale }) {
     try {
       const nextChallenge = await authApi.requestLogin({
         identifier: normalizeIdentifier(identifierForm.getValues('identifier')),
-        locale,
+        locale: toAuthApiLocale(locale),
       });
       setChallenge(nextChallenge);
       setSecondsToResend(nextChallenge.resend_after_seconds);
@@ -186,63 +210,140 @@ export function LoginForm({ locale }: { locale: AuthLocale }) {
   }
 
   return (
-    <div className="mx-auto w-full max-w-xl">
-      <div className="inline-flex items-center gap-2 rounded-full bg-primary-50 px-3 py-1.5 text-caption font-bold text-primary-800">
-        <LockKeyhole aria-hidden="true" className="h-4 w-4 text-accent-700" />
-        {copy.common.secure}
+    <div className="mx-auto w-full max-w-md">
+      <div className="text-center">
+        <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-primary-950">
+          {stage === 'otp' ? copy.login.codeTitle : copy.login.title}
+        </h1>
+        <p className="mt-2 text-sm text-muted-foreground">
+          {stage === 'otp' ? (
+            <>
+              {copy.login.codeDescription}{' '}
+              <strong className="font-bold text-primary-950" dir="ltr">{challenge?.masked_destination}</strong>
+            </>
+          ) : copy.login.description}
+        </p>
       </div>
-
-      <h1 className="mt-5 text-h1 font-black text-primary-950">
-        {stage === 'otp' ? copy.login.codeTitle : copy.login.title}
-      </h1>
-      <p className="mt-4 text-body leading-8 text-muted-foreground">
-        {stage === 'otp' ? (
-          <>
-            {copy.login.codeDescription}{' '}
-            <strong className="font-black text-primary-950" dir="ltr">{challenge?.masked_destination}</strong>
-          </>
-        ) : copy.login.description}
-      </p>
 
       {errorMessage ? <div className="mt-6"><Notice variant="error">{errorMessage}</Notice></div> : null}
 
       {stage === 'identifier' ? (
-        <form onSubmit={identifierForm.handleSubmit(requestCode)} className="mt-8" noValidate>
-          <FieldLabel htmlFor="login-identifier" label={copy.login.identifierLabel} requirement={copy.common.required} />
-          <div className="relative">
-            <Mail aria-hidden="true" className="pointer-events-none absolute start-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
-            <input
-              id="login-identifier"
-              type="text"
-              inputMode="email"
-              autoComplete="username"
-              dir="ltr"
-              placeholder={copy.login.identifierPlaceholder}
-              aria-invalid={Boolean(identifierForm.formState.errors.identifier)}
-              aria-describedby="login-identifier-hint login-identifier-error"
-              className={cn(authInputClass, 'ps-12')}
-              {...identifierForm.register('identifier')}
-            />
-          </div>
-          <p id="login-identifier-hint" className="mt-2 flex items-center gap-2 text-caption font-semibold text-muted-foreground">
-            <ShieldCheck aria-hidden="true" className="h-4 w-4 text-accent-700" />
-            {copy.login.identifierHint}
-          </p>
-          <FieldError id="login-identifier-error">{identifierForm.formState.errors.identifier?.message}</FieldError>
+        <div className="mt-8">
+          <SocialAuthButtons locale={locale}
+            marketId={marketId as MarketId}
+            mode="login"
+            disabled={socialPending || identifierForm.formState.isSubmitting}
+            onPendingChange={setSocialPending}
+          />
 
-          <button
-            type="submit"
-            disabled={identifierForm.formState.isSubmitting}
-            className={buttonVariants({ variant: 'accent', size: 'lg', className: 'mt-7 w-full' })}
+          <div className="mt-6 flex rounded-xl border border-border bg-muted/30 p-1">
+            <button
+              type="button"
+              onClick={() => { setLoginMethod('email'); setErrorMessage(''); }}
+              className={cn(
+                'flex-1 flex items-center justify-center gap-2 rounded-lg py-2 text-small font-bold transition-all',
+                loginMethod === 'email'
+                  ? 'bg-background text-primary shadow-xs'
+                  : 'text-muted-foreground hover:text-foreground'
+              )}
+            >
+              <Mail className="h-4 w-4" />
+              <span>{locale === 'ar' ? 'البريد الإلكتروني' : locale === 'de' ? 'E-Mail' : 'Email'}</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => { setLoginMethod('whatsapp'); setErrorMessage(''); }}
+              className={cn(
+                'flex-1 flex items-center justify-center gap-2 rounded-lg py-2 text-small font-bold transition-all',
+                loginMethod === 'whatsapp'
+                  ? 'bg-background text-primary shadow-xs'
+                  : 'text-muted-foreground hover:text-foreground'
+              )}
+            >
+              <FaWhatsapp className="h-4 w-4 text-[#25D366]" />
+              <span>WhatsApp</span>
+            </button>
+          </div>
+
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (loginMethod === 'email') {
+                void identifierForm.handleSubmit(requestCode)();
+              } else {
+                const parsed = localPhone(whatsappPhone, phoneCountry);
+                if (!parsed && whatsappPhone.replace(/\D/g, '').length < 7) {
+                  setErrorMessage(copy.login.identifierHint);
+                  return;
+                }
+                const target = parsed?.phoneE164 || (whatsappPhone.trim().startsWith('+') ? whatsappPhone.trim() : `${dialCode(phoneCountry)}${whatsappPhone.trim()}`);
+                identifierForm.setValue('identifier', target);
+                void requestCode({ identifier: target });
+              }
+            }}
+            className="mt-6"
+            noValidate
           >
-            <SubmitLabel
-              loading={identifierForm.formState.isSubmitting}
-              idle={copy.login.requestCode}
-              pending={copy.common.loading}
-            />
-            {!identifierForm.formState.isSubmitting ? <ForwardIcon aria-hidden="true" className="h-5 w-5" /> : null}
-          </button>
-        </form>
+            {loginMethod === 'email' ? (
+              <div>
+                <FieldLabel
+                  htmlFor="login-identifier"
+                  label={locale === 'ar' ? 'البريد الإلكتروني' : locale === 'de' ? 'E-Mail' : 'Email'}
+                  requirement={copy.common.required}
+                />
+                <span className="sr-only">{copy.login.identifierLabel}</span>
+                <div className="relative">
+                  <Mail aria-hidden="true" className="pointer-events-none absolute start-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
+                  <input
+                    id="login-identifier"
+                    type="email"
+                    inputMode="email"
+                    autoComplete="username"
+                    dir="ltr"
+                    disabled={socialPending || identifierForm.formState.isSubmitting}
+                    placeholder={copy.login.identifierPlaceholder}
+                    aria-invalid={Boolean(identifierForm.formState.errors.identifier)}
+                    aria-describedby="login-identifier-hint login-identifier-error"
+                    className={cn(authInputClass, 'ps-12')}
+                    {...identifierForm.register('identifier')}
+                  />
+                </div>
+                <FieldError id="login-identifier-error">{identifierForm.formState.errors.identifier?.message}</FieldError>
+              </div>
+            ) : (
+              <div>
+                <FieldLabel htmlFor="login-whatsapp-input" label="WhatsApp" requirement={copy.common.required} />
+                <PhoneInput
+                  id="login-whatsapp-input"
+                  label="WhatsApp"
+                  locale={locale as 'en' | 'ar' | 'de'}
+                  country={phoneCountry}
+                  value={whatsappPhone}
+                  onCountryChange={setPhoneCountry}
+                  onChange={setWhatsappPhone}
+                  disabled={socialPending || identifierForm.formState.isSubmitting}
+                  required
+                  className={authInputClass}
+                />
+                {/* Hidden field for form identification and compatibility */}
+                <input type="hidden" id="login-identifier" value={whatsappPhone} />
+              </div>
+            )}
+
+            <button
+              type="submit"
+              disabled={socialPending || identifierForm.formState.isSubmitting}
+              className={buttonVariants({ variant: 'accent', size: 'lg', className: 'mt-7 w-full' })}
+            >
+              <SubmitLabel
+                loading={identifierForm.formState.isSubmitting}
+                idle={copy.login.requestCode}
+                pending={copy.common.loading}
+              />
+              {!identifierForm.formState.isSubmitting ? <ForwardIcon aria-hidden="true" className="h-5 w-5" /> : null}
+            </button>
+          </form>
+        </div>
       ) : (
         <form onSubmit={otpForm.handleSubmit(verifyCode)} className="mt-8" noValidate>
           {isMockAuthApi ? <Notice>{copy.common.demo}</Notice> : null}
@@ -305,30 +406,41 @@ export function LoginForm({ locale }: { locale: AuthLocale }) {
 
       <div className="my-8 h-px bg-border" />
 
-      <div className="grid gap-3 sm:grid-cols-2">
-        <a href={`/${locale}/register`} className="group rounded-2xl border border-border p-4 transition-colors hover:border-accent-300 hover:bg-accent-50/60">
-          <div className="flex items-center gap-3">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-accent-100 text-accent-800">
-              <MessageCircleMore aria-hidden="true" className="h-5 w-5" />
-            </span>
-            <div>
-              <p className="text-caption font-semibold text-muted-foreground">{copy.login.createAccount}</p>
-              <p className="text-small font-black text-primary-950 group-hover:text-accent-800">{copy.login.createAccountLink}</p>
-            </div>
+      {(() => {
+        const effectiveRegisterHref =
+          registerHref ||
+          (marketId === 'germany' ? `/de/${locale}/register` : `/${locale}/register`);
+        const effectiveContactHref =
+          contactHref ||
+          (marketId === 'germany' ? `/de/${locale}#contact` : `/${locale}/contact`);
+
+        return (
+          <div className="grid gap-3 sm:grid-cols-2">
+            <a href={effectiveRegisterHref} className="group rounded-2xl border border-border p-4 transition-colors hover:border-accent-300 hover:bg-accent-50/60">
+              <div className="flex items-center gap-3">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-accent-100 text-accent-800">
+                  <MessageCircleMore aria-hidden="true" className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="text-caption font-semibold text-muted-foreground">{copy.login.createAccount}</p>
+                  <p className="text-small font-black text-primary-950 group-hover:text-accent-800">{copy.login.createAccountLink}</p>
+                </div>
+              </div>
+            </a>
+            <a href={effectiveContactHref} className="group rounded-2xl border border-border p-4 transition-colors hover:border-primary-300 hover:bg-primary-50/60">
+              <div className="flex items-center gap-3">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary-50 text-primary">
+                  <Smartphone aria-hidden="true" className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="text-caption font-semibold text-muted-foreground">{copy.login.recovery}</p>
+                  <p className="text-small font-black text-primary-950 group-hover:text-primary-700">{copy.login.recoveryLink}</p>
+                </div>
+              </div>
+            </a>
           </div>
-        </a>
-        <a href={`/${locale}/contact`} className="group rounded-2xl border border-border p-4 transition-colors hover:border-primary-300 hover:bg-primary-50/60">
-          <div className="flex items-center gap-3">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary-50 text-primary">
-              <Smartphone aria-hidden="true" className="h-5 w-5" />
-            </span>
-            <div>
-              <p className="text-caption font-semibold text-muted-foreground">{copy.login.recovery}</p>
-              <p className="text-small font-black text-primary-950 group-hover:text-primary-700">{copy.login.recoveryLink}</p>
-            </div>
-          </div>
-        </a>
-      </div>
+        );
+      })()}
     </div>
   );
 }

@@ -23,14 +23,23 @@ import { z } from 'zod';
 
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { getDefaultMarket } from '@/config/markets';
-import { getRegistrationCountries, getRegistrationTimezone, getRegistrationTimezones } from './registration-options';
+import { getDefaultMarket, getMarketConfig, type MarketId } from '@/config/markets';
+import {
+  getRegistrationCountries,
+  getRegistrationTimezone,
+  getRegistrationTimezones,
+} from './registration-options';
 
 import { authApi, isMockAuthApi } from './auth-api';
 import { getAuthCopy } from './auth-copy';
+import { SignupMethods } from './signup-methods';
+import type { VerifiedIdentity } from './signup-transaction';
+import { PhoneInput } from '@/components/ui/phone-input';
+import { defaultPhoneCountry, localPhone, phoneDefaults, type CountryCode } from '@/lib/phone';
 import {
   AuthApiError,
-  type AuthLocale,
+  toAuthApiLocale,
+  type AuthUiLocale,
   type RegistrationConfirmation,
   type RegistrationPayload,
   type RegistrationResult,
@@ -42,7 +51,6 @@ interface RegistrationFormValues {
   guardian_relationship: string;
   email: string;
   whatsapp: string;
-  telephone: string;
   student_first_name: string;
   grade: string;
   subject: string;
@@ -57,46 +65,66 @@ interface RegistrationFormValues {
 
 const grades = Array.from({ length: 12 }, (_, index) => String(index + 1));
 
-const optionSets = {
-  subjects: [
-    ['Mathematics', 'الرياضيات'],
-    ['English', 'اللغة الإنجليزية'],
-    ['General Science', 'العلوم العامة'],
-    ['Chemistry', 'الكيمياء'],
-    ['Physics', 'الفيزياء'],
-    ['French', 'اللغة الفرنسية'],
-    ['Arabic', 'اللغة العربية'],
-    ['Quran & Islamic Studies', 'القرآن والدراسات الإسلامية'],
-  ],
-  curricula: [
-    ['Ontario', 'أونتاريو'],
-    ['Alberta', 'ألبرتا'],
-    ['British Columbia', 'بريتش كولومبيا'],
-    ['Quebec', 'كيبيك'],
-    ['US Common Core', 'المنهج الأمريكي'],
-    ['British', 'المنهج البريطاني'],
-    ['IB', 'البكالوريا الدولية IB'],
-    ['Other', 'منهج آخر'],
-  ],
+const optionSetsByMarket = {
+  'north-america': {
+    subjects: [
+      ['Mathematics', 'الرياضيات', 'Mathematik'],
+      ['English', 'اللغة الإنجليزية', 'Englisch'],
+      ['General Science', 'العلوم العامة', 'Naturwissenschaften'],
+      ['Chemistry', 'الكيمياء', 'Chemie'],
+      ['Physics', 'الفيزياء', 'Physik'],
+      ['French', 'اللغة الفرنسية', 'Französisch'],
+      ['Arabic', 'اللغة العربية', 'Arabisch'],
+      ['Quran & Islamic Studies', 'القرآن والدراسات الإسلامية', 'Koran & Islamstudien'],
+    ],
+    curricula: [
+      ['Ontario', 'أونتاريو', 'Ontario'],
+      ['Alberta', 'ألبرتا', 'Alberta'],
+      ['British Columbia', 'بريتش كولومبيا', 'British Columbia'],
+      ['Quebec', 'كيبيك', 'Quebec'],
+      ['US Common Core', 'المنهج الأمريكي', 'US Common Core'],
+      ['British', 'المنهج البريطاني', 'Britisches Curriculum'],
+      ['IB', 'البكالوريا الدولية IB', 'IB (International Baccalaureate)'],
+      ['Other', 'منهج آخر', 'Anderer Lehrplan'],
+    ],
+  },
+  germany: {
+    subjects: [
+      ['German', 'اللغة الألمانية', 'Deutsch'],
+      ['English', 'اللغة الإنجليزية', 'Englisch'],
+      ['Arabic', 'اللغة العربية', 'Arabisch'],
+      ['French', 'اللغة الفرنسية', 'Französisch'],
+    ],
+    curricula: [
+      ['German School Curriculum', 'المنهج المدرسي الألماني', 'Deutsches Schulcurriculum'],
+      ['International / IB', 'البكالوريا الدولية IB', 'International / IB Curriculum'],
+      ['British Curriculum', 'المنهج البريطاني', 'Britisches Curriculum'],
+      ['General Tutoring', 'تدريس لغات ومتابعة عامة', 'Sprach- & Nachhilfeunterricht'],
+      ['Other', 'منهج آخر', 'Anderer Lehrplan'],
+    ],
+  },
+} as const;
+
+const sharedOptionSets = {
   languages: [
-    ['English', 'الإنجليزية'],
-    ['Arabic', 'العربية'],
-    ['French', 'الفرنسية'],
+    ['English', 'الإنجليزية', 'Englisch'],
+    ['Arabic', 'العربية', 'Arabisch'],
+    ['German', 'الألمانية', 'Deutsch'],
+    ['French', 'الفرنسية', 'Französisch'],
   ],
-  countries: getRegistrationCountries(),
   days: [
-    ['Monday', 'الاثنين'],
-    ['Tuesday', 'الثلاثاء'],
-    ['Wednesday', 'الأربعاء'],
-    ['Thursday', 'الخميس'],
-    ['Friday', 'الجمعة'],
-    ['Saturday', 'السبت'],
-    ['Sunday', 'الأحد'],
+    ['Monday', 'الاثنين', 'Montag'],
+    ['Tuesday', 'الثلاثاء', 'Dienstag'],
+    ['Wednesday', 'الأربعاء', 'Mittwoch'],
+    ['Thursday', 'الخميس', 'Donnerstag'],
+    ['Friday', 'الجمعة', 'Freitag'],
+    ['Saturday', 'السبت', 'Samstag'],
+    ['Sunday', 'الأحد', 'Sonntag'],
   ],
 } as const;
 
 const stepFields: FieldPath<RegistrationFormValues>[][] = [
-  ['parent_name', 'guardian_relationship', 'email', 'whatsapp', 'telephone'],
+  ['parent_name', 'guardian_relationship', 'email', 'whatsapp'],
   ['student_first_name', 'grade'],
   ['subject', 'curriculum', 'preferred_language', 'country', 'timezone', 'preferred_day', 'preferred_time'],
   ['privacy_consent'],
@@ -179,20 +207,57 @@ function ReviewRow({ label, value, icon: Icon }: { label: string; value: string;
   );
 }
 
-export function RegistrationForm({ locale }: { locale: AuthLocale }) {
+export function RegistrationForm({
+  locale,
+  marketId = 'north-america',
+  loginHref,
+  homeHref,
+  initialMethod = null,
+  initialTicket = null,
+  initialIdentity = null,
+}: {
+  locale: AuthUiLocale;
+  marketId?: MarketId;
+  loginHref?: string;
+  homeHref?: string;
+  initialMethod?: 'email' | 'whatsapp' | null;
+  initialTicket?: string | null;
+  initialIdentity?: VerifiedIdentity | null;
+}) {
+  const [verifiedTicket, setVerifiedTicket] = useState<string | null>(initialTicket);
+  const [verifiedIdentity, setVerifiedIdentity] = useState<VerifiedIdentity | null>(initialIdentity);
   const copy = getAuthCopy(locale);
   const isRtl = locale === 'ar';
   const ForwardIcon = isRtl ? ArrowLeft : ArrowRight;
   const BackIcon = isRtl ? ArrowRight : ArrowLeft;
-  const languageIndex = isRtl ? 1 : 0;
+  const languageIndex = locale === 'ar' ? 1 : locale === 'de' ? 2 : 0;
+
+  const market = getMarketConfig(marketId);
+  const detectedTimezone = useMemo(() => getRegistrationTimezone(market), [market]);
+  const availableTimezones = useMemo(
+    () => getRegistrationTimezones(detectedTimezone, market),
+    [detectedTimezone, market]
+  );
+  const availableCountries = useMemo(
+    () => getRegistrationCountries(market, locale),
+    [market, locale]
+  );
+  const marketOptions = optionSetsByMarket[marketId] || optionSetsByMarket['north-america'];
+  const effectiveLoginHref =
+    loginHref ||
+    (marketId === 'germany' ? `/de/${locale}/login` : `/${locale}/login`);
+  const effectiveHomeHref =
+    homeHref ||
+    (marketId === 'germany' ? `/de/${locale}` : `/${locale}`);
+
+  const [phoneCountry, setPhoneCountry] = useState<CountryCode>(marketId === 'germany' ? 'DE' : defaultPhoneCountry);
 
   const schema = useMemo(
     () => z.object({
       parent_name: z.string().trim().min(2, copy.register.errors.required).max(100),
       guardian_relationship: z.string().min(1, copy.register.errors.required),
       email: z.string().trim().email(copy.register.errors.email).max(160),
-      whatsapp: z.string().trim().refine(phoneIsValid, copy.register.errors.phone),
-      telephone: z.string().trim().refine((value) => !value || phoneIsValid(value), copy.register.errors.phone),
+      whatsapp: z.string().trim().refine((value) => Boolean(localPhone(value, phoneCountry)) || phoneIsValid(value), copy.register.errors.phone),
       student_first_name: z.string().trim().min(2, copy.register.errors.required).max(60),
       grade: z.string().min(1, copy.register.errors.required),
       subject: z.string().min(1, copy.register.errors.required),
@@ -204,31 +269,23 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
       preferred_time: z.string().min(1, copy.register.errors.required),
       privacy_consent: z.literal(true, { errorMap: () => ({ message: copy.register.errors.consent }) }),
     }),
-    [copy.register.errors]
-  );
-
-  const detectedTimezone = useMemo(() => getRegistrationTimezone(), []);
-
-  const availableTimezones = useMemo(
-    () => getRegistrationTimezones(detectedTimezone),
-    [detectedTimezone]
+    [copy.register.errors, phoneCountry]
   );
 
   const form = useForm<RegistrationFormValues>({
     resolver: zodResolver(schema),
     mode: 'onTouched',
     defaultValues: {
-      parent_name: '',
+      parent_name: initialIdentity?.displayName || '',
       guardian_relationship: '',
-      email: '',
-      whatsapp: '',
-      telephone: '',
+      email: initialIdentity?.method === 'whatsapp' ? '' : initialIdentity?.identifier || '',
+      whatsapp: initialIdentity?.method === 'whatsapp' ? initialIdentity?.identifier || '' : '',
       student_first_name: '',
       grade: '',
       subject: '',
       curriculum: '',
-      preferred_language: locale === 'ar' ? 'Arabic' : 'English',
-      country: getDefaultMarket().registration.countryValue,
+      preferred_language: locale === 'de' ? 'German' : locale === 'ar' ? 'Arabic' : 'English',
+      country: market.registration.countryValue,
       timezone: detectedTimezone,
       preferred_day: '',
       preferred_time: '',
@@ -255,6 +312,34 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
     return () => window.clearInterval(interval);
   }, [resendSeconds]);
 
+  useEffect(() => {
+    if (verifiedTicket && verifiedIdentity) return;
+    if (typeof window === 'undefined') return;
+
+    const params = new URLSearchParams(window.location.search);
+    const urlTicket = params.get('signup_ticket') || params.get('ticket');
+
+    if (urlTicket) {
+      fetch(`/api/auth/signup/session?ticket=${encodeURIComponent(urlTicket)}`)
+        .then((res) => (res.ok ? (res.json() as Promise<{ valid?: boolean; identity?: VerifiedIdentity }>) : null))
+        .then((data) => {
+          if (data?.valid && data.identity) {
+            setVerifiedTicket(urlTicket);
+            setVerifiedIdentity(data.identity);
+            if (data.identity.method === 'whatsapp') {
+              form.setValue('whatsapp', data.identity.identifier);
+            } else {
+              form.setValue('email', data.identity.identifier);
+              if (data.identity.displayName) {
+                form.setValue('parent_name', data.identity.displayName);
+              }
+            }
+          }
+        })
+        .catch(() => {});
+    }
+  }, [form, verifiedTicket, verifiedIdentity]);
+
   const values = form.watch();
 
   async function nextStep() {
@@ -274,7 +359,6 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
       guardian_relationship: formValues.guardian_relationship,
       email: formValues.email.trim().toLowerCase(),
       whatsapp: normalizePhone(formValues.whatsapp),
-      telephone: formValues.telephone ? normalizePhone(formValues.telephone) : undefined,
       student_first_name: formValues.student_first_name.trim(),
       grade: formValues.grade,
       subject: formValues.subject,
@@ -285,8 +369,9 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
       preferred_day: formValues.preferred_day,
       preferred_time: formValues.preferred_time,
       source: 'WEBSITE',
-      locale,
+      locale: toAuthApiLocale(locale),
       privacy_consent: true,
+      signup_ticket: verifiedTicket || undefined,
     };
 
     try {
@@ -300,6 +385,8 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
           registration_id: nextResult.registration_id,
           status: 'WAITING_FOR_ADMIN',
           trial_status: nextResult.trial_status as any,
+          guardian_mid: nextResult.guardian_mid,
+          student_mid: nextResult.student_mid,
         });
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -336,7 +423,7 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
           otp,
         },
         result.registration_id,
-        locale
+        toAuthApiLocale(locale)
       );
       setConfirmation(nextConfirmation);
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -356,7 +443,7 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
     try {
       const challenge = await authApi.resendRegistrationVerification(
         verification.contact_id,
-        locale
+        toAuthApiLocale(locale)
       );
       setResult({
         ...result,
@@ -391,8 +478,18 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
           <p className="mt-6 text-caption font-semibold text-muted-foreground">
             {copy.register.registrationId}: <strong className="font-black text-primary-950" dir="ltr">{confirmation.registration_id}</strong>
           </p>
+          {confirmation.guardian_mid ? (
+            <p className="mt-2 text-caption font-semibold text-muted-foreground">
+              Guardian MID: <strong className="font-black text-primary-950" dir="ltr">{confirmation.guardian_mid}</strong>
+            </p>
+          ) : null}
+          {confirmation.student_mid ? (
+            <p className="mt-2 text-caption font-semibold text-muted-foreground">
+              Student MID: <strong className="font-black text-primary-950" dir="ltr">{confirmation.student_mid}</strong>
+            </p>
+          ) : null}
         </div>
-        <a href={`/${locale}`} className={buttonVariants({ variant: 'accent', size: 'lg', className: 'mx-auto mt-8 min-w-64' })}>
+        <a href={effectiveHomeHref} className={buttonVariants({ variant: 'accent', size: 'lg', className: 'mx-auto mt-8 min-w-64' })}>
           {copy.register.returnHome}
           <ForwardIcon aria-hidden="true" className="h-5 w-5" />
         </a>
@@ -413,7 +510,7 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
             {copy.register.registrationId}: <strong className="font-black text-primary-950" dir="ltr">{result.registration_id}</strong>
           </p>
         </div>
-        <a href={`/${locale}`} className={buttonVariants({ variant: 'primary', size: 'lg', className: 'mx-auto mt-8 min-w-64' })}>
+        <a href={effectiveHomeHref} className={buttonVariants({ variant: 'primary', size: 'lg', className: 'mx-auto mt-8 min-w-64' })}>
           {copy.register.returnHome}
         </a>
       </div>
@@ -483,32 +580,73 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
     );
   }
 
+  if (!verifiedTicket || !verifiedIdentity) {
+    return (
+      <SignupMethods
+        locale={locale}
+        marketId={marketId}
+        loginHref={effectiveLoginHref}
+        onVerified={({ ticket, identity }) => {
+          setVerifiedTicket(ticket);
+          setVerifiedIdentity(identity);
+          if (identity.method === 'whatsapp') {
+            form.setValue('whatsapp', identity.identifier);
+          } else {
+            form.setValue('email', identity.identifier);
+            if (identity.displayName) {
+              form.setValue('parent_name', identity.displayName);
+            }
+          }
+        }}
+      />
+    );
+  }
+
   return (
     <div className="mx-auto w-full max-w-2xl">
-      <div className="flex flex-wrap items-start justify-between gap-4">
+      <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-border pb-4">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full bg-primary-50 px-3 py-1.5 text-caption font-bold text-primary-800">
-            <ShieldCheck aria-hidden="true" className="h-4 w-4 text-accent-700" />
-            {copy.common.secure}
-          </div>
-          <h1 className="mt-5 text-h2 font-black text-primary-950">{copy.register.title}</h1>
-          <p className="mt-3 max-w-xl text-small leading-7 text-muted-foreground">{copy.register.description}</p>
+          <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-primary-950">{copy.register.title}</h1>
+          <p className="mt-1 text-sm text-muted-foreground">{copy.register.description}</p>
         </div>
-        <p className="text-small font-semibold text-muted-foreground">
-          {copy.register.existing}{' '}
-          <a href={`/${locale}/login`} className="font-black text-accent-700 underline-offset-4 hover:underline">{copy.register.existingLink}</a>
-        </p>
+        <div className="flex items-center gap-4 text-sm font-semibold text-muted-foreground">
+          <button
+            type="button"
+            onClick={async () => {
+              setVerifiedTicket(null);
+              setVerifiedIdentity(null);
+              try {
+                await fetch('/api/auth/signup/session', { method: 'DELETE' });
+              } catch {}
+              if (typeof window !== 'undefined') {
+                const url = new URL(window.location.href);
+                url.searchParams.delete('signup_ticket');
+                url.searchParams.delete('ticket');
+                window.history.replaceState({}, '', url.toString());
+              }
+            }}
+            className="inline-flex items-center gap-1.5 font-bold text-accent-700 hover:text-accent-800 underline-offset-4 hover:underline"
+          >
+            <BackIcon className="h-3.5 w-3.5" />
+            {copy.social.changeMethod}
+          </button>
+          <span>·</span>
+          <p>
+            {copy.register.existing}{' '}
+            <a href={effectiveLoginHref} className="font-bold text-accent-700 underline-offset-4 hover:underline">{copy.register.existingLink}</a>
+          </p>
+        </div>
       </div>
 
-      <div className="mt-8">
+      <div className="mt-6">
         <div className="flex items-center justify-between gap-2" aria-label={copy.register.stepLabel.replace('{current}', String(step + 1)).replace('{total}', '4')}>
           {copy.register.steps.map((label, index) => (
             <div key={label} className="flex min-w-0 flex-1 items-center gap-2">
               <span
                 className={cn(
-                  'inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border text-caption font-black transition-colors',
+                  'inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-caption font-black transition-colors',
                   index < step && 'border-accent bg-accent text-primary',
-                  index === step && 'border-primary bg-primary text-white shadow-[0_0_0_5px_rgba(22,199,199,0.13)]',
+                  index === step && 'border-primary bg-primary text-white shadow-[0_0_0_4px_rgba(22,199,199,0.15)]',
                   index > step && 'border-border bg-background text-muted-foreground'
                 )}
               >
@@ -526,11 +664,12 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
 
       {apiError ? <div className="mt-6"><Notice variant="error">{apiError}</Notice></div> : null}
 
-      <form onSubmit={form.handleSubmit(submitRegistration)} className="mt-8" noValidate>
+      <form onSubmit={form.handleSubmit(submitRegistration)} className="mt-6" noValidate>
         {step === 0 ? (
           <fieldset>
-            <legend className="text-h3 font-black text-primary-950">{copy.register.guardianTitle}</legend>
-            <p className="mt-2 text-small leading-7 text-muted-foreground">{copy.register.guardianDescription}</p>
+            <legend className="text-xl font-black text-primary-950">{copy.register.guardianTitle}</legend>
+            <p className="mt-1 text-sm text-muted-foreground">{copy.register.guardianDescription}</p>
+
             <div className="mt-6 grid gap-5 sm:grid-cols-2">
               <div className="sm:col-span-2">
                 <FieldLabel htmlFor="parent_name" label={copy.register.parentName} requirement={copy.common.required} />
@@ -551,22 +690,31 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
                 <FieldLabel htmlFor="email" label={copy.register.email} requirement={copy.common.required} />
                 <div className="relative">
                   <Mail aria-hidden="true" className="pointer-events-none absolute start-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
-                  <input id="email" type="email" autoComplete="email" dir="ltr" aria-invalid={Boolean(form.formState.errors.email)} aria-describedby="email-error" className={cn(authInputClass, 'ps-12')} {...form.register('email')} />
+                  <input id="email" type="email" autoComplete="email" defaultValue={form.getValues('email')} dir="ltr" aria-invalid={Boolean(form.formState.errors.email)} aria-describedby="email-error" className={cn(authInputClass, 'ps-12')} {...form.register('email')} />
                 </div>
                 <FieldError id="email-error">{form.formState.errors.email?.message}</FieldError>
               </div>
-              <div>
+              <div className="sm:col-span-2">
                 <FieldLabel htmlFor="whatsapp" label={copy.register.whatsapp} requirement={copy.common.required} />
-                <div className="relative">
-                  <MessageCircleMore aria-hidden="true" className="pointer-events-none absolute start-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
-                  <input id="whatsapp" type="tel" autoComplete="tel" dir="ltr" placeholder={getDefaultMarket().phonePlaceholder} aria-invalid={Boolean(form.formState.errors.whatsapp)} aria-describedby="whatsapp-hint whatsapp-error" className={cn(authInputClass, 'ps-12')} {...form.register('whatsapp')} />
-                </div>
-                <FieldError id="whatsapp-error">{form.formState.errors.whatsapp?.message}</FieldError>
-              </div>
-              <div>
-                <FieldLabel htmlFor="telephone" label={copy.register.telephone} requirement={copy.common.optional} />
-                <input id="telephone" type="tel" autoComplete="tel" dir="ltr" placeholder={getDefaultMarket().phonePlaceholder} aria-invalid={Boolean(form.formState.errors.telephone)} aria-describedby="telephone-hint telephone-error" className={authInputClass} {...form.register('telephone')} />
-                <FieldError id="telephone-error">{form.formState.errors.telephone?.message}</FieldError>
+                <PhoneInput
+                  id="whatsapp"
+                  label={copy.register.whatsapp}
+                  locale={locale as 'en' | 'ar' | 'de'}
+                  country={phoneCountry}
+                  value={values.whatsapp}
+                  onCountryChange={(c) => {
+                    setPhoneCountry(c);
+                    const defaults = phoneDefaults(c, form.getValues('timezone'), false);
+                    form.setValue('country', defaults.country, { shouldDirty: true });
+                    form.setValue('timezone', defaults.timezone, { shouldDirty: true });
+                  }}
+                  onChange={(v) => form.setValue('whatsapp', v, { shouldDirty: true, shouldValidate: true })}
+                  onBlur={() => void form.trigger('whatsapp')}
+                  inputRef={form.register('whatsapp').ref}
+                  error={form.formState.errors.whatsapp?.message}
+                  required
+                  className={authInputClass}
+                />
               </div>
             </div>
             <p id="whatsapp-hint" className="mt-4 flex items-center gap-2 text-caption font-semibold text-muted-foreground">
@@ -600,12 +748,12 @@ export function RegistrationForm({ locale }: { locale: AuthLocale }) {
             <legend className="text-h3 font-black text-primary-950">{copy.register.learningTitle}</legend>
             <p className="mt-2 text-small leading-7 text-muted-foreground">{copy.register.learningDescription}</p>
             <div className="mt-6 grid gap-5 sm:grid-cols-2">
-              <SelectField id="subject" label={copy.register.subject} placeholder={copy.register.select} value={values.subject} options={optionSets.subjects.map((item) => [item[0], item[languageIndex]] as const)} error={form.formState.errors.subject?.message} required={copy.common.required} register={form.register} />
-              <SelectField id="curriculum" label={copy.register.curriculum} placeholder={copy.register.select} value={values.curriculum} options={optionSets.curricula.map((item) => [item[0], item[languageIndex]] as const)} error={form.formState.errors.curriculum?.message} required={copy.common.required} register={form.register} />
-              <SelectField id="preferred_language" label={copy.register.language} placeholder={copy.register.select} value={values.preferred_language} options={optionSets.languages.map((item) => [item[0], item[languageIndex]] as const)} error={form.formState.errors.preferred_language?.message} required={copy.common.required} register={form.register} />
-              <SelectField id="country" label={copy.register.country} placeholder={copy.register.select} value={values.country} options={optionSets.countries.map((item) => [item[0], item[languageIndex]] as const)} error={form.formState.errors.country?.message} required={copy.common.required} register={form.register} />
+              <SelectField id="subject" label={copy.register.subject} placeholder={copy.register.select} value={values.subject} options={marketOptions.subjects.map((item) => [item[0], item[languageIndex]] as const)} error={form.formState.errors.subject?.message} required={copy.common.required} register={form.register} />
+              <SelectField id="curriculum" label={copy.register.curriculum} placeholder={copy.register.select} value={values.curriculum} options={marketOptions.curricula.map((item) => [item[0], item[languageIndex]] as const)} error={form.formState.errors.curriculum?.message} required={copy.common.required} register={form.register} />
+              <SelectField id="preferred_language" label={copy.register.language} placeholder={copy.register.select} value={values.preferred_language} options={sharedOptionSets.languages.map((item) => [item[0], item[languageIndex]] as const)} error={form.formState.errors.preferred_language?.message} required={copy.common.required} register={form.register} />
+              <SelectField id="country" label={copy.register.country} placeholder={copy.register.select} value={values.country} options={availableCountries} error={form.formState.errors.country?.message} required={copy.common.required} register={form.register} />
               <SelectField id="timezone" label={copy.register.timezone} placeholder={copy.register.select} value={values.timezone} options={availableTimezones} error={form.formState.errors.timezone?.message} required={copy.common.required} register={form.register} />
-              <SelectField id="preferred_day" label={copy.register.preferredDay} placeholder={copy.register.select} value={values.preferred_day} options={optionSets.days.map((item) => [item[0], item[languageIndex]] as const)} error={form.formState.errors.preferred_day?.message} required={copy.common.required} register={form.register} />
+              <SelectField id="preferred_day" label={copy.register.preferredDay} placeholder={copy.register.select} value={values.preferred_day} options={sharedOptionSets.days.map((item) => [item[0], item[languageIndex]] as const)} error={form.formState.errors.preferred_day?.message} required={copy.common.required} register={form.register} />
               <div>
                 <FieldLabel htmlFor="preferred_time" label={copy.register.preferredTime} requirement={copy.common.required} />
                 <div className="relative">

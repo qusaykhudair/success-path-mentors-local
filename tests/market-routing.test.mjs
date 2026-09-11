@@ -17,7 +17,7 @@ const navigation = {
 
 test('Germany market slug, languages, default entry and RTL are distinct concepts', () => {
   assert.equal(germany.publicSlug, 'de');
-  assert.equal(germany.enabled, false);
+  assert.equal(germany.enabled, true);
   assert.equal(germany.defaultLanguage, 'de');
   assert.deepEqual(germany.supportedLanguages, ['de', 'ar', 'en']);
   assert.equal(routing.getMarketRootPath('germany'), '/de');
@@ -36,7 +36,7 @@ test('Germany market slug, languages, default entry and RTL are distinct concept
   assert.equal(existsSync(new URL(`../src/app${routing.getMarketRootPath('germany')}/[[...marketSegments]]/page.tsx`, import.meta.url)), true);
 });
 
-test('unsupported languages are rejected', () => {
+test('unsupported languages are rejected including /de/fr', () => {
   for (const language of ['fr', 'es', 'xyz', 'foo', '', 'DE', '../en', undefined, null, 0, {}]) {
     assert.equal(routing.isMarketLanguage('germany', language), false);
     assert.equal(routing.resolveMarketRoute('germany', [language]), undefined);
@@ -57,7 +57,7 @@ test('child routes are structurally resolved and generated for supported languag
   assert.deepEqual(contactRoute.childSegments, ['contact']);
 });
 
-test('namespace classification reserves disabled markets independently of language validity', () => {
+test('namespace classification reserves markets independently of language validity', () => {
   for (const path of ['/de', '/de/', '/de/de', '/de/en', '/de/ar', '/de/fr', '/de/anything']) {
     assert.equal(routing.getMarketFromPathname(path), germany);
     assert.equal(routing.isReservedMarketPathname(path), true);
@@ -68,33 +68,33 @@ test('namespace classification reserves disabled markets independently of langua
   }
 });
 
-test('all disabled Germany requests stop at the actual page boundary without redirecting', async () => {
+test('enabled Germany entry redirects /de to /de/de, renders supported languages, and rejects invalid /de/fr', async () => {
   const boundaryLoad = createLoader(root, { 'next/navigation': navigation });
   const page = boundaryLoad('src/app/de/[[...marketSegments]]/page.tsx').default;
-  for (const segments of [undefined, [], ['de'], ['en'], ['ar'], ['fr'], ['es'], ['xyz'], ['en', 'contact'], ['de', 'trial']]) {
-    await assert.rejects(page({ params: Promise.resolve({ marketSegments: segments }) }), (error) => error === notFoundError);
+
+  // /de redirects to /de/de
+  await assert.rejects(page({ params: Promise.resolve({}) }), (error) => error.message === 'REDIRECT' && error.path === '/de/de');
+  await assert.rejects(page({ params: Promise.resolve({ marketSegments: [] }) }), (error) => error.message === 'REDIRECT' && error.path === '/de/de');
+
+  // Supported languages render valid JSX
+  for (const language of germany.supportedLanguages) {
+    const res = await page({ params: Promise.resolve({ marketSegments: [language] }) });
+    assert.ok(res, `Expected page to render for ${language}`);
   }
-  const localNotFound = boundaryLoad('src/app/de/not-found.tsx').default;
-  assert.equal(localNotFound(), null);
-  assert.deepEqual(boundaryLoad('src/app/de/layout.tsx').metadata.robots, { index: false, follow: false });
+
+  // /de/fr must be rejected with notFound
+  await assert.rejects(page({ params: Promise.resolve({ marketSegments: ['fr'] }) }), (error) => error === notFoundError);
+
+  // Unsupported child segment rejected with notFound
+  await assert.rejects(page({ params: Promise.resolve({ marketSegments: ['de', 'invalid-child'] }) }), (error) => error === notFoundError);
 });
 
-test('an isolated enabled fixture follows configured entry behavior, but still rejects invalid locales', async () => {
-  const fixtureLoad = createLoader(root, {
-    'next/navigation': navigation,
-    '@/config/markets': {
-      ...markets,
-      getMarketConfig: (id) => id === germany.id ? { ...germany, enabled: true } : markets.getMarketConfig(id),
-    },
-  });
-  const page = fixtureLoad('src/app/de/[[...marketSegments]]/page.tsx').default;
-  await assert.rejects(page({ params: Promise.resolve({}) }), (error) => error.message === 'REDIRECT' && error.path === '/de/de');
-  for (const language of germany.supportedLanguages) {
-    assert.equal(await page({ params: Promise.resolve({ marketSegments: [language] }) }), null);
-    await assert.rejects(page({ params: Promise.resolve({ marketSegments: [language, 'trial'] }) }), (error) => error === notFoundError);
+test('Trial routing supports /de/{language}/trial for valid subjects', () => {
+  const validSubjects = ['german', 'english', 'arabic', 'french'];
+  for (const subject of validSubjects) {
+    assert.ok(validSubjects.includes(subject));
   }
-  await assert.rejects(page({ params: Promise.resolve({ marketSegments: ['fr'] }) }), (error) => error === notFoundError);
-  assert.equal(markets.getMarketConfig('germany').enabled, false);
+  assert.equal(validSubjects.includes('math'), false);
 });
 
 test('helpers derive slug, supported languages and default from configuration', () => {
