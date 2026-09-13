@@ -17,8 +17,6 @@ export function MarketFooter() {
   const context = parseNavigationContext(pathname);
   const locale = (context.locale as 'de' | 'en' | 'ar') || 'de';
 
-
-
   return (
     <footer className="border-t border-primary-900 bg-primary-950 text-white pt-20 pb-12">
       <Container>
@@ -182,8 +180,6 @@ export function MarketFooter() {
             </ul>
           </div>
         </div>
-
-   
 
         {/* Bottom Bar: Copyright */}
         <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row">
