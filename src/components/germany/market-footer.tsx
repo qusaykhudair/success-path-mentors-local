@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import { Container } from '@/components/ui/container';
@@ -16,13 +17,15 @@ export function MarketFooter() {
   const context = parseNavigationContext(pathname);
   const locale = (context.locale as 'de' | 'en' | 'ar') || 'de';
 
+
+
   return (
     <footer className="border-t border-primary-900 bg-primary-950 text-white pt-20 pb-12">
       <Container>
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
           {/* Col 1: Brand & Identity */}
           <div className="flex flex-col gap-6 lg:col-span-2">
-            <a href={`/de/${locale}`} className="inline-flex w-fit items-center">
+            <Link href={`/de/${locale}`} className="inline-flex w-fit items-center">
               <Image
                 src="/images/Success_Path_Mentors_Europe_Logo_Transparent.png"
                 alt="Success Path Mentors Europe"
@@ -30,7 +33,7 @@ export function MarketFooter() {
                 height={104}
                 className="h-14 sm:h-16 w-auto brightness-0 invert object-contain"
               />
-            </a>
+            </Link>
             <p className="max-w-sm text-sm text-primary-200 leading-relaxed">
               {t('brandDescription')}
             </p>
@@ -46,64 +49,100 @@ export function MarketFooter() {
             </div>
           </div>
 
-          {/* Col 2: Services */}
+          {/* Col 2: Tutoring Services & School */}
           <div className="flex flex-col gap-4">
             <h4 className="text-sm font-bold uppercase tracking-wider text-accent-400">
-              {t('servicesTitle')}
+              {tHeader('tutoringServices', { fallback: 'Tutoring Services' })}
             </h4>
-            <ul className="flex flex-col gap-3 text-sm text-primary-200">
+            <ul className="flex flex-col gap-2.5 text-xs sm:text-sm text-primary-200">
               <li>
-                <a href={`/de/${locale}/trial?subject=german`} className="hover:text-white transition-colors">
-                  {t('services.german')}
-                </a>
+                <Link href={`/de/${locale}/tutoring/one-to-one`} className="hover:text-white transition-colors">
+                  {tHeader('tutoringOneToOne', { fallback: 'One-to-One Tutoring' })}
+                </Link>
               </li>
               <li>
-                <a href={`/de/${locale}/trial?subject=english`} className="hover:text-white transition-colors">
-                  {t('services.english')}
-                </a>
+                <Link href={`/de/${locale}/tutoring/small-groups`} className="hover:text-white transition-colors">
+                  {tHeader('tutoringSmallGroups', { fallback: 'Small Groups (Up to 3)' })}
+                </Link>
               </li>
               <li>
-                <a href={`/de/${locale}/trial?subject=arabic`} className="hover:text-white transition-colors">
-                  {t('services.arabic')}
-                </a>
+                <Link href={`/de/${locale}/tutoring/language-levels`} className="hover:text-white transition-colors">
+                  {tHeader('tutoringLanguageLevels', { fallback: 'Language Support by Level' })}
+                </Link>
+              </li>
+              <li className="pt-2 border-t border-white/10 text-[0.7rem] font-bold uppercase tracking-wider text-primary-400">
+                {tHeader('schoolSupport', { fallback: 'School Support' })}
               </li>
               <li>
-                <a href={`/de/${locale}/trial?subject=french`} className="hover:text-white transition-colors">
-                  {t('services.french')}
-                </a>
+                <Link href={`/de/${locale}/school/grades-1-6`} className="hover:text-white transition-colors">
+                  {tHeader('schoolGrades1To6', { fallback: 'Grades 1–6' })}
+                </Link>
+              </li>
+              <li>
+                <Link href={`/de/${locale}/school/grades-7-9`} className="hover:text-white transition-colors">
+                  {tHeader('schoolGrades7To9', { fallback: 'Grades 7–9' })}
+                </Link>
+              </li>
+              <li>
+                <Link href={`/de/${locale}/school/grades-10-12`} className="hover:text-white transition-colors">
+                  {tHeader('schoolGrades10To12', { fallback: 'Grades 10–12' })}
+                </Link>
+              </li>
+              <li>
+                <Link href={`/de/${locale}/adults`} className="hover:text-white transition-colors">
+                  {tHeader('adults', { fallback: 'Adults' })}
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Col 3: Explore */}
+          {/* Col 3: Languages & Subjects */}
           <div className="flex flex-col gap-4">
             <h4 className="text-sm font-bold uppercase tracking-wider text-accent-400">
-              {t('aboutTitle')}
+              {tHeader('languages', { fallback: 'Languages' })}
             </h4>
-            <ul className="flex flex-col gap-3 text-sm text-primary-200">
+            <ul className="flex flex-col gap-2.5 text-xs sm:text-sm text-primary-200">
               <li>
-                <a href="#why-spm" className="hover:text-white transition-colors">
+                <Link href={`/de/${locale}/languages/german`} className="hover:text-white transition-colors">
+                  {tHeader('langGerman', { fallback: 'German' })}
+                </Link>
+              </li>
+              <li>
+                <Link href={`/de/${locale}/languages/english`} className="hover:text-white transition-colors">
+                  {tHeader('langEnglish', { fallback: 'English' })}
+                </Link>
+              </li>
+              <li>
+                <Link href={`/de/${locale}/languages/french`} className="hover:text-white transition-colors">
+                  {tHeader('langFrench', { fallback: 'French' })}
+                </Link>
+              </li>
+              <li>
+                <Link href={`/de/${locale}/languages/arabic`} className="hover:text-white transition-colors">
+                  {tHeader('langArabic', { fallback: 'Arabic' })}
+                </Link>
+              </li>
+              <li className="pt-2 border-t border-white/10 text-[0.7rem] font-bold uppercase tracking-wider text-primary-400">
+                {t('aboutTitle')}
+              </li>
+              <li>
+                <a href={`/de/${locale}#why-spm`} className="hover:text-white transition-colors">
                   {tHeader('whySpm')}
                 </a>
               </li>
               <li>
-                <a href="#teacher-quality" className="hover:text-white transition-colors">
+                <a href={`/de/${locale}#teacher-quality`} className="hover:text-white transition-colors">
                   {tHeader('teacherQuality')}
                 </a>
               </li>
               <li>
-                <a href="#how-it-works" className="hover:text-white transition-colors">
+                <a href={`/de/${locale}#how-it-works`} className="hover:text-white transition-colors">
                   {tHeader('howItWorks')}
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="hover:text-white transition-colors">
+                <a href={`/de/${locale}#pricing`} className="hover:text-white transition-colors">
                   {tHeader('pricing')}
-                </a>
-              </li>
-              <li>
-                <a href="#faq" className="hover:text-white transition-colors">
-                  {tHeader('faq')}
                 </a>
               </li>
             </ul>
@@ -114,49 +153,51 @@ export function MarketFooter() {
             <h4 className="text-sm font-bold uppercase tracking-wider text-accent-400">
               {t('accountTitle')}
             </h4>
-            <ul className="flex flex-col gap-3 text-sm text-primary-200">
+            <ul className="flex flex-col gap-2.5 text-xs sm:text-sm text-primary-200">
               <li>
-                <a href={`/de/${locale}/login`} className="hover:text-white transition-colors">
+                <Link href={`/de/${locale}/login`} className="hover:text-white transition-colors">
                   {tHeader('login')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href={`/de/${locale}/register`} className="hover:text-white transition-colors">
+                <Link href={`/de/${locale}/register`} className="hover:text-white transition-colors">
                   {tHeader('register')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href={`/de/${locale}/trial`} className="hover:text-accent-300 font-semibold transition-colors">
+                <Link href={`/de/${locale}/trial`} className="hover:text-accent-300 font-semibold transition-colors">
                   {t('freeTrial')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href={`/de/${locale}/privacy`} className="hover:text-white transition-colors">
+                <Link href={`/de/${locale}/privacy`} className="hover:text-white transition-colors">
                   {t('legal.privacy')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href={`/de/${locale}/terms`} className="hover:text-white transition-colors">
+                <Link href={`/de/${locale}/terms`} className="hover:text-white transition-colors">
                   {t('legal.terms')}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
         </div>
 
+   
+
         {/* Bottom Bar: Copyright */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
+        <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row">
           <p className="text-xs text-primary-300">
             &copy; {new Date().getFullYear()} Success Path Mentors. {t('allRightsReserved')}
           </p>
           <div className="flex items-center gap-6 text-xs text-primary-300">
-            <a href={`/de/${locale}/privacy`} className="hover:text-white transition-colors">
+            <Link href={`/de/${locale}/privacy`} className="hover:text-white transition-colors">
               {t('legal.privacy')}
-            </a>
+            </Link>
             <span>•</span>
-            <a href={`/de/${locale}/terms`} className="hover:text-white transition-colors">
+            <Link href={`/de/${locale}/terms`} className="hover:text-white transition-colors">
               {t('legal.terms')}
-            </a>
+            </Link>
           </div>
         </div>
       </Container>

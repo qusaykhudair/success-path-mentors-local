@@ -15,8 +15,8 @@
     "freeTrial": "Kostenlose Probestunde",
     "personalizedTutoring": "Persönliche 1-zu-1 Nachhilfe",
     "customerSupport": "Kundenkoordination und Support",
-    "headline": "Entfalte dein Potenzial",
-    "subheadline": "Individuelle 1-zu-1-Nachhilfe für deinen Erfolg.",
+    "headline": "Individuelle Online-Förderung für jede Lernstufe",
+    "subheadline": "Wählen Sie individuelle Einzelnachhilfe, eine Kleingruppe mit bis zu drei Lernenden oder stufenbasierte Sprachförderung. Lernen Sie Deutsch, Englisch, Französisch oder Arabisch — oder sichern Sie sich gezielte Schulnachhilfe von der Grundschule bis zum Abitur.",
     "trustContext": "Personalisiertes Lernen",
     "selector": {
       "question": "Wobei möchtest du Hilfe?",
@@ -31,11 +31,11 @@
       "processing": "Wird bearbeitet...",
       "microcopy": "100% kostenlose Probestunde • Unverbindlich"
     },
-    "eyebrow": "Premium Online Nachhilfe",
+    "eyebrow": "Individuelle Online-Förderung",
     "benefits": [
-      "Personalisierte 1-zu-1 Betreuung",
-      "Flexible Online-Stunden",
-      "Menschliche Koordination"
+      "Individuelle Einzelnachhilfe & Kleingruppen bis zu 3",
+      "Deutsch, Englisch, Französisch & Arabisch nach Stufen",
+      "Schulbegleitung von Klasse 1 bis zum Abitur"
     ]
   },
   "services": {
@@ -371,7 +371,22 @@
     "faq": "FAQ",
     "login": "Anmelden",
     "register": "Registrieren",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "tutoringServices": "Nachhilfeangebote",
+    "tutoringOneToOne": "Individuelle Einzelnachhilfe",
+    "tutoringSmallGroups": "Smarte Kleingruppen (bis zu 3)",
+    "tutoringLanguageLevels": "Sprachförderung nach Stufen",
+    "languages": "Sprachen",
+    "langGerman": "Deutsch",
+    "langEnglish": "Englisch",
+    "langFrench": "Französisch",
+    "langArabic": "Arabisch",
+    "schoolSupport": "Schulnachhilfe",
+    "schoolGrades1To6": "Klassen 1–6 (Grundschule)",
+    "schoolGrades7To9": "Klassen 7–9 (Mittelstufe)",
+    "schoolGrades10To12": "Klassen 10–12 (Oberstufe)",
+    "adults": "Erwachsene",
+    "freeTrial": "Kostenlose Probestunde"
   },
   "pricing": {
     "eyebrow": "Transparente Pläne",

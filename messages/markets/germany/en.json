@@ -15,8 +15,8 @@
     "freeTrial": "Free Trial",
     "personalizedTutoring": "Personalized 1-to-1 tutoring",
     "customerSupport": "Customer coordination and support",
-    "headline": "Unlock Your Potential",
-    "subheadline": "Personalized 1-to-1 tutoring designed for your success.",
+    "headline": "Personalized Online Learning for Every Stage",
+    "subheadline": "Choose one-to-one tutoring, a small group of up to three learners, or level-based language support. Learn English, German, French or Arabic — or get academic support from the early school years through graduation.",
     "trustContext": "Personalized Learning",
     "selector": {
       "question": "What would you like help with?",
@@ -31,11 +31,11 @@
       "processing": "Processing...",
       "microcopy": "100% Free Trial Session • No Commitment"
     },
-    "eyebrow": "Premium Online Tutoring",
+    "eyebrow": "Personalized Online Learning",
     "benefits": [
-      "Personalized 1-to-1 learning",
-      "Flexible online lessons",
-      "Expert human coordination"
+      "Personal one-to-one & small groups up to 3",
+      "German, English, French & Arabic levels",
+      "School subjects from Grade 1 to Graduation"
     ]
   },
   "services": {
@@ -371,7 +371,22 @@
     "faq": "FAQ",
     "login": "Log in",
     "register": "Sign up",
-    "contact": "Contact"
+    "contact": "Contact",
+    "tutoringServices": "Tutoring Services",
+    "tutoringOneToOne": "One-to-One Tutoring",
+    "tutoringSmallGroups": "Small Groups (Up to 3)",
+    "tutoringLanguageLevels": "Language Support by Level",
+    "languages": "Languages",
+    "langGerman": "German",
+    "langEnglish": "English",
+    "langFrench": "French",
+    "langArabic": "Arabic",
+    "schoolSupport": "School Support",
+    "schoolGrades1To6": "Grades 1–6 (Foundation)",
+    "schoolGrades7To9": "Grades 7–9 (Middle Years)",
+    "schoolGrades10To12": "Grades 10–12 (Senior School)",
+    "adults": "Adults",
+    "freeTrial": "Free Trial"
   },
   "pricing": {
     "eyebrow": "Transparent Plans",

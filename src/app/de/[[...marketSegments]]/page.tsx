@@ -5,7 +5,9 @@ import { getMarketLocalePath, resolveMarketRoute } from '@/lib/market-routing';
 
 import { GermanyHero } from '@/components/germany/germany-hero';
 import { TrustStrip } from '@/components/germany/trust-strip';
-import { GermanyServiceGrid } from '@/components/germany/germany-service-grid';
+import { ChooseHowYouLearn } from '@/components/germany/choose-how-you-learn';
+import { WhatToLearn } from '@/components/germany/what-to-learn';
+import { PlacementAssessmentSection } from '@/components/germany/placement-assessment-section';
 import { WhySpm } from '@/components/germany/why-spm';
 import { UseCases } from '@/components/germany/use-cases';
 import { TeacherQuality } from '@/components/germany/teacher-quality';
@@ -20,8 +22,11 @@ import { AuthShell } from '@/features/auth/auth-shell';
 import { LoginForm } from '@/features/auth/login-form';
 import { RegistrationForm } from '@/features/auth/registration-form';
 import { GermanyLegalPage } from '@/components/germany/germany-legal-page';
+import { TutoringPageView } from '@/components/germany/tutoring-page-view';
 import { getGermanyPrivacyPolicy } from '@/content/legal/germany/privacy-policy';
 import { getGermanyTerms } from '@/content/legal/germany/terms';
+import { getTutoringPage } from '@/content/germany-tutoring/pages';
+import type { TutoringLocale } from '@/content/germany-tutoring/types';
 import type { AuthUiLocale } from '@/features/auth/auth-contracts';
 
 export async function generateMetadata({ params }: {
@@ -31,10 +36,11 @@ export async function generateMetadata({ params }: {
   const route = resolveMarketRoute('germany', marketSegments);
   if (!route) return {};
 
-  if (route.kind === 'child' && route.childSegments?.length === 1) {
-    const child = route.childSegments[0];
+  if (route.kind === 'child' && route.childSegments && route.childSegments.length > 0) {
+    const childPath = route.childSegments.join('/');
     const locale = route.language as 'de' | 'en' | 'ar';
-    if (child === 'privacy') {
+
+    if (childPath === 'privacy') {
       const doc = getGermanyPrivacyPolicy(locale);
       return {
         title: doc.seo.title,
@@ -44,13 +50,34 @@ export async function generateMetadata({ params }: {
         },
       };
     }
-    if (child === 'terms') {
+    if (childPath === 'terms') {
       const doc = getGermanyTerms(locale);
       return {
         title: doc.seo.title,
         description: doc.seo.description,
         alternates: {
           canonical: `https://successpathmentors.net/de/${locale}/terms`,
+        },
+      };
+    }
+
+    // Tutoring service pages metadata
+    const tutoringDoc = getTutoringPage(childPath, locale);
+    if (tutoringDoc) {
+      return {
+        title: tutoringDoc.seo.title,
+        description: tutoringDoc.seo.description,
+        keywords: tutoringDoc.seo.keywords as string[],
+        alternates: {
+          canonical: `https://successpathmentors.net/de/${locale}/${childPath}`,
+        },
+        openGraph: {
+          title: tutoringDoc.seo.title,
+          description: tutoringDoc.seo.description,
+          url: `https://successpathmentors.net/de/${locale}/${childPath}`,
+          siteName: 'Success Path Mentors Europe',
+          locale: locale === 'de' ? 'de_DE' : locale === 'ar' ? 'ar_AR' : 'en_US',
+          type: 'website',
         },
       };
     }
@@ -68,10 +95,12 @@ export default async function MarketPage({ params }: {
   if (route.kind === 'entry') redirect(getMarketLocalePath(route.market.id, route.language));
 
   // Handle market-scoped child routes
-  if (route.kind === 'child' && route.childSegments?.length === 1) {
-    const child = route.childSegments[0];
+  if (route.kind === 'child' && route.childSegments && route.childSegments.length > 0) {
+    const childPath = route.childSegments.join('/');
+    const lang = route.language as TutoringLocale;
 
-    if (child === 'trial') {
+    // Trial Flow (supporting both /trial and /free-trial)
+    if (childPath === 'trial' || childPath === 'free-trial') {
       return (
         <div className="flex min-h-screen items-center justify-center bg-primary-50 py-12 px-4 sm:px-6 lg:px-8">
           <div className="w-full max-w-2xl">
@@ -81,36 +110,38 @@ export default async function MarketPage({ params }: {
       );
     }
 
-    if (child === 'login') {
-      const lang = route.language as AuthUiLocale;
+    // Login
+    if (childPath === 'login') {
+      const authLang = route.language as AuthUiLocale;
       return (
-        <AuthShell locale={lang} homeHref={`/de/${lang}`}>
+        <AuthShell locale={authLang} homeHref={`/de/${authLang}`}>
           <LoginForm
-            locale={lang}
+            locale={authLang}
             marketId="germany"
-            registerHref={`/de/${lang}/register`}
-            contactHref={`/de/${lang}#contact`}
+            registerHref={`/de/${authLang}/register`}
+            contactHref={`/de/${authLang}#contact`}
           />
         </AuthShell>
       );
     }
 
-    if (child === 'register') {
-      const lang = route.language as AuthUiLocale;
+    // Registration
+    if (childPath === 'register') {
+      const authLang = route.language as AuthUiLocale;
       return (
-        <AuthShell locale={lang} homeHref={`/de/${lang}`}>
+        <AuthShell locale={authLang} homeHref={`/de/${authLang}`}>
           <RegistrationForm
-            locale={lang}
+            locale={authLang}
             marketId="germany"
-            loginHref={`/de/${lang}/login`}
-            homeHref={`/de/${lang}`}
+            loginHref={`/de/${authLang}/login`}
+            homeHref={`/de/${authLang}`}
           />
         </AuthShell>
       );
     }
 
-    if (child === 'privacy') {
-      const lang = route.language as 'de' | 'en' | 'ar';
+    // Legal: Privacy Policy
+    if (childPath === 'privacy') {
       const doc = getGermanyPrivacyPolicy(lang);
       return (
         <GermanyLegalPage
@@ -121,8 +152,8 @@ export default async function MarketPage({ params }: {
       );
     }
 
-    if (child === 'terms') {
-      const lang = route.language as 'de' | 'en' | 'ar';
+    // Legal: Terms of Service
+    if (childPath === 'terms') {
       const doc = getGermanyTerms(lang);
       return (
         <GermanyLegalPage
@@ -131,6 +162,12 @@ export default async function MarketPage({ params }: {
           documentType="terms"
         />
       );
+    }
+
+    // Tutoring Service Landing Pages
+    const tutoringDoc = getTutoringPage(childPath, lang);
+    if (tutoringDoc) {
+      return <TutoringPageView page={tutoringDoc} locale={lang} />;
     }
   }
 
@@ -142,7 +179,9 @@ export default async function MarketPage({ params }: {
     <>
       <GermanyHero />
       <TrustStrip />
-      <GermanyServiceGrid />
+      <ChooseHowYouLearn />
+      <WhatToLearn />
+      <PlacementAssessmentSection />
       <WhySpm />
       <UseCases />
       <TeacherQuality />
