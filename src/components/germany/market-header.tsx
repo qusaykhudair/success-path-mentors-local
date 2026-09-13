@@ -303,7 +303,9 @@ export function MarketHeader() {
             className="hidden h-10 items-center gap-2 rounded-full border border-primary-200 bg-white px-4 text-sm font-semibold text-primary-900 shadow-2xs transition-colors hover:border-accent-300 hover:bg-accent-50/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring xl:inline-flex whitespace-nowrap"
           >
             <Phone className="h-4 w-4 text-accent-600 shrink-0" />
-            <span dir="ltr" className="whitespace-nowrap">{marketConfig.contact.whatsappDisplay}</span>
+            <span dir="ltr" className="whitespace-nowrap font-mono">
+              <bdi dir="ltr">&lrm;{marketConfig.contact.whatsappDisplay}</bdi>
+            </span>
           </a>
 
           {/* Free Trial CTA */}
@@ -484,8 +486,11 @@ export function MarketHeader() {
               rel="noopener noreferrer"
               className="flex min-h-touch w-full items-center justify-center gap-2 rounded-2xl border border-emerald-200 bg-emerald-50 py-3 text-sm font-bold text-emerald-800"
             >
-              <Phone className="h-4 w-4 text-emerald-600" />
-              <span>WhatsApp: {marketConfig.contact.whatsappDisplay}</span>
+              <Phone className="h-4 w-4 text-emerald-600 shrink-0" />
+              <span className="inline-flex items-center gap-1.5">
+                <span>{locale === 'ar' ? 'واتساب:' : 'WhatsApp:'}</span>
+                <bdi dir="ltr" className="font-mono">&lrm;{marketConfig.contact.whatsappDisplay}</bdi>
+              </span>
             </a>
           </div>
         </div>

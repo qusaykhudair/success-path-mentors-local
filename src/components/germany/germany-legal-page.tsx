@@ -177,7 +177,9 @@ export function GermanyLegalPage({ document, locale, documentType }: GermanyLega
                   </div>
                   <div className="flex items-center gap-2">
                     <MessageSquare className="h-3.5 w-3.5 text-accent-400 shrink-0" />
-                    <span dir="ltr">{germanyLegalConfig.whatsappDisplay}</span>
+                    <span dir="ltr">
+                      <bdi dir="ltr">&lrm;{germanyLegalConfig.whatsappDisplay}</bdi>
+                    </span>
                   </div>
                 </div>
               </div>

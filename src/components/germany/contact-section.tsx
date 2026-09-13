@@ -42,8 +42,8 @@ export function ContactSection() {
               </div>
               <h3 className="mt-6 text-xl font-bold text-primary-950">{t('whatsappTitle')}</h3>
               <p className="mt-2 text-sm text-primary-600 leading-relaxed">{t('whatsappDesc')}</p>
-              <div className="mt-4 font-mono text-sm font-bold text-primary-900 dir-ltr text-start">
-                {marketConfig.contact.whatsappDisplay}
+              <div className="mt-4 font-mono text-sm font-bold text-primary-900 text-start" dir="ltr">
+                <bdi dir="ltr">&lrm;{marketConfig.contact.whatsappDisplay}</bdi>
               </div>
             </div>
             <div className="mt-8 pt-4 border-t border-primary-100">

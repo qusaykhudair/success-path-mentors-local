@@ -38,7 +38,9 @@ export function MarketFooter() {
             <div className="flex flex-col gap-2 pt-2 text-xs text-primary-300 font-mono">
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-accent-400 shrink-0" />
-                <span dir="ltr">{marketConfig.contact.whatsappDisplay}</span>
+                <span dir="ltr">
+                  <bdi dir="ltr">&lrm;{marketConfig.contact.whatsappDisplay}</bdi>
+                </span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-accent-400 shrink-0" />
