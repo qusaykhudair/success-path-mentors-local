@@ -16,8 +16,6 @@ export function MarketFooter() {
   const context = parseNavigationContext(pathname);
   const locale = (context.locale as 'de' | 'en' | 'ar') || 'de';
 
-  const authLocale = locale === 'ar' ? 'ar' : 'en';
-
   return (
     <footer className="border-t border-primary-900 bg-primary-950 text-white pt-20 pb-12">
       <Container>
@@ -133,12 +131,12 @@ export function MarketFooter() {
                 </a>
               </li>
               <li>
-                <a href={`/${authLocale}/privacy`} className="hover:text-white transition-colors">
+                <a href={`/de/${locale}/privacy`} className="hover:text-white transition-colors">
                   {t('legal.privacy')}
                 </a>
               </li>
               <li>
-                <a href={`/${authLocale}/terms`} className="hover:text-white transition-colors">
+                <a href={`/de/${locale}/terms`} className="hover:text-white transition-colors">
                   {t('legal.terms')}
                 </a>
               </li>
@@ -152,11 +150,11 @@ export function MarketFooter() {
             &copy; {new Date().getFullYear()} Success Path Mentors. {t('allRightsReserved')}
           </p>
           <div className="flex items-center gap-6 text-xs text-primary-300">
-            <a href={`/${authLocale}/privacy`} className="hover:text-white transition-colors">
+            <a href={`/de/${locale}/privacy`} className="hover:text-white transition-colors">
               {t('legal.privacy')}
             </a>
             <span>•</span>
-            <a href={`/${authLocale}/terms`} className="hover:text-white transition-colors">
+            <a href={`/de/${locale}/terms`} className="hover:text-white transition-colors">
               {t('legal.terms')}
             </a>
           </div>

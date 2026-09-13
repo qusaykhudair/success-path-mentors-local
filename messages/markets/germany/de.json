@@ -262,24 +262,33 @@
   },
   "whySpm": {
     "eyebrow": "Warum Success Path Mentors",
-    "headline": "Ihr Erfolg ist unser Ziel",
-    "subheadline": "Wir kombinieren persönliche Betreuung mit flexibler Technologie, um jeden Schüler individuell zu unterstützen.",
+    "headline": "Mehr als nur Nachhilfe",
+    "subheadline": "Eine individuelle Lernerfahrung mit persönlicher Betreuung, durchdachter Koordination und hohen Qualitätsstandards.",
+    "cta": "Kostenlose Probestunde sichern",
     "features": [
       {
-        "title": "Persönliche 1-zu-1 Betreuung",
-        "description": "Individueller Lernplan für jeden Schüler."
+        "title": "Erfahrung in verschiedenen Bildungsmärkten",
+        "description": "Unsere Erfahrung in unterschiedlichen Bildungsumfeldern hilft uns, die vielfältigen Bedürfnisse von Lernenden und Familien zu verstehen und unsere Unterstützung gezielt anzupassen."
       },
       {
-        "title": "Menschliche Koordination",
-        "description": "Wir kümmern uns um alles – von der Lehrersuche bis zur Terminplanung."
+        "title": "Persönliche menschliche Koordination",
+        "description": "Unser Koordinationsteam begleitet den Lernweg weit über den Unterricht hinaus – von der Bedarfsanalyse und passenden Lehrerauswahl bis hin zu Terminplanung und laufender Abstimmung."
       },
       {
-        "title": "Passende Lehrerauswahl",
-        "description": "Wir finden eine passende Lehrkraft basierend auf Ihren Lernbedürfnissen und Zielen."
+        "title": "Individuell für jeden Lernenden",
+        "description": "Wir berücksichtigen Ziele, Vorkenntnisse, Lerntempo und persönliche Anforderungen, um den Unterricht gezielt auf den Schüler abzustimmen, statt auf Einheitslösungen zu setzen."
       },
       {
-        "title": "Flexible Online-Formate",
-        "description": "Lernen Sie von überall, zu flexiblen Zeiten, die in Ihren Alltag passen."
+        "title": "Hohe Standards für Unterrichtsqualität",
+        "description": "Bei der Auswahl und Zusammenarbeit mit Lehrkräften achten wir konsequent auf fundiertes Fachwissen, pädagogisches Geschick, klare Kommunikation und Professionalität."
+      },
+      {
+        "title": "Lernen mit Motivation und Selbstvertrauen",
+        "description": "Unsere Lehrmethode verbindet fachliche Förderung mit ermutigender, persönlicher Kommunikation – damit Lernende aktiv mitmachen, wirklich verstehen und Freude am Lernen entwickeln."
+      },
+      {
+        "title": "Ihre Zufriedenheit ist uns wichtig",
+        "description": "Sollte etwas einmal nicht Ihren Erwartungen entsprechen, nimmt sich unser Koordinationsteam Zeit für Ihr Anliegen, um gemeinsam eine passende Lösung zu finden."
       }
     ]
   },

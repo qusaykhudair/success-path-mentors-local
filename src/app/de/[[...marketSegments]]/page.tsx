@@ -1,6 +1,7 @@
+import type { Metadata } from 'next';
 import { redirect, notFound } from 'next/navigation';
 import { requireMarketRoute } from '@/lib/market-route-boundary';
-import { getMarketLocalePath } from '@/lib/market-routing';
+import { getMarketLocalePath, resolveMarketRoute } from '@/lib/market-routing';
 
 import { GermanyHero } from '@/components/germany/germany-hero';
 import { TrustStrip } from '@/components/germany/trust-strip';
@@ -18,7 +19,45 @@ import { TrialFlow } from '@/components/germany/trial-flow';
 import { AuthShell } from '@/features/auth/auth-shell';
 import { LoginForm } from '@/features/auth/login-form';
 import { RegistrationForm } from '@/features/auth/registration-form';
+import { GermanyLegalPage } from '@/components/germany/germany-legal-page';
+import { getGermanyPrivacyPolicy } from '@/content/legal/germany/privacy-policy';
+import { getGermanyTerms } from '@/content/legal/germany/terms';
 import type { AuthUiLocale } from '@/features/auth/auth-contracts';
+
+export async function generateMetadata({ params }: {
+  params: Promise<{ marketSegments?: string[] }>;
+}): Promise<Metadata> {
+  const { marketSegments } = await params;
+  const route = resolveMarketRoute('germany', marketSegments);
+  if (!route) return {};
+
+  if (route.kind === 'child' && route.childSegments?.length === 1) {
+    const child = route.childSegments[0];
+    const locale = route.language as 'de' | 'en' | 'ar';
+    if (child === 'privacy') {
+      const doc = getGermanyPrivacyPolicy(locale);
+      return {
+        title: doc.seo.title,
+        description: doc.seo.description,
+        alternates: {
+          canonical: `https://successpathmentors.net/de/${locale}/privacy`,
+        },
+      };
+    }
+    if (child === 'terms') {
+      const doc = getGermanyTerms(locale);
+      return {
+        title: doc.seo.title,
+        description: doc.seo.description,
+        alternates: {
+          canonical: `https://successpathmentors.net/de/${locale}/terms`,
+        },
+      };
+    }
+  }
+
+  return {};
+}
 
 export default async function MarketPage({ params }: {
   params: Promise<{ marketSegments?: string[] }>;
@@ -67,6 +106,30 @@ export default async function MarketPage({ params }: {
             homeHref={`/de/${lang}`}
           />
         </AuthShell>
+      );
+    }
+
+    if (child === 'privacy') {
+      const lang = route.language as 'de' | 'en' | 'ar';
+      const doc = getGermanyPrivacyPolicy(lang);
+      return (
+        <GermanyLegalPage
+          document={doc}
+          locale={lang}
+          documentType="privacy"
+        />
+      );
+    }
+
+    if (child === 'terms') {
+      const lang = route.language as 'de' | 'en' | 'ar';
+      const doc = getGermanyTerms(lang);
+      return (
+        <GermanyLegalPage
+          document={doc}
+          locale={lang}
+          documentType="terms"
+        />
       );
     }
   }

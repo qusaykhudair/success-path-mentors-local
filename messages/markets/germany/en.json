@@ -262,24 +262,33 @@
   },
   "whySpm": {
     "eyebrow": "Why Success Path Mentors",
-    "headline": "Your success is our goal",
-    "subheadline": "We combine personal support with flexible technology to support every student individually.",
+    "headline": "More Than Tutoring",
+    "subheadline": "A personalized learning experience supported by dedicated people, thoughtful coordination and high teaching standards.",
+    "cta": "Book Your Free Trial",
     "features": [
       {
-        "title": "Personalized 1-to-1 Support",
-        "description": "Individual learning plan for every student."
+        "title": "Experience Across Multiple Markets",
+        "description": "Our experience across different educational environments helps us understand the diverse needs of learners and families and adapt our support accordingly."
       },
       {
-        "title": "Human Coordination",
-        "description": "We take care of everything – from finding a tutor to scheduling."
+        "title": "Dedicated Human Coordination",
+        "description": "Our coordination team supports the learning journey beyond the lesson — from understanding your needs and tutor matching to scheduling and ongoing communication."
       },
       {
-        "title": "Tutor Matching",
-        "description": "We find a suitable tutor based on your learning needs and goals."
+        "title": "Personalized for Every Learner",
+        "description": "We consider each learner's goals, level, pace and individual needs to shape a tutoring experience that fits the learner rather than forcing every student into the same approach."
       },
       {
-        "title": "Flexible Online Formats",
-        "description": "Learn from anywhere, at flexible times that fit into your daily life."
+        "title": "High Standards for Teaching Quality",
+        "description": "We focus on subject knowledge, teaching ability, communication, professionalism and learner fit when selecting and coordinating with tutors."
+      },
+      {
+        "title": "Learning with Confidence and Motivation",
+        "description": "Our teaching approach combines academic support with encouragement and friendly communication to help learners participate, understand and develop a more positive relationship with learning."
+      },
+      {
+        "title": "Your Satisfaction Matters",
+        "description": "If something is not meeting your expectations, our coordination team will work with you to understand the issue and find an appropriate solution."
       }
     ]
   },

@@ -249,6 +249,8 @@ export function RegistrationForm({
   const effectiveHomeHref =
     homeHref ||
     (marketId === 'germany' ? `/de/${locale}` : `/${locale}`);
+  const effectivePrivacyHref =
+    marketId === 'germany' ? `/de/${locale}/privacy` : `/${locale}/privacy`;
 
   const [phoneCountry, setPhoneCountry] = useState<CountryCode>(marketId === 'germany' ? 'DE' : defaultPhoneCountry);
 
@@ -788,7 +790,31 @@ export function RegistrationForm({
                   aria-describedby="privacy_consent-error"
                   {...form.register('privacy_consent')}
                 />
-                <span>{copy.register.consent}</span>
+                <span>
+                  {(() => {
+                    const text = copy.register.consent;
+                    const phrase = locale === 'de' ? 'Datenschutzerklärung' : locale === 'ar' ? 'سياسة الخصوصية' : 'Privacy Policy';
+                    if (text.includes(phrase)) {
+                      const [before, after] = text.split(phrase);
+                      return (
+                        <>
+                          {before}
+                          <a
+                            href={effectivePrivacyHref}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-semibold underline text-accent-700 hover:text-accent-900"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            {phrase}
+                          </a>
+                          {after}
+                        </>
+                      );
+                    }
+                    return text;
+                  })()}
+                </span>
               </label>
               <FieldError id="privacy_consent-error">{form.formState.errors.privacy_consent?.message}</FieldError>
             </div>
