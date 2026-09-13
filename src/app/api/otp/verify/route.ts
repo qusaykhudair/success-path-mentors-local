@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
-  const apiKey = process.env.REGISTRATION_API_KEY;
+  const apiKey = (process.env.REGISTRATION_API_KEY || '').trim();
   const baseUrl = (process.env.NEXT_PUBLIC_API_BASE_URL || '').trim().replace(/\/+$/, '');
 
   if (!apiKey) {

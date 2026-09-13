@@ -122,10 +122,15 @@ export class AuthApiError extends Error {
   readonly requestId?: string;
 
   constructor(body: ApiErrorBody = {}, status = 500) {
-    super(body.error || body.message || `Authentication request failed (${status}).`);
+    const detailsMessage = Array.isArray(body.details) && body.details.length > 0 && typeof body.details[0] === 'string'
+      ? (body.details as unknown as string[]).join('. ')
+      : null;
+    super(detailsMessage || body.error || body.message || `Authentication request failed (${status}).`);
     this.name = 'AuthApiError';
     this.code = body.code || 'UNEXPECTED_ERROR';
-    this.fieldErrors = body.details || body.field_errors || [];
+    this.fieldErrors = Array.isArray(body.details)
+      ? body.details.map((d: any) => (typeof d === 'string' ? { field: d.split(' ')[0] || '', message: d } : d))
+      : (body.field_errors || []);
     this.retryAfterSeconds = body.retry_after_seconds;
     this.requestId = body.request_id;
   }

@@ -47,8 +47,29 @@ const nextConfig = {
           source: '/api/portal/:path*',
           destination: `${apiBaseUrl}/api/portal/:path*`,
         },
+        {
+          source: '/api/admin/:path*',
+          destination: `${apiBaseUrl}/api/admin/:path*`,
+        },
+        {
+          source: '/api/auth/magic-token',
+          destination: `${apiBaseUrl}/api/auth/magic-token`,
+        },
+        {
+          source: '/api/auth/login',
+          destination: `${apiBaseUrl}/api/auth/login`,
+        },
+        {
+          source: '/api/auth/setup-password',
+          destination: `${apiBaseUrl}/api/auth/setup-password`,
+        },
       ],
-      fallback: [],
+      fallback: [
+        {
+          source: '/api/health',
+          destination: `${apiBaseUrl}/api/health`,
+        },
+      ],
     };
   }
 };

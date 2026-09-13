@@ -166,10 +166,10 @@ export const authApi = {
     }
 
     return requestJson<{
-      masked_contact: string;
-      contact_method_id: number;
-      contact_method: string;
-      message: string;
+      masked_contact?: string;
+      contact_method_id?: number | string;
+      contact_method?: string;
+      message?: string;
       _dev_otp?: string;
     }>(
       '/api/portal/auth/login/request',
@@ -181,10 +181,10 @@ export const authApi = {
         console.log('Backend returned DEV OTP code (Login):', res._dev_otp);
       }
       return {
-        challenge_id: res.contact_method_id.toString(),
-        channel: res.contact_method as any,
-        masked_destination: res.masked_contact,
-        expires_in_seconds: 300,
+        challenge_id: res.contact_method_id != null ? String(res.contact_method_id) : '',
+        channel: (res.contact_method as any) || (payload.identifier.includes('@') ? 'EMAIL' : 'WHATSAPP'),
+        masked_destination: res.masked_contact || maskIdentifier(payload.identifier).destination,
+        expires_in_seconds: 600,
         resend_after_seconds: 60,
       };
     });
@@ -198,11 +198,15 @@ export const authApi = {
       return mockVerifyLogin(payload, locale);
     }
 
+    const contactMethodId = payload.challenge_id
+      ? (isNaN(Number(payload.challenge_id)) ? payload.challenge_id : parseInt(payload.challenge_id, 10))
+      : null;
+
     return requestJson<{
       portal_token: string;
       lms_magic_token?: string | null;
       user: {
-        auth_user_id: number;
+        auth_user_id: number | string;
         name: string;
         roles: string[];
         is_guardian: boolean;
@@ -214,18 +218,40 @@ export const authApi = {
       {
         method: 'POST',
         body: JSON.stringify({
-          contact_method_id: parseInt(payload.challenge_id, 10),
+          contact_method_id: contactMethodId,
           code: payload.otp,
         }),
       },
       locale,
       true
-    ).then((res) => {
+    ).then(async (res) => {
       if (typeof window !== 'undefined') {
         localStorage.setItem('portal_token', res.portal_token);
       }
+
+      // Automatically exchange LMS magic token if available (SSO)
+      if (res.lms_magic_token) {
+        try {
+          const magicRes = await fetch(`/api/auth/magic-token?token=${encodeURIComponent(res.lms_magic_token)}`);
+          if (magicRes.ok) {
+            const magicData = (await magicRes.json().catch(() => ({}))) as {
+              token?: string;
+              user?: { id: string; role: string; name: string; email: string };
+            };
+            if (magicData.token && typeof window !== 'undefined') {
+              localStorage.setItem('lms_token', magicData.token);
+              if (magicData.user) {
+                localStorage.setItem('lms_user', JSON.stringify(magicData.user));
+              }
+            }
+          }
+        } catch (ssoError) {
+          console.warn('LMS magic token exchange error:', ssoError);
+        }
+      }
+
       return {
-        auth_user_id: res.user.auth_user_id.toString(),
+        auth_user_id: String(res.user.auth_user_id),
         display_name: res.user.name,
         role: res.user.roles.includes('PARENT') ? 'PARENT' : 'STUDENT',
         redirect_to: res.lms_magic_token ? `https://lms.successpathmentors.net/api/auth/magic-token?token=${res.lms_magic_token}` : `/${locale}`,
@@ -259,7 +285,7 @@ export const authApi = {
         curriculum: payload.curriculum,
         language: payload.preferred_language,
         timezone: payload.timezone,
-        preferred_days: [payload.preferred_day.toUpperCase()],
+        preferred_days: payload.preferred_day ? [payload.preferred_day.toUpperCase()] : undefined,
         preferred_time_start: payload.preferred_time,
         preferred_time_end: payload.preferred_time_end,
         notes: payload.notes,
@@ -354,26 +380,36 @@ export const authApi = {
       return mockVerifyRegistration(payload, registrationId);
     }
 
+    const contactMethodId = payload.contact_id
+      ? (isNaN(Number(payload.contact_id)) ? payload.contact_id : parseInt(payload.contact_id, 10))
+      : null;
+
     return requestJson<{
       success: boolean;
       message: string;
       account_activated: boolean;
+      lms_setup_token?: string | null;
     }>(
       `/api/otp/verify`,
       {
         method: 'POST',
         body: JSON.stringify({
-          contact_method_id: parseInt(payload.contact_id, 10),
+          contact_method_id: contactMethodId,
           code: payload.otp,
         }),
       },
       locale,
       true // use proxy
-    ).then(() => ({
-      registration_id: registrationId,
-      status: 'ACCOUNT_VERIFIED' as any,
-      trial_status: 'WAITING_FOR_ASSIGNMENT' as any,
-    }));
+    ).then((res) => {
+      if (res.lms_setup_token && typeof window !== 'undefined') {
+        localStorage.setItem('lms_setup_token', res.lms_setup_token);
+      }
+      return {
+        registration_id: registrationId,
+        status: 'ACCOUNT_VERIFIED' as any,
+        trial_status: 'WAITING_FOR_ASSIGNMENT' as any,
+      };
+    });
   },
 
   async resendRegistrationVerification(
@@ -391,6 +427,10 @@ export const authApi = {
       };
     }
 
+    const contactMethodId = contactId
+      ? (isNaN(Number(contactId)) ? contactId : parseInt(contactId, 10))
+      : null;
+
     return requestJson<{
       success: boolean;
       message: string;
@@ -398,7 +438,7 @@ export const authApi = {
       _dev_otp?: string;
     }>(
       `/api/otp/send`,
-      { method: 'POST', body: JSON.stringify({ contact_method_id: parseInt(contactId, 10) }) },
+      { method: 'POST', body: JSON.stringify({ contact_method_id: contactMethodId }) },
       locale,
       true // use proxy
     ).then((res) => {
