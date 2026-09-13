@@ -3,7 +3,6 @@ import { requireMarketRoute } from '@/lib/market-route-boundary';
 import { getMarketLocalePath } from '@/lib/market-routing';
 
 import { GermanyHero } from '@/components/germany/germany-hero';
-import { SupportedCountries } from '@/components/ui/supported-countries';
 import { TrustStrip } from '@/components/germany/trust-strip';
 import { GermanyServiceGrid } from '@/components/germany/germany-service-grid';
 import { WhySpm } from '@/components/germany/why-spm';
@@ -79,7 +78,6 @@ export default async function MarketPage({ params }: {
   return (
     <>
       <GermanyHero />
-      <SupportedCountries locale={route.language as 'de' | 'en' | 'ar'} />
       <TrustStrip />
       <GermanyServiceGrid />
       <WhySpm />

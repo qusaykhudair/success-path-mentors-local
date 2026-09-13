@@ -3,15 +3,16 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
-import { BookOpen, Languages, MessageSquare, Briefcase, CheckCircle2 } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 import { parseNavigationContext } from '@/lib/market-navigation';
 import { getMarketLocalePath } from '@/lib/market-routing';
+import { LANGUAGE_BADGES } from './language-icons';
 
 const SERVICES = [
-  { id: 'german', icon: MessageSquare, tKey: 'german' },
-  { id: 'english', icon: Languages, tKey: 'english' },
-  { id: 'arabic', icon: BookOpen, tKey: 'arabic' },
-  { id: 'french', icon: Briefcase, tKey: 'french' }
+  { id: 'german' as const, badge: LANGUAGE_BADGES.german, tKey: 'german' },
+  { id: 'english' as const, badge: LANGUAGE_BADGES.english, tKey: 'english' },
+  { id: 'arabic' as const, badge: LANGUAGE_BADGES.arabic, tKey: 'arabic' },
+  { id: 'french' as const, badge: LANGUAGE_BADGES.french, tKey: 'french' }
 ];
 
 export function HeroServiceSelector() {
@@ -47,30 +48,31 @@ export function HeroServiceSelector() {
 
       <div className="grid grid-cols-2 gap-4">
         {SERVICES.map((service) => {
-          const Icon = service.icon;
+          const Badge = service.badge;
           const isSelected = selectedService === service.id;
           
           return (
             <button
               key={service.id}
+              type="button"
               onClick={() => setSelectedService(service.id)}
               className={`
-                group relative flex flex-col items-center justify-center gap-4 rounded-2xl border-2 p-6 text-center transition-all duration-300
+                group relative flex flex-col items-center justify-center gap-3.5 rounded-2xl border-2 p-5 text-center transition-all duration-300
                 ${isSelected 
-                  ? 'border-accent-500 bg-accent-50 text-accent-700 shadow-md ring-1 ring-accent-500' 
-                  : 'border-primary-100 bg-white text-primary-600 hover:border-primary-300 hover:bg-primary-50 hover:text-primary-900 hover:shadow-sm'
+                  ? 'border-accent-500 bg-accent-50/70 text-accent-700 shadow-md ring-1 ring-accent-500' 
+                  : 'border-primary-100 bg-white text-primary-600 hover:border-primary-300 hover:bg-primary-50/60 hover:text-primary-900 hover:shadow-sm'
                 }
               `}
             >
-              <div className={`rounded-2xl p-3 transition-colors ${isSelected ? 'bg-accent-500 text-white shadow-sm' : 'bg-primary-100 text-primary-500 group-hover:bg-primary-200 group-hover:text-primary-700'}`}>
-                <Icon className="h-8 w-8" />
+              <div className={`flex h-14 w-14 items-center justify-center rounded-2xl p-1.5 transition-all duration-200 ${isSelected ? 'scale-105 shadow-xs' : 'group-hover:scale-105'}`}>
+                <Badge className="h-11 w-11 drop-shadow-xs" />
               </div>
-              <span className={`text-base font-bold ${isSelected ? 'text-accent-900' : 'text-primary-950'}`}>
+              <span className={`text-base font-bold ${isSelected ? 'text-accent-950' : 'text-primary-950'}`}>
                 {t(`services.${service.tKey}`)}
               </span>
               
               <div className={`absolute top-3 end-3 transition-opacity duration-200 ${isSelected ? 'opacity-100' : 'opacity-0'}`}>
-                <CheckCircle2 className="h-6 w-6 text-accent-500" />
+                <CheckCircle2 className="h-5 w-5 text-accent-600" />
               </div>
             </button>
           );

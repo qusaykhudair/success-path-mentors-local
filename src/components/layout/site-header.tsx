@@ -1,7 +1,4 @@
 import Image from 'next/image';
-import { getDefaultMarket } from '@/config/markets';
-import { getDefaultTelephoneHref } from '@/lib/market-display';
-import { Phone } from 'lucide-react';
 
 import {
   getLocale,
@@ -12,9 +9,6 @@ import {
   Link,
 } from '@/i18n/navigation';
 
-import {
-  buttonVariants,
-} from '@/components/ui/button';
 import {
   Container,
 } from '@/components/ui/container';
@@ -357,9 +351,9 @@ export async function SiteHeader() {
     'min-h-touch',
     'items-center',
     'rounded-button',
-    'px-2',
-    'text-[0.78rem]',
-    'font-bold',
+    'px-2.5',
+    'text-sm',
+    'font-semibold',
     'text-muted-foreground',
     'transition-[color,background-color]',
     'duration-200',
@@ -388,11 +382,11 @@ export async function SiteHeader() {
       <Container
         className="
           flex
-          min-h-16
+          min-h-[4.75rem]
           items-center
           justify-between
-          gap-2
-          xl:min-h-[4.5rem]
+          gap-4
+          xl:min-h-[5.25rem]
         "
       >
         <Link
@@ -414,14 +408,14 @@ export async function SiteHeader() {
           <Image
             src="/images/logo.png"
             alt="Success Path Mentors"
-            width={180}
-            height={60}
+            width={280}
+            height={90}
             priority
-            sizes="(max-width: 1024px) 150px, 180px"
+            sizes="(max-width: 1024px) 200px, 280px"
             className="
-              h-10
-              sm:h-11
-              xl:h-12
+              h-12
+              sm:h-14
+              xl:h-16
               w-auto
               object-contain
               transition-transform
@@ -550,8 +544,7 @@ export async function SiteHeader() {
           className="
             flex
             items-center
-            gap-2
-            sm:gap-2.5
+            gap-2.5
           "
         >
           <div className="shrink-0">
@@ -560,39 +553,16 @@ export async function SiteHeader() {
 
           <a
             href={routePath.login(currentLocale)}
-            className="hidden min-h-touch items-center rounded-full border border-primary-200 bg-background px-3.5 py-1.5 text-xs font-bold text-primary shadow-xs transition-colors hover:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap lg:inline-flex"
+            className="hidden h-10 items-center justify-center rounded-full border border-primary-200 bg-background px-4 text-sm font-semibold text-primary shadow-2xs transition-colors hover:border-accent-300 hover:bg-accent-50/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap lg:inline-flex"
           >
             {copy.login}
-          </a>
-
-          <a
-            href={routePath.register(currentLocale)}
-            className="hidden min-h-touch items-center rounded-full bg-accent px-4 py-1.5 text-xs font-bold text-primary-950 shadow-button-accent transition-colors hover:bg-accent-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap lg:inline-flex"
-          >
-            {copy.createAccount}
-          </a>
-
-          <a
-            href={getDefaultTelephoneHref()}
-            aria-label={currentLocale === 'ar' ? `اتصل بنا على الرقم ${getDefaultMarket().contact.phone}` : `Call us at ${getDefaultMarket().contact.phone}`}
-            className="hidden min-h-touch items-center gap-2 rounded-full border border-border/70 bg-background px-3.5 py-1.5 text-xs font-bold text-foreground shadow-xs transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 whitespace-nowrap 2xl:inline-flex"
-          >
-            <Phone aria-hidden="true" className="h-3.5 w-3.5 text-accent shrink-0" />
-            <span dir="ltr" className="whitespace-nowrap">{WHATSAPP_DISPLAY_NUMBER}</span>
           </a>
 
           <a
             href={whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
-            className={
-              buttonVariants({
-                variant: 'accent',
-                size: 'sm',
-                className:
-                  'hidden min-[1180px]:inline-flex whitespace-nowrap font-bold shadow-sm',
-              })
-            }
+            className="hidden min-[1180px]:inline-flex h-10 items-center justify-center gap-2 rounded-full bg-accent px-5 text-sm font-semibold text-primary-950 shadow-sm hover:bg-accent-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap"
           >
             <svg
               viewBox="0 0 20 20"
@@ -670,8 +640,6 @@ export async function SiteHeader() {
             phoneNumber={WHATSAPP_DISPLAY_NUMBER}
             loginLabel={copy.login}
             loginHref={routePath.login(currentLocale)}
-            registerLabel={copy.createAccount}
-            registerHref={routePath.register(currentLocale)}
           />
         </div>
       </Container>

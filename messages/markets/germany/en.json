@@ -325,7 +325,13 @@
       "phone": "Phone Number",
       "submit": "Prepare Request",
       "privacy": "Your data is transmitted securely and will not be passed on to third parties.",
-      "success": "Your request has been sent successfully! We will contact you shortly."
+      "success": "Your request has been sent successfully! We will contact you shortly.",
+      "errors": {
+        "firstName": "Please enter your first name (at least 2 characters).",
+        "lastName": "Please enter your last name (at least 2 characters).",
+        "email": "Please enter a valid email address.",
+        "phone": "Please enter a valid phone number."
+      }
     },
     "subjectLabel": "Subject",
     "learnerLabel": "Learner",
@@ -340,8 +346,8 @@
       "french": "French"
     },
     "contactReady": {
-      "title": "Request Ready",
-      "description": "Your request details are assembled. Continue directly on WhatsApp with our educational coordination team to confirm your free trial schedule.",
+      "title": "Thanks for getting with us",
+      "description": "One of our coordination team members will get in touch with you soon.",
       "whatsappButton": "Continue on WhatsApp",
       "whatsAppGreeting": "Hello Success Path Mentors, I would like to book a free trial lesson:",
       "backHome": "Go back to Home"
@@ -377,7 +383,7 @@
           "Flexible scheduling",
           "Regular learning feedback"
         ],
-        "cta": "Book Free Trial"
+        "cta": "Start your journey"
       },
       "progress": {
         "name": "Progress",
@@ -393,7 +399,7 @@
           "Regular learning feedback",
           "Adaptable across subjects"
         ],
-        "cta": "Get Started"
+        "cta": "Start your journey"
       },
       "momentum": {
         "name": "Intensive",
@@ -409,7 +415,7 @@
           "Direct coordination support",
           "Homework & ongoing mentorship"
         ],
-        "cta": "Choose Intensive"
+        "cta": "Start your journey"
       }
     }
   },

@@ -26,11 +26,11 @@ export function MarketFooter() {
           <div className="flex flex-col gap-6 lg:col-span-2">
             <a href={`/de/${locale}`} className="inline-flex w-fit items-center">
               <Image
-                src="/images/logo.png"
-                alt="Success Path Mentors"
-                width={160}
-                height={52}
-                className="h-9 w-auto brightness-0 invert object-contain"
+                src="/images/Success_Path_Mentors_Europe_Logo_Transparent.png"
+                alt="Success Path Mentors Europe"
+                width={300}
+                height={104}
+                className="h-14 sm:h-16 w-auto brightness-0 invert object-contain"
               />
             </a>
             <p className="max-w-sm text-sm text-primary-200 leading-relaxed">

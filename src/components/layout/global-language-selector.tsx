@@ -82,8 +82,8 @@ export function GlobalLanguageSelector({ isGermanyContext = false }: GlobalLangu
         aria-expanded={isOpen}
         aria-haspopup="true"
         className={cn(
-          "group inline-flex min-h-[44px] items-center justify-between gap-2 rounded-full border border-primary-200 bg-white px-4 py-2 font-medium text-primary shadow-sm transition-all duration-200 ease-out",
-          "hover:border-accent-300 hover:bg-accent-50 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2",
+          "group inline-flex h-10 items-center justify-between gap-2 rounded-full border border-primary-200 bg-white px-3.5 text-sm font-semibold text-primary shadow-2xs transition-all duration-200 ease-out",
+          "hover:border-accent-300 hover:bg-accent-50/50 hover:shadow-xs focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2",
           isOpen && "border-accent-300 bg-accent-50 ring-2 ring-accent-500 ring-offset-2"
         )}
       >

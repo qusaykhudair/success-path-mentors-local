@@ -3,12 +3,13 @@
 import { useEffect, useState } from 'react';
 import { ArrowUp } from 'lucide-react';
 
-type BackToTopLocale = 'en' | 'ar' | 'fr';
+type BackToTopLocale = 'en' | 'ar' | 'fr' | 'de';
 
 const labels: Record<BackToTopLocale, string> = {
   en: 'Back to top',
   ar: 'العودة إلى أعلى الصفحة',
   fr: 'Retour en haut',
+  de: 'Nach oben',
 };
 
 interface BackToTopButtonProps {

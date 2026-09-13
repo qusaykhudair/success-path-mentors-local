@@ -54,8 +54,8 @@ interface MobileNavProps {
   phoneNumber: string;
   loginLabel: string;
   loginHref: string;
-  registerLabel: string;
-  registerHref: string;
+  registerLabel?: string;
+  registerHref?: string;
 }
 
 function getFocusableElements(
@@ -803,17 +803,19 @@ export function MobileNav({
             >
               {loginLabel}
             </a>
-            <a
-              href={registerHref}
-              onClick={() => closeAll()}
-              className={buttonVariants({
-                variant: 'accent',
-                size: 'md',
-                className: 'w-full',
-              })}
-            >
-              {registerLabel}
-            </a>
+            {registerHref && registerLabel && (
+              <a
+                href={registerHref}
+                onClick={() => closeAll()}
+                className={buttonVariants({
+                  variant: 'accent',
+                  size: 'md',
+                  className: 'w-full',
+                })}
+              >
+                {registerLabel}
+              </a>
+            )}
           </div>
 
           <div className="mb-3 grid grid-cols-[auto_1fr] gap-2">

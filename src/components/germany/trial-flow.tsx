@@ -6,6 +6,9 @@ import { useTranslations, useLocale } from 'next-intl';
 import { ArrowLeft, ArrowRight, User, Users, GraduationCap, Target, Speech, BookOpen, MessageCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { getMarketConfig } from '@/config/markets';
+import { LANGUAGE_BADGES } from './language-icons';
+import { PhoneInput } from '@/components/ui/phone-input';
+import { type CountryCode, internationalPhone, localPhone } from '@/lib/phone';
 
 type Step = 1 | 2 | 3 | 4 | 'contactReady';
 
@@ -34,15 +37,98 @@ function TrialFlowContent() {
     phone: ''
   });
 
+  const [phoneCountry, setPhoneCountry] = React.useState<CountryCode>('DE');
+  const [errors, setErrors] = React.useState<Record<string, string>>({});
+  const [touched, setTouched] = React.useState<Record<string, boolean>>({});
+
   const updateForm = (key: keyof typeof formData, value: string) => {
     setFormData(prev => ({ ...prev, [key]: value }));
+  };
+
+  const validateField = (field: string, value: string, country = phoneCountry): string => {
+    switch (field) {
+      case 'firstName': {
+        const trimmed = value.trim();
+        if (!trimmed || trimmed.length < 2) {
+          return t('contact.errors.firstName');
+        }
+        return '';
+      }
+      case 'lastName': {
+        const trimmed = value.trim();
+        if (!trimmed || trimmed.length < 2) {
+          return t('contact.errors.lastName');
+        }
+        return '';
+      }
+      case 'email': {
+        const trimmed = value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!trimmed || !emailRegex.test(trimmed)) {
+          return t('contact.errors.email');
+        }
+        return '';
+      }
+      case 'phone': {
+        const trimmed = value.trim();
+        if (!trimmed || !localPhone(trimmed, country)) {
+          return t('contact.errors.phone');
+        }
+        return '';
+      }
+      default:
+        return '';
+    }
+  };
+
+  const handleBlur = (field: string) => {
+    setTouched((prev) => ({ ...prev, [field]: true }));
+    const error = validateField(field, formData[field as keyof typeof formData]);
+    setErrors((prev) => ({ ...prev, [field]: error }));
+  };
+
+  const handleFieldChange = (field: keyof typeof formData, value: string) => {
+    updateForm(field, value);
+    if (touched[field]) {
+      const error = validateField(field, value);
+      setErrors((prev) => ({ ...prev, [field]: error }));
+    }
+  };
+
+  const handleCountryChange = (country: CountryCode) => {
+    setPhoneCountry(country);
+    if (touched.phone) {
+      const error = validateField('phone', formData.phone, country);
+      setErrors((prev) => ({ ...prev, phone: error }));
+    }
+  };
+
+  const handleStep4Submit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const newErrors: Record<string, string> = {
+      firstName: validateField('firstName', formData.firstName),
+      lastName: validateField('lastName', formData.lastName),
+      email: validateField('email', formData.email),
+      phone: validateField('phone', formData.phone, phoneCountry),
+    };
+
+    const activeErrors = Object.fromEntries(
+      Object.entries(newErrors).filter(([, val]) => Boolean(val))
+    );
+
+    setTouched({ firstName: true, lastName: true, email: true, phone: true });
+    setErrors(activeErrors);
+
+    if (Object.keys(activeErrors).length === 0) {
+      setStep('contactReady');
+    }
   };
 
   const nextStep = () => {
     if (step === 1 && formData.subject) setStep(2);
     else if (step === 2 && formData.learner) setStep(3);
     else if (step === 3 && formData.goal) setStep(4);
-    else if (step === 4) setStep('contactReady');
+    else if (step === 4) handleStep4Submit({ preventDefault: () => {} } as React.FormEvent);
   };
 
   const prevStep = () => {
@@ -79,6 +165,8 @@ function TrialFlowContent() {
   };
 
   const constructWhatsAppMessage = () => {
+    const parsed = localPhone(formData.phone, phoneCountry);
+    const formattedPhone = parsed ? parsed.phoneE164 : formData.phone;
     const lines = [
       t('contactReady.whatsAppGreeting'),
       `- ${t('subjectLabel')}: ${getSubjectLabel(formData.subject)}`,
@@ -86,8 +174,8 @@ function TrialFlowContent() {
       `- ${t('goalLabel')}: ${getGoalLabel(formData.goal)}`,
       `- ${t('nameLabel')}: ${formData.firstName} ${formData.lastName}`,
     ];
-    if (formData.phone) {
-      lines.push(`- ${t('phoneLabel')}: ${formData.phone}`);
+    if (formattedPhone) {
+      lines.push(`- ${t('phoneLabel')}: ${formattedPhone}`);
     }
     return lines.join('\n');
   };
@@ -140,12 +228,12 @@ function TrialFlowContent() {
             
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               {[
-                { id: 'german', icon: Speech, label: t('subjects.german') },
-                { id: 'english', icon: Speech, label: t('subjects.english') },
-                { id: 'arabic', icon: BookOpen, label: t('subjects.arabic') },
-                { id: 'french', icon: Speech, label: t('subjects.french') },
+                { id: 'german' as const, badge: LANGUAGE_BADGES.german, label: t('subjects.german') },
+                { id: 'english' as const, badge: LANGUAGE_BADGES.english, label: t('subjects.english') },
+                { id: 'arabic' as const, badge: LANGUAGE_BADGES.arabic, label: t('subjects.arabic') },
+                { id: 'french' as const, badge: LANGUAGE_BADGES.french, label: t('subjects.french') },
               ].map((subject) => {
-                const Icon = subject.icon;
+                const Badge = subject.badge;
                 const isSelected = formData.subject === subject.id;
                 return (
                   <button
@@ -153,15 +241,12 @@ function TrialFlowContent() {
                     type="button"
                     onClick={() => updateForm('subject', subject.id)}
                     className={cn(
-                      "flex min-h-[44px] items-center gap-4 rounded-xl border-2 p-4 text-left transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
-                      isSelected ? "border-accent-500 bg-accent-50 ring-1 ring-accent-500 shadow-sm" : "border-primary-100 bg-white hover:border-primary-300 hover:bg-primary-50/50"
+                      "flex min-h-[44px] items-center gap-4 rounded-xl border-2 p-3.5 text-left transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+                      isSelected ? "border-accent-500 bg-accent-50/70 ring-1 ring-accent-500 shadow-sm" : "border-primary-100 bg-white hover:border-primary-300 hover:bg-primary-50/50"
                     )}
                   >
-                    <div className={cn(
-                      "flex h-11 w-11 items-center justify-center rounded-lg transition-colors shrink-0",
-                      isSelected ? "bg-accent-500 text-white" : "bg-primary-100 text-primary-600"
-                    )}>
-                      <Icon className="h-5 w-5" />
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg shrink-0">
+                      <Badge className="h-9 w-9 drop-shadow-xs" />
                     </div>
                     <span className="font-bold text-primary-900 text-base">{subject.label}</span>
                   </button>
@@ -311,51 +396,109 @@ function TrialFlowContent() {
             </div>
 
             <form 
-              onSubmit={(e) => { e.preventDefault(); nextStep(); }}
+              onSubmit={handleStep4Submit}
+              noValidate
               className="flex flex-col gap-4"
             >
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-bold text-primary-800">{t('contact.firstName')}</label>
+                  <label htmlFor="trial-first-name" className="text-xs font-bold text-primary-800">
+                    {t('contact.firstName')} <span className="text-rose-500">*</span>
+                  </label>
                   <input 
+                    id="trial-first-name"
                     required
                     type="text" 
                     value={formData.firstName}
-                    onChange={(e) => updateForm('firstName', e.target.value)}
-                    className="rounded-xl border border-primary-200 px-3.5 py-2.5 text-sm outline-none transition-colors focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20"
+                    onChange={(e) => handleFieldChange('firstName', e.target.value)}
+                    onBlur={() => handleBlur('firstName')}
+                    aria-invalid={Boolean(errors.firstName)}
+                    aria-describedby={errors.firstName ? 'trial-first-name-error' : undefined}
+                    className={cn(
+                      "rounded-xl border px-3.5 py-2.5 text-sm outline-none transition-colors",
+                      errors.firstName 
+                        ? "border-rose-500 ring-1 ring-rose-500/20 focus:border-rose-500 focus:ring-2 focus:ring-rose-500/20" 
+                        : "border-primary-200 focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20"
+                    )}
                   />
+                  {errors.firstName && (
+                    <p id="trial-first-name-error" role="alert" className="text-xs font-semibold text-rose-600">
+                      {errors.firstName}
+                    </p>
+                  )}
                 </div>
+
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-bold text-primary-800">{t('contact.lastName')}</label>
+                  <label htmlFor="trial-last-name" className="text-xs font-bold text-primary-800">
+                    {t('contact.lastName')} <span className="text-rose-500">*</span>
+                  </label>
                   <input 
+                    id="trial-last-name"
                     required
                     type="text" 
                     value={formData.lastName}
-                    onChange={(e) => updateForm('lastName', e.target.value)}
-                    className="rounded-xl border border-primary-200 px-3.5 py-2.5 text-sm outline-none transition-colors focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20"
+                    onChange={(e) => handleFieldChange('lastName', e.target.value)}
+                    onBlur={() => handleBlur('lastName')}
+                    aria-invalid={Boolean(errors.lastName)}
+                    aria-describedby={errors.lastName ? 'trial-last-name-error' : undefined}
+                    className={cn(
+                      "rounded-xl border px-3.5 py-2.5 text-sm outline-none transition-colors",
+                      errors.lastName 
+                        ? "border-rose-500 ring-1 ring-rose-500/20 focus:border-rose-500 focus:ring-2 focus:ring-rose-500/20" 
+                        : "border-primary-200 focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20"
+                    )}
                   />
+                  {errors.lastName && (
+                    <p id="trial-last-name-error" role="alert" className="text-xs font-semibold text-rose-600">
+                      {errors.lastName}
+                    </p>
+                  )}
                 </div>
               </div>
               
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-bold text-primary-800">{t('contact.email')}</label>
+                <label htmlFor="trial-email" className="text-xs font-bold text-primary-800">
+                  {t('contact.email')} <span className="text-rose-500">*</span>
+                </label>
                 <input 
+                  id="trial-email"
                   required
                   type="email" 
                   value={formData.email}
-                  onChange={(e) => updateForm('email', e.target.value)}
-                  className="rounded-xl border border-primary-200 px-3.5 py-2.5 text-sm outline-none transition-colors focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20"
+                  onChange={(e) => handleFieldChange('email', e.target.value)}
+                  onBlur={() => handleBlur('email')}
+                  aria-invalid={Boolean(errors.email)}
+                  aria-describedby={errors.email ? 'trial-email-error' : undefined}
+                  className={cn(
+                    "rounded-xl border px-3.5 py-2.5 text-sm outline-none transition-colors",
+                    errors.email 
+                      ? "border-rose-500 ring-1 ring-rose-500/20 focus:border-rose-500 focus:ring-2 focus:ring-rose-500/20" 
+                      : "border-primary-200 focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20"
+                  )}
                 />
+                {errors.email && (
+                  <p id="trial-email-error" role="alert" className="text-xs font-semibold text-rose-600">
+                    {errors.email}
+                  </p>
+                )}
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-bold text-primary-800">{t('contact.phone')}</label>
-                <input 
-                  required
-                  type="tel" 
+                <label htmlFor="trial-phone-input" className="text-xs font-bold text-primary-800">
+                  {t('contact.phone')} <span className="text-rose-500">*</span>
+                </label>
+                <PhoneInput
+                  id="trial-phone-input"
+                  label={t('contact.phone')}
+                  locale={locale as 'en' | 'ar' | 'de'}
+                  country={phoneCountry}
                   value={formData.phone}
-                  onChange={(e) => updateForm('phone', e.target.value)}
-                  className="rounded-xl border border-primary-200 px-3.5 py-2.5 text-sm outline-none transition-colors focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20"
+                  onCountryChange={handleCountryChange}
+                  onChange={(val) => handleFieldChange('phone', val)}
+                  onBlur={() => handleBlur('phone')}
+                  error={errors.phone}
+                  required
+                  className="rounded-xl border border-primary-200 px-3.5 py-2.5 text-sm outline-none transition-colors focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 bg-white"
                 />
               </div>
 

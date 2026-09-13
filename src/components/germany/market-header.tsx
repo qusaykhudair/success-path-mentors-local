@@ -76,7 +76,7 @@ export function MarketHeader() {
           : 'border-b border-primary-100/60 bg-white/90'
       )}
     >
-      <Container className="flex min-h-[4.25rem] items-center justify-between gap-3 xl:min-h-[4.75rem]">
+      <Container className="flex min-h-[4.75rem] items-center justify-between gap-4 xl:min-h-[5.25rem]">
         {/* Brand Logo */}
         <a
           href={`/de/${locale}`}
@@ -84,13 +84,13 @@ export function MarketHeader() {
           className="group inline-flex shrink-0 items-center rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
           <Image
-            src="/images/logo.png"
-            alt="Success Path Mentors"
-            width={180}
-            height={60}
+            src="/images/Success_Path_Mentors_Europe_Logo_Transparent.png"
+            alt="Success Path Mentors Europe"
+            width={320}
+            height={110}
             priority
-            sizes="(max-width: 1024px) 150px, 180px"
-            className="h-10 sm:h-11 xl:h-12 w-auto object-contain transition-transform duration-200 ease-out group-hover:scale-[1.02]"
+            sizes="(max-width: 1024px) 240px, 320px"
+            className="h-14 sm:h-16 xl:h-[4.5rem] w-auto object-contain transition-transform duration-200 ease-out group-hover:scale-[1.02]"
           />
         </a>
 
@@ -111,23 +111,15 @@ export function MarketHeader() {
         </nav>
 
         {/* Right Desktop Action Cluster */}
-        <div className="hidden items-center gap-2 xl:flex">
+        <div className="hidden items-center gap-2.5 xl:flex">
           <GlobalLanguageSelector isGermanyContext={true} />
 
           {/* Login Link */}
           <a
             href={`/de/${locale}/login`}
-            className="inline-flex min-h-touch items-center rounded-full border border-primary-200 bg-white px-3.5 py-1.5 text-xs font-bold text-primary-900 shadow-2xs transition-colors hover:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap"
+            className="inline-flex h-10 items-center justify-center rounded-full border border-primary-200 bg-white px-4 text-sm font-semibold text-primary-900 shadow-2xs transition-colors hover:border-accent-300 hover:bg-accent-50/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap"
           >
             {t('login')}
-          </a>
-
-          {/* Sign Up Link */}
-          <a
-            href={`/de/${locale}/register`}
-            className="inline-flex min-h-touch items-center rounded-full bg-accent-500/15 border border-accent-500/30 px-3.5 py-1.5 text-xs font-bold text-accent-800 transition-colors hover:bg-accent-500/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap"
-          >
-            {t('register')}
           </a>
 
           {/* WhatsApp / Phone */}
@@ -136,19 +128,19 @@ export function MarketHeader() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp Support"
-            className="hidden min-h-touch items-center gap-2 rounded-full border border-primary-200 bg-white px-3.5 py-1.5 text-xs font-bold text-primary-900 shadow-2xs transition-colors hover:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring xl:inline-flex whitespace-nowrap"
+            className="hidden h-10 items-center gap-2 rounded-full border border-primary-200 bg-white px-4 text-sm font-semibold text-primary-900 shadow-2xs transition-colors hover:border-accent-300 hover:bg-accent-50/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring xl:inline-flex whitespace-nowrap"
           >
-            <Phone className="h-3.5 w-3.5 text-accent-600 shrink-0" />
+            <Phone className="h-4 w-4 text-accent-600 shrink-0" />
             <span dir="ltr" className="whitespace-nowrap">{marketConfig.contact.whatsappDisplay}</span>
           </a>
 
-          {/* Free Trial CTA */}
+          {/* Free Trial / Booking CTA */}
           <a
             href={`/de/${locale}/trial`}
-            className="inline-flex min-h-touch items-center justify-center gap-1.5 rounded-full bg-accent-600 px-4 py-2 text-xs font-bold text-white shadow-sm hover:bg-accent-500 transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap"
+            className="inline-flex h-10 items-center justify-center gap-2 rounded-full bg-accent-600 px-5 text-sm font-semibold text-white shadow-sm hover:bg-accent-500 transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap"
           >
             <span>{tNav('bookFreeSession')}</span>
-            <ArrowIcon className="h-3.5 w-3.5" />
+            <ArrowIcon className="h-4 w-4 shrink-0" />
           </a>
         </div>
 
@@ -201,15 +193,9 @@ export function MarketHeader() {
             <div className="flex flex-col gap-3">
               <a
                 href={`/de/${locale}/login`}
-                className="flex min-h-touch w-full items-center justify-center rounded-xl border border-primary-200 bg-white py-3 text-sm font-bold text-primary-900 shadow-xs"
+                className="flex min-h-touch w-full items-center justify-center rounded-xl border border-primary-200 bg-white py-3 text-sm font-semibold text-primary-900 shadow-xs transition-colors hover:bg-primary-50"
               >
                 {t('login')}
-              </a>
-              <a
-                href={`/de/${locale}/register`}
-                className="flex min-h-touch w-full items-center justify-center rounded-xl bg-primary-100/70 py-3 text-sm font-bold text-primary-900 shadow-xs"
-              >
-                {t('register')}
               </a>
             </div>
           </div>

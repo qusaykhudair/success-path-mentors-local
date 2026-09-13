@@ -61,7 +61,7 @@ export function LocationsMenu({ triggerLabel, overviewHref, overviewLabel, count
 
   return (
     <div ref={rootRef} className="relative" onMouseEnter={cancelClose} onMouseLeave={scheduleClose}>
-      <button type="button" aria-expanded={open} aria-haspopup="menu" onClick={() => setOpen((value) => !value)} className="group inline-flex min-h-touch items-center gap-1.5 rounded-button px-2.5 text-small font-bold text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+      <button type="button" aria-expanded={open} aria-haspopup="menu" onClick={() => setOpen((value) => !value)} className="group inline-flex min-h-touch items-center gap-1.5 rounded-button px-2.5 text-sm font-semibold text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
         {triggerLabel}
         <ChevronDown aria-hidden="true" className={cn('h-4 w-4 transition-transform', open && 'rotate-180')} />
       </button>

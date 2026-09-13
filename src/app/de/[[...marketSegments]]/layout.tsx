@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { MarketHeader } from '@/components/germany/market-header';
 import { MarketFooter } from '@/components/germany/market-footer';
 import { FloatingWhatsAppButton } from '@/components/layout/floating-whatsapp-button';
+import { BackToTopButton } from '@/components/layout/back-to-top-button';
 import { N8nChat } from '@/components/chat/n8n-chat';
 import { getMarketMessages } from '@/lib/market-messages';
 import { cn } from '@/lib/utils';
@@ -46,6 +47,7 @@ export default async function MarketSegmentsLayout({
             locale={locale as 'de' | 'en' | 'ar'}
             phoneNumber="4915123974353"
           />
+          <BackToTopButton locale={locale as 'de' | 'en' | 'ar'} />
           <N8nChat key={locale} locale={locale as 'de' | 'en' | 'ar'} />
           <main className="flex-1">{children}</main>
           <MarketFooter />

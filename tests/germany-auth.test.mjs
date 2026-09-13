@@ -109,17 +109,17 @@ test('Germany child routing serves login and register while rejecting invalid ch
   await assert.rejects(page({ params: Promise.resolve({ marketSegments: ['de', 'dashboard'] }) }), (err) => err === notFoundError);
 });
 
-test('Germany Header and Footer route Login and Sign Up strictly within Germany market', async () => {
+test('Germany Header and Footer route auth strictly within Germany market', async () => {
   const { readFile } = await import('node:fs/promises');
   const headerContent = await readFile(new URL('../src/components/germany/market-header.tsx', import.meta.url), 'utf8');
   const footerContent = await readFile(new URL('../src/components/germany/market-footer.tsx', import.meta.url), 'utf8');
 
-  // Desktop and mobile header links
+  // Desktop and mobile header links route within market
   assert.match(headerContent, /\/de\/\$\{locale\}\/login/);
-  assert.match(headerContent, /\/de\/\$\{locale\}\/register/);
+  assert.match(headerContent, /\/de\/\$\{locale\}\/trial/);
   assert.doesNotMatch(headerContent, /const authLocale =/);
 
-  // Footer account links
+  // Footer account links route within market
   assert.match(footerContent, /\/de\/\$\{locale\}\/login/);
   assert.match(footerContent, /\/de\/\$\{locale\}\/register/);
 });

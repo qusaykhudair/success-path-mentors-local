@@ -49,7 +49,7 @@ export function MoreMenu({ label, items }: MoreMenuProps) {
         aria-expanded={open}
         aria-haspopup="true"
         className={cn(
-          'inline-flex min-h-touch items-center gap-1 rounded-button px-2.5 py-1.5 text-[0.78rem] font-bold transition-[color,background-color] duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
+          'inline-flex min-h-touch items-center gap-1 rounded-button px-2.5 py-1.5 text-sm font-semibold transition-[color,background-color] duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
           open
             ? 'bg-muted text-foreground'
             : 'text-muted-foreground hover:bg-muted hover:text-foreground'

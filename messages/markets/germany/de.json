@@ -325,7 +325,13 @@
       "phone": "Telefonnummer",
       "submit": "Anfrage vorbereiten",
       "privacy": "Ihre Daten werden sicher übertragen und nicht an Dritte weitergegeben.",
-      "success": "Ihre Anfrage wurde erfolgreich gesendet! Wir werden uns in Kürze bei Ihnen melden."
+      "success": "Ihre Anfrage wurde erfolgreich übermittelt! Wir melden uns in Kürze bei Ihnen.",
+      "errors": {
+        "firstName": "Bitte geben Sie Ihren Vornamen ein (mindestens 2 Zeichen).",
+        "lastName": "Bitte geben Sie Ihren Nachnamen ein (mindestens 2 Zeichen).",
+        "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+        "phone": "Bitte geben Sie eine gültige Telefonnummer ein."
+      }
     },
     "subjectLabel": "Fach",
     "learnerLabel": "Lernender",
@@ -340,8 +346,8 @@
       "french": "Französisch"
     },
     "contactReady": {
-      "title": "Anfrage vorbereitet",
-      "description": "Ihre Angaben sind zusammengestellt. Setzen Sie Ihre Anfrage direkt auf WhatsApp mit unserem Koordinationsteam fort, um Ihren Termin abzustimmen.",
+      "title": "Danke, dass Sie sich an uns wenden",
+      "description": "Ein Mitglied unseres Koordinationsteams wird sich in Kürze mit Ihnen in Verbindung setzen.",
       "whatsappButton": "Auf WhatsApp fortfahren",
       "whatsAppGreeting": "Hallo Success Path Mentors, ich möchte eine kostenlose Probestunde anfragen:",
       "backHome": "Zurück zur Startseite"
@@ -377,7 +383,7 @@
           "Flexible Terminabstimmung",
           "Regelmäßiges Lernfeedback"
         ],
-        "cta": "Probestunde anfragen"
+        "cta": "Reise starten"
       },
       "progress": {
         "name": "Progress",
@@ -393,7 +399,7 @@
           "Regelmäßiges Lernfeedback",
           "Fächerübergreifend anpassbar"
         ],
-        "cta": "Jetzt anfragen"
+        "cta": "Reise starten"
       },
       "momentum": {
         "name": "Intensiv",
@@ -409,7 +415,7 @@
           "Direkte Betreuungskoordination",
           "Hausaufgaben- und Lernbegleitung"
         ],
-        "cta": "Intensivplan anfragen"
+        "cta": "Reise starten"
       }
     }
   },
