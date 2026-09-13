@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 import { getMarketConfig } from '@/config/markets';
 import { LANGUAGE_BADGES } from './language-icons';
 import { PhoneInput } from '@/components/ui/phone-input';
-import { type CountryCode, internationalPhone, localPhone } from '@/lib/phone';
+import { type CountryCode, localPhone } from '@/lib/phone';
 
 type Step = 1 | 2 | 3 | 4 | 'contactReady';
 
