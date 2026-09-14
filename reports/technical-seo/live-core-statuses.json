@@ -1,0 +1,97 @@
+[
+  {
+    "path": "/",
+    "chain": [
+      {
+        "url": "https://successpathmentors.net/",
+        "status": 307,
+        "location": "/en"
+      },
+      {
+        "url": "https://successpathmentors.net/en",
+        "status": 200,
+        "location": null
+      }
+    ]
+  },
+  {
+    "path": "/en",
+    "chain": [
+      {
+        "url": "https://successpathmentors.net/en",
+        "status": 200,
+        "location": null
+      }
+    ]
+  },
+  {
+    "path": "/ar",
+    "chain": [
+      {
+        "url": "https://successpathmentors.net/ar",
+        "status": 200,
+        "location": null
+      }
+    ]
+  },
+  {
+    "path": "/en/about",
+    "chain": [
+      {
+        "url": "https://successpathmentors.net/en/about",
+        "status": 200,
+        "location": null
+      }
+    ]
+  },
+  {
+    "path": "/en/how-it-works",
+    "chain": [
+      {
+        "url": "https://successpathmentors.net/en/how-it-works",
+        "status": 200,
+        "location": null
+      }
+    ]
+  },
+  {
+    "path": "/en/subjects/math",
+    "chain": [
+      {
+        "url": "https://successpathmentors.net/en/subjects/math",
+        "status": 200,
+        "location": null
+      }
+    ]
+  },
+  {
+    "path": "/en/subjects/english",
+    "chain": [
+      {
+        "url": "https://successpathmentors.net/en/subjects/english",
+        "status": 200,
+        "location": null
+      }
+    ]
+  },
+  {
+    "path": "/robots.txt",
+    "chain": [
+      {
+        "url": "https://successpathmentors.net/robots.txt",
+        "status": 200,
+        "location": null
+      }
+    ]
+  },
+  {
+    "path": "/sitemap.xml",
+    "chain": [
+      {
+        "url": "https://successpathmentors.net/sitemap.xml",
+        "status": 200,
+        "location": null
+      }
+    ]
+  }
+]
