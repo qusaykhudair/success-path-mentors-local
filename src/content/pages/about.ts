@@ -237,7 +237,7 @@ export const aboutPageContent = {
     faq: {
       eyebrow: 'Common questions',
       title:
-        'About the academy',
+        'About Success Path Mentors',
       description:
         'Key information for families considering personalized online tutoring.',
       items: [
@@ -245,7 +245,7 @@ export const aboutPageContent = {
           question:
             'What grades does Success Path Mentors support?',
           answer:
-            'The academy provides tutoring support for students in Grades 1–12. Available subjects and tutors can vary by grade, curriculum, language, and schedule.',
+            'Success Path Mentors provides tutoring support for students in Grades 1–12. Available subjects and tutors can vary by grade, curriculum, language, and schedule.',
         },
         {
           question:
@@ -263,7 +263,7 @@ export const aboutPageContent = {
           question:
             'Can a family request a different tutor?',
           answer:
-            'Yes. Tutor fit is important. A parent or guardian can contact the team to explain the concern, and the academy will review the request and coordinate an appropriate next step based on availability.',
+            'Yes. Tutor fit is important. A parent or guardian can contact the team to explain the concern, and our team will review the request and coordinate an appropriate next step based on availability.',
         },
         {
           question:
@@ -281,7 +281,7 @@ export const aboutPageContent = {
       description:
         'Share the grade, subject, preferred schedule, and current learning challenge. Our team can use that information to guide the next step.',
       primaryAction: 'View tutoring options',
-      secondaryAction: 'Email the academy',
+      secondaryAction: 'Email our team',
     },
   },
 

@@ -21,6 +21,20 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
+  async redirects() {
+    return [
+      {
+        source: '/:locale(en|ar)/subjects/science',
+        destination: '/:locale/subjects/general-science',
+        permanent: true,
+      },
+      {
+        source: '/:locale(en|ar)/subjects/science/:path*',
+        destination: '/:locale/subjects/general-science/:path*',
+        permanent: true,
+      },
+    ];
+  },
   async rewrites() {
     const apiBaseUrl = (process.env.NEXT_PUBLIC_API_BASE_URL || 'http://143.244.170.205').trim().replace(/\/+$/, '');
     return {

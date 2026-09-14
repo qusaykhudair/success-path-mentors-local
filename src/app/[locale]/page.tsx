@@ -62,19 +62,6 @@ export async function generateMetadata({
     .map((keyword) => keyword.trim())
     .filter(Boolean);
 
-  const languageAlternates =
-    Object.fromEntries(
-      routing.locales.map(
-        (supportedLocale) => [
-          supportedLocale,
-          new URL(
-            `/${supportedLocale}`,
-            SITE_URL
-          ).toString(),
-        ]
-      )
-    );
-
   const openGraphLocale =
     getDefaultOpenGraphLocale(locale);
 
@@ -84,7 +71,7 @@ export async function generateMetadata({
   return {
     /*
      * استخدمنا absolute حتى لا يضيف Layout
-     * اسم الأكاديمية مرة ثانية إلى عنوان الصفحة.
+     * اسم المنصة مرة ثانية إلى عنوان الصفحة.
      */
     title: {
       absolute: title,
@@ -97,12 +84,9 @@ export async function generateMetadata({
       canonical: pageUrl,
 
       languages: {
-        ...languageAlternates,
-
-        'x-default': new URL(
-          `/${routing.defaultLocale}`,
-          SITE_URL
-        ).toString(),
+        'en-CA': new URL('/en', SITE_URL).toString(),
+        'ar-CA': new URL('/ar', SITE_URL).toString(),
+        'x-default': new URL('/en', SITE_URL).toString(),
       },
     },
 

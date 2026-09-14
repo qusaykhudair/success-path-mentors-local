@@ -37,6 +37,31 @@ function applySecurityHeaders(response: NextResponse): NextResponse {
 }
 
 export default function proxy(request: NextRequest) {
+  const host =
+    request.headers?.get?.('x-forwarded-host') ||
+    request.headers?.get?.('host') ||
+    request.nextUrl?.host;
+  const proto =
+    request.headers?.get?.('x-forwarded-proto') ||
+    request.nextUrl?.protocol?.replace(':', '');
+
+  if (host) {
+    const normalizedHost = host.toLowerCase().split(':')[0];
+    const isWww = normalizedHost === 'www.successpathmentors.net';
+    const isHttp =
+      normalizedHost === 'successpathmentors.net' && proto === 'http';
+
+    if (isWww || isHttp) {
+      const destinationUrl = new URL(
+        request.nextUrl.pathname + request.nextUrl.search,
+        'https://successpathmentors.net'
+      );
+      return applySecurityHeaders(
+        NextResponse.redirect(destinationUrl, 301)
+      );
+    }
+  }
+
   const pathname = request.nextUrl.pathname;
 
   if (isReservedMarketPathname(pathname)) {

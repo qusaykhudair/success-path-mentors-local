@@ -78,15 +78,12 @@ export function buildAbsoluteUrl(
 export function buildLanguageAlternates(
   pathname = ''
 ): Record<string, string> {
-  const alternatives = Object.fromEntries(
-    supportedLocales.map((locale) => [
-      locale,
-      buildAbsoluteUrl(locale, pathname),
-    ])
-  );
+  const enUrl = buildAbsoluteUrl('en', pathname);
+  const arUrl = buildAbsoluteUrl('ar', pathname);
 
   return {
-    ...alternatives,
+    'en-CA': enUrl,
+    'ar-CA': arUrl,
     'x-default': buildAbsoluteUrl(
       defaultLocale,
       pathname

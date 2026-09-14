@@ -188,8 +188,6 @@ export default function sitemap():
             routing.defaultLocale,
             path
           ),
-        lastModified:
-          new Date(),
         changeFrequency:
           path === ''
             ? 'weekly' as const
@@ -226,8 +224,6 @@ export default function sitemap():
       (path) => ({
         url:
           `${SITE_URL}${path}`,
-        lastModified:
-          new Date(),
         changeFrequency:
           'monthly' as const,
         priority:
