@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { HeroServiceSelector } from './hero-service-selector';
 import { Container } from '@/components/ui/container';
@@ -13,48 +14,87 @@ export function GermanyHero() {
   const isRtl = locale === 'ar';
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-primary-50/80 to-white pt-12 pb-16 md:pt-20 md:pb-24 lg:pt-28 lg:pb-32">
+    <section id="germany-hero" className="relative isolate overflow-hidden bg-primary-950 pt-28 sm:pt-32 md:pt-36 lg:pt-40 pb-16 md:pb-24 lg:pb-28">
+      {/* Background Hero Image */}
+      <div className="absolute inset-0 -z-30">
+        <Image
+          src="/images/hero.webp"
+          alt={t('headline')}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center select-none"
+        />
+      </div>
+
+      {/* Blue Gradient Curtain (ستارة وتدرج أزرق شفاف فاخر) */}
+      <div 
+        aria-hidden="true" 
+        className={cn(
+          "absolute inset-0 -z-20",
+          // Directional curtain: high contrast for text (95%), elegant visibility for photo (50-60%)
+          "bg-gradient-to-r from-primary-950/95 via-primary-950/82 to-primary-900/55",
+          "rtl:bg-gradient-to-l rtl:from-primary-950/95 rtl:via-primary-950/82 rtl:to-primary-900/55"
+        )} 
+      />
+
+      {/* Ambient gradient top and bottom for smooth blending */}
+      <div 
+        aria-hidden="true" 
+        className="absolute inset-0 -z-10 bg-gradient-to-b from-primary-950/70 via-transparent to-primary-950/85 pointer-events-none" 
+      />
+
+      {/* Subtle brand glow effects */}
+      <div 
+        aria-hidden="true" 
+        className="absolute -top-24 -end-24 -z-10 h-96 w-96 rounded-full bg-accent-500/15 blur-3xl pointer-events-none" 
+      />
+      <div 
+        aria-hidden="true" 
+        className="absolute -bottom-24 -start-24 -z-10 h-96 w-96 rounded-full bg-primary-600/20 blur-3xl pointer-events-none" 
+      />
+
       <Container className="relative z-10">
-        <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-12 xl:gap-20">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-16">
           
           {/* Content Side */}
-          <div className="flex flex-col gap-8 max-w-2xl">
+          <div className="flex flex-col gap-6 max-w-2xl">
             {/* Eyebrow / Badge */}
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-accent-200 bg-accent-50 px-4 py-1.5 text-sm font-semibold text-accent-700 shadow-sm">
-              <Star className="h-4 w-4 fill-accent-500 text-accent-500" />
+            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-accent-400/30 bg-accent-500/15 px-4 py-1.5 text-sm font-semibold text-accent-300 shadow-sm backdrop-blur-md">
+              <Star className="h-4 w-4 fill-accent-400 text-accent-400" />
               <span>{t('eyebrow', { fallback: 'Premium Online Tutoring' })}</span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-5xl font-black tracking-tight text-primary-950 sm:text-6xl lg:text-7xl text-balance leading-tight">
+            <h1 className="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-[3.25rem] xl:text-6xl text-balance leading-[1.14] drop-shadow-sm">
               {t('headline')}
             </h1>
 
             {/* Subheadline */}
-            <p className="text-xl text-primary-700 sm:text-2xl text-balance leading-relaxed">
+            <p className="text-base text-primary-100/90 sm:text-lg lg:text-xl text-balance leading-relaxed font-normal">
               {t('subheadline')}
             </p>
 
             {/* Benefit Points */}
-            <div className="mt-4 flex flex-col gap-4">
+            <div className="flex flex-col gap-3">
               {[
                 t('benefits.0', { fallback: 'Personalized 1-to-1 learning' }),
                 t('benefits.1', { fallback: 'Flexible online lessons' }),
                 t('benefits.2', { fallback: 'Expert human coordination' })
               ].map((benefit, i) => (
-                <div key={i} className="flex items-center gap-3 text-lg font-medium text-primary-900">
-                  <CheckCircle2 className="h-6 w-6 shrink-0 text-accent-500" />
+                <div key={i} className="flex items-center gap-3 text-base sm:text-lg font-medium text-white/95">
+                  <CheckCircle2 className="h-5 w-5 sm:h-6 sm:w-6 shrink-0 text-accent-400" />
                   <span>{benefit}</span>
                 </div>
               ))}
             </div>
 
             {/* Trust Context */}
-            <div className="mt-6 flex items-center gap-4 rounded-2xl bg-white p-4 shadow-sm border border-primary-100 w-fit">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent-100 text-accent-600">
+            <div className="mt-2 flex items-center gap-4 rounded-2xl bg-white/10 backdrop-blur-md p-4 shadow-lg border border-white/15 w-fit">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent-400/20 text-accent-300 ring-1 ring-accent-400/30">
                 <Users className="h-6 w-6" />
               </div>
-              <p className="text-base font-bold text-primary-900 text-balance max-w-[200px] leading-tight">
+              <p className="text-sm sm:text-base font-semibold text-white text-balance max-w-[240px] leading-snug">
                 {t('trustContext')}
               </p>
             </div>
@@ -62,10 +102,10 @@ export function GermanyHero() {
 
           {/* Interaction Side */}
           <div className="w-full lg:ms-auto">
-            {/* Soft backdrop blur for the interaction card area */}
+            {/* Soft luminous ambient backdrop for the selector card */}
             <div className="relative mx-auto max-w-lg">
-              <div className="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-accent-200 to-primary-200 opacity-50 blur-xl" />
-              <div className="relative rounded-3xl bg-white shadow-2xl ring-1 ring-primary-900/5">
+              <div className="absolute -inset-1 rounded-[2.5rem] bg-gradient-to-tr from-accent-400/30 to-primary-400/30 opacity-70 blur-2xl pointer-events-none" />
+              <div className="relative rounded-3xl bg-white shadow-2xl ring-1 ring-white/20">
                 <HeroServiceSelector />
               </div>
             </div>
@@ -73,10 +113,6 @@ export function GermanyHero() {
 
         </div>
       </Container>
-      
-      {/* Decorative abstract shapes */}
-      <div className="absolute top-0 right-0 -z-10 h-[800px] w-[800px] translate-x-1/3 -translate-y-1/4 rounded-full bg-gradient-to-br from-accent-100/40 to-transparent blur-3xl" />
-      <div className="absolute bottom-0 left-0 -z-10 h-[600px] w-[600px] -translate-x-1/3 translate-y-1/4 rounded-full bg-gradient-to-tr from-primary-100/40 to-transparent blur-3xl" />
     </section>
   );
 }

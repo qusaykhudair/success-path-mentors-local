@@ -30,13 +30,29 @@ export function MarketHeader() {
   const isRtl = locale === 'ar';
   const ArrowIcon = isRtl ? ArrowLeft : ArrowRight;
 
+  const isHomePage = /^\/de(\/(de|en|ar))?\/?$/.test(pathname);
+  const isTransparent = isHomePage && !isScrolled;
+
   useEffect(() => {
     function handleScroll() {
-      setIsScrolled(window.scrollY > 15);
+      if (!isHomePage) {
+        setIsScrolled(true);
+        return;
+      }
+      const heroEl = document.getElementById('germany-hero');
+      if (heroEl) {
+        const heroRect = heroEl.getBoundingClientRect();
+        // Return to solid header once bottom of hero passes header threshold
+        setIsScrolled(heroRect.bottom <= 90);
+      } else {
+        setIsScrolled(window.scrollY > 20);
+      }
     }
+
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [pathname, isHomePage]);
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -102,10 +118,11 @@ export function MarketHeader() {
   return (
     <header
       className={cn(
-        'sticky top-0 z-40 transition-all duration-200 backdrop-blur-md',
-        isScrolled
-          ? 'border-b border-primary-100/90 bg-white/95 shadow-xs'
-          : 'border-b border-primary-100/60 bg-white/90'
+        'sticky top-0 z-40 transition-all duration-300',
+        isHomePage && '-mb-[4.75rem] xl:-mb-[5.25rem]',
+        isTransparent
+          ? 'bg-transparent border-b border-transparent shadow-none'
+          : 'border-b border-primary-100/90 bg-white/95 backdrop-blur-md shadow-xs'
       )}
     >
       <Container className="flex min-h-[4.75rem] items-center justify-between gap-4 xl:min-h-[5.25rem]">
@@ -122,7 +139,10 @@ export function MarketHeader() {
             height={110}
             priority
             sizes="(max-width: 1024px) 240px, 320px"
-            className="h-14 sm:h-16 xl:h-[4.5rem] w-auto object-contain transition-transform duration-200 ease-out group-hover:scale-[1.02]"
+            className={cn(
+              "h-14 sm:h-16 xl:h-[4.5rem] w-auto object-contain transition-all duration-300 ease-out group-hover:scale-[1.02]",
+              isTransparent && "brightness-0 invert drop-shadow-sm"
+            )}
           />
         </Link>
 
@@ -144,13 +164,13 @@ export function MarketHeader() {
               aria-haspopup="menu"
               className={cn(
                 'group inline-flex min-h-touch items-center gap-1 rounded-lg px-2.5 py-1.5 text-[0.82rem] font-bold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap',
-                activeDropdown === 'tutoring'
-                  ? 'bg-primary-50 text-accent-700'
-                  : 'text-primary-800 hover:bg-primary-50 hover:text-primary-950'
+                isTransparent
+                  ? (activeDropdown === 'tutoring' ? 'bg-white/20 text-accent-300' : 'text-white/95 hover:bg-white/10 hover:text-white')
+                  : (activeDropdown === 'tutoring' ? 'bg-primary-50 text-accent-700' : 'text-primary-800 hover:bg-primary-50 hover:text-primary-950')
               )}
             >
               <span>{t('tutoringServices', { fallback: 'Tutoring Services' })}</span>
-              <ChevronDown className={cn('h-3.5 w-3.5 transition-transform duration-150', activeDropdown === 'tutoring' && 'rotate-180 text-accent-600')} />
+              <ChevronDown className={cn('h-3.5 w-3.5 transition-transform duration-150', isTransparent ? (activeDropdown === 'tutoring' ? 'rotate-180 text-accent-300' : 'text-white/70') : (activeDropdown === 'tutoring' ? 'rotate-180 text-accent-600' : 'text-primary-600'))} />
             </button>
 
             {activeDropdown === 'tutoring' && (
@@ -186,13 +206,13 @@ export function MarketHeader() {
               aria-haspopup="menu"
               className={cn(
                 'group inline-flex min-h-touch items-center gap-1 rounded-lg px-2.5 py-1.5 text-[0.82rem] font-bold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap',
-                activeDropdown === 'languages'
-                  ? 'bg-primary-50 text-accent-700'
-                  : 'text-primary-800 hover:bg-primary-50 hover:text-primary-950'
+                isTransparent
+                  ? (activeDropdown === 'languages' ? 'bg-white/20 text-accent-300' : 'text-white/95 hover:bg-white/10 hover:text-white')
+                  : (activeDropdown === 'languages' ? 'bg-primary-50 text-accent-700' : 'text-primary-800 hover:bg-primary-50 hover:text-primary-950')
               )}
             >
               <span>{t('languages', { fallback: 'Languages' })}</span>
-              <ChevronDown className={cn('h-3.5 w-3.5 transition-transform duration-150', activeDropdown === 'languages' && 'rotate-180 text-accent-600')} />
+              <ChevronDown className={cn('h-3.5 w-3.5 transition-transform duration-150', isTransparent ? (activeDropdown === 'languages' ? 'rotate-180 text-accent-300' : 'text-white/70') : (activeDropdown === 'languages' ? 'rotate-180 text-accent-600' : 'text-primary-600'))} />
             </button>
 
             {activeDropdown === 'languages' && (
@@ -228,13 +248,13 @@ export function MarketHeader() {
               aria-haspopup="menu"
               className={cn(
                 'group inline-flex min-h-touch items-center gap-1 rounded-lg px-2.5 py-1.5 text-[0.82rem] font-bold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap',
-                activeDropdown === 'school'
-                  ? 'bg-primary-50 text-accent-700'
-                  : 'text-primary-800 hover:bg-primary-50 hover:text-primary-950'
+                isTransparent
+                  ? (activeDropdown === 'school' ? 'bg-white/20 text-accent-300' : 'text-white/95 hover:bg-white/10 hover:text-white')
+                  : (activeDropdown === 'school' ? 'bg-primary-50 text-accent-700' : 'text-primary-800 hover:bg-primary-50 hover:text-primary-950')
               )}
             >
               <span>{t('schoolSupport', { fallback: 'School Support' })}</span>
-              <ChevronDown className={cn('h-3.5 w-3.5 transition-transform duration-150', activeDropdown === 'school' && 'rotate-180 text-accent-600')} />
+              <ChevronDown className={cn('h-3.5 w-3.5 transition-transform duration-150', isTransparent ? (activeDropdown === 'school' ? 'rotate-180 text-accent-300' : 'text-white/70') : (activeDropdown === 'school' ? 'rotate-180 text-accent-600' : 'text-primary-600'))} />
             </button>
 
             {activeDropdown === 'school' && (
@@ -260,7 +280,10 @@ export function MarketHeader() {
           {/* Adults Link */}
           <Link
             href={`/de/${locale}/adults`}
-            className="inline-flex min-h-touch items-center rounded-lg px-2.5 py-1.5 text-[0.82rem] font-bold text-primary-800 transition-colors duration-150 hover:bg-primary-50 hover:text-primary-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap"
+            className={cn(
+              "inline-flex min-h-touch items-center rounded-lg px-2.5 py-1.5 text-[0.82rem] font-bold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap",
+              isTransparent ? "text-white/95 hover:bg-white/10 hover:text-white" : "text-primary-800 hover:bg-primary-50 hover:text-primary-950"
+            )}
           >
             {t('adults', { fallback: 'Adults' })}
           </Link>
@@ -268,7 +291,10 @@ export function MarketHeader() {
           {/* How It Works */}
           <a
             href={`/de/${locale}#how-it-works`}
-            className="inline-flex min-h-touch items-center rounded-lg px-2.5 py-1.5 text-[0.82rem] font-bold text-primary-800 transition-colors duration-150 hover:bg-primary-50 hover:text-primary-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap"
+            className={cn(
+              "inline-flex min-h-touch items-center rounded-lg px-2.5 py-1.5 text-[0.82rem] font-bold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap",
+              isTransparent ? "text-white/95 hover:bg-white/10 hover:text-white" : "text-primary-800 hover:bg-primary-50 hover:text-primary-950"
+            )}
           >
             {t('howItWorks', { fallback: 'How It Works' })}
           </a>
@@ -276,7 +302,10 @@ export function MarketHeader() {
           {/* Pricing */}
           <a
             href={`/de/${locale}#pricing`}
-            className="inline-flex min-h-touch items-center rounded-lg px-2.5 py-1.5 text-[0.82rem] font-bold text-primary-800 transition-colors duration-150 hover:bg-primary-50 hover:text-primary-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap"
+            className={cn(
+              "inline-flex min-h-touch items-center rounded-lg px-2.5 py-1.5 text-[0.82rem] font-bold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap",
+              isTransparent ? "text-white/95 hover:bg-white/10 hover:text-white" : "text-primary-800 hover:bg-primary-50 hover:text-primary-950"
+            )}
           >
             {t('pricing', { fallback: 'Pricing' })}
           </a>
@@ -284,12 +313,17 @@ export function MarketHeader() {
 
         {/* Right Desktop Action Cluster */}
         <div className="hidden items-center gap-2.5 xl:flex">
-          <GlobalLanguageSelector isGermanyContext={true} />
+          <GlobalLanguageSelector isGermanyContext={true} isTransparent={isTransparent} />
 
           {/* Login Link */}
           <Link
             href={`/de/${locale}/login`}
-            className="inline-flex h-10 items-center justify-center rounded-full border border-primary-200 bg-white px-4 text-sm font-semibold text-primary-900 shadow-2xs transition-colors hover:border-accent-300 hover:bg-accent-50/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap"
+            className={cn(
+              "inline-flex h-10 items-center justify-center rounded-full border px-4 text-sm font-semibold shadow-2xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap",
+              isTransparent
+                ? "border-white/30 bg-white/10 text-white hover:bg-white/20 hover:border-white/50 backdrop-blur-xs"
+                : "border-primary-200 bg-white text-primary-900 hover:border-accent-300 hover:bg-accent-50/50"
+            )}
           >
             {t('login')}
           </Link>
@@ -300,9 +334,14 @@ export function MarketHeader() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp Support"
-            className="hidden h-10 items-center gap-2 rounded-full border border-primary-200 bg-white px-4 text-sm font-semibold text-primary-900 shadow-2xs transition-colors hover:border-accent-300 hover:bg-accent-50/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring xl:inline-flex whitespace-nowrap"
+            className={cn(
+              "hidden h-10 items-center gap-2 rounded-full border px-4 text-sm font-semibold shadow-2xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring xl:inline-flex whitespace-nowrap",
+              isTransparent
+                ? "border-white/30 bg-white/10 text-white hover:bg-white/20 hover:border-white/50 backdrop-blur-xs"
+                : "border-primary-200 bg-white text-primary-900 hover:border-accent-300 hover:bg-accent-50/50"
+            )}
           >
-            <Phone className="h-4 w-4 text-accent-600 shrink-0" />
+            <Phone className={cn("h-4 w-4 shrink-0", isTransparent ? "text-accent-300" : "text-accent-600")} />
             <span dir="ltr" className="whitespace-nowrap font-mono">
               <bdi dir="ltr">&lrm;{marketConfig.contact.whatsappDisplay}</bdi>
             </span>
@@ -320,7 +359,7 @@ export function MarketHeader() {
 
         {/* Mobile / Tablet Controls (< xl) */}
         <div className="flex items-center gap-2 xl:hidden">
-          <GlobalLanguageSelector isGermanyContext={true} />
+          <GlobalLanguageSelector isGermanyContext={true} isTransparent={isTransparent} />
 
           <Link
             href={`/de/${locale}/trial`}
@@ -334,7 +373,12 @@ export function MarketHeader() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
-            className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-xl border border-primary-200 bg-white p-2 text-primary-900 shadow-2xs hover:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className={cn(
+              "inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-xl border p-2 shadow-2xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+              isTransparent
+                ? "border-white/30 bg-white/10 text-white hover:bg-white/20"
+                : "border-primary-200 bg-white text-primary-900 hover:bg-primary-50"
+            )}
           >
             {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>

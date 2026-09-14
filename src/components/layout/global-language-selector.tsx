@@ -15,9 +15,14 @@ import {
 interface GlobalLanguageSelectorProps {
   /** If true, the selector is being rendered inside a Germany market route context. */
   isGermanyContext?: boolean;
+  /** If true, the selector is rendered with a transparent background over a dark hero section. */
+  isTransparent?: boolean;
 }
 
-export function GlobalLanguageSelector({ isGermanyContext = false }: GlobalLanguageSelectorProps) {
+export function GlobalLanguageSelector({
+  isGermanyContext = false,
+  isTransparent = false,
+}: GlobalLanguageSelectorProps) {
   const [isOpen, setIsOpen] = React.useState(false);
   const dropdownRef = React.useRef<HTMLDivElement>(null);
   const locale = useLocale() as Locale | 'de';
@@ -82,18 +87,21 @@ export function GlobalLanguageSelector({ isGermanyContext = false }: GlobalLangu
         aria-expanded={isOpen}
         aria-haspopup="true"
         className={cn(
-          "group inline-flex h-10 items-center justify-between gap-2 rounded-full border border-primary-200 bg-white px-3.5 text-sm font-semibold text-primary shadow-2xs transition-all duration-200 ease-out",
-          "hover:border-accent-300 hover:bg-accent-50/50 hover:shadow-xs focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2",
-          isOpen && "border-accent-300 bg-accent-50 ring-2 ring-accent-500 ring-offset-2"
+          "group inline-flex h-10 items-center justify-between gap-2 rounded-full border px-3.5 text-sm font-semibold shadow-2xs transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2",
+          isTransparent
+            ? "border-white/25 bg-white/10 text-white hover:border-white/40 hover:bg-white/20 backdrop-blur-xs"
+            : "border-primary-200 bg-white text-primary hover:border-accent-300 hover:bg-accent-50/50 hover:shadow-xs",
+          isOpen && (isTransparent ? "border-accent-400 bg-white/20 ring-2 ring-accent-400" : "border-accent-300 bg-accent-50 ring-2 ring-accent-500 ring-offset-2")
         )}
       >
         <div className="flex items-center gap-2">
-          <Globe className="h-4 w-4 shrink-0 text-accent-600 transition-transform duration-300 group-hover:rotate-12" />
+          <Globe className={cn("h-4 w-4 shrink-0 transition-transform duration-300 group-hover:rotate-12", isTransparent ? "text-accent-300" : "text-accent-600")} />
           <span className="text-sm font-semibold whitespace-nowrap">{currentLabel}</span>
         </div>
         <ChevronDown 
           className={cn(
-            "h-4 w-4 shrink-0 text-primary-400 transition-transform duration-200",
+            "h-4 w-4 shrink-0 transition-transform duration-200",
+            isTransparent ? "text-white/70" : "text-primary-400",
             isOpen && "rotate-180"
           )} 
         />
