@@ -48,7 +48,7 @@ export async function Challenges() {
   const locale = (await getLocale()) === 'ar' ? 'ar' : 'en';
 
   const items = t.raw('items') as ChallengeItem[];
-  const headingId = 'why-mustafa-heading';
+  const headingId = 'why-choose-us-heading';
 
   if (!Array.isArray(items) || items.length === 0) {
     return null;
@@ -60,7 +60,7 @@ export async function Challenges() {
 
   return (
     <Section
-      id="why-mustafa"
+      id="why-choose-us"
       tone="muted"
       spacing="md"
       aria-labelledby={headingId}

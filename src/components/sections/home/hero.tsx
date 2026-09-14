@@ -7,7 +7,6 @@ import {
   CalendarCheck2,
   GraduationCap,
   MessageCircle,
-  Star,
   UsersRound,
   type LucideIcon,
 } from 'lucide-react';
@@ -48,9 +47,6 @@ export async function Hero({
   const locale = (await getLocale()) === 'ar' ? 'ar' : 'en';
 
   const stats = t.raw('stats') as Stat[];
-
-  const ratingValue = t('rating.value');
-  const ratingCount = t('rating.count');
 
   const whatsappHref = buildWhatsAppHref(
     buildTrialLessonMessage(locale)
@@ -273,50 +269,6 @@ export async function Hero({
                   />
                 </span>
               </ButtonLink>
-            </div>
-          </Reveal>
-
-          {/* Rating */}
-          <Reveal delay={0.2}>
-            <div
-              className="
-                mt-8
-                flex
-                flex-wrap
-                items-center
-                gap-x-3
-                gap-y-2
-              "
-            >
-              <div className="flex items-center gap-2">
-                <div
-                  className="flex items-center gap-0.5"
-                  role="img"
-                  aria-label={`${ratingValue} / 5`}
-                >
-                  {Array.from({ length: 5 }).map((_, index) => (
-                    <Star
-                      key={index}
-                      className="
-                        h-4
-                        w-4
-                        fill-warning-500
-                        text-warning-500
-                      "
-                      strokeWidth={1.4}
-                      aria-hidden="true"
-                    />
-                  ))}
-                </div>
-
-                <span className="text-body font-bold text-foreground">
-                  {ratingValue}
-                </span>
-              </div>
-
-              <p className="text-small text-muted-foreground">
-                {ratingCount}
-              </p>
             </div>
           </Reveal>
 

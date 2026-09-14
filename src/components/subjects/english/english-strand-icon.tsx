@@ -18,8 +18,7 @@ interface EnglishStrandIconProps {
 /**
  * Compatibility-safe icon map.
  *
- * These icon exports are already used by the existing Mustafa
- * Academy source and are therefore safe for the installed
+ * These icon exports are safe for the installed
  * lucide-react version. The fallback prevents an undefined
  * React element even when an unexpected icon key reaches the
  * component at runtime.

@@ -7,8 +7,8 @@
     }
   },
   "meta": {
-    "siteName": "Mustafa Academy",
-    "tagline": "Success Path Mentors"
+    "siteName": "Success Path Mentors",
+    "tagline": "Empowering Students. Inspiring Success."
   },
     "accessibility": {
     "skipToContent": "Skip to main content"
@@ -141,7 +141,7 @@
 "subheading": "Personalized Math, English, Science, and French tutoring aligned with Canadian and American curricula.",
 "ctaPrimary": "Book Your Free Trial",
 "ctaSecondary": "Explore Our Programs",
-"whatsappBookingMessage": "Hello, I would like to book a free trial lesson with Mustafa Academy.",
+"whatsappBookingMessage": "Hello, I would like to book a free trial lesson with Success Path Mentors.",
   "stats": [
   {
     "value": 150,
@@ -160,10 +160,6 @@
   }
 ],
           "socialProof": "Join {count} learners already growing with us",
-  "rating": {
-    "value": "4.9",
-    "count": "2,000+ reviews"
-  },
   "achievement": {
     "label": "Course completion rate"
   },
@@ -270,7 +266,7 @@
   "testimonials": {
   "eyebrow": "Stories from Our Learning Community",
   "heading": "What Parents and Students Say About Their Experience",
-  "subheading": "Real feedback from families and learners who have experienced personalized online tutoring with Mustafa Academy.",
+  "subheading": "Real feedback from families and learners who have experienced personalized online tutoring with Success Path Mentors.",
   "verified": "Verified feedback",
   "carouselLabel": "Parent and student experiences",
 "feedbackLabel": "Community feedback",
@@ -332,7 +328,7 @@
 },
  "steps": {
   "eyebrow": "A Clear and Simple Learning Journey",
-  "heading": "How Personalized Tutoring Works at Mustafa Academy",
+  "heading": "How Personalized Tutoring Works at Success Path Mentors",
   "subheading": "From understanding the student's needs to measuring progress, every stage is organized to provide clear, consistent, and personalized academic support.",
 
   "panelBadge": "Five structured steps",
@@ -347,7 +343,7 @@
 
   "cta": "Book a Free Trial",
   "ctaReassurance": "No long-term commitment is required to begin.",
-  "whatsappMessage": "Hello, I would like to book a free trial lesson and learn more about how tutoring works at Mustafa Academy.",
+  "whatsappMessage": "Hello, I would like to book a free trial lesson and learn more about how tutoring works at Success Path Mentors.",
 
   "items": [
     {
@@ -431,7 +427,7 @@
   },
 
   "whatsappCta": "Ask About a Free Trial",
-  "whatsappMessage": "Hello, I would like to learn more about Mustafa Academy's tutoring services and arrange a free trial lesson."
+  "whatsappMessage": "Hello, I would like to learn more about Success Path Mentors' tutoring services and arrange a free trial lesson."
 },
 
 "videoTestimonials": {
@@ -471,7 +467,7 @@
   ]
 },
   "whyMustafa": {
-  "eyebrow": "Why Families Choose Mustafa Academy",
+  "eyebrow": "Why Families Choose Success Path Mentors",
   "heading": "A Focused Response to the Learning Challenges Families Face",
   "subheading": "Every learner faces different obstacles. Our approach combines individual teaching, appropriate tutor matching, structured follow-up, and flexible scheduling to provide support that fits the student.",
 
@@ -515,7 +511,7 @@
   "ctaDescription": "Tell us about the student's grade, subject, current challenges, and learning goals. We will help identify a suitable starting point.",
   "cta": "Discuss the Student's Needs",
 
-  "whatsappMessage": "Hello, I would like to discuss my child's learning needs and find a suitable tutoring plan with Mustafa Academy."
+  "whatsappMessage": "Hello, I would like to discuss my child's learning needs and find a suitable tutoring plan with Success Path Mentors."
 },
   "pricing": {
   "eyebrow": "Flexible Tutoring Packages",
@@ -604,11 +600,11 @@
   "ctaDescription": "Send us the student's grade, subject, and main learning need, and our team will respond with the relevant information.",
   "cta": "Ask Us on WhatsApp",
 
-  "whatsappMessage": "Hello, I have a question about Mustafa Academy's online tutoring services.",
+  "whatsappMessage": "Hello, I have a question about Success Path Mentors' online tutoring services.",
 
   "items": [
     {
-      "question": "How do I get started with Mustafa Academy?",
+      "question": "How do I get started with Success Path Mentors?",
       "answer": "Contact us through WhatsApp and share the student's grade, subject, curriculum, preferred teaching language, current learning challenges, and available times. Our team will review the information and help arrange the appropriate next step."
     },
     {
@@ -629,7 +625,7 @@
     },
     {
       "question": "Which subjects and curricula are available?",
-      "answer": "Mustafa Academy supports a range of subjects including Mathematics, English, Science, Physics, Chemistry, French, Arabic, and other available programs. Support may include Canadian, American, Quebec, and other curricula depending on the grade, subject, and available tutor."
+      "answer": "Success Path Mentors supports a range of subjects including Mathematics, English, Science, Physics, Chemistry, French, Arabic, and other available programs. Support may include Canadian, American, Quebec, and other curricula depending on the grade, subject, and available tutor."
     },
     {
       "question": "Can we request a different tutor?",
@@ -656,7 +652,7 @@
   },
   "contact": {
     "heading": "Contact Us",
-    "subheading": "If you have questions about your child's level or want to start with an assessment session, leave your details in the form and we'll reach out soon. The Mustafa Academy team is ready to answer every question and guide you to the right plan for your child, step by step.",
+    "subheading": "If you have questions about your child's level or want to start with an assessment session, leave your details in the form and we'll reach out soon. The Success Path Mentors team is ready to answer every question and guide you to the right plan for your child, step by step.",
     "form": {
       "parentName": "Parent's Name",
       "whatsapp": "WhatsApp Number",
@@ -714,12 +710,12 @@
 
   "panelNote": "You can ask questions about subjects, scheduling, packages, and lesson arrangements before making any payment.",
 
-  "whatsappMessage": "Hello, I would like to arrange a free trial lesson with Mustafa Academy. The student's grade is: ____. The subject is: ____. The main learning need is: ____. Preferred times are: ____."
+  "whatsappMessage": "Hello, I would like to arrange a free trial lesson with Success Path Mentors. The student's grade is: ____. The subject is: ____. The main learning need is: ____. Preferred times are: ____."
 },
   "footer": {
     "ariaLabel": "Website footer",
-    "logoAlt": "Mustafa Academy — Success Path Mentors",
-    "logoLinkLabel": "Return to the Mustafa Academy homepage",
+    "logoAlt": "Success Path Mentors",
+    "logoLinkLabel": "Return to the Success Path Mentors homepage",
     "description": "One-to-one online tutoring for students across elementary, middle, and high school levels, with support in core academic subjects and languages.",
     "brandNote": "Lessons, tutor matching, scheduling, and communication are coordinated through Success Path Mentors.",
     "quickLinks": "Explore",
