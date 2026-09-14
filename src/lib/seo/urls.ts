@@ -36,6 +36,11 @@ export function buildLocalizedPath(
   let publicPath =
     normalizedPath;
 
+  if (normalizedPath.startsWith('/locations/')) {
+    const locationRoot = pathnames['/locations'][locale === 'ar' ? 'ar' : 'en'];
+    publicPath = locationRoot + normalizedPath.slice('/locations'.length);
+  }
+
   if (
     typeof routeDefinition ===
     'string'

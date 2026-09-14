@@ -30,7 +30,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring Across Canada and the United States | Success Path Mentors",
-        "ar": "دروس أونلاين في كندا والولايات المتحدة | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كندا والولايات المتحدة | Success Path Mentors"
       },
       "description": {
         "en": "Explore country, province, state, curriculum, and city pages for one-to-one online tutoring from Grades 1–12.",
@@ -359,7 +359,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Locations online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في أماكن خدمتنا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في أماكن خدمتنا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -434,7 +434,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Canada for Grades 1–12 | Success Path Mentors",
-        "ar": "دروس أونلاين في كندا للصفوف من الأول حتى الثاني عشر | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كندا للصفوف من الأول حتى الثاني عشر | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for students across Canada, with support for local curricula, schoolwork, assessments, newcomer transitions, and Arabic-speaking families.",
@@ -763,7 +763,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Canada online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كندا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كندا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -842,7 +842,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Ontario | Success Path Mentors",
-        "ar": "دروس أونلاين في أونتاريو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في أونتاريو | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Ontario, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -1171,7 +1171,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Ontario online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في أونتاريو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في أونتاريو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -1241,7 +1241,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Ontario Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج أونتاريو والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج أونتاريو والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Ontario schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -1570,7 +1570,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Ontario Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج أونتاريو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج أونتاريو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -1635,7 +1635,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Toronto, Ontario | Success Path Mentors",
-        "ar": "دروس أونلاين في تورونتو، أونتاريو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في تورونتو، أونتاريو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Toronto, Ontario. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -1964,7 +1964,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Toronto online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في تورونتو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في تورونتو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -2029,7 +2029,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Mississauga, Ontario | Success Path Mentors",
-        "ar": "دروس أونلاين في ميسيساغا، أونتاريو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ميسيساغا، أونتاريو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Mississauga, Ontario. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -2358,7 +2358,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Mississauga online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ميسيساغا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ميسيساغا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -2423,7 +2423,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Brampton, Ontario | Success Path Mentors",
-        "ar": "دروس أونلاين في برامبتون، أونتاريو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في برامبتون، أونتاريو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Brampton, Ontario. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -2752,7 +2752,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Brampton online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في برامبتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في برامبتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -2817,7 +2817,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Milton, Ontario | Success Path Mentors",
-        "ar": "دروس أونلاين في ميلتون، أونتاريو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ميلتون، أونتاريو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Milton, Ontario. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -3146,7 +3146,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Milton online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ميلتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ميلتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -3211,7 +3211,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Ottawa, Ontario | Success Path Mentors",
-        "ar": "دروس أونلاين في أوتاوا، أونتاريو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في أوتاوا، أونتاريو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Ottawa, Ontario. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -3540,7 +3540,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Ottawa online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في أوتاوا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في أوتاوا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -3605,7 +3605,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Hamilton, Ontario | Success Path Mentors",
-        "ar": "دروس أونلاين في هاميلتون، أونتاريو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في هاميلتون، أونتاريو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Hamilton, Ontario. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -3934,7 +3934,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Hamilton online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في هاميلتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في هاميلتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -3999,7 +3999,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in London, Ontario | Success Path Mentors",
-        "ar": "دروس أونلاين في لندن، أونتاريو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في لندن، أونتاريو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in London, Ontario. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -4328,7 +4328,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in London online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في لندن، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في لندن، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -4393,7 +4393,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Oakville, Ontario | Success Path Mentors",
-        "ar": "دروس أونلاين في أوكفيل، أونتاريو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في أوكفيل، أونتاريو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Oakville, Ontario. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -4722,7 +4722,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Oakville online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في أوكفيل، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في أوكفيل، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -4787,7 +4787,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Windsor, Ontario | Success Path Mentors",
-        "ar": "دروس أونلاين في ويندسور، أونتاريو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ويندسور، أونتاريو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Windsor, Ontario. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -5116,7 +5116,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Windsor online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ويندسور، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ويندسور، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -5181,7 +5181,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Kitchener, Ontario | Success Path Mentors",
-        "ar": "دروس أونلاين في كيتشنر، أونتاريو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كيتشنر، أونتاريو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Kitchener, Ontario. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -5510,7 +5510,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Kitchener online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كيتشنر، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كيتشنر، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -5586,7 +5586,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Quebec | Success Path Mentors",
-        "ar": "دروس أونلاين في كيبيك | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كيبيك | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Quebec, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -5915,7 +5915,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Quebec online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كيبيك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كيبيك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -5985,7 +5985,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Quebec Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج كيبيك والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج كيبيك والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Quebec schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -6314,7 +6314,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Quebec Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج كيبيك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج كيبيك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -6379,7 +6379,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Montreal, Quebec | Success Path Mentors",
-        "ar": "دروس أونلاين في مونتريال، كيبيك | سكسس باث منتورز"
+        "ar": "دروس أونلاين في مونتريال، كيبيك | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Montreal, Quebec. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -6708,7 +6708,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Montreal online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في مونتريال، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في مونتريال، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -6773,7 +6773,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Laval, Quebec | Success Path Mentors",
-        "ar": "دروس أونلاين في لافال، كيبيك | سكسس باث منتورز"
+        "ar": "دروس أونلاين في لافال، كيبيك | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Laval, Quebec. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -7102,7 +7102,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Laval online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في لافال، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في لافال، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -7167,7 +7167,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Quebec City, Quebec | Success Path Mentors",
-        "ar": "دروس أونلاين في مدينة كيبيك، كيبيك | سكسس باث منتورز"
+        "ar": "دروس أونلاين في مدينة كيبيك، كيبيك | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Quebec City, Quebec. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -7496,7 +7496,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Quebec City online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في مدينة كيبيك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في مدينة كيبيك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -7561,7 +7561,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Gatineau, Quebec | Success Path Mentors",
-        "ar": "دروس أونلاين في غاتينو، كيبيك | سكسس باث منتورز"
+        "ar": "دروس أونلاين في غاتينو، كيبيك | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Gatineau, Quebec. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -7890,7 +7890,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Gatineau online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في غاتينو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في غاتينو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -7955,7 +7955,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Longueuil, Quebec | Success Path Mentors",
-        "ar": "دروس أونلاين في لونغوي، كيبيك | سكسس باث منتورز"
+        "ar": "دروس أونلاين في لونغوي، كيبيك | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Longueuil, Quebec. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -8284,7 +8284,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Longueuil online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في لونغوي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في لونغوي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -8349,7 +8349,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Brossard, Quebec | Success Path Mentors",
-        "ar": "دروس أونلاين في بروسار، كيبيك | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بروسار، كيبيك | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Brossard, Quebec. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -8678,7 +8678,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Brossard online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بروسار، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بروسار، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -8743,7 +8743,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Sherbrooke, Quebec | Success Path Mentors",
-        "ar": "دروس أونلاين في شيربروك، كيبيك | سكسس باث منتورز"
+        "ar": "دروس أونلاين في شيربروك، كيبيك | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Sherbrooke, Quebec. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -9072,7 +9072,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Sherbrooke online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في شيربروك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في شيربروك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -9146,7 +9146,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Alberta | Success Path Mentors",
-        "ar": "دروس أونلاين في ألبرتا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ألبرتا | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Alberta, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -9475,7 +9475,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Alberta online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ألبرتا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ألبرتا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -9544,7 +9544,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Alberta Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج ألبرتا والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج ألبرتا والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Alberta schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -9873,7 +9873,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Alberta Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج ألبرتا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج ألبرتا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -9938,7 +9938,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Calgary, Alberta | Success Path Mentors",
-        "ar": "دروس أونلاين في كالغاري، ألبرتا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كالغاري، ألبرتا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Calgary, Alberta. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -10267,7 +10267,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Calgary online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كالغاري، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كالغاري، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -10332,7 +10332,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Edmonton, Alberta | Success Path Mentors",
-        "ar": "دروس أونلاين في إدمونتون، ألبرتا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في إدمونتون، ألبرتا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Edmonton, Alberta. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -10661,7 +10661,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Edmonton online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في إدمونتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في إدمونتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -10726,7 +10726,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Red Deer, Alberta | Success Path Mentors",
-        "ar": "دروس أونلاين في ريد دير، ألبرتا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ريد دير، ألبرتا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Red Deer, Alberta. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -11055,7 +11055,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Red Deer online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ريد دير، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ريد دير، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -11120,7 +11120,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Lethbridge, Alberta | Success Path Mentors",
-        "ar": "دروس أونلاين في ليثبريدغي، ألبرتا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ليثبريدغي، ألبرتا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Lethbridge, Alberta. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -11449,7 +11449,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Lethbridge online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ليثبريدغي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ليثبريدغي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -11514,7 +11514,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Fort McMurray, Alberta | Success Path Mentors",
-        "ar": "دروس أونلاين في فورت مكمورراي، ألبرتا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في فورت مكمورراي، ألبرتا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Fort McMurray, Alberta. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -11843,7 +11843,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Fort McMurray online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في فورت مكمورراي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في فورت مكمورراي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -11919,7 +11919,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in British Columbia | Success Path Mentors",
-        "ar": "دروس أونلاين في بريتيش كولومبيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بريتيش كولومبيا | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in British Columbia, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -12248,7 +12248,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in British Columbia online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بريتيش كولومبيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بريتيش كولومبيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -12318,7 +12318,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "British Columbia Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج بريتيش كولومبيا والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج بريتيش كولومبيا والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s British Columbia schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -12647,7 +12647,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in British Columbia Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج بريتيش كولومبيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج بريتيش كولومبيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -12712,7 +12712,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Vancouver, British Columbia | Success Path Mentors",
-        "ar": "دروس أونلاين في فانكوفر، بريتيش كولومبيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في فانكوفر، بريتيش كولومبيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Vancouver, British Columbia. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -13041,7 +13041,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Vancouver online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في فانكوفر، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في فانكوفر، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -13106,7 +13106,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Surrey, British Columbia | Success Path Mentors",
-        "ar": "دروس أونلاين في ساري، بريتيش كولومبيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ساري، بريتيش كولومبيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Surrey, British Columbia. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -13435,7 +13435,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Surrey online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ساري، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ساري، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -13500,7 +13500,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Burnaby, British Columbia | Success Path Mentors",
-        "ar": "دروس أونلاين في برنابي، بريتيش كولومبيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في برنابي، بريتيش كولومبيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Burnaby, British Columbia. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -13829,7 +13829,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Burnaby online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في برنابي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في برنابي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -13894,7 +13894,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Richmond, British Columbia | Success Path Mentors",
-        "ar": "دروس أونلاين في ريتشموند، بريتيش كولومبيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ريتشموند، بريتيش كولومبيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Richmond, British Columbia. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -14223,7 +14223,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Richmond online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ريتشموند، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ريتشموند، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -14288,7 +14288,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Coquitlam, British Columbia | Success Path Mentors",
-        "ar": "دروس أونلاين في كوكويتلام، بريتيش كولومبيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كوكويتلام، بريتيش كولومبيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Coquitlam, British Columbia. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -14617,7 +14617,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Coquitlam online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كوكويتلام، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كوكويتلام، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -14682,7 +14682,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Victoria, British Columbia | Success Path Mentors",
-        "ar": "دروس أونلاين في فيكتوريا، بريتيش كولومبيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في فيكتوريا، بريتيش كولومبيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Victoria, British Columbia. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -15011,7 +15011,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Victoria online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في فيكتوريا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في فيكتوريا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -15076,7 +15076,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Kelowna, British Columbia | Success Path Mentors",
-        "ar": "دروس أونلاين في كيلوونا، بريتيش كولومبيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كيلوونا، بريتيش كولومبيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Kelowna, British Columbia. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -15405,7 +15405,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Kelowna online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كيلوونا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كيلوونا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -15476,7 +15476,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Manitoba | Success Path Mentors",
-        "ar": "دروس أونلاين في مانيتوبا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في مانيتوبا | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Manitoba, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -15805,7 +15805,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Manitoba online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في مانيتوبا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في مانيتوبا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -15872,7 +15872,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Manitoba Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج مانيتوبا والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج مانيتوبا والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Manitoba schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -16201,7 +16201,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Manitoba Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج مانيتوبا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج مانيتوبا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -16266,7 +16266,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Winnipeg, Manitoba | Success Path Mentors",
-        "ar": "دروس أونلاين في وينيبيغ، مانيتوبا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في وينيبيغ، مانيتوبا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Winnipeg, Manitoba. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -16595,7 +16595,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Winnipeg online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في وينيبيغ، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في وينيبيغ، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -16660,7 +16660,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Brandon, Manitoba | Success Path Mentors",
-        "ar": "دروس أونلاين في براندون، مانيتوبا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في براندون، مانيتوبا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Brandon, Manitoba. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -16989,7 +16989,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Brandon online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في براندون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في براندون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -17054,7 +17054,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Steinbach, Manitoba | Success Path Mentors",
-        "ar": "دروس أونلاين في ستيينباتش، مانيتوبا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ستيينباتش، مانيتوبا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Steinbach, Manitoba. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -17383,7 +17383,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Steinbach online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ستيينباتش، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ستيينباتش، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -17454,7 +17454,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Saskatchewan | Success Path Mentors",
-        "ar": "دروس أونلاين في ساسكاتشوان | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ساسكاتشوان | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Saskatchewan, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -17783,7 +17783,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Saskatchewan online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ساسكاتشوان، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ساسكاتشوان، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -17850,7 +17850,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Saskatchewan Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج ساسكاتشوان والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج ساسكاتشوان والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Saskatchewan schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -18179,7 +18179,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Saskatchewan Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج ساسكاتشوان، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج ساسكاتشوان، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -18244,7 +18244,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Saskatoon, Saskatchewan | Success Path Mentors",
-        "ar": "دروس أونلاين في ساسكاتون، ساسكاتشوان | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ساسكاتون، ساسكاتشوان | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Saskatoon, Saskatchewan. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -18573,7 +18573,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Saskatoon online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ساسكاتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ساسكاتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -18638,7 +18638,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Regina, Saskatchewan | Success Path Mentors",
-        "ar": "دروس أونلاين في ريغينا، ساسكاتشوان | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ريغينا، ساسكاتشوان | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Regina, Saskatchewan. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -18967,7 +18967,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Regina online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ريغينا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ريغينا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -19032,7 +19032,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Prince Albert, Saskatchewan | Success Path Mentors",
-        "ar": "دروس أونلاين في برينكي البيرت، ساسكاتشوان | سكسس باث منتورز"
+        "ar": "دروس أونلاين في برينكي البيرت، ساسكاتشوان | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Prince Albert, Saskatchewan. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -19361,7 +19361,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Prince Albert online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في برينكي البيرت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في برينكي البيرت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -19432,7 +19432,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Nova Scotia | Success Path Mentors",
-        "ar": "دروس أونلاين في نوفا سكوشا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في نوفا سكوشا | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Nova Scotia, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -19761,7 +19761,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Nova Scotia online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في نوفا سكوشا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في نوفا سكوشا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -19828,7 +19828,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Nova Scotia Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج نوفا سكوشا والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج نوفا سكوشا والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Nova Scotia schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -20157,7 +20157,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Nova Scotia Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج نوفا سكوشا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج نوفا سكوشا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -20222,7 +20222,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Halifax, Nova Scotia | Success Path Mentors",
-        "ar": "دروس أونلاين في هاليفاكس، نوفا سكوشا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في هاليفاكس، نوفا سكوشا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Halifax, Nova Scotia. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -20551,7 +20551,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Halifax online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في هاليفاكس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في هاليفاكس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -20616,7 +20616,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Dartmouth, Nova Scotia | Success Path Mentors",
-        "ar": "دروس أونلاين في دارتموث، نوفا سكوشا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في دارتموث، نوفا سكوشا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Dartmouth, Nova Scotia. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -20945,7 +20945,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Dartmouth online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في دارتموث، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في دارتموث، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -21010,7 +21010,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Sydney, Nova Scotia | Success Path Mentors",
-        "ar": "دروس أونلاين في سيدنيي، نوفا سكوشا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في سيدنيي، نوفا سكوشا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Sydney, Nova Scotia. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -21339,7 +21339,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Sydney online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في سيدنيي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في سيدنيي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -21410,7 +21410,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in New Brunswick | Success Path Mentors",
-        "ar": "دروس أونلاين في نيو برونزويك | سكسس باث منتورز"
+        "ar": "دروس أونلاين في نيو برونزويك | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in New Brunswick, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -21739,7 +21739,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in New Brunswick online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في نيو برونزويك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في نيو برونزويك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -21806,7 +21806,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "New Brunswick Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج نيو برونزويك والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج نيو برونزويك والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s New Brunswick schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -22135,7 +22135,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in New Brunswick Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج نيو برونزويك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج نيو برونزويك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -22200,7 +22200,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Moncton, New Brunswick | Success Path Mentors",
-        "ar": "دروس أونلاين في مونكتون، نيو برونزويك | سكسس باث منتورز"
+        "ar": "دروس أونلاين في مونكتون، نيو برونزويك | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Moncton, New Brunswick. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -22529,7 +22529,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Moncton online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في مونكتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في مونكتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -22594,7 +22594,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Fredericton, New Brunswick | Success Path Mentors",
-        "ar": "دروس أونلاين في فريدريكتون، نيو برونزويك | سكسس باث منتورز"
+        "ar": "دروس أونلاين في فريدريكتون، نيو برونزويك | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Fredericton, New Brunswick. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -22923,7 +22923,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Fredericton online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في فريدريكتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في فريدريكتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -22988,7 +22988,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Saint John, New Brunswick | Success Path Mentors",
-        "ar": "دروس أونلاين في سانت جون، نيو برونزويك | سكسس باث منتورز"
+        "ar": "دروس أونلاين في سانت جون، نيو برونزويك | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Saint John, New Brunswick. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -23317,7 +23317,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Saint John online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في سانت جون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في سانت جون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -23388,7 +23388,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Newfoundland and Labrador | Success Path Mentors",
-        "ar": "دروس أونلاين في نيوفاوندلاند ولابرادور | سكسس باث منتورز"
+        "ar": "دروس أونلاين في نيوفاوندلاند ولابرادور | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Newfoundland and Labrador, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -23717,7 +23717,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Newfoundland and Labrador online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في نيوفاوندلاند ولابرادور، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في نيوفاوندلاند ولابرادور، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -23784,7 +23784,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Newfoundland and Labrador Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج نيوفاوندلاند ولابرادور والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج نيوفاوندلاند ولابرادور والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Newfoundland and Labrador schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -24113,7 +24113,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Newfoundland and Labrador Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج نيوفاوندلاند ولابرادور، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج نيوفاوندلاند ولابرادور، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -24178,7 +24178,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in St. John’s, Newfoundland and Labrador | Success Path Mentors",
-        "ar": "دروس أونلاين في ست جوهنس، نيوفاوندلاند ولابرادور | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ست جوهنس، نيوفاوندلاند ولابرادور | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in St. John’s, Newfoundland and Labrador. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -24507,7 +24507,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in St. John’s online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ست جوهنس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ست جوهنس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -24572,7 +24572,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Mount Pearl, Newfoundland and Labrador | Success Path Mentors",
-        "ar": "دروس أونلاين في مونت بيرل، نيوفاوندلاند ولابرادور | سكسس باث منتورز"
+        "ar": "دروس أونلاين في مونت بيرل، نيوفاوندلاند ولابرادور | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Mount Pearl, Newfoundland and Labrador. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -24901,7 +24901,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Mount Pearl online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في مونت بيرل، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في مونت بيرل، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -24966,7 +24966,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Corner Brook, Newfoundland and Labrador | Success Path Mentors",
-        "ar": "دروس أونلاين في كورنير بروك، نيوفاوندلاند ولابرادور | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كورنير بروك، نيوفاوندلاند ولابرادور | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Corner Brook, Newfoundland and Labrador. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -25295,7 +25295,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Corner Brook online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كورنير بروك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كورنير بروك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -25364,7 +25364,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Prince Edward Island | Success Path Mentors",
-        "ar": "دروس أونلاين في جزيرة الأمير إدوارد | سكسس باث منتورز"
+        "ar": "دروس أونلاين في جزيرة الأمير إدوارد | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Prince Edward Island, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -25693,7 +25693,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Prince Edward Island online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في جزيرة الأمير إدوارد، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في جزيرة الأمير إدوارد، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -25759,7 +25759,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Prince Edward Island Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج جزيرة الأمير إدوارد والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج جزيرة الأمير إدوارد والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Prince Edward Island schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -26088,7 +26088,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Prince Edward Island Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج جزيرة الأمير إدوارد، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج جزيرة الأمير إدوارد، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -26153,7 +26153,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Charlottetown, Prince Edward Island | Success Path Mentors",
-        "ar": "دروس أونلاين في تشارلوتتيتوون، جزيرة الأمير إدوارد | سكسس باث منتورز"
+        "ar": "دروس أونلاين في تشارلوتتيتوون، جزيرة الأمير إدوارد | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Charlottetown, Prince Edward Island. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -26482,7 +26482,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Charlottetown online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في تشارلوتتيتوون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في تشارلوتتيتوون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -26547,7 +26547,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Summerside, Prince Edward Island | Success Path Mentors",
-        "ar": "دروس أونلاين في سومميرسيدي، جزيرة الأمير إدوارد | سكسس باث منتورز"
+        "ar": "دروس أونلاين في سومميرسيدي، جزيرة الأمير إدوارد | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Summerside, Prince Edward Island. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -26876,7 +26876,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Summerside online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في سومميرسيدي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في سومميرسيدي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -26943,7 +26943,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Yukon | Success Path Mentors",
-        "ar": "دروس أونلاين في يوكون | سكسس باث منتورز"
+        "ar": "دروس أونلاين في يوكون | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Yukon, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -27272,7 +27272,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Yukon online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في يوكون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في يوكون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -27337,7 +27337,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Yukon Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج يوكون والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج يوكون والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Yukon schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -27666,7 +27666,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Yukon Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج يوكون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج يوكون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -27731,7 +27731,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Whitehorse, Yukon | Success Path Mentors",
-        "ar": "دروس أونلاين في وايت هورس، يوكون | سكسس باث منتورز"
+        "ar": "دروس أونلاين في وايت هورس، يوكون | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Whitehorse, Yukon. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -28060,7 +28060,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Whitehorse online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في وايت هورس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في وايت هورس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -28127,7 +28127,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Northwest Territories | Success Path Mentors",
-        "ar": "دروس أونلاين في الأقاليم الشمالية الغربية | سكسس باث منتورز"
+        "ar": "دروس أونلاين في الأقاليم الشمالية الغربية | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Northwest Territories, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -28456,7 +28456,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Northwest Territories online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في الأقاليم الشمالية الغربية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في الأقاليم الشمالية الغربية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -28521,7 +28521,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Northwest Territories Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج الأقاليم الشمالية الغربية والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج الأقاليم الشمالية الغربية والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Northwest Territories schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -28850,7 +28850,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Northwest Territories Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج الأقاليم الشمالية الغربية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج الأقاليم الشمالية الغربية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -28915,7 +28915,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Yellowknife, Northwest Territories | Success Path Mentors",
-        "ar": "دروس أونلاين في يلونايف، الأقاليم الشمالية الغربية | سكسس باث منتورز"
+        "ar": "دروس أونلاين في يلونايف، الأقاليم الشمالية الغربية | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Yellowknife, Northwest Territories. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -29244,7 +29244,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Yellowknife online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في يلونايف، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في يلونايف، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -29311,7 +29311,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Nunavut | Success Path Mentors",
-        "ar": "دروس أونلاين في نونافوت | سكسس باث منتورز"
+        "ar": "دروس أونلاين في نونافوت | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Nunavut, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -29640,7 +29640,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Nunavut online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في نونافوت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في نونافوت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -29705,7 +29705,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Nunavut Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج نونافوت والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج نونافوت والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Nunavut schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -30034,7 +30034,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Nunavut Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج نونافوت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج نونافوت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -30099,7 +30099,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Iqaluit, Nunavut | Success Path Mentors",
-        "ar": "دروس أونلاين في إيكالويت، نونافوت | سكسس باث منتورز"
+        "ar": "دروس أونلاين في إيكالويت، نونافوت | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Iqaluit, Nunavut. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -30428,7 +30428,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Iqaluit online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في إيكالويت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في إيكالويت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -30540,7 +30540,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in United States for Grades 1–12 | Success Path Mentors",
-        "ar": "دروس أونلاين في الولايات المتحدة للصفوف من الأول حتى الثاني عشر | سكسس باث منتورز"
+        "ar": "دروس أونلاين في الولايات المتحدة للصفوف من الأول حتى الثاني عشر | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for students across United States, with support for local curricula, schoolwork, assessments, newcomer transitions, and Arabic-speaking families.",
@@ -30869,7 +30869,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in United States online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في الولايات المتحدة، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في الولايات المتحدة، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -30940,7 +30940,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Alabama | Success Path Mentors",
-        "ar": "دروس أونلاين في ألاباما | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ألاباما | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Alabama, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -31269,7 +31269,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Alabama online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ألاباما، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ألاباما، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -31336,7 +31336,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Alabama Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج ألاباما والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج ألاباما والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Alabama schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -31665,7 +31665,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Alabama Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج ألاباما، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج ألاباما، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -31730,7 +31730,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Birmingham, Alabama | Success Path Mentors",
-        "ar": "دروس أونلاين في بيرمينغام، ألاباما | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بيرمينغام، ألاباما | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Birmingham, Alabama. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -32059,7 +32059,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Birmingham online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بيرمينغام، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بيرمينغام، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -32124,7 +32124,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Montgomery, Alabama | Success Path Mentors",
-        "ar": "دروس أونلاين في مونتغوميري، ألاباما | سكسس باث منتورز"
+        "ar": "دروس أونلاين في مونتغوميري، ألاباما | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Montgomery, Alabama. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -32453,7 +32453,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Montgomery online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في مونتغوميري، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في مونتغوميري، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -32518,7 +32518,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Huntsville, Alabama | Success Path Mentors",
-        "ar": "دروس أونلاين في هونتسفيللي، ألاباما | سكسس باث منتورز"
+        "ar": "دروس أونلاين في هونتسفيللي، ألاباما | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Huntsville, Alabama. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -32847,7 +32847,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Huntsville online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في هونتسفيللي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في هونتسفيللي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -32918,7 +32918,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Alaska | Success Path Mentors",
-        "ar": "دروس أونلاين في ألاسكا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ألاسكا | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Alaska, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -33247,7 +33247,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Alaska online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ألاسكا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ألاسكا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -33314,7 +33314,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Alaska Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج ألاسكا والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج ألاسكا والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Alaska schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -33643,7 +33643,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Alaska Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج ألاسكا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج ألاسكا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -33708,7 +33708,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Anchorage, Alaska | Success Path Mentors",
-        "ar": "دروس أونلاين في انتشوراغي، ألاسكا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في انتشوراغي، ألاسكا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Anchorage, Alaska. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -34037,7 +34037,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Anchorage online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في انتشوراغي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في انتشوراغي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -34102,7 +34102,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Fairbanks, Alaska | Success Path Mentors",
-        "ar": "دروس أونلاين في فايربانكس، ألاسكا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في فايربانكس، ألاسكا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Fairbanks, Alaska. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -34431,7 +34431,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Fairbanks online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في فايربانكس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في فايربانكس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -34496,7 +34496,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Juneau, Alaska | Success Path Mentors",
-        "ar": "دروس أونلاين في جونيو، ألاسكا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في جونيو، ألاسكا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Juneau, Alaska. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -34825,7 +34825,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Juneau online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في جونيو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في جونيو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -34896,7 +34896,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Arizona | Success Path Mentors",
-        "ar": "دروس أونلاين في أريزونا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في أريزونا | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Arizona, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -35225,7 +35225,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Arizona online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في أريزونا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في أريزونا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -35292,7 +35292,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Arizona Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج أريزونا والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج أريزونا والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Arizona schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -35621,7 +35621,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Arizona Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج أريزونا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج أريزونا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -35686,7 +35686,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Phoenix, Arizona | Success Path Mentors",
-        "ar": "دروس أونلاين في فينيكس، أريزونا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في فينيكس، أريزونا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Phoenix, Arizona. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -36015,7 +36015,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Phoenix online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في فينيكس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في فينيكس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -36080,7 +36080,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Tucson, Arizona | Success Path Mentors",
-        "ar": "دروس أونلاين في توسان، أريزونا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في توسان، أريزونا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Tucson, Arizona. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -36409,7 +36409,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Tucson online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في توسان، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في توسان، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -36474,7 +36474,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Mesa, Arizona | Success Path Mentors",
-        "ar": "دروس أونلاين في ميسا، أريزونا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ميسا، أريزونا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Mesa, Arizona. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -36803,7 +36803,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Mesa online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ميسا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ميسا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -36874,7 +36874,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Arkansas | Success Path Mentors",
-        "ar": "دروس أونلاين في أركنساس | سكسس باث منتورز"
+        "ar": "دروس أونلاين في أركنساس | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Arkansas, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -37203,7 +37203,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Arkansas online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في أركنساس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في أركنساس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -37270,7 +37270,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Arkansas Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج أركنساس والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج أركنساس والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Arkansas schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -37599,7 +37599,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Arkansas Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج أركنساس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج أركنساس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -37664,7 +37664,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Little Rock, Arkansas | Success Path Mentors",
-        "ar": "دروس أونلاين في ليتتلي روك، أركنساس | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ليتتلي روك، أركنساس | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Little Rock, Arkansas. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -37993,7 +37993,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Little Rock online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ليتتلي روك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ليتتلي روك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -38058,7 +38058,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Fayetteville, Arkansas | Success Path Mentors",
-        "ar": "دروس أونلاين في فاييتتيفيللي، أركنساس | سكسس باث منتورز"
+        "ar": "دروس أونلاين في فاييتتيفيللي، أركنساس | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Fayetteville, Arkansas. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -38387,7 +38387,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Fayetteville online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في فاييتتيفيللي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في فاييتتيفيللي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -38452,7 +38452,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Fort Smith, Arkansas | Success Path Mentors",
-        "ar": "دروس أونلاين في فورت سميث، أركنساس | سكسس باث منتورز"
+        "ar": "دروس أونلاين في فورت سميث، أركنساس | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Fort Smith, Arkansas. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -38781,7 +38781,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Fort Smith online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في فورت سميث، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في فورت سميث، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -38857,7 +38857,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in California | Success Path Mentors",
-        "ar": "دروس أونلاين في كاليفورنيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كاليفورنيا | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in California, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -39186,7 +39186,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in California online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كاليفورنيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كاليفورنيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -39256,7 +39256,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "California Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج كاليفورنيا والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج كاليفورنيا والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s California schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -39585,7 +39585,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in California Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج كاليفورنيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج كاليفورنيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -39650,7 +39650,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Los Angeles, California | Success Path Mentors",
-        "ar": "دروس أونلاين في لوس أنجلوس، كاليفورنيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في لوس أنجلوس، كاليفورنيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Los Angeles, California. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -39979,7 +39979,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Los Angeles online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في لوس أنجلوس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في لوس أنجلوس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -40044,7 +40044,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in San Diego, California | Success Path Mentors",
-        "ar": "دروس أونلاين في سان دييغو، كاليفورنيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في سان دييغو، كاليفورنيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in San Diego, California. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -40373,7 +40373,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in San Diego online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في سان دييغو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في سان دييغو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -40438,7 +40438,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in San Francisco, California | Success Path Mentors",
-        "ar": "دروس أونلاين في سان فرانسيسكو، كاليفورنيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في سان فرانسيسكو، كاليفورنيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in San Francisco, California. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -40767,7 +40767,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in San Francisco online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في سان فرانسيسكو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في سان فرانسيسكو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -40832,7 +40832,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in San Jose, California | Success Path Mentors",
-        "ar": "دروس أونلاين في سان خوسيه، كاليفورنيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في سان خوسيه، كاليفورنيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in San Jose, California. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -41161,7 +41161,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in San Jose online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في سان خوسيه، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في سان خوسيه، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -41226,7 +41226,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Anaheim, California | Success Path Mentors",
-        "ar": "دروس أونلاين في اناهييم، كاليفورنيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في اناهييم، كاليفورنيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Anaheim, California. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -41555,7 +41555,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Anaheim online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في اناهييم، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في اناهييم، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -41620,7 +41620,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Sacramento, California | Success Path Mentors",
-        "ar": "دروس أونلاين في ساكرامنتو، كاليفورنيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ساكرامنتو، كاليفورنيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Sacramento, California. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -41949,7 +41949,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Sacramento online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ساكرامنتو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ساكرامنتو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -42014,7 +42014,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Fresno, California | Success Path Mentors",
-        "ar": "دروس أونلاين في فريسنو، كاليفورنيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في فريسنو، كاليفورنيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Fresno, California. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -42343,7 +42343,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Fresno online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في فريسنو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في فريسنو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -42414,7 +42414,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Colorado | Success Path Mentors",
-        "ar": "دروس أونلاين في كولورادو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كولورادو | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Colorado, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -42743,7 +42743,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Colorado online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كولورادو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كولورادو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -42810,7 +42810,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Colorado Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج كولورادو والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج كولورادو والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Colorado schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -43139,7 +43139,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Colorado Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج كولورادو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج كولورادو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -43204,7 +43204,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Denver, Colorado | Success Path Mentors",
-        "ar": "دروس أونلاين في دنفر، كولورادو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في دنفر، كولورادو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Denver, Colorado. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -43533,7 +43533,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Denver online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في دنفر، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في دنفر، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -43598,7 +43598,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Aurora, Colorado | Success Path Mentors",
-        "ar": "دروس أونلاين في اورورا، كولورادو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في اورورا، كولورادو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Aurora, Colorado. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -43927,7 +43927,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Aurora online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في اورورا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في اورورا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -43992,7 +43992,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Colorado Springs, Colorado | Success Path Mentors",
-        "ar": "دروس أونلاين في كولورادو سبرينغس، كولورادو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كولورادو سبرينغس، كولورادو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Colorado Springs, Colorado. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -44321,7 +44321,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Colorado Springs online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كولورادو سبرينغس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كولورادو سبرينغس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -44392,7 +44392,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Connecticut | Success Path Mentors",
-        "ar": "دروس أونلاين في كونيتيكت | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كونيتيكت | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Connecticut, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -44721,7 +44721,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Connecticut online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كونيتيكت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كونيتيكت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -44788,7 +44788,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Connecticut Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج كونيتيكت والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج كونيتيكت والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Connecticut schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -45117,7 +45117,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Connecticut Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج كونيتيكت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج كونيتيكت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -45182,7 +45182,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Bridgeport, Connecticut | Success Path Mentors",
-        "ar": "دروس أونلاين في بريدغيبورت، كونيتيكت | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بريدغيبورت، كونيتيكت | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Bridgeport, Connecticut. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -45511,7 +45511,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Bridgeport online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بريدغيبورت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بريدغيبورت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -45576,7 +45576,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Hartford, Connecticut | Success Path Mentors",
-        "ar": "دروس أونلاين في هارتفورد، كونيتيكت | سكسس باث منتورز"
+        "ar": "دروس أونلاين في هارتفورد، كونيتيكت | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Hartford, Connecticut. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -45905,7 +45905,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Hartford online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في هارتفورد، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في هارتفورد، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -45970,7 +45970,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in New Haven, Connecticut | Success Path Mentors",
-        "ar": "دروس أونلاين في نيو هافين، كونيتيكت | سكسس باث منتورز"
+        "ar": "دروس أونلاين في نيو هافين، كونيتيكت | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in New Haven, Connecticut. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -46299,7 +46299,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in New Haven online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في نيو هافين، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في نيو هافين، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -46370,7 +46370,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Delaware | Success Path Mentors",
-        "ar": "دروس أونلاين في ديلاوير | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ديلاوير | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Delaware, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -46699,7 +46699,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Delaware online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ديلاوير، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ديلاوير، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -46766,7 +46766,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Delaware Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج ديلاوير والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج ديلاوير والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Delaware schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -47095,7 +47095,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Delaware Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج ديلاوير، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج ديلاوير، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -47160,7 +47160,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Wilmington, Delaware | Success Path Mentors",
-        "ar": "دروس أونلاين في ويلمينغتون، ديلاوير | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ويلمينغتون، ديلاوير | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Wilmington, Delaware. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -47489,7 +47489,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Wilmington online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ويلمينغتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ويلمينغتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -47554,7 +47554,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Dover, Delaware | Success Path Mentors",
-        "ar": "دروس أونلاين في دوفير، ديلاوير | سكسس باث منتورز"
+        "ar": "دروس أونلاين في دوفير، ديلاوير | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Dover, Delaware. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -47883,7 +47883,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Dover online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في دوفير، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في دوفير، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -47948,7 +47948,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Newark, Delaware | Success Path Mentors",
-        "ar": "دروس أونلاين في نيوارك، ديلاوير | سكسس باث منتورز"
+        "ar": "دروس أونلاين في نيوارك، ديلاوير | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Newark, Delaware. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -48277,7 +48277,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Newark online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في نيوارك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في نيوارك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -48351,7 +48351,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Florida | Success Path Mentors",
-        "ar": "دروس أونلاين في فلوريدا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في فلوريدا | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Florida, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -48680,7 +48680,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Florida online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في فلوريدا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في فلوريدا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -48749,7 +48749,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Florida Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج فلوريدا والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج فلوريدا والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Florida schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -49078,7 +49078,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Florida Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج فلوريدا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج فلوريدا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -49143,7 +49143,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Miami, Florida | Success Path Mentors",
-        "ar": "دروس أونلاين في ميامي، فلوريدا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ميامي، فلوريدا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Miami, Florida. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -49472,7 +49472,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Miami online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ميامي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ميامي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -49537,7 +49537,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Orlando, Florida | Success Path Mentors",
-        "ar": "دروس أونلاين في أورلاندو، فلوريدا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في أورلاندو، فلوريدا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Orlando, Florida. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -49866,7 +49866,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Orlando online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في أورلاندو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في أورلاندو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -49931,7 +49931,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Tampa, Florida | Success Path Mentors",
-        "ar": "دروس أونلاين في تامبا، فلوريدا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في تامبا، فلوريدا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Tampa, Florida. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -50260,7 +50260,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Tampa online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في تامبا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في تامبا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -50325,7 +50325,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Jacksonville, Florida | Success Path Mentors",
-        "ar": "دروس أونلاين في جاكسونفيللي، فلوريدا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في جاكسونفيللي، فلوريدا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Jacksonville, Florida. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -50654,7 +50654,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Jacksonville online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في جاكسونفيللي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في جاكسونفيللي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -50719,7 +50719,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Fort Lauderdale, Florida | Success Path Mentors",
-        "ar": "دروس أونلاين في فورت لاوديردالي، فلوريدا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في فورت لاوديردالي، فلوريدا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Fort Lauderdale, Florida. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -51048,7 +51048,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Fort Lauderdale online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في فورت لاوديردالي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في فورت لاوديردالي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -51119,7 +51119,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Georgia | Success Path Mentors",
-        "ar": "دروس أونلاين في جورجيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في جورجيا | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Georgia, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -51448,7 +51448,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Georgia online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في جورجيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في جورجيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -51515,7 +51515,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Georgia Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج جورجيا والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج جورجيا والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Georgia schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -51844,7 +51844,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Georgia Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج جورجيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج جورجيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -51909,7 +51909,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Atlanta, Georgia | Success Path Mentors",
-        "ar": "دروس أونلاين في أتلانتا، جورجيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في أتلانتا، جورجيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Atlanta, Georgia. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -52238,7 +52238,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Atlanta online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في أتلانتا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في أتلانتا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -52303,7 +52303,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Savannah, Georgia | Success Path Mentors",
-        "ar": "دروس أونلاين في سافانناه، جورجيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في سافانناه، جورجيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Savannah, Georgia. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -52632,7 +52632,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Savannah online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في سافانناه، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في سافانناه، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -52697,7 +52697,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Augusta, Georgia | Success Path Mentors",
-        "ar": "دروس أونلاين في اوغوستا، جورجيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في اوغوستا، جورجيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Augusta, Georgia. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -53026,7 +53026,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Augusta online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في اوغوستا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في اوغوستا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -53097,7 +53097,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Hawaii | Success Path Mentors",
-        "ar": "دروس أونلاين في هاواي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في هاواي | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Hawaii, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -53426,7 +53426,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Hawaii online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في هاواي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في هاواي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -53493,7 +53493,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Hawaii Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج هاواي والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج هاواي والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Hawaii schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -53822,7 +53822,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Hawaii Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج هاواي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج هاواي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -53887,7 +53887,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Honolulu, Hawaii | Success Path Mentors",
-        "ar": "دروس أونلاين في هونولولو، هاواي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في هونولولو، هاواي | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Honolulu, Hawaii. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -54216,7 +54216,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Honolulu online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في هونولولو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في هونولولو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -54281,7 +54281,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Hilo, Hawaii | Success Path Mentors",
-        "ar": "دروس أونلاين في هيلو، هاواي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في هيلو، هاواي | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Hilo, Hawaii. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -54610,7 +54610,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Hilo online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في هيلو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في هيلو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -54675,7 +54675,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Kailua, Hawaii | Success Path Mentors",
-        "ar": "دروس أونلاين في كايلوا، هاواي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كايلوا، هاواي | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Kailua, Hawaii. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -55004,7 +55004,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Kailua online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كايلوا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كايلوا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -55075,7 +55075,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Idaho | Success Path Mentors",
-        "ar": "دروس أونلاين في أيداهو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في أيداهو | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Idaho, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -55404,7 +55404,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Idaho online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في أيداهو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في أيداهو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -55471,7 +55471,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Idaho Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج أيداهو والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج أيداهو والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Idaho schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -55800,7 +55800,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Idaho Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج أيداهو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج أيداهو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -55865,7 +55865,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Boise, Idaho | Success Path Mentors",
-        "ar": "دروس أونلاين في بويسي، أيداهو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بويسي، أيداهو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Boise, Idaho. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -56194,7 +56194,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Boise online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بويسي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بويسي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -56259,7 +56259,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Meridian, Idaho | Success Path Mentors",
-        "ar": "دروس أونلاين في ميريديان، أيداهو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ميريديان، أيداهو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Meridian, Idaho. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -56588,7 +56588,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Meridian online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ميريديان، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ميريديان، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -56653,7 +56653,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Nampa, Idaho | Success Path Mentors",
-        "ar": "دروس أونلاين في نامبا، أيداهو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في نامبا، أيداهو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Nampa, Idaho. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -56982,7 +56982,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Nampa online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في نامبا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في نامبا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -57055,7 +57055,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Illinois | Success Path Mentors",
-        "ar": "دروس أونلاين في إلينوي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في إلينوي | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Illinois, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -57384,7 +57384,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Illinois online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في إلينوي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في إلينوي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -57452,7 +57452,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Illinois Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج إلينوي والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج إلينوي والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Illinois schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -57781,7 +57781,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Illinois Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج إلينوي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج إلينوي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -57846,7 +57846,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Chicago, Illinois | Success Path Mentors",
-        "ar": "دروس أونلاين في شيكاغو، إلينوي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في شيكاغو، إلينوي | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Chicago, Illinois. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -58175,7 +58175,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Chicago online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في شيكاغو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في شيكاغو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -58240,7 +58240,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Bridgeview, Illinois | Success Path Mentors",
-        "ar": "دروس أونلاين في بريدغيفييو، إلينوي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بريدغيفييو، إلينوي | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Bridgeview, Illinois. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -58569,7 +58569,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Bridgeview online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بريدغيفييو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بريدغيفييو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -58634,7 +58634,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Naperville, Illinois | Success Path Mentors",
-        "ar": "دروس أونلاين في نابيرفيللي، إلينوي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في نابيرفيللي، إلينوي | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Naperville, Illinois. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -58963,7 +58963,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Naperville online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في نابيرفيللي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في نابيرفيللي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -59028,7 +59028,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Aurora, Illinois | Success Path Mentors",
-        "ar": "دروس أونلاين في اورورا، إلينوي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في اورورا، إلينوي | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Aurora, Illinois. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -59357,7 +59357,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Aurora online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في اورورا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في اورورا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -59428,7 +59428,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Indiana | Success Path Mentors",
-        "ar": "دروس أونلاين في إنديانا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في إنديانا | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Indiana, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -59757,7 +59757,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Indiana online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في إنديانا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في إنديانا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -59824,7 +59824,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Indiana Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج إنديانا والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج إنديانا والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Indiana schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -60153,7 +60153,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Indiana Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج إنديانا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج إنديانا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -60218,7 +60218,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Indianapolis, Indiana | Success Path Mentors",
-        "ar": "دروس أونلاين في إنديانابوليس، إنديانا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في إنديانابوليس، إنديانا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Indianapolis, Indiana. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -60547,7 +60547,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Indianapolis online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في إنديانابوليس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في إنديانابوليس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -60612,7 +60612,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Fort Wayne, Indiana | Success Path Mentors",
-        "ar": "دروس أونلاين في فورت وايني، إنديانا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في فورت وايني، إنديانا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Fort Wayne, Indiana. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -60941,7 +60941,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Fort Wayne online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في فورت وايني، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في فورت وايني، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -61006,7 +61006,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in South Bend, Indiana | Success Path Mentors",
-        "ar": "دروس أونلاين في سوث بيند، إنديانا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في سوث بيند، إنديانا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in South Bend, Indiana. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -61335,7 +61335,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in South Bend online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في سوث بيند، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في سوث بيند، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -61406,7 +61406,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Iowa | Success Path Mentors",
-        "ar": "دروس أونلاين في آيوا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في آيوا | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Iowa, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -61735,7 +61735,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Iowa online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في آيوا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في آيوا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -61802,7 +61802,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Iowa Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج آيوا والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج آيوا والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Iowa schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -62131,7 +62131,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Iowa Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج آيوا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج آيوا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -62196,7 +62196,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Des Moines, Iowa | Success Path Mentors",
-        "ar": "دروس أونلاين في ديس موينيس، آيوا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ديس موينيس، آيوا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Des Moines, Iowa. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -62525,7 +62525,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Des Moines online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ديس موينيس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ديس موينيس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -62590,7 +62590,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Cedar Rapids, Iowa | Success Path Mentors",
-        "ar": "دروس أونلاين في كيدار رابيدس، آيوا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كيدار رابيدس، آيوا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Cedar Rapids, Iowa. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -62919,7 +62919,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Cedar Rapids online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كيدار رابيدس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كيدار رابيدس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -62984,7 +62984,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Iowa City, Iowa | Success Path Mentors",
-        "ar": "دروس أونلاين في يووا كيتي، آيوا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في يووا كيتي، آيوا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Iowa City, Iowa. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -63313,7 +63313,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Iowa City online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في يووا كيتي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في يووا كيتي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -63384,7 +63384,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Kansas | Success Path Mentors",
-        "ar": "دروس أونلاين في كانساس | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كانساس | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Kansas, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -63713,7 +63713,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Kansas online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كانساس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كانساس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -63780,7 +63780,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Kansas Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج كانساس والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج كانساس والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Kansas schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -64109,7 +64109,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Kansas Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج كانساس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج كانساس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -64174,7 +64174,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Wichita, Kansas | Success Path Mentors",
-        "ar": "دروس أونلاين في ويتشيتا، كانساس | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ويتشيتا، كانساس | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Wichita, Kansas. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -64503,7 +64503,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Wichita online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ويتشيتا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ويتشيتا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -64568,7 +64568,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Overland Park, Kansas | Success Path Mentors",
-        "ar": "دروس أونلاين في وفيرلاند بارك، كانساس | سكسس باث منتورز"
+        "ar": "دروس أونلاين في وفيرلاند بارك، كانساس | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Overland Park, Kansas. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -64897,7 +64897,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Overland Park online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في وفيرلاند بارك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في وفيرلاند بارك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -64962,7 +64962,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Kansas City, Kansas | Success Path Mentors",
-        "ar": "دروس أونلاين في كانساس سيتي، كانساس | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كانساس سيتي، كانساس | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Kansas City, Kansas. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -65291,7 +65291,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Kansas City online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كانساس سيتي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كانساس سيتي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -65362,7 +65362,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Kentucky | Success Path Mentors",
-        "ar": "دروس أونلاين في كنتاكي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كنتاكي | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Kentucky, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -65691,7 +65691,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Kentucky online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كنتاكي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كنتاكي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -65758,7 +65758,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Kentucky Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج كنتاكي والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج كنتاكي والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Kentucky schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -66087,7 +66087,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Kentucky Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج كنتاكي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج كنتاكي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -66152,7 +66152,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Louisville, Kentucky | Success Path Mentors",
-        "ar": "دروس أونلاين في لويسفيللي، كنتاكي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في لويسفيللي، كنتاكي | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Louisville, Kentucky. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -66481,7 +66481,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Louisville online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في لويسفيللي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في لويسفيللي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -66546,7 +66546,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Lexington, Kentucky | Success Path Mentors",
-        "ar": "دروس أونلاين في ليكسينغتون، كنتاكي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ليكسينغتون، كنتاكي | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Lexington, Kentucky. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -66875,7 +66875,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Lexington online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ليكسينغتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ليكسينغتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -66940,7 +66940,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Bowling Green, Kentucky | Success Path Mentors",
-        "ar": "دروس أونلاين في بوولينغ غرين، كنتاكي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بوولينغ غرين، كنتاكي | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Bowling Green, Kentucky. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -67269,7 +67269,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Bowling Green online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بوولينغ غرين، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بوولينغ غرين، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -67340,7 +67340,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Louisiana | Success Path Mentors",
-        "ar": "دروس أونلاين في لويزيانا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في لويزيانا | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Louisiana, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -67669,7 +67669,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Louisiana online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في لويزيانا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في لويزيانا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -67736,7 +67736,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Louisiana Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج لويزيانا والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج لويزيانا والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Louisiana schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -68065,7 +68065,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Louisiana Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج لويزيانا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج لويزيانا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -68130,7 +68130,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in New Orleans, Louisiana | Success Path Mentors",
-        "ar": "دروس أونلاين في نيو أورلينز، لويزيانا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في نيو أورلينز، لويزيانا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in New Orleans, Louisiana. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -68459,7 +68459,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in New Orleans online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في نيو أورلينز، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في نيو أورلينز، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -68524,7 +68524,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Baton Rouge, Louisiana | Success Path Mentors",
-        "ar": "دروس أونلاين في باتون روغي، لويزيانا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في باتون روغي، لويزيانا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Baton Rouge, Louisiana. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -68853,7 +68853,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Baton Rouge online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في باتون روغي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في باتون روغي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -68918,7 +68918,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Shreveport, Louisiana | Success Path Mentors",
-        "ar": "دروس أونلاين في شريفيبورت، لويزيانا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في شريفيبورت، لويزيانا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Shreveport, Louisiana. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -69247,7 +69247,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Shreveport online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في شريفيبورت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في شريفيبورت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -69318,7 +69318,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Maine | Success Path Mentors",
-        "ar": "دروس أونلاين في مين | سكسس باث منتورز"
+        "ar": "دروس أونلاين في مين | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Maine, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -69647,7 +69647,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Maine online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في مين، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في مين، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -69714,7 +69714,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Maine Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج مين والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج مين والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Maine schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -70043,7 +70043,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Maine Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج مين، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج مين، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -70108,7 +70108,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Portland, Maine | Success Path Mentors",
-        "ar": "دروس أونلاين في بورتلاند، مين | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بورتلاند، مين | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Portland, Maine. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -70437,7 +70437,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Portland online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بورتلاند، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بورتلاند، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -70502,7 +70502,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Lewiston, Maine | Success Path Mentors",
-        "ar": "دروس أونلاين في ليويستون، مين | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ليويستون، مين | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Lewiston, Maine. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -70831,7 +70831,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Lewiston online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ليويستون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ليويستون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -70896,7 +70896,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Bangor, Maine | Success Path Mentors",
-        "ar": "دروس أونلاين في بانغور، مين | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بانغور، مين | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Bangor, Maine. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -71225,7 +71225,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Bangor online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بانغور، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بانغور، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -71298,7 +71298,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Maryland | Success Path Mentors",
-        "ar": "دروس أونلاين في ماريلاند | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ماريلاند | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Maryland, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -71627,7 +71627,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Maryland online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ماريلاند، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ماريلاند، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -71695,7 +71695,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Maryland Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج ماريلاند والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج ماريلاند والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Maryland schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -72024,7 +72024,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Maryland Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج ماريلاند، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج ماريلاند، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -72089,7 +72089,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Baltimore, Maryland | Success Path Mentors",
-        "ar": "دروس أونلاين في بالتيمور، ماريلاند | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بالتيمور، ماريلاند | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Baltimore, Maryland. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -72418,7 +72418,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Baltimore online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بالتيمور، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بالتيمور، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -72483,7 +72483,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Silver Spring, Maryland | Success Path Mentors",
-        "ar": "دروس أونلاين في سيلفير سبرينغ، ماريلاند | سكسس باث منتورز"
+        "ar": "دروس أونلاين في سيلفير سبرينغ، ماريلاند | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Silver Spring, Maryland. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -72812,7 +72812,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Silver Spring online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في سيلفير سبرينغ، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في سيلفير سبرينغ، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -72877,7 +72877,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Rockville, Maryland | Success Path Mentors",
-        "ar": "دروس أونلاين في روكفيللي، ماريلاند | سكسس باث منتورز"
+        "ar": "دروس أونلاين في روكفيللي، ماريلاند | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Rockville, Maryland. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -73206,7 +73206,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Rockville online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في روكفيللي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في روكفيللي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -73271,7 +73271,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Gaithersburg, Maryland | Success Path Mentors",
-        "ar": "دروس أونلاين في غايثيرسبورغ، ماريلاند | سكسس باث منتورز"
+        "ar": "دروس أونلاين في غايثيرسبورغ، ماريلاند | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Gaithersburg, Maryland. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -73600,7 +73600,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Gaithersburg online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في غايثيرسبورغ، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في غايثيرسبورغ، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -73671,7 +73671,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Massachusetts | Success Path Mentors",
-        "ar": "دروس أونلاين في ماساتشوستس | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ماساتشوستس | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Massachusetts, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -74000,7 +74000,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Massachusetts online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ماساتشوستس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ماساتشوستس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -74067,7 +74067,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Massachusetts Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج ماساتشوستس والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج ماساتشوستس والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Massachusetts schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -74396,7 +74396,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Massachusetts Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج ماساتشوستس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج ماساتشوستس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -74461,7 +74461,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Boston, Massachusetts | Success Path Mentors",
-        "ar": "دروس أونلاين في بوسطن، ماساتشوستس | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بوسطن، ماساتشوستس | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Boston, Massachusetts. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -74790,7 +74790,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Boston online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بوسطن، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بوسطن، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -74855,7 +74855,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Worcester, Massachusetts | Success Path Mentors",
-        "ar": "دروس أونلاين في ووركيستير، ماساتشوستس | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ووركيستير، ماساتشوستس | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Worcester, Massachusetts. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -75184,7 +75184,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Worcester online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ووركيستير، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ووركيستير، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -75249,7 +75249,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Springfield, Massachusetts | Success Path Mentors",
-        "ar": "دروس أونلاين في سبرينغفييلد، ماساتشوستس | سكسس باث منتورز"
+        "ar": "دروس أونلاين في سبرينغفييلد، ماساتشوستس | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Springfield, Massachusetts. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -75578,7 +75578,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Springfield online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في سبرينغفييلد، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في سبرينغفييلد، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -75652,7 +75652,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Michigan | Success Path Mentors",
-        "ar": "دروس أونلاين في ميشيغان | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ميشيغان | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Michigan, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -75981,7 +75981,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Michigan online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ميشيغان، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ميشيغان، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -76050,7 +76050,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Michigan Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج ميشيغان والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج ميشيغان والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Michigan schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -76379,7 +76379,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Michigan Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج ميشيغان، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج ميشيغان، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -76444,7 +76444,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Dearborn, Michigan | Success Path Mentors",
-        "ar": "دروس أونلاين في ديربورن، ميشيغان | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ديربورن، ميشيغان | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Dearborn, Michigan. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -76773,7 +76773,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Dearborn online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ديربورن، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ديربورن، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -76838,7 +76838,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Detroit, Michigan | Success Path Mentors",
-        "ar": "دروس أونلاين في ديترويت، ميشيغان | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ديترويت، ميشيغان | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Detroit, Michigan. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -77167,7 +77167,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Detroit online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ديترويت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ديترويت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -77232,7 +77232,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Ann Arbor, Michigan | Success Path Mentors",
-        "ar": "دروس أونلاين في انن اربور، ميشيغان | سكسس باث منتورز"
+        "ar": "دروس أونلاين في انن اربور، ميشيغان | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Ann Arbor, Michigan. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -77561,7 +77561,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Ann Arbor online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في انن اربور، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في انن اربور، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -77626,7 +77626,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Sterling Heights, Michigan | Success Path Mentors",
-        "ar": "دروس أونلاين في ستيرلينغ هييغتس، ميشيغان | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ستيرلينغ هييغتس، ميشيغان | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Sterling Heights, Michigan. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -77955,7 +77955,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Sterling Heights online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ستيرلينغ هييغتس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ستيرلينغ هييغتس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -78020,7 +78020,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Grand Rapids, Michigan | Success Path Mentors",
-        "ar": "دروس أونلاين في غراند رابيدس، ميشيغان | سكسس باث منتورز"
+        "ar": "دروس أونلاين في غراند رابيدس، ميشيغان | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Grand Rapids, Michigan. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -78349,7 +78349,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Grand Rapids online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في غراند رابيدس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في غراند رابيدس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -78420,7 +78420,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Minnesota | Success Path Mentors",
-        "ar": "دروس أونلاين في مينيسوتا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في مينيسوتا | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Minnesota, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -78749,7 +78749,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Minnesota online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في مينيسوتا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في مينيسوتا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -78816,7 +78816,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Minnesota Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج مينيسوتا والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج مينيسوتا والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Minnesota schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -79145,7 +79145,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Minnesota Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج مينيسوتا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج مينيسوتا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -79210,7 +79210,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Minneapolis, Minnesota | Success Path Mentors",
-        "ar": "دروس أونلاين في مينيابوليس، مينيسوتا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في مينيابوليس، مينيسوتا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Minneapolis, Minnesota. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -79539,7 +79539,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Minneapolis online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في مينيابوليس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في مينيابوليس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -79604,7 +79604,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Saint Paul, Minnesota | Success Path Mentors",
-        "ar": "دروس أونلاين في ساينت باول، مينيسوتا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ساينت باول، مينيسوتا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Saint Paul, Minnesota. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -79933,7 +79933,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Saint Paul online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ساينت باول، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ساينت باول، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -79998,7 +79998,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Rochester, Minnesota | Success Path Mentors",
-        "ar": "دروس أونلاين في روتشستر، مينيسوتا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في روتشستر، مينيسوتا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Rochester, Minnesota. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -80327,7 +80327,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Rochester online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في روتشستر، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في روتشستر، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -80398,7 +80398,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Mississippi | Success Path Mentors",
-        "ar": "دروس أونلاين في مسيسيبي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في مسيسيبي | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Mississippi, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -80727,7 +80727,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Mississippi online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في مسيسيبي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في مسيسيبي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -80794,7 +80794,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Mississippi Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج مسيسيبي والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج مسيسيبي والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Mississippi schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -81123,7 +81123,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Mississippi Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج مسيسيبي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج مسيسيبي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -81188,7 +81188,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Jackson, Mississippi | Success Path Mentors",
-        "ar": "دروس أونلاين في جاكسون، مسيسيبي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في جاكسون، مسيسيبي | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Jackson, Mississippi. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -81517,7 +81517,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Jackson online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في جاكسون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في جاكسون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -81582,7 +81582,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Gulfport, Mississippi | Success Path Mentors",
-        "ar": "دروس أونلاين في غولفبورت، مسيسيبي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في غولفبورت، مسيسيبي | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Gulfport, Mississippi. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -81911,7 +81911,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Gulfport online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في غولفبورت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في غولفبورت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -81976,7 +81976,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Hattiesburg, Mississippi | Success Path Mentors",
-        "ar": "دروس أونلاين في هاتتييسبورغ، مسيسيبي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في هاتتييسبورغ، مسيسيبي | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Hattiesburg, Mississippi. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -82305,7 +82305,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Hattiesburg online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في هاتتييسبورغ، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في هاتتييسبورغ، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -82376,7 +82376,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Missouri | Success Path Mentors",
-        "ar": "دروس أونلاين في ميزوري | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ميزوري | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Missouri, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -82705,7 +82705,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Missouri online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ميزوري، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ميزوري، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -82772,7 +82772,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Missouri Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج ميزوري والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج ميزوري والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Missouri schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -83101,7 +83101,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Missouri Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج ميزوري، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج ميزوري، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -83166,7 +83166,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in St. Louis, Missouri | Success Path Mentors",
-        "ar": "دروس أونلاين في سانت لويس، ميزوري | سكسس باث منتورز"
+        "ar": "دروس أونلاين في سانت لويس، ميزوري | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in St. Louis, Missouri. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -83495,7 +83495,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in St. Louis online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في سانت لويس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في سانت لويس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -83560,7 +83560,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Kansas City, Missouri | Success Path Mentors",
-        "ar": "دروس أونلاين في كانساس سيتي، ميزوري | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كانساس سيتي، ميزوري | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Kansas City, Missouri. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -83889,7 +83889,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Kansas City online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كانساس سيتي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كانساس سيتي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -83954,7 +83954,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Springfield, Missouri | Success Path Mentors",
-        "ar": "دروس أونلاين في سبرينغفييلد، ميزوري | سكسس باث منتورز"
+        "ar": "دروس أونلاين في سبرينغفييلد، ميزوري | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Springfield, Missouri. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -84283,7 +84283,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Springfield online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في سبرينغفييلد، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في سبرينغفييلد، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -84354,7 +84354,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Montana | Success Path Mentors",
-        "ar": "دروس أونلاين في مونتانا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في مونتانا | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Montana, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -84683,7 +84683,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Montana online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في مونتانا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في مونتانا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -84750,7 +84750,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Montana Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج مونتانا والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج مونتانا والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Montana schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -85079,7 +85079,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Montana Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج مونتانا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج مونتانا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -85144,7 +85144,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Billings, Montana | Success Path Mentors",
-        "ar": "دروس أونلاين في بيللينغس، مونتانا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بيللينغس، مونتانا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Billings, Montana. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -85473,7 +85473,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Billings online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بيللينغس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بيللينغس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -85538,7 +85538,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Missoula, Montana | Success Path Mentors",
-        "ar": "دروس أونلاين في ميسسولا، مونتانا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ميسسولا، مونتانا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Missoula, Montana. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -85867,7 +85867,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Missoula online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ميسسولا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ميسسولا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -85932,7 +85932,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Bozeman, Montana | Success Path Mentors",
-        "ar": "دروس أونلاين في بوزيمان، مونتانا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بوزيمان، مونتانا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Bozeman, Montana. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -86261,7 +86261,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Bozeman online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بوزيمان، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بوزيمان، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -86332,7 +86332,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Nebraska | Success Path Mentors",
-        "ar": "دروس أونلاين في نبراسكا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في نبراسكا | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Nebraska, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -86661,7 +86661,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Nebraska online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في نبراسكا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في نبراسكا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -86728,7 +86728,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Nebraska Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج نبراسكا والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج نبراسكا والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Nebraska schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -87057,7 +87057,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Nebraska Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج نبراسكا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج نبراسكا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -87122,7 +87122,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Omaha, Nebraska | Success Path Mentors",
-        "ar": "دروس أونلاين في وماها، نبراسكا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في وماها، نبراسكا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Omaha, Nebraska. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -87451,7 +87451,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Omaha online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في وماها، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في وماها، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -87516,7 +87516,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Lincoln, Nebraska | Success Path Mentors",
-        "ar": "دروس أونلاين في لينكولن، نبراسكا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في لينكولن، نبراسكا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Lincoln, Nebraska. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -87845,7 +87845,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Lincoln online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في لينكولن، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في لينكولن، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -87910,7 +87910,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Bellevue, Nebraska | Success Path Mentors",
-        "ar": "دروس أونلاين في بيلليفوي، نبراسكا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بيلليفوي، نبراسكا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Bellevue, Nebraska. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -88239,7 +88239,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Bellevue online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بيلليفوي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بيلليفوي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -88310,7 +88310,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Nevada | Success Path Mentors",
-        "ar": "دروس أونلاين في نيفادا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في نيفادا | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Nevada, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -88639,7 +88639,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Nevada online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في نيفادا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في نيفادا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -88706,7 +88706,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Nevada Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج نيفادا والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج نيفادا والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Nevada schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -89035,7 +89035,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Nevada Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج نيفادا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج نيفادا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -89100,7 +89100,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Las Vegas, Nevada | Success Path Mentors",
-        "ar": "دروس أونلاين في لاس فيغاس، نيفادا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في لاس فيغاس، نيفادا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Las Vegas, Nevada. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -89429,7 +89429,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Las Vegas online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في لاس فيغاس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في لاس فيغاس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -89494,7 +89494,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Henderson, Nevada | Success Path Mentors",
-        "ar": "دروس أونلاين في هينديرسون، نيفادا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في هينديرسون، نيفادا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Henderson, Nevada. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -89823,7 +89823,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Henderson online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في هينديرسون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في هينديرسون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -89888,7 +89888,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Reno, Nevada | Success Path Mentors",
-        "ar": "دروس أونلاين في رينو، نيفادا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في رينو، نيفادا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Reno, Nevada. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -90217,7 +90217,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Reno online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في رينو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في رينو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -90288,7 +90288,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in New Hampshire | Success Path Mentors",
-        "ar": "دروس أونلاين في نيوهامبشير | سكسس باث منتورز"
+        "ar": "دروس أونلاين في نيوهامبشير | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in New Hampshire, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -90617,7 +90617,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in New Hampshire online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في نيوهامبشير، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في نيوهامبشير، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -90684,7 +90684,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "New Hampshire Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج نيوهامبشير والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج نيوهامبشير والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s New Hampshire schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -91013,7 +91013,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in New Hampshire Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج نيوهامبشير، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج نيوهامبشير، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -91078,7 +91078,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Manchester, New Hampshire | Success Path Mentors",
-        "ar": "دروس أونلاين في مانتشيستير، نيوهامبشير | سكسس باث منتورز"
+        "ar": "دروس أونلاين في مانتشيستير، نيوهامبشير | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Manchester, New Hampshire. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -91407,7 +91407,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Manchester online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في مانتشيستير، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في مانتشيستير، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -91472,7 +91472,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Nashua, New Hampshire | Success Path Mentors",
-        "ar": "دروس أونلاين في ناشوا، نيوهامبشير | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ناشوا، نيوهامبشير | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Nashua, New Hampshire. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -91801,7 +91801,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Nashua online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ناشوا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ناشوا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -91866,7 +91866,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Concord, New Hampshire | Success Path Mentors",
-        "ar": "دروس أونلاين في كونكورد، نيوهامبشير | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كونكورد، نيوهامبشير | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Concord, New Hampshire. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -92195,7 +92195,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Concord online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كونكورد، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كونكورد، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -92269,7 +92269,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in New Jersey | Success Path Mentors",
-        "ar": "دروس أونلاين في نيوجيرسي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في نيوجيرسي | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in New Jersey, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -92598,7 +92598,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in New Jersey online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في نيوجيرسي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في نيوجيرسي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -92667,7 +92667,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "New Jersey Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج نيوجيرسي والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج نيوجيرسي والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s New Jersey schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -92996,7 +92996,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in New Jersey Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج نيوجيرسي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج نيوجيرسي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -93061,7 +93061,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Jersey City, New Jersey | Success Path Mentors",
-        "ar": "دروس أونلاين في جيرسي سيتي، نيوجيرسي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في جيرسي سيتي، نيوجيرسي | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Jersey City, New Jersey. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -93390,7 +93390,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Jersey City online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في جيرسي سيتي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في جيرسي سيتي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -93455,7 +93455,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Paterson, New Jersey | Success Path Mentors",
-        "ar": "دروس أونلاين في باترسون، نيوجيرسي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في باترسون، نيوجيرسي | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Paterson, New Jersey. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -93784,7 +93784,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Paterson online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في باترسون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في باترسون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -93849,7 +93849,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Newark, New Jersey | Success Path Mentors",
-        "ar": "دروس أونلاين في نيوارك، نيوجيرسي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في نيوارك، نيوجيرسي | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Newark, New Jersey. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -94178,7 +94178,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Newark online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في نيوارك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في نيوارك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -94243,7 +94243,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Edison, New Jersey | Success Path Mentors",
-        "ar": "دروس أونلاين في يديسون، نيوجيرسي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في يديسون، نيوجيرسي | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Edison, New Jersey. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -94572,7 +94572,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Edison online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في يديسون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في يديسون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -94637,7 +94637,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Clifton, New Jersey | Success Path Mentors",
-        "ar": "دروس أونلاين في كليفتون، نيوجيرسي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كليفتون، نيوجيرسي | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Clifton, New Jersey. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -94966,7 +94966,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Clifton online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كليفتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كليفتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -95037,7 +95037,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in New Mexico | Success Path Mentors",
-        "ar": "دروس أونلاين في نيومكسيكو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في نيومكسيكو | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in New Mexico, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -95366,7 +95366,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in New Mexico online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في نيومكسيكو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في نيومكسيكو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -95433,7 +95433,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "New Mexico Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج نيومكسيكو والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج نيومكسيكو والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s New Mexico schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -95762,7 +95762,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in New Mexico Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج نيومكسيكو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج نيومكسيكو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -95827,7 +95827,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Albuquerque, New Mexico | Success Path Mentors",
-        "ar": "دروس أونلاين في البوكويركوي، نيومكسيكو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في البوكويركوي، نيومكسيكو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Albuquerque, New Mexico. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -96156,7 +96156,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Albuquerque online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في البوكويركوي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في البوكويركوي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -96221,7 +96221,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Santa Fe, New Mexico | Success Path Mentors",
-        "ar": "دروس أونلاين في سانتا في، نيومكسيكو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في سانتا في، نيومكسيكو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Santa Fe, New Mexico. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -96550,7 +96550,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Santa Fe online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في سانتا في، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في سانتا في، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -96615,7 +96615,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Las Cruces, New Mexico | Success Path Mentors",
-        "ar": "دروس أونلاين في لاس كروكيس، نيومكسيكو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في لاس كروكيس، نيومكسيكو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Las Cruces, New Mexico. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -96944,7 +96944,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Las Cruces online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في لاس كروكيس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في لاس كروكيس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -97018,7 +97018,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in New York | Success Path Mentors",
-        "ar": "دروس أونلاين في نيويورك | سكسس باث منتورز"
+        "ar": "دروس أونلاين في نيويورك | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in New York, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -97347,7 +97347,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in New York online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في نيويورك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في نيويورك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -97416,7 +97416,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "New York Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج نيويورك والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج نيويورك والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s New York schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -97745,7 +97745,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in New York Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج نيويورك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج نيويورك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -97810,7 +97810,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in New York City, New York | Success Path Mentors",
-        "ar": "دروس أونلاين في مدينة نيويورك، نيويورك | سكسس باث منتورز"
+        "ar": "دروس أونلاين في مدينة نيويورك، نيويورك | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in New York City, New York. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -98139,7 +98139,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in New York City online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في مدينة نيويورك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في مدينة نيويورك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -98204,7 +98204,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Buffalo, New York | Success Path Mentors",
-        "ar": "دروس أونلاين في بافالو، نيويورك | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بافالو، نيويورك | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Buffalo, New York. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -98533,7 +98533,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Buffalo online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بافالو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بافالو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -98598,7 +98598,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Rochester, New York | Success Path Mentors",
-        "ar": "دروس أونلاين في روتشستر، نيويورك | سكسس باث منتورز"
+        "ar": "دروس أونلاين في روتشستر، نيويورك | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Rochester, New York. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -98927,7 +98927,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Rochester online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في روتشستر، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في روتشستر، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -98992,7 +98992,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Yonkers, New York | Success Path Mentors",
-        "ar": "دروس أونلاين في يونكيرس، نيويورك | سكسس باث منتورز"
+        "ar": "دروس أونلاين في يونكيرس، نيويورك | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Yonkers, New York. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -99321,7 +99321,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Yonkers online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في يونكيرس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في يونكيرس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -99386,7 +99386,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Albany, New York | Success Path Mentors",
-        "ar": "دروس أونلاين في ألباني، نيويورك | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ألباني، نيويورك | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Albany, New York. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -99715,7 +99715,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Albany online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ألباني، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ألباني، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -99786,7 +99786,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in North Carolina | Success Path Mentors",
-        "ar": "دروس أونلاين في كارولاينا الشمالية | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كارولاينا الشمالية | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in North Carolina, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -100115,7 +100115,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in North Carolina online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كارولاينا الشمالية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كارولاينا الشمالية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -100182,7 +100182,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "North Carolina Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج كارولاينا الشمالية والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج كارولاينا الشمالية والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s North Carolina schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -100511,7 +100511,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in North Carolina Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج كارولاينا الشمالية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج كارولاينا الشمالية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -100576,7 +100576,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Charlotte, North Carolina | Success Path Mentors",
-        "ar": "دروس أونلاين في شارلوت، كارولاينا الشمالية | سكسس باث منتورز"
+        "ar": "دروس أونلاين في شارلوت، كارولاينا الشمالية | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Charlotte, North Carolina. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -100905,7 +100905,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Charlotte online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في شارلوت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في شارلوت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -100970,7 +100970,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Raleigh, North Carolina | Success Path Mentors",
-        "ar": "دروس أونلاين في رالي، كارولاينا الشمالية | سكسس باث منتورز"
+        "ar": "دروس أونلاين في رالي، كارولاينا الشمالية | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Raleigh, North Carolina. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -101299,7 +101299,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Raleigh online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في رالي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في رالي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -101364,7 +101364,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Greensboro, North Carolina | Success Path Mentors",
-        "ar": "دروس أونلاين في غرينسبورو، كارولاينا الشمالية | سكسس باث منتورز"
+        "ar": "دروس أونلاين في غرينسبورو، كارولاينا الشمالية | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Greensboro, North Carolina. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -101693,7 +101693,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Greensboro online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في غرينسبورو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في غرينسبورو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -101764,7 +101764,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in North Dakota | Success Path Mentors",
-        "ar": "دروس أونلاين في داكوتا الشمالية | سكسس باث منتورز"
+        "ar": "دروس أونلاين في داكوتا الشمالية | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in North Dakota, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -102093,7 +102093,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in North Dakota online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في داكوتا الشمالية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في داكوتا الشمالية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -102160,7 +102160,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "North Dakota Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج داكوتا الشمالية والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج داكوتا الشمالية والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s North Dakota schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -102489,7 +102489,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in North Dakota Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج داكوتا الشمالية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج داكوتا الشمالية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -102554,7 +102554,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Fargo, North Dakota | Success Path Mentors",
-        "ar": "دروس أونلاين في فارغو، داكوتا الشمالية | سكسس باث منتورز"
+        "ar": "دروس أونلاين في فارغو، داكوتا الشمالية | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Fargo, North Dakota. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -102883,7 +102883,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Fargo online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في فارغو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في فارغو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -102948,7 +102948,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Bismarck, North Dakota | Success Path Mentors",
-        "ar": "دروس أونلاين في بيسمارك، داكوتا الشمالية | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بيسمارك، داكوتا الشمالية | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Bismarck, North Dakota. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -103277,7 +103277,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Bismarck online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بيسمارك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بيسمارك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -103342,7 +103342,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Grand Forks, North Dakota | Success Path Mentors",
-        "ar": "دروس أونلاين في غراند فوركس، داكوتا الشمالية | سكسس باث منتورز"
+        "ar": "دروس أونلاين في غراند فوركس، داكوتا الشمالية | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Grand Forks, North Dakota. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -103671,7 +103671,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Grand Forks online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في غراند فوركس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في غراند فوركس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -103744,7 +103744,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Ohio | Success Path Mentors",
-        "ar": "دروس أونلاين في أوهايو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في أوهايو | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Ohio, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -104073,7 +104073,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Ohio online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في أوهايو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في أوهايو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -104141,7 +104141,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Ohio Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج أوهايو والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج أوهايو والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Ohio schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -104470,7 +104470,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Ohio Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج أوهايو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج أوهايو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -104535,7 +104535,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Columbus, Ohio | Success Path Mentors",
-        "ar": "دروس أونلاين في كولومبوس، أوهايو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كولومبوس، أوهايو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Columbus, Ohio. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -104864,7 +104864,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Columbus online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كولومبوس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كولومبوس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -104929,7 +104929,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Cleveland, Ohio | Success Path Mentors",
-        "ar": "دروس أونلاين في كليفلاند، أوهايو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كليفلاند، أوهايو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Cleveland, Ohio. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -105258,7 +105258,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Cleveland online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كليفلاند، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كليفلاند، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -105323,7 +105323,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Toledo, Ohio | Success Path Mentors",
-        "ar": "دروس أونلاين في توليدو، أوهايو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في توليدو، أوهايو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Toledo, Ohio. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -105652,7 +105652,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Toledo online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في توليدو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في توليدو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -105717,7 +105717,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Cincinnati, Ohio | Success Path Mentors",
-        "ar": "دروس أونلاين في سينسيناتي، أوهايو | سكسس باث منتورز"
+        "ar": "دروس أونلاين في سينسيناتي، أوهايو | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Cincinnati, Ohio. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -106046,7 +106046,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Cincinnati online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في سينسيناتي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في سينسيناتي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -106117,7 +106117,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Oklahoma | Success Path Mentors",
-        "ar": "دروس أونلاين في أوكلاهوما | سكسس باث منتورز"
+        "ar": "دروس أونلاين في أوكلاهوما | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Oklahoma, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -106446,7 +106446,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Oklahoma online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في أوكلاهوما، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في أوكلاهوما، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -106513,7 +106513,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Oklahoma Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج أوكلاهوما والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج أوكلاهوما والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Oklahoma schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -106842,7 +106842,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Oklahoma Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج أوكلاهوما، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج أوكلاهوما، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -106907,7 +106907,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Oklahoma City, Oklahoma | Success Path Mentors",
-        "ar": "دروس أونلاين في أوكلاهوما سيتي، أوكلاهوما | سكسس باث منتورز"
+        "ar": "دروس أونلاين في أوكلاهوما سيتي، أوكلاهوما | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Oklahoma City, Oklahoma. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -107236,7 +107236,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Oklahoma City online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في أوكلاهوما سيتي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في أوكلاهوما سيتي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -107301,7 +107301,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Tulsa, Oklahoma | Success Path Mentors",
-        "ar": "دروس أونلاين في تولسا، أوكلاهوما | سكسس باث منتورز"
+        "ar": "دروس أونلاين في تولسا، أوكلاهوما | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Tulsa, Oklahoma. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -107630,7 +107630,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Tulsa online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في تولسا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في تولسا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -107695,7 +107695,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Norman, Oklahoma | Success Path Mentors",
-        "ar": "دروس أونلاين في نورمان، أوكلاهوما | سكسس باث منتورز"
+        "ar": "دروس أونلاين في نورمان، أوكلاهوما | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Norman, Oklahoma. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -108024,7 +108024,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Norman online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في نورمان، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في نورمان، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -108095,7 +108095,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Oregon | Success Path Mentors",
-        "ar": "دروس أونلاين في أوريغون | سكسس باث منتورز"
+        "ar": "دروس أونلاين في أوريغون | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Oregon, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -108424,7 +108424,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Oregon online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في أوريغون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في أوريغون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -108491,7 +108491,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Oregon Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج أوريغون والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج أوريغون والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Oregon schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -108820,7 +108820,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Oregon Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج أوريغون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج أوريغون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -108885,7 +108885,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Portland, Oregon | Success Path Mentors",
-        "ar": "دروس أونلاين في بورتلاند، أوريغون | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بورتلاند، أوريغون | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Portland, Oregon. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -109214,7 +109214,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Portland online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بورتلاند، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بورتلاند، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -109279,7 +109279,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Salem, Oregon | Success Path Mentors",
-        "ar": "دروس أونلاين في ساليم، أوريغون | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ساليم، أوريغون | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Salem, Oregon. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -109608,7 +109608,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Salem online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ساليم، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ساليم، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -109673,7 +109673,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Eugene, Oregon | Success Path Mentors",
-        "ar": "دروس أونلاين في يوغيني، أوريغون | سكسس باث منتورز"
+        "ar": "دروس أونلاين في يوغيني، أوريغون | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Eugene, Oregon. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -110002,7 +110002,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Eugene online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في يوغيني، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في يوغيني، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -110073,7 +110073,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Pennsylvania | Success Path Mentors",
-        "ar": "دروس أونلاين في بنسلفانيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بنسلفانيا | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Pennsylvania, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -110402,7 +110402,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Pennsylvania online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بنسلفانيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بنسلفانيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -110469,7 +110469,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Pennsylvania Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج بنسلفانيا والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج بنسلفانيا والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Pennsylvania schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -110798,7 +110798,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Pennsylvania Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج بنسلفانيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج بنسلفانيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -110863,7 +110863,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Philadelphia, Pennsylvania | Success Path Mentors",
-        "ar": "دروس أونلاين في فيلادلفيا، بنسلفانيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في فيلادلفيا، بنسلفانيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Philadelphia, Pennsylvania. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -111192,7 +111192,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Philadelphia online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في فيلادلفيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في فيلادلفيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -111257,7 +111257,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Pittsburgh, Pennsylvania | Success Path Mentors",
-        "ar": "دروس أونلاين في بيتسبرغ، بنسلفانيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بيتسبرغ، بنسلفانيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Pittsburgh, Pennsylvania. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -111586,7 +111586,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Pittsburgh online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بيتسبرغ، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بيتسبرغ، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -111651,7 +111651,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Allentown, Pennsylvania | Success Path Mentors",
-        "ar": "دروس أونلاين في اللينتوون، بنسلفانيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في اللينتوون، بنسلفانيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Allentown, Pennsylvania. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -111980,7 +111980,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Allentown online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في اللينتوون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في اللينتوون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -112051,7 +112051,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Rhode Island | Success Path Mentors",
-        "ar": "دروس أونلاين في رود آيلاند | سكسس باث منتورز"
+        "ar": "دروس أونلاين في رود آيلاند | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Rhode Island, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -112380,7 +112380,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Rhode Island online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في رود آيلاند، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في رود آيلاند، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -112447,7 +112447,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Rhode Island Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج رود آيلاند والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج رود آيلاند والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Rhode Island schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -112776,7 +112776,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Rhode Island Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج رود آيلاند، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج رود آيلاند، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -112841,7 +112841,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Providence, Rhode Island | Success Path Mentors",
-        "ar": "دروس أونلاين في بروفيدينكي، رود آيلاند | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بروفيدينكي، رود آيلاند | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Providence, Rhode Island. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -113170,7 +113170,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Providence online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بروفيدينكي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بروفيدينكي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -113235,7 +113235,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Cranston, Rhode Island | Success Path Mentors",
-        "ar": "دروس أونلاين في كرانستون، رود آيلاند | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كرانستون، رود آيلاند | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Cranston, Rhode Island. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -113564,7 +113564,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Cranston online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كرانستون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كرانستون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -113629,7 +113629,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Warwick, Rhode Island | Success Path Mentors",
-        "ar": "دروس أونلاين في وارويك، رود آيلاند | سكسس باث منتورز"
+        "ar": "دروس أونلاين في وارويك، رود آيلاند | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Warwick, Rhode Island. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -113958,7 +113958,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Warwick online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في وارويك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في وارويك، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -114029,7 +114029,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in South Carolina | Success Path Mentors",
-        "ar": "دروس أونلاين في كارولاينا الجنوبية | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كارولاينا الجنوبية | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in South Carolina, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -114358,7 +114358,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in South Carolina online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كارولاينا الجنوبية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كارولاينا الجنوبية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -114425,7 +114425,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "South Carolina Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج كارولاينا الجنوبية والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج كارولاينا الجنوبية والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s South Carolina schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -114754,7 +114754,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in South Carolina Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج كارولاينا الجنوبية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج كارولاينا الجنوبية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -114819,7 +114819,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Charleston, South Carolina | Success Path Mentors",
-        "ar": "دروس أونلاين في تشارليستون، كارولاينا الجنوبية | سكسس باث منتورز"
+        "ar": "دروس أونلاين في تشارليستون، كارولاينا الجنوبية | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Charleston, South Carolina. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -115148,7 +115148,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Charleston online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في تشارليستون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في تشارليستون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -115213,7 +115213,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Columbia, South Carolina | Success Path Mentors",
-        "ar": "دروس أونلاين في كولومبيا، كارولاينا الجنوبية | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كولومبيا، كارولاينا الجنوبية | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Columbia, South Carolina. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -115542,7 +115542,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Columbia online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كولومبيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كولومبيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -115607,7 +115607,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Greenville, South Carolina | Success Path Mentors",
-        "ar": "دروس أونلاين في غرينفيللي، كارولاينا الجنوبية | سكسس باث منتورز"
+        "ar": "دروس أونلاين في غرينفيللي، كارولاينا الجنوبية | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Greenville, South Carolina. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -115936,7 +115936,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Greenville online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في غرينفيللي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في غرينفيللي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -116007,7 +116007,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in South Dakota | Success Path Mentors",
-        "ar": "دروس أونلاين في داكوتا الجنوبية | سكسس باث منتورز"
+        "ar": "دروس أونلاين في داكوتا الجنوبية | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in South Dakota, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -116336,7 +116336,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in South Dakota online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في داكوتا الجنوبية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في داكوتا الجنوبية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -116403,7 +116403,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "South Dakota Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج داكوتا الجنوبية والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج داكوتا الجنوبية والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s South Dakota schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -116732,7 +116732,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in South Dakota Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج داكوتا الجنوبية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج داكوتا الجنوبية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -116797,7 +116797,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Sioux Falls, South Dakota | Success Path Mentors",
-        "ar": "دروس أونلاين في سيوكس فاللس، داكوتا الجنوبية | سكسس باث منتورز"
+        "ar": "دروس أونلاين في سيوكس فاللس، داكوتا الجنوبية | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Sioux Falls, South Dakota. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -117126,7 +117126,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Sioux Falls online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في سيوكس فاللس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في سيوكس فاللس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -117191,7 +117191,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Rapid City, South Dakota | Success Path Mentors",
-        "ar": "دروس أونلاين في رابيد كيتي، داكوتا الجنوبية | سكسس باث منتورز"
+        "ar": "دروس أونلاين في رابيد كيتي، داكوتا الجنوبية | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Rapid City, South Dakota. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -117520,7 +117520,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Rapid City online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في رابيد كيتي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في رابيد كيتي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -117585,7 +117585,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Aberdeen, South Dakota | Success Path Mentors",
-        "ar": "دروس أونلاين في ابيردين، داكوتا الجنوبية | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ابيردين، داكوتا الجنوبية | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Aberdeen, South Dakota. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -117914,7 +117914,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Aberdeen online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ابيردين، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ابيردين، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -117985,7 +117985,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Tennessee | Success Path Mentors",
-        "ar": "دروس أونلاين في تينيسي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في تينيسي | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Tennessee, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -118314,7 +118314,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Tennessee online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في تينيسي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في تينيسي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -118381,7 +118381,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Tennessee Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج تينيسي والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج تينيسي والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Tennessee schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -118710,7 +118710,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Tennessee Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج تينيسي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج تينيسي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -118775,7 +118775,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Nashville, Tennessee | Success Path Mentors",
-        "ar": "دروس أونلاين في ناشفيل، تينيسي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ناشفيل، تينيسي | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Nashville, Tennessee. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -119104,7 +119104,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Nashville online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ناشفيل، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ناشفيل، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -119169,7 +119169,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Memphis, Tennessee | Success Path Mentors",
-        "ar": "دروس أونلاين في ممفيس، تينيسي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ممفيس، تينيسي | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Memphis, Tennessee. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -119498,7 +119498,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Memphis online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ممفيس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ممفيس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -119563,7 +119563,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Knoxville, Tennessee | Success Path Mentors",
-        "ar": "دروس أونلاين في كنوكسفيللي، تينيسي | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كنوكسفيللي، تينيسي | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Knoxville, Tennessee. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -119892,7 +119892,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Knoxville online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كنوكسفيللي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كنوكسفيللي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -119966,7 +119966,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Texas | Success Path Mentors",
-        "ar": "دروس أونلاين في تكساس | سكسس باث منتورز"
+        "ar": "دروس أونلاين في تكساس | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Texas, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -120295,7 +120295,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Texas online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في تكساس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في تكساس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -120364,7 +120364,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Texas Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج تكساس والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج تكساس والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Texas schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -120693,7 +120693,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Texas Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج تكساس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج تكساس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -120758,7 +120758,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Houston, Texas | Success Path Mentors",
-        "ar": "دروس أونلاين في هيوستن، تكساس | سكسس باث منتورز"
+        "ar": "دروس أونلاين في هيوستن، تكساس | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Houston, Texas. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -121087,7 +121087,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Houston online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في هيوستن، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في هيوستن، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -121152,7 +121152,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Dallas, Texas | Success Path Mentors",
-        "ar": "دروس أونلاين في دالاس، تكساس | سكسس باث منتورز"
+        "ar": "دروس أونلاين في دالاس، تكساس | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Dallas, Texas. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -121481,7 +121481,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Dallas online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في دالاس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في دالاس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -121546,7 +121546,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Austin, Texas | Success Path Mentors",
-        "ar": "دروس أونلاين في أوستن، تكساس | سكسس باث منتورز"
+        "ar": "دروس أونلاين في أوستن، تكساس | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Austin, Texas. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -121875,7 +121875,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Austin online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في أوستن، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في أوستن، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -121940,7 +121940,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in San Antonio, Texas | Success Path Mentors",
-        "ar": "دروس أونلاين في سان أنطونيو، تكساس | سكسس باث منتورز"
+        "ar": "دروس أونلاين في سان أنطونيو، تكساس | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in San Antonio, Texas. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -122269,7 +122269,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in San Antonio online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في سان أنطونيو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في سان أنطونيو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -122334,7 +122334,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Arlington, Texas | Success Path Mentors",
-        "ar": "دروس أونلاين في أرلينغتون، تكساس | سكسس باث منتورز"
+        "ar": "دروس أونلاين في أرلينغتون، تكساس | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Arlington, Texas. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -122663,7 +122663,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Arlington online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في أرلينغتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في أرلينغتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -122734,7 +122734,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Utah | Success Path Mentors",
-        "ar": "دروس أونلاين في يوتا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في يوتا | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Utah, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -123063,7 +123063,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Utah online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في يوتا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في يوتا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -123130,7 +123130,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Utah Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج يوتا والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج يوتا والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Utah schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -123459,7 +123459,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Utah Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج يوتا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج يوتا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -123524,7 +123524,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Salt Lake City, Utah | Success Path Mentors",
-        "ar": "دروس أونلاين في سولت ليك سيتي، يوتا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في سولت ليك سيتي، يوتا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Salt Lake City, Utah. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -123853,7 +123853,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Salt Lake City online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في سولت ليك سيتي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في سولت ليك سيتي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -123918,7 +123918,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in West Valley City, Utah | Success Path Mentors",
-        "ar": "دروس أونلاين في ويست فالليي كيتي، يوتا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ويست فالليي كيتي، يوتا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in West Valley City, Utah. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -124247,7 +124247,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in West Valley City online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ويست فالليي كيتي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ويست فالليي كيتي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -124312,7 +124312,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Provo, Utah | Success Path Mentors",
-        "ar": "دروس أونلاين في بروفو، يوتا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بروفو، يوتا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Provo, Utah. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -124641,7 +124641,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Provo online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بروفو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بروفو، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -124712,7 +124712,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Vermont | Success Path Mentors",
-        "ar": "دروس أونلاين في فيرمونت | سكسس باث منتورز"
+        "ar": "دروس أونلاين في فيرمونت | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Vermont, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -125041,7 +125041,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Vermont online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في فيرمونت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في فيرمونت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -125108,7 +125108,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Vermont Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج فيرمونت والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج فيرمونت والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Vermont schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -125437,7 +125437,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Vermont Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج فيرمونت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج فيرمونت، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -125502,7 +125502,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Burlington, Vermont | Success Path Mentors",
-        "ar": "دروس أونلاين في بورلينغتون، فيرمونت | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بورلينغتون، فيرمونت | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Burlington, Vermont. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -125831,7 +125831,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Burlington online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بورلينغتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بورلينغتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -125896,7 +125896,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in South Burlington, Vermont | Success Path Mentors",
-        "ar": "دروس أونلاين في سوث بورلينغتون، فيرمونت | سكسس باث منتورز"
+        "ar": "دروس أونلاين في سوث بورلينغتون، فيرمونت | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in South Burlington, Vermont. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -126225,7 +126225,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in South Burlington online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في سوث بورلينغتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في سوث بورلينغتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -126290,7 +126290,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Rutland, Vermont | Success Path Mentors",
-        "ar": "دروس أونلاين في روتلاند، فيرمونت | سكسس باث منتورز"
+        "ar": "دروس أونلاين في روتلاند، فيرمونت | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Rutland, Vermont. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -126619,7 +126619,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Rutland online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في روتلاند، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في روتلاند، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -126693,7 +126693,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Virginia | Success Path Mentors",
-        "ar": "دروس أونلاين في فيرجينيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في فيرجينيا | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Virginia, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -127022,7 +127022,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Virginia online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في فيرجينيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في فيرجينيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -127091,7 +127091,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Virginia Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج فيرجينيا والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج فيرجينيا والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Virginia schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -127420,7 +127420,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Virginia Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج فيرجينيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج فيرجينيا، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -127485,7 +127485,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Fairfax, Virginia | Success Path Mentors",
-        "ar": "دروس أونلاين في فيرفاكس، فيرجينيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في فيرفاكس، فيرجينيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Fairfax, Virginia. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -127814,7 +127814,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Fairfax online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في فيرفاكس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في فيرفاكس، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -127879,7 +127879,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Alexandria, Virginia | Success Path Mentors",
-        "ar": "دروس أونلاين في الإسكندرية، فيرجينيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في الإسكندرية، فيرجينيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Alexandria, Virginia. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -128208,7 +128208,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Alexandria online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في الإسكندرية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في الإسكندرية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -128273,7 +128273,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Arlington, Virginia | Success Path Mentors",
-        "ar": "دروس أونلاين في أرلينغتون، فيرجينيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في أرلينغتون، فيرجينيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Arlington, Virginia. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -128602,7 +128602,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Arlington online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في أرلينغتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في أرلينغتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -128667,7 +128667,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Richmond, Virginia | Success Path Mentors",
-        "ar": "دروس أونلاين في ريتشموند، فيرجينيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ريتشموند، فيرجينيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Richmond, Virginia. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -128996,7 +128996,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Richmond online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ريتشموند، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ريتشموند، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -129061,7 +129061,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Virginia Beach, Virginia | Success Path Mentors",
-        "ar": "دروس أونلاين في فيرغينيا بيتش، فيرجينيا | سكسس باث منتورز"
+        "ar": "دروس أونلاين في فيرغينيا بيتش، فيرجينيا | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Virginia Beach, Virginia. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -129390,7 +129390,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Virginia Beach online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في فيرغينيا بيتش، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في فيرغينيا بيتش، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -129461,7 +129461,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Washington | Success Path Mentors",
-        "ar": "دروس أونلاين في واشنطن | سكسس باث منتورز"
+        "ar": "دروس أونلاين في واشنطن | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Washington, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -129790,7 +129790,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Washington online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في واشنطن، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في واشنطن، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -129857,7 +129857,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Washington Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج واشنطن والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج واشنطن والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Washington schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -130186,7 +130186,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Washington Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج واشنطن، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج واشنطن، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -130251,7 +130251,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Seattle, Washington | Success Path Mentors",
-        "ar": "دروس أونلاين في سياتل، واشنطن | سكسس باث منتورز"
+        "ar": "دروس أونلاين في سياتل، واشنطن | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Seattle, Washington. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -130580,7 +130580,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Seattle online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في سياتل، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في سياتل، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -130645,7 +130645,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Bellevue, Washington | Success Path Mentors",
-        "ar": "دروس أونلاين في بيلليفوي، واشنطن | سكسس باث منتورز"
+        "ar": "دروس أونلاين في بيلليفوي، واشنطن | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Bellevue, Washington. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -130974,7 +130974,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Bellevue online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في بيلليفوي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في بيلليفوي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -131039,7 +131039,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Tacoma, Washington | Success Path Mentors",
-        "ar": "دروس أونلاين في تاكوما، واشنطن | سكسس باث منتورز"
+        "ar": "دروس أونلاين في تاكوما، واشنطن | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Tacoma, Washington. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -131368,7 +131368,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Tacoma online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في تاكوما، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في تاكوما، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -131439,7 +131439,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in West Virginia | Success Path Mentors",
-        "ar": "دروس أونلاين في فيرجينيا الغربية | سكسس باث منتورز"
+        "ar": "دروس أونلاين في فيرجينيا الغربية | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in West Virginia, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -131768,7 +131768,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in West Virginia online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في فيرجينيا الغربية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في فيرجينيا الغربية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -131835,7 +131835,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "West Virginia Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج فيرجينيا الغربية والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج فيرجينيا الغربية والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s West Virginia schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -132164,7 +132164,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in West Virginia Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج فيرجينيا الغربية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج فيرجينيا الغربية، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -132229,7 +132229,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Charleston, West Virginia | Success Path Mentors",
-        "ar": "دروس أونلاين في تشارليستون، فيرجينيا الغربية | سكسس باث منتورز"
+        "ar": "دروس أونلاين في تشارليستون، فيرجينيا الغربية | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Charleston, West Virginia. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -132558,7 +132558,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Charleston online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في تشارليستون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في تشارليستون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -132623,7 +132623,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Morgantown, West Virginia | Success Path Mentors",
-        "ar": "دروس أونلاين في مورغانتوون، فيرجينيا الغربية | سكسس باث منتورز"
+        "ar": "دروس أونلاين في مورغانتوون، فيرجينيا الغربية | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Morgantown, West Virginia. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -132952,7 +132952,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Morgantown online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في مورغانتوون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في مورغانتوون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -133017,7 +133017,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Huntington, West Virginia | Success Path Mentors",
-        "ar": "دروس أونلاين في هونتينغتون، فيرجينيا الغربية | سكسس باث منتورز"
+        "ar": "دروس أونلاين في هونتينغتون، فيرجينيا الغربية | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Huntington, West Virginia. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -133346,7 +133346,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Huntington online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في هونتينغتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في هونتينغتون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -133417,7 +133417,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Wisconsin | Success Path Mentors",
-        "ar": "دروس أونلاين في ويسكونسن | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ويسكونسن | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Wisconsin, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -133746,7 +133746,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Wisconsin online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ويسكونسن، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ويسكونسن، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -133813,7 +133813,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Wisconsin Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج ويسكونسن والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج ويسكونسن والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Wisconsin schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -134142,7 +134142,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Wisconsin Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج ويسكونسن، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج ويسكونسن، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -134207,7 +134207,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Milwaukee, Wisconsin | Success Path Mentors",
-        "ar": "دروس أونلاين في ميلووكي، ويسكونسن | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ميلووكي، ويسكونسن | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Milwaukee, Wisconsin. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -134536,7 +134536,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Milwaukee online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ميلووكي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ميلووكي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -134601,7 +134601,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Madison, Wisconsin | Success Path Mentors",
-        "ar": "دروس أونلاين في ماديسون، ويسكونسن | سكسس باث منتورز"
+        "ar": "دروس أونلاين في ماديسون، ويسكونسن | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Madison, Wisconsin. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -134930,7 +134930,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Madison online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في ماديسون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في ماديسون، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -134995,7 +134995,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Green Bay, Wisconsin | Success Path Mentors",
-        "ar": "دروس أونلاين في غرين باي، ويسكونسن | سكسس باث منتورز"
+        "ar": "دروس أونلاين في غرين باي، ويسكونسن | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Green Bay, Wisconsin. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -135324,7 +135324,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Green Bay online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في غرين باي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في غرين باي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -135395,7 +135395,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Wyoming | Success Path Mentors",
-        "ar": "دروس أونلاين في وايومنغ | سكسس باث منتورز"
+        "ar": "دروس أونلاين في وايومنغ | Success Path Mentors"
       },
       "description": {
         "en": "Curriculum-based online tutoring for Grades 1–12 students in Wyoming, including subject support, homework help, local assessment preparation, and services for Arabic-speaking and newcomer families.",
@@ -135724,7 +135724,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Wyoming online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في وايومنغ، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في وايومنغ، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -135791,7 +135791,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Wyoming Curriculum and Assessment Support | Success Path Mentors",
-        "ar": "دعم منهج وايومنغ والاختبارات | سكسس باث منتورز"
+        "ar": "دعم منهج وايومنغ والاختبارات | Success Path Mentors"
       },
       "description": {
         "en": "Understand how Success Path Mentors aligns tutoring with the student’s Wyoming schoolwork, grade, course, assignments, and relevant assessment requirements.",
@@ -136120,7 +136120,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Wyoming Curriculum online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في منهج وايومنغ، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في منهج وايومنغ، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -136185,7 +136185,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Cheyenne, Wyoming | Success Path Mentors",
-        "ar": "دروس أونلاين في تشييينني، وايومنغ | سكسس باث منتورز"
+        "ar": "دروس أونلاين في تشييينني، وايومنغ | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Cheyenne, Wyoming. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -136514,7 +136514,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Cheyenne online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في تشييينني، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في تشييينني، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -136579,7 +136579,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Casper, Wyoming | Success Path Mentors",
-        "ar": "دروس أونلاين في كاسبير، وايومنغ | سكسس باث منتورز"
+        "ar": "دروس أونلاين في كاسبير، وايومنغ | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Casper, Wyoming. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -136908,7 +136908,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Casper online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في كاسبير، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في كاسبير، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {
@@ -136973,7 +136973,7 @@ export const locationPages: LocationPageDefinition[] = [
     "seo": {
       "title": {
         "en": "Online Tutoring in Laramie, Wyoming | Success Path Mentors",
-        "ar": "دروس أونلاين في لاراميي، وايومنغ | سكسس باث منتورز"
+        "ar": "دروس أونلاين في لاراميي، وايومنغ | Success Path Mentors"
       },
       "description": {
         "en": "One-to-one online tutoring for Grades 1–12 students in Laramie, Wyoming. Get help with Math, English, Science, French where applicable, Physics, Chemistry, homework, tests, summer learning, and the local curriculum.",
@@ -137302,7 +137302,7 @@ export const locationPages: LocationPageDefinition[] = [
         },
         "answer": {
           "en": "Yes. Success Path Mentors serves students in Laramie online, with tutor matching based on grade, subject, curriculum, availability, and learning needs.",
-          "ar": "نعم. تقدم سكسس باث منتورز دروسًا أونلاين للطلاب في لاراميي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
+          "ar": "نعم. تقدم Success Path Mentors دروسًا أونلاين للطلاب في لاراميي، وتتم مطابقة المدرس حسب الصف والمادة والمنهج والتوفر والاحتياجات التعليمية."
         }
       },
       {

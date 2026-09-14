@@ -1,5 +1,7 @@
 // Server Component
 
+import { verifiedTrustContent } from '@/config/trust';
+
 import { getTranslations } from 'next-intl/server';
 
 import {
@@ -13,6 +15,7 @@ import {
 } from './testimonials-grid';
 
 export async function Testimonials() {
+  if (!verifiedTrustContent.testimonials) return null;
   const t = await getTranslations('testimonials');
 
   const allItems = t.raw('items') as Testimonial[];

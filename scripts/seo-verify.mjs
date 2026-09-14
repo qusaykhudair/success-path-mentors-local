@@ -1,0 +1,9 @@
+﻿import fs from 'node:fs';
+const data=JSON.parse(fs.readFileSync('reports/seo/local-crawl.json','utf8'));
+const rows=data.rows, issues=[];
+const byUrl=new Map(rows.map(r=>['https://successpathmentors.net'+r.final,r]));
+for(const r of rows){if(r.h1Count!==1)issues.push([r.path,'H1 count',r.h1Count]);if(!r.lang||r.lang!==r.final.split('/')[1])issues.push([r.path,'language',r.lang]);if(!r.alternates.length)issues.push([r.path,'no hreflang']);for(const alt of r.alternates){const t=byUrl.get(alt.href);if(!t||t.status!==200)issues.push([r.path,'hreflang target missing',alt.href]);else if(alt.hreflang!=='x-default'&&!t.alternates.some(a=>a.href===r.canonical))issues.push([r.path,'nonreciprocal hreflang',alt.href]);}
+for(const s of r.schemas){if(s['@type']==='EducationalOrganization'){if(s.name!=='Success Path Mentors')issues.push([r.path,'organization name']);const phone=s.telephone||s.contactPoint?.telephone;if(phone?.replace(/\D/g,'')!=='16477875999')issues.push([r.path,'phone']);if(s.url!=='https://successpathmentors.net')issues.push([r.path,'organization URL']);if((s.logo?.url||s.logo)!=='https://successpathmentors.net/images/logo.png')issues.push([r.path,'logo']);}if(s['@type']==='BreadcrumbList'&&!s.itemListElement.every((v,i)=>v.position===i+1&&v.name))issues.push([r.path,'breadcrumb structure']);if(s['@type']==='FAQPage'&&!s.mainEntity.every(q=>q['@type']==='Question'&&q.name&&q.acceptedAnswer?.text))issues.push([r.path,'FAQ structure']);}}
+console.log(JSON.stringify({pages:rows.length,additionalLinks:data.additionalLinkChecks.length,issues},null,2));fs.writeFileSync('reports/seo/semantic-qa.json',JSON.stringify({pages:rows.length,additionalLinks:data.additionalLinkChecks.length,issues},null,2));
+
+if (issues.length || data.summary.failed.length || data.summary.metadataIssues.length || data.summary.legacy || data.summary.unverifiedNumericClaims || data.summary.invalidJsonLd || data.summary.brokenLinks.length) process.exitCode=1;

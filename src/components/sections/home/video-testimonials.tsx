@@ -1,5 +1,7 @@
 // Server Component
 
+import { verifiedTrustContent } from '@/config/trust';
+
 import { getTranslations } from 'next-intl/server';
 
 import { Reveal } from '@/components/motion/reveal';
@@ -14,6 +16,7 @@ import {
 } from './video-testimonials-grid';
 
 export async function VideoTestimonials() {
+  if (!verifiedTrustContent.videoTestimonials) return null;
   const t = await getTranslations(
     'videoTestimonials'
   );

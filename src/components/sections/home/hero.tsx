@@ -4,12 +4,7 @@
 import {
   ArrowRight,
   BookOpenCheck,
-  CalendarCheck2,
-  GraduationCap,
   MessageCircle,
-  Star,
-  UsersRound,
-  type LucideIcon,
 } from 'lucide-react';
 import { getLocale, getTranslations } from 'next-intl/server';
 
@@ -20,37 +15,18 @@ import {
 import { Container } from '@/components/ui/container';
 
 import { EnrollmentCard } from './enrollment-card';
-import { StatCounter } from './stat-counter';
 
 import { buildTrialLessonMessage, buildWhatsAppHref } from '@/lib/whatsapp';
-
-interface Stat {
-  value: number;
-  suffix: string;
-  label: string;
-}
 
 interface HeroProps {
   secondaryCtaTarget?: string;
 }
-
-
-const STAT_ICONS: LucideIcon[] = [
-  UsersRound,
-  CalendarCheck2,
-  GraduationCap,
-];
 
 export async function Hero({
   secondaryCtaTarget = 'programs',
 }: HeroProps = {}) {
   const t = await getTranslations('hero');
   const locale = (await getLocale()) === 'ar' ? 'ar' : 'en';
-
-  const stats = t.raw('stats') as Stat[];
-
-  const ratingValue = t('rating.value');
-  const ratingCount = t('rating.count');
 
   const whatsappHref = buildWhatsAppHref(
     buildTrialLessonMessage(locale)
@@ -276,172 +252,6 @@ export async function Hero({
             </div>
           </Reveal>
 
-          {/* Rating */}
-          <Reveal delay={0.2}>
-            <div
-              className="
-                mt-8
-                flex
-                flex-wrap
-                items-center
-                gap-x-3
-                gap-y-2
-              "
-            >
-              <div className="flex items-center gap-2">
-                <div
-                  className="flex items-center gap-0.5"
-                  role="img"
-                  aria-label={`${ratingValue} / 5`}
-                >
-                  {Array.from({ length: 5 }).map((_, index) => (
-                    <Star
-                      key={index}
-                      className="
-                        h-4
-                        w-4
-                        fill-warning-500
-                        text-warning-500
-                      "
-                      strokeWidth={1.4}
-                      aria-hidden="true"
-                    />
-                  ))}
-                </div>
-
-                <span className="text-body font-bold text-foreground">
-                  {ratingValue}
-                </span>
-              </div>
-
-              <p className="text-small text-muted-foreground">
-                {ratingCount}
-              </p>
-            </div>
-          </Reveal>
-
-          {/* Statistics */}
-          <div role="list"
-            className="
-              mt-9
-              grid
-              grid-cols-1
-              gap-3
-              sm:grid-cols-3
-            "
-          >
-            {stats.map((stat, index) => {
-              const StatIcon =
-                STAT_ICONS[index] ?? GraduationCap;
-
-              return (
-                <Reveal
-                  key={stat.label}
-                  delay={0.25 + index * 0.05}
-                >
-                  <div
-                    className="
-                      group
-                      relative
-                      flex
-                      h-full
-                      items-center
-                      gap-3
-                      overflow-hidden
-                      rounded-card
-                      border
-                      border-border
-                      bg-card/85
-                      p-4
-                      text-card-foreground
-                      shadow-card
-                      backdrop-blur-sm
-                      transition-[transform,box-shadow,border-color]
-                      duration-300
-                      hover:-translate-y-1
-                      hover:border-accent-300
-                      hover:shadow-card-hover
-                      motion-reduce:transition-none
-                      motion-reduce:hover:translate-y-0
-                      sm:flex-col
-                      sm:items-start
-                    "
-                  >
-                    <span
-                      aria-hidden="true"
-                      className="
-                        pointer-events-none
-                        absolute
-                        -end-6
-                        -top-6
-                        h-20
-                        w-20
-                        rounded-full
-                        bg-accent-300/0
-                        blur-2xl
-                        transition-colors
-                        duration-300
-                        group-hover:bg-accent-300/35
-                      "
-                    />
-
-                    <span
-                      className="
-                        relative
-                        flex
-                        h-11
-                        w-11
-                        shrink-0
-                        items-center
-                        justify-center
-                        rounded-xl
-                        bg-accent-50
-                        text-accent-700
-                        transition-[transform,background-color,color]
-                        duration-300
-                        group-hover:scale-105
-                        group-hover:bg-accent
-                        group-hover:text-accent-foreground
-                        motion-reduce:transition-none
-                      "
-                    >
-                      <StatIcon
-                        className="h-5 w-5"
-                        strokeWidth={1.8}
-                        aria-hidden="true"
-                      />
-                    </span>
-
-                    <div className="relative">
-                      <p
-                        className="
-                          text-small
-                          leading-snug
-                          text-muted-foreground
-                        "
-                      >
-                        {stat.label}
-                      </p>
-
-                      <p
-                        className="
-                          mt-1
-                          text-h3
-                          font-bold
-                          text-foreground
-                        "
-                      >
-                        <StatCounter
-                          end={stat.value}
-                          suffix={stat.suffix}
-                        />
-                      </p>
-                    </div>
-                  </div>
-                </Reveal>
-              );
-            })}
-          </div>
         </div>
 
         {/* Enrollment card */}
