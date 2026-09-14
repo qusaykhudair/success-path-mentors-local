@@ -1,0 +1,18 @@
+{
+  "redirectCases": 21,
+  "protectedFiles": {
+    "src/app/[locale]/(catalog)/locations/[...segments]/page.tsx": "be8ee0a8b616c26b80b3e38e0b853391ee790b579baa502350c8cb8f93127e98",
+    "src/app/[locale]/(catalog)/locations/error.tsx": "505ee4562c81b239c57a58a9f05d9b94b3ffe462917585fc813de78fa48411d0",
+    "src/app/[locale]/(catalog)/locations/loading.tsx": "30f248c7cbffb36fb40de246be1cd9158404c1fc32767e76577883b1d4865ff8",
+    "src/app/[locale]/(catalog)/locations/page.tsx": "f358fff9bbffb5af02824b6103484b85fa7f2daefefeb5103ae213a6357cdaca",
+    "src/components/layout/locations-menu.tsx": "01f1908772a6e8c9454142ea446f61a9eb4f8d0785c20d752738db3d704138ee",
+    "src/components/locations/location-icon.tsx": "e8891e0111feefd6f293ee1c4b906659fc51f850242cbcf86f90aa880f54ca41",
+    "src/components/locations/location-page-content.tsx": "21c7c2823cb7ff25bb7cd9efcbb686b976ec32b24df339b5bf61e40372d69c80",
+    "src/content/locations/education-resources.ts": "bd708defb6c9b84b200b2dfd0e36971091a8bdf9262224e7786fee279bf56c42",
+    "src/content/locations/location-navigation.ts": "f9e3b200bb4097011e3cfeed84392259cf3eb86a88594eb17e31312209f8a6ad",
+    "src/content/locations/location-pages.ts": "cbe9a1ae12e5df18438636bbd1c5db30dfd28da3805f1b7f89ff56d8f6eb5ba4",
+    "src/lib/locations/get-location-page.ts": "cc520b9ccca1ca6785d8d4805596452ee1164f0b86af71062d3b0e559acf6fbd",
+    "src/lib/locations/metadata.ts": "acf4348b0da8468f1f8ac516fb49119abb3ca51f8ad1dde20ba8a994ef53379a",
+    "src/lib/locations/schemas.ts": "7272613903f9ba32bce49bf74e3102b652288dfd9e8a205cd8ed7154580ff79d"
+  }
+}

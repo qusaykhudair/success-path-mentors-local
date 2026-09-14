@@ -1,0 +1,121 @@
+[
+  {
+    "url": "https://www.successpathmentors.net/en",
+    "status": 301,
+    "location": "https://successpathmentors.net/en",
+    "expected": "https://successpathmentors.net/en",
+    "pass": true
+  },
+  {
+    "url": "https://www.successpathmentors.net/en/about/?q=one%20two&x=1",
+    "status": 301,
+    "location": "https://successpathmentors.net/en/about?q=one+two&x=1",
+    "expected": "https://successpathmentors.net/en/about?q=one%20two&x=1",
+    "pass": true
+  },
+  {
+    "url": "https://www.successpathmentors.net/images/logo.png",
+    "status": 301,
+    "location": "https://successpathmentors.net/images/logo.png",
+    "expected": "https://successpathmentors.net/images/logo.png",
+    "pass": true
+  },
+  {
+    "url": "https://www.successpathmentors.net/robots.txt",
+    "status": 301,
+    "location": "https://successpathmentors.net/robots.txt",
+    "expected": "https://successpathmentors.net/robots.txt",
+    "pass": true
+  },
+  {
+    "url": "https://www.successpathmentors.net/en/locations/canada?ref=qa",
+    "status": 301,
+    "location": "https://successpathmentors.net/en/locations/canada?ref=qa",
+    "expected": "https://successpathmentors.net/en/locations/canada?ref=qa",
+    "pass": true
+  },
+  {
+    "url": "http://successpathmentors.net/en",
+    "status": 301,
+    "location": "https://successpathmentors.net/en",
+    "expected": "https://successpathmentors.net/en",
+    "pass": true
+  },
+  {
+    "url": "http://successpathmentors.net/en/about/?q=one%20two&x=1",
+    "status": 301,
+    "location": "https://successpathmentors.net/en/about?q=one+two&x=1",
+    "expected": "https://successpathmentors.net/en/about?q=one%20two&x=1",
+    "pass": true
+  },
+  {
+    "url": "http://successpathmentors.net/images/logo.png",
+    "status": 301,
+    "location": "https://successpathmentors.net/images/logo.png",
+    "expected": "https://successpathmentors.net/images/logo.png",
+    "pass": true
+  },
+  {
+    "url": "http://successpathmentors.net/robots.txt",
+    "status": 301,
+    "location": "https://successpathmentors.net/robots.txt",
+    "expected": "https://successpathmentors.net/robots.txt",
+    "pass": true
+  },
+  {
+    "url": "http://successpathmentors.net/en/locations/canada?ref=qa",
+    "status": 301,
+    "location": "https://successpathmentors.net/en/locations/canada?ref=qa",
+    "expected": "https://successpathmentors.net/en/locations/canada?ref=qa",
+    "pass": true
+  },
+  {
+    "url": "http://www.successpathmentors.net/en",
+    "status": 301,
+    "location": "https://successpathmentors.net/en",
+    "expected": "https://successpathmentors.net/en",
+    "pass": true
+  },
+  {
+    "url": "http://www.successpathmentors.net/en/about/?q=one%20two&x=1",
+    "status": 301,
+    "location": "https://successpathmentors.net/en/about?q=one+two&x=1",
+    "expected": "https://successpathmentors.net/en/about?q=one%20two&x=1",
+    "pass": true
+  },
+  {
+    "url": "http://www.successpathmentors.net/images/logo.png",
+    "status": 301,
+    "location": "https://successpathmentors.net/images/logo.png",
+    "expected": "https://successpathmentors.net/images/logo.png",
+    "pass": true
+  },
+  {
+    "url": "http://www.successpathmentors.net/robots.txt",
+    "status": 301,
+    "location": "https://successpathmentors.net/robots.txt",
+    "expected": "https://successpathmentors.net/robots.txt",
+    "pass": true
+  },
+  {
+    "url": "http://www.successpathmentors.net/en/locations/canada?ref=qa",
+    "status": 301,
+    "location": "https://successpathmentors.net/en/locations/canada?ref=qa",
+    "expected": "https://successpathmentors.net/en/locations/canada?ref=qa",
+    "pass": true
+  },
+  {
+    "url": "https://successpathmentors.net/en/",
+    "status": 301,
+    "location": "https://successpathmentors.net/en",
+    "expected": "https://successpathmentors.net/en",
+    "pass": true
+  },
+  {
+    "url": "https://successpathmentors.net/en/about/",
+    "status": 301,
+    "location": "https://successpathmentors.net/en/about",
+    "expected": "https://successpathmentors.net/en/about",
+    "pass": true
+  }
+]

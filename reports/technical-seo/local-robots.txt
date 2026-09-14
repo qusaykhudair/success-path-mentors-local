@@ -1,0 +1,15 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /private/
+Disallow: /server/
+Disallow: /tmp/
+Disallow: /draft/
+Disallow: /preview/
+Disallow: /404
+Disallow: /500
+
+Host: https://successpathmentors.net
+Sitemap: https://successpathmentors.net/sitemap.xml

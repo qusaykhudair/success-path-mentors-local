@@ -109,7 +109,7 @@ export const howItWorksPageContent = {
       description:
         'We begin by understanding the student’s grade, subject, curriculum, learning goal, preferred language, and availability. The team then coordinates an appropriate tutor and a suitable lesson time.',
       primaryAction: 'View the six-step process',
-      secondaryAction: 'Learn about the academy',
+      secondaryAction: 'Learn about our team',
       highlights: [
         {
           value: 'Student information first',
@@ -162,7 +162,7 @@ export const howItWorksPageContent = {
         {
           title: 'Confirm the lesson time',
           description:
-            'The family and the academy agree on a suitable time and receive the information needed to join the online lesson.',
+            'The family and our team confirm a suitable lesson time and the family receives the information needed to join the online lesson.',
         },
         {
           title: 'Complete the first lesson',
@@ -249,7 +249,7 @@ export const howItWorksPageContent = {
         {
           title: 'Ongoing schedule',
           description:
-            'When the fit is suitable, the academy coordinates the agreed lesson frequency and confirms the applicable package or payment arrangement.',
+            'When the fit is suitable, our team coordinates the agreed lesson frequency and confirms the applicable package or payment arrangement.',
           icon: CalendarClock,
         },
         {
@@ -290,7 +290,7 @@ export const howItWorksPageContent = {
           question:
             'What happens if the tutor is not a good fit?',
           answer:
-            'A parent or guardian can contact the academy and explain the concern. The team will review the feedback and coordinate a reasonable next step based on tutor availability and the circumstances.',
+            'A parent or guardian can contact our team and explain the concern. The team will review the feedback and coordinate a reasonable next step based on tutor availability and the circumstances.',
         },
         {
           question:

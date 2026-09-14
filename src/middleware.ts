@@ -3,6 +3,7 @@ import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
 import { routing } from './i18n/routing';
+import { getNormalizedRequestUrl } from './lib/seo/normalize-request-url';
 
 const intlMiddleware = createMiddleware(routing);
 
@@ -36,7 +37,21 @@ function applySecurityHeaders(response: NextResponse): NextResponse {
 }
 
 export default function middleware(request: NextRequest) {
+  const normalizedUrl = getNormalizedRequestUrl(
+    request.url,
+    request.headers.get('host'),
+    request.headers.get('x-forwarded-proto')
+  );
+  if (normalizedUrl) {
+    return applySecurityHeaders(NextResponse.redirect(normalizedUrl, 301));
+  }
+
   const pathname = request.nextUrl.pathname;
+
+  // Resources and APIs participate in host normalization, not locale routing.
+  if (/^\/(?:api|_next|_vercel)(?:\/|$)/.test(pathname) || pathname.includes('.')) {
+    return NextResponse.next();
+  }
 
   if (pathname === '/fr' || pathname.startsWith('/fr/')) {
     return applySecurityHeaders(NextResponse.next());
@@ -46,5 +61,5 @@ export default function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!api|_next|_vercel|.*\..*).*)'],
+  matcher: ['/:path*'],
 };

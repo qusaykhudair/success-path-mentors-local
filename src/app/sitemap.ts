@@ -188,8 +188,11 @@ export default function sitemap():
             routing.defaultLocale,
             path
           ),
-        lastModified:
-          new Date(),
+        // Location entries are explicitly out of scope for this cleanup.
+        // Other pages have no reliable per-page modification timestamp.
+        ...(path === '/locations' || path.startsWith('/locations/')
+          ? { lastModified: new Date() }
+          : {}),
         changeFrequency:
           path === ''
             ? 'weekly' as const
@@ -203,7 +206,7 @@ export default function sitemap():
             ...Object.fromEntries(
               routing.locales.map(
                 (locale) => [
-                  locale,
+                  path === '' ? `${locale}-CA` : locale,
                   buildAbsoluteUrl(
                     locale,
                     path
@@ -226,8 +229,6 @@ export default function sitemap():
       (path) => ({
         url:
           `${SITE_URL}${path}`,
-        lastModified:
-          new Date(),
         changeFrequency:
           'monthly' as const,
         priority:

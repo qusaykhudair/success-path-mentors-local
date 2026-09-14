@@ -131,9 +131,6 @@ export default async function AboutPage({
         id="our-purpose"
         eyebrow={content.story.eyebrow}
         title={content.story.title}
-        description={
-          content.story.description
-        }
       >
         <div
           className="

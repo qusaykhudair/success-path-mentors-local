@@ -64,7 +64,7 @@ export async function generateMetadata({
     Object.fromEntries(
       routing.locales.map(
         (supportedLocale) => [
-          supportedLocale,
+          `${supportedLocale}-CA`,
           new URL(
             `/${supportedLocale}`,
             SITE_URL
