@@ -14,7 +14,7 @@ export function GermanyHero() {
   const isRtl = locale === 'ar';
 
   return (
-    <section id="germany-hero" className="relative isolate overflow-hidden bg-primary-950 pt-28 sm:pt-32 md:pt-36 lg:pt-40 pb-16 md:pb-24 lg:pb-28">
+    <section id="germany-hero" className="relative isolate overflow-hidden bg-primary-950 pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-12 sm:pb-16 md:pb-20">
       {/* Background Hero Image */}
       <div className="absolute inset-0 -z-30">
         <Image
@@ -55,57 +55,57 @@ export function GermanyHero() {
       />
 
       <Container className="relative z-10">
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-16">
+        <div className="grid items-center gap-8 lg:grid-cols-12 lg:gap-10 xl:gap-12">
           
-          {/* Content Side */}
-          <div className="flex flex-col gap-6 max-w-2xl">
+          {/* Content Side (58% on desktop) */}
+          <div className="flex flex-col gap-5 max-w-2xl lg:col-span-7">
             {/* Eyebrow / Badge */}
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-accent-400/30 bg-accent-500/15 px-4 py-1.5 text-sm font-semibold text-accent-300 shadow-sm backdrop-blur-md">
-              <Star className="h-4 w-4 fill-accent-400 text-accent-400" />
+            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-accent-400/30 bg-accent-500/15 px-3.5 py-1 text-xs sm:text-sm font-semibold text-accent-300 shadow-sm backdrop-blur-md">
+              <Star className="h-3.5 w-3.5 sm:h-4 sm:w-4 fill-accent-400 text-accent-400" />
               <span>{t('eyebrow', { fallback: 'Premium Online Tutoring' })}</span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-[3.25rem] xl:text-6xl text-balance leading-[1.14] drop-shadow-sm">
+            <h1 className="text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-[2.85rem] xl:text-5xl text-balance leading-[1.14] drop-shadow-sm">
               {t('headline')}
             </h1>
 
             {/* Subheadline */}
-            <p className="text-base text-primary-100/90 sm:text-lg lg:text-xl text-balance leading-relaxed font-normal">
+            <p className="text-sm sm:text-base lg:text-lg text-primary-100/90 text-balance leading-relaxed font-normal">
               {t('subheadline')}
             </p>
 
             {/* Benefit Points */}
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2.5">
               {[
                 t('benefits.0', { fallback: 'Personalized 1-to-1 learning' }),
                 t('benefits.1', { fallback: 'Flexible online lessons' }),
                 t('benefits.2', { fallback: 'Expert human coordination' })
               ].map((benefit, i) => (
-                <div key={i} className="flex items-center gap-3 text-base sm:text-lg font-medium text-white/95">
-                  <CheckCircle2 className="h-5 w-5 sm:h-6 sm:w-6 shrink-0 text-accent-400" />
+                <div key={i} className="flex items-center gap-2.5 text-sm sm:text-base font-medium text-white/95">
+                  <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 shrink-0 text-accent-400" />
                   <span>{benefit}</span>
                 </div>
               ))}
             </div>
 
             {/* Trust Context */}
-            <div className="mt-2 flex items-center gap-4 rounded-2xl bg-white/10 backdrop-blur-md p-4 shadow-lg border border-white/15 w-fit">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent-400/20 text-accent-300 ring-1 ring-accent-400/30">
-                <Users className="h-6 w-6" />
+            <div className="mt-1 flex items-center gap-3.5 rounded-xl bg-white/10 backdrop-blur-md p-3 sm:p-3.5 shadow-lg border border-white/15 w-fit">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent-400/20 text-accent-300 ring-1 ring-accent-400/30">
+                <Users className="h-5 w-5" />
               </div>
-              <p className="text-sm sm:text-base font-semibold text-white text-balance max-w-[240px] leading-snug">
+              <p className="text-xs sm:text-sm font-semibold text-white text-balance max-w-[240px] leading-snug">
                 {t('trustContext')}
               </p>
             </div>
           </div>
 
-          {/* Interaction Side */}
-          <div className="w-full lg:ms-auto">
+          {/* Interaction Side - Shifted strictly to the right side on desktop (42%) */}
+          <div className="w-full flex justify-center lg:justify-end lg:col-span-5">
             {/* Soft luminous ambient backdrop for the selector card */}
-            <div className="relative mx-auto max-w-lg">
-              <div className="absolute -inset-1 rounded-[2.5rem] bg-gradient-to-tr from-accent-400/30 to-primary-400/30 opacity-70 blur-2xl pointer-events-none" />
-              <div className="relative rounded-3xl bg-white shadow-2xl ring-1 ring-white/20">
+            <div className="relative w-full max-w-[390px] sm:max-w-[410px]">
+              <div className="absolute -inset-1 rounded-[2rem] bg-gradient-to-tr from-accent-400/25 to-primary-400/25 opacity-70 blur-xl pointer-events-none" />
+              <div className="relative rounded-2xl sm:rounded-3xl bg-white shadow-xl ring-1 ring-white/20">
                 <HeroServiceSelector />
               </div>
             </div>

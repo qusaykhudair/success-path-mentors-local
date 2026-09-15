@@ -12,6 +12,73 @@ import {
   getMarketSwitchPath,
 } from '@/lib/market-navigation';
 
+function GermanFlag({ className = 'h-5 w-5' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" className={cn("rounded-full overflow-hidden shrink-0 shadow-2xs", className)} aria-hidden="true">
+      <defs>
+        <clipPath id="glsClipDE">
+          <circle cx="50" cy="50" r="50" />
+        </clipPath>
+      </defs>
+      <g clipPath="url(#glsClipDE)">
+        <rect width="100" height="33.34" fill="#1C1C1C" />
+        <rect y="33.34" width="100" height="33.34" fill="#D32F2F" />
+        <rect y="66.68" width="100" height="33.34" fill="#FFC107" />
+      </g>
+      <circle cx="50" cy="50" r="49" fill="none" stroke="rgba(0,0,0,0.15)" strokeWidth="2" />
+    </svg>
+  );
+}
+
+function EnglishFlag({ className = 'h-5 w-5' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" className={cn("rounded-full overflow-hidden shrink-0 shadow-2xs", className)} aria-hidden="true">
+      <defs>
+        <clipPath id="glsClipEN">
+          <circle cx="50" cy="50" r="50" />
+        </clipPath>
+      </defs>
+      <g clipPath="url(#glsClipEN)">
+        <rect width="100" height="100" fill="#0A3161" />
+        <line x1="0" y1="0" x2="100" y2="100" stroke="#FFFFFF" strokeWidth="18" />
+        <line x1="100" y1="0" x2="0" y2="100" stroke="#FFFFFF" strokeWidth="18" />
+        <line x1="0" y1="0" x2="100" y2="100" stroke="#CC0000" strokeWidth="6" />
+        <line x1="100" y1="0" x2="0" y2="100" stroke="#CC0000" strokeWidth="6" />
+        <rect x="38" width="24" height="100" fill="#FFFFFF" />
+        <rect y="38" width="100" height="24" fill="#FFFFFF" />
+        <rect x="43" width="14" height="100" fill="#CC0000" />
+        <rect y="43" width="100" height="14" fill="#CC0000" />
+      </g>
+      <circle cx="50" cy="50" r="49" fill="none" stroke="rgba(0,0,0,0.15)" strokeWidth="2" />
+    </svg>
+  );
+}
+
+function ArabicFlag({ className = 'h-5 w-5' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" className={cn("rounded-full overflow-hidden shrink-0 shadow-2xs", className)} aria-hidden="true">
+      <defs>
+        <clipPath id="glsClipAR">
+          <circle cx="50" cy="50" r="50" />
+        </clipPath>
+      </defs>
+      <g clipPath="url(#glsClipAR)">
+        <rect width="100" height="33.34" fill="#1C1C1C" />
+        <rect y="33.34" width="100" height="33.34" fill="#FFFFFF" />
+        <rect y="66.68" width="100" height="33.34" fill="#007A3D" />
+        <polygon points="0,0 48,50 0,100" fill="#CE1126" />
+      </g>
+      <circle cx="50" cy="50" r="49" fill="none" stroke="rgba(0,0,0,0.15)" strokeWidth="2" />
+    </svg>
+  );
+}
+
+const LANGUAGE_FLAGS: Record<string, React.ComponentType<{ className?: string }>> = {
+  de: GermanFlag,
+  en: EnglishFlag,
+  ar: ArabicFlag,
+};
+
 interface GlobalLanguageSelectorProps {
   /** If true, the selector is being rendered inside a Germany market route context. */
   isGermanyContext?: boolean;
@@ -55,7 +122,9 @@ export function GlobalLanguageSelector({
     { code: 'de', label: 'Deutsch' },
   ];
 
-  const currentLabel = languages.find(lang => lang.code === locale)?.label || 'English';
+  const fallbackLang = { code: 'en', label: 'English' } as const;
+  const currentLang = languages.find(lang => lang.code === locale) ?? fallbackLang;
+  const CurrentFlag = LANGUAGE_FLAGS[currentLang.code] || Globe;
 
   const handleSelect = (code: string) => {
     setIsOpen(false);
@@ -95,8 +164,8 @@ export function GlobalLanguageSelector({
         )}
       >
         <div className="flex items-center gap-2">
-          <Globe className={cn("h-4 w-4 shrink-0 transition-transform duration-300 group-hover:rotate-12", isTransparent ? "text-accent-300" : "text-accent-600")} />
-          <span className="text-sm font-semibold whitespace-nowrap">{currentLabel}</span>
+          <CurrentFlag className="h-4 w-4 shrink-0 rounded-full" />
+          <span className="text-sm font-semibold whitespace-nowrap">{currentLang.label}</span>
         </div>
         <ChevronDown 
           className={cn(
@@ -112,6 +181,7 @@ export function GlobalLanguageSelector({
           <div className="flex flex-col gap-1" role="menu" aria-orientation="vertical">
             {languages.map((lang) => {
               const isActive = lang.code === locale;
+              const Flag = LANGUAGE_FLAGS[lang.code] || Globe;
               return (
                 <button
                   key={lang.code}
@@ -120,12 +190,15 @@ export function GlobalLanguageSelector({
                   className={cn(
                     "flex min-h-[44px] w-full items-center justify-between rounded-lg px-3 py-2 text-sm font-medium transition-colors",
                     isActive 
-                      ? "bg-primary-50 text-primary-900" 
+                      ? "bg-primary-50 text-primary-900 font-semibold" 
                       : "text-primary-600 hover:bg-primary-50 hover:text-primary-900"
                   )}
                   dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
                 >
-                  <span className={cn(lang.code === 'ar' && "font-arabic")}>{lang.label}</span>
+                  <div className="flex items-center gap-2.5">
+                    <Flag className="h-5 w-5 shrink-0 rounded-full" />
+                    <span className={cn(lang.code === 'ar' && "font-arabic")}>{lang.label}</span>
+                  </div>
                   {isActive && <Check className="h-4 w-4 shrink-0 text-accent-600" />}
                 </button>
               );
