@@ -18,6 +18,9 @@ import {
   MathSubjectHero,
 } from '@/components/subjects/math/math-subject-hero';
 import {
+  LocalAvailabilityBlock,
+} from '@/components/local/local-availability-block';
+import {
   getBookingHref,
   routePath,
 } from '@/config/routes';
@@ -185,6 +188,11 @@ export default async function MathPage({
           bookingHref
         }
         locale={locale}
+      />
+
+      <LocalAvailabilityBlock
+        locale={locale}
+        subjectName={locale === 'ar' ? 'الرياضيات' : 'Mathematics'}
       />
 
       <MathOverviewCta

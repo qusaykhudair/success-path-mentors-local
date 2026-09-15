@@ -19,6 +19,7 @@ import { Services } from '@/components/sections/home/services';
 import { Steps } from '@/components/sections/home/steps';
 import { Testimonials } from '@/components/sections/home/testimonials';
 import { VideoTestimonials } from '@/components/sections/home/video-testimonials';
+import { LocalAvailabilityBlock } from '@/components/local/local-availability-block';
 
 import { routing } from '@/i18n/routing';
 import { SITE, SITE_URL } from '@/lib/constants';
@@ -158,6 +159,8 @@ export default async function HomePage({
       <VideoTestimonials />
 
       <Pricing />
+
+      <LocalAvailabilityBlock locale={locale} />
 
       <Faq />
 

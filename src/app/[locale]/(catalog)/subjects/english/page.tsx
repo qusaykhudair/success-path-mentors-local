@@ -18,6 +18,9 @@ import {
   EnglishSubjectHero,
 } from '@/components/subjects/english/english-subject-hero';
 import {
+  LocalAvailabilityBlock,
+} from '@/components/local/local-availability-block';
+import {
   getEnglishBookingHref,
   routePath,
 } from '@/config/routes';
@@ -170,6 +173,11 @@ export default async function EnglishPage({
         locale={locale}
         strands={overview.strands}
         copy={content.strands}
+      />
+
+      <LocalAvailabilityBlock
+        locale={locale}
+        subjectName={locale === 'ar' ? 'اللغة الإنجليزية' : 'English'}
       />
 
       <EnglishOverviewCta

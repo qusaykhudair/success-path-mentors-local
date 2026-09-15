@@ -18,6 +18,9 @@ import {
   ScienceSubjectHero,
 } from '@/components/subjects/science/science-subject-hero';
 import {
+  LocalAvailabilityBlock,
+} from '@/components/local/local-availability-block';
+import {
   getPhysicsBookingHref,
   routePath,
 } from '@/config/routes';
@@ -181,6 +184,11 @@ export default async function PhysicsPage({
         copy={
           content.strands
         }
+      />
+
+      <LocalAvailabilityBlock
+        locale={locale}
+        subjectName={locale === 'ar' ? 'الفيزياء' : 'Physics'}
       />
 
       <ScienceOverviewCta

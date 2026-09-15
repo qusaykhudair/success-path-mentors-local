@@ -18,6 +18,9 @@ import {
   ScienceSubjectHero,
 } from '@/components/subjects/science/science-subject-hero';
 import {
+  LocalAvailabilityBlock,
+} from '@/components/local/local-availability-block';
+import {
   getGeneralScienceBookingHref,
   routePath,
 } from '@/config/routes';
@@ -173,6 +176,11 @@ export default async function GeneralSciencePage({
         subjectSlug="general-science"
         strands={overview.strands}
         copy={content.strands}
+      />
+
+      <LocalAvailabilityBlock
+        locale={locale}
+        subjectName={locale === 'ar' ? 'العلوم العامة' : 'General Science'}
       />
 
       <ScienceOverviewCta

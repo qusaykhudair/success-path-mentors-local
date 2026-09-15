@@ -18,6 +18,9 @@ import {
   ScienceSubjectHero,
 } from '@/components/subjects/science/science-subject-hero';
 import {
+  LocalAvailabilityBlock,
+} from '@/components/local/local-availability-block';
+import {
   getChemistryBookingHref,
   routePath,
 } from '@/config/routes';
@@ -181,6 +184,11 @@ export default async function ChemistryPage({
         copy={
           content.strands
         }
+      />
+
+      <LocalAvailabilityBlock
+        locale={locale}
+        subjectName={locale === 'ar' ? 'الكيمياء' : 'Chemistry'}
       />
 
       <ScienceOverviewCta
