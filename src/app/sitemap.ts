@@ -33,6 +33,9 @@ import {
   buildAbsoluteUrl,
 } from '@/lib/seo/urls';
 import {
+  hreflangPagePaths,
+} from '@/lib/seo/hreflang-pages';
+import {
   programmeFrancaisRoutes,
 } from '@/lib/programme-francais/routes';
 
@@ -82,18 +85,7 @@ const localizedPaths = [
     (strand) =>
       `/subjects/general-science/${strand.slug}`
   ),
-  '/subjects/french',
-  '/subjects/math/grade-12-advanced-functions-mhf4u',
-  '/subjects/math/grade-12-calculus-vectors-mcv4u',
-  '/subjects/math/grade-11-functions-mcr3u',
-  '/subjects/math/grade-12-data-management-mdm4u',
-  '/subjects/math/grade-9-math-mth1w',
-  '/subjects/math/grade-10-math-mpm2d',
-  '/subjects/chemistry/senior-chemistry-sch3u-sch4u',
-  '/subjects/physics/senior-physics-sph3u-sph4u',
-  '/services/homework-help',
-  '/services/exam-preparation',
-  '/curriculum/ontario',
+  '/exam-preparation',
 ];
 
 const frenchPaths = [
@@ -150,13 +142,13 @@ function getLocalizedPriority(
     path ===
       '/subjects/physics' ||
     path ===
-      '/subjects/general-science' ||
-    path ===
-      '/subjects/french' ||
-    path ===
-      '/curriculum/ontario'
+      '/subjects/general-science'
   ) {
     return 0.9;
+  }
+
+  if (path === '/exam-preparation') {
+    return 0.85;
   }
 
   if (
@@ -198,46 +190,55 @@ export default function sitemap():
   MetadataRoute.Sitemap {
   const localizedEntries =
     localizedPaths.map(
-      (path) => ({
-        url:
-          buildAbsoluteUrl(
-            routing.defaultLocale,
-            path
-          ),
-        // Location entries are explicitly out of scope for this cleanup.
-        // Other pages have no reliable per-page modification timestamp.
-        ...(path === '/locations' || path.startsWith('/locations/')
-          ? { lastModified: new Date() }
-          : {}),
-        changeFrequency:
-          path === ''
-            ? 'weekly' as const
-            : 'monthly' as const,
-        priority:
-          getLocalizedPriority(
-            path
-          ),
-        alternates: {
-          languages: {
-            ...Object.fromEntries(
-              routing.locales.map(
-                (locale) => [
-                  path === '' ? `${locale}-CA` : locale,
-                  buildAbsoluteUrl(
-                    locale,
-                    path
-                  ),
-                ]
-              )
+      (path) => {
+        const isBilingual =
+          path === '' ||
+          path.startsWith('/locations') ||
+          hreflangPagePaths.has(path);
+
+        return {
+          url:
+            buildAbsoluteUrl(
+              routing.defaultLocale,
+              path
             ),
-            'x-default':
-              buildAbsoluteUrl(
-                routing.defaultLocale,
-                path
-              ),
-          },
-        },
-      })
+          ...(path === '/locations' || path.startsWith('/locations/')
+            ? { lastModified: new Date() }
+            : {}),
+          changeFrequency:
+            path === ''
+              ? 'weekly' as const
+              : 'monthly' as const,
+          priority:
+            getLocalizedPriority(
+              path
+            ),
+          ...(isBilingual
+            ? {
+                alternates: {
+                  languages: {
+                    ...Object.fromEntries(
+                      routing.locales.map(
+                        (locale) => [
+                          path === '' ? `${locale}-CA` : locale,
+                          buildAbsoluteUrl(
+                            locale,
+                            path
+                          ),
+                        ]
+                      )
+                    ),
+                    'x-default':
+                      buildAbsoluteUrl(
+                        routing.defaultLocale,
+                        path
+                      ),
+                  },
+                },
+              }
+            : {}),
+        };
+      }
     );
 
   const frenchEntries =

@@ -12,9 +12,9 @@ const mathPageContent: Record<
   en: {
     seo: {
       title:
-        'Online Math Tutoring for Grades 2–12 | Success Path Mentors',
+        'Online Math Tutoring for Grades 2–12 | Homework Help & Curriculum Support | Success Path Mentors',
       description:
-        'Explore one-to-one online math tutoring across number sense, fractions, algebra, functions, geometry, statistics, financial literacy, and advanced mathematics.',
+        'Personalized one-to-one online math tutoring for Grades 2–12. Comprehensive support for elementary math, Grade 9 (MTH1W), Grade 10 (MPM2D), senior functions, and homework help.',
       pathname: '/subjects/math',
     },
 
@@ -24,7 +24,7 @@ const mathPageContent: Record<
       title:
         'Online Math Tutoring for Grades 2–12',
       description:
-        'Explore a structured mathematics roadmap that grows from foundational number concepts to algebra, functions, geometry, statistics, financial literacy, and senior secondary mathematics.',
+        'Explore a structured mathematics roadmap from elementary number foundations to algebra, Grade 9 de-streamed math (MTH1W), Grade 10 academic math (MPM2D), senior functions, statistics, and university preparation.',
       primaryAction:
         'Explore the curriculum',
       secondaryAction:

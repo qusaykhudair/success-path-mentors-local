@@ -23,48 +23,25 @@ export function SeoGapPageLayout({
     siteConfig.url
   ).toString();
 
-  const isCoursePage = content.pathname.includes('/subjects/math/grade-') || content.pathname.includes('/senior-');
-
-  const mainSchema = isCoursePage
-    ? {
-        '@context': 'https://schema.org',
-        '@type': 'Course',
-        '@id': `${pageUrl}#course`,
-        url: pageUrl,
-        name: content.hero.title,
-        description: content.seo.description,
-        inLanguage: locale,
-        provider: {
-          '@type': 'EducationalOrganization',
-          '@id': `${siteConfig.url}/#organization`,
-          name: siteConfig.name,
-          url: siteConfig.url,
-        },
-        hasCourseInstance: {
-          '@type': 'CourseInstance',
-          courseMode: 'Online',
-          courseWorkload: 'PT1H',
-        },
-      }
-    : {
-        '@context': 'https://schema.org',
-        '@type': 'Service',
-        '@id': `${pageUrl}#service`,
-        url: pageUrl,
-        name: content.hero.title,
-        description: content.seo.description,
-        serviceType: 'Online Academic Tutoring',
-        provider: {
-          '@type': 'EducationalOrganization',
-          '@id': `${siteConfig.url}/#organization`,
-          name: siteConfig.name,
-          url: siteConfig.url,
-        },
-        areaServed: {
-          '@type': 'Country',
-          name: 'Canada',
-        },
-      };
+  const mainSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${pageUrl}#service`,
+    url: pageUrl,
+    name: content.hero.title,
+    description: content.seo.description,
+    serviceType: 'School Exam Preparation Tutoring',
+    provider: {
+      '@type': 'EducationalOrganization',
+      '@id': `${siteConfig.url}/#organization`,
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'Canada',
+    },
+  };
 
   return (
     <InternalPageShell

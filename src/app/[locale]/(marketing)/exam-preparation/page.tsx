@@ -12,14 +12,21 @@ interface PageProps {
   }>;
 }
 
-const PAGE_KEY = 'services-exam-preparation';
+const PAGE_KEY = 'exam-preparation';
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return [{ locale: 'en' }];
+}
 
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { locale } = await params;
 
-  if (!isSupportedLocale(locale)) {
+  // English-only acquisition page. Arabic route must not exist or be indexed.
+  if (!isSupportedLocale(locale) || locale !== 'en') {
     return {};
   }
 
@@ -36,7 +43,8 @@ export default async function ExamPreparationPage({
 }: PageProps) {
   const { locale } = await params;
 
-  if (!isSupportedLocale(locale)) {
+  // Enforce English-only until a genuine Arabic translation is produced and approved
+  if (!isSupportedLocale(locale) || locale !== 'en') {
     notFound();
   }
 

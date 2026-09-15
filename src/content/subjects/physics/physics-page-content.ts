@@ -6,9 +6,9 @@ const physicsPageContent = {
   en: {
     seo: {
       title:
-        'Online Physics Tutoring for Grades 5–12 | Success Path Mentors',
+        'Online Physics Tutoring | Grade 11 & 12 (SPH3U & SPH4U) Support | Success Path Mentors',
       description:
-        'Personalized one-to-one physics tutoring organized by grade and curriculum strand, from forces and motion to electricity, waves, optics, energy, and modern physics.',
+        'Personalized one-to-one physics tutoring for Grades 5–12 and senior secondary physics (SPH3U & SPH4U), covering kinematics, dynamics, energy, fields, and waves.',
       pathname:
         '/subjects/physics',
     },
@@ -18,7 +18,7 @@ const physicsPageContent = {
       title:
         'Understand how motion, forces, energy, and fields work',
       description:
-        'Personalized physics support organized across mechanics, electricity, waves, optics, thermal physics, momentum, oscillations, vectors, and modern physics.',
+        'Personalized physics support organized across mechanics, electricity, waves, optics, energy, momentum, and senior secondary courses including SPH3U and SPH4U.',
       primaryAction:
         'Explore physics strands',
       secondaryAction:

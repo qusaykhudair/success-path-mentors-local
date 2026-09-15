@@ -73,9 +73,13 @@ export function buildPageMetadata({
       url: canonical,
       siteName: siteConfig.name,
       locale: getOpenGraphLocale(locale),
-      alternateLocale: [
-        getAlternateOpenGraphLocale(locale),
-      ],
+      ...(Object.keys(buildLanguageAlternates(seo.pathname)).length > 0
+        ? {
+            alternateLocale: [
+              getAlternateOpenGraphLocale(locale),
+            ],
+          }
+        : {}),
       type: 'website',
       ...(imageUrl
         ? {

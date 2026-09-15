@@ -2,6 +2,7 @@
 // Server Component
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { getLocale, getTranslations } from 'next-intl/server';
 import {
   BrainCircuit,
@@ -587,6 +588,17 @@ export async function Services() {
                         >
                           {item.description}
                         </p>
+
+                        {locale === 'en' && item.title.includes('Exam') && (
+                          <div className="mt-3">
+                            <Link
+                              href="/en/exam-preparation"
+                              className="inline-flex items-center gap-1.5 text-small font-semibold text-primary hover:text-accent transition-colors"
+                            >
+                              Explore school exam preparation tutoring &rarr;
+                            </Link>
+                          </div>
+                        )}
                       </div>
                     </div>
 

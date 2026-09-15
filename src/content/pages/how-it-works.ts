@@ -302,7 +302,7 @@ export const howItWorksPageContent = {
           question:
             'Can the tutor help with homework and exams?',
           answer:
-            'Yes. The tutor can explain concepts, guide practice, review the student’s work, and support preparation. The tutor does not complete graded work or take an assessment on behalf of the student.',
+            'Yes. The tutor can explain concepts, guide practice, review the student’s work, and support preparation. The tutor does not complete graded work or take an assessment on behalf of the student. Dedicated support is also available for school exam preparation.',
         },
       ],
     },
