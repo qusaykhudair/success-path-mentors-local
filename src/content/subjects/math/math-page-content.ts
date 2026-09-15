@@ -12,9 +12,9 @@ const mathPageContent: Record<
   en: {
     seo: {
       title:
-        'Online Math Tutoring for Grades 2–12 | Success Path Mentors',
+        'Online Math Tutoring Grades 2–12 | Personalized Math Mentors | Success Path Mentors',
       description:
-        'Explore one-to-one online math tutoring across number sense, fractions, algebra, functions, geometry, statistics, financial literacy, and advanced mathematics.',
+        'Personalized one-to-one online math tutoring for Grades 2–12 in Canada. Rebuild confidence, master homework, and excel from foundations to advanced calculus.',
       pathname: '/subjects/math',
     },
 
@@ -22,7 +22,7 @@ const mathPageContent: Record<
       eyebrow:
         'One-to-one online mathematics',
       title:
-        'Online Math Tutoring for Grades 2–12',
+        'Personalized Online Math Tutoring for Elementary & High School',
       description:
         'Explore a structured mathematics roadmap that grows from foundational number concepts to algebra, functions, geometry, statistics, financial literacy, and senior secondary mathematics.',
       primaryAction:

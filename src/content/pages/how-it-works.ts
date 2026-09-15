@@ -91,9 +91,9 @@ export const howItWorksPageContent = {
   en: {
     seo: {
       title:
-        'How Online Tutoring Works | Success Path Mentors',
+        'How Online Tutoring Works | 1-on-1 Tutoring Process | Success Path Mentors',
       description:
-        'See how Success Path Mentors learns about the student, matches an appropriate tutor, coordinates the schedule, and supports ongoing one-to-one online learning.',
+        'Understand how personalized online tutoring works at Success Path Mentors: from diagnostic assessment and tutor matching to customized one-to-one lesson scheduling.',
     },
 
     breadcrumbs: {
@@ -105,7 +105,7 @@ export const howItWorksPageContent = {
     hero: {
       eyebrow: 'How it works',
       title:
-        'A clear path from the first request to ongoing tutoring',
+        'How Personalized Tutoring Works at Success Path Mentors',
       description:
         'We begin by understanding the student’s grade, subject, curriculum, learning goal, preferred language, and availability. The team then coordinates an appropriate tutor and a suitable lesson time.',
       primaryAction: 'View the six-step process',

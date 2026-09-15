@@ -46,4 +46,5 @@ export interface PageSeo {
   pathname: string;
   imagePath?: string;
   noIndex?: boolean;
+  languages?: Record<string, string>;
 }

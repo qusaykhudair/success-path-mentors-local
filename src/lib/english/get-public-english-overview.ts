@@ -402,12 +402,26 @@ export function getPublicEnglishStrand(
         };
       });
 
+  let heroHeading: string | undefined;
+  let strandDescription = definition.description[locale];
+
+  if (slug === 'reading-comprehension' && locale === 'en') {
+    heroHeading = 'Personalized Reading Comprehension Tutoring for Grades 1–8';
+    strandDescription =
+      'Targeted one-to-one reading comprehension tutoring for Grades 1–8. Help elementary and middle school students strengthen decoding, inference, critical analysis, and reading confidence with dedicated mentors.';
+  } else if (slug === 'writing' && locale === 'en') {
+    heroHeading = 'One-to-One Writing Tutoring for Confident Essay & Academic Skills';
+    strandDescription =
+      'Structured writing and essay tutoring for Grades 4–12. Master sentence mechanics, paragraph development, thesis formulation, and formal academic essay editing with dedicated mentors.';
+  }
+
   return {
     slug,
     title:
       definition.title[locale],
+    heroHeading,
     description:
-      definition.description[locale],
+      strandDescription,
     iconKey:
       definition.iconKey,
     gradeRange:

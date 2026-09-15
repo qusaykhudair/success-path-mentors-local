@@ -221,7 +221,7 @@ export function EnglishStrandPageContent({
                   text-white
                 "
               >
-                {strand.title}
+                {strand.heroHeading || strand.title}
               </h1>
 
               <p

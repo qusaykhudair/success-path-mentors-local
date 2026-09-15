@@ -84,6 +84,21 @@ const localizedPaths = [
   ),
 ];
 
+const englishOnlyGapPaths = [
+  '/subjects/french',
+  '/subjects/math/grade-12-advanced-functions-mhf4u',
+  '/subjects/math/grade-12-calculus-vectors-mcv4u',
+  '/subjects/math/grade-11-functions-mcr3u',
+  '/subjects/math/grade-12-data-management-mdm4u',
+  '/subjects/math/grade-9-math-mth1w',
+  '/subjects/math/grade-10-math-mpm2d',
+  '/subjects/chemistry/senior-chemistry-sch3u-sch4u',
+  '/subjects/physics/senior-physics-sph3u-sph4u',
+  '/services/homework-help',
+  '/services/exam-preparation',
+  '/curriculum/ontario',
+];
+
 const frenchPaths = [
   programmeFrancaisRoutes.home,
   ...programmeFrancaisSubjects.map(
@@ -219,6 +234,19 @@ export default function sitemap():
       })
     );
 
+  const englishGapEntries =
+    englishOnlyGapPaths.map((path) => ({
+      url: `${SITE_URL}/en${path}`,
+      changeFrequency: 'monthly' as const,
+      priority: 0.88,
+      alternates: {
+        languages: {
+          en: `${SITE_URL}/en${path}`,
+          'x-default': `${SITE_URL}/en${path}`,
+        },
+      },
+    }));
+
   const frenchEntries =
     frenchPaths.map(
       (path) => ({
@@ -241,6 +269,7 @@ export default function sitemap():
 
   return [
     ...localizedEntries,
+    ...englishGapEntries,
     ...frenchEntries,
   ];
 }

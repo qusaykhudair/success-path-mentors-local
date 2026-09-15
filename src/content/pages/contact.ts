@@ -147,9 +147,9 @@ export const contactPageContent = {
   en: {
     seo: {
       title:
-        'Contact Success Path Mentors | Online Tutoring Inquiry',
+        'Contact Success Path Mentors | Book a Free Tutoring Trial Session',
       description:
-        'Contact Success Path Mentors about one-to-one online tutoring, tutor matching, scheduling, lessons, payments, or support for an existing student.',
+        'Book a free online tutoring consultation and trial session. Connect with dedicated academic mentors in Math, Science, and English for Grades 1–12.',
     },
 
     breadcrumbs: {
@@ -161,7 +161,7 @@ export const contactPageContent = {
     hero: {
       eyebrow: 'Contact our team',
       title:
-        'Tell us how we can support the student',
+        'Connect with Our Academic Mentors to Start Personalized Tutoring',
       description:
         'Send the student’s grade, subject, curriculum, preferred language, time zone, schedule, and learning goal. Your message is delivered directly to the official Success Path Mentors Gmail inbox.',
       primaryAction: 'Open the contact form',

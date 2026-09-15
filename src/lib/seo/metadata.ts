@@ -59,9 +59,11 @@ export function buildPageMetadata({
 
     alternates: {
       canonical,
-      languages: buildLanguageAlternates(
-        seo.pathname
-      ),
+      languages:
+        seo.languages ??
+        buildLanguageAlternates(
+          seo.pathname
+        ),
     },
 
     openGraph: {
