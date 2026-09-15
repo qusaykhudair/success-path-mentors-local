@@ -17,6 +17,12 @@ import {
 import {
   routePath,
 } from '@/config/routes';
+import {
+  OntarioMathCourseSection,
+} from '@/components/subjects/math/ontario-math-course-section';
+import {
+  ontarioMathCourses,
+} from '@/content/subjects/math/ontario-math-course-data';
 import type {
   SiteLocale,
 } from '@/config/site';
@@ -120,6 +126,9 @@ export function MathPathwayPageContent({
 }: MathPathwayPageContentProps) {
   const copy =
     pageCopy[locale];
+
+  const ontarioCourse =
+    ontarioMathCourses[pathway.slug]?.[locale];
 
   const grades =
     pathway.stages
@@ -697,6 +706,14 @@ export function MathPathwayPageContent({
           </div>
         </div>
       </section>
+
+      {ontarioCourse && (
+        <OntarioMathCourseSection
+          locale={locale}
+          data={ontarioCourse}
+          bookingHref={bookingHref}
+        />
+      )}
 
       <section
         className="

@@ -33,7 +33,11 @@ import {
 } from '@/lib/seo/metadata';
 import {
   buildBreadcrumbSchema,
+  buildFaqSchema,
 } from '@/lib/seo/schemas';
+import {
+  ontarioMathCourses,
+} from '@/content/subjects/math/ontario-math-course-data';
 import type {
   BreadcrumbItem,
 } from '@/types/internal-page';
@@ -234,6 +238,9 @@ export default async function MathPathwayPage({
     },
   };
 
+  const ontarioCourse =
+    ontarioMathCourses[pathway.slug]?.[locale];
+
   return (
     <>
       <JsonLd
@@ -265,6 +272,17 @@ export default async function MathPathwayPage({
         }
         data={pageSchema}
       />
+
+      {ontarioCourse?.faqs?.length ? (
+        <JsonLd
+          id={
+            `math-${pathway.slug}-faq-schema`
+          }
+          data={buildFaqSchema(
+            ontarioCourse.faqs
+          )}
+        />
+      ) : null}
 
       <MathPathwayPageContent
         locale={locale}
