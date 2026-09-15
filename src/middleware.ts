@@ -36,6 +36,37 @@ function applySecurityHeaders(response: NextResponse): NextResponse {
   return response;
 }
 
+
+const PERMANENT_REDIRECTS: Record<string, string> = {
+  '/en/subjects/math/grade-9-math-mth1w': '/en/subjects/math',
+  '/subjects/math/grade-9-math-mth1w': '/en/subjects/math',
+  '/en/subjects/math/grade-10-math-mpm2d': '/en/subjects/math',
+  '/subjects/math/grade-10-math-mpm2d': '/en/subjects/math',
+  '/en/subjects/math/grade-11-functions-mcr3u': '/en/subjects/math/functions',
+  '/subjects/math/grade-11-functions-mcr3u': '/en/subjects/math/functions',
+  '/en/subjects/math/grade-12-advanced-functions-mhf4u': '/en/subjects/math/advanced-precalculus',
+  '/subjects/math/grade-12-advanced-functions-mhf4u': '/en/subjects/math/advanced-precalculus',
+  '/en/subjects/math/grade-12-data-management-mdm4u': '/en/subjects/math/statistics-probability',
+  '/subjects/math/grade-12-data-management-mdm4u': '/en/subjects/math/statistics-probability',
+  '/en/subjects/chemistry/senior-chemistry-sch3u-sch4u': '/en/subjects/chemistry',
+  '/subjects/chemistry/senior-chemistry-sch3u-sch4u': '/en/subjects/chemistry',
+  '/en/subjects/physics/senior-physics-sph3u-sph4u': '/en/subjects/physics',
+  '/subjects/physics/senior-physics-sph3u-sph4u': '/en/subjects/physics',
+  '/en/services/homework-help': '/en',
+  '/services/homework-help': '/en',
+  '/en/curriculum/ontario': '/en/locations/canada/ontario/curriculum',
+  '/curriculum/ontario': '/en/locations/canada/ontario/curriculum',
+  '/en/services/exam-preparation': '/en/exam-preparation',
+  '/services/exam-preparation': '/en/exam-preparation',
+};
+
+const HOLD_ROUTES = [
+  '/en/subjects/math/grade-12-calculus-vectors-mcv4u',
+  '/subjects/math/grade-12-calculus-vectors-mcv4u',
+  '/en/subjects/french',
+  '/subjects/french',
+];
+
 export default function middleware(request: NextRequest) {
   const normalizedUrl = getNormalizedRequestUrl(
     request.url,
@@ -51,6 +82,19 @@ export default function middleware(request: NextRequest) {
   // Resources and APIs participate in host normalization, not locale routing.
   if (/^\/(?:api|_next|_vercel)(?:\/|$)/.test(pathname) || pathname.includes('.')) {
     return NextResponse.next();
+  }
+
+  // Enforce 301 Permanent Redirects for merged/redirected SEO pages
+  const targetRedirect = PERMANENT_REDIRECTS[pathname];
+  if (targetRedirect) {
+    const url = new URL(targetRedirect, request.url);
+    url.search = request.nextUrl.search;
+    return applySecurityHeaders(NextResponse.redirect(url, 301));
+  }
+
+  // Enforce 404 for unapproved HOLD pages
+  if (HOLD_ROUTES.includes(pathname)) {
+    return applySecurityHeaders(new NextResponse(null, { status: 404 }));
   }
 
   if (pathname === '/fr' || pathname.startsWith('/fr/')) {
