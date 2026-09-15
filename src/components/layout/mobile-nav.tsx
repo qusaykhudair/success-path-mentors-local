@@ -297,6 +297,8 @@ export function MobileNav({
       <button
         ref={triggerRef}
         type="button"
+        onPointerEnter={() => setHasBeenOpened(true)}
+        onFocus={() => setHasBeenOpened(true)}
         onClick={() => {
           if (open) {
             closeAll({
@@ -463,7 +465,7 @@ export function MobileNav({
             </a>
 
             <div className="mt-2">
-              {subjectCategories.map(
+              {hasBeenOpened ? subjectCategories.map(
                 (category) => {
                   const categoryIsOpen =
                     openCategory ===
@@ -641,7 +643,7 @@ export function MobileNav({
                     </div>
                   );
                 }
-              )}
+              ) : null}
             </div>
           </div>
 

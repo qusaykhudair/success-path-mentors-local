@@ -69,7 +69,7 @@ export function FrenchSubjectOverview({
             className="
               shrink-0
               font-bold
-              hover:text-[#108686]
+              hover:text-[#0f766e]
             "
           >
             Programme français
@@ -342,7 +342,7 @@ export function FrenchSubjectOverview({
                 font-black
                 uppercase
                 tracking-[0.12em]
-                text-[#108686]
+                text-[#0f766e]
               "
             >
               Carte curriculaire
@@ -431,7 +431,7 @@ export function FrenchSubjectOverview({
                         justify-center
                         rounded-2xl
                         bg-[#ECFEFD]
-                        text-[#108686]
+                        text-[#0f766e]
                         ring-1
                         ring-[#CFFAF8]
                       "
@@ -545,7 +545,7 @@ export function FrenchSubjectOverview({
                       pt-6
                       text-small
                       font-black
-                      text-[#108686]
+                      text-[#0f766e]
                     "
                   >
                     Ouvrir le domaine

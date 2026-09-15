@@ -8,11 +8,7 @@ import {
 
 import Image from 'next/image';
 
-import {
-  AnimatePresence,
-  motion,
-  useReducedMotion,
-} from 'framer-motion';
+
 
 import {
   ChevronLeft,
@@ -296,7 +292,6 @@ export function TestimonialsGrid({
   items,
   labels,
 }: TestimonialsGridProps) {
-  const shouldReduceMotion = useReducedMotion();
   const [activeIndex, setActiveIndex] = useState(0);
 
   const itemCount = items.length;
@@ -369,71 +364,46 @@ export function TestimonialsGrid({
           className="pointer-events-none absolute -bottom-28 -start-20 h-64 w-64 rounded-full bg-primary-400/20 blur-3xl"
         />
 
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.figure
-            key={activeIndex}
-            initial={
-              shouldReduceMotion
-                ? { opacity: 1 }
-                : {
-                    opacity: 0,
-                    y: 18,
-                    scale: 0.985,
-                  }
-            }
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={
-              shouldReduceMotion
-                ? { opacity: 0 }
-                : {
-                    opacity: 0,
-                    y: -12,
-                    scale: 0.99,
-                  }
-            }
-            transition={{
-              duration: shouldReduceMotion ? 0 : 0.42,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="relative flex h-full min-h-[500px] flex-col p-7 sm:p-9 lg:p-10"
-          >
-            <div className="flex items-center justify-between gap-4">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-caption font-bold text-accent-200">
-                <MessageSquareQuote
-                  className="h-4 w-4"
-                  strokeWidth={1.8}
-                  aria-hidden="true"
-                />
-                {labels.feedback}
-              </span>
-
-              <Rating
-                value={activeItem.rating}
-                labelTemplate={labels.rating}
-                inverse
+        <figure
+          key={activeIndex}
+          className="relative flex h-full min-h-[500px] flex-col p-7 sm:p-9 lg:p-10 transition-opacity duration-300"
+        >
+          <div className="flex items-center justify-between gap-4">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-caption font-bold text-accent-200">
+              <MessageSquareQuote
+                className="h-4 w-4"
+                strokeWidth={1.8}
+                aria-hidden="true"
               />
-            </div>
+              {labels.feedback}
+            </span>
 
-            <Quote
-              aria-hidden="true"
-              strokeWidth={0}
-              className="mt-10 h-12 w-12 fill-accent-300 text-accent-300"
+            <Rating
+              value={activeItem.rating}
+              labelTemplate={labels.rating}
+              inverse
             />
+          </div>
 
-            <blockquote className="mt-7 flex flex-1 items-center">
-              <p className="max-w-3xl text-h3 font-bold leading-relaxed text-white sm:text-h2">
-                “{activeItem.quote}”
-              </p>
-            </blockquote>
+          <Quote
+            aria-hidden="true"
+            strokeWidth={0}
+            className="mt-10 h-12 w-12 fill-accent-300 text-accent-300"
+          />
 
-            <figcaption className="mt-10">
-              <PersonDetails
-                item={activeItem}
-                inverse
-              />
-            </figcaption>
-          </motion.figure>
-        </AnimatePresence>
+          <blockquote className="mt-7 flex flex-1 items-center">
+            <p className="max-w-3xl text-h3 font-bold leading-relaxed text-white sm:text-h2">
+              “{activeItem.quote}”
+            </p>
+          </blockquote>
+
+          <figcaption className="mt-10">
+            <PersonDetails
+              item={activeItem}
+              inverse
+            />
+          </figcaption>
+        </figure>
 
         {itemCount > 1 && (
           <div className="absolute bottom-6 end-6 z-10 flex items-center gap-2">

@@ -94,7 +94,7 @@ export function MathPathwayCard({
             justify-center
             rounded-2xl
             bg-[#ECFEFD]
-            text-[#108686]
+            text-[#0f766e]
             ring-1
             ring-[#CFFAF8]
             transition-colors
@@ -205,7 +205,7 @@ export function MathPathwayCard({
             gap-2
             text-[0.88rem]
             font-black
-            text-[#108686]
+            text-[#0f766e]
           "
         >
           {
@@ -258,7 +258,7 @@ function MetaPill({
     >
       <Icon
         aria-hidden="true"
-        className="h-3.5 w-3.5 text-[#108686]"
+        className="h-3.5 w-3.5 text-[#0f766e]"
         strokeWidth={1.8}
       />
 

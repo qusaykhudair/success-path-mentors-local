@@ -50,7 +50,7 @@ export function OntarioMathCourseSection({
       >
         {/* Header Block */}
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#16C7C7]/40 bg-[#16C7C7]/10 px-3.5 py-1 text-caption font-black text-[#108686]">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#16C7C7]/40 bg-[#16C7C7]/10 px-3.5 py-1 text-caption font-black text-[#0f766e]">
             <Sparkles className="h-3.5 w-3.5 text-[#16C7C7]" aria-hidden="true" />
             <span>{data.badge}</span>
           </div>
@@ -144,7 +144,7 @@ export function OntarioMathCourseSection({
               {data.tutoringPoints.map((point, idx) => (
                 <li key={idx} className="flex items-start gap-3">
                   <CheckCircle2
-                    className="mt-1 h-5 w-5 shrink-0 text-[#108686]"
+                    className="mt-1 h-5 w-5 shrink-0 text-[#0f766e]"
                     aria-hidden="true"
                   />
                   <span className="text-body leading-relaxed text-[#334155]">
@@ -172,7 +172,7 @@ export function OntarioMathCourseSection({
                   </span>
                   <Link
                     href={data.relatedLinkHref}
-                    className="font-bold text-[#108686] underline decoration-[#16C7C7] underline-offset-4 transition-colors hover:text-[#0D6B6B]"
+                    className="font-bold text-[#0f766e] underline decoration-[#16C7C7] underline-offset-4 transition-colors hover:text-[#0D6B6B]"
                   >
                     {data.relatedLinkText}
                   </Link>
@@ -184,7 +184,7 @@ export function OntarioMathCourseSection({
                   </span>
                   <Link
                     href={data.examLinkHref}
-                    className="font-bold text-[#108686] underline decoration-[#16C7C7] underline-offset-4 transition-colors hover:text-[#0D6B6B]"
+                    className="font-bold text-[#0f766e] underline decoration-[#16C7C7] underline-offset-4 transition-colors hover:text-[#0D6B6B]"
                   >
                     {data.examLinkText}
                   </Link>
@@ -251,7 +251,7 @@ export function OntarioMathCourseSection({
                   key={idx}
                   className="group p-6 [&_summary::-webkit-details-marker]:hidden"
                 >
-                  <summary className="flex cursor-pointer items-center justify-between gap-4 font-bold text-[#0B1F3A] transition-colors hover:text-[#108686] focus-visible:outline-none">
+                  <summary className="flex cursor-pointer items-center justify-between gap-4 font-bold text-[#0B1F3A] transition-colors hover:text-[#0f766e] focus-visible:outline-none">
                     <span className="text-base font-bold sm:text-lg">
                       {faq.question}
                     </span>

@@ -32,7 +32,7 @@ import {
 
 import { dinNext } from '@/lib/fonts';
 
-import '@n8n/chat/style.css';
+
 import '../globals.css';
 
 interface LocaleLayoutProps {

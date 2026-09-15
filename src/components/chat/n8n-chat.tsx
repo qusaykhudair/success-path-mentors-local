@@ -245,7 +245,11 @@ export function N8nChat({ locale }: N8nChatProps) {
 
     const initializeChat = async () => {
       try {
-        const { createChat } = await import('@n8n/chat');
+        const [{ createChat }] = await Promise.all([
+          import('@n8n/chat'),
+          // @ts-expect-error CSS file has no typescript declarations
+          import('@n8n/chat/style.css'),
+        ]);
 
         if (cancelled) {
           return;
@@ -337,21 +341,19 @@ export function N8nChat({ locale }: N8nChatProps) {
       window.removeEventListener('pointerdown', startInit);
       window.removeEventListener('touchstart', startInit);
       window.removeEventListener('keydown', startInit);
-      window.removeEventListener('mousemove', startInit);
     };
 
     window.addEventListener('scroll', startInit, { passive: true, once: true });
     window.addEventListener('pointerdown', startInit, { passive: true, once: true });
     window.addEventListener('touchstart', startInit, { passive: true, once: true });
     window.addEventListener('keydown', startInit, { passive: true, once: true });
-    window.addEventListener('mousemove', startInit, { passive: true, once: true });
 
     if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
       idleId = window.requestIdleCallback(() => {
-        timer = setTimeout(startInit, 8000);
-      }, { timeout: 12000 });
+        timer = setTimeout(startInit, 20000);
+      }, { timeout: 25000 });
     } else {
-      timer = setTimeout(startInit, 8000);
+      timer = setTimeout(startInit, 20000);
     }
 
     return () => {

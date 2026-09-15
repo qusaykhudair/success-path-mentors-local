@@ -69,7 +69,7 @@ export function ScienceStrandGrid({
               font-bold
               uppercase
               tracking-[0.12em]
-              text-[#108686]
+              text-[#0f766e]
             "
           >
             {copy.eyebrow}
@@ -158,7 +158,7 @@ export function ScienceStrandGrid({
                       justify-center
                       rounded-2xl
                       bg-[#ECFEFD]
-                      text-[#108686]
+                      text-[#0f766e]
                       ring-1
                       ring-[#CFFAF8]
                     "
@@ -292,7 +292,7 @@ export function ScienceStrandGrid({
                     pt-6
                     text-small
                     font-black
-                    text-[#108686]
+                    text-[#0f766e]
                   "
                 >
                   {copy.openAction}

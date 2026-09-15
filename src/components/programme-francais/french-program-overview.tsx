@@ -320,7 +320,7 @@ export function FrenchProgramOverview({
                 font-black
                 uppercase
                 tracking-[0.12em]
-                text-[#108686]
+                text-[#0f766e]
               "
             >
               Deux parcours complémentaires
@@ -397,7 +397,7 @@ export function FrenchProgramOverview({
                         justify-center
                         rounded-2xl
                         bg-[#ECFEFD]
-                        text-[#108686]
+                        text-[#0f766e]
                         ring-1
                         ring-[#CFFAF8]
                       "
@@ -526,7 +526,7 @@ export function FrenchProgramOverview({
                       pt-7
                       text-small
                       font-black
-                      text-[#108686]
+                      text-[#0f766e]
                     "
                   >
                     Ouvrir le parcours
@@ -580,7 +580,7 @@ export function FrenchProgramOverview({
                   font-black
                   uppercase
                   tracking-[0.12em]
-                  text-[#108686]
+                  text-[#0f766e]
                 "
               >
                 Structure pédagogique
@@ -695,7 +695,7 @@ export function FrenchProgramOverview({
           <div
             className="
               rounded-[1.75rem]
-              bg-[linear-gradient(115deg,#071426_0%,#0B1F3A_58%,#108686_100%)]
+              bg-[linear-gradient(115deg,#071426_0%,#0B1F3A_58%,#0f766e_100%)]
               p-7
               text-white
               shadow-[0_22px_60px_rgba(7,20,38,0.16)]

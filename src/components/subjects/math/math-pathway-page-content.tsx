@@ -590,7 +590,7 @@ export function MathPathwayPageContent({
                   font-black
                   uppercase
                   tracking-[0.12em]
-                  text-[#108686]
+                  text-[#0f766e]
                 "
               >
                 {
@@ -787,7 +787,7 @@ export function MathPathwayPageContent({
                       justify-center
                       rounded-xl
                       bg-white
-                      text-[#108686]
+                      text-[#0f766e]
                       ring-1
                       ring-[#CFFAF8]
                     "
@@ -833,7 +833,7 @@ export function MathPathwayPageContent({
                       gap-2
                       text-small
                       font-black
-                      text-[#108686]
+                      text-[#0f766e]
                     "
                   >
                     {copy.relatedAction}
@@ -914,7 +914,7 @@ function GradeSection({
               font-black
               uppercase
               tracking-[0.1em]
-              text-[#108686]
+              text-[#0f766e]
             "
           >
             {pathwayTitle}
@@ -1049,7 +1049,7 @@ function TopicCard({
           justify-center
           rounded-full
           bg-[#ECFEFD]
-          text-[#108686]
+          text-[#0f766e]
         "
       >
         <Check

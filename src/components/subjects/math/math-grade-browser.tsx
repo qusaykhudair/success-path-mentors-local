@@ -156,7 +156,7 @@ export function MathGradeBrowser({
               font-bold
               uppercase
               tracking-[0.12em]
-              text-[#108686]
+              text-[#0f766e]
             "
           >
             {copy.selectedGradeLabel}
@@ -279,7 +279,7 @@ export function MathGradeBrowser({
                           justify-center
                           rounded-xl
                           bg-[#ECFEFD]
-                          text-[#108686]
+                          text-[#0f766e]
                           ring-1
                           ring-[#CFFAF8]
                         "
@@ -502,7 +502,7 @@ function GradeMetaPill({
     >
       <Icon
         aria-hidden="true"
-        className="h-3.5 w-3.5 text-[#108686]"
+        className="h-3.5 w-3.5 text-[#0f766e]"
         strokeWidth={1.8}
       />
 

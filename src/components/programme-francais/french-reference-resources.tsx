@@ -28,7 +28,7 @@ export function FrenchReferenceResources({
               : 'max-w-4xl'
           }
         >
-          <p className="text-caption font-black uppercase tracking-[0.12em] text-[#108686]">
+          <p className="text-caption font-black uppercase tracking-[0.12em] text-[#0f766e]">
             Références externes
           </p>
 
@@ -55,7 +55,7 @@ export function FrenchReferenceResources({
                 className="group flex h-full flex-col rounded-[1.4rem] border border-[#C9DDEA] bg-[#F8FAFC] p-5 shadow-[0_8px_28px_rgba(7,20,38,0.05)] transition-[border-color,box-shadow,transform] hover:-translate-y-1 hover:border-[#16C7C7] hover:shadow-[0_16px_38px_rgba(7,20,38,0.09)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#16C7C7] focus-visible:ring-offset-2"
               >
                 <div className="flex items-start justify-between gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#ECFEFD] text-[#108686] ring-1 ring-[#CFFAF8]">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#ECFEFD] text-[#0f766e] ring-1 ring-[#CFFAF8]">
                     <Award
                       aria-hidden="true"
                       className="h-5 w-5"
@@ -65,7 +65,7 @@ export function FrenchReferenceResources({
 
                   <ExternalLink
                     aria-hidden="true"
-                    className="h-4 w-4 shrink-0 text-[#108686] transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                    className="h-4 w-4 shrink-0 text-[#0f766e] transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                   />
                 </div>
 
@@ -73,7 +73,7 @@ export function FrenchReferenceResources({
                   {resource.name}
                 </h3>
 
-                <p className="mt-2 text-caption font-bold leading-6 text-[#108686]">
+                <p className="mt-2 text-caption font-bold leading-6 text-[#0f766e]">
                   {resource.organization}
                 </p>
 

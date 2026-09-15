@@ -47,7 +47,7 @@ export function EnglishOverviewCta({
             bg-gradient-to-br
             from-[#071426]
             via-[#0B1F3A]
-            to-[#108686]
+            to-[#0f766e]
             px-6
             py-10
             text-white

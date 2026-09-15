@@ -447,7 +447,7 @@ export function EnglishStrandPageContent({
                 font-black
                 uppercase
                 tracking-[0.12em]
-                text-[#108686]
+                text-[#0f766e]
               "
             >
               {labels.coverage}
@@ -469,7 +469,7 @@ export function EnglishStrandPageContent({
                 mt-3
                 text-small
                 font-bold
-                text-[#108686]
+                text-[#0f766e]
               "
             >
               {labels.expandHint}
@@ -522,7 +522,7 @@ export function EnglishStrandPageContent({
                         font-black
                         uppercase
                         tracking-[0.1em]
-                        text-[#108686]
+                        text-[#0f766e]
                       "
                     >
                       {labels.mainTopicLabel}
@@ -623,7 +623,7 @@ function TopicAccordion({
               justify-center
               rounded-xl
               bg-[#ECFEFD]
-              text-[#108686]
+              text-[#0f766e]
             "
           >
             <ClipboardList
@@ -644,7 +644,7 @@ function TopicAccordion({
             h-5
             w-5
             shrink-0
-            text-[#108686]
+            text-[#0f766e]
             transition-transform
             group-open:rotate-180
             motion-reduce:transition-none

@@ -367,7 +367,7 @@ export function SubjectsPageContent({
                 font-black
                 uppercase
                 tracking-[0.12em]
-                text-[#108686]
+                text-[#0f766e]
               "
             >
               {copy.directory.eyebrow}
@@ -440,7 +440,7 @@ export function SubjectsPageContent({
               relative
               overflow-hidden
               rounded-[1.5rem]
-              bg-[linear-gradient(110deg,#071426_0%,#0B1F3A_55%,#108686_100%)]
+              bg-[linear-gradient(110deg,#071426_0%,#0B1F3A_55%,#0f766e_100%)]
               p-7
               text-white
               shadow-[0_22px_60px_rgba(7,20,38,0.18)]
@@ -634,7 +634,7 @@ function SubjectCard({
               justify-center
               rounded-2xl
               bg-[#ECFEFD]
-              text-[#108686]
+              text-[#0f766e]
               ring-1
               ring-[#CFFAF8]
             "
@@ -832,7 +832,7 @@ function SubjectCard({
                       justify-center
                       rounded-full
                       bg-white
-                      text-[#108686]
+                      text-[#0f766e]
                       ring-1
                       ring-[#CFFAF8]
                     "
