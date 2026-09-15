@@ -2,10 +2,16 @@
 
 import { useEffect } from 'react';
 
-type N8nChatLocale = 'en' | 'ar';
+type N8nChatLocale = 'en' | 'ar' | 'de';
 
 interface N8nChatProps {
   locale: N8nChatLocale;
+}
+
+declare global {
+  interface Window {
+    __fetchIntercepted?: boolean;
+  }
 }
 
 const tabSessionStorageKey = 'spm-chat/sessionId';
@@ -130,6 +136,17 @@ const chatCopy = {
     initialMessages: [
       'مرحباً بك في Success Path Mentors 👋',
       'كيف يمكننا مساعدتك اليوم؟',
+    ],
+  },
+  de: {
+    title: 'Success Path Mentors Assistent',
+    subtitle: 'Fragen Sie nach Fächern, Preisen, Lehrkräften oder Ihrer kostenlosen Probestunde.',
+    getStarted: 'Gespräch beginnen',
+    inputPlaceholder: 'Schreiben Sie Ihre Frage hier...',
+    closeButtonTooltip: 'Chat schließen',
+    initialMessages: [
+      'Willkommen bei Success Path Mentors 👋',
+      'Wie können wir Ihnen heute helfen?',
     ],
   },
 } as const;
@@ -300,10 +317,46 @@ export function N8nChat({ locale }: N8nChatProps) {
       }
     };
 
-    void initializeChat();
+    let timer: ReturnType<typeof setTimeout> | null = null;
+    let idleId: number | null = null;
+    let initialized = false;
+
+    const startInit = () => {
+      if (initialized || cancelled) return;
+      initialized = true;
+      cleanupListeners();
+      void initializeChat();
+    };
+
+    const cleanupListeners = () => {
+      if (timer) clearTimeout(timer);
+      if (idleId && typeof window !== 'undefined' && 'cancelIdleCallback' in window) {
+        window.cancelIdleCallback(idleId);
+      }
+      window.removeEventListener('scroll', startInit);
+      window.removeEventListener('pointerdown', startInit);
+      window.removeEventListener('touchstart', startInit);
+      window.removeEventListener('keydown', startInit);
+      window.removeEventListener('mousemove', startInit);
+    };
+
+    window.addEventListener('scroll', startInit, { passive: true, once: true });
+    window.addEventListener('pointerdown', startInit, { passive: true, once: true });
+    window.addEventListener('touchstart', startInit, { passive: true, once: true });
+    window.addEventListener('keydown', startInit, { passive: true, once: true });
+    window.addEventListener('mousemove', startInit, { passive: true, once: true });
+
+    if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+      idleId = window.requestIdleCallback(() => {
+        timer = setTimeout(startInit, 8000);
+      }, { timeout: 12000 });
+    } else {
+      timer = setTimeout(startInit, 8000);
+    }
 
     return () => {
       cancelled = true;
+      cleanupListeners();
       observer?.disconnect();
       chatApp?.unmount();
       target.replaceChildren();

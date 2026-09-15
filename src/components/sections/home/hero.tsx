@@ -8,7 +8,6 @@ import {
 } from 'lucide-react';
 import { getLocale, getTranslations } from 'next-intl/server';
 
-import { Reveal } from '@/components/motion/reveal';
 import {
   ButtonLink,
 } from '@/components/ui/button';
@@ -100,157 +99,149 @@ export async function Hero({
       >
         {/* Content column */}
         <div className="order-1 max-w-xl">
-          <Reveal>
-            <p
+          <p
+            className="
+              mb-5
+              inline-flex
+              min-h-9
+              items-center
+              gap-2
+              rounded-full
+              border
+              border-accent-200
+              bg-accent-50/85
+              px-4
+              py-1.5
+              text-small
+              font-bold
+              text-accent-800
+              shadow-xs
+              backdrop-blur-sm
+            "
+          >
+            <BookOpenCheck
+              className="h-4 w-4 shrink-0"
+              strokeWidth={1.8}
+              aria-hidden="true"
+            />
+
+            {t('eyebrow')}
+          </p>
+
+          <h1
+            id="hero-heading"
+            className="
+              max-w-[18ch]
+              text-h1
+              text-foreground
+            "
+          >
+            {t.rich('heading', {
+              mark: (chunks) => (
+                <span
+                  className="
+                    bg-gradient-to-r
+                    from-primary
+                    via-primary-700
+                    to-accent-700
+                    bg-clip-text
+                    text-transparent
+                  "
+                >
+                  {chunks}
+                </span>
+              ),
+            })}
+          </h1>
+
+          <p
+            className="
+              mt-6
+              max-w-content
+              text-lead
+              text-muted-foreground
+            "
+          >
+            {t('subheading')}
+          </p>
+
+          {/* CTAs */}
+          <div
+            className="
+              mt-8
+              flex
+              flex-wrap
+              items-center
+              gap-3
+            "
+          >
+            <ButtonLink
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="accent"
+              size="lg"
               className="
-                mb-5
-                inline-flex
-                min-h-9
-                items-center
-                gap-2
-                rounded-full
-                border
-                border-accent-200
-                bg-accent-50/85
-                px-4
-                py-1.5
-                text-small
-                font-bold
-                text-accent-800
-                shadow-xs
-                backdrop-blur-sm
+                group
+                relative
+                w-full
+                overflow-hidden
+                sm:w-auto
               "
             >
-              <BookOpenCheck
-                className="h-4 w-4 shrink-0"
-                strokeWidth={1.8}
+              <span
+                aria-hidden="true"
+                className="
+                  pointer-events-none
+                  absolute
+                  inset-0
+                  -translate-x-full
+                  bg-sheen
+                  transition-transform
+                  duration-700
+                  group-hover:translate-x-full
+                  motion-reduce:hidden
+                "
+              />
+
+              <MessageCircle
+                className="relative h-5 w-5 shrink-0"
+                strokeWidth={1.9}
                 aria-hidden="true"
               />
 
-              {t('eyebrow')}
-            </p>
-          </Reveal>
+              <span className="relative">
+                {t('ctaPrimary')}
+              </span>
+            </ButtonLink>
 
-          <Reveal delay={0.05}>
-            <h1
-              id="hero-heading"
-              className="
-                max-w-[18ch]
-                text-h1
-                text-foreground
-              "
+            <ButtonLink
+              href={`#${secondaryCtaTarget}`}
+              variant="outline"
+              size="lg"
+              className="group w-full sm:w-auto"
             >
-              {t.rich('heading', {
-                mark: (chunks) => (
-                  <span
-                    className="
-                      bg-gradient-to-r
-                      from-primary
-                      via-primary-700
-                      to-accent-700
-                      bg-clip-text
-                      text-transparent
-                    "
-                  >
-                    {chunks}
-                  </span>
-                ),
-              })}
-            </h1>
-          </Reveal>
+              <span className="inline-flex items-center gap-2">
+                {t('ctaSecondary')}
 
-          <Reveal delay={0.1}>
-            <p
-              className="
-                mt-6
-                max-w-content
-                text-lead
-                text-muted-foreground
-              "
-            >
-              {t('subheading')}
-            </p>
-          </Reveal>
-
-          {/* CTAs */}
-          <Reveal delay={0.15}>
-            <div
-              className="
-                mt-8
-                flex
-                flex-wrap
-                items-center
-                gap-3
-              "
-            >
-              <ButtonLink
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="accent"
-                size="lg"
-                className="
-                  group
-                  relative
-                  w-full
-                  overflow-hidden
-                  sm:w-auto
-                "
-              >
-                <span
-                  aria-hidden="true"
+                <ArrowRight
                   className="
-                    pointer-events-none
-                    absolute
-                    inset-0
-                    -translate-x-full
-                    bg-sheen
+                    h-4
+                    w-4
+                    shrink-0
                     transition-transform
-                    duration-700
-                    group-hover:translate-x-full
-                    motion-reduce:hidden
+                    duration-200
+                    group-hover:translate-x-0.5
+                    rtl:-scale-x-100
+                    rtl:group-hover:-translate-x-0.5
+                    motion-reduce:transition-none
                   "
-                />
-
-                <MessageCircle
-                  className="relative h-5 w-5 shrink-0"
                   strokeWidth={1.9}
                   aria-hidden="true"
                 />
-
-                <span className="relative">
-                  {t('ctaPrimary')}
-                </span>
-              </ButtonLink>
-
-              <ButtonLink
-                href={`#${secondaryCtaTarget}`}
-                variant="outline"
-                size="lg"
-                className="group w-full sm:w-auto"
-              >
-                <span className="inline-flex items-center gap-2">
-                  {t('ctaSecondary')}
-
-                  <ArrowRight
-                    className="
-                      h-4
-                      w-4
-                      shrink-0
-                      transition-transform
-                      duration-200
-                      group-hover:translate-x-0.5
-                      rtl:-scale-x-100
-                      rtl:group-hover:-translate-x-0.5
-                      motion-reduce:transition-none
-                    "
-                    strokeWidth={1.9}
-                    aria-hidden="true"
-                  />
-                </span>
-              </ButtonLink>
-            </div>
-          </Reveal>
+              </span>
+            </ButtonLink>
+          </div>
 
         </div>
 
@@ -266,31 +257,29 @@ export async function Hero({
             lg:max-w-none
           "
         >
-          <Reveal delay={0.1}>
-            <EnrollmentCard
-              copy={{
-                title: t('enrollment.title'),
-                reassurance: t('enrollment.reassurance'),
-                next: t('enrollment.next'),
-                back: t('enrollment.back'),
-                submit: t('enrollment.submit'),
-                submitting: t('enrollment.submitting'),
-                successTitle: t('enrollment.successTitle'),
-                successBody: t('enrollment.successBody'),
-                stepOf: t('enrollment.stepOf'),
-                labels: t.raw('enrollment.labels'),
-                placeholders: t.raw(
-                  'enrollment.placeholders'
-                ),
-                errors: t.raw('enrollment.errors'),
-                countries: t.raw('enrollment.countries'),
-                subjectOptions: t.raw(
-                  'enrollment.subjectOptions'
-                ),
-                languages: t.raw('enrollment.languages'),
-              }}
-            />
-          </Reveal>
+          <EnrollmentCard
+            copy={{
+              title: t('enrollment.title'),
+              reassurance: t('enrollment.reassurance'),
+              next: t('enrollment.next'),
+              back: t('enrollment.back'),
+              submit: t('enrollment.submit'),
+              submitting: t('enrollment.submitting'),
+              successTitle: t('enrollment.successTitle'),
+              successBody: t('enrollment.successBody'),
+              stepOf: t('enrollment.stepOf'),
+              labels: t.raw('enrollment.labels'),
+              placeholders: t.raw(
+                'enrollment.placeholders'
+              ),
+              errors: t.raw('enrollment.errors'),
+              countries: t.raw('enrollment.countries'),
+              subjectOptions: t.raw(
+                'enrollment.subjectOptions'
+              ),
+              languages: t.raw('enrollment.languages'),
+            }}
+          />
         </div>
       </Container>
     </section>
