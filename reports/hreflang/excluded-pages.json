@@ -1,0 +1,38 @@
+[
+  {
+    "path": "/en/locations",
+    "status": 200,
+    "seoUnchanged": true,
+    "hreflangHeaderUnchanged": true
+  },
+  {
+    "path": "/ar/locations",
+    "status": 200,
+    "seoUnchanged": true,
+    "hreflangHeaderUnchanged": true
+  },
+  {
+    "path": "/ar/%D8%A7%D9%84%D9%85%D9%88%D8%A7%D9%82%D8%B9",
+    "status": 200,
+    "seoUnchanged": true,
+    "hreflangHeaderUnchanged": true
+  },
+  {
+    "path": "/en/locations/canada",
+    "status": 200,
+    "seoUnchanged": true,
+    "hreflangHeaderUnchanged": true
+  },
+  {
+    "path": "/ar/locations/canada",
+    "status": 200,
+    "seoUnchanged": true,
+    "hreflangHeaderUnchanged": true
+  },
+  {
+    "path": "/fr/programme-francais",
+    "status": 200,
+    "seoUnchanged": true,
+    "hreflangHeaderUnchanged": true
+  }
+]

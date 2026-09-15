@@ -18,8 +18,8 @@ import { Steps } from '@/components/sections/home/steps';
 import { Testimonials } from '@/components/sections/home/testimonials';
 import { VideoTestimonials } from '@/components/sections/home/video-testimonials';
 
-import { routing } from '@/i18n/routing';
 import { SITE, SITE_URL } from '@/lib/constants';
+import { buildLanguageAlternates } from '@/lib/seo/urls';
 
 interface HomePageProps {
   params: Promise<{
@@ -60,19 +60,6 @@ export async function generateMetadata({
     .map((keyword) => keyword.trim())
     .filter(Boolean);
 
-  const languageAlternates =
-    Object.fromEntries(
-      routing.locales.map(
-        (supportedLocale) => [
-          `${supportedLocale}-CA`,
-          new URL(
-            `/${supportedLocale}`,
-            SITE_URL
-          ).toString(),
-        ]
-      )
-    );
-
   const openGraphLocale =
     locale === 'ar'
       ? 'ar_CA'
@@ -98,14 +85,7 @@ export async function generateMetadata({
     alternates: {
       canonical: pageUrl,
 
-      languages: {
-        ...languageAlternates,
-
-        'x-default': new URL(
-          `/${routing.defaultLocale}`,
-          SITE_URL
-        ).toString(),
-      },
+      languages: buildLanguageAlternates(),
     },
 
     openGraph: {

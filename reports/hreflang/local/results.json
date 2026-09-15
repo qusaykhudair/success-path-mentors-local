@@ -1,0 +1,4033 @@
+{
+  "summary": {
+    "checkedAt": "2026-09-15T17:53:34.446Z",
+    "base": "http://localhost:3100",
+    "pairs": 67,
+    "pages": 134,
+    "passed": 134,
+    "failed": 0,
+    "protectedFilesUnchanged": 49
+  },
+  "rows": [
+    {
+      "url": "https://successpathmentors.net/en",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en",
+        "ar-CA": "https://successpathmentors.net/ar",
+        "x-default": "https://successpathmentors.net/en"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "0.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en",
+        "ar-CA": "https://successpathmentors.net/ar",
+        "x-default": "https://successpathmentors.net/en"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "1.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/about",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/about",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/about",
+        "ar-CA": "https://successpathmentors.net/ar/%D8%B9%D9%86-%D8%A7%D9%84%D9%85%D9%86%D8%B5%D8%A9",
+        "x-default": "https://successpathmentors.net/en/about"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "2.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/about",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/%D8%B9%D9%86-%D8%A7%D9%84%D9%85%D9%86%D8%B5%D8%A9",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/about",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/%D8%B9%D9%86-%D8%A7%D9%84%D9%85%D9%86%D8%B5%D8%A9",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/%D8%B9%D9%86-%D8%A7%D9%84%D9%85%D9%86%D8%B5%D8%A9",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/about",
+        "ar-CA": "https://successpathmentors.net/ar/%D8%B9%D9%86-%D8%A7%D9%84%D9%85%D9%86%D8%B5%D8%A9",
+        "x-default": "https://successpathmentors.net/en/about"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "3.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/about",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/%D8%B9%D9%86-%D8%A7%D9%84%D9%85%D9%86%D8%B5%D8%A9",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/about",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/how-it-works",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/how-it-works",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/how-it-works",
+        "ar-CA": "https://successpathmentors.net/ar/%D8%A2%D9%84%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D9%85%D9%84",
+        "x-default": "https://successpathmentors.net/en/how-it-works"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "4.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/how-it-works",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/%D8%A2%D9%84%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D9%85%D9%84",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/how-it-works",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/%D8%A2%D9%84%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D9%85%D9%84",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/%D8%A2%D9%84%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D9%85%D9%84",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/how-it-works",
+        "ar-CA": "https://successpathmentors.net/ar/%D8%A2%D9%84%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D9%85%D9%84",
+        "x-default": "https://successpathmentors.net/en/how-it-works"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "5.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/how-it-works",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/%D8%A2%D9%84%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D9%85%D9%84",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/how-it-works",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/contact",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/contact",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/contact",
+        "ar-CA": "https://successpathmentors.net/ar/%D8%AA%D9%88%D8%A7%D8%B5%D9%84-%D9%85%D8%B9%D9%86%D8%A7",
+        "x-default": "https://successpathmentors.net/en/contact"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "6.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/contact",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/%D8%AA%D9%88%D8%A7%D8%B5%D9%84-%D9%85%D8%B9%D9%86%D8%A7",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/contact",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/%D8%AA%D9%88%D8%A7%D8%B5%D9%84-%D9%85%D8%B9%D9%86%D8%A7",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/%D8%AA%D9%88%D8%A7%D8%B5%D9%84-%D9%85%D8%B9%D9%86%D8%A7",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/contact",
+        "ar-CA": "https://successpathmentors.net/ar/%D8%AA%D9%88%D8%A7%D8%B5%D9%84-%D9%85%D8%B9%D9%86%D8%A7",
+        "x-default": "https://successpathmentors.net/en/contact"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "7.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/contact",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/%D8%AA%D9%88%D8%A7%D8%B5%D9%84-%D9%85%D8%B9%D9%86%D8%A7",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/contact",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/tutor-matching",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/tutor-matching",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/tutor-matching",
+        "ar-CA": "https://successpathmentors.net/ar/tutor-matching",
+        "x-default": "https://successpathmentors.net/en/tutor-matching"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "8.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/tutor-matching",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/tutor-matching",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/tutor-matching",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/tutor-matching",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/tutor-matching",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/tutor-matching",
+        "ar-CA": "https://successpathmentors.net/ar/tutor-matching",
+        "x-default": "https://successpathmentors.net/en/tutor-matching"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "9.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/tutor-matching",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/tutor-matching",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/tutor-matching",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/privacy",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/privacy",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/privacy",
+        "ar-CA": "https://successpathmentors.net/ar/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9-%D8%A7%D9%84%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9",
+        "x-default": "https://successpathmentors.net/en/privacy"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "10.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/privacy",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9-%D8%A7%D9%84%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/privacy",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9-%D8%A7%D9%84%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9-%D8%A7%D9%84%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/privacy",
+        "ar-CA": "https://successpathmentors.net/ar/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9-%D8%A7%D9%84%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9",
+        "x-default": "https://successpathmentors.net/en/privacy"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "11.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/privacy",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9-%D8%A7%D9%84%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/privacy",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/terms",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/terms",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/terms",
+        "ar-CA": "https://successpathmentors.net/ar/%D8%A7%D9%84%D8%B4%D8%B1%D9%88%D8%B7-%D9%88%D8%A7%D9%84%D8%A3%D8%AD%D9%83%D8%A7%D9%85",
+        "x-default": "https://successpathmentors.net/en/terms"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "12.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/terms",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/%D8%A7%D9%84%D8%B4%D8%B1%D9%88%D8%B7-%D9%88%D8%A7%D9%84%D8%A3%D8%AD%D9%83%D8%A7%D9%85",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/terms",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/%D8%A7%D9%84%D8%B4%D8%B1%D9%88%D8%B7-%D9%88%D8%A7%D9%84%D8%A3%D8%AD%D9%83%D8%A7%D9%85",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/%D8%A7%D9%84%D8%B4%D8%B1%D9%88%D8%B7-%D9%88%D8%A7%D9%84%D8%A3%D8%AD%D9%83%D8%A7%D9%85",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/terms",
+        "ar-CA": "https://successpathmentors.net/ar/%D8%A7%D9%84%D8%B4%D8%B1%D9%88%D8%B7-%D9%88%D8%A7%D9%84%D8%A3%D8%AD%D9%83%D8%A7%D9%85",
+        "x-default": "https://successpathmentors.net/en/terms"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "13.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/terms",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/%D8%A7%D9%84%D8%B4%D8%B1%D9%88%D8%B7-%D9%88%D8%A7%D9%84%D8%A3%D8%AD%D9%83%D8%A7%D9%85",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/terms",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/cancellation-policy",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/cancellation-policy",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/cancellation-policy",
+        "ar-CA": "https://successpathmentors.net/ar/cancellation-policy",
+        "x-default": "https://successpathmentors.net/en/cancellation-policy"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "14.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/cancellation-policy",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/cancellation-policy",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/cancellation-policy",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/cancellation-policy",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/cancellation-policy",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/cancellation-policy",
+        "ar-CA": "https://successpathmentors.net/ar/cancellation-policy",
+        "x-default": "https://successpathmentors.net/en/cancellation-policy"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "15.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/cancellation-policy",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/cancellation-policy",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/cancellation-policy",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/data-deletion",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/data-deletion",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/data-deletion",
+        "ar-CA": "https://successpathmentors.net/ar/%D8%AD%D8%B0%D9%81-%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA",
+        "x-default": "https://successpathmentors.net/en/data-deletion"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "16.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/data-deletion",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/%D8%AD%D8%B0%D9%81-%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/data-deletion",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/%D8%AD%D8%B0%D9%81-%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/%D8%AD%D8%B0%D9%81-%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/data-deletion",
+        "ar-CA": "https://successpathmentors.net/ar/%D8%AD%D8%B0%D9%81-%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA",
+        "x-default": "https://successpathmentors.net/en/data-deletion"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "17.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/data-deletion",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/%D8%AD%D8%B0%D9%81-%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/data-deletion",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects",
+        "ar-CA": "https://successpathmentors.net/ar/%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%AF-%D8%A7%D9%84%D8%AF%D8%B1%D8%A7%D8%B3%D9%8A%D8%A9",
+        "x-default": "https://successpathmentors.net/en/subjects"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "18.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%AF-%D8%A7%D9%84%D8%AF%D8%B1%D8%A7%D8%B3%D9%8A%D8%A9",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%AF-%D8%A7%D9%84%D8%AF%D8%B1%D8%A7%D8%B3%D9%8A%D8%A9",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%AF-%D8%A7%D9%84%D8%AF%D8%B1%D8%A7%D8%B3%D9%8A%D8%A9",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects",
+        "ar-CA": "https://successpathmentors.net/ar/%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%AF-%D8%A7%D9%84%D8%AF%D8%B1%D8%A7%D8%B3%D9%8A%D8%A9",
+        "x-default": "https://successpathmentors.net/en/subjects"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "19.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%AF-%D8%A7%D9%84%D8%AF%D8%B1%D8%A7%D8%B3%D9%8A%D8%A9",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/math",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/math",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/math",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/math",
+        "x-default": "https://successpathmentors.net/en/subjects/math"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "20.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/math",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/math",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/math",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/math",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/math",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/math",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/math",
+        "x-default": "https://successpathmentors.net/en/subjects/math"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "21.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/math",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/math",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/math",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/english",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/english",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english",
+        "x-default": "https://successpathmentors.net/en/subjects/english"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "22.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/english",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/english",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english",
+        "x-default": "https://successpathmentors.net/en/subjects/english"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "23.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/general-science",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/general-science",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/general-science",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/general-science",
+        "x-default": "https://successpathmentors.net/en/subjects/general-science"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "24.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/general-science",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/general-science",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/general-science",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/general-science",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/general-science",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/general-science",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/general-science",
+        "x-default": "https://successpathmentors.net/en/subjects/general-science"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "25.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/general-science",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/general-science",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/general-science",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/chemistry",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/chemistry",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "26.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/chemistry",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/chemistry",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "27.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/physics",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/physics",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics",
+        "x-default": "https://successpathmentors.net/en/subjects/physics"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "28.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/physics",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/physics",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics",
+        "x-default": "https://successpathmentors.net/en/subjects/physics"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "29.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/math/basics-operations",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/math/basics-operations",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/math/basics-operations",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/math/basics-operations",
+        "x-default": "https://successpathmentors.net/en/subjects/math/basics-operations"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "30.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/math/basics-operations",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/math/basics-operations",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/math/basics-operations",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/math/basics-operations",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/math/basics-operations",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/math/basics-operations",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/math/basics-operations",
+        "x-default": "https://successpathmentors.net/en/subjects/math/basics-operations"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "31.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/math/basics-operations",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/math/basics-operations",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/math/basics-operations",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/math/fractions-rational-numbers",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/math/fractions-rational-numbers",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/math/fractions-rational-numbers",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/math/fractions-rational-numbers",
+        "x-default": "https://successpathmentors.net/en/subjects/math/fractions-rational-numbers"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "32.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/math/fractions-rational-numbers",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/math/fractions-rational-numbers",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/math/fractions-rational-numbers",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/math/fractions-rational-numbers",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/math/fractions-rational-numbers",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/math/fractions-rational-numbers",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/math/fractions-rational-numbers",
+        "x-default": "https://successpathmentors.net/en/subjects/math/fractions-rational-numbers"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "33.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/math/fractions-rational-numbers",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/math/fractions-rational-numbers",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/math/fractions-rational-numbers",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/math/algebra-equations",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/math/algebra-equations",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/math/algebra-equations",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/math/algebra-equations",
+        "x-default": "https://successpathmentors.net/en/subjects/math/algebra-equations"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "34.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/math/algebra-equations",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/math/algebra-equations",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/math/algebra-equations",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/math/algebra-equations",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/math/algebra-equations",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/math/algebra-equations",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/math/algebra-equations",
+        "x-default": "https://successpathmentors.net/en/subjects/math/algebra-equations"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "35.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/math/algebra-equations",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/math/algebra-equations",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/math/algebra-equations",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/math/functions",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/math/functions",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/math/functions",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/math/functions",
+        "x-default": "https://successpathmentors.net/en/subjects/math/functions"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "36.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/math/functions",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/math/functions",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/math/functions",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/math/functions",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/math/functions",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/math/functions",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/math/functions",
+        "x-default": "https://successpathmentors.net/en/subjects/math/functions"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "37.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/math/functions",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/math/functions",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/math/functions",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/math/geometry-trigonometry",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/math/geometry-trigonometry",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/math/geometry-trigonometry",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/math/geometry-trigonometry",
+        "x-default": "https://successpathmentors.net/en/subjects/math/geometry-trigonometry"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "38.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/math/geometry-trigonometry",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/math/geometry-trigonometry",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/math/geometry-trigonometry",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/math/geometry-trigonometry",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/math/geometry-trigonometry",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/math/geometry-trigonometry",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/math/geometry-trigonometry",
+        "x-default": "https://successpathmentors.net/en/subjects/math/geometry-trigonometry"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "39.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/math/geometry-trigonometry",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/math/geometry-trigonometry",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/math/geometry-trigonometry",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/math/statistics-probability",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/math/statistics-probability",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/math/statistics-probability",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/math/statistics-probability",
+        "x-default": "https://successpathmentors.net/en/subjects/math/statistics-probability"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "40.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/math/statistics-probability",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/math/statistics-probability",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/math/statistics-probability",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/math/statistics-probability",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/math/statistics-probability",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/math/statistics-probability",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/math/statistics-probability",
+        "x-default": "https://successpathmentors.net/en/subjects/math/statistics-probability"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "41.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/math/statistics-probability",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/math/statistics-probability",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/math/statistics-probability",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/math/advanced-precalculus",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/math/advanced-precalculus",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/math/advanced-precalculus",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/math/advanced-precalculus",
+        "x-default": "https://successpathmentors.net/en/subjects/math/advanced-precalculus"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "42.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/math/advanced-precalculus",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/math/advanced-precalculus",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/math/advanced-precalculus",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/math/advanced-precalculus",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/math/advanced-precalculus",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/math/advanced-precalculus",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/math/advanced-precalculus",
+        "x-default": "https://successpathmentors.net/en/subjects/math/advanced-precalculus"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "43.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/math/advanced-precalculus",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/math/advanced-precalculus",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/math/advanced-precalculus",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/math/financial-literacy",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/math/financial-literacy",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/math/financial-literacy",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/math/financial-literacy",
+        "x-default": "https://successpathmentors.net/en/subjects/math/financial-literacy"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "44.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/math/financial-literacy",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/math/financial-literacy",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/math/financial-literacy",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/math/financial-literacy",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/math/financial-literacy",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/math/financial-literacy",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/math/financial-literacy",
+        "x-default": "https://successpathmentors.net/en/subjects/math/financial-literacy"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "45.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/math/financial-literacy",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/math/financial-literacy",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/math/financial-literacy",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/english/foundational-reading",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/english/foundational-reading",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english/foundational-reading",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english/foundational-reading",
+        "x-default": "https://successpathmentors.net/en/subjects/english/foundational-reading"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "46.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english/foundational-reading",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english/foundational-reading",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english/foundational-reading",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/english/foundational-reading",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/english/foundational-reading",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english/foundational-reading",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english/foundational-reading",
+        "x-default": "https://successpathmentors.net/en/subjects/english/foundational-reading"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "47.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english/foundational-reading",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english/foundational-reading",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english/foundational-reading",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/english/grammar-language-conventions",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/english/grammar-language-conventions",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english/grammar-language-conventions",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english/grammar-language-conventions",
+        "x-default": "https://successpathmentors.net/en/subjects/english/grammar-language-conventions"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "48.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english/grammar-language-conventions",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english/grammar-language-conventions",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english/grammar-language-conventions",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/english/grammar-language-conventions",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/english/grammar-language-conventions",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english/grammar-language-conventions",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english/grammar-language-conventions",
+        "x-default": "https://successpathmentors.net/en/subjects/english/grammar-language-conventions"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "49.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english/grammar-language-conventions",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english/grammar-language-conventions",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english/grammar-language-conventions",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/english/literature-literary-analysis",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/english/literature-literary-analysis",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english/literature-literary-analysis",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english/literature-literary-analysis",
+        "x-default": "https://successpathmentors.net/en/subjects/english/literature-literary-analysis"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "50.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english/literature-literary-analysis",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english/literature-literary-analysis",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english/literature-literary-analysis",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/english/literature-literary-analysis",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/english/literature-literary-analysis",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english/literature-literary-analysis",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english/literature-literary-analysis",
+        "x-default": "https://successpathmentors.net/en/subjects/english/literature-literary-analysis"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "51.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english/literature-literary-analysis",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english/literature-literary-analysis",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english/literature-literary-analysis",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/english/reading-comprehension",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/english/reading-comprehension",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english/reading-comprehension",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english/reading-comprehension",
+        "x-default": "https://successpathmentors.net/en/subjects/english/reading-comprehension"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "52.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english/reading-comprehension",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english/reading-comprehension",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english/reading-comprehension",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/english/reading-comprehension",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/english/reading-comprehension",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english/reading-comprehension",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english/reading-comprehension",
+        "x-default": "https://successpathmentors.net/en/subjects/english/reading-comprehension"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "53.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english/reading-comprehension",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english/reading-comprehension",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english/reading-comprehension",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/english/reading-fluency",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/english/reading-fluency",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english/reading-fluency",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english/reading-fluency",
+        "x-default": "https://successpathmentors.net/en/subjects/english/reading-fluency"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "54.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english/reading-fluency",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english/reading-fluency",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english/reading-fluency",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/english/reading-fluency",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/english/reading-fluency",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english/reading-fluency",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english/reading-fluency",
+        "x-default": "https://successpathmentors.net/en/subjects/english/reading-fluency"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "55.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english/reading-fluency",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english/reading-fluency",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english/reading-fluency",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/english/speaking-listening",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/english/speaking-listening",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english/speaking-listening",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english/speaking-listening",
+        "x-default": "https://successpathmentors.net/en/subjects/english/speaking-listening"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "56.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english/speaking-listening",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english/speaking-listening",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english/speaking-listening",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/english/speaking-listening",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/english/speaking-listening",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english/speaking-listening",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english/speaking-listening",
+        "x-default": "https://successpathmentors.net/en/subjects/english/speaking-listening"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "57.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english/speaking-listening",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english/speaking-listening",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english/speaking-listening",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/english/vocabulary-word-study",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/english/vocabulary-word-study",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english/vocabulary-word-study",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english/vocabulary-word-study",
+        "x-default": "https://successpathmentors.net/en/subjects/english/vocabulary-word-study"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "58.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english/vocabulary-word-study",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english/vocabulary-word-study",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english/vocabulary-word-study",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/english/vocabulary-word-study",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/english/vocabulary-word-study",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english/vocabulary-word-study",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english/vocabulary-word-study",
+        "x-default": "https://successpathmentors.net/en/subjects/english/vocabulary-word-study"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "59.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english/vocabulary-word-study",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english/vocabulary-word-study",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english/vocabulary-word-study",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/english/academic-skills-assignments",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/english/academic-skills-assignments",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english/academic-skills-assignments",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english/academic-skills-assignments",
+        "x-default": "https://successpathmentors.net/en/subjects/english/academic-skills-assignments"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "60.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english/academic-skills-assignments",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english/academic-skills-assignments",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english/academic-skills-assignments",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/english/academic-skills-assignments",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/english/academic-skills-assignments",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english/academic-skills-assignments",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english/academic-skills-assignments",
+        "x-default": "https://successpathmentors.net/en/subjects/english/academic-skills-assignments"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "61.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english/academic-skills-assignments",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english/academic-skills-assignments",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english/academic-skills-assignments",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/english/writing",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/english/writing",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english/writing",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english/writing",
+        "x-default": "https://successpathmentors.net/en/subjects/english/writing"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "62.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english/writing",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english/writing",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english/writing",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/english/writing",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/english/writing",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english/writing",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english/writing",
+        "x-default": "https://successpathmentors.net/en/subjects/english/writing"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "63.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english/writing",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english/writing",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english/writing",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/english/assessment-test-preparation",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/english/assessment-test-preparation",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english/assessment-test-preparation",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english/assessment-test-preparation",
+        "x-default": "https://successpathmentors.net/en/subjects/english/assessment-test-preparation"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "64.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english/assessment-test-preparation",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english/assessment-test-preparation",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english/assessment-test-preparation",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/english/assessment-test-preparation",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/english/assessment-test-preparation",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english/assessment-test-preparation",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english/assessment-test-preparation",
+        "x-default": "https://successpathmentors.net/en/subjects/english/assessment-test-preparation"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "65.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english/assessment-test-preparation",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english/assessment-test-preparation",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english/assessment-test-preparation",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/english/cross-curricular-academic-support",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/english/cross-curricular-academic-support",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english/cross-curricular-academic-support",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english/cross-curricular-academic-support",
+        "x-default": "https://successpathmentors.net/en/subjects/english/cross-curricular-academic-support"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "66.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english/cross-curricular-academic-support",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english/cross-curricular-academic-support",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english/cross-curricular-academic-support",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/english/cross-curricular-academic-support",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/english/cross-curricular-academic-support",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/english/cross-curricular-academic-support",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/english/cross-curricular-academic-support",
+        "x-default": "https://successpathmentors.net/en/subjects/english/cross-curricular-academic-support"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "67.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/english/cross-curricular-academic-support",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/english/cross-curricular-academic-support",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/english/cross-curricular-academic-support",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/general-science/earth-space-science",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/general-science/earth-space-science",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/general-science/earth-space-science",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/general-science/earth-space-science",
+        "x-default": "https://successpathmentors.net/en/subjects/general-science/earth-space-science"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "68.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/general-science/earth-space-science",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/general-science/earth-space-science",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/general-science/earth-space-science",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/general-science/earth-space-science",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/general-science/earth-space-science",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/general-science/earth-space-science",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/general-science/earth-space-science",
+        "x-default": "https://successpathmentors.net/en/subjects/general-science/earth-space-science"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "69.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/general-science/earth-space-science",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/general-science/earth-space-science",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/general-science/earth-space-science",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/general-science/life-science",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/general-science/life-science",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/general-science/life-science",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/general-science/life-science",
+        "x-default": "https://successpathmentors.net/en/subjects/general-science/life-science"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "70.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/general-science/life-science",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/general-science/life-science",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/general-science/life-science",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/general-science/life-science",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/general-science/life-science",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/general-science/life-science",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/general-science/life-science",
+        "x-default": "https://successpathmentors.net/en/subjects/general-science/life-science"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "71.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/general-science/life-science",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/general-science/life-science",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/general-science/life-science",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/general-science/scientific-inquiry-laboratory-skills",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/general-science/scientific-inquiry-laboratory-skills",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/general-science/scientific-inquiry-laboratory-skills",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/general-science/scientific-inquiry-laboratory-skills",
+        "x-default": "https://successpathmentors.net/en/subjects/general-science/scientific-inquiry-laboratory-skills"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "72.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/general-science/scientific-inquiry-laboratory-skills",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/general-science/scientific-inquiry-laboratory-skills",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/general-science/scientific-inquiry-laboratory-skills",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/general-science/scientific-inquiry-laboratory-skills",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/general-science/scientific-inquiry-laboratory-skills",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/general-science/scientific-inquiry-laboratory-skills",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/general-science/scientific-inquiry-laboratory-skills",
+        "x-default": "https://successpathmentors.net/en/subjects/general-science/scientific-inquiry-laboratory-skills"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "73.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/general-science/scientific-inquiry-laboratory-skills",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/general-science/scientific-inquiry-laboratory-skills",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/general-science/scientific-inquiry-laboratory-skills",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/general-science/structures-engineering",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/general-science/structures-engineering",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/general-science/structures-engineering",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/general-science/structures-engineering",
+        "x-default": "https://successpathmentors.net/en/subjects/general-science/structures-engineering"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "74.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/general-science/structures-engineering",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/general-science/structures-engineering",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/general-science/structures-engineering",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/general-science/structures-engineering",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/general-science/structures-engineering",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/general-science/structures-engineering",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/general-science/structures-engineering",
+        "x-default": "https://successpathmentors.net/en/subjects/general-science/structures-engineering"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "75.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/general-science/structures-engineering",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/general-science/structures-engineering",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/general-science/structures-engineering",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/chemistry/acids-bases-aqueous-equilibria",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/chemistry/acids-bases-aqueous-equilibria",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/acids-bases-aqueous-equilibria",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/acids-bases-aqueous-equilibria",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/acids-bases-aqueous-equilibria"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "76.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/acids-bases-aqueous-equilibria",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/acids-bases-aqueous-equilibria",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/acids-bases-aqueous-equilibria",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/chemistry/acids-bases-aqueous-equilibria",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/chemistry/acids-bases-aqueous-equilibria",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/acids-bases-aqueous-equilibria",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/acids-bases-aqueous-equilibria",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/acids-bases-aqueous-equilibria"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "77.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/acids-bases-aqueous-equilibria",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/acids-bases-aqueous-equilibria",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/acids-bases-aqueous-equilibria",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/chemistry/atomic-structure-periodicity",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/chemistry/atomic-structure-periodicity",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/atomic-structure-periodicity",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/atomic-structure-periodicity",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/atomic-structure-periodicity"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "78.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/atomic-structure-periodicity",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/atomic-structure-periodicity",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/atomic-structure-periodicity",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/chemistry/atomic-structure-periodicity",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/chemistry/atomic-structure-periodicity",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/atomic-structure-periodicity",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/atomic-structure-periodicity",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/atomic-structure-periodicity"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "79.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/atomic-structure-periodicity",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/atomic-structure-periodicity",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/atomic-structure-periodicity",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-bonding-molecular-structure",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/chemistry/chemical-bonding-molecular-structure",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/chemical-bonding-molecular-structure",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/chemical-bonding-molecular-structure",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/chemical-bonding-molecular-structure"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "80.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-bonding-molecular-structure",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/chemical-bonding-molecular-structure",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-bonding-molecular-structure",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/chemistry/chemical-bonding-molecular-structure",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/chemistry/chemical-bonding-molecular-structure",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/chemical-bonding-molecular-structure",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/chemical-bonding-molecular-structure",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/chemical-bonding-molecular-structure"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "81.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-bonding-molecular-structure",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/chemical-bonding-molecular-structure",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-bonding-molecular-structure",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-equilibrium",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/chemistry/chemical-equilibrium",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/chemical-equilibrium",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/chemical-equilibrium",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/chemical-equilibrium"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "82.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-equilibrium",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/chemical-equilibrium",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-equilibrium",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/chemistry/chemical-equilibrium",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/chemistry/chemical-equilibrium",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/chemical-equilibrium",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/chemical-equilibrium",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/chemical-equilibrium"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "83.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-equilibrium",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/chemical-equilibrium",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-equilibrium",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-kinetics",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/chemistry/chemical-kinetics",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/chemical-kinetics",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/chemical-kinetics",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/chemical-kinetics"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "84.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-kinetics",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/chemical-kinetics",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-kinetics",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/chemistry/chemical-kinetics",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/chemistry/chemical-kinetics",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/chemical-kinetics",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/chemical-kinetics",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/chemical-kinetics"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "85.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-kinetics",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/chemical-kinetics",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-kinetics",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-nomenclature-formulas",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/chemistry/chemical-nomenclature-formulas",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/chemical-nomenclature-formulas",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/chemical-nomenclature-formulas",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/chemical-nomenclature-formulas"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "86.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-nomenclature-formulas",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/chemical-nomenclature-formulas",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-nomenclature-formulas",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/chemistry/chemical-nomenclature-formulas",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/chemistry/chemical-nomenclature-formulas",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/chemical-nomenclature-formulas",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/chemical-nomenclature-formulas",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/chemical-nomenclature-formulas"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "87.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-nomenclature-formulas",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/chemical-nomenclature-formulas",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-nomenclature-formulas",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-reactions-equations",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/chemistry/chemical-reactions-equations",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/chemical-reactions-equations",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/chemical-reactions-equations",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/chemical-reactions-equations"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "88.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-reactions-equations",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/chemical-reactions-equations",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-reactions-equations",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/chemistry/chemical-reactions-equations",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/chemistry/chemical-reactions-equations",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/chemical-reactions-equations",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/chemical-reactions-equations",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/chemical-reactions-equations"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "89.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-reactions-equations",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/chemical-reactions-equations",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/chemical-reactions-equations",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/chemistry/integrated-chemistry",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/chemistry/integrated-chemistry",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/integrated-chemistry",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/integrated-chemistry",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/integrated-chemistry"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "90.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/integrated-chemistry",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/integrated-chemistry",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/integrated-chemistry",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/chemistry/integrated-chemistry",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/chemistry/integrated-chemistry",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/integrated-chemistry",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/integrated-chemistry",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/integrated-chemistry"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "91.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/integrated-chemistry",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/integrated-chemistry",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/integrated-chemistry",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/chemistry/matter-chemical-properties",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/chemistry/matter-chemical-properties",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/matter-chemical-properties",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/matter-chemical-properties",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/matter-chemical-properties"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "92.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/matter-chemical-properties",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/matter-chemical-properties",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/matter-chemical-properties",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/chemistry/matter-chemical-properties",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/chemistry/matter-chemical-properties",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/matter-chemical-properties",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/matter-chemical-properties",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/matter-chemical-properties"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "93.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/matter-chemical-properties",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/matter-chemical-properties",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/matter-chemical-properties",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/chemistry/nuclear-chemistry",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/chemistry/nuclear-chemistry",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/nuclear-chemistry",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/nuclear-chemistry",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/nuclear-chemistry"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "94.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/nuclear-chemistry",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/nuclear-chemistry",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/nuclear-chemistry",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/chemistry/nuclear-chemistry",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/chemistry/nuclear-chemistry",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/nuclear-chemistry",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/nuclear-chemistry",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/nuclear-chemistry"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "95.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/nuclear-chemistry",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/nuclear-chemistry",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/nuclear-chemistry",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/chemistry/organic-chemistry",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/chemistry/organic-chemistry",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/organic-chemistry",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/organic-chemistry",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/organic-chemistry"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "96.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/organic-chemistry",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/organic-chemistry",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/organic-chemistry",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/chemistry/organic-chemistry",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/chemistry/organic-chemistry",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/organic-chemistry",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/organic-chemistry",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/organic-chemistry"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "97.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/organic-chemistry",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/organic-chemistry",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/organic-chemistry",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/chemistry/redox-electrochemistry",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/chemistry/redox-electrochemistry",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/redox-electrochemistry",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/redox-electrochemistry",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/redox-electrochemistry"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "98.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/redox-electrochemistry",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/redox-electrochemistry",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/redox-electrochemistry",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/chemistry/redox-electrochemistry",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/chemistry/redox-electrochemistry",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/redox-electrochemistry",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/redox-electrochemistry",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/redox-electrochemistry"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "99.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/redox-electrochemistry",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/redox-electrochemistry",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/redox-electrochemistry",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/chemistry/solutions-solubility",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/chemistry/solutions-solubility",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/solutions-solubility",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/solutions-solubility",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/solutions-solubility"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "100.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/solutions-solubility",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/solutions-solubility",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/solutions-solubility",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/chemistry/solutions-solubility",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/chemistry/solutions-solubility",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/solutions-solubility",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/solutions-solubility",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/solutions-solubility"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "101.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/solutions-solubility",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/solutions-solubility",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/solutions-solubility",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/chemistry/states-matter-gases",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/chemistry/states-matter-gases",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/states-matter-gases",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/states-matter-gases",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/states-matter-gases"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "102.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/states-matter-gases",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/states-matter-gases",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/states-matter-gases",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/chemistry/states-matter-gases",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/chemistry/states-matter-gases",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/states-matter-gases",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/states-matter-gases",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/states-matter-gases"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "103.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/states-matter-gases",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/states-matter-gases",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/states-matter-gases",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/chemistry/stoichiometry-quantitative-chemistry",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/chemistry/stoichiometry-quantitative-chemistry",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/stoichiometry-quantitative-chemistry",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/stoichiometry-quantitative-chemistry",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/stoichiometry-quantitative-chemistry"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "104.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/stoichiometry-quantitative-chemistry",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/stoichiometry-quantitative-chemistry",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/stoichiometry-quantitative-chemistry",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/chemistry/stoichiometry-quantitative-chemistry",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/chemistry/stoichiometry-quantitative-chemistry",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/stoichiometry-quantitative-chemistry",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/stoichiometry-quantitative-chemistry",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/stoichiometry-quantitative-chemistry"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "105.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/stoichiometry-quantitative-chemistry",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/stoichiometry-quantitative-chemistry",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/stoichiometry-quantitative-chemistry",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/chemistry/thermochemistry",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/chemistry/thermochemistry",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/thermochemistry",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/thermochemistry",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/thermochemistry"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "106.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/thermochemistry",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/thermochemistry",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/thermochemistry",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/chemistry/thermochemistry",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/chemistry/thermochemistry",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/chemistry/thermochemistry",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/chemistry/thermochemistry",
+        "x-default": "https://successpathmentors.net/en/subjects/chemistry/thermochemistry"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "107.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/thermochemistry",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/chemistry/thermochemistry",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/chemistry/thermochemistry",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/physics/dynamics-forces",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/physics/dynamics-forces",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/dynamics-forces",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/dynamics-forces",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/dynamics-forces"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "108.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/dynamics-forces",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/dynamics-forces",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/dynamics-forces",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/physics/dynamics-forces",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/physics/dynamics-forces",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/dynamics-forces",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/dynamics-forces",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/dynamics-forces"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "109.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/dynamics-forces",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/dynamics-forces",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/dynamics-forces",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/physics/electricity-circuits",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/physics/electricity-circuits",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/electricity-circuits",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/electricity-circuits",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/electricity-circuits"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "110.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/electricity-circuits",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/electricity-circuits",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/electricity-circuits",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/physics/electricity-circuits",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/physics/electricity-circuits",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/electricity-circuits",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/electricity-circuits",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/electricity-circuits"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "111.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/electricity-circuits",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/electricity-circuits",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/electricity-circuits",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/physics/electrostatics-electromagnetism",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/physics/electrostatics-electromagnetism",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/electrostatics-electromagnetism",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/electrostatics-electromagnetism",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/electrostatics-electromagnetism"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "112.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/electrostatics-electromagnetism",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/electrostatics-electromagnetism",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/electrostatics-electromagnetism",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/physics/electrostatics-electromagnetism",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/physics/electrostatics-electromagnetism",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/electrostatics-electromagnetism",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/electrostatics-electromagnetism",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/electrostatics-electromagnetism"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "113.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/electrostatics-electromagnetism",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/electrostatics-electromagnetism",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/electrostatics-electromagnetism",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/physics/integrated-physics",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/physics/integrated-physics",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/integrated-physics",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/integrated-physics",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/integrated-physics"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "114.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/integrated-physics",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/integrated-physics",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/integrated-physics",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/physics/integrated-physics",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/physics/integrated-physics",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/integrated-physics",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/integrated-physics",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/integrated-physics"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "115.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/integrated-physics",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/integrated-physics",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/integrated-physics",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/physics/kinematics",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/physics/kinematics",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/kinematics",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/kinematics",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/kinematics"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "116.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/kinematics",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/kinematics",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/kinematics",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/physics/kinematics",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/physics/kinematics",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/kinematics",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/kinematics",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/kinematics"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "117.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/kinematics",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/kinematics",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/kinematics",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/physics/measurement-vectors-modeling",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/physics/measurement-vectors-modeling",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/measurement-vectors-modeling",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/measurement-vectors-modeling",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/measurement-vectors-modeling"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "118.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/measurement-vectors-modeling",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/measurement-vectors-modeling",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/measurement-vectors-modeling",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/physics/measurement-vectors-modeling",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/physics/measurement-vectors-modeling",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/measurement-vectors-modeling",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/measurement-vectors-modeling",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/measurement-vectors-modeling"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "119.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/measurement-vectors-modeling",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/measurement-vectors-modeling",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/measurement-vectors-modeling",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/physics/modern-physics",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/physics/modern-physics",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/modern-physics",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/modern-physics",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/modern-physics"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "120.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/modern-physics",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/modern-physics",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/modern-physics",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/physics/modern-physics",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/physics/modern-physics",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/modern-physics",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/modern-physics",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/modern-physics"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "121.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/modern-physics",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/modern-physics",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/modern-physics",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/physics/momentum-collisions",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/physics/momentum-collisions",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/momentum-collisions",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/momentum-collisions",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/momentum-collisions"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "122.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/momentum-collisions",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/momentum-collisions",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/momentum-collisions",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/physics/momentum-collisions",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/physics/momentum-collisions",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/momentum-collisions",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/momentum-collisions",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/momentum-collisions"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "123.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/momentum-collisions",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/momentum-collisions",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/momentum-collisions",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/physics/optics",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/physics/optics",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/optics",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/optics",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/optics"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "124.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/optics",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/optics",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/optics",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/physics/optics",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/physics/optics",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/optics",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/optics",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/optics"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "125.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/optics",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/optics",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/optics",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/physics/oscillations",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/physics/oscillations",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/oscillations",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/oscillations",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/oscillations"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "126.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/oscillations",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/oscillations",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/oscillations",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/physics/oscillations",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/physics/oscillations",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/oscillations",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/oscillations",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/oscillations"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "127.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/oscillations",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/oscillations",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/oscillations",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/physics/thermal-physics",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/physics/thermal-physics",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/thermal-physics",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/thermal-physics",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/thermal-physics"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "128.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/thermal-physics",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/thermal-physics",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/thermal-physics",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/physics/thermal-physics",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/physics/thermal-physics",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/thermal-physics",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/thermal-physics",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/thermal-physics"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "129.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/thermal-physics",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/thermal-physics",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/thermal-physics",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/physics/waves-sound",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/physics/waves-sound",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/waves-sound",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/waves-sound",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/waves-sound"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "130.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/waves-sound",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/waves-sound",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/waves-sound",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/physics/waves-sound",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/physics/waves-sound",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/waves-sound",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/waves-sound",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/waves-sound"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "131.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/waves-sound",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/waves-sound",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/waves-sound",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/en/subjects/physics/work-energy-power",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/en/subjects/physics/work-energy-power",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/work-energy-power",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/work-energy-power",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/work-energy-power"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "132.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/work-energy-power",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/work-energy-power",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/work-energy-power",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    },
+    {
+      "url": "https://successpathmentors.net/ar/subjects/physics/work-energy-power",
+      "status": 200,
+      "canonical": "https://successpathmentors.net/ar/subjects/physics/work-energy-power",
+      "languages": {
+        "en-CA": "https://successpathmentors.net/en/subjects/physics/work-energy-power",
+        "ar-CA": "https://successpathmentors.net/ar/subjects/physics/work-energy-power",
+        "x-default": "https://successpathmentors.net/en/subjects/physics/work-energy-power"
+      },
+      "issues": [],
+      "location": null,
+      "linkHeader": null,
+      "headFile": "133.head.html",
+      "targets": {
+        "en-CA": {
+          "url": "https://successpathmentors.net/en/subjects/physics/work-energy-power",
+          "status": 200
+        },
+        "ar-CA": {
+          "url": "https://successpathmentors.net/ar/subjects/physics/work-energy-power",
+          "status": 200
+        },
+        "x-default": {
+          "url": "https://successpathmentors.net/en/subjects/physics/work-energy-power",
+          "status": 200
+        }
+      },
+      "reciprocal": "YES",
+      "result": "PASS"
+    }
+  ]
+}

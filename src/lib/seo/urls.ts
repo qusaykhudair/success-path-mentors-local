@@ -6,6 +6,7 @@ import {
 import {
   pathnames,
 } from '@/i18n/routing';
+import { hreflangPagePaths } from './hreflang-pages';
 
 function normalizePathname(
   pathname: string
@@ -83,9 +84,13 @@ export function buildAbsoluteUrl(
 export function buildLanguageAlternates(
   pathname = ''
 ): Record<string, string> {
+  if (!hreflangPagePaths.has(normalizePathname(pathname))) {
+    return {};
+  }
+
   const alternatives = Object.fromEntries(
     supportedLocales.map((locale) => [
-      locale,
+      `${locale}-CA`,
       buildAbsoluteUrl(locale, pathname),
     ])
   );

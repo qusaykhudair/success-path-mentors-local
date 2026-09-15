@@ -57,7 +57,20 @@ export default function middleware(request: NextRequest) {
     return applySecurityHeaders(NextResponse.next());
   }
 
-  return applySecurityHeaders(intlMiddleware(request));
+  const response = intlMiddleware(request);
+  // Page metadata owns audited hreflang. next-intl's automatic Link header
+  // guesses equivalents from locale prefixes, including noncanonical aliases.
+  // Preserve every location response, including localized Arabic paths.
+  const locationRoots = ['en', 'ar'].flatMap(locale =>
+    ['locations', 'المواقع', encodeURIComponent('المواقع')].map(slug => `/${locale}/${slug}`.toLowerCase())
+  );
+  const isLocation = locationRoots.some(root =>
+    pathname.toLowerCase() === root || pathname.toLowerCase().startsWith(`${root}/`)
+  );
+  if (!isLocation) {
+    response.headers.delete('link');
+  }
+  return applySecurityHeaders(response);
 }
 
 export const config = {
