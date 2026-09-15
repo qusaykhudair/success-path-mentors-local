@@ -4,9 +4,9 @@
 **Domain:** `https://successpathmentors.net`  
 **Baseline Git SHA:** `064ec44e83dcc9042747bda6d915682183fc0ed1`  
 **Problematic Commit SHA:** `abc7ab0a6e815341bca9f82415e3b9d902ff69cf`  
-**Corrective Commit SHA:** `303ebadd545e01f1024e7bcbb9d838cafee6a986`  
+**Corrective Commit SHA:** `303ebadd545e01f1024e7bcbb9d838cafee6a986` (follow-up 301 middleware fix: `fa6c656`)  
 **Execution Mode:** REMEDIATION & QA REPORT  
-**Timestamp:** `2026-09-15T23:42:00+03:00`  
+**Timestamp:** `2026-09-15T23:50:00+03:00`  
 
 ---
 
