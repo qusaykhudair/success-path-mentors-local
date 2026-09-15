@@ -1,0 +1,125 @@
+{
+  "timestamp": "2026-09-15T23:22:10.301Z",
+  "commit": "10063a9",
+  "baseline": {
+    "homepage_mobile": {
+      "perf": 66,
+      "lcp_s": 8.9,
+      "tbt_ms": 260,
+      "cls": 0,
+      "seo": 100,
+      "a11y": 93,
+      "bp": 100
+    },
+    "homepage_desktop": {
+      "perf": 94,
+      "lcp_s": 1.8,
+      "tbt_ms": 40,
+      "cls": 0,
+      "seo": 100,
+      "a11y": 93,
+      "bp": 100
+    }
+  },
+  "after": {
+    "homepage_mobile": {
+      "perf": 80,
+      "a11y": 93,
+      "bp": 100,
+      "seo": 100,
+      "fcp": 2474,
+      "lcp": 4049,
+      "tbt": 237,
+      "cls": 0,
+      "si": 2474,
+      "lcpElement": "N/A"
+    },
+    "homepage_desktop": {
+      "perf": 99,
+      "a11y": 93,
+      "bp": 100,
+      "seo": 100,
+      "fcp": 545,
+      "lcp": 853,
+      "tbt": 8,
+      "cls": 0,
+      "si": 906,
+      "lcpElement": "N/A"
+    },
+    "milton_mobile": {
+      "perf": 75,
+      "a11y": 96,
+      "bp": 100,
+      "seo": 92,
+      "fcp": 2303,
+      "lcp": 5206,
+      "tbt": 194,
+      "cls": 0,
+      "si": 2303,
+      "lcpElement": "N/A"
+    },
+    "milton_desktop": {
+      "perf": 98,
+      "a11y": 96,
+      "bp": 100,
+      "seo": 92,
+      "fcp": 530,
+      "lcp": 1062,
+      "tbt": 0,
+      "cls": 0,
+      "si": 628,
+      "lcpElement": "N/A"
+    }
+  },
+  "regression": {
+    "ar_home_mobile": {
+      "perf": 82,
+      "a11y": 93,
+      "bp": 100,
+      "seo": 100,
+      "fcp": 2453,
+      "lcp": 4028,
+      "tbt": 146,
+      "cls": 0,
+      "si": 2453,
+      "lcpElement": "N/A"
+    },
+    "math_mobile": {
+      "perf": 80,
+      "a11y": 92,
+      "bp": 100,
+      "seo": 100,
+      "fcp": 2303,
+      "lcp": 3988,
+      "tbt": 242,
+      "cls": 0,
+      "si": 2303,
+      "lcpElement": "N/A"
+    },
+    "toronto_mobile": {
+      "perf": 77,
+      "a11y": 96,
+      "bp": 100,
+      "seo": 92,
+      "fcp": 2299,
+      "lcp": 5199,
+      "tbt": 142,
+      "cls": 0,
+      "si": 2299,
+      "lcpElement": "N/A"
+    },
+    "exam_prep_mobile": {
+      "perf": 85,
+      "a11y": 96,
+      "bp": 96,
+      "seo": 100,
+      "fcp": 2288,
+      "lcp": 3882,
+      "tbt": 107,
+      "cls": 0,
+      "si": 2288,
+      "lcpElement": "N/A"
+    }
+  },
+  "verdict": "PASS"
+}

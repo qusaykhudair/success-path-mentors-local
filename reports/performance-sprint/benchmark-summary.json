@@ -1,0 +1,264 @@
+{
+  "home_mobile": {
+    "name": "Homepage Mobile",
+    "runs": [
+      {
+        "perf": 77,
+        "a11y": 93,
+        "bp": 100,
+        "seo": 100,
+        "fcp": 2513,
+        "lcp": 4112,
+        "tbt": 294,
+        "cls": 0,
+        "si": 2526,
+        "lcpElement": "N/A"
+      },
+      {
+        "perf": 81,
+        "a11y": 93,
+        "bp": 100,
+        "seo": 100,
+        "fcp": 2474,
+        "lcp": 4049,
+        "tbt": 182,
+        "cls": 0,
+        "si": 2474,
+        "lcpElement": "N/A"
+      },
+      {
+        "perf": 80,
+        "a11y": 93,
+        "bp": 100,
+        "seo": 100,
+        "fcp": 2458,
+        "lcp": 4033,
+        "tbt": 237,
+        "cls": 0,
+        "si": 2458,
+        "lcpElement": "N/A"
+      }
+    ],
+    "median": {
+      "perf": 80,
+      "a11y": 93,
+      "bp": 100,
+      "seo": 100,
+      "fcp": 2474,
+      "lcp": 4049,
+      "tbt": 237,
+      "cls": 0,
+      "si": 2474,
+      "lcpElement": "N/A"
+    }
+  },
+  "home_desktop": {
+    "name": "Homepage Desktop",
+    "runs": [
+      {
+        "perf": 99,
+        "a11y": 93,
+        "bp": 100,
+        "seo": 100,
+        "fcp": 565,
+        "lcp": 885,
+        "tbt": 8,
+        "cls": 0,
+        "si": 969,
+        "lcpElement": "N/A"
+      },
+      {
+        "perf": 99,
+        "a11y": 93,
+        "bp": 100,
+        "seo": 100,
+        "fcp": 545,
+        "lcp": 853,
+        "tbt": 16,
+        "cls": 0,
+        "si": 906,
+        "lcpElement": "N/A"
+      },
+      {
+        "perf": 100,
+        "a11y": 93,
+        "bp": 100,
+        "seo": 100,
+        "fcp": 534,
+        "lcp": 821,
+        "tbt": 0,
+        "cls": 0,
+        "si": 701,
+        "lcpElement": "N/A"
+      }
+    ],
+    "median": {
+      "perf": 99,
+      "a11y": 93,
+      "bp": 100,
+      "seo": 100,
+      "fcp": 545,
+      "lcp": 853,
+      "tbt": 8,
+      "cls": 0,
+      "si": 906,
+      "lcpElement": "N/A"
+    }
+  },
+  "milton_mobile": {
+    "name": "Milton Mobile",
+    "runs": [
+      {
+        "perf": 74,
+        "a11y": 96,
+        "bp": 100,
+        "seo": 92,
+        "fcp": 2300,
+        "lcp": 5200,
+        "tbt": 221,
+        "cls": 0,
+        "si": 2300,
+        "lcpElement": "N/A"
+      },
+      {
+        "perf": 77,
+        "a11y": 96,
+        "bp": 100,
+        "seo": 92,
+        "fcp": 2304,
+        "lcp": 5207,
+        "tbt": 142,
+        "cls": 0,
+        "si": 2304,
+        "lcpElement": "N/A"
+      },
+      {
+        "perf": 75,
+        "a11y": 96,
+        "bp": 100,
+        "seo": 92,
+        "fcp": 2303,
+        "lcp": 5206,
+        "tbt": 194,
+        "cls": 0,
+        "si": 2303,
+        "lcpElement": "N/A"
+      }
+    ],
+    "median": {
+      "perf": 75,
+      "a11y": 96,
+      "bp": 100,
+      "seo": 92,
+      "fcp": 2303,
+      "lcp": 5206,
+      "tbt": 194,
+      "cls": 0,
+      "si": 2303,
+      "lcpElement": "N/A"
+    }
+  },
+  "milton_desktop": {
+    "name": "Milton Desktop",
+    "runs": [
+      {
+        "perf": 98,
+        "a11y": 96,
+        "bp": 100,
+        "seo": 92,
+        "fcp": 530,
+        "lcp": 1067,
+        "tbt": 0,
+        "cls": 0,
+        "si": 686,
+        "lcpElement": "N/A"
+      },
+      {
+        "perf": 98,
+        "a11y": 96,
+        "bp": 100,
+        "seo": 92,
+        "fcp": 526,
+        "lcp": 1062,
+        "tbt": 0,
+        "cls": 0,
+        "si": 628,
+        "lcpElement": "N/A"
+      },
+      {
+        "perf": 99,
+        "a11y": 96,
+        "bp": 100,
+        "seo": 92,
+        "fcp": 531,
+        "lcp": 873,
+        "tbt": 0,
+        "cls": 0,
+        "si": 577,
+        "lcpElement": "N/A"
+      }
+    ],
+    "median": {
+      "perf": 98,
+      "a11y": 96,
+      "bp": 100,
+      "seo": 92,
+      "fcp": 530,
+      "lcp": 1062,
+      "tbt": 0,
+      "cls": 0,
+      "si": 628,
+      "lcpElement": "N/A"
+    }
+  },
+  "regression": {
+    "ar_home_mobile": {
+      "perf": 82,
+      "a11y": 93,
+      "bp": 100,
+      "seo": 100,
+      "fcp": 2453,
+      "lcp": 4028,
+      "tbt": 146,
+      "cls": 0,
+      "si": 2453,
+      "lcpElement": "N/A"
+    },
+    "math_mobile": {
+      "perf": 80,
+      "a11y": 92,
+      "bp": 100,
+      "seo": 100,
+      "fcp": 2303,
+      "lcp": 3988,
+      "tbt": 242,
+      "cls": 0,
+      "si": 2303,
+      "lcpElement": "N/A"
+    },
+    "toronto_mobile": {
+      "perf": 77,
+      "a11y": 96,
+      "bp": 100,
+      "seo": 92,
+      "fcp": 2299,
+      "lcp": 5199,
+      "tbt": 142,
+      "cls": 0,
+      "si": 2299,
+      "lcpElement": "N/A"
+    },
+    "exam_prep_mobile": {
+      "perf": 85,
+      "a11y": 96,
+      "bp": 96,
+      "seo": 100,
+      "fcp": 2288,
+      "lcp": 3882,
+      "tbt": 107,
+      "cls": 0,
+      "si": 2288,
+      "lcpElement": "N/A"
+    }
+  }
+}
