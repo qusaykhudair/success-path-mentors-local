@@ -155,6 +155,7 @@ export function GlobalLanguageSelector({
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
         aria-haspopup="true"
+        aria-label={`Select language - Current: ${currentLang.label}`}
         className={cn(
           "group inline-flex h-10 items-center justify-between gap-2 rounded-full border px-3.5 text-sm font-semibold shadow-2xs transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2",
           isTransparent

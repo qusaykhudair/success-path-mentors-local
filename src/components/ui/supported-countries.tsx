@@ -1,6 +1,3 @@
-'use client';
-
-import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
 interface SupportedCountriesProps {
@@ -222,8 +219,7 @@ export function SupportedCountries({
   locale = 'de',
   className,
 }: SupportedCountriesProps) {
-  const pathname = usePathname() || '';
-  const isGermanyMarket = pathname.startsWith('/de');
+  const isGermanyMarket = locale === 'de';
   const currentCopy = copy[locale] || copy.de;
 
   // Dynamic Germany destination based on active locale

@@ -107,6 +107,8 @@ export function MobileNav({
 }: MobileNavProps) {
   const [open, setOpen] =
     useState(false);
+  const [hasBeenOpened, setHasBeenOpened] =
+    useState(false);
 
   const [
     openCategory,
@@ -312,6 +314,7 @@ export function MobileNav({
               restoreFocus: true,
             });
           } else {
+            setHasBeenOpened(true);
             setOpen(true);
           }
         }}
@@ -667,7 +670,8 @@ export function MobileNav({
             </div>
 
             <div className="mt-2 grid gap-1">
-              {locationCountries.map((country) => {
+              {hasBeenOpened
+                ? locationCountries.map((country) => {
                 const countryOpen = openLocationCountry === country.key;
                 const countryPanelId = `${panelId}-location-${country.key}`;
                 return (
@@ -748,7 +752,8 @@ export function MobileNav({
                     </div>
                   </div>
                 );
-              })}
+              })
+            : null}
             </div>
           </div>
 

@@ -52,8 +52,11 @@ export function LocaleSwitcher({
       ? 'AR'
       : 'EN';
 
-  const accessibleLabel =
-    locale === 'ar'
+  const accessibleLabel = isCompact
+    ? locale === 'ar'
+      ? `${shortLabel} - التبديل إلى ${localeLabels[otherLocale]}`
+      : `${shortLabel} - Switch to ${localeLabels[otherLocale]}`
+    : locale === 'ar'
       ? `التبديل إلى ${localeLabels[otherLocale]}`
       : `Switch to ${localeLabels[otherLocale]}`;
 

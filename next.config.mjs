@@ -5,6 +5,8 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Middleware combines host, HTTPS and slash normalization in one 301.
+  skipTrailingSlashRedirect: true,
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
@@ -19,24 +21,15 @@ const nextConfig = {
     ],
   },
   experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
-  },
-  async redirects() {
-    return [
-      {
-        source: '/:locale(en|ar)/subjects/science',
-        destination: '/:locale/subjects/general-science',
-        permanent: true,
-      },
-      {
-        source: '/:locale(en|ar)/subjects/science/:path*',
-        destination: '/:locale/subjects/general-science/:path*',
-        permanent: true,
-      },
-    ];
+    optimizePackageImports: [
+      'lucide-react',
+      'framer-motion',
+      '@n8n/chat',
+      '@base-ui/react',
+      'react-icons',
+    ],
   },
   async rewrites() {
-    const apiBaseUrl = (process.env.NEXT_PUBLIC_API_BASE_URL || 'http://143.244.170.205').trim().replace(/\/+$/, '');
     return {
       beforeFiles: [
         { source: '/ar/%D8%B9%D9%86-%D8%A7%D9%84%D9%85%D9%86%D8%B5%D8%A9', destination: '/ar/about' },
@@ -56,34 +49,8 @@ const nextConfig = {
         { source: '/ar/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9-%D8%A7%D9%84%D8%A5%D9%84%D8%BA%D8%A7%D8%A1', destination: '/ar/cancellation-policy' },
         { source: '/ar/%D8%AD%D8%B0%D9%81-%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA', destination: '/ar/data-deletion' },
       ],
-      afterFiles: [
-        {
-          source: '/api/portal/:path*',
-          destination: `${apiBaseUrl}/api/portal/:path*`,
-        },
-        {
-          source: '/api/admin/:path*',
-          destination: `${apiBaseUrl}/api/admin/:path*`,
-        },
-        {
-          source: '/api/auth/magic-token',
-          destination: `${apiBaseUrl}/api/auth/magic-token`,
-        },
-        {
-          source: '/api/auth/login',
-          destination: `${apiBaseUrl}/api/auth/login`,
-        },
-        {
-          source: '/api/auth/setup-password',
-          destination: `${apiBaseUrl}/api/auth/setup-password`,
-        },
-      ],
-      fallback: [
-        {
-          source: '/api/health',
-          destination: `${apiBaseUrl}/api/health`,
-        },
-      ],
+      afterFiles: [],
+      fallback: [],
     };
   }
 };

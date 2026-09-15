@@ -10,11 +10,7 @@ import {
 
 import Image from 'next/image';
 
-import {
-  AnimatePresence,
-  motion,
-  useReducedMotion,
-} from 'framer-motion';
+
 
 import {
   ListVideo,
@@ -396,8 +392,6 @@ export function VideoTestimonialsGrid({
   items,
   labels,
 }: VideoTestimonialsGridProps) {
-  const shouldReduceMotion = useReducedMotion();
-
   const [selectedIndex, setSelectedIndex] =
     useState(0);
   const [isPlaying, setIsPlaying] =
@@ -498,175 +492,143 @@ export function VideoTestimonialsGrid({
       {/* Main video showcase */}
       <div className="overflow-hidden rounded-[1.75rem] border border-primary-800/25 bg-brand-dark text-white shadow-xl">
         <div className="relative aspect-video overflow-hidden bg-black">
-          <AnimatePresence mode="wait" initial={false}>
-            {isPlaying && selectedVideoId ? (
-              <motion.div
-                key={`player-${selectedIndex}`}
-                initial={{
-                  opacity: shouldReduceMotion ? 1 : 0,
-                }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{
-                  duration: shouldReduceMotion ? 0 : 0.25,
-                }}
-                className="absolute inset-0"
-              >
-                <iframe
-                  src={`https://www.youtube-nocookie.com/embed/${selectedVideoId}?autoplay=1&controls=1&rel=0&playsinline=1&modestbranding=1&iv_load_policy=3`}
-                  title={`${labels.youtube}: ${selectedItem.name}`}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                  className="absolute inset-0 h-full w-full"
-                />
+          {isPlaying && selectedVideoId ? (
+            <div
+              key={`player-${selectedIndex}`}
+              className="absolute inset-0 transition-opacity duration-200"
+            >
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${selectedVideoId}?autoplay=1&controls=1&rel=0&playsinline=1&modestbranding=1&iv_load_policy=3`}
+                title={`${labels.youtube}: ${selectedItem.name}`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="absolute inset-0 h-full w-full"
+              />
 
+              <button
+                ref={stopButtonRef}
+                type="button"
+                onClick={stopPlayback}
+                aria-label={labels.stop}
+                className="absolute end-4 top-4 z-20 inline-flex min-h-touch min-w-touch items-center justify-center rounded-full border border-white/20 bg-primary-950/75 text-white shadow-lg backdrop-blur-md transition-colors duration-200 hover:bg-primary-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              >
+                <X
+                  className="h-5 w-5"
+                  strokeWidth={2}
+                  aria-hidden="true"
+                />
+              </button>
+            </div>
+          ) : (
+            <div
+              key={`cover-${selectedIndex}`}
+              className={cn(
+                'absolute inset-0 h-full w-full overflow-hidden text-start transition-opacity duration-300',
+                hasValidSelectedVideo && 'group'
+              )}
+            >
+              <VideoThumbnail
+                item={selectedItem}
+                priority
+                sizes="(min-width: 1024px) 65vw, 100vw"
+              />
+
+              <span
+                aria-hidden="true"
+                className="absolute inset-0 bg-gradient-to-t from-primary-950/85 via-primary-950/15 to-primary-950/15 transition-colors duration-300 group-hover:from-primary-950/95"
+              />
+
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute start-5 top-5 z-20 inline-flex items-center gap-2 rounded-full border border-white/15 bg-primary-950/55 px-3 py-1.5 text-caption font-bold text-white backdrop-blur-md"
+              >
+                <Youtube
+                  className="h-4 w-4 fill-current"
+                  strokeWidth={1.7}
+                />
+                {labels.youtube}
+              </span>
+
+              {hasValidSelectedVideo ? (
                 <button
-                  ref={stopButtonRef}
+                  ref={playButtonRef}
                   type="button"
-                  onClick={stopPlayback}
-                  aria-label={labels.stop}
-                  className="absolute end-4 top-4 z-20 inline-flex min-h-touch min-w-touch items-center justify-center rounded-full border border-white/20 bg-primary-950/75 text-white shadow-lg backdrop-blur-md transition-colors duration-200 hover:bg-primary-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                  onClick={startPlayback}
+                  aria-label={`${labels.watch} — ${selectedItem.name}`}
+                  className="absolute inset-0 z-10 flex h-full w-full items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent"
                 >
-                  <X
-                    className="h-5 w-5"
-                    strokeWidth={2}
+                  <span
                     aria-hidden="true"
-                  />
+                    className="flex h-20 w-20 items-center justify-center rounded-full border border-white/35 bg-white/95 text-primary-900 shadow-2xl transition-[transform,background-color,color,box-shadow] duration-300 group-hover:scale-110 group-hover:bg-accent group-hover:text-accent-foreground group-hover:shadow-button-accent motion-reduce:transition-none motion-reduce:group-hover:scale-100 sm:h-24 sm:w-24"
+                  >
+                    <Play
+                      className="h-8 w-8 translate-x-0.5 fill-current rtl:-translate-x-0.5 sm:h-10 sm:w-10"
+                      strokeWidth={0}
+                    />
+                  </span>
                 </button>
-              </motion.div>
-            ) : (
-              <motion.div
-                key={`cover-${selectedIndex}`}
-                initial={
-                  shouldReduceMotion
-                    ? { opacity: 1 }
-                    : { opacity: 0, scale: 0.99 }
-                }
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{
-                  duration: shouldReduceMotion ? 0 : 0.3,
-                }}
-                className={cn(
-                  'absolute inset-0 h-full w-full overflow-hidden text-start',
-                  hasValidSelectedVideo && 'group'
-                )}
+              ) : (
+                <div
+                  role="status"
+                  className="absolute bottom-16 start-5 end-5 z-20 rounded-xl border border-warning-300/30 bg-primary-950/85 px-4 py-3 text-center text-small font-semibold text-warning-200 backdrop-blur-md"
+                >
+                  {labels.invalidVideo}
+                </div>
+              )}
+
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute bottom-5 end-5 z-20 rounded-full border border-white/15 bg-primary-950/55 px-3 py-1.5 text-caption font-bold tracking-wider text-white/75 backdrop-blur-md"
               >
-                <VideoThumbnail
-                  item={selectedItem}
-                  priority
-                  sizes="(min-width: 1024px) 65vw, 100vw"
-                />
-
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-0 bg-gradient-to-t from-primary-950/85 via-primary-950/15 to-primary-950/15 transition-colors duration-300 group-hover:from-primary-950/95"
-                />
-
-                <span
-                  aria-hidden="true"
-                  className="pointer-events-none absolute start-5 top-5 z-20 inline-flex items-center gap-2 rounded-full border border-white/15 bg-primary-950/55 px-3 py-1.5 text-caption font-bold text-white backdrop-blur-md"
-                >
-                  <Youtube
-                    className="h-4 w-4 fill-current"
-                    strokeWidth={1.7}
-                  />
-                  {labels.youtube}
-                </span>
-
-                {hasValidSelectedVideo ? (
-                  <button
-                    ref={playButtonRef}
-                    type="button"
-                    onClick={startPlayback}
-                    aria-label={`${labels.watch} — ${selectedItem.name}`}
-                    className="absolute inset-0 z-10 flex h-full w-full items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent"
-                  >
-                    <span
-                      aria-hidden="true"
-                      className="flex h-20 w-20 items-center justify-center rounded-full border border-white/35 bg-white/95 text-primary-900 shadow-2xl transition-[transform,background-color,color,box-shadow] duration-300 group-hover:scale-110 group-hover:bg-accent group-hover:text-accent-foreground group-hover:shadow-button-accent motion-reduce:transition-none motion-reduce:group-hover:scale-100 sm:h-24 sm:w-24"
-                    >
-                      <Play
-                        className="h-8 w-8 translate-x-0.5 fill-current rtl:-translate-x-0.5 sm:h-10 sm:w-10"
-                        strokeWidth={0}
-                      />
-                    </span>
-                  </button>
-                ) : (
-                  <div
-                    role="status"
-                    className="absolute bottom-16 start-5 end-5 z-20 rounded-xl border border-warning-300/30 bg-primary-950/85 px-4 py-3 text-center text-small font-semibold text-warning-200 backdrop-blur-md"
-                  >
-                    {labels.invalidVideo}
-                  </div>
-                )}
-
-                <span
-                  aria-hidden="true"
-                  className="pointer-events-none absolute bottom-5 end-5 z-20 rounded-full border border-white/15 bg-primary-950/55 px-3 py-1.5 text-caption font-bold tracking-wider text-white/75 backdrop-blur-md"
-                >
-                  {String(selectedIndex + 1).padStart(2, '0')}
-                  <span className="mx-1.5 text-white/35">/</span>
-                  {String(items.length).padStart(2, '0')}
-                </span>
-              </motion.div>
-            )}
-          </AnimatePresence>
+                {String(selectedIndex + 1).padStart(2, '0')}
+                <span className="mx-1.5 text-white/35">/</span>
+                {String(items.length).padStart(2, '0')}
+              </span>
+            </div>
+          )}
         </div>
 
         {/* Selected testimonial details */}
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.div
-            key={`details-${selectedIndex}`}
-            initial={
-              shouldReduceMotion
-                ? { opacity: 1 }
-                : { opacity: 0, y: 10 }
-            }
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -6 }}
-            transition={{
-              duration: shouldReduceMotion ? 0 : 0.3,
-            }}
-            className="relative p-6 sm:p-8"
-          >
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute -end-24 -top-20 h-56 w-56 rounded-full bg-accent/15 blur-3xl"
-            />
+        <div
+          key={`details-${selectedIndex}`}
+          className="relative p-6 sm:p-8 transition-opacity duration-300"
+        >
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -end-24 -top-20 h-56 w-56 rounded-full bg-accent/15 blur-3xl"
+          />
 
-            <div className="relative">
-              <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-start">
-                <div className="min-w-0">
-                  <p className="text-caption font-bold uppercase tracking-wider text-accent-300">
-                    {labels.nowPlaying}
-                  </p>
+          <div className="relative">
+            <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-start">
+              <div className="min-w-0">
+                <p className="text-caption font-bold uppercase tracking-wider text-accent-300">
+                  {labels.nowPlaying}
+                </p>
 
-                  <h3 className="mt-2 text-h3 font-bold text-white">
-                    {selectedItem.name}
-                  </h3>
+                <h3 className="mt-2 text-h3 font-bold text-white">
+                  {selectedItem.name}
+                </h3>
 
-                  <p className="mt-1 text-small text-white/65">
-                    {selectedItem.role}
-                  </p>
-                </div>
-
-                <Quote
-                  aria-hidden="true"
-                  strokeWidth={0}
-                  className="h-10 w-10 shrink-0 fill-accent-300 text-accent-300 rtl:-scale-x-100"
-                />
+                <p className="mt-1 text-small text-white/65">
+                  {selectedItem.role}
+                </p>
               </div>
 
-              <blockquote className="mt-6 border-t border-white/10 pt-6">
-                <p className="max-w-3xl text-body leading-relaxed text-white/80">
-                  “{selectedItem.quote}”
-                </p>
-              </blockquote>
+              <Quote
+                aria-hidden="true"
+                strokeWidth={0}
+                className="h-10 w-10 shrink-0 fill-accent-300 text-accent-300 rtl:-scale-x-100"
+              />
             </div>
-          </motion.div>
-        </AnimatePresence>
+
+            <blockquote className="mt-6 border-t border-white/10 pt-6">
+              <p className="max-w-3xl text-body leading-relaxed text-white/80">
+                “{selectedItem.quote}”
+              </p>
+            </blockquote>
+          </div>
+        </div>
       </div>
 
       {/* Video playlist */}

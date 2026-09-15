@@ -198,6 +198,7 @@ export function EnrollmentCard({ copy }: EnrollmentCardProps) {
                 <div
                   className="h-1.5 w-full overflow-hidden rounded-full bg-primary-100"
                   role="progressbar"
+                  aria-label={copy.stepOf.replace('#CURRENT#', String(step)).replace('#TOTAL#', String(TOTAL_STEPS))}
                   aria-valuemin={0}
                   aria-valuemax={100}
                   aria-valuenow={progress}
