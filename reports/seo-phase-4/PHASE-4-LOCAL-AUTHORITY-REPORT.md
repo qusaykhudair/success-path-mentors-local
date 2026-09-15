@@ -42,7 +42,7 @@ No mass Grade pages were created. All senior course codes remain anchored to the
 - **SCH3U / SCH4U** &rarr; `/en/subjects/chemistry`
 - **SPH3U / SPH4U** &rarr; `/en/subjects/physics`
 - **MTH1W / MPM2D** &rarr; `/en/subjects/math`
-- **MCV4U** &rarr; **HOLD** (404)
+- **MCV4U** &rarr; `/en/subjects/math/grade-12-calculus-vectors-mcv4u` &rarr; **HOLD** (404)
 
 ---
 
@@ -105,9 +105,9 @@ Both the visible accordion and the structured `FAQPage` JSON-LD schema update si
 - **Location Pages Restructured:** **0** (PASS)
 - **TypeScript Check (`tsc --noEmit`):** **0 errors** (PASS)
 - **Production Build (`next build`):** **851 static pages compiled cleanly** (PASS)
-- **Cannibalization Test:** **Zero competing indexable owners** (PASS)
+- **Cannibalization Test:** **No material keyword cannibalization detected in the audited Phase 4 owner set.** (PASS)
 - **Redirects:** **All 10 single-hop 301 redirects active** (PASS)
-- **HOLD Routes:** **MCV4U & English French tutoring return 404** (PASS)
+- **HOLD Routes:** **MCV4U (`/en/subjects/math/grade-12-calculus-vectors-mcv4u`), French tutoring (`/en/subjects/french`), & Arabic exam prep (`/ar/exam-preparation`) return 404** (PASS)
 - **Live Production QA:** Verified on `https://successpathmentors.net` (PASS)
 
 ---
