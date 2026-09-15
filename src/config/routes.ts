@@ -62,6 +62,22 @@ export const routePath = {
       : '/en/how-it-works';
   },
 
+  french(locale: SiteLocale): string {
+    return `/${locale}/subjects/french`;
+  },
+
+  homeworkHelp(locale: SiteLocale): string {
+    return `/${locale}/services/homework-help`;
+  },
+
+  examPreparation(locale: SiteLocale): string {
+    return `/${locale}/services/exam-preparation`;
+  },
+
+  ontarioCurriculum(locale: SiteLocale): string {
+    return `/${locale}/curriculum/ontario`;
+  },
+
   locations(locale: SiteLocale): string {
     return locale === 'ar' ? '/ar/المواقع' : '/en/locations';
   },

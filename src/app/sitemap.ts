@@ -82,6 +82,18 @@ const localizedPaths = [
     (strand) =>
       `/subjects/general-science/${strand.slug}`
   ),
+  '/subjects/french',
+  '/subjects/math/grade-12-advanced-functions-mhf4u',
+  '/subjects/math/grade-12-calculus-vectors-mcv4u',
+  '/subjects/math/grade-11-functions-mcr3u',
+  '/subjects/math/grade-12-data-management-mdm4u',
+  '/subjects/math/grade-9-math-mth1w',
+  '/subjects/math/grade-10-math-mpm2d',
+  '/subjects/chemistry/senior-chemistry-sch3u-sch4u',
+  '/subjects/physics/senior-physics-sph3u-sph4u',
+  '/services/homework-help',
+  '/services/exam-preparation',
+  '/curriculum/ontario',
 ];
 
 const frenchPaths = [
@@ -138,7 +150,11 @@ function getLocalizedPriority(
     path ===
       '/subjects/physics' ||
     path ===
-      '/subjects/general-science'
+      '/subjects/general-science' ||
+    path ===
+      '/subjects/french' ||
+    path ===
+      '/curriculum/ontario'
   ) {
     return 0.9;
   }
