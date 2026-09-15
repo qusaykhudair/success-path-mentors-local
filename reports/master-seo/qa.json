@@ -1,0 +1,16 @@
+{
+  "clusters": 125,
+  "decisionCounts": {
+    "OPTIMIZE EXISTING": 73,
+    "CREATE NEW": 1,
+    "MERGE INTO ONE PAGE": 23,
+    "HOLD / DO NOT TARGET YET": 28
+  },
+  "htmlMatrixRows": 125,
+  "fieldsPerRow": 20,
+  "existingLivePages": 80,
+  "allLivePagesHaveTitleAndH1": true,
+  "unestimatedVolumeAndKD": true,
+  "locationTargetsUnassigned": true,
+  "websiteFilesChanged": false
+}
