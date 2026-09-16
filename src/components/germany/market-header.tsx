@@ -88,7 +88,8 @@ export function MarketHeader() {
   const tutoringSublinks = [
     { href: `/de/${locale}/tutoring/one-to-one`, label: t('tutoringOneToOne', { fallback: 'One-to-One Tutoring' }), desc: locale === 'de' ? 'Maximaler individueller Fokus' : locale === 'ar' ? 'تركيز فردي كامل' : 'Personal 1-to-1 attention' },
     { href: `/de/${locale}/tutoring/small-groups`, label: t('tutoringSmallGroups', { fallback: 'Small Groups (Up to 3)' }), desc: locale === 'de' ? 'Bis zu 3 Schüler, beste Betreuung' : locale === 'ar' ? 'حتى 3 طلاب فقط' : 'Strictly up to 3 learners' },
-    { href: `/de/${locale}/tutoring/language-levels`, label: t('tutoringLanguageLevels', { fallback: 'Language Support by Level' }), desc: locale === 'de' ? 'Orientierung an GER A1–C2' : locale === 'ar' ? 'تدرج مستويات A1–C2' : 'CEFR level-based guidance' },
+    // Language level specific here
+    { href: `/de/${locale}/tutoring/language-levels`, label: t('tutoringLanguageLevels', { fallback: 'Language Support by Level' }), desc: locale === 'de' ? 'Orientierung an Sprachstufen A1–C2' : locale === 'ar' ? 'تدرج مستويات A1–C2' : 'Language level-specific guidance' },
   ];
 
   const languagesSublinks = [
@@ -118,7 +119,7 @@ export function MarketHeader() {
           : 'border-b border-primary-100/90 bg-white/95 backdrop-blur-md shadow-xs'
       )}
     >
-      <Container className="flex min-h-[4.75rem] items-center justify-between gap-3 xl:gap-4 xl:min-h-[5.25rem]">
+      <Container className="flex min-h-[4.75rem] items-center justify-between gap-2 md:gap-3 xl:gap-4 xl:min-h-[5.25rem]">
         {/* Brand Logo */}
         <Link
           href={`/de/${locale}`}
@@ -133,16 +134,16 @@ export function MarketHeader() {
             priority
             sizes="(max-width: 1024px) 240px, 320px"
             className={cn(
-              "h-12 sm:h-14 xl:h-[4.5rem] w-auto object-contain transition-all duration-300 ease-out group-hover:scale-[1.02]",
+              "h-10 sm:h-12 md:h-11 lg:h-14 xl:h-[4.5rem] w-auto object-contain transition-all duration-300 ease-out group-hover:scale-[1.02]",
               isTransparent && "brightness-0 invert drop-shadow-sm"
             )}
           />
         </Link>
 
-        {/* Center Desktop Navigation (visible on lg+ including 125% zoom) */}
+        {/* Center Desktop Navigation (visible on md+ including 125% zoom) */}
         <nav
           aria-label="Germany market navigation"
-          className="hidden items-center justify-center gap-0.5 lg:flex xl:gap-1"
+          className="hidden items-center justify-center gap-0.5 md:flex xl:gap-1"
         >
           {/* Dropdown 1: Tutoring Services */}
           <div
@@ -156,7 +157,7 @@ export function MarketHeader() {
               aria-expanded={activeDropdown === 'tutoring'}
               aria-haspopup="menu"
               className={cn(
-                'group inline-flex min-h-touch items-center gap-1 rounded-lg px-2 xl:px-2.5 py-1.5 text-[0.76rem] xl:text-[0.82rem] font-bold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap',
+                'group inline-flex min-h-touch items-center gap-1 rounded-lg px-1.5 md:px-2 xl:px-2.5 py-1.5 text-[0.72rem] md:text-[0.76rem] xl:text-[0.82rem] font-bold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap',
                 isTransparent
                   ? (activeDropdown === 'tutoring' ? 'bg-white/20 text-accent-300' : 'text-white/95 hover:bg-white/10 hover:text-white')
                   : (activeDropdown === 'tutoring' ? 'bg-primary-50 text-accent-700' : 'text-primary-800 hover:bg-primary-50 hover:text-primary-950')
@@ -198,7 +199,7 @@ export function MarketHeader() {
               aria-expanded={activeDropdown === 'languages'}
               aria-haspopup="menu"
               className={cn(
-                'group inline-flex min-h-touch items-center gap-1 rounded-lg px-2 xl:px-2.5 py-1.5 text-[0.76rem] xl:text-[0.82rem] font-bold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap',
+                'group inline-flex min-h-touch items-center gap-1 rounded-lg px-1.5 md:px-2 xl:px-2.5 py-1.5 text-[0.72rem] md:text-[0.76rem] xl:text-[0.82rem] font-bold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap',
                 isTransparent
                   ? (activeDropdown === 'languages' ? 'bg-white/20 text-accent-300' : 'text-white/95 hover:bg-white/10 hover:text-white')
                   : (activeDropdown === 'languages' ? 'bg-primary-50 text-accent-700' : 'text-primary-800 hover:bg-primary-50 hover:text-primary-950')
@@ -240,7 +241,7 @@ export function MarketHeader() {
               aria-expanded={activeDropdown === 'school'}
               aria-haspopup="menu"
               className={cn(
-                'group inline-flex min-h-touch items-center gap-1 rounded-lg px-2 xl:px-2.5 py-1.5 text-[0.76rem] xl:text-[0.82rem] font-bold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap',
+                'group inline-flex min-h-touch items-center gap-1 rounded-lg px-1.5 md:px-2 xl:px-2.5 py-1.5 text-[0.72rem] md:text-[0.76rem] xl:text-[0.82rem] font-bold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap',
                 isTransparent
                   ? (activeDropdown === 'school' ? 'bg-white/20 text-accent-300' : 'text-white/95 hover:bg-white/10 hover:text-white')
                   : (activeDropdown === 'school' ? 'bg-primary-50 text-accent-700' : 'text-primary-800 hover:bg-primary-50 hover:text-primary-950')
@@ -274,7 +275,7 @@ export function MarketHeader() {
           <Link
             href={`/de/${locale}/adults`}
             className={cn(
-              "inline-flex min-h-touch items-center rounded-lg px-2 xl:px-2.5 py-1.5 text-[0.76rem] xl:text-[0.82rem] font-bold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap",
+              "inline-flex min-h-touch items-center rounded-lg px-1.5 md:px-2 xl:px-2.5 py-1.5 text-[0.72rem] md:text-[0.76rem] xl:text-[0.82rem] font-bold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap",
               isTransparent ? "text-white/95 hover:bg-white/10 hover:text-white" : "text-primary-800 hover:bg-primary-50 hover:text-primary-950"
             )}
           >
@@ -285,7 +286,7 @@ export function MarketHeader() {
           <a
             href={`/de/${locale}#how-it-works`}
             className={cn(
-              "inline-flex min-h-touch items-center rounded-lg px-2.5 py-1.5 text-[0.76rem] xl:text-[0.82rem] font-bold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap",
+              "inline-flex min-h-touch items-center rounded-lg px-1.5 md:px-2 xl:px-2.5 py-1.5 text-[0.72rem] md:text-[0.76rem] xl:text-[0.82rem] font-bold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap",
               isTransparent ? "text-white/95 hover:bg-white/10 hover:text-white" : "text-primary-800 hover:bg-primary-50 hover:text-primary-950"
             )}
           >
@@ -296,7 +297,7 @@ export function MarketHeader() {
           <a
             href={`/de/${locale}#pricing`}
             className={cn(
-              "inline-flex min-h-touch items-center rounded-lg px-2.5 py-1.5 text-[0.76rem] xl:text-[0.82rem] font-bold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap",
+              "inline-flex min-h-touch items-center rounded-lg px-1.5 md:px-2 xl:px-2.5 py-1.5 text-[0.72rem] md:text-[0.76rem] xl:text-[0.82rem] font-bold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap",
               isTransparent ? "text-white/95 hover:bg-white/10 hover:text-white" : "text-primary-800 hover:bg-primary-50 hover:text-primary-950"
             )}
           >
@@ -304,8 +305,8 @@ export function MarketHeader() {
           </a>
         </nav>
 
-        {/* Right Desktop Action Cluster (visible on lg+) */}
-        <div className="hidden items-center gap-2 lg:flex xl:gap-2.5">
+        {/* Right Desktop Action Cluster (visible on md+) */}
+        <div className="hidden items-center gap-1.5 md:flex lg:gap-2 xl:gap-2.5">
           <GlobalLanguageSelector isGermanyContext={true} isTransparent={isTransparent} />
 
           {/* Login Link (shown on 2xl+ to keep 1024-1536px compact) */}
@@ -343,15 +344,15 @@ export function MarketHeader() {
           {/* Free Trial CTA */}
           <Link
             href={`/de/${locale}/trial`}
-            className="inline-flex h-9 xl:h-10 items-center justify-center gap-1.5 xl:gap-2 rounded-full bg-accent-600 px-3.5 xl:px-5 text-xs xl:text-sm font-semibold text-white shadow-sm hover:bg-accent-500 transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap"
+            className="inline-flex h-8 md:h-9 xl:h-10 items-center justify-center gap-1 md:gap-1.5 xl:gap-2 rounded-full bg-accent-600 px-3 md:px-3.5 xl:px-5 text-xs xl:text-sm font-semibold text-white shadow-sm hover:bg-accent-500 transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap"
           >
             <span>{tNav('bookFreeSession')}</span>
             <ArrowIcon className="h-3.5 w-3.5 xl:h-4 xl:w-4 shrink-0" />
           </Link>
         </div>
 
-        {/* Mobile / Tablet Controls (< lg) */}
-        <div className="flex items-center gap-2 lg:hidden">
+        {/* Mobile Controls (< md) */}
+        <div className="flex items-center gap-2 md:hidden">
           <GlobalLanguageSelector isGermanyContext={true} isTransparent={isTransparent} />
 
           <Link
@@ -383,7 +384,7 @@ export function MarketHeader() {
         <div
           role="dialog"
           aria-modal="true"
-          className="fixed inset-x-0 top-[4.25rem] z-50 flex h-[calc(100vh-4.25rem)] flex-col justify-between overflow-y-auto bg-white p-6 shadow-2xl xl:hidden animate-in slide-in-from-top-2 duration-200"
+          className="fixed inset-x-0 top-[4.25rem] z-50 flex h-[calc(100vh-4.25rem)] flex-col justify-between overflow-y-auto bg-white p-6 shadow-2xl md:hidden animate-in slide-in-from-top-2 duration-200"
         >
           <div className="flex flex-col gap-4">
             <nav className="flex flex-col gap-1 border-b border-primary-100 pb-4">

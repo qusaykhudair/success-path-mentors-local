@@ -247,7 +247,7 @@ export function N8nChat({ locale }: N8nChatProps) {
       try {
         const [{ createChat }] = await Promise.all([
           import('@n8n/chat'),
-          // @ts-expect-error CSS file has no typescript declarations
+          // @ts-ignore CSS file has no typescript declarations
           import('@n8n/chat/style.css'),
         ]);
 

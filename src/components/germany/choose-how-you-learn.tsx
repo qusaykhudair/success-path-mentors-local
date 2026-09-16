@@ -87,7 +87,8 @@ export function ChooseHowYouLearn() {
             : 'English, German, French, and Arabic tutoring organized systematically around the learner’s current level and goals.',
         points: [
           locale === 'de' ? 'Einstufungs- & Bedarfsanalyse' : locale === 'ar' ? 'تحديد دقيق للمستوى والاحتياج' : 'Placement & diagnostic assessment',
-          locale === 'de' ? 'Orientierung an GER-Referenzstufen' : locale === 'ar' ? 'استرشاد بمعايير الإطار الأوروبي' : 'CEFR reference framework guidance',
+          // Language level specific here
+          locale === 'de' ? 'Orientierung an Referenzstufen' : locale === 'ar' ? 'استرشاد بمعايير المستويات اللغوية' : 'Language level-specific guidance',
           locale === 'de' ? 'Klare Fortschrittsmeilensteine' : locale === 'ar' ? 'مراحل ومحطات تقدم واضحة' : 'Step-by-step milestone reviews',
         ],
         cta: locale === 'de' ? 'Mein Sprachniveau finden' : locale === 'ar' ? 'حدد مستواك اللغوي' : 'Find My Level',
