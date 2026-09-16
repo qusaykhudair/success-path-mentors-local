@@ -283,6 +283,7 @@ export async function Hero({
               ),
               languages: t.raw('enrollment.languages'),
             }}
+            locale={locale}
           />
         </div>
       </Container>

@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowRight, ArrowLeft, Loader2, PartyPopper } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import { ArrowRight, ArrowLeft, Loader2 } from 'lucide-react';
 
 import dynamic from 'next/dynamic';
 import type { EnrollmentPayload, EnrollmentCardProps } from './enrollment-types';
@@ -21,13 +22,14 @@ const EMPTY: EnrollmentPayload = {
 
 const TOTAL_STEPS = 3;
 
-export function EnrollmentCardController({ copy }: EnrollmentCardProps) {
+export function EnrollmentCardController({ copy, locale = 'en' }: EnrollmentCardProps) {
+  const router = useRouter();
   const [step, setStep] = useState(1);
   const [data, setData] = useState<EnrollmentPayload>(EMPTY);
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'error'>('idle');
 
-  const progress = status === 'success' ? 100 : Math.round((step / TOTAL_STEPS) * 100);
+  const progress = Math.round((step / TOTAL_STEPS) * 100);
 
   function update<K extends keyof EnrollmentPayload>(key: K, value: EnrollmentPayload[K]) {
     setData((d) => ({ ...d, [key]: value }));
@@ -63,17 +65,22 @@ export function EnrollmentCardController({ copy }: EnrollmentCardProps) {
   }
 
   async function handleSubmit() {
+    if (status === 'submitting') return;
     if (!validateStep(3)) return;
+
     setStatus('submitting');
+
+    // Safe conversion handoff to registration page:
+    // Missing legal and academic requirements (guardian relationship, student name,
+    // curriculum, schedule preferences, privacy consent) must not be fabricated.
+    // Transition cleanly to /register with zero PII in query parameters.
+    const targetUrl = `/${locale}/register`;
     try {
-      // ============================================================
-      // ENROLLMENT BACKEND INTEGRATION REQUIRED
-      // No approved backend/LMS enrollment endpoint exists in the repository.
-      // As per strict specification: do NOT simulate fake success in production.
-      // ============================================================
-      throw new Error('ENROLLMENT_BACKEND_INTEGRATION_REQUIRED');
+      router.push(targetUrl);
     } catch {
-      setStatus('error');
+      if (typeof window !== 'undefined') {
+        window.location.assign(targetUrl);
+      }
     }
   }
 
@@ -89,19 +96,8 @@ export function EnrollmentCardController({ copy }: EnrollmentCardProps) {
   }
 
   return (
-    
-        <div className="p-6">
-          {status === 'success' ? (
-            <div className="flex flex-col items-center py-8 text-center">
-              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-green-50 text-green-600">
-                <PartyPopper className="h-7 w-7" strokeWidth={1.75} aria-hidden="true" />
-              </span>
-              <h2 className="mt-4 text-h4 font-bold text-primary">{copy.successTitle}</h2>
-              <p className="mt-2 text-small text-ink-secondary">{copy.successBody}</p>
-            </div>
-          ) : (
-            <>
-              {/* Progress */}
+    <div className="p-6">
+      {/* Progress */}
               <div className="mb-6">
                 <div
                   className="h-1.5 w-full overflow-hidden rounded-full bg-primary-100"
@@ -213,8 +209,6 @@ export function EnrollmentCardController({ copy }: EnrollmentCardProps) {
               </div>
 
               <p className="mt-4 text-center text-caption text-ink-secondary">{copy.reassurance}</p>
-            </>
-          )}
-        </div>
+    </div>
   );
 }

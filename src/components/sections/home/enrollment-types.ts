@@ -57,5 +57,6 @@ export interface EnrollmentCardCopy {
 
 export interface EnrollmentCardProps {
   copy: EnrollmentCardCopy;
+  locale?: string;
 }
 

@@ -84,7 +84,7 @@ export const ontarioMathCourses: Record<
       relatedLinkText: 'Grade 12 Advanced Functions & Pre-Calculus',
       relatedLinkHref: '/en/subjects/math/advanced-precalculus',
       examLinkText: 'school exam preparation tutoring',
-      examLinkHref: '/en/exam-preparation',
+      examLinkHref: '/en/services/exam-preparation',
       faqsHeading: 'Frequently Asked Questions About MCR3U Tutoring',
       faqs: [
         {
@@ -152,7 +152,7 @@ export const ontarioMathCourses: Record<
       relatedLinkText: 'الدوال المتقدمة والرياضيات ما قبل التفاضل والتكامل',
       relatedLinkHref: '/ar/subjects/math/advanced-precalculus',
       examLinkText: 'دروس الاستعداد للاختبارات المدرسية',
-      examLinkHref: '/en/exam-preparation',
+      examLinkHref: '/en/services/exam-preparation',
       faqsHeading: 'الأسئلة الشائعة حول دروس مقرر MCR3U',
       faqs: [
         {
@@ -224,7 +224,7 @@ export const ontarioMathCourses: Record<
       relatedLinkText: 'Grade 11 Functions (MCR3U) foundations',
       relatedLinkHref: '/en/subjects/math/functions',
       examLinkText: 'targeted school exam preparation',
-      examLinkHref: '/en/exam-preparation',
+      examLinkHref: '/en/services/exam-preparation',
       faqsHeading: 'Frequently Asked Questions About MHF4U Tutoring',
       faqs: [
         {
@@ -294,7 +294,7 @@ export const ontarioMathCourses: Record<
       relatedLinkText: 'أسس دوال الصف الحادي عشر (MCR3U)',
       relatedLinkHref: '/ar/subjects/math/functions',
       examLinkText: 'دروس الاستعداد للاختبارات المدرسية',
-      examLinkHref: '/en/exam-preparation',
+      examLinkHref: '/en/services/exam-preparation',
       faqsHeading: 'الأسئلة الشائعة حول دروس مقرر MHF4U',
       faqs: [
         {
@@ -364,7 +364,7 @@ export const ontarioMathCourses: Record<
       relatedLinkText: 'explore all mathematics curriculum pathways',
       relatedLinkHref: '/en/subjects/math',
       examLinkText: 'school exam preparation tutoring',
-      examLinkHref: '/en/exam-preparation',
+      examLinkHref: '/en/services/exam-preparation',
       faqsHeading: 'Frequently Asked Questions About MDM4U Tutoring',
       faqs: [
         {
@@ -432,7 +432,7 @@ export const ontarioMathCourses: Record<
       relatedLinkText: 'استكشاف جميع مسارات منهج الرياضيات',
       relatedLinkHref: '/ar/subjects/math',
       examLinkText: 'دروس الاستعداد للاختبارات المدرسية',
-      examLinkHref: '/en/exam-preparation',
+      examLinkHref: '/en/services/exam-preparation',
       faqsHeading: 'الأسئلة الشائعة حول دروس مقرر MDM4U',
       faqs: [
         {

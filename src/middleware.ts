@@ -62,8 +62,9 @@ const PERMANENT_REDIRECTS: Record<string, string> = {
   '/services/homework-help': '/en',
   '/en/curriculum/ontario': '/en/locations/canada/ontario/curriculum',
   '/curriculum/ontario': '/en/locations/canada/ontario/curriculum',
-  '/en/services/exam-preparation': '/en/exam-preparation',
-  '/services/exam-preparation': '/en/exam-preparation',
+  '/services/exam-preparation': '/en/services/exam-preparation',
+  '/en/exam-preparation': '/en/services/exam-preparation',
+  '/exam-preparation': '/en/services/exam-preparation',
 };
 
 const HOLD_ROUTES = [
