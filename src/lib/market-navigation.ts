@@ -55,14 +55,26 @@ export function parseNavigationContext(pathname: string): NavigationContext {
   
   if (market && market.publicSlug) {
     // Germany market (or any future prefixed market)
-    // Example: /de/en/trial -> segments: ['de', 'en', 'trial']
-    // Root segment matches market.publicSlug.
-    const languageSegment = segments.length > 1 ? segments[1] : market.defaultLanguage;
-    const isSupported = isMarketLanguage(market.id, languageSegment);
+    // Examples:
+    // /de -> segments: ['de'] -> locale: 'de', childSegments: []
+    // /de/register -> segments: ['de', 'register'] -> locale: 'de', childSegments: ['register']
+    // /de/en/register -> segments: ['de', 'en', 'register'] -> locale: 'en', childSegments: ['register']
+    // /de/de/register -> segments: ['de', 'de', 'register'] -> locale: 'de', childSegments: ['register']
+    const rawSecondSegment = segments.length > 1 ? segments[1] : undefined;
     
-    // If not supported, we assume it's just a malformed or default path
-    const resolvedLanguage = isSupported ? languageSegment : market.defaultLanguage;
-    const childSegments = isSupported ? segments.slice(2) : segments.slice(1);
+    if (rawSecondSegment === market.defaultLanguage) {
+      // Legacy redundant language prefix (e.g. /de/de or /de/de/register)
+      return {
+        marketId: market.id,
+        locale: market.defaultLanguage,
+        childSegments: segments.slice(2),
+        isFrenchProgramme: false,
+      };
+    }
+
+    const isSupportedNonDefault = rawSecondSegment ? isMarketLanguage(market.id, rawSecondSegment) : false;
+    const resolvedLanguage = isSupportedNonDefault ? (rawSecondSegment as MarketLanguage) : market.defaultLanguage;
+    const childSegments = isSupportedNonDefault ? segments.slice(2) : segments.slice(1);
 
     return {
       marketId: market.id,
@@ -104,7 +116,6 @@ export function getLanguageSwitchPath(context: NavigationContext, targetLocale: 
   }
 
   const marketId = context.marketId || 'north-america';
-  const market = getMarketConfig(marketId);
 
   if (!isMarketLanguage(marketId, targetLocale)) {
     throw new RangeError(`Unsupported language '${targetLocale}' for market '${marketId}'`);
@@ -147,7 +158,7 @@ export function getMarketSwitchPath(
   }
 
   if (targetMarketId === 'germany') {
-    return `/${market.publicSlug}/${market.defaultLanguage}`;
+    return getMarketLocalePath(targetMarketId, market.defaultLanguage);
   }
   // North America (Global)
   return `/${market.defaultLanguage}`;

@@ -107,6 +107,14 @@ export default function middleware(request: NextRequest) {
     return applySecurityHeaders(new NextResponse(null, { status: 404 }), isLocal);
   }
 
+  // Enforce 301 Permanent Redirects for legacy /de/de redundant market paths
+  if (pathname === '/de/de' || pathname.startsWith('/de/de/')) {
+    const targetPath = pathname === '/de/de' ? '/de' : pathname.replace(/^\/de\/de(?:\/|$)/, '/de/');
+    const url = new URL(targetPath, request.url);
+    url.search = request.nextUrl.search;
+    return applySecurityHeaders(NextResponse.redirect(url, 301), isLocal);
+  }
+
   if (isReservedMarketPathname(pathname)) {
     return applySecurityHeaders(NextResponse.next(), isLocal);
   }

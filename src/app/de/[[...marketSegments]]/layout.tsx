@@ -7,6 +7,7 @@ import { FloatingWhatsAppButton } from '@/components/layout/floating-whatsapp-bu
 import { BackToTopButton } from '@/components/layout/back-to-top-button';
 import { N8nChat } from '@/components/chat/n8n-chat';
 import { getMarketMessages } from '@/lib/market-messages';
+import { resolveMarketRoute } from '@/lib/market-routing';
 import { cn } from '@/lib/utils';
 import '@n8n/chat/style.css';
 
@@ -18,14 +19,15 @@ export default async function MarketSegmentsLayout({
   params: Promise<{ marketSegments?: string[] }>;
 }) {
   const { marketSegments } = await params;
-  const locale = (marketSegments && marketSegments[0]) || 'de';
+  const route = resolveMarketRoute('germany', marketSegments);
+  if (!route) notFound();
 
-  if (!['de', 'en', 'ar'].includes(locale)) notFound();
+  const locale = route.language;
 
   let messages;
   try {
     messages = await getMarketMessages('germany', locale as 'de' | 'en' | 'ar');
-  } catch (error) {
+  } catch {
     notFound();
   }
 

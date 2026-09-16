@@ -6,6 +6,7 @@ import { User, Users, Compass, ArrowRight, ArrowLeft, CheckCircle2, Sparkles } f
 import { Container } from '@/components/ui/container';
 import { ScrollReveal } from './scroll-reveal';
 import { parseNavigationContext } from '@/lib/market-navigation';
+import { getMarketChildPath } from '@/lib/market-routing';
 import type { TutoringLocale } from '@/content/germany-tutoring/types';
 
 export function ChooseHowYouLearn() {
@@ -32,8 +33,8 @@ export function ChooseHowYouLearn() {
     cards: [
       {
         id: 'one-to-one',
-        href: `/de/${locale}/tutoring/one-to-one`,
-        trialHref: `/de/${locale}/trial?service=one-to-one`,
+        href: getMarketChildPath('germany', locale, ['tutoring', 'one-to-one']),
+        trialHref: `${getMarketChildPath('germany', locale, ['trial'])}?service=one-to-one`,
         icon: User,
         badge: locale === 'de' ? 'Höchste Individualität' : locale === 'ar' ? 'تركيز فردي كامل' : 'Personal Focus',
         title: locale === 'de' ? 'Individuelle Einzelnachhilfe' : locale === 'ar' ? 'دروس فردية خاصة (1 لـ 1)' : 'One-to-One Tutoring',
@@ -53,8 +54,8 @@ export function ChooseHowYouLearn() {
       },
       {
         id: 'small-groups',
-        href: `/de/${locale}/tutoring/small-groups`,
-        trialHref: `/de/${locale}/trial?service=small-group`,
+        href: getMarketChildPath('germany', locale, ['tutoring', 'small-groups']),
+        trialHref: `${getMarketChildPath('germany', locale, ['trial'])}?service=small-group`,
         icon: Users,
         badge: locale === 'de' ? 'Maximal 3 Lernende' : locale === 'ar' ? 'حتى 3 طلاب فقط' : 'Up to 3 Learners',
         title: locale === 'de' ? 'Smarte Kleingruppen — Bis zu 3' : locale === 'ar' ? 'مجموعات صغيرة — حتى 3 طلاب' : 'Small Groups — Up to 3',
@@ -74,8 +75,8 @@ export function ChooseHowYouLearn() {
       },
       {
         id: 'language-levels',
-        href: `/de/${locale}/tutoring/language-levels`,
-        trialHref: `/de/${locale}/trial?service=language-levels`,
+        href: getMarketChildPath('germany', locale, ['tutoring', 'language-levels']),
+        trialHref: `${getMarketChildPath('germany', locale, ['trial'])}?service=language-levels`,
         icon: Compass,
         badge: locale === 'de' ? 'Stufenbasiert (A1–C2)' : locale === 'ar' ? 'تدرج مستويات A1–C2' : 'Level-Based (A1–C2)',
         title: locale === 'de' ? 'Sprachförderung nach Stufen' : locale === 'ar' ? 'دعم لغوي منظم حسب المستوى' : 'Language Support by Level',

@@ -25,6 +25,7 @@ import {
 import { Container } from '@/components/ui/container';
 import { ScrollReveal } from './scroll-reveal';
 import { getMarketConfig } from '@/config/markets';
+import { getMarketChildPath, getMarketLocalePath } from '@/lib/market-routing';
 import { CEFR_DISCLAIMER } from '@/content/germany-tutoring/pages';
 import type { TutoringLocale, TutoringPageContent } from '@/content/germany-tutoring/types';
 import { cn } from '@/lib/utils';
@@ -53,8 +54,8 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
   const ArrowIcon = isRtl ? ArrowLeft : ArrowRight;
   const marketConfig = getMarketConfig('germany');
 
-  const trialHref = `/de/${locale}/trial?service=${encodeURIComponent(page.serviceId)}`;
-  const assessmentHref = `/de/${locale}/trial?service=${encodeURIComponent(page.serviceId)}&intent=assessment`;
+  const trialHref = `${getMarketChildPath('germany', locale, ['trial'])}?service=${encodeURIComponent(page.serviceId)}`;
+  const assessmentHref = `${getMarketChildPath('germany', locale, ['trial'])}?service=${encodeURIComponent(page.serviceId)}&intent=assessment`;
   const whatsappUrl = `https://wa.me/${marketConfig.contact.whatsapp}?text=${encodeURIComponent(
     locale === 'de'
       ? `Hallo, ich interessiere mich für: ${page.hero.title}`
@@ -107,7 +108,7 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
         <Container className="relative z-10">
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs font-semibold text-primary-500">
-            <Link href={`/de/${locale}`} className="hover:text-primary-900 transition-colors">
+            <Link href={getMarketLocalePath('germany', locale)} className="hover:text-primary-900 transition-colors">
               {locale === 'de' ? 'Startseite' : locale === 'ar' ? 'الرئيسية' : 'Home'}
             </Link>
             <span>/</span>

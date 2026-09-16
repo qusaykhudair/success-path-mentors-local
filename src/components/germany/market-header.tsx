@@ -10,6 +10,7 @@ import { useTranslations } from 'next-intl';
 import { parseNavigationContext } from '@/lib/market-navigation';
 import { Container } from '@/components/ui/container';
 import { getMarketConfig } from '@/config/markets';
+import { getMarketChildPath, getMarketLocalePath } from '@/lib/market-routing';
 import { GlobalLanguageSelector } from '@/components/layout/global-language-selector';
 import { cn } from '@/lib/utils';
 
@@ -30,7 +31,9 @@ export function MarketHeader() {
   const isRtl = locale === 'ar';
   const ArrowIcon = isRtl ? ArrowLeft : ArrowRight;
 
-  const isHomePage = /^\/de(\/(de|en|ar))?\/?$/.test(pathname);
+  const homePath = getMarketLocalePath('germany', locale);
+
+  const isHomePage = pathname === '/de' || pathname === '/de/' || pathname === `/de/${locale}` || pathname === `/de/${locale}/`;
   const isTransparent = isHomePage && !isScrolled;
 
   useEffect(() => {
@@ -61,21 +64,16 @@ export function MarketHeader() {
         setActiveDropdown(null);
       }
     }
-    if (mobileMenuOpen) {
-      document.addEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = '';
-    };
-  }, [mobileMenuOpen]);
 
-  const handleDropdownEnter = (id: string) => {
-    if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
-    setActiveDropdown(id);
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  const handleDropdownEnter = (menu: string) => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
+    setActiveDropdown(menu);
   };
 
   const handleDropdownLeave = () => {
@@ -86,23 +84,23 @@ export function MarketHeader() {
 
   // Nav categories
   const tutoringSublinks = [
-    { href: `/de/${locale}/tutoring/one-to-one`, label: t('tutoringOneToOne', { fallback: 'One-to-One Tutoring' }), desc: locale === 'de' ? 'Maximaler individueller Fokus' : locale === 'ar' ? 'تركيز فردي كامل' : 'Personal 1-to-1 attention' },
-    { href: `/de/${locale}/tutoring/small-groups`, label: t('tutoringSmallGroups', { fallback: 'Small Groups (Up to 3)' }), desc: locale === 'de' ? 'Bis zu 3 Schüler, beste Betreuung' : locale === 'ar' ? 'حتى 3 طلاب فقط' : 'Strictly up to 3 learners' },
+    { href: getMarketChildPath('germany', locale, ['tutoring', 'one-to-one']), label: t('tutoringOneToOne', { fallback: 'One-to-One Tutoring' }), desc: locale === 'de' ? 'Maximaler individueller Fokus' : locale === 'ar' ? 'تركيز فردي كامل' : 'Personal 1-to-1 attention' },
+    { href: getMarketChildPath('germany', locale, ['tutoring', 'small-groups']), label: t('tutoringSmallGroups', { fallback: 'Small Groups (Up to 3)' }), desc: locale === 'de' ? 'Bis zu 3 Schüler, beste Betreuung' : locale === 'ar' ? 'حتى 3 طلاب فقط' : 'Strictly up to 3 learners' },
     // Language level specific here
-    { href: `/de/${locale}/tutoring/language-levels`, label: t('tutoringLanguageLevels', { fallback: 'Language Support by Level' }), desc: locale === 'de' ? 'Orientierung an Sprachstufen A1–C2' : locale === 'ar' ? 'تدرج مستويات A1–C2' : 'Language level-specific guidance' },
+    { href: getMarketChildPath('germany', locale, ['tutoring', 'language-levels']), label: t('tutoringLanguageLevels', { fallback: 'Language Support by Level' }), desc: locale === 'de' ? 'Orientierung an Sprachstufen A1–C2' : locale === 'ar' ? 'تدرج مستويات A1–C2' : 'Language level-specific guidance' },
   ];
 
   const languagesSublinks = [
-    { href: `/de/${locale}/languages/german`, label: t('langGerman', { fallback: 'German' }), desc: locale === 'de' ? 'Schule, Alltag & telc/Goethe' : locale === 'ar' ? 'مناهج المدارس وامتحانات Goethe/telc' : 'School, conversation & exams' },
-    { href: `/de/${locale}/languages/english`, label: t('langEnglish', { fallback: 'English' }), desc: locale === 'de' ? 'Schulenglisch & Konversation' : locale === 'ar' ? 'تقوية المدارس والمحادثة' : 'School support & fluency' },
-    { href: `/de/${locale}/languages/french`, label: t('langFrench', { fallback: 'French' }), desc: locale === 'de' ? '2. Fremdsprache & DELF' : locale === 'ar' ? 'اللغة الثانية وامتحانات DELF' : 'School French & DELF prep' },
-    { href: `/de/${locale}/languages/arabic`, label: t('langArabic', { fallback: 'Arabic' }), desc: locale === 'de' ? 'Herkunftssprache & Lesen' : locale === 'ar' ? 'لأبناء الجاليات والقراءة والكتابة' : 'Heritage literacy & basics' },
+    { href: getMarketChildPath('germany', locale, ['languages', 'german']), label: t('langGerman', { fallback: 'German' }), desc: locale === 'de' ? 'Schule, Alltag & telc/Goethe' : locale === 'ar' ? 'مناهج المدارس وامتحانات Goethe/telc' : 'School, conversation & exams' },
+    { href: getMarketChildPath('germany', locale, ['languages', 'english']), label: t('langEnglish', { fallback: 'English' }), desc: locale === 'de' ? 'Schulenglisch & Konversation' : locale === 'ar' ? 'تقوية المدارس والمحادثة' : 'School support & fluency' },
+    { href: getMarketChildPath('germany', locale, ['languages', 'french']), label: t('langFrench', { fallback: 'French' }), desc: locale === 'de' ? '2. Fremdsprache & DELF' : locale === 'ar' ? 'اللغة الثانية وامتحانات DELF' : 'School French & DELF prep' },
+    { href: getMarketChildPath('germany', locale, ['languages', 'arabic']), label: t('langArabic', { fallback: 'Arabic' }), desc: locale === 'de' ? 'Herkunftssprache & Lesen' : locale === 'ar' ? 'لأبناء الجاليات والقراءة والكتابة' : 'Heritage literacy & basics' },
   ];
 
   const schoolSublinks = [
-    { href: `/de/${locale}/school/grades-1-6`, label: t('schoolGrades1To6', { fallback: 'Grades 1–6' }), desc: locale === 'de' ? 'Grundschule & Orientierungsstufe' : locale === 'ar' ? 'المرحلة الابتدائية والتأسيس' : 'Foundation years & math basics' },
-    { href: `/de/${locale}/school/grades-7-9`, label: t('schoolGrades7To9', { fallback: 'Grades 7–9' }), desc: locale === 'de' ? 'Mittelstufe & Lernlücken schließen' : locale === 'ar' ? 'المرحلة المتوسطة وسد الفجوات' : 'Middle years & gap recovery' },
-    { href: `/de/${locale}/school/grades-10-12`, label: t('schoolGrades10To12', { fallback: 'Grades 10–12' }), desc: locale === 'de' ? 'Oberstufe & Abiturvorbereitung' : locale === 'ar' ? 'المرحلة الثانوية والشهادات' : 'Senior school & graduation' },
+    { href: getMarketChildPath('germany', locale, ['school', 'grades-1-6']), label: t('schoolGrades1To6', { fallback: 'Grades 1–6' }), desc: locale === 'de' ? 'Grundschule & Orientierungsstufe' : locale === 'ar' ? 'المرحلة الابتدائية والتأسيس' : 'Foundation years & math basics' },
+    { href: getMarketChildPath('germany', locale, ['school', 'grades-7-9']), label: t('schoolGrades7To9', { fallback: 'Grades 7–9' }), desc: locale === 'de' ? 'Mittelstufe & Lernlücken schließen' : locale === 'ar' ? 'المرحلة المتوسطة وسد الفجوات' : 'Middle years & gap recovery' },
+    { href: getMarketChildPath('germany', locale, ['school', 'grades-10-12']), label: t('schoolGrades10To12', { fallback: 'Grades 10–12' }), desc: locale === 'de' ? 'Oberstufe & Abiturvorbereitung' : locale === 'ar' ? 'المرحلة الثانوية والشهادات' : 'Senior school & graduation' },
   ];
 
   const toggleMobileAccordion = (id: string) => {
@@ -122,7 +120,7 @@ export function MarketHeader() {
       <Container className="flex min-h-[4.75rem] items-center justify-between gap-2 md:gap-3 xl:gap-4 xl:min-h-[5.25rem]">
         {/* Brand Logo */}
         <Link
-          href={`/de/${locale}`}
+          href={homePath}
           aria-label={tNav('home')}
           className="group inline-flex shrink-0 items-center rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
@@ -273,7 +271,7 @@ export function MarketHeader() {
 
           {/* Adults Link */}
           <Link
-            href={`/de/${locale}/adults`}
+            href={getMarketChildPath('germany', locale, ['adults'])}
             className={cn(
               "inline-flex min-h-touch items-center rounded-lg px-1.5 md:px-2 xl:px-2.5 py-1.5 text-[0.72rem] md:text-[0.76rem] xl:text-[0.82rem] font-bold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap",
               isTransparent ? "text-white/95 hover:bg-white/10 hover:text-white" : "text-primary-800 hover:bg-primary-50 hover:text-primary-950"
@@ -284,7 +282,7 @@ export function MarketHeader() {
 
           {/* How It Works */}
           <a
-            href={`/de/${locale}#how-it-works`}
+            href={`${homePath}#how-it-works`}
             className={cn(
               "inline-flex min-h-touch items-center rounded-lg px-1.5 md:px-2 xl:px-2.5 py-1.5 text-[0.72rem] md:text-[0.76rem] xl:text-[0.82rem] font-bold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap",
               isTransparent ? "text-white/95 hover:bg-white/10 hover:text-white" : "text-primary-800 hover:bg-primary-50 hover:text-primary-950"
@@ -295,7 +293,7 @@ export function MarketHeader() {
 
           {/* Pricing */}
           <a
-            href={`/de/${locale}#pricing`}
+            href={`${homePath}#pricing`}
             className={cn(
               "inline-flex min-h-touch items-center rounded-lg px-1.5 md:px-2 xl:px-2.5 py-1.5 text-[0.72rem] md:text-[0.76rem] xl:text-[0.82rem] font-bold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap",
               isTransparent ? "text-white/95 hover:bg-white/10 hover:text-white" : "text-primary-800 hover:bg-primary-50 hover:text-primary-950"
@@ -311,7 +309,7 @@ export function MarketHeader() {
 
           {/* Login Link (shown on 2xl+ to keep 1024-1536px compact) */}
           <Link
-            href={`/de/${locale}/login`}
+            href={getMarketChildPath('germany', locale, ['login'])}
             className={cn(
               "hidden 2xl:inline-flex h-10 items-center justify-center rounded-full border px-4 text-sm font-semibold shadow-2xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap",
               isTransparent
@@ -343,7 +341,7 @@ export function MarketHeader() {
 
           {/* Free Trial CTA */}
           <Link
-            href={`/de/${locale}/trial`}
+            href={getMarketChildPath('germany', locale, ['trial'])}
             className="inline-flex h-8 md:h-9 xl:h-10 items-center justify-center gap-1 md:gap-1.5 xl:gap-2 rounded-full bg-accent-600 px-3 md:px-3.5 xl:px-5 text-xs xl:text-sm font-semibold text-white shadow-sm hover:bg-accent-500 transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap"
           >
             <span>{tNav('bookFreeSession')}</span>
@@ -356,7 +354,7 @@ export function MarketHeader() {
           <GlobalLanguageSelector isGermanyContext={true} isTransparent={isTransparent} />
 
           <Link
-            href={`/de/${locale}/trial`}
+            href={getMarketChildPath('germany', locale, ['trial'])}
             className="inline-flex min-h-touch items-center justify-center rounded-full bg-accent-600 px-3 py-1.5 text-xs font-bold text-white shadow-2xs hover:bg-accent-500 transition-colors whitespace-nowrap"
           >
             {tNav('bookFreeSession')}
@@ -468,7 +466,7 @@ export function MarketHeader() {
 
               {/* Direct links */}
               <Link
-                href={`/de/${locale}/adults`}
+                href={getMarketChildPath('germany', locale, ['adults'])}
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-bold text-primary-950 hover:bg-primary-50"
               >
@@ -477,7 +475,7 @@ export function MarketHeader() {
               </Link>
 
               <a
-                href={`/de/${locale}#how-it-works`}
+                href={`${homePath}#how-it-works`}
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-bold text-primary-950 hover:bg-primary-50"
               >
@@ -486,7 +484,7 @@ export function MarketHeader() {
               </a>
 
               <a
-                href={`/de/${locale}#pricing`}
+                href={`${homePath}#pricing`}
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-bold text-primary-950 hover:bg-primary-50"
               >
@@ -498,7 +496,7 @@ export function MarketHeader() {
             {/* Auth Buttons */}
             <div className="flex flex-col gap-2">
               <Link
-                href={`/de/${locale}/login`}
+                href={getMarketChildPath('germany', locale, ['login'])}
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex min-h-touch w-full items-center justify-center rounded-xl border border-primary-200 bg-white py-2.5 text-sm font-semibold text-primary-900 shadow-xs hover:bg-primary-50"
               >
@@ -510,7 +508,7 @@ export function MarketHeader() {
           {/* Bottom Actions */}
           <div className="mt-6 flex flex-col gap-3 border-t border-primary-100 pt-5">
             <Link
-              href={`/de/${locale}/trial`}
+              href={getMarketChildPath('germany', locale, ['trial'])}
               onClick={() => setMobileMenuOpen(false)}
               className="flex min-h-touch w-full items-center justify-center gap-2 rounded-2xl bg-accent-600 py-3.5 text-base font-bold text-white shadow-md hover:bg-accent-500"
             >

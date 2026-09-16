@@ -30,7 +30,7 @@ export const germanyPrivacyPolicyContent: Record<'de' | 'en' | 'ar', LegalPageCo
         id: 'controller',
         title: '1. Verantwortliche Stelle und Kontakt',
         paragraphs: [
-          `Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze für die Angebote unter /de/de, /de/en und /de/ar ist:`,
+          `Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze für die Angebote unter /de, /de/en und /de/ar ist:`,
           `${germanyLegalConfig.legalEntityName}`,
           `Geschäftsbezeichnung: ${germanyLegalConfig.brandName}`,
           `Anschrift: ${germanyLegalConfig.registeredAddress}`,
@@ -44,7 +44,7 @@ export const germanyPrivacyPolicyContent: Record<'de' | 'en' | 'ar', LegalPageCo
         id: 'scope',
         title: '2. Geltungsbereich',
         paragraphs: [
-          'Diese Datenschutzerklärung gilt speziell für den deutschen und europäischen Bereich von Success Path Mentors, einschließlich der Seiten unter /de/de, /de/en, /de/ar, der Buchung von kostenlosen Probestunden, der Registrierung und Anmeldung, des Zugangs zum Portal/LMS sowie der damit verbundenen Unterrichtskoordination.',
+          'Diese Datenschutzerklärung gilt speziell für den deutschen und europäischen Bereich von Success Path Mentors, einschließlich der Seiten unter /de, /de/en, /de/ar, der Buchung von kostenlosen Probestunden, der Registrierung und Anmeldung, des Zugangs zum Portal/LMS sowie der damit verbundenen Unterrichtskoordination.',
           'Sie gilt ausdrücklich nicht für die separaten Angebote von Success Path Mentors für den nordamerikanischen Markt, für welche eigenständige rechtliche Bestimmungen gelten.',
         ],
       },
@@ -209,7 +209,7 @@ export const germanyPrivacyPolicyContent: Record<'de' | 'en' | 'ar', LegalPageCo
         id: 'controller',
         title: '1. Data Controller and Contact Information',
         paragraphs: [
-          `The data controller responsible for personal data processing on the Germany/Europe website (/de/de, /de/en, /de/ar) pursuant to the GDPR is:`,
+          `The data controller responsible for personal data processing on the Germany/Europe website (/de, /de/en, /de/ar) pursuant to the GDPR is:`,
           `${germanyLegalConfig.legalEntityName}`,
           `Trading as: ${germanyLegalConfig.brandName}`,
           `Registered Address: ${germanyLegalConfig.registeredAddress}`,
@@ -223,7 +223,7 @@ export const germanyPrivacyPolicyContent: Record<'de' | 'en' | 'ar', LegalPageCo
         id: 'scope',
         title: '2. Scope',
         paragraphs: [
-          'This Privacy Policy applies specifically to the Germany and Europe section of Success Path Mentors, including pages under /de/de, /de/en, and /de/ar, free trial requests, registration and authentication, SPM Portal/LMS access, and associated tutoring coordination.',
+          'This Privacy Policy applies specifically to the Germany and Europe section of Success Path Mentors, including pages under /de, /de/en, and /de/ar, free trial requests, registration and authentication, SPM Portal/LMS access, and associated tutoring coordination.',
           'It does not govern the separate North American Success Path Mentors market pages, which operate under distinct legal terms.',
         ],
       },
@@ -388,7 +388,7 @@ export const germanyPrivacyPolicyContent: Record<'de' | 'en' | 'ar', LegalPageCo
         id: 'controller',
         title: '1. الجهة المسؤولة عن معالجة البيانات ومعلومات الاتصال',
         paragraphs: [
-          `الجهة المسؤولة عن معالجة البيانات الشخصية لخدمات ألمانيا وأوروبا (/de/de, /de/en, /de/ar) بموجب اللائحة الأوروبية لحماية البيانات (GDPR) هي:`,
+          `الجهة المسؤولة عن معالجة البيانات الشخصية لخدمات ألمانيا وأوروبا (/de, /de/en, /de/ar) بموجب اللائحة الأوروبية لحماية البيانات (GDPR) هي:`,
           `${germanyLegalConfig.legalEntityName}`,
           `الاسم التجاري: ${germanyLegalConfig.brandName}`,
           `العنوان المسجل: ${germanyLegalConfig.registeredAddress}`,
@@ -402,7 +402,7 @@ export const germanyPrivacyPolicyContent: Record<'de' | 'en' | 'ar', LegalPageCo
         id: 'scope',
         title: '2. نطاق التطبيق',
         paragraphs: [
-          'تنطبق سياسة الخصوصية هذه تحديداً على قسم ألمانيا وأوروبا في Success Path Mentors، بما في ذلك الصفحات المتاحة عبر /de/de و /de/en و /de/ar، وطلبات الحصص التجريبية المجانية، والتسجيل والدخول، والوصول إلى البوابة التعليمية (LMS)، وتنسيق الدروس المرتبط بها.',
+          'تنطبق سياسة الخصوصية هذه تحديداً على قسم ألمانيا وأوروبا في Success Path Mentors، بما في ذلك الصفحات المتاحة عبر /de و /de/en و /de/ar، وطلبات الحصص التجريبية المجانية، والتسجيل والدخول، والوصول إلى البوابة التعليمية (LMS)، وتنسيق الدروس المرتبط بها.',
           'ولا تسري هذه السياسة على صفحات منصة أمريكا الشمالية المستقلة، والتي تخضع لشروط قانونية وسياسات خصوصية منفصلة.',
         ],
       },

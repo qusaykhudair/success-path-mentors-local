@@ -104,7 +104,7 @@ const copy = {
         name: 'Deutschland',
         marketLabel: 'Deutschland Plattform',
         tooltip: 'Success Path Mentors Deutschland Plattform',
-        href: '/de/de',
+        href: '/de',
       },
     ],
   },
@@ -224,7 +224,7 @@ export function SupportedCountries({
 
   // Dynamic Germany destination based on active locale
   const germanyHref =
-    locale === 'ar' ? '/de/ar' : locale === 'en' ? '/de/en' : '/de/de';
+    locale === 'ar' ? '/de/ar' : locale === 'en' ? '/de/en' : '/de';
 
   return (
     <section

@@ -6,6 +6,7 @@ import { Container } from '@/components/ui/container';
 import type { LegalPageContent, LegalSection, LegalSubsection } from '@/types/legal-page';
 import type { GermanyTermsContent } from '@/content/legal/germany/terms';
 import { hasCompleteLegalEntityDetails, germanyLegalConfig } from '@/config/germany-legal';
+import { getMarketLocalePath } from '@/lib/market-routing';
 
 interface GermanyLegalPageProps {
   document: LegalPageContent | GermanyTermsContent;
@@ -75,7 +76,7 @@ export function GermanyLegalPage({ document, locale, documentType }: GermanyLega
         {/* Navigation Breadcrumb */}
         <nav aria-label={document.breadcrumbs?.ariaLabel || 'Breadcrumb'} className="mb-8 flex items-center gap-2 text-xs font-medium text-primary-400 sm:text-sm">
           <a
-            href={`/de/${locale}`}
+            href={getMarketLocalePath('germany', locale)}
             className="inline-flex items-center gap-1.5 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 rounded"
           >
             <BackIcon className="h-3.5 w-3.5" />
@@ -326,7 +327,7 @@ export function GermanyLegalPage({ document, locale, documentType }: GermanyLega
             {/* Bottom Footer Back Link */}
             <div className="pt-8 flex items-center justify-between border-t border-white/10">
               <a
-                href={`/de/${locale}`}
+                href={getMarketLocalePath('germany', locale)}
                 className="inline-flex items-center gap-2 text-sm font-semibold text-accent-300 hover:text-accent-200 transition-colors"
               >
                 <BackIcon className="h-4 w-4" />

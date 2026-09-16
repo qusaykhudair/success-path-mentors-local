@@ -8,6 +8,7 @@ import { SocialAuthButtons } from './social-auth-buttons';
 import { getAuthCopy } from './auth-copy';
 import type { AuthUiLocale } from './auth-contracts';
 import type { MarketId } from '@/config/markets';
+import { getMarketChildPath } from '@/lib/market-routing';
 import { authInputClass, FieldError, FieldLabel, Notice, SubmitLabel } from './auth-ui';
 import { cn } from '@/lib/utils';
 import type { VerifiedIdentity } from './signup-transaction';
@@ -60,7 +61,7 @@ export function SignupMethods({
 
   const effectiveLoginHref =
     loginHref ||
-    (marketId === 'germany' ? `/de/${locale}/login` : `/${locale}/login`);
+    (marketId === 'germany' ? getMarketChildPath('germany', locale as any, ['login']) : `/${locale}/login`);
 
   useEffect(() => {
     if (step !== 'otp_verify' || secondsToResend <= 0) return;

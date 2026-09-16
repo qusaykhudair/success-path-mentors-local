@@ -6,6 +6,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { ArrowLeft, ArrowRight, User, Users, GraduationCap, Target, Speech, BookOpen, MessageCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { getMarketConfig } from '@/config/markets';
+import { getMarketLocalePath } from '@/lib/market-routing';
 import { LANGUAGE_BADGES } from './language-icons';
 import { PhoneInput } from '@/components/ui/phone-input';
 import { type CountryCode, localPhone } from '@/lib/phone';
@@ -544,7 +545,7 @@ function TrialFlowContent() {
               </a>
 
               <a 
-                href={`/de/${locale}`}
+                href={getMarketLocalePath('germany', locale as 'de' | 'en' | 'ar')}
                 className="inline-flex min-h-[44px] items-center justify-center rounded-xl bg-primary-100 px-6 py-2.5 text-sm font-bold text-primary-800 transition-colors hover:bg-primary-200"
               >
                 {t('contactReady.backHome')}

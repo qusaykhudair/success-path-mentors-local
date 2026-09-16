@@ -210,7 +210,7 @@ export const germanyTermsContent: Record<'de' | 'en' | 'ar', GermanyTermsContent
         id: 'privacy-reference',
         title: '17. Datenschutz',
         paragraphs: [
-          'Informationen zur Verarbeitung personenbezogener Daten und zu Ihren Rechten nach der DSGVO finden Sie in unserer separaten Datenschutzerklärung für Deutschland und Europa unter /de/de/privacy.',
+          'Informationen zur Verarbeitung personenbezogener Daten und zu Ihren Rechten nach der DSGVO finden Sie in unserer separaten Datenschutzerklärung für Deutschland und Europa unter /de/privacy.',
         ],
       },
       {

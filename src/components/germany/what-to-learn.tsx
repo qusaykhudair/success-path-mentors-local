@@ -15,6 +15,7 @@ import { Container } from '@/components/ui/container';
 import { ScrollReveal } from './scroll-reveal';
 import { LANGUAGE_BADGES } from './language-icons';
 import { parseNavigationContext } from '@/lib/market-navigation';
+import { getMarketChildPath } from '@/lib/market-routing';
 import type { TutoringLocale } from '@/content/germany-tutoring/types';
 
 export function WhatToLearn() {
@@ -41,7 +42,7 @@ export function WhatToLearn() {
     cards: [
       {
         id: 'english',
-        href: `/de/${locale}/languages/english`,
+        href: getMarketChildPath('germany', locale, ['languages', 'english']),
         badgeType: 'badge',
         BadgeComponent: LANGUAGE_BADGES.english,
         tag: locale === 'de' ? 'Sprachen' : locale === 'ar' ? 'لغات' : 'Languages',
@@ -56,7 +57,7 @@ export function WhatToLearn() {
       },
       {
         id: 'german',
-        href: `/de/${locale}/languages/german`,
+        href: getMarketChildPath('germany', locale, ['languages', 'german']),
         badgeType: 'badge',
         BadgeComponent: LANGUAGE_BADGES.german,
         tag: locale === 'de' ? 'Sprachen' : locale === 'ar' ? 'لغات' : 'Languages',
@@ -71,7 +72,7 @@ export function WhatToLearn() {
       },
       {
         id: 'french',
-        href: `/de/${locale}/languages/french`,
+        href: getMarketChildPath('germany', locale, ['languages', 'french']),
         badgeType: 'badge',
         BadgeComponent: LANGUAGE_BADGES.french,
         tag: locale === 'de' ? 'Sprachen' : locale === 'ar' ? 'لغات' : 'Languages',
@@ -86,7 +87,7 @@ export function WhatToLearn() {
       },
       {
         id: 'arabic',
-        href: `/de/${locale}/languages/arabic`,
+        href: getMarketChildPath('germany', locale, ['languages', 'arabic']),
         badgeType: 'badge',
         BadgeComponent: LANGUAGE_BADGES.arabic,
         tag: locale === 'de' ? 'Sprachen' : locale === 'ar' ? 'لغات' : 'Languages',
@@ -101,7 +102,7 @@ export function WhatToLearn() {
       },
       {
         id: 'grades-1-6',
-        href: `/de/${locale}/school/grades-1-6`,
+        href: getMarketChildPath('germany', locale, ['school', 'grades-1-6']),
         badgeType: 'icon',
         Icon: BookOpen,
         tag: locale === 'de' ? 'Schule' : locale === 'ar' ? 'المدرسة' : 'School',
@@ -116,7 +117,7 @@ export function WhatToLearn() {
       },
       {
         id: 'grades-7-9',
-        href: `/de/${locale}/school/grades-7-9`,
+        href: getMarketChildPath('germany', locale, ['school', 'grades-7-9']),
         badgeType: 'icon',
         Icon: GraduationCap,
         tag: locale === 'de' ? 'Schule' : locale === 'ar' ? 'المدرسة' : 'School',
@@ -131,7 +132,7 @@ export function WhatToLearn() {
       },
       {
         id: 'grades-10-12',
-        href: `/de/${locale}/school/grades-10-12`,
+        href: getMarketChildPath('germany', locale, ['school', 'grades-10-12']),
         badgeType: 'icon',
         Icon: Award,
         tag: locale === 'de' ? 'Schule' : locale === 'ar' ? 'المدرسة' : 'School',
@@ -146,7 +147,7 @@ export function WhatToLearn() {
       },
       {
         id: 'adults',
-        href: `/de/${locale}/adults`,
+        href: getMarketChildPath('germany', locale, ['adults']),
         badgeType: 'icon',
         Icon: Briefcase,
         tag: locale === 'de' ? 'Erwachsene' : locale === 'ar' ? 'البالغين' : 'Adults',

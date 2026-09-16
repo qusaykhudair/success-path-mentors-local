@@ -24,6 +24,7 @@ import { z } from 'zod';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { getDefaultMarket, getMarketConfig, type MarketId } from '@/config/markets';
+import { getMarketChildPath, getMarketLocalePath } from '@/lib/market-routing';
 import {
   getRegistrationCountries,
   getRegistrationTimezone,
@@ -245,12 +246,12 @@ export function RegistrationForm({
   const marketOptions = optionSetsByMarket[marketId] || optionSetsByMarket['north-america'];
   const effectiveLoginHref =
     loginHref ||
-    (marketId === 'germany' ? `/de/${locale}/login` : `/${locale}/login`);
+    (marketId === 'germany' ? getMarketChildPath('germany', locale as any, ['login']) : `/${locale}/login`);
   const effectiveHomeHref =
     homeHref ||
-    (marketId === 'germany' ? `/de/${locale}` : `/${locale}`);
+    (marketId === 'germany' ? getMarketLocalePath('germany', locale as any) : `/${locale}`);
   const effectivePrivacyHref =
-    marketId === 'germany' ? `/de/${locale}/privacy` : `/${locale}/privacy`;
+    marketId === 'germany' ? getMarketChildPath('germany', locale as any, ['privacy']) : `/${locale}/privacy`;
 
   const [phoneCountry, setPhoneCountry] = useState<CountryCode>(marketId === 'germany' ? 'DE' : defaultPhoneCountry);
 

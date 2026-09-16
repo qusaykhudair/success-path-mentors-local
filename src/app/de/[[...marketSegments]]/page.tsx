@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
-import { redirect, notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import { requireMarketRoute } from '@/lib/market-route-boundary';
-import { getMarketLocalePath, resolveMarketRoute } from '@/lib/market-routing';
+import { getMarketChildPath, getMarketLocalePath, resolveMarketRoute } from '@/lib/market-routing';
+import { getMarketMessages } from '@/lib/market-messages';
 
 import { GermanyHero } from '@/components/germany/germany-hero';
 import { TrustStrip } from '@/components/germany/trust-strip';
@@ -36,9 +37,12 @@ export async function generateMetadata({ params }: {
   const route = resolveMarketRoute('germany', marketSegments);
   if (!route) return {};
 
+  const locale = route.language as 'de' | 'en' | 'ar';
+
   if (route.kind === 'child' && route.childSegments && route.childSegments.length > 0) {
     const childPath = route.childSegments.join('/');
-    const locale = route.language as 'de' | 'en' | 'ar';
+    const canonicalPath = getMarketChildPath('germany', locale, route.childSegments);
+    const canonicalUrl = `https://successpathmentors.net${canonicalPath}`;
 
     if (childPath === 'privacy') {
       const doc = getGermanyPrivacyPolicy(locale);
@@ -46,7 +50,7 @@ export async function generateMetadata({ params }: {
         title: doc.seo.title,
         description: doc.seo.description,
         alternates: {
-          canonical: `https://successpathmentors.net/de/${locale}/privacy`,
+          canonical: canonicalUrl,
         },
       };
     }
@@ -56,7 +60,7 @@ export async function generateMetadata({ params }: {
         title: doc.seo.title,
         description: doc.seo.description,
         alternates: {
-          canonical: `https://successpathmentors.net/de/${locale}/terms`,
+          canonical: canonicalUrl,
         },
       };
     }
@@ -69,17 +73,46 @@ export async function generateMetadata({ params }: {
         description: tutoringDoc.seo.description,
         keywords: tutoringDoc.seo.keywords as string[],
         alternates: {
-          canonical: `https://successpathmentors.net/de/${locale}/${childPath}`,
+          canonical: canonicalUrl,
         },
         openGraph: {
           title: tutoringDoc.seo.title,
           description: tutoringDoc.seo.description,
-          url: `https://successpathmentors.net/de/${locale}/${childPath}`,
+          url: canonicalUrl,
           siteName: 'Success Path Mentors Europe',
           locale: locale === 'de' ? 'de_DE' : locale === 'ar' ? 'ar_AR' : 'en_US',
           type: 'website',
         },
       };
+    }
+  }
+
+  // Locale homepage metadata (/de, /de/en, /de/ar)
+  if (route.kind === 'locale') {
+    try {
+      const messages = await getMarketMessages('germany', locale);
+      const canonicalPath = getMarketLocalePath('germany', locale);
+      const canonicalUrl = `https://successpathmentors.net${canonicalPath}`;
+      const title = `${messages.hero.headline} | Success Path Mentors Europe`;
+      const description = messages.hero.subheadline;
+
+      return {
+        title,
+        description,
+        alternates: {
+          canonical: canonicalUrl,
+        },
+        openGraph: {
+          title,
+          description,
+          url: canonicalUrl,
+          siteName: 'Success Path Mentors Europe',
+          locale: locale === 'de' ? 'de_DE' : locale === 'ar' ? 'ar_AR' : 'en_US',
+          type: 'website',
+        },
+      };
+    } catch {
+      return {};
     }
   }
 
@@ -92,7 +125,13 @@ export default async function MarketPage({ params }: {
   const { marketSegments } = await params;
   const route = requireMarketRoute('germany', marketSegments);
   
-  if (route.kind === 'entry') redirect(getMarketLocalePath(route.market.id, route.language));
+  if (route.kind === 'entry') {
+    if (route.childSegments && route.childSegments.length > 0) {
+      redirect(getMarketChildPath(route.market.id, route.language, route.childSegments));
+    } else {
+      redirect(getMarketLocalePath(route.market.id, route.language));
+    }
+  }
 
   // Handle market-scoped child routes
   if (route.kind === 'child' && route.childSegments && route.childSegments.length > 0) {
@@ -113,13 +152,15 @@ export default async function MarketPage({ params }: {
     // Login
     if (childPath === 'login') {
       const authLang = route.language as AuthUiLocale;
+      const homeHref = getMarketLocalePath('germany', authLang);
+      const registerHref = getMarketChildPath('germany', authLang, ['register']);
       return (
-        <AuthShell locale={authLang} homeHref={`/de/${authLang}`}>
+        <AuthShell locale={authLang} homeHref={homeHref}>
           <LoginForm
             locale={authLang}
             marketId="germany"
-            registerHref={`/de/${authLang}/register`}
-            contactHref={`/de/${authLang}#contact`}
+            registerHref={registerHref}
+            contactHref={`${homeHref}#contact`}
           />
         </AuthShell>
       );
@@ -128,13 +169,15 @@ export default async function MarketPage({ params }: {
     // Registration
     if (childPath === 'register') {
       const authLang = route.language as AuthUiLocale;
+      const homeHref = getMarketLocalePath('germany', authLang);
+      const loginHref = getMarketChildPath('germany', authLang, ['login']);
       return (
-        <AuthShell locale={authLang} homeHref={`/de/${authLang}`}>
+        <AuthShell locale={authLang} homeHref={homeHref}>
           <RegistrationForm
             locale={authLang}
             marketId="germany"
-            loginHref={`/de/${authLang}/login`}
-            homeHref={`/de/${authLang}`}
+            loginHref={loginHref}
+            homeHref={homeHref}
           />
         </AuthShell>
       );

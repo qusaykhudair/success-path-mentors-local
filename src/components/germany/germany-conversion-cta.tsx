@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { Container } from '@/components/ui/container';
 import { getMarketConfig } from '@/config/markets';
 import { parseNavigationContext } from '@/lib/market-navigation';
+import { getMarketChildPath } from '@/lib/market-routing';
 import { ScrollReveal } from '@/components/germany/scroll-reveal';
 import {
   Sparkles,
@@ -110,7 +111,7 @@ export function GermanyConversionCTA() {
                 {/* Action Buttons */}
                 <div className="mt-9 flex w-full flex-col gap-3.5 sm:w-auto sm:flex-row sm:items-center">
                   <a
-                    href={`/de/${locale}/trial`}
+                    href={getMarketChildPath('germany', locale, ['trial'])}
                     className="inline-flex min-h-touch w-full items-center justify-center gap-2 rounded-xl bg-accent-500 px-8 py-3.5 text-sm font-bold text-primary-950 shadow-lg shadow-accent-500/25 transition-all duration-200 hover:bg-accent-400 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 sm:w-auto whitespace-nowrap"
                   >
                     <span>{t('primaryAction')}</span>

@@ -31,6 +31,7 @@ import {
 import { authInputClass, FieldError, FieldLabel, Notice, SubmitLabel } from './auth-ui';
 import { SocialAuthButtons } from './social-auth-buttons';
 import type { MarketId } from '@/config/markets';
+import { getMarketChildPath, getMarketLocalePath } from '@/lib/market-routing';
 import { FaWhatsapp } from 'react-icons/fa6';
 import { PhoneInput } from '@/components/ui/phone-input';
 import { dialCode, localPhone, type CountryCode } from '@/lib/phone';
@@ -409,10 +410,10 @@ export function LoginForm({
       {(() => {
         const effectiveRegisterHref =
           registerHref ||
-          (marketId === 'germany' ? `/de/${locale}/register` : `/${locale}/register`);
+          (marketId === 'germany' ? getMarketChildPath('germany', locale as any, ['register']) : `/${locale}/register`);
         const effectiveContactHref =
           contactHref ||
-          (marketId === 'germany' ? `/de/${locale}#contact` : `/${locale}/contact`);
+          (marketId === 'germany' ? `${getMarketLocalePath('germany', locale as any)}#contact` : `/${locale}/contact`);
 
         return (
           <div className="grid gap-3 sm:grid-cols-2">
