@@ -21,32 +21,41 @@ function runAudit(url, strategy, runIndex) {
   const start = Date.now();
   try {
     execSync(cmd, { stdio: 'inherit' });
-    const elapsed = ((Date.now() - start) / 1000).toFixed(1);
-    console.log(`  Done in ${elapsed}s. Saved to ${filename}`);
-
-    const data = JSON.parse(fs.readFileSync(outPath, 'utf8'));
-    const categories = data.categories || {};
-    const audits = data.audits || {};
-
-    return {
-      strategy,
-      runIndex,
-      scores: {
-        perf: Math.round((categories.performance?.score || 0) * 100),
-        a11y: Math.round((categories.accessibility?.score || 0) * 100),
-        bp: Math.round((categories['best-practices']?.score || 0) * 100),
-        seo: Math.round((categories.seo?.score || 0) * 100),
-      },
-      metrics: {
-        fcp: audits['first-contentful-paint']?.numericValue,
-        lcp: audits['largest-contentful-paint']?.numericValue,
-        tbt: audits['total-blocking-time']?.numericValue,
-        cls: audits['cumulative-layout-shift']?.numericValue,
-        si: audits['speed-index']?.numericValue,
-      },
-    };
   } catch (err) {
-    console.error(`  Failed run:`, err.message);
+    // Chrome temp file cleanup on Windows often throws EPERM after the report is saved
+  }
+  const elapsed = ((Date.now() - start) / 1000).toFixed(1);
+
+  if (fs.existsSync(outPath)) {
+    try {
+      const data = JSON.parse(fs.readFileSync(outPath, 'utf8'));
+      const categories = data.categories || {};
+      const audits = data.audits || {};
+      console.log(`  Done in ${elapsed}s. Saved to ${filename}`);
+
+      return {
+        strategy,
+        runIndex,
+        scores: {
+          perf: Math.round((categories.performance?.score || 0) * 100),
+          a11y: Math.round((categories.accessibility?.score || 0) * 100),
+          bp: Math.round((categories['best-practices']?.score || 0) * 100),
+          seo: Math.round((categories.seo?.score || 0) * 100),
+        },
+        metrics: {
+          fcp: audits['first-contentful-paint']?.numericValue,
+          lcp: audits['largest-contentful-paint']?.numericValue,
+          tbt: audits['total-blocking-time']?.numericValue,
+          cls: audits['cumulative-layout-shift']?.numericValue,
+          si: audits['speed-index']?.numericValue,
+        },
+      };
+    } catch (parseErr) {
+      console.error(`  Failed to parse JSON output:`, parseErr.message);
+      return null;
+    }
+  } else {
+    console.error(`  Report file was not created.`);
     return null;
   }
 }

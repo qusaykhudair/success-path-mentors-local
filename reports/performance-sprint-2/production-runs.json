@@ -1,0 +1,840 @@
+{
+  "timestamp": "2026-09-16T18:35:14.291Z",
+  "environment": "production",
+  "host": "https://successpathmentors.net",
+  "notes": "Cold cache benchmark executes with fresh browser profile, no pre-navigation, and default storage reset. Warm cache benchmark executes with established session cookies and disableStorageReset=true.",
+  "warmCacheBenchmark": {
+    "homepage": {
+      "mobile": {
+        "runs": [
+          {
+            "run": 1,
+            "performance": 100,
+            "fcp": 818.6,
+            "lcp": 983.6,
+            "tbt": 30.5,
+            "cls": 0,
+            "speedIndex": 1395.8
+          },
+          {
+            "run": 2,
+            "performance": 100,
+            "fcp": 941.6,
+            "lcp": 1018.1,
+            "tbt": 9.5,
+            "cls": 0,
+            "speedIndex": 2747.8
+          },
+          {
+            "run": 3,
+            "performance": 100,
+            "fcp": 877.6,
+            "lcp": 941.6,
+            "tbt": 26.5,
+            "cls": 0,
+            "speedIndex": 920.5
+          }
+        ],
+        "medians": {
+          "performance": 100,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100,
+          "agenticBrowsing": 100,
+          "fcp": 877.6,
+          "lcp": 983.6,
+          "tbt": 26.5,
+          "cls": 0,
+          "speedIndex": 1395.8
+        }
+      },
+      "desktop": {
+        "runs": [
+          {
+            "run": 1,
+            "performance": 100,
+            "fcp": 262.7,
+            "lcp": 289.7,
+            "tbt": 0,
+            "cls": 0.0015,
+            "speedIndex": 590.4
+          },
+          {
+            "run": 2,
+            "performance": 100,
+            "fcp": 236,
+            "lcp": 265,
+            "tbt": 0,
+            "cls": 0.0003,
+            "speedIndex": 358
+          },
+          {
+            "run": 3,
+            "performance": 100,
+            "fcp": 272.7,
+            "lcp": 303.7,
+            "tbt": 0,
+            "cls": 0,
+            "speedIndex": 445.1
+          }
+        ],
+        "medians": {
+          "performance": 100,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100,
+          "agenticBrowsing": 100,
+          "fcp": 262.7,
+          "lcp": 289.7,
+          "tbt": 0,
+          "cls": 0.0003,
+          "speedIndex": 445.1
+        }
+      }
+    },
+    "milton": {
+      "mobile": {
+        "runs": [
+          {
+            "run": 1,
+            "performance": 100,
+            "fcp": 849.3,
+            "lcp": 956.3,
+            "tbt": 5,
+            "cls": 0,
+            "speedIndex": 933.6
+          },
+          {
+            "run": 2,
+            "performance": 100,
+            "fcp": 864.4,
+            "lcp": 985.4,
+            "tbt": 16.5,
+            "cls": 0,
+            "speedIndex": 969.4
+          },
+          {
+            "run": 3,
+            "performance": 100,
+            "fcp": 844.9,
+            "lcp": 971.9,
+            "tbt": 13,
+            "cls": 0,
+            "speedIndex": 953.4
+          }
+        ],
+        "medians": {
+          "performance": 100,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100,
+          "agenticBrowsing": 100,
+          "fcp": 849.3,
+          "lcp": 971.9,
+          "tbt": 13,
+          "cls": 0,
+          "speedIndex": 953.4
+        }
+      },
+      "desktop": {
+        "runs": [
+          {
+            "run": 1,
+            "performance": 100,
+            "fcp": 231.9,
+            "lcp": 259.9,
+            "tbt": 0,
+            "cls": 0,
+            "speedIndex": 339.9
+          },
+          {
+            "run": 2,
+            "performance": 100,
+            "fcp": 234.3,
+            "lcp": 263.3,
+            "tbt": 0,
+            "cls": 0,
+            "speedIndex": 368.2
+          },
+          {
+            "run": 3,
+            "performance": 100,
+            "fcp": 247.5,
+            "lcp": 269.5,
+            "tbt": 0,
+            "cls": 0,
+            "speedIndex": 374.8
+          }
+        ],
+        "medians": {
+          "performance": 100,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100,
+          "agenticBrowsing": 100,
+          "fcp": 234.3,
+          "lcp": 263.3,
+          "tbt": 0,
+          "cls": 0,
+          "speedIndex": 368.2
+        }
+      }
+    }
+  },
+  "coldCacheBenchmark": {
+    "homepage": {
+      "mobile": {
+        "runs": [
+          {
+            "run": 1,
+            "valid": false,
+            "runtimeError": {
+              "code": "ERRORED_DOCUMENT_REQUEST",
+              "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+              "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+              "artifactKey": "PageLoadError"
+            },
+            "performance": null,
+            "fcp": null,
+            "lcp": null,
+            "tbt": null,
+            "cls": null,
+            "speedIndex": null,
+            "totalBytes": null
+          },
+          {
+            "run": 2,
+            "valid": false,
+            "runtimeError": {
+              "code": "ERRORED_DOCUMENT_REQUEST",
+              "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+              "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+              "artifactKey": "PageLoadError"
+            },
+            "performance": null,
+            "fcp": null,
+            "lcp": null,
+            "tbt": null,
+            "cls": null,
+            "speedIndex": null,
+            "totalBytes": null
+          },
+          {
+            "run": 3,
+            "valid": false,
+            "runtimeError": {
+              "code": "ERRORED_DOCUMENT_REQUEST",
+              "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+              "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+              "artifactKey": "PageLoadError"
+            },
+            "performance": null,
+            "fcp": null,
+            "lcp": null,
+            "tbt": null,
+            "cls": null,
+            "speedIndex": null,
+            "totalBytes": null
+          }
+        ],
+        "medians": {
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "fcp": null,
+          "lcp": null,
+          "tbt": null,
+          "cls": null,
+          "speedIndex": null
+        }
+      },
+      "desktop": {
+        "runs": [
+          {
+            "run": 1,
+            "valid": false,
+            "runtimeError": {
+              "code": "ERRORED_DOCUMENT_REQUEST",
+              "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+              "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+              "artifactKey": "PageLoadError"
+            },
+            "performance": null,
+            "fcp": null,
+            "lcp": null,
+            "tbt": null,
+            "cls": null,
+            "speedIndex": null,
+            "totalBytes": null
+          },
+          {
+            "run": 2,
+            "valid": false,
+            "runtimeError": {
+              "code": "ERRORED_DOCUMENT_REQUEST",
+              "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+              "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+              "artifactKey": "PageLoadError"
+            },
+            "performance": null,
+            "fcp": null,
+            "lcp": null,
+            "tbt": null,
+            "cls": null,
+            "speedIndex": null,
+            "totalBytes": null
+          },
+          {
+            "run": 3,
+            "valid": false,
+            "runtimeError": {
+              "code": "ERRORED_DOCUMENT_REQUEST",
+              "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+              "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+              "artifactKey": "PageLoadError"
+            },
+            "performance": null,
+            "fcp": null,
+            "lcp": null,
+            "tbt": null,
+            "cls": null,
+            "speedIndex": null,
+            "totalBytes": null
+          }
+        ],
+        "medians": {
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "fcp": null,
+          "lcp": null,
+          "tbt": null,
+          "cls": null,
+          "speedIndex": null
+        }
+      }
+    },
+    "milton": {
+      "mobile": {
+        "runs": [
+          {
+            "run": 1,
+            "valid": false,
+            "runtimeError": {
+              "code": "ERRORED_DOCUMENT_REQUEST",
+              "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+              "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+              "artifactKey": "PageLoadError"
+            },
+            "performance": null,
+            "fcp": null,
+            "lcp": null,
+            "tbt": null,
+            "cls": null,
+            "speedIndex": null,
+            "totalBytes": null
+          },
+          {
+            "run": 2,
+            "valid": false,
+            "runtimeError": {
+              "code": "ERRORED_DOCUMENT_REQUEST",
+              "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+              "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+              "artifactKey": "PageLoadError"
+            },
+            "performance": null,
+            "fcp": null,
+            "lcp": null,
+            "tbt": null,
+            "cls": null,
+            "speedIndex": null,
+            "totalBytes": null
+          },
+          {
+            "run": 3,
+            "valid": false,
+            "runtimeError": {
+              "code": "ERRORED_DOCUMENT_REQUEST",
+              "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+              "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+              "artifactKey": "PageLoadError"
+            },
+            "performance": null,
+            "fcp": null,
+            "lcp": null,
+            "tbt": null,
+            "cls": null,
+            "speedIndex": null,
+            "totalBytes": null
+          }
+        ],
+        "medians": {
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "fcp": null,
+          "lcp": null,
+          "tbt": null,
+          "cls": null,
+          "speedIndex": null
+        }
+      },
+      "desktop": {
+        "runs": [
+          {
+            "run": 1,
+            "valid": false,
+            "runtimeError": {
+              "code": "ERRORED_DOCUMENT_REQUEST",
+              "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+              "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+              "artifactKey": "PageLoadError"
+            },
+            "performance": null,
+            "fcp": null,
+            "lcp": null,
+            "tbt": null,
+            "cls": null,
+            "speedIndex": null,
+            "totalBytes": null
+          },
+          {
+            "run": 2,
+            "valid": false,
+            "runtimeError": {
+              "code": "ERRORED_DOCUMENT_REQUEST",
+              "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+              "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+              "artifactKey": "PageLoadError"
+            },
+            "performance": null,
+            "fcp": null,
+            "lcp": null,
+            "tbt": null,
+            "cls": null,
+            "speedIndex": null,
+            "totalBytes": null
+          },
+          {
+            "run": 3,
+            "valid": false,
+            "runtimeError": {
+              "code": "ERRORED_DOCUMENT_REQUEST",
+              "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+              "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+              "artifactKey": "PageLoadError"
+            },
+            "performance": null,
+            "fcp": null,
+            "lcp": null,
+            "tbt": null,
+            "cls": null,
+            "speedIndex": null,
+            "totalBytes": null
+          }
+        ],
+        "medians": {
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "fcp": null,
+          "lcp": null,
+          "tbt": null,
+          "cls": null,
+          "speedIndex": null
+        }
+      }
+    }
+  },
+  "allColdRuns": [
+    {
+      "target": "homepage",
+      "url": "https://successpathmentors.net/en",
+      "device": "mobile",
+      "run": 1,
+      "mode": "cold-cache",
+      "valid": false,
+      "runtimeError": {
+        "code": "ERRORED_DOCUMENT_REQUEST",
+        "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+        "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+        "artifactKey": "PageLoadError"
+      },
+      "scores": {
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null
+      },
+      "metrics": {
+        "fcp": null,
+        "lcp": null,
+        "tbt": null,
+        "cls": null,
+        "speedIndex": null,
+        "totalBytes": null,
+        "renderBlockingMs": 0,
+        "unusedJsBytes": 0,
+        "unusedCssBytes": 0,
+        "longTasksCount": 0
+      }
+    },
+    {
+      "target": "homepage",
+      "url": "https://successpathmentors.net/en",
+      "device": "mobile",
+      "run": 2,
+      "mode": "cold-cache",
+      "valid": false,
+      "runtimeError": {
+        "code": "ERRORED_DOCUMENT_REQUEST",
+        "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+        "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+        "artifactKey": "PageLoadError"
+      },
+      "scores": {
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null
+      },
+      "metrics": {
+        "fcp": null,
+        "lcp": null,
+        "tbt": null,
+        "cls": null,
+        "speedIndex": null,
+        "totalBytes": null,
+        "renderBlockingMs": 0,
+        "unusedJsBytes": 0,
+        "unusedCssBytes": 0,
+        "longTasksCount": 0
+      }
+    },
+    {
+      "target": "homepage",
+      "url": "https://successpathmentors.net/en",
+      "device": "mobile",
+      "run": 3,
+      "mode": "cold-cache",
+      "valid": false,
+      "runtimeError": {
+        "code": "ERRORED_DOCUMENT_REQUEST",
+        "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+        "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+        "artifactKey": "PageLoadError"
+      },
+      "scores": {
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null
+      },
+      "metrics": {
+        "fcp": null,
+        "lcp": null,
+        "tbt": null,
+        "cls": null,
+        "speedIndex": null,
+        "totalBytes": null,
+        "renderBlockingMs": 0,
+        "unusedJsBytes": 0,
+        "unusedCssBytes": 0,
+        "longTasksCount": 0
+      }
+    },
+    {
+      "target": "homepage",
+      "url": "https://successpathmentors.net/en",
+      "device": "desktop",
+      "run": 1,
+      "mode": "cold-cache",
+      "valid": false,
+      "runtimeError": {
+        "code": "ERRORED_DOCUMENT_REQUEST",
+        "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+        "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+        "artifactKey": "PageLoadError"
+      },
+      "scores": {
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null
+      },
+      "metrics": {
+        "fcp": null,
+        "lcp": null,
+        "tbt": null,
+        "cls": null,
+        "speedIndex": null,
+        "totalBytes": null,
+        "renderBlockingMs": 0,
+        "unusedJsBytes": 0,
+        "unusedCssBytes": 0,
+        "longTasksCount": 0
+      }
+    },
+    {
+      "target": "homepage",
+      "url": "https://successpathmentors.net/en",
+      "device": "desktop",
+      "run": 2,
+      "mode": "cold-cache",
+      "valid": false,
+      "runtimeError": {
+        "code": "ERRORED_DOCUMENT_REQUEST",
+        "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+        "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+        "artifactKey": "PageLoadError"
+      },
+      "scores": {
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null
+      },
+      "metrics": {
+        "fcp": null,
+        "lcp": null,
+        "tbt": null,
+        "cls": null,
+        "speedIndex": null,
+        "totalBytes": null,
+        "renderBlockingMs": 0,
+        "unusedJsBytes": 0,
+        "unusedCssBytes": 0,
+        "longTasksCount": 0
+      }
+    },
+    {
+      "target": "homepage",
+      "url": "https://successpathmentors.net/en",
+      "device": "desktop",
+      "run": 3,
+      "mode": "cold-cache",
+      "valid": false,
+      "runtimeError": {
+        "code": "ERRORED_DOCUMENT_REQUEST",
+        "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+        "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+        "artifactKey": "PageLoadError"
+      },
+      "scores": {
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null
+      },
+      "metrics": {
+        "fcp": null,
+        "lcp": null,
+        "tbt": null,
+        "cls": null,
+        "speedIndex": null,
+        "totalBytes": null,
+        "renderBlockingMs": 0,
+        "unusedJsBytes": 0,
+        "unusedCssBytes": 0,
+        "longTasksCount": 0
+      }
+    },
+    {
+      "target": "milton",
+      "url": "https://successpathmentors.net/en/locations/canada/ontario/milton",
+      "device": "mobile",
+      "run": 1,
+      "mode": "cold-cache",
+      "valid": false,
+      "runtimeError": {
+        "code": "ERRORED_DOCUMENT_REQUEST",
+        "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+        "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+        "artifactKey": "PageLoadError"
+      },
+      "scores": {
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null
+      },
+      "metrics": {
+        "fcp": null,
+        "lcp": null,
+        "tbt": null,
+        "cls": null,
+        "speedIndex": null,
+        "totalBytes": null,
+        "renderBlockingMs": 0,
+        "unusedJsBytes": 0,
+        "unusedCssBytes": 0,
+        "longTasksCount": 0
+      }
+    },
+    {
+      "target": "milton",
+      "url": "https://successpathmentors.net/en/locations/canada/ontario/milton",
+      "device": "mobile",
+      "run": 2,
+      "mode": "cold-cache",
+      "valid": false,
+      "runtimeError": {
+        "code": "ERRORED_DOCUMENT_REQUEST",
+        "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+        "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+        "artifactKey": "PageLoadError"
+      },
+      "scores": {
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null
+      },
+      "metrics": {
+        "fcp": null,
+        "lcp": null,
+        "tbt": null,
+        "cls": null,
+        "speedIndex": null,
+        "totalBytes": null,
+        "renderBlockingMs": 0,
+        "unusedJsBytes": 0,
+        "unusedCssBytes": 0,
+        "longTasksCount": 0
+      }
+    },
+    {
+      "target": "milton",
+      "url": "https://successpathmentors.net/en/locations/canada/ontario/milton",
+      "device": "mobile",
+      "run": 3,
+      "mode": "cold-cache",
+      "valid": false,
+      "runtimeError": {
+        "code": "ERRORED_DOCUMENT_REQUEST",
+        "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+        "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+        "artifactKey": "PageLoadError"
+      },
+      "scores": {
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null
+      },
+      "metrics": {
+        "fcp": null,
+        "lcp": null,
+        "tbt": null,
+        "cls": null,
+        "speedIndex": null,
+        "totalBytes": null,
+        "renderBlockingMs": 0,
+        "unusedJsBytes": 0,
+        "unusedCssBytes": 0,
+        "longTasksCount": 0
+      }
+    },
+    {
+      "target": "milton",
+      "url": "https://successpathmentors.net/en/locations/canada/ontario/milton",
+      "device": "desktop",
+      "run": 1,
+      "mode": "cold-cache",
+      "valid": false,
+      "runtimeError": {
+        "code": "ERRORED_DOCUMENT_REQUEST",
+        "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+        "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+        "artifactKey": "PageLoadError"
+      },
+      "scores": {
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null
+      },
+      "metrics": {
+        "fcp": null,
+        "lcp": null,
+        "tbt": null,
+        "cls": null,
+        "speedIndex": null,
+        "totalBytes": null,
+        "renderBlockingMs": 0,
+        "unusedJsBytes": 0,
+        "unusedCssBytes": 0,
+        "longTasksCount": 0
+      }
+    },
+    {
+      "target": "milton",
+      "url": "https://successpathmentors.net/en/locations/canada/ontario/milton",
+      "device": "desktop",
+      "run": 2,
+      "mode": "cold-cache",
+      "valid": false,
+      "runtimeError": {
+        "code": "ERRORED_DOCUMENT_REQUEST",
+        "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+        "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+        "artifactKey": "PageLoadError"
+      },
+      "scores": {
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null
+      },
+      "metrics": {
+        "fcp": null,
+        "lcp": null,
+        "tbt": null,
+        "cls": null,
+        "speedIndex": null,
+        "totalBytes": null,
+        "renderBlockingMs": 0,
+        "unusedJsBytes": 0,
+        "unusedCssBytes": 0,
+        "longTasksCount": 0
+      }
+    },
+    {
+      "target": "milton",
+      "url": "https://successpathmentors.net/en/locations/canada/ontario/milton",
+      "device": "desktop",
+      "run": 3,
+      "mode": "cold-cache",
+      "valid": false,
+      "runtimeError": {
+        "code": "ERRORED_DOCUMENT_REQUEST",
+        "message": "Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 403)",
+        "errorStack": "LighthouseError: ERRORED_DOCUMENT_REQUEST\n    at getNetworkError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:61:14)\n    at getPageLoadError (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/lib/navigation-error.js:165:24)\n    at _computeNavigationResult (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:146:7)\n    at async gatherFn (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:297:23)\n    at async Runner.gather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/runner.js:211:25)\n    at async navigationGather (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/gather/navigation-runner.js:303:21)\n    at async navigation (file:///C:/Users/IT/AppData/Local/npm-cache/_npx/0f94ee7615faf582/node_modules/lighthouse/core/index.js:58:24)\n    at async file:///C:/Users/IT/Desktop/success-path-mentors-nextjs/SuccessPath-Website-development-/scripts/run-cold-production-benchmarks.mjs:84:24",
+        "artifactKey": "PageLoadError"
+      },
+      "scores": {
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null
+      },
+      "metrics": {
+        "fcp": null,
+        "lcp": null,
+        "tbt": null,
+        "cls": null,
+        "speedIndex": null,
+        "totalBytes": null,
+        "renderBlockingMs": 0,
+        "unusedJsBytes": 0,
+        "unusedCssBytes": 0,
+        "longTasksCount": 0
+      }
+    }
+  ]
+}

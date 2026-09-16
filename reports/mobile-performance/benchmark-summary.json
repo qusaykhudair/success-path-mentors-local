@@ -1,0 +1,110 @@
+{
+  "runs": {
+    "homeMobile": [
+      {
+        "strategy": "mobile",
+        "runIndex": 1,
+        "scores": {
+          "perf": 0,
+          "a11y": 100,
+          "bp": 100,
+          "seo": 100
+        },
+        "metrics": {}
+      },
+      {
+        "strategy": "mobile",
+        "runIndex": 2,
+        "scores": {
+          "perf": 80,
+          "a11y": 100,
+          "bp": 100,
+          "seo": 100
+        },
+        "metrics": {
+          "fcp": 2391.516,
+          "lcp": 3591.516,
+          "tbt": 315.5,
+          "cls": 0,
+          "si": 2527.167041973258
+        }
+      },
+      {
+        "strategy": "mobile",
+        "runIndex": 3,
+        "scores": {
+          "perf": 84,
+          "a11y": 100,
+          "bp": 100,
+          "seo": 100
+        },
+        "metrics": {
+          "fcp": 2350.2546,
+          "lcp": 3641.9637000000002,
+          "tbt": 188,
+          "cls": 0.0002470135872218929,
+          "si": 2350.2546
+        }
+      }
+    ],
+    "homeDesktop": [
+      {
+        "strategy": "desktop",
+        "runIndex": 1,
+        "scores": {
+          "perf": 99,
+          "a11y": 100,
+          "bp": 100,
+          "seo": 100
+        },
+        "metrics": {
+          "fcp": 615.4387,
+          "lcp": 854.65805,
+          "tbt": 12,
+          "cls": 0.001543688740138656,
+          "si": 871.0338311488393
+        }
+      },
+      {
+        "strategy": "desktop",
+        "runIndex": 2,
+        "scores": {
+          "perf": 0,
+          "a11y": 100,
+          "bp": 100,
+          "seo": 100
+        },
+        "metrics": {}
+      },
+      {
+        "strategy": "desktop",
+        "runIndex": 3,
+        "scores": {
+          "perf": 0,
+          "a11y": 100,
+          "bp": 100,
+          "seo": 100
+        },
+        "metrics": {}
+      }
+    ]
+  },
+  "summary": {
+    "mobile": {
+      "perf": 80,
+      "lcp": 3641.9637000000002,
+      "fcp": 2391.516,
+      "tbt": 315.5,
+      "cls": 0.0002470135872218929,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100
+    },
+    "desktop": {
+      "perf": 0,
+      "a11y": 100,
+      "bp": 100,
+      "seo": 100
+    }
+  }
+}
