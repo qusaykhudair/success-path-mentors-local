@@ -67,23 +67,11 @@ export function EnrollmentCardController({ copy }: EnrollmentCardProps) {
     setStatus('submitting');
     try {
       // ============================================================
-      // >>> BACKEND HOOK — replace this block with the real call.
-      // The endpoint must accept `data` (EnrollmentPayload) as JSON
-      // and persist it into the LMS. Frontend does NOT know the LMS
-      // schema; the backend maps this payload onto it.
-      //
-      // Example (to be implemented by backend):
-      //   const res = await fetch('/api/enrollment', {
-      //     method: 'POST',
-      //     headers: { 'Content-Type': 'application/json' },
-      //     body: JSON.stringify(data),
-      //   });
-      //   if (!res.ok) throw new Error('Request failed');
-      //
-      // For now, simulate a successful submit so the UI flow works:
-      await new Promise((r) => setTimeout(r, 900));
+      // ENROLLMENT BACKEND INTEGRATION REQUIRED
+      // No approved backend/LMS enrollment endpoint exists in the repository.
+      // As per strict specification: do NOT simulate fake success in production.
       // ============================================================
-      setStatus('success');
+      throw new Error('ENROLLMENT_BACKEND_INTEGRATION_REQUIRED');
     } catch {
       setStatus('error');
     }

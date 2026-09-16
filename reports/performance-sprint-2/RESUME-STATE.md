@@ -2,23 +2,14 @@
 
 ## 1. Environment & Git Recovery State
 
-- **Current Branch**: `main`
-- **Current HEAD Commit**: `6e090a7 perf: complete interrupted strict mobile performance optimization`
-- **Working Tree Status**: All optimizations completed, validated, committed, pushed, and deployed live.
-- **Completed Workstreams**:
-  - `src/app/globals.css`: Font-face migrated to self-hosted WOFF2 assets in `public/fonts/`; purged unused styles.
-  - `src/app/[locale]/layout.tsx`: Regular and Bold fonts preloaded directly in `<head>` for instant discovery across all routes.
-  - `src/app/[locale]/page.tsx`: Below-fold sections wrapped in `content-auto` (`content-visibility: auto`) to minimize off-screen paint/layout cost.
-  - `src/components/chat/n8n-chat.tsx`: Replaced initial `@n8n/chat` bundle execution with lightweight native chat launcher; `@n8n/chat` JS + CSS only loaded on explicit user click.
-  - `src/components/layout/locations-menu.tsx` & `mobile-nav.tsx`: Optimized with `useLocationNavigation` to dynamically import the 72 KB location navigation data only upon user menu interaction; lazy accordion rendering.
-  - `src/components/sections/home/enrollment-card.tsx` & `enrollment-card-controller.tsx`: Split into server shell + Step 1 immediate interactive controller + dynamically imported secondary form steps (`enrollment-advanced-fields.tsx`).
-  - `src/lib/fonts.ts`: Shared font class without Next.js font CSS overhead.
-  - `src/middleware.ts`: Hardened loopback regex for development CSP.
-  - `public/fonts/`: Optimized DIN Next LT Arabic WOFF2 assets (Regular, Light, Bold).
-  - Accessibility fixes: Progressbar named with aria-label, aria-valuemin, aria-valuemax, aria-valuenow; button labels, contrast, and dialog accessibility.
+- **Current Branch**: `fix/performance-sprint-2-final-verification` (branched from commit `4098227` on `main`)
+- **Current HEAD Commit on Main**: `4098227` (`docs(perf): add strict production final report for Performance Sprint 2`)
+- **Final Verification Patch Summary**:
+  - **Cold vs. Warm Benchmarks**: 12 independent cold-cache runs executed on fresh contexts without warming. Edge WAF (Hostinger hcdn) 403 challenge diagnosed; warm cache verified at median 100/100 across mobile and desktop.
+  - **Enrollment Lead Persistence**: Audit confirmed no approved student/trial LMS backend exists. Fake simulation in `enrollment-card-controller.tsx` strictly removed. Status marked `ENROLLMENT BACKEND INTEGRATION REQUIRED` with formal LMS contract specification.
+  - **Analytics**: Audit confirmed no GA4/GTM infrastructure present (`ANALYTICS INTEGRATION REQUIRED`). Strict PII exclusion documented.
 - **Last Verified Build**: Next.js 15.5.22 SSG build (851 static pages generated, First Load JS shared 103 kB, typecheck & lint 0 errors).
-- **Last Verified Deployment**: Commit `6e090a7` confirmed live on production (`https://successpathmentors.net`).
-- **Production Benchmarks**: 12 independent production runs completed across Homepage and Milton. All strict pass conditions met with 100/100 medians.
+- **Final Strict Status**: BLOCKED pending LMS backend endpoint and edge WAF challenge rule adjustment.
 
 ---
 
@@ -29,7 +20,7 @@
 | A | Render-blocking CSS | **DONE** | DIN Next fonts migrated to WOFF2 with direct `@font-face` in `globals.css`; `@n8n/chat/style.css` removed from initial bundle. 0 wasted ms. |
 | B | Unused JavaScript | **DONE** | framer-motion eliminated; enrollment advanced fields split into dynamic chunk; location tree split into async module. 0 wasted bytes. |
 | C | Client hydration | **DONE** | Static content kept server-rendered; `content-auto` applied to below-fold home sections; "use client" boundaries pushed down. |
-| D | Hero/form JavaScript | **DONE** | Enrollment card split into Server Shell + Step 1 controller + dynamically imported Steps 2 & 3. |
+| D | Hero/form JavaScript | **DONE** | Enrollment card split into Server Shell + Step 1 controller + dynamically imported Steps 2 & 3. Fake success simulation removed. |
 | E | Below-fold hydration | **DONE** | Testimonials, Steps, Services, Challenges, Pricing remain server components with zero client JS overhead. |
 | F | FAQ | **DONE** | FAQ rendered with native `<details>` and `<summary>`; FAQPage JSON-LD schema preserved; accessible and SSR complete. |
 | G | Testimonials/carousels | **DONE** | Heavy carousel libraries avoided; native CSS scrolling used; unverified testimonials safely gated. |
@@ -44,4 +35,4 @@
 | P | Icon libraries | **DONE** | Tree-shakeable direct imports from `lucide-react`. |
 | Q | Accessibility | **DONE** | Fixed progressbar name/attributes, contrast ratios, and ARIA attributes (Production audit: 100). |
 | R | Agentic Browsing / llms.txt | **DONE** | `/llms.txt` served with valid markdown, canonical HTTPS URLs, and HTTP 200 (Production audit: 100). |
-| S | Production benchmark | **DONE** | 12 independent production runs completed on live production. All 4 benchmark groups achieved median 100. |
+| S | Production benchmark | **DONE** | 12 warm-cache production runs passed (100/100 medians); 12 cold-cache production runs captured edge WAF bot challenge behavior and documented. |

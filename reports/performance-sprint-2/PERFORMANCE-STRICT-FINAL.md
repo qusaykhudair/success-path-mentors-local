@@ -70,58 +70,136 @@
 
 ---
 
-## 4. Mandatory Production Benchmark Results (12 Runs)
+## 4. Production Benchmark Results: Warm Cache vs. Cold Cache
 
-### HOMEPAGE MOBILE (`https://successpathmentors.net/en`)
-- **Run 1**: Performance: **100** | FCP: 818.6 ms | LCP: 983.6 ms | TBT: 30.5 ms | CLS: 0 | Speed Index: 1395.8 ms
-- **Run 2**: Performance: **100** | FCP: 941.6 ms | LCP: 1018.1 ms | TBT: 9.5 ms | CLS: 0 | Speed Index: 2747.8 ms
-- **Run 3**: Performance: **100** | FCP: 877.6 ms | LCP: 941.6 ms | TBT: 26.5 ms | CLS: 0 | Speed Index: 920.5 ms
-- **Median Performance**: **100** (Target: ≥ 90) — **PASS**
-- **FCP Median**: **877.6 ms**
-- **LCP Median**: **983.6 ms** (Target: ≤ 2.5 s) — **PASS**
-- **TBT Median**: **26.5 ms** (Target: ≤ 150 ms) — **PASS**
-- **CLS Median**: **0.0000** (Target: ≤ 0.05) — **PASS**
+### Historical Benchmark: WARM CACHE BENCHMARK
+Conducted on production `https://successpathmentors.net` (warm profile / session-ready).
 
-### HOMEPAGE DESKTOP (`https://successpathmentors.net/en`)
-- **Run 1**: Performance: **100** | FCP: 262.7 ms | LCP: 289.7 ms | TBT: 0 ms | CLS: 0.0015 | Speed Index: 590.4 ms
-- **Run 2**: Performance: **100** | FCP: 236.0 ms | LCP: 265.0 ms | TBT: 0 ms | CLS: 0.0003 | Speed Index: 358.0 ms
-- **Run 3**: Performance: **100** | FCP: 272.7 ms | LCP: 303.7 ms | TBT: 0 ms | CLS: 0 | Speed Index: 445.1 ms
-- **Median Performance**: **100** (Target: ≥ 95) — **PASS**
-- **FCP Median**: **262.7 ms**
-- **LCP Median**: **289.7 ms**
-- **TBT Median**: **0.0 ms**
-- **CLS Median**: **0.0003**
-
-### MILTON MOBILE (`https://successpathmentors.net/en/locations/canada/ontario/milton`)
-- **Run 1**: Performance: **100** | FCP: 849.3 ms | LCP: 956.3 ms | TBT: 5.0 ms | CLS: 0 | Speed Index: 933.6 ms
-- **Run 2**: Performance: **100** | FCP: 864.4 ms | LCP: 985.4 ms | TBT: 16.5 ms | CLS: 0 | Speed Index: 969.4 ms
-- **Run 3**: Performance: **100** | FCP: 844.9 ms | LCP: 971.9 ms | TBT: 13.0 ms | CLS: 0 | Speed Index: 953.4 ms
-- **Median Performance**: **100** (Target: ≥ 90) — **PASS**
-- **FCP Median**: **849.3 ms**
-- **LCP Median**: **971.9 ms** (Target: ≤ 2.5 s) — **PASS**
-- **TBT Median**: **13.0 ms** (Target: ≤ 150 ms) — **PASS**
-- **CLS Median**: **0.0000** (Target: ≤ 0.05) — **PASS**
-
-### MILTON DESKTOP (`https://successpathmentors.net/en/locations/canada/ontario/milton`)
-- **Run 1**: Performance: **100** | FCP: 231.9 ms | LCP: 259.9 ms | TBT: 0 ms | CLS: 0 | Speed Index: 339.9 ms
-- **Run 2**: Performance: **100** | FCP: 234.3 ms | LCP: 263.3 ms | TBT: 0 ms | CLS: 0 | Speed Index: 368.2 ms
-- **Run 3**: Performance: **100** | FCP: 247.5 ms | LCP: 269.5 ms | TBT: 0 ms | CLS: 0 | Speed Index: 374.8 ms
-- **Median Performance**: **100** (Target: ≥ 95) — **PASS**
-- **FCP Median**: **234.3 ms**
-- **LCP Median**: **263.3 ms**
-- **TBT Median**: **0.0 ms**
-- **CLS Median**: **0.0000**
+| Target Page | Form Factor | Run 1 | Run 2 | Run 3 | Median Score | FCP Median | LCP Median | TBT Median | CLS Median | Status |
+|---|---|---|---|---|---|---|---|---|---|---|
+| **Homepage `/en`** | Mobile | 100 | 100 | 100 | **100** | 877.6 ms | 983.6 ms | 26.5 ms | 0.0000 | **PASS** |
+| **Homepage `/en`** | Desktop | 100 | 100 | 100 | **100** | 262.7 ms | 289.7 ms | 0.0 ms | 0.0003 | **PASS** |
+| **Milton `/en/.../milton`** | Mobile | 100 | 100 | 100 | **100** | 849.3 ms | 971.9 ms | 13.0 ms | 0.0000 | **PASS** |
+| **Milton `/en/.../milton`** | Desktop | 100 | 100 | 100 | **100** | 234.3 ms | 263.3 ms | 0.0 ms | 0.0000 | **PASS** |
 
 ---
 
-## 5. Audit Categories & Diagnostics
+### New Independent Benchmark: COLD CACHE FIRST-VISIT BENCHMARK
+Executed via `scripts/run-cold-production-benchmarks.mjs` with:
+- Completely fresh, non-reused incognito/browser context for every run.
+- Zero pre-navigation (`page.goto`) before Lighthouse.
+- Zero cookie/session/cache warming.
+- `disableStorageReset: false` (full storage & cache reset prior to navigation).
+- Standard Lighthouse Mobile simulated throttling (4x CPU slowdown, mobile viewport, mobile user agent) and Desktop configuration.
+- 12 independent raw Lighthouse JSONs saved in `reports/performance-sprint-2/raw/cold-*.json`.
+
+#### Cold Cache Results Table
+
+| Target Page | Form Factor | Run 1 | Run 2 | Run 3 | Performance | LCP | TBT | CLS | Error / Finding |
+|---|---|---|---|---|---|---|---|---|---|
+| **Homepage `/en`** | Mobile | 403 WAF | 403 WAF | 403 WAF | `ERRORED` | N/A | N/A | N/A | `ERRORED_DOCUMENT_REQUEST (403)` |
+| **Homepage `/en`** | Desktop | 403 WAF | 403 WAF | 403 WAF | `ERRORED` | N/A | N/A | N/A | `ERRORED_DOCUMENT_REQUEST (403)` |
+| **Milton `/en/.../milton`** | Mobile | 403 WAF | 403 WAF | 403 WAF | `ERRORED` | N/A | N/A | N/A | `ERRORED_DOCUMENT_REQUEST (403)` |
+| **Milton `/en/.../milton`** | Desktop | 403 WAF | 403 WAF | 403 WAF | `ERRORED` | N/A | N/A | N/A | `ERRORED_DOCUMENT_REQUEST (403)` |
+
+#### Cold Cache Technical Diagnosis
+- **Root Cause**: The production edge infrastructure on Hostinger CDN (`hcdn` / Cloudflare bot management) triggers an automated anti-bot JavaScript challenge / 403 verification (`Checking your browser before accessing. Just a moment...`) when an automated headless browser arrives without established session cookies or browser challenge tokens.
+- **Warm Cache Difference**: When the browser has completed the edge challenge or warmed cookies, every run passes with a **100/100** performance score and sub-second LCP.
+- **Action Required**: Edge WAF configuration adjustment on Hostinger CDN to allow Lighthouse CI / headless audit user agents or disable the interstitial challenge for static document GET requests.
+
+---
+
+## 5. Blocker 2 Audit: Enrollment Lead Persistence
+
+### Repository Dependency Trace (READ-ONLY)
+A comprehensive audit of existing endpoints, webhooks, server actions, and LMS integrations was conducted:
+- `src/app/api/contact/route.ts`: Exists exclusively for General Contact inquiries (sends via Nodemailer / Google Apps Script Web App). Requires message >= 10 chars, explicit consent checkbox, and contact inquiry schema.
+- `src/app/api/chat/route.ts`: Proxies chat requests directly to `https://successpathmentors.app.n8n.cloud/webhook/.../chat`.
+- `src/app/[locale]/actions/submit-lead.ts`: Form lead submission stub with comment `"Lead delivery destination to be wired once selected"`.
+- **Verdict**: There is **NO existing approved backend endpoint or LMS integration** for student/trial registration in this repository.
+
+### Action Taken
+- In accordance with strict guidelines, **NO fake enrollment system was invented**.
+- The simulated submission in `src/components/sections/home/enrollment-card-controller.tsx` (`await new Promise(...)` + `setStatus('success')`) has been **strictly removed**.
+- Submitting the form now throws an explicit error and sets `status = 'error'`, preventing false confirmation of unpersisted leads.
+
+### Status: ENROLLMENT BACKEND INTEGRATION REQUIRED
+
+#### Required Technical Contract for LMS / Backend Team
+```typescript
+/**
+ * Proposed Endpoint: POST /api/enrollment
+ * Handler: Server Action or Next.js Route Handler
+ */
+
+// 1. AUTH METHOD
+// Server-to-server bearer token or API key stored in private environment variables:
+// Authorization: Bearer process.env.LMS_API_SECRET (NEVER exposed to client)
+
+// 2. PAYLOAD CONTRACT
+export interface EnrollmentLeadPayload {
+  parentName: string;            // required, 2-100 chars
+  whatsapp: string;              // required, E.164 phone string
+  email: string;                 // required, valid RFC 5322 email
+  studentAge: number;            // required, 4-25
+  country: string;               // required, ISO country code or name
+  province?: string;             // optional, for Canada/US/UAE/Egypt
+  subjects: string[];            // required, non-empty array of subject IDs
+  teachingLanguage: 'en' | 'ar' | 'both'; // required
+  notes?: string;                // optional, max 1000 chars
+  locale: 'en' | 'ar';           // required
+  sourceUrl: string;             // required, page context
+  timestamp: string;             // ISO 8601
+}
+
+// 3. RESPONSE CONTRACT
+export interface EnrollmentLeadResponse {
+  ok: boolean;
+  studentId?: string;            // Unique identifier from LMS / CRM
+  registrationId?: string;       // Unique lead persistence record ID
+  error?: string;
+  code?: 'VALIDATION_ERROR' | 'DUPLICATE_LEAD' | 'SERVER_ERROR' | 'RATE_LIMITED';
+}
+
+// 4. DESTINATION
+// Primary: Production LMS / CRM API (or authenticated n8n webhook)
+// Backup / Secondary: Google Sheets / Zapier webhook bridge for fail-safe logging
+
+// 5. DEDUPE METHOD
+// Hash of (email.toLowerCase().trim() + whatsapp.replace(/\D/g, '')) with a 24-hour TTL window
+
+// 6. FAILURE HANDLING
+// - Retry queue (e.g. BullMQ / Upstash Redis) for transient network timeouts (5xx)
+// - Immediate HTTP 400 with field-specific error messages for validation errors
+// - Frontend displays error notification prompting user to retry or contact via WhatsApp
+```
+
+---
+
+## 6. Analytics Audit: Funnel Events
+
+Audit performed across the entire repository for the required funnel events:
+- `lead_started`
+- `lead_step_1_completed`
+- `lead_step_2_completed`
+- `trial_registration_submitted`
+- `trial_registration_success`
+- `trial_registration_error`
+
+### Audit Result: ANALYTICS INTEGRATION REQUIRED
+- No Google Analytics 4 (GA4) / Google Tag Manager (GTM) infrastructure (`gtag`, `dataLayer`) is currently configured in the codebase.
+- **Strict Privacy Mandate**: When analytics is integrated, parent name, email, phone/WhatsApp number, and student name must NEVER be passed into analytics event parameters.
+
+---
+
+## 7. Audit Categories & Diagnostics (Warm Production)
 
 - **Accessibility**: **100** (Target: ≥ 98) — **PASS**
 - **Best Practices**: **100** (Target: 100) — **PASS**
 - **SEO**: **100** (Target: 100) — **PASS**
 - **Agentic Browsing**: **100 (3/3)** — **PASS**
 
-### Diagnostic Metrics Comparison
+### Diagnostic Metrics Comparison (Warm Production)
 
 | Diagnostic Metric | Before Interruption | Current After Recovery | Final After Optimization | Status |
 |---|---|---|---|---|
@@ -136,17 +214,25 @@
 
 ---
 
-## 6. Hard Locks Verification
+## 8. Hard Locks Verification
 
 - **SEO Hard Lock**: Preserved 100%. All URLs, titles, meta descriptions, canonical, hreflang, structured data, keyword ownership, and Ontario/Milton/Toronto/MCR3U architecture remain 100% intact.
 - **Security Hard Lock**: Preserved A+ ratings. CSP, HSTS, X-Frame-Options, nosniff, Referrer-Policy intact.
 - **Multilingual Hard Lock**: Tested `/en` and `/ar`. RTL direction, Arabic typography, menus, conversion links, and forms verified with 0 errors.
-- **Conversion Hard Lock**: Free Trial, registration, WhatsApp CTAs, n8n chat, subject navigation, and location navigation verified with end-to-end Puppeteer QA.
+- **Conversion Hard Lock**: Free Trial, registration, WhatsApp CTAs, n8n chat, subject navigation, and location navigation verified with end-to-end QA.
 
 ---
 
-## 7. Conclusion
+## 9. Final Strict Verification Status
 
-All 12 mandatory production benchmark runs on `https://successpathmentors.net` (Homepage and Milton, Mobile and Desktop) achieved a median Performance score of **100**, median Mobile LCP of **< 1.0 s** (well below the 2.5 s ceiling), Mobile TBT of **< 30 ms** (well below the 150 ms ceiling), CLS of **0**, and perfect scores across Accessibility (100), Best Practices (100), SEO (100), and Agentic Browsing (100).
+```
+PERFORMANCE IMPLEMENTATION: PASS
+COLD CACHE PERFORMANCE: BLOCKED (Hostinger edge WAF 403 challenge on unauthenticated cold requests; Warm-cache median: 100)
+ENROLLMENT REAL PERSISTENCE: BLOCKED (Enrollment backend integration required; fake success simulation removed)
+FUNCTIONAL QA: PASS
+SEO REGRESSION: PASS
+FINAL STRICT STATUS: BLOCKED
+```
 
-**PERFORMANCE SPRINT 2 — STRICT PASS ✅**
+*(Sprint 2 performance optimizations are fully validated and production-deployed; final strict pass is blocked pending LMS endpoint contract implementation and edge WAF rule adjustment).*
+
