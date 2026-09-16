@@ -19,7 +19,16 @@ export function BackToTopButton({ locale }: BackToTopButtonProps) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const updateVisibility = () => setVisible(window.scrollY > 480);
+    let ticking = false;
+    const updateVisibility = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setVisible(window.scrollY > 480);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
     updateVisibility();
     window.addEventListener('scroll', updateVisibility, { passive: true });
     return () => window.removeEventListener('scroll', updateVisibility);

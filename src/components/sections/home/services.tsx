@@ -561,7 +561,7 @@ export async function Services() {
                             className="
                               shrink-0
                               font-bold
-                              text-primary-200
+                              text-primary-600
                               transition-colors
                               duration-300
                               group-hover:text-accent-400

@@ -25,7 +25,7 @@ import {
 import type {
   SubjectCategory,
 } from './subjects-menu';
-import type { LocationNavCountry } from '@/content/locations/location-navigation';
+import { locationNavigation, type LocationNavCountry } from '@/content/locations/location-navigation';
 
 interface SectionLink {
   href: string;
@@ -45,7 +45,7 @@ interface MobileNavProps {
   locationsLabel: string;
   locationsOverviewHref: string;
   locationsOverviewLabel: string;
-  locationCountries: LocationNavCountry[];
+  locationCountries?: LocationNavCountry[];
   locale: 'en' | 'ar';
   openMenuLabel: string;
   closeMenuLabel: string;
@@ -89,7 +89,7 @@ export function MobileNav({
   locationsLabel,
   locationsOverviewHref,
   locationsOverviewLabel,
-  locationCountries,
+  locationCountries = locationNavigation,
   locale,
   openMenuLabel,
   closeMenuLabel,

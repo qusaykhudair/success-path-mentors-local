@@ -450,7 +450,6 @@ export async function SiteHeader() {
             triggerLabel={copy.locations}
             overviewHref={routePath.locations(currentLocale)}
             overviewLabel={currentLocale === 'ar' ? 'عرض جميع المواقع' : 'View all locations'}
-            countries={locationNavigation}
             locale={currentLocale}
           />
 
@@ -588,7 +587,6 @@ export async function SiteHeader() {
             locationsLabel={copy.locations}
             locationsOverviewHref={routePath.locations(currentLocale)}
             locationsOverviewLabel={currentLocale === 'ar' ? 'عرض جميع أماكن خدمتنا' : 'View all locations'}
-            locationCountries={locationNavigation}
             locale={currentLocale}
             openMenuLabel={
               t('openMenu')

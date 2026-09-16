@@ -1,8 +1,28 @@
-@import "tw-animate-css";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'DIN Next LT Arabic';
+  src: url('../assets/din-next-lt-arabic/DINNextLTArabic-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'DIN Next LT Arabic';
+  src: url('../assets/din-next-lt-arabic/DINNextLTArabic-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'DIN Next LT Arabic';
+  src: url('../assets/din-next-lt-arabic/DINNextLTArabic-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* =========================================================
    SUCCESS PATH MENTORS — GLOBAL DESIGN SYSTEM
@@ -12,6 +32,7 @@
 
 @layer base {
   :root {
+    --font-din: 'DIN Next LT Arabic';
     color-scheme: light;
 
     /* -----------------------------------------------------
@@ -777,6 +798,12 @@
   }
 }
 
+/* Authentication routes use a focused surface without the support chat
+   covering OTP and registration controls. The main website keeps the widget. */
+body:has([data-auth-page]) #n8n-chat {
+  display: none;
+}
+
 
 /* =========================================================
    n8n chatbot — Success Path Mentors
@@ -885,18 +912,6 @@
   text-align: left;
 }
 
-/* =========================================================
-   Bidi Rendering Fixes for Mixed Content
-   Force chat bubbles to determine their own RTL/LTR direction
-   using unicode-bidi and native dir attributes.
-   ========================================================= */
-#n8n-chat .chat-message,
-#n8n-chat .chat-message .n8n-markdown,
-#n8n-chat .chat-message p {
-  unicode-bidi: plaintext !important;
-  text-align: start !important;
-}
-
 /* Keep the chat clear of mobile browser chrome and the back-to-top button. */
 @media (min-width: 640px) {
   :root {
@@ -915,60 +930,15 @@
 @media (max-width: 480px) {
   :root {
     --chat--window--width: calc(100vw - 1rem);
-    --chat--window--height: min(calc(100vh - env(safe-area-inset-bottom, 0px) - 5rem), 620px);
-
-    @supports (height: 100dvh) {
-      --chat--window--height: min(calc(100dvh - env(safe-area-inset-bottom, 0px) - 5rem), 620px);
-    }
-
+    --chat--window--height: min(78dvh, 640px);
     --chat--window--right: 0.5rem;
     --chat--window--bottom: calc(env(safe-area-inset-bottom, 0px) + 0.5rem);
   }
 }
 
-/* =========================================================
-   Safari iOS Layout Fixes for n8n Chat
-   Ensure the input footer isn't clipped and toggle works cleanly.
-   ========================================================= */
-
-#n8n-chat,
-#n8n-chat > div {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-}
-
-#n8n-chat .chat-window {
-  flex-direction: column !important;
-  min-height: 0 !important;
-}
-
-#n8n-chat .chat-window[style*="display: none"] {
-  display: none !important;
-}
-
-#n8n-chat .chat-layout {
-  display: flex !important;
-  flex-direction: column !important;
-  flex: 1 1 auto;
-  min-height: 0 !important;
-}
-
-#n8n-chat .chat-messages {
-  flex: 1 1 auto !important;
-  min-height: 0 !important;
-  overflow-y: auto !important;
-  padding-bottom: env(safe-area-inset-bottom, 0.5rem) !important;
-}
-
-#n8n-chat .chat-footer {
-  flex-shrink: 0 !important;
-  padding-bottom: env(safe-area-inset-bottom, 0.5rem) !important;
-}
-
-/* Hide external n8n branding footer */
-#n8n-chat .chat-powered-by,
-#n8n-chat .chat-get-started-footer {
-  display: none !important;
+/* Optimization for below-the-fold sections */
+.content-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 750px;
 }
 

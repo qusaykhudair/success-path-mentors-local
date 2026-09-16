@@ -9,10 +9,13 @@ import {
   SectionHeading,
 } from '@/components/ui/section';
 
-import {
-  TestimonialsGrid,
-  type Testimonial,
-} from './testimonials-grid';
+import dynamic from 'next/dynamic';
+import type { Testimonial } from './testimonials-grid';
+
+const TestimonialsGrid = dynamic(
+  () => import('./testimonials-grid').then((mod) => mod.TestimonialsGrid),
+  { ssr: true }
+);
 
 export async function Testimonials() {
   if (!verifiedTrustContent.testimonials) return null;

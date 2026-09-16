@@ -228,7 +228,7 @@ export async function Challenges() {
                       text-caption
                       font-bold
                       tracking-wider
-                      text-primary-200
+                      text-primary-600
                       transition-colors
                       duration-300
                       group-hover:text-accent-500

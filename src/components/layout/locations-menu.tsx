@@ -3,13 +3,13 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { ChevronDown, ChevronRight, MapPin } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import type { LocationNavCountry } from '@/content/locations/location-navigation';
+import { locationNavigation, type LocationNavCountry } from '@/content/locations/location-navigation';
 
 interface LocationsMenuProps {
   triggerLabel: string;
   overviewHref: string;
   overviewLabel: string;
-  countries: LocationNavCountry[];
+  countries?: LocationNavCountry[];
   locale: 'en' | 'ar';
 }
 
@@ -17,7 +17,7 @@ function localizeHref(locale: 'en' | 'ar', href: string): string {
   return `/${locale}${href}`;
 }
 
-export function LocationsMenu({ triggerLabel, overviewHref, overviewLabel, countries, locale }: LocationsMenuProps) {
+export function LocationsMenu({ triggerLabel, overviewHref, overviewLabel, countries = locationNavigation, locale }: LocationsMenuProps) {
   const [open, setOpen] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
   const [countryKey, setCountryKey] = useState(countries[0]?.key ?? '');

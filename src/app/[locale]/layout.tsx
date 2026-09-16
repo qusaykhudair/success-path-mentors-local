@@ -6,7 +6,6 @@ import type { ReactNode } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
 
 import {
-  getMessages,
   getTranslations,
   setRequestLocale,
 } from 'next-intl/server';
@@ -139,7 +138,7 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
 
-  const messages = await getMessages();
+  const emptyMessages = {};
 
   const tAccessibility =
     await getTranslations({
@@ -281,7 +280,8 @@ export default async function LocaleLayout({
         />
 
         <NextIntlClientProvider
-          messages={messages}
+          locale={locale}
+          messages={emptyMessages}
         >
           <a
             href="#main-content"

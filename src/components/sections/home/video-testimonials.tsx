@@ -10,10 +10,13 @@ import {
   SectionHeading,
 } from '@/components/ui/section';
 
-import {
-  VideoTestimonialsGrid,
-  type VideoTestimonial,
-} from './video-testimonials-grid';
+import dynamic from 'next/dynamic';
+import type { VideoTestimonial } from './video-testimonials-grid';
+
+const VideoTestimonialsGrid = dynamic(
+  () => import('./video-testimonials-grid').then((mod) => mod.VideoTestimonialsGrid),
+  { ssr: true }
+);
 
 export async function VideoTestimonials() {
   if (!verifiedTrustContent.videoTestimonials) return null;
