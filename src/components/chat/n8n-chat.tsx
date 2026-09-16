@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 type N8nChatLocale = 'en' | 'ar' | 'de';
 
@@ -158,7 +158,13 @@ const chatCopy = {
  * always renders reliably.
  */
 export function N8nChat({ locale }: N8nChatProps) {
+  const [requested, setRequested] = useState(false);
+  const [ready, setReady] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const openLabel = locale === 'ar' ? 'افتح المحادثة' : locale === 'de' ? 'Chat öffnen' : 'Open chat';
+
   useEffect(() => {
+    if (!requested) return;
     const target = document.getElementById('n8n-chat');
 
     if (!target) {
@@ -315,63 +321,72 @@ export function N8nChat({ locale }: N8nChatProps) {
           childList: true,
           subtree: true,
         });
+
+        const toggle = target.querySelector<HTMLElement>('.chat-window-toggle');
+        if (!toggle) throw new Error('Chat toggle did not mount');
+        toggle.setAttribute('role', 'button');
+        toggle.setAttribute('tabindex', '0');
+        toggle.setAttribute('aria-label', copy.closeButtonTooltip);
+        toggle.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            toggle.click();
+          }
+        });
+        let expanded = false;
+        toggle.addEventListener('click', () => {
+          expanded = !expanded;
+          toggle.setAttribute('aria-expanded', String(expanded));
+          toggle.setAttribute('aria-label', expanded ? copy.closeButtonTooltip : openLabel);
+        });
+        toggle.click();
+        toggle.focus();
+        setReady(true);
       } catch (error) {
+        if (cancelled) return;
         target.dataset.initialized = 'false';
+        setFailed(true);
+        setRequested(false);
         console.error('N8nChat: Failed to initialize the n8n chat widget.', error);
       }
     };
 
-    let timer: ReturnType<typeof setTimeout> | null = null;
-    let idleId: number | null = null;
-    let initialized = false;
-
-    const startInit = () => {
-      if (initialized || cancelled) return;
-      initialized = true;
-      cleanupListeners();
-      void initializeChat();
-    };
-
-    const cleanupListeners = () => {
-      if (timer) clearTimeout(timer);
-      if (idleId && typeof window !== 'undefined' && 'cancelIdleCallback' in window) {
-        window.cancelIdleCallback(idleId);
-      }
-      window.removeEventListener('scroll', startInit);
-      window.removeEventListener('pointerdown', startInit);
-      window.removeEventListener('touchstart', startInit);
-      window.removeEventListener('keydown', startInit);
-    };
-
-    window.addEventListener('scroll', startInit, { passive: true, once: true });
-    window.addEventListener('pointerdown', startInit, { passive: true, once: true });
-    window.addEventListener('touchstart', startInit, { passive: true, once: true });
-    window.addEventListener('keydown', startInit, { passive: true, once: true });
-
-    if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
-      idleId = window.requestIdleCallback(() => {
-        timer = setTimeout(startInit, 20000);
-      }, { timeout: 25000 });
-    } else {
-      timer = setTimeout(startInit, 20000);
-    }
+    void initializeChat();
 
     return () => {
       cancelled = true;
-      cleanupListeners();
       observer?.disconnect();
       chatApp?.unmount();
       target.replaceChildren();
       delete target.dataset.initialized;
     };
-  }, [locale]);
+  }, [locale, requested, openLabel]);
 
   return (
+    <>
+      {!ready && (
+        <button
+          type="button"
+          data-chat-launcher
+          aria-label={openLabel}
+          aria-busy={requested}
+          disabled={requested}
+          onClick={() => { setFailed(false); setRequested(true); }}
+          className="fixed z-[80] flex items-center justify-center rounded-full bg-primary text-white shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          style={{ right: 'var(--chat--window--right)', bottom: 'var(--chat--window--bottom)', width: 'var(--chat--toggle--size)', height: 'var(--chat--toggle--size)' }}
+        >
+          {requested ? <span aria-hidden="true">…</span> : (
+            <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c5.5 0 10 3.58 10 8s-4.5 8-10 8c-1.24 0-2.43-.18-3.53-.5C5.55 21 2 21 2 21c2.33-2.33 2.7-3.9 2.75-4.5C3.05 15.07 2 13.13 2 11c0-4.42 4.5-8 10-8" /></svg>
+          )}
+          {failed && <span role="status" className="sr-only">{locale === 'ar' ? 'تعذر تحميل المحادثة. حاول مرة أخرى.' : 'Chat could not load. Try again.'}</span>}
+        </button>
+      )}
     <div
       id="n8n-chat"
       data-locale={locale}
       dir={locale === 'ar' ? 'rtl' : 'ltr'}
       aria-live="polite"
     />
+    </>
   );
 }

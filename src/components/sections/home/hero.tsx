@@ -59,11 +59,13 @@ export async function Hero({
           absolute
           -end-32
           -top-32
+          hidden
           h-96
           w-96
           rounded-full
           bg-accent-200/40
           blur-3xl
+          sm:block
         "
       />
 
@@ -74,11 +76,13 @@ export async function Hero({
           absolute
           -bottom-40
           -start-32
+          hidden
           h-[28rem]
           w-[28rem]
           rounded-full
           bg-primary-200/45
           blur-3xl
+          sm:block
         "
       />
 

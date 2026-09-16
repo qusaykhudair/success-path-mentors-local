@@ -23,9 +23,14 @@ const CONTENT_SECURITY_POLICY = [
   "upgrade-insecure-requests",
 ].join('; ');
 
-function applySecurityHeaders(response: NextResponse): NextResponse {
-  response.headers.set('Content-Security-Policy', CONTENT_SECURITY_POLICY);
-  response.headers.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
+function applySecurityHeaders(response: NextResponse, isLocal = false): NextResponse {
+  const csp = isLocal
+    ? CONTENT_SECURITY_POLICY.replace(/;\s*upgrade-insecure-requests/, '')
+    : CONTENT_SECURITY_POLICY;
+  response.headers.set('Content-Security-Policy', csp);
+  if (!isLocal) {
+    response.headers.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
+  }
   response.headers.set('X-Content-Type-Options', 'nosniff');
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
@@ -68,13 +73,16 @@ const HOLD_ROUTES = [
 ];
 
 export default function middleware(request: NextRequest) {
+  const host = request.headers.get('host') || '';
+  const isLocal = /^(localhost|127\.0\.0\.1|\[::1\])(:\d+)?$/i.test(host);
+
   const normalizedUrl = getNormalizedRequestUrl(
     request.url,
     request.headers.get('host'),
     request.headers.get('x-forwarded-proto')
   );
   if (normalizedUrl) {
-    return applySecurityHeaders(NextResponse.redirect(normalizedUrl, 301));
+    return applySecurityHeaders(NextResponse.redirect(normalizedUrl, 301), isLocal);
   }
 
   const pathname = request.nextUrl.pathname;
@@ -89,16 +97,16 @@ export default function middleware(request: NextRequest) {
   if (targetRedirect) {
     const url = new URL(targetRedirect, request.url);
     url.search = request.nextUrl.search;
-    return applySecurityHeaders(NextResponse.redirect(url, 301));
+    return applySecurityHeaders(NextResponse.redirect(url, 301), isLocal);
   }
 
   // Enforce 404 for unapproved HOLD pages
   if (HOLD_ROUTES.includes(pathname)) {
-    return applySecurityHeaders(new NextResponse(null, { status: 404 }));
+    return applySecurityHeaders(new NextResponse(null, { status: 404 }), isLocal);
   }
 
   if (pathname === '/fr' || pathname.startsWith('/fr/')) {
-    return applySecurityHeaders(NextResponse.next());
+    return applySecurityHeaders(NextResponse.next(), isLocal);
   }
 
   const response = intlMiddleware(request);
@@ -114,7 +122,7 @@ export default function middleware(request: NextRequest) {
   if (!isLocation) {
     response.headers.delete('link');
   }
-  return applySecurityHeaders(response);
+  return applySecurityHeaders(response, isLocal);
 }
 
 export const config = {

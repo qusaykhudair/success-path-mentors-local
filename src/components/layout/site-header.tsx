@@ -49,7 +49,6 @@ import {
   type SubjectCategory,
 } from './subjects-menu';
 import { LocationsMenu } from './locations-menu';
-import { locationNavigation } from '@/content/locations/location-navigation';
 import { buildTrialLessonMessage, buildWhatsAppHref, WHATSAPP_DISPLAY_NUMBER } from '@/lib/whatsapp';
 
 const navigationCopy = {

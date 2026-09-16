@@ -145,23 +145,41 @@ export default async function HomePage({
 
       <Programs />
 
-      <Steps />
+      <div className="content-auto">
+        <Steps />
+      </div>
 
-      <Services />
+      <div className="content-auto">
+        <Services />
+      </div>
 
-      <Challenges />
+      <div className="content-auto">
+        <Challenges />
+      </div>
 
-      <Testimonials />
+      <div className="content-auto">
+        <Testimonials />
+      </div>
 
-      <VideoTestimonials />
+      <div className="content-auto">
+        <VideoTestimonials />
+      </div>
 
-      <Pricing />
+      <div className="content-auto">
+        <Pricing />
+      </div>
 
-      <LocalAvailabilityBlock locale={locale} />
+      <div className="content-auto">
+        <LocalAvailabilityBlock locale={locale} />
+      </div>
 
-      <Faq />
+      <div className="content-auto">
+        <Faq />
+      </div>
 
-      <FinalCta />
+      <div className="content-auto">
+        <FinalCta />
+      </div>
     </>
   );
 }

@@ -25,7 +25,8 @@ import {
 import type {
   SubjectCategory,
 } from './subjects-menu';
-import { locationNavigation, type LocationNavCountry } from '@/content/locations/location-navigation';
+import type { LocationNavCountry } from '@/content/locations/location-navigation';
+import { useLocationNavigation } from './use-location-navigation';
 
 interface SectionLink {
   href: string;
@@ -89,7 +90,7 @@ export function MobileNav({
   locationsLabel,
   locationsOverviewHref,
   locationsOverviewLabel,
-  locationCountries = locationNavigation,
+  locationCountries: providedCountries,
   locale,
   openMenuLabel,
   closeMenuLabel,
@@ -98,6 +99,7 @@ export function MobileNav({
 }: MobileNavProps) {
   const [open, setOpen] = useState(false);
   const [hasBeenOpened, setHasBeenOpened] = useState(false);
+  const { countries: locationCountries, failed: locationsFailed } = useLocationNavigation(open, providedCountries);
 
   const [
     openCategory,
@@ -660,6 +662,7 @@ export function MobileNav({
             </div>
 
             <div className="mt-2 grid gap-1">
+              {open && !locationCountries.length && <p role="status" className="px-3 text-small">{locationsFailed ? (locale === 'ar' ? 'استخدم رابط جميع المواقع.' : 'Use the locations overview link.') : (locale === 'ar' ? 'جارٍ التحميل…' : 'Loading…')}</p>}
               {hasBeenOpened ? locationCountries.map((country) => {
                 const countryOpen = openLocationCountry === country.key;
                 const countryPanelId = `${panelId}-location-${country.key}`;
@@ -690,7 +693,7 @@ export function MobileNav({
 
                     <div id={countryPanelId} aria-hidden={!countryOpen} inert={!countryOpen} className={cn('grid transition-[grid-template-rows,opacity] duration-300', countryOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0')}>
                       <div className="overflow-hidden ps-3">
-                        {country.regions.map((region) => {
+                        {countryOpen && country.regions.map((region) => {
                           const regionId = `${country.key}-${region.key}`;
                           const regionOpen = openLocationRegion === regionId;
                           const regionPanelId = `${panelId}-location-${regionId}`;
@@ -719,7 +722,7 @@ export function MobileNav({
                               </div>
 
                               <div id={regionPanelId} aria-hidden={!regionOpen} inert={!regionOpen} className={cn('grid transition-[grid-template-rows,opacity] duration-300', regionOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0')}>
-                                <ul className="grid overflow-hidden ps-3 sm:grid-cols-2">
+                                {regionOpen && <ul className="grid overflow-hidden ps-3 sm:grid-cols-2">
                                   <li>
                                     <a href={`/${locale}${region.curriculum.href}`} onClick={() => closeAll()} tabIndex={countryOpen && regionOpen ? 0 : -1} className="block min-h-touch rounded-button px-3 py-2.5 text-small font-bold leading-5 text-accent-800 transition-colors hover:bg-accent-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
                                       {region.curriculum.label[locale]}
@@ -732,7 +735,7 @@ export function MobileNav({
                                       </a>
                                     </li>
                                   ))}
-                                </ul>
+                                </ul>}
                               </div>
                             </div>
                           );
