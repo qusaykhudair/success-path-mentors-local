@@ -1,0 +1,158 @@
+{
+  "mobileRuns": [
+    {
+      "filename": "home_mobile-run1.json",
+      "scores": {
+        "perf": 78,
+        "a11y": 97,
+        "bp": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "fcp": 2482.5610500000003,
+        "lcp": 3982.5610500000007,
+        "tbt": 281.00000000000045,
+        "cls": 0,
+        "si": 2609.207618000908
+      },
+      "savings": {
+        "renderBlocking": 0,
+        "unusedJs": 0,
+        "unusedCss": 10904,
+        "longTasks": 6
+      }
+    },
+    {
+      "filename": "home_mobile-run2.json",
+      "scores": {
+        "perf": 78,
+        "a11y": 97,
+        "bp": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "fcp": 2457.62835,
+        "lcp": 3957.62835,
+        "tbt": 300,
+        "cls": 0,
+        "si": 2895.7079599705603
+      },
+      "savings": {
+        "renderBlocking": 0,
+        "unusedJs": 0,
+        "unusedCss": 10904,
+        "longTasks": 7
+      }
+    },
+    {
+      "filename": "home_mobile-run3.json",
+      "scores": {
+        "perf": 81,
+        "a11y": 97,
+        "bp": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "fcp": 2360.499,
+        "lcp": 3802.9990000000007,
+        "tbt": 249.5,
+        "cls": 0,
+        "si": 2588.471571944451
+      },
+      "savings": {
+        "renderBlocking": 0,
+        "unusedJs": 0,
+        "unusedCss": 10904,
+        "longTasks": 8
+      }
+    }
+  ],
+  "desktopRuns": [
+    {
+      "filename": "home_desktop-run1.json",
+      "scores": {
+        "perf": 99,
+        "a11y": 97,
+        "bp": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "fcp": 534.5047500000001,
+        "lcp": 794.5047500000001,
+        "tbt": 6,
+        "cls": 0.00008842020925910506,
+        "si": 929.6756771914272
+      },
+      "savings": {
+        "renderBlocking": 0,
+        "unusedJs": 0,
+        "unusedCss": 0,
+        "longTasks": 2
+      }
+    },
+    {
+      "filename": "home_desktop-run2.json",
+      "scores": {
+        "perf": 0,
+        "a11y": 97,
+        "bp": 100,
+        "seo": 100
+      },
+      "metrics": {},
+      "savings": {
+        "renderBlocking": 0,
+        "unusedJs": 0,
+        "unusedCss": 0,
+        "longTasks": 0
+      }
+    },
+    {
+      "filename": "home_desktop-run3.json",
+      "scores": {
+        "perf": 99,
+        "a11y": 97,
+        "bp": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "fcp": 580.0362,
+        "lcp": 848.0362,
+        "tbt": 27,
+        "cls": 0.00008842020925910506,
+        "si": 919.3539774761462
+      },
+      "savings": {
+        "renderBlocking": 0,
+        "unusedJs": 0,
+        "unusedCss": 0,
+        "longTasks": 2
+      }
+    }
+  ],
+  "summary": {
+    "mobile": {
+      "perf": 78,
+      "lcp": 3957.62835,
+      "fcp": 2457.62835,
+      "tbt": 281.00000000000045,
+      "cls": 0,
+      "a11y": 97,
+      "bp": 100,
+      "seo": 100,
+      "renderBlocking": 0,
+      "unusedJsKiB": "0.0",
+      "unusedCssKiB": "10.6",
+      "longTasks": 7
+    },
+    "desktop": {
+      "perf": 99,
+      "lcp": 848.0362,
+      "fcp": 580.0362,
+      "tbt": 27,
+      "cls": 0.00008842020925910506,
+      "a11y": 97,
+      "bp": 100,
+      "seo": 100
+    }
+  }
+}

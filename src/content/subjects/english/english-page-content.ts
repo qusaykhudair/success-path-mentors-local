@@ -6,16 +6,16 @@ const englishPageContent = {
   en: {
     seo: {
       title:
-        'Online English Tutoring for Grades 1–12 | Success Path Mentors',
+        'Online English Tutoring Grades 1–12 | Reading, Writing & Literacy | Success Path Mentors',
       description:
-        'Personalized one-to-one English tutoring organized by grade, curriculum strand, schoolwork, and student goals.',
+        'One-to-one online English tutoring for Grades 1–12. Build lasting reading comprehension, academic writing, grammar, and literary analysis skills with dedicated mentors.',
       pathname: '/subjects/english',
     },
     hero: {
       eyebrow:
         'One-to-one English tutoring',
       title:
-        'Build strong English skills, one grade at a time',
+        'One-to-One Online English Tutoring for Grades 1–12',
       description:
         'Personalized English support for Grades 1–12, organized across reading, language, literature, communication, writing, and academic skills.',
       primaryAction:

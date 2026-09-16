@@ -66,7 +66,7 @@ export function EnglishStrandGrid({
               font-bold
               uppercase
               tracking-[0.12em]
-              text-[#0f766e]
+              text-[#108686]
             "
           >
             {copy.eyebrow}
@@ -179,7 +179,7 @@ export function EnglishStrandGrid({
                       pt-6
                       text-small
                       font-black
-                      text-[#0f766e]
+                      text-[#108686]
                     "
                   >
                     {copy.openAction}
@@ -291,7 +291,7 @@ function CardHeader({
           rounded-2xl
           ${
             active
-              ? 'bg-[#ECFEFD] text-[#0f766e] ring-1 ring-[#CFFAF8]'
+              ? 'bg-[#ECFEFD] text-[#108686] ring-1 ring-[#CFFAF8]'
               : 'bg-[#F1F5F9] text-[#64748B]'
           }
         `}

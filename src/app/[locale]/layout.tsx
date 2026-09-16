@@ -1,16 +1,19 @@
 // src/app/[locale]/layout.tsx
 
 import type { Metadata } from 'next';
+import { getDefaultMarket } from '@/config/markets';
+import { getDefaultOpenGraphLocale } from '@/lib/market-display';
 import type { ReactNode } from 'react';
 
 import { NextIntlClientProvider } from 'next-intl';
 
 import {
+  getMessages,
   getTranslations,
   setRequestLocale,
 } from 'next-intl/server';
 
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 
 import { FloatingWhatsAppButton } from '@/components/layout/floating-whatsapp-button';
 import { BackToTopButton } from '@/components/layout/back-to-top-button';
@@ -30,7 +33,6 @@ import {
 } from '@/lib/constants';
 
 import { dinNext } from '@/lib/fonts';
-
 
 import '../globals.css';
 
@@ -102,15 +104,10 @@ export async function generateMetadata({
     openGraph: {
       siteName: t('siteName'),
 
-      locale:
-        locale === 'ar'
-          ? 'ar_CA'
-          : 'en_CA',
+      locale: getDefaultOpenGraphLocale(locale),
 
       alternateLocale: [
-        locale === 'ar'
-          ? 'en_CA'
-          : 'ar_CA',
+        getDefaultOpenGraphLocale(locale === 'ar' ? 'en' : 'ar'),
       ],
 
       type: 'website',
@@ -128,6 +125,10 @@ export default async function LocaleLayout({
 }: LocaleLayoutProps) {
   const { locale } = await params;
 
+  if (locale === 'fr') {
+    redirect('/fr/programme-francais');
+  }
+
   const isSupportedLocale = (
     routing.locales as readonly string[]
   ).includes(locale);
@@ -138,7 +139,7 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
 
-  const emptyMessages = {};
+  const messages = await getMessages();
 
   const tAccessibility =
     await getTranslations({
@@ -201,10 +202,7 @@ export default async function LocaleLayout({
         }
       : {}),
 
-    areaServed: [
-      { '@type': 'Country', name: 'Canada' },
-      { '@type': 'Country', name: 'United States' },
-    ],
+    areaServed: getDefaultMarket().organization.areaServed,
 
     knowsAbout: [
       'K-12 online tutoring',
@@ -222,10 +220,10 @@ export default async function LocaleLayout({
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer support',
-      telephone: '+1-647-787-5999',
-      email: 'successpathmentors@gmail.com',
+      telephone: getDefaultMarket().contact.phone?.replace(/\s/g, '-'),
+      email: getDefaultMarket().contact.publishedEmail,
       availableLanguage: ['English', 'Arabic'],
-      areaServed: ['CA', 'US'],
+      areaServed: getDefaultMarket().supportedCountries,
     },
   };
 
@@ -251,10 +249,6 @@ export default async function LocaleLayout({
       className={dinNext.variable}
       suppressHydrationWarning
     >
-      <head>
-        <link rel="preload" href="/fonts/DINNextLTArabic-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        <link rel="preload" href="/fonts/DINNextLTArabic-Bold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      </head>
       <body
         className="
           min-h-screen
@@ -284,8 +278,7 @@ export default async function LocaleLayout({
         />
 
         <NextIntlClientProvider
-          locale={locale}
-          messages={emptyMessages}
+          messages={messages}
         >
           <a
             href="#main-content"

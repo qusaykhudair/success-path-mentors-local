@@ -1,3 +1,4 @@
+import { getDefaultMarket } from '@/config/markets';
 import type {
   PageHighlight,
 } from '@/types/internal-page';
@@ -146,9 +147,9 @@ export const contactPageContent = {
   en: {
     seo: {
       title:
-        'Contact Success Path Mentors | Online Tutoring Inquiry',
+        'Contact Success Path Mentors | Book a Free Tutoring Trial Session',
       description:
-        'Contact Success Path Mentors about one-to-one online tutoring, tutor matching, scheduling, lessons, payments, or support for an existing student.',
+        'Book a free online tutoring consultation and trial session. Connect with dedicated academic mentors in Math, Science, and English for Grades 1–12.',
     },
 
     breadcrumbs: {
@@ -158,13 +159,13 @@ export const contactPageContent = {
     },
 
     hero: {
-      eyebrow: 'Contact the academy',
+      eyebrow: 'Contact our team',
       title:
-        'Tell us how we can support the student',
+        'Connect with Our Academic Mentors to Start Personalized Tutoring',
       description:
         'Send the student’s grade, subject, curriculum, preferred language, time zone, schedule, and learning goal. Your message is delivered directly to the official Success Path Mentors Gmail inbox.',
       primaryAction: 'Open the contact form',
-      secondaryAction: 'Email the academy',
+      secondaryAction: 'Email our team',
       highlights: [
         {
           value: 'Direct delivery',
@@ -197,9 +198,9 @@ export const contactPageContent = {
       description:
         'Messages are sent directly to successpathmentors@gmail.com. Replies are sent to the email or telephone details entered below.',
       privacyNotice:
-        'By submitting this form, you confirm that the information is accurate, that you are authorized to provide any student information, and that the academy may use it to respond to and administer the inquiry.',
+        'By submitting this form, you confirm that the information is accurate, that you are authorized to provide any student information, and that Success Path Mentors may use it to respond to and administer the inquiry.',
       scheduleNote:
-        'The selected day and time are interpreted in the student time zone chosen above. The academy will confirm the final recurring schedule based on tutor availability.',
+        'The selected day and time are interpreted in the student time zone chosen above. Our team will confirm the final recurring schedule based on tutor availability.',
 
       fields: {
         contactName:
@@ -1029,7 +1030,7 @@ export const contactPageContent = {
       success:
         'Your request was saved successfully. WhatsApp will open with a prepared copy of the information.',
       error:
-        'The message could not be sent. Check the required fields and try again, or email the academy directly.',
+        'The message could not be sent. Check the required fields and try again, or email our team directly.',
       whatsappNotice:
         'For the free WhatsApp method, review the prepared message and press Send in WhatsApp. The Google Sheet record is already saved before WhatsApp opens.',
       whatsappAction:
@@ -1044,10 +1045,10 @@ export const contactPageContent = {
       title:
         'Your message reaches the platform inbox',
       description:
-        'The website sends the complete inquiry to the official Success Path Mentors Gmail account. The sender’s email is set as the reply address, so the academy can respond directly from Gmail.',
+        'The website sends the complete inquiry to the official Success Path Mentors Gmail account. The sender’s email is set as the reply address, so our team can respond directly from Gmail.',
       emailLabel: 'Official email',
       emailValue:
-        'successpathmentors@gmail.com',
+        getDefaultMarket().contact.publishedEmail,
       replyLabel: 'Reply method',
       replyValue:
         'Email or telephone details provided in the form',
@@ -1965,7 +1966,7 @@ export const contactPageContent = {
         'يرسل الموقع الاستفسار كاملًا إلى حساب Success Path Mentors الرسمي على Gmail، ويضع بريد المرسل كعنوان للرد حتى تستطيع الأكاديمية الرد مباشرة من Gmail.',
       emailLabel: 'البريد الرسمي',
       emailValue:
-        'successpathmentors@gmail.com',
+        getDefaultMarket().contact.publishedEmail,
       replyLabel: 'طريقة الرد',
       replyValue:
         'البريد أو رقم التواصل الذي يتم إدخاله في النموذج',

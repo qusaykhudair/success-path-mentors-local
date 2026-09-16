@@ -6,9 +6,9 @@ const subjectsPageContent = {
   en: {
     seo: {
       title:
-        'Online Tutoring Subjects | Math, English, Chemistry, Physics and General Science | Success Path Mentors',
+        'Online Tutoring Subjects | Math, English, Chemistry, Physics & Science | Success Path Mentors',
       description:
-        'Explore Success Path Mentors mathematics, English, chemistry, physics, and General Science curricula organized by subject, pathway, strand, and grade level.',
+        'Explore all online tutoring subjects and curriculum directories at Success Path Mentors: Math, English, Chemistry, Physics, and General Science for Grades 1–12.',
       pathname:
         '/subjects',
     },
@@ -24,7 +24,7 @@ const subjectsPageContent = {
       eyebrow:
         'Subjects and curriculum',
       title:
-        'Explore six structured tutoring subjects',
+        'Explore Structured Online Tutoring Programs & Subjects',
       description:
         'Choose a subject, review its complete curriculum structure, and find the learning pathway that matches the student’s grade and goals.',
       stats: {

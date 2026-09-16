@@ -306,7 +306,7 @@ export const tutorMatchingPageContent = {
         {
           title: 'Allow the team to review',
           description:
-            'The academy may clarify the concern, review lesson information, and determine whether an adjustment or different tutor is appropriate.',
+            'Our team may clarify the concern, review lesson information, and determine whether an adjustment or different tutor is appropriate.',
           icon: ClipboardCheck,
         },
         {
@@ -323,9 +323,9 @@ export const tutorMatchingPageContent = {
       title:
         'What tutor matching does and does not guarantee',
       description:
-        'The academy works to make a thoughtful match, but tutoring outcomes depend on several factors beyond tutor selection.',
+        'Success Path Mentors works to make a thoughtful match, but tutoring outcomes depend on several factors beyond tutor selection.',
       bullets: [
-        'The academy does not guarantee a specific tutor, exact schedule, grade improvement, examination score, or academic result.',
+        'Success Path Mentors does not guarantee a specific tutor, exact schedule, grade improvement, examination score, or academic result.',
         'Tutor availability can change because of time zones, school terms, illness, emergencies, or changes in the tutor’s schedule.',
         'Families should provide accurate information and timely feedback so the team can review the match responsibly.',
         'Students are expected to attend prepared, participate respectfully, and complete their own schoolwork.',
@@ -344,7 +344,7 @@ export const tutorMatchingPageContent = {
           question:
             'Can I choose a specific tutor?',
           answer:
-            'You can share preferences or request a tutor you already know, but assignment depends on subject fit, availability, schedule, and the academy’s review. A specific tutor cannot be guaranteed.',
+            'You can share preferences or request a tutor you already know, but assignment depends on subject fit, availability, schedule, and our team’s review. A specific tutor cannot be guaranteed.',
         },
         {
           question:
@@ -356,7 +356,7 @@ export const tutorMatchingPageContent = {
           question:
             'Can I request a male or female tutor?',
           answer:
-            'Families may share this preference. The academy will consider it together with subject requirements, schedule, and tutor availability, but cannot guarantee every preference.',
+            'Families may share this preference. Our team will consider it together with subject requirements, schedule, and tutor availability, but cannot guarantee every preference.',
         },
         {
           question:
@@ -374,7 +374,7 @@ export const tutorMatchingPageContent = {
           question:
             'Does tutor matching guarantee better grades?',
           answer:
-            'No. The academy cannot guarantee a specific grade or result. Progress depends on attendance, participation, practice, school requirements, the student’s starting point, and other factors.',
+            'No. Success Path Mentors cannot guarantee a specific grade or result. Progress depends on attendance, participation, practice, school requirements, the student’s starting point, and other factors.',
         },
       ],
     },
@@ -385,9 +385,9 @@ export const tutorMatchingPageContent = {
         {
           title: 'About Success Path Mentors',
           description:
-            'Learn about the academy’s purpose, values, tutoring model, and approach to quality.',
+            'Learn about our purpose, values, tutoring model, and approach to quality.',
           href: '/en/about',
-          label: 'Read about the academy',
+          label: 'Read about our approach',
         },
         {
           title: 'How tutoring works',

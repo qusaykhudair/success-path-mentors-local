@@ -1,6 +1,6 @@
 import { buildGeneralInquiryMessage, buildWhatsAppHref } from '@/lib/whatsapp';
 
-type FloatingWhatsAppLocale = 'en' | 'ar' | 'fr';
+type FloatingWhatsAppLocale = 'en' | 'ar' | 'fr' | 'de';
 
 const floatingWhatsAppCopy = {
   en: {
@@ -15,17 +15,30 @@ const floatingWhatsAppCopy = {
     eyebrow: "Besoin d'aide ?",
     label: 'Écrivez-nous sur WhatsApp',
   },
+  de: {
+    eyebrow: 'Brauchen Sie Hilfe?',
+    label: 'Chatten Sie mit uns auf WhatsApp',
+  },
 } as const;
 
 interface FloatingWhatsAppButtonProps {
   locale: FloatingWhatsAppLocale;
+  phoneNumber?: string;
 }
 
 export function FloatingWhatsAppButton({
   locale,
+  phoneNumber,
 }: FloatingWhatsAppButtonProps) {
   const copy = floatingWhatsAppCopy[locale];
-  const href = buildWhatsAppHref(buildGeneralInquiryMessage(locale));
+  const inquiryLocale = locale === 'de' ? 'en' : locale;
+  const href = phoneNumber
+    ? `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+        locale === 'de'
+          ? 'Hallo Success Path Mentors Team, ich interessiere mich für eine Probestunde in Deutschland.'
+          : buildGeneralInquiryMessage(inquiryLocale)
+      )}`
+    : buildWhatsAppHref(buildGeneralInquiryMessage(inquiryLocale));
 
   return (
     <a

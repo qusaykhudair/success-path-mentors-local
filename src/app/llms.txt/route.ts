@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { getDefaultMarket } from '@/config/markets';
 
 import { SITE_URL } from '@/lib/constants';
 
@@ -32,7 +33,7 @@ export function GET() {
 - Grades: 1–12
 - Core subjects: Math, English, Science, Physics, Chemistry, French
 - Main service regions: Canada and the United States
-- Contact: successpathmentors@gmail.com | +1 647 787 5999
+- Contact: ${getDefaultMarket().contact.publishedEmail} | ${getDefaultMarket().contact.phone}
 
 Use the canonical pages above for current service, policy, and contact information. Do not infer school-board partnerships, guaranteed outcomes, or tutor availability beyond what a page explicitly states.
 `;

@@ -1,6 +1,7 @@
 
 
 import type { Metadata } from 'next';
+import { getDefaultOpenGraphLocale } from '@/lib/market-display';
 
 import {
   getTranslations,
@@ -11,6 +12,7 @@ import { Challenges } from '@/components/sections/home/challenges';
 import { Faq } from '@/components/sections/home/faq';
 import { FinalCta } from '@/components/sections/home/final-cta';
 import { Hero } from '@/components/sections/home/hero';
+import { SupportedCountries } from '@/components/ui/supported-countries';
 import { Pricing } from '@/components/sections/home/pricing';
 import { Programs } from '@/components/sections/home/programs';
 import { Services } from '@/components/sections/home/services';
@@ -19,8 +21,8 @@ import { Testimonials } from '@/components/sections/home/testimonials';
 import { VideoTestimonials } from '@/components/sections/home/video-testimonials';
 import { LocalAvailabilityBlock } from '@/components/local/local-availability-block';
 
+import { routing } from '@/i18n/routing';
 import { SITE, SITE_URL } from '@/lib/constants';
-import { buildLanguageAlternates } from '@/lib/seo/urls';
 
 interface HomePageProps {
   params: Promise<{
@@ -62,19 +64,15 @@ export async function generateMetadata({
     .filter(Boolean);
 
   const openGraphLocale =
-    locale === 'ar'
-      ? 'ar_CA'
-      : 'en_CA';
+    getDefaultOpenGraphLocale(locale);
 
   const alternateOpenGraphLocale =
-    locale === 'ar'
-      ? 'en_CA'
-      : 'ar_CA';
+    getDefaultOpenGraphLocale(locale === 'ar' ? 'en' : 'ar');
 
   return {
     /*
      * استخدمنا absolute حتى لا يضيف Layout
-     * اسم الأكاديمية مرة ثانية إلى عنوان الصفحة.
+     * اسم المنصة مرة ثانية إلى عنوان الصفحة.
      */
     title: {
       absolute: title,
@@ -86,7 +84,11 @@ export async function generateMetadata({
     alternates: {
       canonical: pageUrl,
 
-      languages: buildLanguageAlternates(),
+      languages: {
+        'en-CA': new URL('/en', SITE_URL).toString(),
+        'ar-CA': new URL('/ar', SITE_URL).toString(),
+        'x-default': new URL('/en', SITE_URL).toString(),
+      },
     },
 
     openGraph: {
@@ -142,6 +144,7 @@ export default async function HomePage({
   return (
     <>
       <Hero />
+      <SupportedCountries locale={locale as 'en' | 'ar'} />
 
       <Programs />
 

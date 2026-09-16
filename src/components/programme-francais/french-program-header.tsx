@@ -240,7 +240,7 @@ export function FrenchProgramHeader() {
               hover:bg-[#2DD4D1]
               focus-visible:outline-none
               focus-visible:ring-2
-              focus-visible:ring-[#0f766e]
+              focus-visible:ring-[#108686]
               focus-visible:ring-offset-2
               sm:inline-flex
             "
@@ -440,7 +440,7 @@ export function FrenchProgramHeader() {
               hover:bg-[#2DD4D1]
               focus-visible:outline-none
               focus-visible:ring-2
-              focus-visible:ring-[#0f766e]
+              focus-visible:ring-[#108686]
             "
           >
             Réserver un cours d’essai

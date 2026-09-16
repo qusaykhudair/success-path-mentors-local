@@ -3,6 +3,7 @@ import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
 import { routing } from './i18n/routing';
+import { isReservedMarketPathname } from './lib/market-routing';
 import { getNormalizedRequestUrl } from './lib/seo/normalize-request-url';
 
 const intlMiddleware = createMiddleware(routing);
@@ -103,6 +104,10 @@ export default function middleware(request: NextRequest) {
   // Enforce 404 for unapproved HOLD pages
   if (HOLD_ROUTES.includes(pathname)) {
     return applySecurityHeaders(new NextResponse(null, { status: 404 }), isLocal);
+  }
+
+  if (isReservedMarketPathname(pathname)) {
+    return applySecurityHeaders(NextResponse.next(), isLocal);
   }
 
   if (pathname === '/fr' || pathname.startsWith('/fr/')) {

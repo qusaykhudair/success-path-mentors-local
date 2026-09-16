@@ -23,6 +23,7 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: [
       'lucide-react',
+      'framer-motion',
       '@n8n/chat',
       '@base-ui/react',
       'react-icons',

@@ -1,3 +1,5 @@
+import { getDefaultMarket } from './markets';
+
 export const supportedLocales = ['en', 'ar'] as const;
 
 export type SiteLocale =
@@ -19,11 +21,8 @@ export const siteConfig = {
   defaultLocale,
   defaultOgImage:
     process.env.NEXT_PUBLIC_OG_IMAGE?.trim() ?? '',
-  bookingUrl:
-    process.env.NEXT_PUBLIC_BOOKING_URL?.trim() ?? '',
-  email:
-    process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() ??
-    'successpathmentors@gmail.com',
+  bookingUrl: getDefaultMarket().bookingUrl ?? '',
+  email: getDefaultMarket().contact.email,
 } as const;
 
 export function isSupportedLocale(

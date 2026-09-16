@@ -77,17 +77,31 @@ export async function generateMetadata({
     return {};
   }
 
+  let title =
+    locale === 'ar'
+      ? `${strand.title} حسب الصف | Success Path Mentors`
+      : `${strand.title} by Grade | Success Path Mentors`;
+
+  let description =
+    locale === 'ar'
+      ? `استعرض الموضوعات الرئيسية والمهارات في ${strand.title} للصفوف من الأول إلى الثاني عشر.`
+      : `Explore ${strand.title} Main Topics, Subtopics, and Skills for Grades 1–12.`;
+
+  if (strandSlug === 'reading-comprehension' && locale === 'en') {
+    title = 'Reading Comprehension Tutoring | Online Guided Reading Help | Success Path Mentors';
+    description =
+      'Targeted one-to-one reading comprehension tutoring. Help elementary and middle school students strengthen decoding, inference, critical thinking, and reading confidence.';
+  } else if (strandSlug === 'writing' && locale === 'en') {
+    title = 'Online Writing Tutoring | Essay Writing & Paragraph Mastery | Success Path Mentors';
+    description =
+      'Structured writing and essay tutoring for Grades 4–12. Master sentence mechanics, paragraph development, thesis formulation, and formal academic essay editing.';
+  }
+
   return buildPageMetadata({
     locale,
     seo: {
-      title:
-        locale === 'ar'
-          ? `${strand.title} حسب الصف | Success Path Mentors`
-          : `${strand.title} by Grade | Success Path Mentors`,
-      description:
-        locale === 'ar'
-          ? `استعرض الموضوعات الرئيسية والمهارات في ${strand.title} للصفوف من الأول إلى الثاني عشر.`
-          : `Explore ${strand.title} Main Topics, Subtopics, and Skills for Grades 1–12.`,
+      title,
+      description,
       pathname:
         `/subjects/english/${strand.slug}`,
     },

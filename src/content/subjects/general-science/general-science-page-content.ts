@@ -6,9 +6,9 @@ const generalSciencePageContent = {
   en: {
     seo: {
       title:
-        'Online General Science Tutoring for Grades 5–12 | Success Path Mentors',
+        'Online Science Tutoring Grades 5–10 | Middle School Science | Success Path Mentors',
       description:
-        'Personalized one-to-one General Science tutoring organized by grade and curriculum strand, including life science, Earth and space science, scientific inquiry, laboratory skills, and engineering structures.',
+        'Engaging one-to-one science tutoring for Grades 5–10. Strengthen scientific inquiry, biological systems, Earth science, and laboratory thinking before senior courses.',
       pathname:
         '/subjects/general-science',
     },
@@ -16,7 +16,7 @@ const generalSciencePageContent = {
       eyebrow:
         'One-to-one General Science tutoring',
       title:
-        'Connect life, Earth, space, inquiry, and engineering',
+        'Online Science Tutoring for Elementary & Middle School Learners',
       description:
         'Personalized General Science support organized across life science, Earth and space science, scientific inquiry, laboratory skills, and structures and engineering.',
       primaryAction:

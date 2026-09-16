@@ -6,9 +6,9 @@ const chemistryPageContent = {
   en: {
     seo: {
       title:
-        'Online Chemistry Tutoring | Grade 11 & 12 (SCH3U & SCH4U) Support | Success Path Mentors',
+        'Online Chemistry Tutoring | High School & Senior Secondary | Success Path Mentors',
       description:
-        'Personalized one-to-one chemistry tutoring for middle school and senior secondary courses (SCH3U and SCH4U), covering stoichiometry, bonding, equilibrium, and organic chemistry.',
+        'Personalized one-to-one chemistry tutoring for high school students. Master atomic theory, chemical equations, stoichiometry, solutions, and equilibrium with expert guidance.',
       pathname:
         '/subjects/chemistry',
     },
@@ -16,9 +16,9 @@ const chemistryPageContent = {
       eyebrow:
         'One-to-one chemistry tutoring',
       title:
-        'Build chemistry understanding from particles to reactions',
+        'High School Chemistry Tutoring That Simplifies Complex Reactions',
       description:
-        'Personalized chemistry support across matter, atomic structure, bonding, reactions, quantitative chemistry, equilibrium, organic chemistry, and senior secondary courses including SCH3U and SCH4U.',
+        'Personalized chemistry support organized across matter, atomic structure, bonding, reactions, quantitative chemistry, equilibrium, organic chemistry, and advanced course topics.',
       primaryAction:
         'Explore chemistry strands',
       secondaryAction:

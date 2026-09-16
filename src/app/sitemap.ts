@@ -33,9 +33,6 @@ import {
   buildAbsoluteUrl,
 } from '@/lib/seo/urls';
 import {
-  hreflangPagePaths,
-} from '@/lib/seo/hreflang-pages';
-import {
   programmeFrancaisRoutes,
 } from '@/lib/programme-francais/routes';
 
@@ -85,7 +82,21 @@ const localizedPaths = [
     (strand) =>
       `/subjects/general-science/${strand.slug}`
   ),
-  '/exam-preparation',
+];
+
+const englishOnlyGapPaths = [
+  '/subjects/french',
+  '/subjects/math/grade-12-advanced-functions-mhf4u',
+  '/subjects/math/grade-12-calculus-vectors-mcv4u',
+  '/subjects/math/grade-11-functions-mcr3u',
+  '/subjects/math/grade-12-data-management-mdm4u',
+  '/subjects/math/grade-9-math-mth1w',
+  '/subjects/math/grade-10-math-mpm2d',
+  '/subjects/chemistry/senior-chemistry-sch3u-sch4u',
+  '/subjects/physics/senior-physics-sph3u-sph4u',
+  '/services/homework-help',
+  '/services/exam-preparation',
+  '/curriculum/ontario',
 ];
 
 const frenchPaths = [
@@ -147,10 +158,6 @@ function getLocalizedPriority(
     return 0.9;
   }
 
-  if (path === '/exam-preparation') {
-    return 0.85;
-  }
-
   if (
     path === '/about' ||
     path === '/how-it-works'
@@ -190,56 +197,55 @@ export default function sitemap():
   MetadataRoute.Sitemap {
   const localizedEntries =
     localizedPaths.map(
-      (path) => {
-        const isBilingual =
-          path === '' ||
-          path.startsWith('/locations') ||
-          hreflangPagePaths.has(path);
-
-        return {
-          url:
-            buildAbsoluteUrl(
-              routing.defaultLocale,
-              path
+      (path) => ({
+        url:
+          buildAbsoluteUrl(
+            routing.defaultLocale,
+            path
+          ),
+        changeFrequency:
+          path === ''
+            ? 'weekly' as const
+            : 'monthly' as const,
+        priority:
+          getLocalizedPriority(
+            path
+          ),
+        alternates: {
+          languages: {
+            ...Object.fromEntries(
+              routing.locales.map(
+                (locale) => [
+                  locale,
+                  buildAbsoluteUrl(
+                    locale,
+                    path
+                  ),
+                ]
+              )
             ),
-          ...(path === '/locations' || path.startsWith('/locations/')
-            ? { lastModified: new Date() }
-            : {}),
-          changeFrequency:
-            path === ''
-              ? 'weekly' as const
-              : 'monthly' as const,
-          priority:
-            getLocalizedPriority(
-              path
-            ),
-          ...(isBilingual
-            ? {
-                alternates: {
-                  languages: {
-                    ...Object.fromEntries(
-                      routing.locales.map(
-                        (locale) => [
-                          path === '' ? `${locale}-CA` : locale,
-                          buildAbsoluteUrl(
-                            locale,
-                            path
-                          ),
-                        ]
-                      )
-                    ),
-                    'x-default':
-                      buildAbsoluteUrl(
-                        routing.defaultLocale,
-                        path
-                      ),
-                  },
-                },
-              }
-            : {}),
-        };
-      }
+            'x-default':
+              buildAbsoluteUrl(
+                routing.defaultLocale,
+                path
+              ),
+          },
+        },
+      })
     );
+
+  const englishGapEntries =
+    englishOnlyGapPaths.map((path) => ({
+      url: `${SITE_URL}/en${path}`,
+      changeFrequency: 'monthly' as const,
+      priority: 0.88,
+      alternates: {
+        languages: {
+          en: `${SITE_URL}/en${path}`,
+          'x-default': `${SITE_URL}/en${path}`,
+        },
+      },
+    }));
 
   const frenchEntries =
     frenchPaths.map(
@@ -263,6 +269,7 @@ export default function sitemap():
 
   return [
     ...localizedEntries,
+    ...englishGapEntries,
     ...frenchEntries,
   ];
 }

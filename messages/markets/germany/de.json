@@ -1,0 +1,460 @@
+{
+  "common": {
+    "continue": "Weiter",
+    "back": "Zurück",
+    "submit": "Absenden",
+    "optional": "(Optional)",
+    "required": "Erforderlich",
+    "success": "Erfolg"
+  },
+  "navigation": {
+    "home": "Startseite"
+  },
+  "hero": {
+    "entryQuestion": "Wobei brauchst du Hilfe?",
+    "freeTrial": "Kostenlose Probestunde",
+    "personalizedTutoring": "Persönliche 1-zu-1 Nachhilfe",
+    "customerSupport": "Kundenkoordination und Support",
+    "headline": "Individuelle Online-Förderung für jede Lernstufe",
+    "subheadline": "Wählen Sie individuelle Einzelnachhilfe, eine Kleingruppe mit bis zu drei Lernenden oder stufenbasierte Sprachförderung. Lernen Sie Deutsch, Englisch, Französisch oder Arabisch — oder sichern Sie sich gezielte Schulnachhilfe von der Grundschule bis zum Abitur.",
+    "trustContext": "Personalisiertes Lernen",
+    "selector": {
+      "question": "Wobei möchtest du Hilfe?",
+      "instruction": "Wähle ein Fach, um fortzufahren",
+      "services": {
+        "german": "Deutsch",
+        "english": "Englisch",
+        "arabic": "Arabisch",
+        "french": "Französisch"
+      },
+      "continue": "Weiter",
+      "processing": "Wird bearbeitet...",
+      "microcopy": "100% kostenlose Probestunde • Unverbindlich"
+    },
+    "eyebrow": "Individuelle Online-Förderung",
+    "benefits": [
+      "Individuelle Einzelnachhilfe & Kleingruppen bis zu 3",
+      "Deutsch, Englisch, Französisch & Arabisch nach Stufen",
+      "Schulbegleitung von Klasse 1 bis zum Abitur"
+    ]
+  },
+  "services": {
+    "headline": "Unsere Kernprogramme",
+    "subheadline": "Experten-Nachhilfe in wichtigen Fächern",
+    "items": {
+      "german": {
+        "title": "Deutsch",
+        "description": "Sprache meistern"
+      },
+      "english": {
+        "title": "Englisch",
+        "description": "Fließend sprechen & Grammatik"
+      },
+      "arabic": {
+        "title": "Arabisch",
+        "description": "Muttersprachliche Unterstützung"
+      },
+      "french": {
+        "title": "Französisch",
+        "description": "Umfassender Lehrplan"
+      }
+    }
+  },
+  "trust": {
+    "title": "Persönliche Lehrkraft-Betreuung"
+  },
+  "useCases": {
+    "eyebrow": "Für wen wir da sind",
+    "headline": "Unterstützung für jedes Ziel",
+    "subheadline": "Egal ob Schüler, Familie oder Erwachsener – wir haben das passende Programm für Sie.",
+    "cases": [
+      {
+        "title": "Familien in Deutschland",
+        "description": "Unterstützung für Kinder bei der deutschen Sprache oder im Schulalltag, damit sie erfolgreich in das Schulsystem integriert werden."
+      },
+      {
+        "title": "Schüler & Studenten",
+        "description": "Nachhilfe und Sprachunterstützung in Englisch oder Französisch zur Vorbereitung auf Prüfungen oder das Studium."
+      },
+      {
+        "title": "Erwachsene Lernende",
+        "description": "Maßgeschneiderte Sprachkurse und akademische Unterstützung für Berufstätige, die ihre Fähigkeiten erweitern möchten."
+      }
+    ]
+  },
+  "teacherQuality": {
+    "eyebrow": "Unsere Lehrer",
+    "headline": "Qualität, auf die Sie sich verlassen können",
+    "subheadline": "Wir wählen unsere Lehrkräfte sorgfältig aus, um sicherzustellen, dass Sie die beste Unterstützung erhalten.",
+    "points": [
+      "Sorgfältiger Auswahlprozess",
+      "Fachliche Kompetenz",
+      "Pädagogisches Geschick",
+      "Leidenschaft für das Lehren"
+    ],
+    "matching": {
+      "title": "So finden wir Ihren Lehrer",
+      "description": "Wir analysieren Ihre Lernziele und individuellen Anforderungen, um eine qualifizierte Lehrkraft passend zu Ihren Bedürfnissen zu finden."
+    }
+  },
+  "howItWorks": {
+    "eyebrow": "Einfach loslegen",
+    "headline": "In 3 Schritten zum Erfolg",
+    "subheadline": "Einfache Schritte zur passenden Lehrkraft.",
+    "steps": {
+      "step1": {
+        "title": "Kostenlos anmelden",
+        "description": "Füllen Sie unser kurzes Formular aus."
+      },
+      "step2": {
+        "title": "Lehrer finden",
+        "description": "Wir wählen eine passende Lehrkraft für Ihre Bedürfnisse aus."
+      },
+      "step3": {
+        "title": "Erfolgreich lernen",
+        "description": "Starten Sie mit dem Unterricht online."
+      }
+    }
+  },
+  "leadJourney": {
+    "stepServiceSelection": "Serviceauswahl",
+    "stepLearnerContext": "Lernkontext",
+    "stepLearningGoal": "Lernziel",
+    "stepContact": "Kontakt & Probestunde",
+    "stepSuccess": "Erfolg"
+  },
+  "testimonials": {
+    "eyebrow": "Erfahrungsberichte",
+    "feedbackLabel": "Rückmeldung von Eltern",
+    "headline": "Was unsere Schüler sagen",
+    "subheadline": "Erfolgsgeschichten von Menschen, die mit uns gelernt haben.",
+    "items": [
+      {
+        "name": "Eya Ad",
+        "quote": "Ein Team, das jeden Dank und jede Ermutigung verdient. Sie sind hochprofessionell, pünktlich, respektvoll in der Kommunikation, aufmerksam und engagieren sich für eine konsequente Nachverfolgung."
+      },
+      {
+        "name": "Zain Al",
+        "quote": "Vielen Dank an alle und an Herrn Mustafa für die respektvolle Kommunikation, die hervorragende Zusammenarbeit und den freundlichen Umgang. Mein Sohn lernt sehr gerne mit ihnen."
+      },
+      {
+        "name": "Abir Joulan",
+        "quote": "Vielen Dank für Ihre Bemühungen und Ihr Engagement für die Unterrichtszeiten. Der Unterricht war ausgezeichnet, und ein besonderer Dank geht an Frau Shaimaa für den Unterricht meiner Tochter. Wir schätzen alles, was Sie bieten, sehr."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufig gestellte Fragen",
+    "headline": "Haben Sie noch Fragen?",
+    "subheadline": "Hier finden Sie Antworten auf die wichtigsten Fragen zu unserem Angebot.",
+    "questions": [
+      {
+        "q": "Wie funktioniert die kostenlose Probestunde?",
+        "a": "Sie melden sich an, wir besprechen Ihre Ziele und vermitteln Ihnen einen passenden Lehrer für eine unverbindliche erste Sitzung."
+      },
+      {
+        "q": "Wie finden Sie den passenden Lehrer für mich?",
+        "a": "Wir nutzen Ihre Angaben zu Lernzielen, Fach und bevorzugten Zeiten, um aus unserem Netzwerk den idealen Lehrer auszuwählen."
+      },
+      {
+        "q": "Wo findet der Unterricht statt?",
+        "a": "Der Unterricht findet vollständig online über eine benutzerfreundliche Videoplattform statt."
+      },
+      {
+        "q": "Welche Sprachen werden angeboten?",
+        "a": "Wir bieten derzeit Deutsch, Englisch, Arabisch und Französisch an."
+      },
+      {
+        "q": "Wie flexibel ist die Terminplanung?",
+        "a": "Sehr flexibel. Sie vereinbaren die Termine direkt mit Ihrem Lehrer passend zu Ihrem Zeitplan."
+      },
+      {
+        "q": "Für wen ist das Angebot geeignet?",
+        "a": "Für Schüler aller Altersklassen, Studenten und Erwachsene, die ihre Sprach- oder Fachkenntnisse verbessern möchten."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Kontakt"
+  },
+  "footer": {
+    "brandDescription": "Wir stärken Schüler, um akademische Exzellenz zu erreichen.",
+    "servicesTitle": "Dienstleistungen",
+    "aboutTitle": "Entdecken",
+    "accountTitle": "Konto & Rechtliches",
+    "freeTrial": "Kostenlose Probestunde",
+    "contactTitle": "Kontakt",
+    "legalTitle": "Rechtliches",
+    "legal": {
+      "privacy": "Datenschutz",
+      "terms": "Nutzungsbedingungen"
+    },
+    "allRightsReserved": "Alle Rechte vorbehalten.",
+    "services": {
+      "german": "Deutsch",
+      "english": "Englisch",
+      "arabic": "Arabisch",
+      "french": "Französisch"
+    },
+    "northAmericaBanner": {
+      "title": "Hauptwebsite für Nordamerika (Kanada & USA)",
+      "description": "Suchen Sie nach Schul- und Hochschullehrplänen für Kanada und die USA? Besuchen Sie unsere Hauptplattform.",
+      "button": "Zur Hauptwebsite"
+    }
+  },
+  "errors": {
+    "validation": "Bitte überprüfe deine Eingabe.",
+    "temporary": "Ein temporärer Fehler ist aufgetreten. Bitte versuche es erneut.",
+    "duplicate": "Du hast bereits eine Anfrage gesendet."
+  },
+  "success": {
+    "message": "Deine Anfrage wurde empfangen."
+  },
+  "nav": {
+    "home": "Startseite",
+    "bookFreeSession": "Kostenlose Probestunde"
+  },
+  "trustStrip": {
+    "items": {
+      "item1": {
+        "title": "1-zu-1 Nachhilfe",
+        "subtitle": "Individuelle Betreuung"
+      },
+      "item2": {
+        "title": "Menschliche Koordination",
+        "subtitle": "Wir organisieren alles"
+      },
+      "item3": {
+        "title": "Online Lernen",
+        "subtitle": "Bequem von überall lernen"
+      }
+    }
+  },
+  "cta": {
+    "eyebrow": "Starten Sie jetzt",
+    "headline": "Bereit für echte Lernerfolge?",
+    "subheadline": "Starten Sie Ihre persönliche Lernreise heute mit einer kostenlosen Probestunde.",
+    "primaryAction": "Kostenlose Probestunde starten",
+    "secondaryAction": "Auf WhatsApp beraten lassen",
+    "reassurance": "Individueller 1-zu-1 Unterricht • Flexible Online-Termine • Persönliche Koordination",
+    "trustPoints": [
+      "1-zu-1 Einzelunterricht",
+      "Unverbindliche kostenlose Probestunde",
+      "Flexible Online-Termine"
+    ],
+    "panelEyebrow": "Einfacher Ablauf",
+    "panelTitle": "In 3 Schritten zum Unterricht",
+    "panelNote": "Unser Beratungsteam stimmt die Probestunde gerne persönlich mit Ihnen ab.",
+    "nextSteps": [
+      {
+        "title": "Anfrage senden",
+        "description": "Wählen Sie Fach und Wunschzeit für die Probestunde."
+      },
+      {
+        "title": "Passende Lehrkraft",
+        "description": "Wir wählen eine passende Lehrkraft für Ihre individuellen Lernziele."
+      },
+      {
+        "title": "Online durchstarten",
+        "description": "Lernen Sie unverbindlich in Ihrer ersten Unterrichtseinheit."
+      }
+    ]
+  },
+  "whySpm": {
+    "eyebrow": "Warum Success Path Mentors",
+    "headline": "Mehr als nur Nachhilfe",
+    "subheadline": "Eine individuelle Lernerfahrung mit persönlicher Betreuung, durchdachter Koordination und hohen Qualitätsstandards.",
+    "cta": "Kostenlose Probestunde sichern",
+    "features": [
+      {
+        "title": "Erfahrung in verschiedenen Bildungsmärkten",
+        "description": "Unsere Erfahrung in unterschiedlichen Bildungsumfeldern hilft uns, die vielfältigen Bedürfnisse von Lernenden und Familien zu verstehen und unsere Unterstützung gezielt anzupassen."
+      },
+      {
+        "title": "Persönliche menschliche Koordination",
+        "description": "Unser Koordinationsteam begleitet den Lernweg weit über den Unterricht hinaus – von der Bedarfsanalyse und passenden Lehrerauswahl bis hin zu Terminplanung und laufender Abstimmung."
+      },
+      {
+        "title": "Individuell für jeden Lernenden",
+        "description": "Wir berücksichtigen Ziele, Vorkenntnisse, Lerntempo und persönliche Anforderungen, um den Unterricht gezielt auf den Schüler abzustimmen, statt auf Einheitslösungen zu setzen."
+      },
+      {
+        "title": "Hohe Standards für Unterrichtsqualität",
+        "description": "Bei der Auswahl und Zusammenarbeit mit Lehrkräften achten wir konsequent auf fundiertes Fachwissen, pädagogisches Geschick, klare Kommunikation und Professionalität."
+      },
+      {
+        "title": "Lernen mit Motivation und Selbstvertrauen",
+        "description": "Unsere Lehrmethode verbindet fachliche Förderung mit ermutigender, persönlicher Kommunikation – damit Lernende aktiv mitmachen, wirklich verstehen und Freude am Lernen entwickeln."
+      },
+      {
+        "title": "Ihre Zufriedenheit ist uns wichtig",
+        "description": "Sollte etwas einmal nicht Ihren Erwartungen entsprechen, nimmt sich unser Koordinationsteam Zeit für Ihr Anliegen, um gemeinsam eine passende Lösung zu finden."
+      }
+    ]
+  },
+  "trialFlow": {
+    "back": "Zurück",
+    "continue": "Weiter",
+    "step1Title": "Welches Fach möchten Sie lernen?",
+    "step2Title": "Für wen ist der Unterricht?",
+    "step3Title": "Was ist Ihr Hauptziel?",
+    "step4Title": "Wie können wir Sie erreichen?",
+    "learner": {
+      "myself": {
+        "title": "Für mich selbst",
+        "desc": "Ich möchte meine eigenen Fähigkeiten verbessern"
+      },
+      "child": {
+        "title": "Für mein Kind",
+        "desc": "Unterstützung für die Schule oder Sprachkenntnisse"
+      }
+    },
+    "goals": {
+      "grades": {
+        "title": "Noten verbessern",
+        "desc": "Bessere Ergebnisse in der Schule erzielen"
+      },
+      "speaking": {
+        "title": "Freier sprechen",
+        "desc": "Selbstbewusster kommunizieren"
+      },
+      "exam": {
+        "title": "Prüfungsvorbereitung",
+        "desc": "Gezieltes Training für anstehende Tests"
+      },
+      "basics": {
+        "title": "Grundlagen lernen",
+        "desc": "Einen soliden Einstieg finden"
+      }
+    },
+    "contact": {
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer",
+      "submit": "Anfrage vorbereiten",
+      "privacy": "Ihre Daten werden sicher übertragen und nicht an Dritte weitergegeben.",
+      "success": "Ihre Anfrage wurde erfolgreich übermittelt! Wir melden uns in Kürze bei Ihnen.",
+      "errors": {
+        "firstName": "Bitte geben Sie Ihren Vornamen ein (mindestens 2 Zeichen).",
+        "lastName": "Bitte geben Sie Ihren Nachnamen ein (mindestens 2 Zeichen).",
+        "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+        "phone": "Bitte geben Sie eine gültige Telefonnummer ein."
+      }
+    },
+    "subjectLabel": "Fach",
+    "learnerLabel": "Lernender",
+    "goalLabel": "Ziel",
+    "nameLabel": "Name",
+    "phoneLabel": "Telefon",
+    "step4Description": "Geben Sie Ihre Kontaktdaten ein, um Ihre Probestunde mit unserem Team abzustimmen.",
+    "subjects": {
+      "german": "Deutsch",
+      "english": "Englisch",
+      "arabic": "Arabisch",
+      "french": "Französisch"
+    },
+    "contactReady": {
+      "title": "Danke, dass Sie sich an uns wenden",
+      "description": "Ein Mitglied unseres Koordinationsteams wird sich in Kürze mit Ihnen in Verbindung setzen.",
+      "whatsappButton": "Auf WhatsApp fortfahren",
+      "whatsAppGreeting": "Hallo Success Path Mentors, ich möchte eine kostenlose Probestunde anfragen:",
+      "backHome": "Zurück zur Startseite"
+    }
+  },
+  "header": {
+    "services": "Fächer",
+    "whySpm": "Warum SPM",
+    "teacherQuality": "Lehrkräfte",
+    "howItWorks": "Ablauf",
+    "pricing": "Preise",
+    "faq": "FAQ",
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "contact": "Kontakt",
+    "tutoringServices": "Nachhilfeangebote",
+    "tutoringOneToOne": "Individuelle Einzelnachhilfe",
+    "tutoringSmallGroups": "Smarte Kleingruppen (bis zu 3)",
+    "tutoringLanguageLevels": "Sprachförderung nach Stufen",
+    "languages": "Sprachen",
+    "langGerman": "Deutsch",
+    "langEnglish": "Englisch",
+    "langFrench": "Französisch",
+    "langArabic": "Arabisch",
+    "schoolSupport": "Schulnachhilfe",
+    "schoolGrades1To6": "Klassen 1–6 (Grundschule)",
+    "schoolGrades7To9": "Klassen 7–9 (Mittelstufe)",
+    "schoolGrades10To12": "Klassen 10–12 (Oberstufe)",
+    "adults": "Erwachsene",
+    "freeTrial": "Kostenlose Probestunde"
+  },
+  "pricing": {
+    "eyebrow": "Transparente Pläne",
+    "headline": "Flexible Pläne für jedes Lernziel",
+    "subheadline": "Wählen Sie das passende Lernpaket für individuelle Förderung und nachhaltigen Lernerfolg.",
+    "pendingNote": "Individuelle Preisgestaltung nach unverbindlicher Einstufung und kostenloser Probestunde.",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "subtitle": "4 Unterrichtseinheiten",
+        "description": "Ideal zum Kennenlernen, für gezielte Klausurvorbereitung oder kurzfristige Unterstützung.",
+        "sessions": "4 Einheiten (1-zu-1)",
+        "priceLabel": "Auf Anfrage",
+        "badge": "Einstieg",
+        "features": [
+          "1-zu-1 Einzelunterricht online",
+          "Passende Lehrerauswahl",
+          "Flexible Terminabstimmung",
+          "Regelmäßiges Lernfeedback"
+        ],
+        "cta": "Reise starten"
+      },
+      "progress": {
+        "name": "Progress",
+        "subtitle": "8 Unterrichtseinheiten",
+        "description": "Unser bewährtes Paket für kontinuierliche Lernbegleitung und Schulerfolg.",
+        "sessions": "8 Einheiten (1-zu-1)",
+        "priceLabel": "Auf Anfrage",
+        "badge": "8 Einheiten",
+        "features": [
+          "1-zu-1 Einzelunterricht online",
+          "Individueller Lern- und Förderplan",
+          "Persönliche Betreuung & Koordination",
+          "Regelmäßiges Lernfeedback",
+          "Fächerübergreifend anpassbar"
+        ],
+        "cta": "Reise starten"
+      },
+      "momentum": {
+        "name": "Intensiv",
+        "subtitle": "12 Unterrichtseinheiten",
+        "description": "Umfassende Begleitung für gezielte Lernförderung und Prüfungsvorbereitung.",
+        "sessions": "12 Einheiten (1-zu-1)",
+        "priceLabel": "Auf Anfrage",
+        "badge": "12 Einheiten",
+        "features": [
+          "1-zu-1 Einzelunterricht online",
+          "Individuelle Lehrerabstimmung",
+          "Gezielte Prüfungsvorbereitung",
+          "Direkte Betreuungskoordination",
+          "Hausaufgaben- und Lernbegleitung"
+        ],
+        "cta": "Reise starten"
+      }
+    }
+  },
+  "contactSection": {
+    "eyebrow": "Persönliche Beratung",
+    "headline": "Wir sind für Sie da",
+    "subheadline": "Haben Sie Fragen zu unserem Angebot oder wünschen Sie eine individuelle Beratung? Unser Team berät Sie gerne unverbindlich.",
+    "whatsappTitle": "WhatsApp Beratung",
+    "whatsappDesc": "Schnell und unkompliziert direkt per Chat antworten lassen.",
+    "whatsappAction": "WhatsApp Chat starten",
+    "emailTitle": "E-Mail Anfrage",
+    "emailDesc": "Schreiben Sie uns jederzeit. Wir melden uns verlässlich bei Ihnen zurück.",
+    "emailAction": "E-Mail schreiben",
+    "hoursTitle": "Erreichbarkeit",
+    "hoursDesc": "Kontaktieren Sie unser Koordinationsteam per WhatsApp oder E-Mail.",
+    "coordinatorBadge": "Persönliche Bildungsberatung"
+  }
+}

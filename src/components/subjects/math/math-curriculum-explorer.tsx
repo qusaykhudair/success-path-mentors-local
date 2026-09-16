@@ -91,7 +91,7 @@ export function MathCurriculumExplorer({
                 font-bold
                 uppercase
                 tracking-[0.12em]
-                text-[#0f766e]
+                text-[#108686]
               "
             >
               {copy.sectionEyebrow}

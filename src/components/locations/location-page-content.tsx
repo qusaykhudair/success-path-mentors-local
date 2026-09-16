@@ -211,7 +211,7 @@ export function LocationPageContent({
                 ) : (
                   <Link
                     href={item.href}
-                    className="font-bold transition-colors hover:text-[#0f766e]"
+                    className="font-bold transition-colors hover:text-[#108686]"
                   >
                     {item.name}
                   </Link>
@@ -401,7 +401,7 @@ export function LocationPageContent({
                   className="flex min-h-24 items-start gap-3 rounded-2xl border border-[#DCE5EC] bg-[#F8FAFC] p-4"
                 >
                   <span
-                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#ECFEFD] text-[#0f766e]"
+                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#ECFEFD] text-[#108686]"
                   >
                     <Check
                       aria-hidden="true"
@@ -511,7 +511,7 @@ export function LocationPageContent({
                   className="group flex min-h-40 flex-col rounded-2xl border border-[#DCE5EC] bg-white p-5 shadow-[0_8px_28px_rgba(7,20,38,0.04)] transition-[border-color,box-shadow,transform] hover:-translate-y-0.5 hover:border-[#16C7C7] hover:shadow-[0_16px_38px_rgba(7,20,38,0.08)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#16C7C7]"
                 >
                   <span
-                    className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#ECFEFD] text-[#0f766e]"
+                    className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#ECFEFD] text-[#108686]"
                   >
                     <BookOpenCheck
                       aria-hidden="true"
@@ -530,7 +530,7 @@ export function LocationPageContent({
                     {subject.description}
                   </p>
                   <span
-                    className="mt-auto inline-flex items-center gap-2 pt-5 text-small font-black text-[#0f766e]"
+                    className="mt-auto inline-flex items-center gap-2 pt-5 text-small font-black text-[#108686]"
                   >
                     {locale === 'ar'
                       ? 'استكشف المادة'
@@ -573,7 +573,7 @@ export function LocationPageContent({
             className="rounded-[1.5rem] border border-[#DCE5EC] bg-white p-6 shadow-[0_12px_36px_rgba(7,20,38,0.05)] sm:p-7"
           >
             <p
-              className="text-caption font-black uppercase tracking-[0.11em] text-[#0f766e]"
+              className="text-caption font-black uppercase tracking-[0.11em] text-[#108686]"
             >
               {locale === 'ar'
                 ? 'الاختبارات'
@@ -743,7 +743,7 @@ export function LocationPageContent({
                     >
                       <Check
                         aria-hidden="true"
-                        className="mt-1 h-4 w-4 shrink-0 text-[#0f766e]"
+                        className="mt-1 h-4 w-4 shrink-0 text-[#108686]"
                       />
                       {item}
                     </li>
@@ -760,7 +760,7 @@ export function LocationPageContent({
                   className="flex items-center gap-3"
                 >
                   <span
-                    className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#ECFEFD] text-[#0f766e]"
+                    className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#ECFEFD] text-[#108686]"
                   >
                     <ClipboardList
                       aria-hidden="true"
@@ -797,7 +797,7 @@ export function LocationPageContent({
                           </strong>
                           <ArrowRight
                             aria-hidden="true"
-                            className="h-4 w-4 shrink-0 text-[#0f766e] transition-transform group-hover:translate-x-1 rtl:-scale-x-100 rtl:group-hover:-translate-x-1"
+                            className="h-4 w-4 shrink-0 text-[#108686] transition-transform group-hover:translate-x-1 rtl:-scale-x-100 rtl:group-hover:-translate-x-1"
                           />
                         </span>
                         <span
@@ -900,7 +900,7 @@ export function LocationPageContent({
                     <span>{item.question}</span>
                     <ChevronDown
                       aria-hidden="true"
-                      className="h-5 w-5 shrink-0 text-[#0f766e] transition-transform group-open:rotate-180"
+                      className="h-5 w-5 shrink-0 text-[#108686] transition-transform group-open:rotate-180"
                     />
                   </summary>
                   <p
@@ -952,7 +952,7 @@ export function LocationPageContent({
           className="mx-auto w-full max-w-[82rem] px-4 sm:px-6 lg:px-8"
         >
           <div
-            className="rounded-[1.75rem] bg-[linear-gradient(112deg,#071426_0%,#0B1F3A_58%,#0f766e_100%)] p-7 text-white shadow-[0_22px_60px_rgba(7,20,38,0.18)] sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-10"
+            className="rounded-[1.75rem] bg-[linear-gradient(112deg,#071426_0%,#0B1F3A_58%,#108686_100%)] p-7 text-white shadow-[0_22px_60px_rgba(7,20,38,0.18)] sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-10"
           >
             <div
               className="max-w-3xl"
@@ -1007,7 +1007,7 @@ function SectionHeading({
       className="max-w-3xl"
     >
       <p
-        className="text-caption font-black uppercase tracking-[0.12em] text-[#0f766e]"
+        className="text-caption font-black uppercase tracking-[0.12em] text-[#108686]"
       >
         {eyebrow}
       </p>
@@ -1046,7 +1046,7 @@ function FeatureCard({
       className="rounded-2xl border border-[#DCE5EC] bg-white p-5 shadow-[0_8px_28px_rgba(7,20,38,0.04)]"
     >
       <span
-        className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#ECFEFD] text-[#0f766e]"
+        className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#ECFEFD] text-[#108686]"
       >
         <LocationIcon
           icon={icon}
@@ -1087,7 +1087,7 @@ function InfoPanel({
       className="rounded-[1.5rem] border border-[#DCE5EC] bg-white p-6 shadow-[0_12px_36px_rgba(7,20,38,0.05)] sm:p-7"
     >
       <span
-        className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#ECFEFD] text-[#0f766e]"
+        className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#ECFEFD] text-[#108686]"
       >
         <LocationIcon
           icon={icon}
@@ -1095,7 +1095,7 @@ function InfoPanel({
         />
       </span>
       <p
-        className="mt-5 text-caption font-black uppercase tracking-[0.11em] text-[#0f766e]"
+        className="mt-5 text-caption font-black uppercase tracking-[0.11em] text-[#108686]"
       >
         {eyebrow}
       </p>
@@ -1120,7 +1120,7 @@ function InfoPanel({
             >
               <Check
                 aria-hidden="true"
-                className="mt-1 h-4 w-4 shrink-0 text-[#0f766e]"
+                className="mt-1 h-4 w-4 shrink-0 text-[#108686]"
               />
               {item}
             </li>
@@ -1155,7 +1155,7 @@ function LocationLinkCard({
       }`}
     >
       <span
-        className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#ECFEFD] text-[#0f766e]"
+        className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#ECFEFD] text-[#108686]"
       >
         {page.level === 'city' ? (
           <GraduationCap
@@ -1172,7 +1172,7 @@ function LocationLinkCard({
         )}
       </span>
       <p
-        className="mt-4 text-caption font-black uppercase tracking-[0.1em] text-[#0f766e]"
+        className="mt-4 text-caption font-black uppercase tracking-[0.1em] text-[#108686]"
       >
         {page.eyebrow}
       </p>
@@ -1189,7 +1189,7 @@ function LocationLinkCard({
         </p>
       ) : null}
       <span
-        className="mt-auto inline-flex items-center gap-2 pt-5 text-small font-black text-[#0f766e]"
+        className="mt-auto inline-flex items-center gap-2 pt-5 text-small font-black text-[#108686]"
       >
         {locale === 'ar'
           ? 'فتح الصفحة'

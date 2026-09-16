@@ -1,14 +1,14 @@
 {
   "seo": {
     "home": {
-      "title": "Online Tutoring for Grades 1–12 | Success Path Mentors",
-      "description": "Personalized one-to-one online tutoring for Grades 1–12 in Math, English, Science, Physics, Chemistry and French. Book a free trial with Success Path Mentors.",
-      "keywords": "online tutoring, math tutoring, science tutoring"
+      "title": "Online Tutoring Grades 1–12 | 1-on-1 Math, Science & English | Success Path Mentors",
+      "description": "One-to-one personalized online tutoring in Canada for Grades 1–12 across Math, Sciences, English, and French. Connect with expert academic mentors and book a free trial.",
+      "keywords": "online tutoring Grades 1-12, online tutoring Canada, one-to-one tutoring, personalized tutoring online"
     }
   },
   "meta": {
     "siteName": "Success Path Mentors",
-    "tagline": "Success Path Mentors"
+    "tagline": "Empowering Students. Inspiring Success."
   },
     "accessibility": {
     "skipToContent": "Skip to main content"
@@ -137,19 +137,36 @@
   },
   "hero": {
   "eyebrow": "Personalized Online Tutoring • Grades 1–12",
-"heading": "One-to-One Online Tutoring That Builds Real Academic Confidence",
+"heading": "One-to-One Online Tutoring for Grades 1–12 That Delivers <mark>Real Results</mark>",
 "subheading": "Personalized Math, English, Science, and French tutoring aligned with Canadian and American curricula.",
 "ctaPrimary": "Book Your Free Trial",
 "ctaSecondary": "Explore Our Programs",
 "whatsappBookingMessage": "Hello, I would like to book a free trial lesson with Success Path Mentors.",
-
-
-
-
-  "imageAlt": "Students collaborating in a classroom at Success Path Mentors",
+  "stats": [
+  {
+    "value": 150,
+    "suffix": "+",
+    "label": "Active Students"
+  },
+  {
+    "value": 700,
+    "suffix": "+",
+    "label": "Monthly Sessions"
+  },
+  {
+    "value": 30,
+    "suffix": "+",
+    "label": "Specialized Tutors"
+  }
+],
+          "socialProof": "Join {count} learners already growing with us",
+  "achievement": {
+    "label": "Course completion rate"
+  },
+  "imageAlt": "Students collaborating in a personalized online session with Success Path Mentors",
 "enrollment": {
   "title": "Get Started — Enroll in Just One Minute",
-  "reassurance": "We use your details to respond to your tutoring request.",
+  "reassurance": "Your information is 100% secure",
   "next": "Next",
   "back": "Back",
   "submit": "Submit",
@@ -201,7 +218,7 @@
     { "value": "french", "label": "French" }
   ]
 }
-
+  
   },
  "programs": {
   "eyebrow": "Programs for Every Learning Path",
@@ -239,12 +256,12 @@
     "icon": "guidance"
   }
 ],
-  "imageAlt": "Student waving during a video call",
+  "imageAlt": "A student participating in a live one-to-one online tutoring session",
   "liveLabel": "Live online lessons",
   "badge": {
-  "value": "One-to-one",
-  "label": "Online tutoring lessons"
-}
+    "value": "700+",
+    "label": "Online sessions delivered monthly"
+  }
 },
   "testimonials": {
   "eyebrow": "Stories from Our Learning Community",
@@ -392,7 +409,7 @@
   }
 ],
 
-  "imageAlt": "Tutor gesturing during a video lesson",
+  "imageAlt": "An online tutor delivering a personalized one-to-one lesson to a student",
 
   "panelBadge": "Personalized academic support",
   "panelTitle": "Support That Continues Beyond Every Lesson",
@@ -410,7 +427,7 @@
   },
 
   "whatsappCta": "Ask About a Free Trial",
-  "whatsappMessage": "Hello, I would like to learn more about Success Path Mentors's tutoring services and arrange a free trial lesson."
+  "whatsappMessage": "Hello, I would like to learn more about Success Path Mentors' tutoring services and arrange a free trial lesson."
 },
 
 "videoTestimonials": {
@@ -583,7 +600,7 @@
   "ctaDescription": "Send us the student's grade, subject, and main learning need, and our team will respond with the relevant information.",
   "cta": "Ask Us on WhatsApp",
 
-  "whatsappMessage": "Hello, I have a question about Success Path Mentors's online tutoring services.",
+  "whatsappMessage": "Hello, I have a question about Success Path Mentors' online tutoring services.",
 
   "items": [
     {
@@ -645,7 +662,7 @@
   ]
 },
   "trustBadges": {
-    "moneyBack": "Clear cancellation policy",
+    "moneyBack": "Money-Back Guarantee",
     "fastReply": "Fast Reply",
     "contactUs": "Contact Us"
   },

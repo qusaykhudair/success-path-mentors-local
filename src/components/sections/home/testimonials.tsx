@@ -1,7 +1,5 @@
 // Server Component
 
-import { verifiedTrustContent } from '@/config/trust';
-
 import { getTranslations } from 'next-intl/server';
 
 import {
@@ -9,16 +7,12 @@ import {
   SectionHeading,
 } from '@/components/ui/section';
 
-import dynamic from 'next/dynamic';
-import type { Testimonial } from './testimonials-grid';
-
-const TestimonialsGrid = dynamic(
-  () => import('./testimonials-grid').then((mod) => mod.TestimonialsGrid),
-  { ssr: true }
-);
+import {
+  TestimonialsGrid,
+  type Testimonial,
+} from './testimonials-grid';
 
 export async function Testimonials() {
-  if (!verifiedTrustContent.testimonials) return null;
   const t = await getTranslations('testimonials');
 
   const allItems = t.raw('items') as Testimonial[];

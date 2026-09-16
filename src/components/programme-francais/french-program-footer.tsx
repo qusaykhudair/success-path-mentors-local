@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { getDefaultMarket } from '@/config/markets';
 import Link from 'next/link';
 
 import {
@@ -192,7 +193,7 @@ export function FrenchProgramFooter() {
             "
           >
             <a
-              href="mailto:successpathmentors@gmail.com"
+              href={`mailto:${getDefaultMarket().contact.publishedEmail}`}
               className="
                 inline-flex
                 items-center
@@ -208,7 +209,7 @@ export function FrenchProgramFooter() {
                 className="h-4 w-4"
               />
 
-              successpathmentors@gmail.com
+              {getDefaultMarket().contact.publishedEmail}
             </a>
 
             <a

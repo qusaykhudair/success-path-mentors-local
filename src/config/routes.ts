@@ -62,11 +62,6 @@ export const routePath = {
       : '/en/how-it-works';
   },
 
-  examPreparation(): string {
-    return '/en/exam-preparation';
-  },
-
-
   locations(locale: SiteLocale): string {
     return locale === 'ar' ? '/ar/المواقع' : '/en/locations';
   },
@@ -110,6 +105,14 @@ export const routePath = {
     return localizedContactPath(
       locale
     );
+  },
+
+  login(locale: SiteLocale): string {
+    return `/${locale}/login`;
+  },
+
+  register(locale: SiteLocale): string {
+    return `/${locale}/register`;
   },
 
   privacy(locale: SiteLocale): string {

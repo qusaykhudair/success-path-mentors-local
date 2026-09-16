@@ -72,6 +72,7 @@ export interface EnglishGradePageData {
 export interface EnglishStrandPageData {
   slug: string;
   title: string;
+  heroHeading?: string;
   description: string;
   iconKey: EnglishStrandIconKey;
   gradeRange: {

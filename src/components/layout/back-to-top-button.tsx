@@ -3,12 +3,13 @@
 import { useEffect, useState } from 'react';
 import { ArrowUp } from 'lucide-react';
 
-type BackToTopLocale = 'en' | 'ar' | 'fr';
+type BackToTopLocale = 'en' | 'ar' | 'fr' | 'de';
 
 const labels: Record<BackToTopLocale, string> = {
   en: 'Back to top',
   ar: 'العودة إلى أعلى الصفحة',
   fr: 'Retour en haut',
+  de: 'Nach oben',
 };
 
 interface BackToTopButtonProps {
@@ -19,16 +20,7 @@ export function BackToTopButton({ locale }: BackToTopButtonProps) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    let ticking = false;
-    const updateVisibility = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          setVisible(window.scrollY > 480);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
+    const updateVisibility = () => setVisible(window.scrollY > 480);
     updateVisibility();
     window.addEventListener('scroll', updateVisibility, { passive: true });
     return () => window.removeEventListener('scroll', updateVisibility);

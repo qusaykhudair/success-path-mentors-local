@@ -84,7 +84,8 @@ export default function FrenchLayout({
       organizationId,
     name:
       siteConfig.name,
-    telephone: '+1 647 787 5999',
+    legalName:
+      siteConfig.organizationName,
     url:
       siteConfig.url,
     logo:

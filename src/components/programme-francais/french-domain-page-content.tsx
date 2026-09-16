@@ -78,7 +78,7 @@ export function FrenchDomainPageContent({
             className="
               shrink-0
               font-bold
-              hover:text-[#0f766e]
+              hover:text-[#108686]
             "
           >
             Programme français
@@ -102,7 +102,7 @@ export function FrenchDomainPageContent({
             className="
               shrink-0
               font-bold
-              hover:text-[#0f766e]
+              hover:text-[#108686]
             "
           >
             {subject.title}
@@ -463,7 +463,7 @@ export function FrenchDomainPageContent({
                 font-black
                 uppercase
                 tracking-[0.12em]
-                text-[#0f766e]
+                text-[#108686]
               "
             >
               Progression par niveau
@@ -543,7 +543,7 @@ export function FrenchDomainPageContent({
                         font-black
                         uppercase
                         tracking-[0.1em]
-                        text-[#0f766e]
+                        text-[#108686]
                       "
                     >
                       Niveau scolaire
@@ -666,7 +666,7 @@ function TopicAccordion({
               justify-center
               rounded-xl
               bg-[#ECFEFD]
-              text-[#0f766e]
+              text-[#108686]
             "
           >
             <ClipboardList
@@ -687,7 +687,7 @@ function TopicAccordion({
             h-5
             w-5
             shrink-0
-            text-[#0f766e]
+            text-[#108686]
             transition-transform
             group-open:rotate-180
           "
@@ -803,7 +803,7 @@ function TopicAccordion({
                         className="
                           h-4
                           w-4
-                          text-[#0f766e]
+                          text-[#108686]
                         "
                       />
 
@@ -850,7 +850,7 @@ function TopicAccordion({
                         className="
                           h-4
                           w-4
-                          text-[#0f766e]
+                          text-[#108686]
                         "
                       />
 

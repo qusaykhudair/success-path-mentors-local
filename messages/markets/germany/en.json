@@ -1,0 +1,460 @@
+{
+  "common": {
+    "continue": "Continue",
+    "back": "Back",
+    "submit": "Submit",
+    "optional": "(Optional)",
+    "required": "Required",
+    "success": "Success"
+  },
+  "navigation": {
+    "home": "Home"
+  },
+  "hero": {
+    "entryQuestion": "What would you like help with?",
+    "freeTrial": "Free Trial",
+    "personalizedTutoring": "Personalized 1-to-1 tutoring",
+    "customerSupport": "Customer coordination and support",
+    "headline": "Personalized Online Learning for Every Stage",
+    "subheadline": "Choose one-to-one tutoring, a small group of up to three learners, or level-based language support. Learn English, German, French or Arabic — or get academic support from the early school years through graduation.",
+    "trustContext": "Personalized Learning",
+    "selector": {
+      "question": "What would you like help with?",
+      "instruction": "Select a subject to continue",
+      "services": {
+        "german": "German",
+        "english": "English",
+        "arabic": "Arabic",
+        "french": "French"
+      },
+      "continue": "Continue",
+      "processing": "Processing...",
+      "microcopy": "100% Free Trial Session • No Commitment"
+    },
+    "eyebrow": "Personalized Online Learning",
+    "benefits": [
+      "Personal one-to-one & small groups up to 3",
+      "German, English, French & Arabic levels",
+      "School subjects from Grade 1 to Graduation"
+    ]
+  },
+  "services": {
+    "headline": "Our Core Programs",
+    "subheadline": "Expert tutoring across key disciplines",
+    "items": {
+      "german": {
+        "title": "German",
+        "description": "Master the language"
+      },
+      "english": {
+        "title": "English",
+        "description": "Fluency and grammar"
+      },
+      "arabic": {
+        "title": "Arabic",
+        "description": "Native language support"
+      },
+      "french": {
+        "title": "French",
+        "description": "Comprehensive curriculum"
+      }
+    }
+  },
+  "trust": {
+    "title": "Dedicated Tutor Support"
+  },
+  "useCases": {
+    "eyebrow": "Who we are here for",
+    "headline": "Support for every goal",
+    "subheadline": "Whether student, family or adult – we have the right program for you.",
+    "cases": [
+      {
+        "title": "Families in Germany",
+        "description": "Support for children with the German language or everyday school life so that they are successfully integrated into the school system."
+      },
+      {
+        "title": "Students & Pupils",
+        "description": "Tutoring and language support in English or French to prepare for exams or studies."
+      },
+      {
+        "title": "Adult Learners",
+        "description": "Tailor-made language courses and academic support for professionals who want to expand their skills."
+      }
+    ]
+  },
+  "teacherQuality": {
+    "eyebrow": "Our Teachers",
+    "headline": "Quality you can rely on",
+    "subheadline": "We carefully select our teachers to ensure you get the best support.",
+    "points": [
+      "Careful selection process",
+      "Professional competence",
+      "Pedagogical skill",
+      "Passion for teaching"
+    ],
+    "matching": {
+      "title": "How we find your teacher",
+      "description": "We analyze your learning goals and individual requirements to find a qualified teacher suited to your needs."
+    }
+  },
+  "howItWorks": {
+    "eyebrow": "Getting Started is Easy",
+    "headline": "3 Steps to Success",
+    "subheadline": "Simple steps to reach the right teacher.",
+    "steps": {
+      "step1": {
+        "title": "Sign up for free",
+        "description": "Fill out our short form."
+      },
+      "step2": {
+        "title": "Find a teacher",
+        "description": "We match you with a suitable teacher for your needs."
+      },
+      "step3": {
+        "title": "Learn successfully",
+        "description": "Start your lessons online."
+      }
+    }
+  },
+  "leadJourney": {
+    "stepServiceSelection": "Service Selection",
+    "stepLearnerContext": "Learner Context",
+    "stepLearningGoal": "Learning Goal",
+    "stepContact": "Contact & Trial Request",
+    "stepSuccess": "Success"
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "feedbackLabel": "Parent Feedback",
+    "headline": "What our students say",
+    "subheadline": "Success stories from people who have learned with us.",
+    "items": [
+      {
+        "name": "Eya Ad",
+        "quote": "A team that deserves every thanks and encouragement. They are highly professional, punctual, respectful in their communication, attentive, and committed to consistent follow-up."
+      },
+      {
+        "name": "Zain Al",
+        "quote": "Thank you to everyone and to Mr. Mustafa for their respectful communication, excellent cooperation, and friendly approach. My son is very happy learning with them."
+      },
+      {
+        "name": "Abir Joulan",
+        "quote": "Thank you for your efforts and commitment to lesson times. The teaching has been excellent, and special thanks to Ms. Shaimaa for teaching my daughter. We truly appreciate everything you provide."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Frequently Asked Questions",
+    "headline": "Do you have any questions?",
+    "subheadline": "Here you will find answers to the most important questions about our offer.",
+    "questions": [
+      {
+        "q": "How does the free trial lesson work?",
+        "a": "You register, we discuss your goals and match you with a suitable teacher for a non-binding first session."
+      },
+      {
+        "q": "How do you find the right teacher for me?",
+        "a": "We use your information on learning goals, subject, and preferred times to select the ideal teacher from our network."
+      },
+      {
+        "q": "Where do the lessons take place?",
+        "a": "Lessons take place entirely online via a user-friendly video platform."
+      },
+      {
+        "q": "Which languages are offered?",
+        "a": "We currently offer German, English, Arabic, and French."
+      },
+      {
+        "q": "How flexible is scheduling?",
+        "a": "Very flexible. You arrange the appointments directly with your teacher to fit your schedule."
+      },
+      {
+        "q": "Who is the offer suitable for?",
+        "a": "For students of all ages, university students, and adults who want to improve their language or subject skills."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Us"
+  },
+  "footer": {
+    "brandDescription": "Empowering students to achieve academic excellence.",
+    "servicesTitle": "Services",
+    "aboutTitle": "Explore",
+    "accountTitle": "Account & Legal",
+    "freeTrial": "Free Trial Lesson",
+    "contactTitle": "Contact",
+    "legalTitle": "Legal",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "allRightsReserved": "All rights reserved.",
+    "services": {
+      "german": "German",
+      "english": "English",
+      "arabic": "Arabic",
+      "french": "French"
+    },
+    "northAmericaBanner": {
+      "title": "Main Website for North America (Canada & USA)",
+      "description": "Looking for Canadian and US school or university curricula? Visit our core platform.",
+      "button": "Go to Main Website"
+    }
+  },
+  "errors": {
+    "validation": "Please check your input.",
+    "temporary": "A temporary error occurred. Please try again.",
+    "duplicate": "You have already submitted a request."
+  },
+  "success": {
+    "message": "Your request has been received."
+  },
+  "nav": {
+    "home": "Home",
+    "bookFreeSession": "Book free session"
+  },
+  "trustStrip": {
+    "items": {
+      "item1": {
+        "title": "1-to-1 Tutoring",
+        "subtitle": "Dedicated personal support"
+      },
+      "item2": {
+        "title": "Human Coordination",
+        "subtitle": "We manage your learning journey"
+      },
+      "item3": {
+        "title": "Online Learning",
+        "subtitle": "Learn comfortably from anywhere"
+      }
+    }
+  },
+  "cta": {
+    "eyebrow": "Start Now",
+    "headline": "Ready for genuine academic progress?",
+    "subheadline": "Begin your personalized learning journey today with a free trial lesson.",
+    "primaryAction": "Book Free Trial Lesson",
+    "secondaryAction": "Chat on WhatsApp",
+    "reassurance": "Personalized 1-to-1 tutoring • Flexible online scheduling • Direct human coordination",
+    "trustPoints": [
+      "1-on-1 personalized tutoring",
+      "Free trial lesson with no commitment",
+      "Flexible online schedules"
+    ],
+    "panelEyebrow": "Simple Process",
+    "panelTitle": "Get started in 3 easy steps",
+    "panelNote": "Our advisory team will coordinate your trial session with personal care.",
+    "nextSteps": [
+      {
+        "title": "Submit your request",
+        "description": "Select your subject and preferred time slot."
+      },
+      {
+        "title": "Tutor matching",
+        "description": "We match an experienced tutor tailored to your learning goals."
+      },
+      {
+        "title": "Start learning",
+        "description": "Meet your tutor online and experience real 1-on-1 mentorship."
+      }
+    ]
+  },
+  "whySpm": {
+    "eyebrow": "Why Success Path Mentors",
+    "headline": "More Than Tutoring",
+    "subheadline": "A personalized learning experience supported by dedicated people, thoughtful coordination and high teaching standards.",
+    "cta": "Book Your Free Trial",
+    "features": [
+      {
+        "title": "Experience Across Multiple Markets",
+        "description": "Our experience across different educational environments helps us understand the diverse needs of learners and families and adapt our support accordingly."
+      },
+      {
+        "title": "Dedicated Human Coordination",
+        "description": "Our coordination team supports the learning journey beyond the lesson — from understanding your needs and tutor matching to scheduling and ongoing communication."
+      },
+      {
+        "title": "Personalized for Every Learner",
+        "description": "We consider each learner's goals, level, pace and individual needs to shape a tutoring experience that fits the learner rather than forcing every student into the same approach."
+      },
+      {
+        "title": "High Standards for Teaching Quality",
+        "description": "We focus on subject knowledge, teaching ability, communication, professionalism and learner fit when selecting and coordinating with tutors."
+      },
+      {
+        "title": "Learning with Confidence and Motivation",
+        "description": "Our teaching approach combines academic support with encouragement and friendly communication to help learners participate, understand and develop a more positive relationship with learning."
+      },
+      {
+        "title": "Your Satisfaction Matters",
+        "description": "If something is not meeting your expectations, our coordination team will work with you to understand the issue and find an appropriate solution."
+      }
+    ]
+  },
+  "trialFlow": {
+    "back": "Back",
+    "continue": "Continue",
+    "step1Title": "Which subject would you like to learn?",
+    "step2Title": "Who is the lesson for?",
+    "step3Title": "What is your main goal?",
+    "step4Title": "How can we reach you?",
+    "learner": {
+      "myself": {
+        "title": "For myself",
+        "desc": "I want to improve my own skills"
+      },
+      "child": {
+        "title": "For my child",
+        "desc": "Support for school or language skills"
+      }
+    },
+    "goals": {
+      "grades": {
+        "title": "Improve grades",
+        "desc": "Achieve better results in school"
+      },
+      "speaking": {
+        "title": "Speak more fluently",
+        "desc": "Communicate more confidently"
+      },
+      "exam": {
+        "title": "Exam preparation",
+        "desc": "Targeted training for upcoming tests"
+      },
+      "basics": {
+        "title": "Learn the basics",
+        "desc": "Find a solid introduction"
+      }
+    },
+    "contact": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "submit": "Prepare Request",
+      "privacy": "Your data is transmitted securely and will not be passed on to third parties.",
+      "success": "Your request has been sent successfully! We will contact you shortly.",
+      "errors": {
+        "firstName": "Please enter your first name (at least 2 characters).",
+        "lastName": "Please enter your last name (at least 2 characters).",
+        "email": "Please enter a valid email address.",
+        "phone": "Please enter a valid phone number."
+      }
+    },
+    "subjectLabel": "Subject",
+    "learnerLabel": "Learner",
+    "goalLabel": "Goal",
+    "nameLabel": "Name",
+    "phoneLabel": "Phone",
+    "step4Description": "Enter your contact details to coordinate your trial session with our team.",
+    "subjects": {
+      "german": "German",
+      "english": "English",
+      "arabic": "Arabic",
+      "french": "French"
+    },
+    "contactReady": {
+      "title": "Thanks for getting with us",
+      "description": "One of our coordination team members will get in touch with you soon.",
+      "whatsappButton": "Continue on WhatsApp",
+      "whatsAppGreeting": "Hello Success Path Mentors, I would like to book a free trial lesson:",
+      "backHome": "Go back to Home"
+    }
+  },
+  "header": {
+    "services": "Subjects",
+    "whySpm": "Why SPM",
+    "teacherQuality": "Tutors",
+    "howItWorks": "How It Works",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "login": "Log in",
+    "register": "Sign up",
+    "contact": "Contact",
+    "tutoringServices": "Tutoring Services",
+    "tutoringOneToOne": "One-to-One Tutoring",
+    "tutoringSmallGroups": "Small Groups (Up to 3)",
+    "tutoringLanguageLevels": "Language Support by Level",
+    "languages": "Languages",
+    "langGerman": "German",
+    "langEnglish": "English",
+    "langFrench": "French",
+    "langArabic": "Arabic",
+    "schoolSupport": "School Support",
+    "schoolGrades1To6": "Grades 1–6 (Foundation)",
+    "schoolGrades7To9": "Grades 7–9 (Middle Years)",
+    "schoolGrades10To12": "Grades 10–12 (Senior School)",
+    "adults": "Adults",
+    "freeTrial": "Free Trial"
+  },
+  "pricing": {
+    "eyebrow": "Transparent Plans",
+    "headline": "Flexible Plans for Every Learning Goal",
+    "subheadline": "Choose the learning package tailored for personalized instruction and lasting academic success.",
+    "pendingNote": "Tailored pricing provided following your free introductory trial lesson.",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "subtitle": "4 Tutoring Sessions",
+        "description": "Ideal for trial periods, targeted exam preparation, or short-term concept reinforcement.",
+        "sessions": "4 Sessions (1-on-1)",
+        "priceLabel": "On Request",
+        "badge": "Getting Started",
+        "features": [
+          "1-on-1 online tutoring",
+          "Personalized teacher matching",
+          "Flexible scheduling",
+          "Regular learning feedback"
+        ],
+        "cta": "Start your journey"
+      },
+      "progress": {
+        "name": "Progress",
+        "subtitle": "8 Tutoring Sessions",
+        "description": "Our comprehensive plan for steady academic progress and stronger subject mastery.",
+        "sessions": "8 Sessions (1-on-1)",
+        "priceLabel": "On Request",
+        "badge": "8 Sessions",
+        "features": [
+          "1-on-1 online tutoring",
+          "Individual learning roadmap",
+          "Dedicated coordination support",
+          "Regular learning feedback",
+          "Adaptable across subjects"
+        ],
+        "cta": "Start your journey"
+      },
+      "momentum": {
+        "name": "Intensive",
+        "subtitle": "12 Tutoring Sessions",
+        "description": "Comprehensive academic support for structured learning and test preparation.",
+        "sessions": "12 Sessions (1-on-1)",
+        "priceLabel": "On Request",
+        "badge": "12 Sessions",
+        "features": [
+          "1-on-1 online tutoring",
+          "Tailored tutor matching",
+          "Targeted exam preparation",
+          "Direct coordination support",
+          "Homework & ongoing mentorship"
+        ],
+        "cta": "Start your journey"
+      }
+    }
+  },
+  "contactSection": {
+    "eyebrow": "Personal Support",
+    "headline": "We Are Here to Help",
+    "subheadline": "Have questions about our tutoring programs or need personal guidance? Our dedicated European support team is ready to assist you.",
+    "whatsappTitle": "WhatsApp Support",
+    "whatsappDesc": "Quick and easy assistance directly via WhatsApp chat.",
+    "whatsappAction": "Start WhatsApp Chat",
+    "emailTitle": "Email Inquiries",
+    "emailDesc": "Send us a message anytime. Our coordination team will get back to you promptly.",
+    "emailAction": "Send Email",
+    "hoursTitle": "Support Hours",
+    "hoursDesc": "Contact our coordination team via WhatsApp or email.",
+    "coordinatorBadge": "Human Educational Mentorship"
+  }
+}

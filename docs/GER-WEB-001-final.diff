@@ -1,0 +1,329 @@
+diff --git a/src/config/markets.ts b/src/config/markets.ts
+new file mode 100644
+index 0000000..632cd57
+--- /dev/null
++++ b/src/config/markets.ts
+@@ -0,0 +1,155 @@
++import { defaultLocale, siteConfig, supportedLocales } from './site';
++import { CONTACT, ORGANIZATION } from '../lib/constants';
++import { WHATSAPP_DISPLAY_NUMBER, WHATSAPP_NUMBER } from '../lib/whatsapp';
++
++export const marketIds = ['north-america', 'germany'] as const;
++export type MarketId = (typeof marketIds)[number];
++export type MarketCode = 'NA' | 'DE';
++export type LanguageCode = 'en' | 'ar' | 'de';
++export type CountryCode = 'CA' | 'US' | 'DE';
++export type CurrencyCode = 'CAD' | 'EUR';
++
++export interface MarketConfig {
++  readonly id: MarketId;
++  readonly code: MarketCode;
++  readonly name: string;
++  /** Omitted for markets spanning multiple countries. */
++  readonly countryCode?: CountryCode;
++  /** Reserved slug only; null preserves the unprefixed North America URLs. */
++  readonly publicSlug: string | null;
++  /** Business availability only. This registry never activates routes. */
++  readonly enabled: boolean;
++  readonly defaultLanguage: LanguageCode;
++  readonly supportedLanguages: readonly LanguageCode[];
++  readonly defaultCountry: CountryCode;
++  readonly supportedCountries: readonly CountryCode[];
++  readonly defaultTimezone: string;
++  /** Suggested choices, not a restriction on browser-detected timezones. */
++  readonly supportedTimezones: readonly string[];
++  readonly currency: CurrencyCode;
++  readonly contact: {
++    readonly email: string;
++    /** Null when a separate voice phone channel has not been confirmed. */
++    readonly phone: string | null;
++    /** International digits only, suitable for wa.me. */
++    readonly whatsapp: string;
++    readonly whatsappDisplay: string;
++  };
++  readonly seo: {
++    readonly region: CountryCode;
++    readonly locales: Readonly<Partial<Record<LanguageCode, `${LanguageCode}_${CountryCode}`>>>;
++  };
++  readonly organization: {
++    readonly areaServed: readonly { readonly '@type': 'Country'; readonly name: string }[];
++    readonly legalName?: string;
++  };
++  readonly registration: {
++    /** Preferred language follows the page language; country/timezone fallbacks above. */
++    readonly languageStrategy: 'page-language';
++    readonly timezoneStrategy: 'browser-with-market-fallback' | 'market-default';
++    /** Existing API expects country names, not ISO codes. */
++    readonly countryValue: string;
++  };
++  readonly phonePlaceholder: string;
++  readonly bookingUrl?: string;
++  readonly legalBusinessConfigRef?: string;
++}
++
++// GER-WEB-001: deliberately not consumed by routing or UI. Existing constants
++// remain authoritative for NA contact/environment overrides until GER-WEB-002.
++const northAmerica = {
++  id: marketIds[0],
++  code: 'NA',
++  name: 'North America',
++  publicSlug: null,
++  enabled: true,
++  defaultLanguage: defaultLocale,
++  supportedLanguages: supportedLocales,
++  defaultCountry: 'CA',
++  supportedCountries: ['CA', 'US'],
++  defaultTimezone: 'America/Toronto',
++  // Matches registration-form.tsx, including families outside the service region.
++  supportedTimezones: [
++    'America/Toronto', 'America/Vancouver', 'America/Edmonton',
++    'America/Winnipeg', 'America/Halifax', 'America/St_Johns',
++    'America/New_York', 'America/Chicago', 'America/Denver',
++    'America/Los_Angeles', 'Africa/Cairo', 'Asia/Amman',
++    'Asia/Riyadh', 'Asia/Dubai', 'Europe/London',
++  ],
++  currency: 'CAD',
++  contact: {
++    email: siteConfig.email,
++    phone: CONTACT.phone,
++    whatsapp: WHATSAPP_NUMBER,
++    whatsappDisplay: WHATSAPP_DISPLAY_NUMBER,
++  },
++  seo: { region: 'CA', locales: { en: 'en_CA', ar: 'ar_CA' } },
++  organization: {
++    areaServed: [
++      { '@type': 'Country', name: CONTACT.country },
++      { '@type': 'Country', name: 'United States' },
++    ],
++    legalName: ORGANIZATION.legalName,
++  },
++  registration: {
++    languageStrategy: 'page-language',
++    timezoneStrategy: 'browser-with-market-fallback',
++    countryValue: CONTACT.country,
++  },
++  phonePlaceholder: '+1 647 000 0000',
++  bookingUrl: siteConfig.bookingUrl,
++} as const satisfies MarketConfig;
++
++const germany = {
++  id: marketIds[1],
++  code: 'DE',
++  name: 'Germany',
++  countryCode: 'DE',
++  publicSlug: 'de',
++  enabled: false,
++  defaultLanguage: 'de',
++  supportedLanguages: ['de', 'ar', 'en'],
++  defaultCountry: 'DE',
++  supportedCountries: ['DE'],
++  defaultTimezone: 'Europe/Berlin',
++  supportedTimezones: ['Europe/Berlin'],
++  currency: 'EUR',
++  contact: {
++    email: 'europe@successpathmentors.net',
++    phone: null,
++    whatsapp: '4915123974353',
++    whatsappDisplay: '+49 1512 3974353',
++  },
++  seo: { region: 'DE', locales: { de: 'de_DE', ar: 'ar_DE', en: 'en_DE' } },
++  organization: { areaServed: [{ '@type': 'Country', name: 'Germany' }] },
++  registration: {
++    languageStrategy: 'page-language',
++    timezoneStrategy: 'market-default',
++    countryValue: 'Germany',
++  },
++  phonePlaceholder: '+49 1512 3456789',
++} as const satisfies MarketConfig;
++
++const markets: Readonly<Record<MarketId, MarketConfig>> = {
++  [northAmerica.id]: northAmerica,
++  [germany.id]: germany,
++};
++
++export const defaultMarketId: MarketId = marketIds[0];
++
++export function getMarketConfig(id: MarketId = defaultMarketId): MarketConfig {
++  return markets[id];
++}
++
++export function getDefaultMarket(): MarketConfig {
++  return getMarketConfig();
++}
++
++export function isMarketId(value: unknown): value is MarketId {
++  return typeof value === 'string' && marketIds.some((id) => id === value);
++}
++
++/** Exact market codes only; language/country detection belongs to future consumers. */
++export function getMarketByCode(code: string): MarketConfig | undefined {
++  return Object.values(markets).find((market) => market.code === code);
++}
+diff --git a/tests/markets.test.mjs b/tests/markets.test.mjs
+new file mode 100644
+index 0000000..cb35520
+--- /dev/null
++++ b/tests/markets.test.mjs
+@@ -0,0 +1,149 @@
++import assert from 'node:assert/strict';
++import { existsSync, readFileSync } from 'node:fs';
++import { createRequire } from 'node:module';
++import { dirname, resolve } from 'node:path';
++import { fileURLToPath } from 'node:url';
++import test from 'node:test';
++import ts from 'typescript';
++
++// Execute actual TS modules using the existing compiler, without a new runner
++// dependency or changes to production module resolution.
++const root = fileURLToPath(new URL('../', import.meta.url));
++const require = createRequire(import.meta.url);
++const cache = new Map();
++function load(relativePath) {
++  const filename = resolve(root, relativePath);
++  if (cache.has(filename)) return cache.get(filename);
++  const source = readFileSync(filename, 'utf8');
++  const { outputText } = ts.transpileModule(source, {
++    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
++    fileName: filename,
++  });
++  const loadedModule = { exports: {} };
++  const localRequire = (specifier) => {
++    if (specifier.startsWith('@/')) return load(`src/${specifier.slice(2)}.ts`);
++    if (specifier.startsWith('.')) return load(resolve(dirname(filename), `${specifier}.ts`));
++    return require(specifier);
++  };
++  new Function('require', 'module', 'exports', outputText)(localRequire, loadedModule, loadedModule.exports);
++  cache.set(filename, loadedModule.exports);
++  return loadedModule.exports;
++}
++
++const { getDefaultMarket, getMarketConfig, getMarketByCode, isMarketId, marketIds } = load('src/config/markets.ts');
++const { siteConfig, supportedLocales, isSupportedLocale } = load('src/config/site.ts');
++const { CONTACT } = load('src/lib/constants.ts');
++const whatsapp = load('src/lib/whatsapp.ts');
++
++test('default market preserves North America countries, language and contact sources', () => {
++  const market = getDefaultMarket();
++  assert.equal(market.id, 'north-america');
++  assert.equal(getMarketConfig(), market);
++  assert.equal(getMarketByCode('NA'), market);
++  assert.equal(market.enabled, true);
++  assert.equal(market.publicSlug, null);
++  assert.equal(market.defaultCountry, 'CA');
++  assert.deepEqual(market.supportedCountries, ['CA', 'US']);
++  assert.equal(market.defaultLanguage, 'en');
++  assert.deepEqual(market.supportedLanguages, ['en', 'ar']);
++  assert.deepEqual(market.supportedLanguages, supportedLocales);
++  assert.equal(market.currency, 'CAD');
++  assert.deepEqual(market.contact, {
++    email: siteConfig.email, phone: CONTACT.phone,
++    whatsapp: whatsapp.WHATSAPP_NUMBER, whatsappDisplay: whatsapp.WHATSAPP_DISPLAY_NUMBER,
++  });
++  assert.equal(market.bookingUrl, siteConfig.bookingUrl);
++  assert.equal(market.registration.countryValue, 'Canada');
++  assert.equal(market.registration.timezoneStrategy, 'browser-with-market-fallback');
++  assert.equal(market.defaultTimezone, 'America/Toronto');
++});
++
++test('North America booking preserves configured URLs and Canadian WhatsApp fallback', () => {
++  const { getBookingHref } = load('src/config/routes.ts');
++  for (const locale of supportedLocales) {
++    assert.equal(getBookingHref(locale, ' https://example.com/book '), 'https://example.com/book');
++    assert.equal(getBookingHref(locale, ''), whatsapp.buildWhatsAppHref(
++      whatsapp.buildTrialLessonMessage(locale, { subject: locale === 'ar' ? 'الرياضيات' : 'Mathematics' })
++    ));
++    assert.equal(getBookingHref(locale, getDefaultMarket().bookingUrl), getBookingHref(locale, siteConfig.bookingUrl));
++  }
++});
++
++test('Germany is configured but inactive, with a separate Europe contact channel', () => {
++  const market = getMarketConfig('germany');
++  assert.equal(market.id, 'germany');
++  assert.equal(market.code, 'DE');
++  assert.equal(market.name, 'Germany');
++  assert.equal(market.publicSlug, 'de');
++  assert.equal(getMarketByCode('DE'), market);
++  assert.equal(market.enabled, false);
++  assert.equal(market.countryCode, 'DE');
++  assert.equal(market.defaultTimezone, 'Europe/Berlin');
++  assert.deepEqual(market.supportedTimezones, ['Europe/Berlin']);
++  assert.equal(market.defaultCountry, 'DE');
++  assert.deepEqual(market.supportedCountries, ['DE']);
++  assert.equal(market.currency, 'EUR');
++  assert.equal(market.defaultLanguage, 'de');
++  assert.deepEqual(market.supportedLanguages, ['de', 'ar', 'en']);
++  assert.equal(market.contact.email, 'europe@successpathmentors.net');
++  assert.equal(market.contact.whatsapp, '4915123974353');
++  assert.match(market.contact.whatsapp, /^[1-9]\d{7,14}$/);
++  assert.equal(market.contact.whatsappDisplay, '+49 1512 3974353');
++  assert.equal(market.contact.whatsappDisplay.replace(/\D/g, ''), market.contact.whatsapp);
++  assert.equal(market.contact.phone, null);
++  assert.deepEqual(market.seo, {
++    region: 'DE', locales: { de: 'de_DE', ar: 'ar_DE', en: 'en_DE' },
++  });
++  assert.deepEqual(market.organization.areaServed, [{ '@type': 'Country', name: 'Germany' }]);
++  assert.deepEqual(market.registration, {
++    languageStrategy: 'page-language', timezoneStrategy: 'market-default', countryValue: 'Germany',
++  });
++  assert.equal(market.phonePlaceholder, '+49 1512 3456789');
++  assert.equal(market.bookingUrl, undefined);
++  assert.equal(market.legalBusinessConfigRef, undefined);
++  assert.equal(market.organization.legalName, undefined);
++});
++
++test('typed registry guards reject unknown IDs and codes', () => {
++  for (const id of marketIds) assert.equal(isMarketId(id), true);
++  for (const value of ['de', 'NA', 'toString', '__proto__', '', null, 0, {}]) {
++    assert.equal(isMarketId(value), false);
++  }
++  for (const code of ['de', 'CA', 'US', '', 'toString']) assert.equal(getMarketByCode(code), undefined);
++  for (const id of marketIds) {
++    const market = getMarketConfig(id);
++    assert.ok(market.supportedCountries.includes(market.defaultCountry));
++    assert.ok(market.supportedLanguages.includes(market.defaultLanguage));
++    assert.ok(market.supportedTimezones.includes(market.defaultTimezone));
++    for (const timeZone of market.supportedTimezones) {
++      assert.doesNotThrow(() => new Intl.DateTimeFormat('en', { timeZone }));
++    }
++  }
++});
++
++test('existing EN/AR and French route contracts remain unchanged', () => {
++  const { routing } = load('src/i18n/routing.ts');
++  const { routePath } = load('src/config/routes.ts');
++  const { programmeFrancaisRoutes } = load('src/lib/programme-francais/routes.ts');
++  assert.deepEqual(routing.locales, ['en', 'ar']);
++  assert.equal(routing.defaultLocale, 'en');
++  assert.equal(routing.localePrefix, 'always');
++  assert.equal(isSupportedLocale('de'), false);
++  assert.equal(routePath.home('en'), '/en');
++  assert.equal(routePath.home('ar'), '/ar');
++  assert.equal(routePath.contact('ar'), '/ar/تواصل-معنا');
++  assert.equal(routePath.about('ar'), '/ar/عن-المنصة');
++  assert.equal(routePath.subjects('ar'), '/ar/المواد-الدراسية');
++  assert.equal(routePath.locations('ar'), '/ar/المواقع');
++  assert.equal(routePath.register('en'), '/en/register');
++  assert.equal(routePath.register('ar'), '/ar/register');
++  assert.equal(routePath.login('en'), '/en/login');
++  assert.equal(routePath.login('ar'), '/ar/login');
++  assert.equal(programmeFrancaisRoutes.home, '/fr/programme-francais');
++});
++
++test('Germany remains disabled without public pages or translations', () => {
++  assert.equal(getMarketConfig('germany').enabled, false);
++  assert.equal(existsSync(resolve(root, 'src/app/de')), false);
++  assert.equal(existsSync(resolve(root, 'messages/de.json')), false);
++});
+diff --git a/src/config/routes.ts b/src/config/routes.ts
+index 5202916..d97597b 100644
+--- a/src/config/routes.ts
++++ b/src/config/routes.ts
+@@ -108,7 +108,7 @@ export const routePath = {
+   },
+ 
+   login(locale: SiteLocale): string {
+-    return `https://lms.successpathmentors.net/login`;
++    return `/${locale}/login`;
+   },
+ 
+   register(locale: SiteLocale): string {

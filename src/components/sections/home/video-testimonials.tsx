@@ -1,7 +1,5 @@
 // Server Component
 
-import { verifiedTrustContent } from '@/config/trust';
-
 import { getTranslations } from 'next-intl/server';
 
 import { Reveal } from '@/components/motion/reveal';
@@ -10,16 +8,12 @@ import {
   SectionHeading,
 } from '@/components/ui/section';
 
-import dynamic from 'next/dynamic';
-import type { VideoTestimonial } from './video-testimonials-grid';
-
-const VideoTestimonialsGrid = dynamic(
-  () => import('./video-testimonials-grid').then((mod) => mod.VideoTestimonialsGrid),
-  { ssr: true }
-);
+import {
+  VideoTestimonialsGrid,
+  type VideoTestimonial,
+} from './video-testimonials-grid';
 
 export async function VideoTestimonials() {
-  if (!verifiedTrustContent.videoTestimonials) return null;
   const t = await getTranslations(
     'videoTestimonials'
   );

@@ -4,13 +4,12 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { ChevronDown, ChevronRight, MapPin } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { LocationNavCountry } from '@/content/locations/location-navigation';
-import { useLocationNavigation } from './use-location-navigation';
 
 interface LocationsMenuProps {
   triggerLabel: string;
   overviewHref: string;
   overviewLabel: string;
-  countries?: LocationNavCountry[];
+  countries: LocationNavCountry[];
   locale: 'en' | 'ar';
 }
 
@@ -18,10 +17,9 @@ function localizeHref(locale: 'en' | 'ar', href: string): string {
   return `/${locale}${href}`;
 }
 
-export function LocationsMenu({ triggerLabel, overviewHref, overviewLabel, countries: providedCountries, locale }: LocationsMenuProps) {
+export function LocationsMenu({ triggerLabel, overviewHref, overviewLabel, countries, locale }: LocationsMenuProps) {
   const [open, setOpen] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
-  const { countries, failed } = useLocationNavigation(hasInteracted, providedCountries);
   const [countryKey, setCountryKey] = useState(countries[0]?.key ?? '');
   const activeCountry = useMemo(() => countries.find((item) => item.key === countryKey) ?? countries[0], [countries, countryKey]);
   const [regionKey, setRegionKey] = useState(activeCountry?.regions[0]?.key ?? '');
@@ -80,7 +78,7 @@ export function LocationsMenu({ triggerLabel, overviewHref, overviewLabel, count
         <ChevronDown aria-hidden="true" className={cn('h-4 w-4 transition-transform', open && 'rotate-180')} />
       </button>
 
-      <div role="menu" aria-hidden={!open} inert={!open} onMouseEnter={cancelClose} onMouseLeave={scheduleClose} className={cn('fixed left-1/2 top-[5.5rem] z-[60] grid w-[min(76rem,calc(100vw-2rem))] max-h-[calc(100dvh-6.5rem)] -translate-x-1/2 grid-cols-[13rem_20rem_minmax(0,1fr)] overflow-hidden rounded-[1.25rem] border border-border bg-popover shadow-[0_24px_70px_rgba(7,20,38,0.18)] transition-[transform,opacity] duration-200', open ? 'pointer-events-auto translate-y-0 opacity-100' : 'pointer-events-none -translate-y-1 opacity-0')}>
+      <div role="menu" aria-hidden={!open} onMouseEnter={cancelClose} onMouseLeave={scheduleClose} className={cn('fixed left-1/2 top-[5.5rem] z-[60] grid w-[min(76rem,calc(100vw-2rem))] max-h-[calc(100dvh-6.5rem)] -translate-x-1/2 grid-cols-[13rem_20rem_minmax(0,1fr)] overflow-hidden rounded-[1.25rem] border border-border bg-popover shadow-[0_24px_70px_rgba(7,20,38,0.18)] transition-[transform,opacity] duration-200', open ? 'pointer-events-auto translate-y-0 opacity-100' : 'pointer-events-none -translate-y-1 opacity-0')}>
         {hasInteracted ? (
           <>
             <div className="overflow-y-auto border-e border-border bg-muted/45 p-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
@@ -88,7 +86,6 @@ export function LocationsMenu({ triggerLabel, overviewHref, overviewLabel, count
                 {overviewLabel}<MapPin className="h-4 w-4" />
               </a>
               <div className="grid gap-1">
-            {!countries.length && <p role="status" className="p-3 text-small">{failed ? (locale === 'ar' ? 'استخدم رابط جميع المواقع.' : 'Use the locations overview link.') : (locale === 'ar' ? 'جارٍ التحميل…' : 'Loading…')}</p>}
             {countries.map((country) => (
               <a key={country.key} href={localizeHref(locale, country.href)} onMouseEnter={() => setCountryKey(country.key)} onFocus={() => setCountryKey(country.key)} className={cn('flex min-h-touch items-center justify-between rounded-xl px-3.5 text-small font-bold', activeCountry?.key === country.key ? 'bg-accent-50 text-accent-800' : 'hover:bg-background')}>
                 {country.label[locale]}<ChevronRight className="h-4 w-4 rtl:-scale-x-100" />

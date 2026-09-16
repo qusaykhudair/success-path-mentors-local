@@ -1,0 +1,137 @@
+export type AuthLocale = 'en' | 'ar';
+export type AuthUiLocale = 'de' | 'en' | 'ar';
+export type AuthApiLocale = 'en' | 'ar';
+
+export type LoginChannel = 'EMAIL' | 'WHATSAPP' | 'SMS';
+
+/**
+ * Safely maps UI locale to an existing supported backend Auth API locale ('en' | 'ar').
+ * German UI ('de') maps to 'en' for backend auth communication.
+ */
+export function toAuthApiLocale(uiLocale: AuthUiLocale): AuthApiLocale {
+  return uiLocale === 'ar' ? 'ar' : 'en';
+}
+
+export interface ApiFieldError {
+  field: string;
+  message: string;
+}
+
+export interface ApiErrorBody {
+  code?: string;
+  error?: string;
+  message?: string;
+  details?: ApiFieldError[];
+  field_errors?: ApiFieldError[];
+  retry_after_seconds?: number;
+  request_id?: string;
+}
+
+export interface LoginRequestPayload {
+  identifier: string;
+  locale: AuthLocale;
+}
+
+export interface LoginChallenge {
+  challenge_id: string;
+  channel: LoginChannel;
+  masked_destination: string;
+  expires_in_seconds: number;
+  resend_after_seconds: number;
+}
+
+export interface LoginVerifyPayload {
+  challenge_id: string;
+  otp: string;
+}
+
+export interface AuthenticatedUser {
+  auth_user_id: string;
+  display_name: string;
+  role: 'PARENT' | 'GUARDIAN' | 'STUDENT';
+  redirect_to: string;
+  authorized_student_count: number;
+  lms_magic_token?: string | null;
+}
+
+export interface RegistrationPayload {
+  parent_name: string;
+  guardian_relationship: string;
+  email: string;
+  whatsapp: string;
+  telephone?: string;
+  student_first_name: string;
+  date_of_birth?: string;
+  grade: string;
+  subject: string;
+  curriculum: string;
+  preferred_language: string;
+  country: string;
+  timezone: string;
+  preferred_day: string;
+  preferred_time: string;
+  preferred_time_end?: string;
+  notes?: string;
+  source: 'WEBSITE';
+  locale: AuthLocale;
+  privacy_consent: true;
+  signup_ticket?: string;
+}
+
+export type RegistrationStatus =
+  | 'ACCOUNT_PENDING_VERIFICATION'
+  | 'MATCH_VERIFICATION_REQUIRED'
+  | 'IDENTITY_LINK_REVIEW';
+
+export interface RegistrationVerification {
+  contact_id: string;
+  challenge_id: string;
+  channel: LoginChannel;
+  masked_destination: string;
+  expires_in_seconds: number;
+  resend_after_seconds: number;
+}
+
+export interface RegistrationResult {
+  registration_id: string;
+  status: RegistrationStatus;
+  trial_status: 'WAITING_FOR_ASSIGNMENT';
+  verification?: RegistrationVerification;
+  student_mid: string;
+  guardian_mid: string;
+}
+
+export interface RegistrationVerifyPayload {
+  contact_id: string;
+  challenge_id: string;
+  otp: string;
+}
+
+export interface RegistrationConfirmation {
+  registration_id: string;
+  status: 'ACCOUNT_VERIFIED' | 'WAITING_FOR_ADMIN';
+  trial_status: 'WAITING_FOR_ASSIGNMENT';
+  guardian_mid?: string;
+  student_mid?: string;
+}
+
+export class AuthApiError extends Error {
+  readonly code: string;
+  readonly fieldErrors: ApiFieldError[];
+  readonly retryAfterSeconds?: number;
+  readonly requestId?: string;
+
+  constructor(body: ApiErrorBody = {}, status = 500) {
+    const detailsMessage = Array.isArray(body.details) && body.details.length > 0 && typeof body.details[0] === 'string'
+      ? (body.details as unknown as string[]).join('. ')
+      : null;
+    super(detailsMessage || body.error || body.message || `Authentication request failed (${status}).`);
+    this.name = 'AuthApiError';
+    this.code = body.code || 'UNEXPECTED_ERROR';
+    this.fieldErrors = Array.isArray(body.details)
+      ? body.details.map((d: any) => (typeof d === 'string' ? { field: d.split(' ')[0] || '', message: d } : d))
+      : (body.field_errors || []);
+    this.retryAfterSeconds = body.retry_after_seconds;
+    this.requestId = body.request_id;
+  }
+} 

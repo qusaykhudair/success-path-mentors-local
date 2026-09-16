@@ -4,28 +4,24 @@
 
 @font-face {
   font-family: 'DIN Next LT Arabic';
-  src: url('/fonts/DINNextLTArabic-Regular.woff2') format('woff2');
+  src: url('../assets/din-next-lt-arabic/DINNextLTArabic-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'DIN Next LT Arabic';
-  src: url('/fonts/DINNextLTArabic-Light.woff2') format('woff2');
+  src: url('../assets/din-next-lt-arabic/DINNextLTArabic-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'DIN Next LT Arabic';
-  src: url('/fonts/DINNextLTArabic-Bold.woff2') format('woff2');
+  src: url('../assets/din-next-lt-arabic/DINNextLTArabic-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-}
-
-.font-din {
-  --font-din: 'DIN Next LT Arabic';
 }
 
 /* =========================================================
@@ -36,6 +32,7 @@
 
 @layer base {
   :root {
+    --font-din: 'DIN Next LT Arabic';
     color-scheme: light;
 
     /* -----------------------------------------------------

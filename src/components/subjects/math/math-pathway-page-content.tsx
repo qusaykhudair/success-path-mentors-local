@@ -17,12 +17,6 @@ import {
 import {
   routePath,
 } from '@/config/routes';
-import {
-  OntarioMathCourseSection,
-} from '@/components/subjects/math/ontario-math-course-section';
-import {
-  ontarioMathCourses,
-} from '@/content/subjects/math/ontario-math-course-data';
 import type {
   SiteLocale,
 } from '@/config/site';
@@ -126,9 +120,6 @@ export function MathPathwayPageContent({
 }: MathPathwayPageContentProps) {
   const copy =
     pageCopy[locale];
-
-  const ontarioCourse =
-    ontarioMathCourses[pathway.slug]?.[locale];
 
   const grades =
     pathway.stages
@@ -590,7 +581,7 @@ export function MathPathwayPageContent({
                   font-black
                   uppercase
                   tracking-[0.12em]
-                  text-[#0f766e]
+                  text-[#108686]
                 "
               >
                 {
@@ -707,14 +698,6 @@ export function MathPathwayPageContent({
         </div>
       </section>
 
-      {ontarioCourse && (
-        <OntarioMathCourseSection
-          locale={locale}
-          data={ontarioCourse}
-          bookingHref={bookingHref}
-        />
-      )}
-
       <section
         className="
           bg-white
@@ -787,7 +770,7 @@ export function MathPathwayPageContent({
                       justify-center
                       rounded-xl
                       bg-white
-                      text-[#0f766e]
+                      text-[#108686]
                       ring-1
                       ring-[#CFFAF8]
                     "
@@ -833,7 +816,7 @@ export function MathPathwayPageContent({
                       gap-2
                       text-small
                       font-black
-                      text-[#0f766e]
+                      text-[#108686]
                     "
                   >
                     {copy.relatedAction}
@@ -914,7 +897,7 @@ function GradeSection({
               font-black
               uppercase
               tracking-[0.1em]
-              text-[#0f766e]
+              text-[#108686]
             "
           >
             {pathwayTitle}
@@ -1049,7 +1032,7 @@ function TopicCard({
           justify-center
           rounded-full
           bg-[#ECFEFD]
-          text-[#0f766e]
+          text-[#108686]
         "
       >
         <Check

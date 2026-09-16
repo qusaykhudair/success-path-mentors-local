@@ -219,8 +219,8 @@ export function SubjectsMenu({
           gap-1.5
           rounded-button
           px-2.5
-          text-small
-          font-bold
+          text-sm
+          font-semibold
           text-muted-foreground
           transition-colors
           duration-200

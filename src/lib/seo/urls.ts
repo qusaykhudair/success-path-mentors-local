@@ -6,7 +6,6 @@ import {
 import {
   pathnames,
 } from '@/i18n/routing';
-import { hreflangPagePaths } from './hreflang-pages';
 
 function normalizePathname(
   pathname: string
@@ -36,11 +35,6 @@ export function buildLocalizedPath(
 
   let publicPath =
     normalizedPath;
-
-  if (normalizedPath.startsWith('/locations/')) {
-    const locationRoot = pathnames['/locations'][locale === 'ar' ? 'ar' : 'en'];
-    publicPath = locationRoot + normalizedPath.slice('/locations'.length);
-  }
 
   if (
     typeof routeDefinition ===
@@ -84,19 +78,12 @@ export function buildAbsoluteUrl(
 export function buildLanguageAlternates(
   pathname = ''
 ): Record<string, string> {
-  if (!hreflangPagePaths.has(normalizePathname(pathname))) {
-    return {};
-  }
-
-  const alternatives = Object.fromEntries(
-    supportedLocales.map((locale) => [
-      `${locale}-CA`,
-      buildAbsoluteUrl(locale, pathname),
-    ])
-  );
+  const enUrl = buildAbsoluteUrl('en', pathname);
+  const arUrl = buildAbsoluteUrl('ar', pathname);
 
   return {
-    ...alternatives,
+    'en-CA': enUrl,
+    'ar-CA': arUrl,
     'x-default': buildAbsoluteUrl(
       defaultLocale,
       pathname

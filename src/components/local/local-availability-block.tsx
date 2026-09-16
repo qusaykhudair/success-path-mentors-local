@@ -126,7 +126,7 @@ export function LocalAvailabilityBlock({
         "
       >
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#16C7C7]/40 bg-[#16C7C7]/10 px-3.5 py-1 text-caption font-black text-[#0f766e]">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#16C7C7]/40 bg-[#16C7C7]/10 px-3.5 py-1 text-caption font-black text-[#108686]">
             <Sparkles className="h-3.5 w-3.5 text-[#16C7C7]" aria-hidden="true" />
             <span>{content.badge}</span>
           </div>
@@ -143,7 +143,7 @@ export function LocalAvailabilityBlock({
             <span>{content.curriculumLead}</span>
             <Link
               href={curriculumHref}
-              className="font-bold text-[#0f766e] underline decoration-[#16C7C7] underline-offset-4 transition-colors hover:text-[#0D6B6B]"
+              className="font-bold text-[#108686] underline decoration-[#16C7C7] underline-offset-4 transition-colors hover:text-[#0D6B6B]"
             >
               {content.curriculumLink}
             </Link>
@@ -170,9 +170,9 @@ export function LocalAvailabilityBlock({
               "
             >
               <div>
-                <div className="flex items-center gap-2.5 text-[#0f766e]">
+                <div className="flex items-center gap-2.5 text-[#108686]">
                   <MapPin className="h-4 w-4 shrink-0" aria-hidden="true" />
-                  <span className="text-caption font-black uppercase tracking-wider text-[#0f766e]">
+                  <span className="text-caption font-black uppercase tracking-wider text-[#108686]">
                     {comm.name}
                   </span>
                 </div>
@@ -196,7 +196,7 @@ export function LocalAvailabilityBlock({
                     gap-1.5
                     text-small
                     font-bold
-                    text-[#0f766e]
+                    text-[#108686]
                     transition-colors
                     hover:text-[#0D6B6B]
                   "

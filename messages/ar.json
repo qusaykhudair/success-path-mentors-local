@@ -8,7 +8,7 @@
 },
   "meta": {
     "siteName": "Success Path Mentors",
-    "tagline": "Success Path Mentors"
+    "tagline": "Empowering Students. Inspiring Success."
   },
     "accessibility": {
     "skipToContent":"انتقل الى المحتوى التالي"
@@ -148,14 +148,31 @@
 "ctaPrimary": "احجز الحصة التجريبية المجانية",
 "ctaSecondary": "اكتشف برامجنا",
 "whatsappBookingMessage": "مرحباً، أرغب في حجز حصة تجريبية مجانية مع Success Path Mentors.",
-
-
-
-
+  "stats": [
+  {
+    "value": 150,
+    "suffix": "+",
+    "label": "طالب نشط"
+  },
+  {
+    "value": 700,
+    "suffix": "+",
+    "label": "حصة شهرياً"
+  },
+  {
+    "value": 30,
+    "suffix": "+",
+    "label": "مدرس متخصص"
+  }
+],
+  "socialProof": "انضم إلى أكثر من {count} طالب يحققون النجاح معنا",
+  "achievement": {
+    "label": "معدل إكمال الدورات"
+  },
   "imageAlt": "طلاب يتعاونون داخل فصل دراسي في منصة Success Path Mentors",
 "enrollment": {
   "title": "ابدأ الآن — سجّل في دقيقة",
-  "reassurance": "نستخدم بياناتك للرد على طلب الدروس الخصوصية.",
+  "reassurance": "بياناتك آمنة 100%",
   "next": "التالي",
   "back": "السابق",
   "submit": "إرسال",
@@ -244,24 +261,24 @@
       "icon": "guidance"
     }
   ],
-  "imageAlt": "طالب يلوح بيده أثناء مكالمة فيديو",
+  "imageAlt": "طالب يشارك في حصة تعليمية فردية مباشرة عبر الإنترنت",
   "liveLabel": "حصص مباشرة أونلاين",
   "badge": {
-  "value": "دروس فردية",
-  "label": "دروس خصوصية أونلاين"
-}
+    "value": "+700",
+    "label": "حصة تعليمية أونلاين شهرياً"
+  }
 },
  "testimonials": {
   "eyebrow": "تجارب من مجتمعنا التعليمي",
   "heading": "ماذا يقول أولياء الأمور والطلاب عن تجربتهم معنا؟",
   "subheading": "آراء حقيقية من أسر وطلاب خاضوا تجربة الدروس الفردية أونلاين مع Success Path Mentors.",
 "carouselLabel": "تجارب أولياء الأمور والطلاب",
-"feedbackLabel": "رأي من مجتمع الأكاديمية",
+"feedbackLabel": "رأي من مجتمعنا",
 "previous": "عرض الرأي السابق",
 "next": "عرض الرأي التالي",
 "viewTestimonial": "عرض الرأي رقم",
 "ratingLabel": "{rating} من أصل 5 نجوم",
-
+ 
 
 "items": [
   {
@@ -286,7 +303,7 @@
     "name": "Zozaa Zena",
     "role": "تعليق عبر فيسبوك",
     "quote": "شكراً للأستاذ مصطفى ولجميع الكادر التدريسي. ما شاء الله، تعاملهم من أفضل ما يكون. شكراً لكم."
-
+  
   },
   {
     "name": "Mohamad Alsakka",
@@ -395,7 +412,7 @@
   }
 ],
 
-  "imageAlt": "مدرسة تشرح بالإيماءات أثناء درس عبر الفيديو",
+  "imageAlt": "مدرس أونلاين يقدم حصة فردية مخصصة لطالب",
 
   "panelBadge": "دعم أكاديمي مخصص",
   "panelTitle": "دعم مستمر يتجاوز وقت الحصة",
@@ -645,7 +662,7 @@
   ]
 },
   "trustBadges": {
-    "moneyBack": "سياسة إلغاء واضحة",
+    "moneyBack": "ضمان استرداد",
     "fastReply": "رد سريع",
     "contactUs": "تواصل معنا"
   },
@@ -714,7 +731,7 @@
 "footer": {
     "ariaLabel": "تذييل الموقع",
     "logoAlt": "Success Path Mentors",
-    "logoLinkLabel": "العودة إلى الصفحة الرئيسية لSuccess Path Mentors",
+    "logoLinkLabel": "العودة إلى الصفحة الرئيسية لـ Success Path Mentors",
     "description": "دروس فردية أونلاين لطلاب المرحلة الابتدائية والمتوسطة والثانوية، مع دعم في المواد الأكاديمية الأساسية واللغات.",
     "brandNote": "يتم تنسيق الحصص واختيار المدرس والمواعيد والتواصل من خلال Success Path Mentors.",
     "quickLinks": "استكشف الموقع",
@@ -726,7 +743,7 @@
     "contactPageDescription": "أرسل استفسارًا مفصلًا",
     "languageSwitch": "عرض الموقع باللغة الإنجليزية",
     "socialTitle": "تابع Success Path Mentors",
-    "socialDescription": "تابع أخبار الأكاديمية والمحتوى التعليمي ومعلومات الدروس.",
+    "socialDescription": "تابع أخبار المنصة والمحتوى التعليمي ومعلومات الدروس.",
     "socialNotConfigured": "رابط منصة التواصل غير مضاف حتى الآن.",
     "rightsReserved": "جميع الحقوق محفوظة",
     "legalLabel": "السياسات القانونية",

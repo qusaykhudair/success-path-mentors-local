@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { Phone } from 'lucide-react';
 
 import {
   getLocale,
@@ -10,9 +9,6 @@ import {
   Link,
 } from '@/i18n/navigation';
 
-import {
-  buttonVariants,
-} from '@/components/ui/button';
 import {
   Container,
 } from '@/components/ui/container';
@@ -39,8 +35,11 @@ import {
 } from '@/content/subjects/physics/physics-strands';
 
 import {
-  LocaleSwitcher,
-} from './locale-switcher';
+  MoreMenu,
+} from './more-menu';
+import {
+  GlobalLanguageSelector,
+} from './global-language-selector';
 import {
   MobileNav,
 } from './mobile-nav';
@@ -49,6 +48,7 @@ import {
   type SubjectCategory,
 } from './subjects-menu';
 import { LocationsMenu } from './locations-menu';
+import { locationNavigation } from '@/content/locations/location-navigation';
 import { buildTrialLessonMessage, buildWhatsAppHref, WHATSAPP_DISPLAY_NUMBER } from '@/lib/whatsapp';
 
 const navigationCopy = {
@@ -78,6 +78,12 @@ const navigationCopy = {
       'Packages',
     primaryNavigation:
       'Primary navigation',
+    login:
+      'Log in',
+    createAccount:
+      'Sign up',
+    more:
+      'More',
   },
   ar: {
     subjects: 'المواد الدراسية',
@@ -105,6 +111,12 @@ const navigationCopy = {
       'الباقات',
     primaryNavigation:
       'التنقل الرئيسي',
+    login:
+      'تسجيل الدخول',
+    createAccount:
+      'إنشاء حساب',
+    more:
+      'المزيد',
   },
 } as const;
 
@@ -339,9 +351,9 @@ export async function SiteHeader() {
     'min-h-touch',
     'items-center',
     'rounded-button',
-    'px-2',
-    'text-[0.78rem]',
-    'font-bold',
+    'px-2.5',
+    'text-sm',
+    'font-semibold',
     'text-muted-foreground',
     'transition-[color,background-color]',
     'duration-200',
@@ -370,11 +382,11 @@ export async function SiteHeader() {
       <Container
         className="
           flex
-          min-h-16
+          min-h-[4.75rem]
           items-center
           justify-between
-          gap-2
-          xl:min-h-[4.5rem]
+          gap-4
+          xl:min-h-[5.25rem]
         "
       >
         <Link
@@ -396,12 +408,14 @@ export async function SiteHeader() {
           <Image
             src="/images/logo.png"
             alt="Success Path Mentors"
-            width={145}
-            height={47}
+            width={280}
+            height={90}
             priority
-            sizes="(max-width: 1024px) 122px, 145px"
+            sizes="(max-width: 1024px) 200px, 280px"
             className="
-              h-8
+              h-12
+              sm:h-14
+              xl:h-16
               w-auto
               object-contain
               transition-transform
@@ -410,7 +424,6 @@ export async function SiteHeader() {
               group-hover:scale-[1.03]
               motion-reduce:transition-none
               motion-reduce:group-hover:scale-100
-              xl:h-8
             "
           />
         </Link>
@@ -424,8 +437,8 @@ export async function SiteHeader() {
             items-center
             flex-1
             justify-center
-            gap-0
-            xl:flex
+            gap-1
+            lg:flex
           "
         >
           <SubjectsMenu
@@ -445,14 +458,8 @@ export async function SiteHeader() {
             }
           />
 
-          <LocationsMenu
-            triggerLabel={copy.locations}
-            overviewHref={routePath.locations(currentLocale)}
-            overviewLabel={currentLocale === 'ar' ? 'عرض جميع المواقع' : 'View all locations'}
-            locale={currentLocale}
-          />
-
-          {sectionLinks.map(
+          {/* Primary links: Programs, Services, Packages, How It Works */}
+          {sectionLinks.slice(0, 4).map(
             (link) => (
               <a
                 key={link.href}
@@ -461,7 +468,7 @@ export async function SiteHeader() {
                   navLinkClass
                 }
               >
-                {link.label}
+                <span className="whitespace-nowrap">{link.label}</span>
 
                 <span
                   aria-hidden="true"
@@ -482,45 +489,80 @@ export async function SiteHeader() {
               </a>
             )
           )}
+
+          {/* Secondary links: Locations, About, FAQ directly visible on 1536px+ */}
+          <div className="hidden items-center gap-1 2xl:flex">
+            <LocationsMenu
+              triggerLabel={copy.locations}
+              overviewHref={routePath.locations(currentLocale)}
+              overviewLabel={currentLocale === 'ar' ? 'عرض جميع المواقع' : 'View all locations'}
+              countries={locationNavigation}
+              locale={currentLocale}
+            />
+
+            {sectionLinks.slice(4).map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className={navLinkClass}
+              >
+                <span className="whitespace-nowrap">{link.label}</span>
+                <span
+                  aria-hidden="true"
+                  className="
+                    absolute
+                    inset-x-3
+                    bottom-1
+                    h-0.5
+                    origin-center
+                    scale-x-0
+                    rounded-full
+                    bg-accent
+                    transition-transform
+                    duration-200
+                    group-hover:scale-x-100
+                  "
+                />
+              </a>
+            ))}
+          </div>
+
+          {/* Secondary links collapsed into MoreMenu for 1280px-1535px */}
+          <div className="2xl:hidden">
+            <MoreMenu
+              label={copy.more}
+              items={[
+                { label: copy.locations, href: routePath.locations(currentLocale) },
+                { label: copy.about, href: routePath.about(currentLocale) },
+                { label: t('faq'), href: routePath.faq(currentLocale) },
+              ]}
+            />
+          </div>
         </nav>
 
         <div
           className="
             flex
             items-center
-            gap-2
-            sm:gap-3
+            gap-2.5
           "
         >
-          <div className="hidden xl:block">
-            <LocaleSwitcher />
-          </div>
-
-          <div className="xl:hidden">
-            <LocaleSwitcher variant="compact" />
+          <div className="shrink-0">
+            <GlobalLanguageSelector />
           </div>
 
           <a
-            href="tel:+16477875999"
-            aria-label={currentLocale === 'ar' ? 'اتصل بنا على الرقم +1 647 787 5999' : 'Call us at +1 647 787 5999'}
-            className="hidden items-center gap-1.5 rounded-full border border-border/70 bg-background px-2.5 py-2 text-[0.78rem] font-bold text-foreground shadow-xs transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 2xl:inline-flex"
+            href={routePath.login(currentLocale)}
+            className="hidden h-10 items-center justify-center rounded-full border border-primary-200 bg-background px-4 text-sm font-semibold text-primary shadow-2xs transition-colors hover:border-accent-300 hover:bg-accent-50/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap lg:inline-flex"
           >
-            <Phone aria-hidden="true" className="h-4 w-4 text-accent" />
-            <span dir="ltr" className="whitespace-nowrap">{WHATSAPP_DISPLAY_NUMBER}</span>
+            {copy.login}
           </a>
 
           <a
             href={whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
-            className={
-              buttonVariants({
-                variant: 'accent',
-                size: 'sm',
-                className:
-                  'hidden min-[1680px]:inline-flex',
-              })
-            }
+            className="hidden min-[1180px]:inline-flex h-10 items-center justify-center gap-2 rounded-full bg-accent px-5 text-sm font-semibold text-primary-950 shadow-sm hover:bg-accent-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap"
           >
             <svg
               viewBox="0 0 20 20"
@@ -586,6 +628,7 @@ export async function SiteHeader() {
             locationsLabel={copy.locations}
             locationsOverviewHref={routePath.locations(currentLocale)}
             locationsOverviewLabel={currentLocale === 'ar' ? 'عرض جميع أماكن خدمتنا' : 'View all locations'}
+            locationCountries={locationNavigation}
             locale={currentLocale}
             openMenuLabel={
               t('openMenu')
@@ -595,6 +638,8 @@ export async function SiteHeader() {
             }
             phoneLabel={currentLocale === 'ar' ? 'اتصل بنا' : 'Call us'}
             phoneNumber={WHATSAPP_DISPLAY_NUMBER}
+            loginLabel={copy.login}
+            loginHref={routePath.login(currentLocale)}
           />
         </div>
       </Container>

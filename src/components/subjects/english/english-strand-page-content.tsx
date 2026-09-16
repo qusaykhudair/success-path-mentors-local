@@ -221,7 +221,7 @@ export function EnglishStrandPageContent({
                   text-white
                 "
               >
-                {strand.title}
+                {strand.heroHeading || strand.title}
               </h1>
 
               <p
@@ -447,7 +447,7 @@ export function EnglishStrandPageContent({
                 font-black
                 uppercase
                 tracking-[0.12em]
-                text-[#0f766e]
+                text-[#108686]
               "
             >
               {labels.coverage}
@@ -469,7 +469,7 @@ export function EnglishStrandPageContent({
                 mt-3
                 text-small
                 font-bold
-                text-[#0f766e]
+                text-[#108686]
               "
             >
               {labels.expandHint}
@@ -522,7 +522,7 @@ export function EnglishStrandPageContent({
                         font-black
                         uppercase
                         tracking-[0.1em]
-                        text-[#0f766e]
+                        text-[#108686]
                       "
                     >
                       {labels.mainTopicLabel}
@@ -623,7 +623,7 @@ function TopicAccordion({
               justify-center
               rounded-xl
               bg-[#ECFEFD]
-              text-[#0f766e]
+              text-[#108686]
             "
           >
             <ClipboardList
@@ -644,7 +644,7 @@ function TopicAccordion({
             h-5
             w-5
             shrink-0
-            text-[#0f766e]
+            text-[#108686]
             transition-transform
             group-open:rotate-180
             motion-reduce:transition-none

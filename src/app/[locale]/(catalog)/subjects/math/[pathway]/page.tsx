@@ -33,11 +33,7 @@ import {
 } from '@/lib/seo/metadata';
 import {
   buildBreadcrumbSchema,
-  buildFaqSchema,
 } from '@/lib/seo/schemas';
-import {
-  ontarioMathCourses,
-} from '@/content/subjects/math/ontario-math-course-data';
 import type {
   BreadcrumbItem,
 } from '@/types/internal-page';
@@ -85,28 +81,15 @@ export async function generateMetadata({
     return {};
   }
 
-  let title =
+  const title =
     locale === 'ar'
       ? `${pathway.title} حسب الصف | Success Path Mentors`
       : `${pathway.title} by Grade | Success Path Mentors`;
 
-  let description =
+  const description =
     locale === 'ar'
       ? `استعرض موضوعات ${pathway.title} المنظمة في خريطة كاملة للصفوف من 2 إلى 12 وفق ملف المنهج الموثق.`
       : `Explore ${pathway.title} curriculum topics in a complete Grade 2–12 map based on the documented curriculum source.`;
-
-  if (locale === 'en') {
-    if (pathwaySlug === 'functions') {
-      title = 'Functions & MCR3U Tutor | Grade 11 Functions Tutoring | Success Path Mentors';
-      description = 'One-to-one Functions and Ontario Grade 11 Functions (MCR3U) tutoring. Master quadratic relations, rational expressions, exponential functions, and trigonometry.';
-    } else if (pathwaySlug === 'advanced-precalculus') {
-      title = 'Advanced Functions & MHF4U Tutor | Pre-Calculus Online Tutoring | Success Path Mentors';
-      description = 'Master Advanced Functions, Pre-Calculus, and Ontario Grade 12 Advanced Functions (MHF4U). Targeted one-to-one tutoring for polynomial, rational, and trig functions.';
-    } else if (pathwaySlug === 'statistics-probability') {
-      title = 'Statistics, Probability & MDM4U Tutor | Data Management Tutoring | Success Path Mentors';
-      description = 'One-to-one tutoring in statistics, probability, and Ontario Grade 12 Data Management (MDM4U). Master counting principles, distributions, and data analysis.';
-    }
-  }
 
   return buildPageMetadata({
     locale,
@@ -238,9 +221,6 @@ export default async function MathPathwayPage({
     },
   };
 
-  const ontarioCourse =
-    ontarioMathCourses[pathway.slug]?.[locale];
-
   return (
     <>
       <JsonLd
@@ -272,17 +252,6 @@ export default async function MathPathwayPage({
         }
         data={pageSchema}
       />
-
-      {ontarioCourse?.faqs?.length ? (
-        <JsonLd
-          id={
-            `math-${pathway.slug}-faq-schema`
-          }
-          data={buildFaqSchema(
-            ontarioCourse.faqs
-          )}
-        />
-      ) : null}
 
       <MathPathwayPageContent
         locale={locale}
