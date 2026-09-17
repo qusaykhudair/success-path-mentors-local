@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { User, Users, Compass, ArrowRight, ArrowLeft, CheckCircle2, Sparkles } from 'lucide-react';
+import Image from 'next/image';
 import { Container } from '@/components/ui/container';
 import { ScrollReveal } from './scroll-reveal';
 import { parseNavigationContext } from '@/lib/market-navigation';
@@ -50,6 +51,7 @@ export function ChooseHowYouLearn() {
         ],
         cta: locale === 'de' ? 'Einzelunterricht entdecken' : locale === 'ar' ? 'استكشف الدروس الفردية' : 'Explore One-to-One',
         highlight: false,
+        image: '/images/img-2.webp',
       },
       {
         id: 'small-groups',
@@ -71,6 +73,7 @@ export function ChooseHowYouLearn() {
         ],
         cta: locale === 'de' ? 'Kleingruppen entdecken' : locale === 'ar' ? 'استكشف المجموعات المصغرة' : 'Explore Small Groups',
         highlight: true,
+        image: '/images/img-1.webp',
       },
       {
         id: 'language-levels',
@@ -93,6 +96,7 @@ export function ChooseHowYouLearn() {
         ],
         cta: locale === 'de' ? 'Mein Sprachniveau finden' : locale === 'ar' ? 'حدد مستواك اللغوي' : 'Find My Level',
         highlight: false,
+        image: '/images/img-3.webp',
       },
     ],
   };
@@ -121,22 +125,33 @@ export function ChooseHowYouLearn() {
             return (
               <ScrollReveal key={card.id} delay={idx * 0.1} yOffset={20}>
                 <div
-                  className={`group relative flex h-full flex-col justify-between rounded-3xl border bg-white p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl ${
+                  className={`group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border bg-white transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl ${
                     card.highlight
                       ? 'border-accent-400 ring-2 ring-accent-500/20 shadow-md'
                       : 'border-primary-100 shadow-sm hover:border-accent-300'
                   }`}
                 >
                   {card.highlight && (
-                    <span className="absolute -top-3.5 start-8 rounded-full bg-accent-600 px-3.5 py-1 text-xs font-bold text-white shadow-xs">
+                    <span className="absolute top-4 start-4 z-10 rounded-full bg-accent-600 px-3.5 py-1 text-xs font-bold text-white shadow-xs">
                       {locale === 'de' ? 'Beliebte Wahl' : locale === 'ar' ? 'الخيار الأكثر طلباً' : 'Popular Value Choice'}
                     </span>
                   )}
 
-                  <div>
+                  <div className="relative h-56 w-full overflow-hidden bg-[#15B8B6] sm:h-64">
+                    <div className="absolute inset-0 bg-[#15B8B6]" />
+                    <Image
+                      src={card.image}
+                      alt={card.title}
+                      fill
+                      className="object-contain object-bottom transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
+                    />
+                  </div>
+
+                  <div className="flex flex-1 flex-col p-8">
                     <div className="mb-6 flex items-center justify-between">
-                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent-50 text-accent-600 transition-colors group-hover:bg-accent-600 group-hover:text-white">
-                        <Icon className="h-7 w-7" />
+                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent-50 text-accent-600 transition-colors group-hover:bg-accent-600 group-hover:text-white">
+                        <Icon className="h-6 w-6" />
                       </div>
                       <span className="rounded-full bg-primary-50 px-3 py-1 text-xs font-bold text-primary-700">
                         {card.badge}
@@ -159,16 +174,16 @@ export function ChooseHowYouLearn() {
                         </div>
                       ))}
                     </div>
-                  </div>
 
-                  <div className="mt-6 pt-4 border-t border-primary-100/70">
-                    <Link
-                      href={card.href}
-                      className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-primary-950 px-5 py-3 text-sm font-bold text-white shadow-2xs transition-all hover:bg-accent-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                    >
-                      <span>{card.cta}</span>
-                      <ArrowIcon className="h-4 w-4 transition-transform duration-150 group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
-                    </Link>
+                    <div className="mt-auto pt-4 border-t border-primary-100/70">
+                      <Link
+                        href={card.href}
+                        className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-primary-950 px-5 py-3 text-sm font-bold text-white shadow-2xs transition-all hover:bg-accent-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                      >
+                        <span>{card.cta}</span>
+                        <ArrowIcon className="h-4 w-4 transition-transform duration-150 group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </ScrollReveal>
