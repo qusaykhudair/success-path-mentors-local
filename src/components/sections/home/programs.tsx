@@ -149,7 +149,7 @@ export async function Programs() {
           >
             <div className="relative aspect-[4/5]">
               <Image
-                src="/images/programs-showcase.webp?v=2"
+                src="/images/programs-showcase.webp"
                 alt={t('imageAlt')}
                 fill
                 sizes="
