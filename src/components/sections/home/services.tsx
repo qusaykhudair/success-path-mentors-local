@@ -143,7 +143,7 @@ export async function Services() {
             "
           >
             <Image
-              src="/images/services-showcase.webp"
+              src="/images/services-showcase.webp?v=2"
               alt={t('imageAlt')}
               fill
               sizes="
