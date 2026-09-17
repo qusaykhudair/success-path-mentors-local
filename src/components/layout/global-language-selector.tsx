@@ -55,20 +55,22 @@ function EnglishFlag({ className = 'h-5 w-5' }: { className?: string }) {
   );
 }
 
-function ArabicFlag({ className = 'h-5 w-5' }: { className?: string }) {
+function ArabicLanguageIcon({ className = 'h-5 w-5' }: { className?: string }) {
   return (
     <svg viewBox="0 0 100 100" className={cn("rounded-full overflow-hidden shrink-0 shadow-2xs", className)} aria-hidden="true">
-      <defs>
-        <clipPath id="glsClipAR">
-          <circle cx="50" cy="50" r="50" />
-        </clipPath>
-      </defs>
-      <g clipPath="url(#glsClipAR)">
-        <rect width="100" height="33.34" fill="#1C1C1C" />
-        <rect y="33.34" width="100" height="33.34" fill="#FFFFFF" />
-        <rect y="66.68" width="100" height="33.34" fill="#007A3D" />
-        <polygon points="0,0 48,50 0,100" fill="#CE1126" />
-      </g>
+      <circle cx="50" cy="50" r="50" fill="#0B1F3A" />
+      <text
+        x="50"
+        y="50"
+        textAnchor="middle"
+        dominantBaseline="central"
+        fill="#FFFFFF"
+        fontSize="52"
+        fontFamily="inherit"
+        fontWeight="700"
+      >
+        ع
+      </text>
       <circle cx="50" cy="50" r="49" fill="none" stroke="rgba(0,0,0,0.15)" strokeWidth="2" />
     </svg>
   );
@@ -77,7 +79,7 @@ function ArabicFlag({ className = 'h-5 w-5' }: { className?: string }) {
 const LANGUAGE_FLAGS: Record<string, React.ComponentType<{ className?: string }>> = {
   de: GermanFlag,
   en: EnglishFlag,
-  ar: ArabicFlag,
+  ar: ArabicLanguageIcon,
 };
 
 interface GlobalLanguageSelectorProps {
