@@ -4,6 +4,7 @@ import * as React from 'react';
 import { Globe, ChevronDown, Check } from 'lucide-react';
 import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
+import { usePathname as useNextPathname } from 'next/navigation';
 import { type Locale } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
 import {
@@ -90,11 +91,16 @@ export function GlobalLanguageSelector({
   isGermanyContext = false,
   isTransparent = false,
 }: GlobalLanguageSelectorProps) {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const dropdownRef = React.useRef<HTMLDivElement>(null);
-  const locale = useLocale() as Locale | 'de';
   const router = useRouter();
   const pathname = usePathname();
+  const rawPathname = useNextPathname() || '';
+  const nextIntlLocale = useLocale() as Locale | 'de';
+
+  const navContext = isGermanyContext ? parseNavigationContext(rawPathname) : null;
+  const activeLocale = isGermanyContext && navContext ? (navContext.locale as Locale | 'de') : nextIntlLocale;
+
+  const [isOpen, setIsOpen] = React.useState(false);
+  const dropdownRef = React.useRef<HTMLDivElement>(null);
 
   // Close dropdown on click outside or escape key
   React.useEffect(() => {
@@ -123,28 +129,22 @@ export function GlobalLanguageSelector({
   ];
 
   const fallbackLang = { code: 'en', label: 'English' } as const;
-  const currentLang = languages.find(lang => lang.code === locale) ?? fallbackLang;
+  const currentLang = languages.find(lang => lang.code === activeLocale) ?? fallbackLang;
   const CurrentFlag = LANGUAGE_FLAGS[currentLang.code] || Globe;
 
   const handleSelect = (code: string) => {
-    setIsOpen(false);
-    if (code === locale) return;
-
     if (isGermanyContext) {
-      // We are in Germany. Use the navigation context to switch language within Germany.
-      const context = parseNavigationContext(window.location.pathname);
-      const path = getLanguageSwitchPath(context, code as 'de' | 'en' | 'ar');
-      window.location.href = path;
+      // Handled natively by <a> tags in Germany
+      return;
+    }
+    setIsOpen(false);
+    if (code === activeLocale) return;
+
+    if (code === 'de') {
+      const path = getMarketSwitchPath('germany', { includeDisabled: true });
+      window.location.assign(path);
     } else {
-      // We are in Global (North America).
-      if (code === 'de') {
-        // Switch to Germany market
-        const path = getMarketSwitchPath('germany', { includeDisabled: true });
-        window.location.href = path;
-      } else {
-        // Switch global language (en/ar)
-        router.replace(pathname as never, { locale: code as Locale });
-      }
+      router.replace(pathname as never, { locale: code as Locale });
     }
   };
 
@@ -181,8 +181,34 @@ export function GlobalLanguageSelector({
         <div className="absolute end-0 z-50 mt-2 w-48 origin-top-right rounded-xl border border-primary-100 bg-white p-1 shadow-lg ring-1 ring-black/5 focus:outline-none animate-in fade-in-0 zoom-in-95">
           <div className="flex flex-col gap-1" role="menu" aria-orientation="vertical">
             {languages.map((lang) => {
-              const isActive = lang.code === locale;
+              const isActive = lang.code === activeLocale;
               const Flag = LANGUAGE_FLAGS[lang.code] || Globe;
+              
+              if (isGermanyContext) {
+                // Render as a native link for Germany to ensure robust navigation
+                const href = getLanguageSwitchPath(navContext!, lang.code as 'de' | 'en' | 'ar');
+                return (
+                  <a
+                    key={lang.code}
+                    role="menuitem"
+                    href={href}
+                    className={cn(
+                      "flex min-h-[44px] w-full items-center justify-between rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+                      isActive 
+                        ? "bg-primary-50 text-primary-900 font-semibold" 
+                        : "text-primary-600 hover:bg-primary-50 hover:text-primary-900"
+                    )}
+                    dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
+                  >
+                    <div className="flex items-center gap-2.5">
+                      <Flag className="h-5 w-5 shrink-0 rounded-full" />
+                      <span className={cn(lang.code === 'ar' && "font-arabic")}>{lang.label}</span>
+                    </div>
+                    {isActive && <Check className="h-4 w-4 shrink-0 text-accent-600" />}
+                  </a>
+                );
+              }
+              
               return (
                 <button
                   key={lang.code}

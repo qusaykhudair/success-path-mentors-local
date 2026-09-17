@@ -81,6 +81,48 @@ export async function generateMetadata({ params }: {
         },
       };
     }
+    // Auth and utility pages metadata
+    if (childPath === 'login') {
+      const titles = { de: 'Anmelden', en: 'Login', ar: 'تسجيل الدخول' };
+      return { title: `${titles[locale]} | Success Path Mentors Germany`, robots: { index: false, follow: true } };
+    }
+    if (childPath === 'register') {
+      const titles = { de: 'Registrieren', en: 'Register', ar: 'التسجيل' };
+      return { title: `${titles[locale]} | Success Path Mentors Germany`, robots: { index: false, follow: true } };
+    }
+    if (childPath === 'trial' || childPath === 'free-trial') {
+      const titles = { de: 'Kostenlose Probestunde', en: 'Free Trial', ar: 'درس تجريبي مجاني' };
+      return { title: `${titles[locale]} | Success Path Mentors Germany`, robots: { index: false, follow: true } };
+    }
+  }
+
+  if (route.kind === 'locale') {
+    const locale = route.language as 'de' | 'en' | 'ar';
+    const titles = {
+      de: 'Online-Nachhilfe in Deutschland | Success Path Mentors',
+      en: 'Online Tutoring in Germany | Success Path Mentors',
+      ar: 'دروس خصوصية أونلاين في ألمانيا | Success Path Mentors'
+    };
+    const descriptions = {
+      de: 'Maßgeschneiderte Online-Nachhilfe in Deutschland für alle Klassenstufen.',
+      en: 'Personalized online tutoring in Germany for all grade levels.',
+      ar: 'دروس خصوصية أونلاين مخصصة في ألمانيا لجميع المراحل الدراسية.'
+    };
+    
+    return {
+      title: titles[locale],
+      description: descriptions[locale],
+      alternates: {
+        canonical: `https://successpathmentors.net/de/${locale}`,
+        languages: {
+          'de-DE': 'https://successpathmentors.net/de/de',
+          'en-DE': 'https://successpathmentors.net/de/en',
+          'ar-DE': 'https://successpathmentors.net/de/ar',
+          'x-default': 'https://successpathmentors.net/de/de'
+        }
+      },
+      robots: { index: true, follow: true }
+    };
   }
 
   return {};

@@ -32,27 +32,32 @@ export default async function MarketSegmentsLayout({
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
 
   return (
-    <div
+    <html
       dir={dir}
       lang={locale}
-      className={cn(
-        'min-h-screen bg-background font-sans antialiased selection:bg-accent-200 selection:text-accent-900',
-        locale === 'ar' && 'font-arabic'
-      )}
+      suppressHydrationWarning
     >
-      <NextIntlClientProvider locale={locale} messages={messages}>
-        <div className="flex min-h-screen flex-col relative">
-          <MarketHeader />
-          <FloatingWhatsAppButton
-            locale={locale as 'de' | 'en' | 'ar'}
-            phoneNumber="4915123974353"
-          />
-          <BackToTopButton locale={locale as 'de' | 'en' | 'ar'} />
-          <N8nChat key={locale} locale={locale as 'de' | 'en' | 'ar'} />
-          <main className="flex-1">{children}</main>
-          <MarketFooter />
-        </div>
-      </NextIntlClientProvider>
-    </div>
+      <body
+        suppressHydrationWarning
+        className={cn(
+          'min-h-screen bg-background font-sans antialiased selection:bg-accent-200 selection:text-accent-900',
+          locale === 'ar' && 'font-arabic'
+        )}
+      >
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <div className="flex min-h-screen flex-col relative">
+            <MarketHeader />
+            <FloatingWhatsAppButton
+              locale={locale as 'de' | 'en' | 'ar'}
+              phoneNumber="4915123974353"
+            />
+            <BackToTopButton locale={locale as 'de' | 'en' | 'ar'} />
+            <N8nChat key={locale} locale={locale as 'de' | 'en' | 'ar'} />
+            <main className="flex-1">{children}</main>
+            <MarketFooter />
+          </div>
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }
