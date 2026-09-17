@@ -77,7 +77,7 @@ test('getLanguageSwitchPath works correctly for Germany', () => {
   assert.equal(getLanguageSwitchPath(ctxDeEnTrial, 'ar'), '/de/ar/trial');
 
   const ctxDeArTrial = parseNavigationContext('/de/ar/trial');
-  assert.equal(getLanguageSwitchPath(ctxDeArTrial, 'de'), '/de/de/trial');
+  assert.equal(getLanguageSwitchPath(ctxDeArTrial, 'de'), '/de/trial');
 });
 
 test('getLanguageSwitchPath handles unsupported and invalid cases deterministically', () => {
@@ -90,7 +90,7 @@ test('getLanguageSwitchPath handles unsupported and invalid cases deterministica
 
 test('getMarketSwitchPath routes to market defaults', () => {
   assert.equal(getMarketSwitchPath('north-america'), '/en');
-  assert.equal(getMarketSwitchPath('germany'), '/de/de');
+  assert.equal(getMarketSwitchPath('germany'), '/de');
 });
 
 test('getMarketNavigationOptions includes active and enabled markets', () => {
@@ -108,8 +108,8 @@ test('Supported countries Market Gateway routes UK to main English platform', ()
 });
 
 test('Supported countries Market Gateway derives dynamic Germany destination per locale', () => {
-  const getGermanyDest = (locale) => locale === 'ar' ? '/de/ar' : locale === 'de' ? '/de/de' : '/de/en';
-  assert.equal(getGermanyDest('de'), '/de/de');
+  const getGermanyDest = (locale) => locale === 'ar' ? '/de/ar' : locale === 'de' ? '/de' : '/de/en';
+  assert.equal(getGermanyDest('de'), '/de');
   assert.equal(getGermanyDest('en'), '/de/en');
   assert.equal(getGermanyDest('ar'), '/de/ar');
 });

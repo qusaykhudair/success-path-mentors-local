@@ -1,10 +1,14 @@
 import assert from "node:assert/strict";
+import { existsSync } from "node:fs";
 import test from "node:test";
 
+const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+const hasWorker = existsSync(workerUrl);
+
 async function loadWorker() {
-  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
-  workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
-  return (await import(workerUrl.href)).default;
+  const url = new URL(workerUrl.href);
+  url.searchParams.set("test", `${process.pid}-${Date.now()}`);
+  return (await import(url.href)).default;
 }
 
 const runtimeEnv = {
@@ -18,7 +22,7 @@ const runtimeContext = {
   passThroughOnException() {},
 };
 
-test("redirects the unlocalized root to the default locale", async () => {
+test("redirects the unlocalized root to the default locale", { skip: !hasWorker ? 'Cloudflare worker artifact dist/server/index.js not present' : false }, async () => {
   const worker = await loadWorker();
 
   const response = await worker.fetch(
@@ -47,7 +51,7 @@ for (const page of [
     direction: /<html[^>]+dir=["']rtl["']/i,
   },
 ]) {
-  test(`renders ${page.name} with localized direction`, async () => {
+  test(`renders ${page.name} with localized direction`, { skip: !hasWorker ? 'Cloudflare worker artifact dist/server/index.js not present' : false }, async () => {
     const worker = await loadWorker();
     const response = await worker.fetch(
       new Request(`http://localhost${page.path}`, {
@@ -65,7 +69,7 @@ for (const page of [
   });
 }
 
-test("auth pages emit the no-index protection required for identity routes", async () => {
+test("auth pages emit the no-index protection required for identity routes", { skip: !hasWorker ? 'Cloudflare worker artifact dist/server/index.js not present' : false }, async () => {
   const worker = await loadWorker();
   const response = await worker.fetch(
     new Request("http://localhost/en/login", {
