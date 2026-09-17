@@ -274,9 +274,9 @@ export default function sitemap():
       priority: 1,
       alternates: {
         languages: {
-          de: `${SITE_URL}/de`,
-          en: `${SITE_URL}/de/en`,
-          ar: `${SITE_URL}/de/ar`,
+          'de-DE': `${SITE_URL}/de`,
+          'en-DE': `${SITE_URL}/de/en`,
+          'ar-DE': `${SITE_URL}/de/ar`,
           'x-default': `${SITE_URL}/de`,
         },
       },
@@ -287,9 +287,9 @@ export default function sitemap():
       priority: 1,
       alternates: {
         languages: {
-          de: `${SITE_URL}/de`,
-          en: `${SITE_URL}/de/en`,
-          ar: `${SITE_URL}/de/ar`,
+          'de-DE': `${SITE_URL}/de`,
+          'en-DE': `${SITE_URL}/de/en`,
+          'ar-DE': `${SITE_URL}/de/ar`,
           'x-default': `${SITE_URL}/de`,
         },
       },
@@ -300,9 +300,9 @@ export default function sitemap():
       priority: 1,
       alternates: {
         languages: {
-          de: `${SITE_URL}/de`,
-          en: `${SITE_URL}/de/en`,
-          ar: `${SITE_URL}/de/ar`,
+          'de-DE': `${SITE_URL}/de`,
+          'en-DE': `${SITE_URL}/de/en`,
+          'ar-DE': `${SITE_URL}/de/ar`,
           'x-default': `${SITE_URL}/de`,
         },
       },
