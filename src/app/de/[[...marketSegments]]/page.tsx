@@ -83,6 +83,78 @@ export async function generateMetadata({ params }: {
     }
   }
 
+  // Locale homepage metadata (/de, /de/en, /de/ar)
+  if (route.kind === 'locale') {
+    const locale = route.language as 'de' | 'en' | 'ar';
+    const canonicalPath = getMarketLocalePath('germany', locale);
+    // Explicitly enforce /de/de as canonical for German homepage as requested
+    const canonicalUrl = locale === 'de' ? 'https://successpathmentors.net/de/de' : `https://successpathmentors.net${canonicalPath}`;
+
+    const titleMap = {
+      de: 'Online-Nachhilfe in Deutschland | Success Path Mentors',
+      en: 'Online Tutoring in Germany | Success Path Mentors',
+      ar: 'دروس خصوصية أونلاين في ألمانيا | Success Path Mentors'
+    };
+    const descriptionMap = {
+      de: 'Individuelle Online-Nachhilfe für Schüler in Deutschland. Qualifizierte Lehrkräfte für alle Fächer.',
+      en: 'Personalized online tutoring for students in Germany. Qualified teachers for all subjects.',
+      ar: 'دروس خصوصية أونلاين فردية للطلاب في ألمانيا. معلمون مؤهلون في جميع المواد.'
+    };
+    
+    return {
+      title: titleMap[locale],
+      description: descriptionMap[locale],
+      alternates: {
+        canonical: canonicalUrl,
+        languages: {
+          'de-DE': 'https://successpathmentors.net/de/de',
+          'en-DE': 'https://successpathmentors.net/de/en',
+          'ar-DE': 'https://successpathmentors.net/de/ar',
+          'x-default': 'https://successpathmentors.net/de/de',
+        }
+      },
+      openGraph: {
+        title: titleMap[locale],
+        description: descriptionMap[locale],
+        url: canonicalUrl,
+        siteName: 'Success Path Mentors Europe',
+        locale: locale === 'de' ? 'de_DE' : locale === 'ar' ? 'ar_AE' : 'en_DE',
+        type: 'website',
+      },
+      robots: { index: true, follow: true }
+    };
+  }
+
+  // Utility Pages (login, register, trial)
+  if (route.kind === 'child' && route.childSegments && route.childSegments.length > 0) {
+    const childPath = route.childSegments[0];
+    const locale = route.language as 'de' | 'en' | 'ar';
+
+    if (childPath === 'login') {
+      const titles = { de: 'Anmelden', en: 'Login', ar: 'تسجيل الدخول' };
+      return { 
+        title: `${titles[locale]} | Success Path Mentors Germany`, 
+        robots: { index: false, follow: true } 
+      };
+    }
+    
+    if (childPath === 'register') {
+      const titles = { de: 'Konto erstellen', en: 'Register', ar: 'إنشاء حساب' };
+      return { 
+        title: `${titles[locale]} | Success Path Mentors Germany`, 
+        robots: { index: false, follow: true } 
+      };
+    }
+    
+    if (childPath === 'trial' || childPath === 'free-trial') {
+      const titles = { de: 'Kostenlose Probestunde', en: 'Free Trial', ar: 'جلسة تجريبية مجانية' };
+      return { 
+        title: `${titles[locale]} | Success Path Mentors Germany`, 
+        robots: { index: false, follow: true } 
+      };
+    }
+  }
+
   return {};
 }
 

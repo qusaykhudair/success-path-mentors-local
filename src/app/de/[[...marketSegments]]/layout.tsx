@@ -32,15 +32,12 @@ export default async function MarketSegmentsLayout({
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
 
   return (
-    <div
-      dir={dir}
-      lang={locale}
-      className={cn(
+    <html lang={locale} dir={dir} suppressHydrationWarning>
+      <body suppressHydrationWarning className={cn(
         'min-h-screen bg-background font-sans antialiased selection:bg-accent-200 selection:text-accent-900',
         locale === 'ar' && 'font-arabic'
-      )}
-    >
-      <NextIntlClientProvider locale={locale} messages={messages}>
+      )}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
         <div className="flex min-h-screen flex-col relative">
           <MarketHeader />
           <FloatingWhatsAppButton
@@ -52,7 +49,8 @@ export default async function MarketSegmentsLayout({
           <main className="flex-1">{children}</main>
           <MarketFooter />
         </div>
-      </NextIntlClientProvider>
-    </div>
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }

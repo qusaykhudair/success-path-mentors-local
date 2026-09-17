@@ -55,7 +55,7 @@ test('Germany is configured but inactive, with a separate Europe contact channel
   assert.equal(market.name, 'Germany');
   assert.equal(market.publicSlug, 'de');
   assert.equal(getMarketByCode('DE'), market);
-  assert.equal(market.enabled, false);
+  assert.equal(market.enabled, true);
   assert.equal(market.countryCode, 'DE');
   assert.equal(market.defaultTimezone, 'Europe/Berlin');
   assert.deepEqual(market.supportedTimezones, ['Europe/Berlin']);
@@ -121,8 +121,8 @@ test('existing EN/AR and French route contracts remain unchanged', () => {
   assert.equal(programmeFrancaisRoutes.home, '/fr/programme-francais');
 });
 
-test('Germany remains disabled without global German translations', () => {
-  assert.equal(getMarketConfig('germany').enabled, false);
+test('Germany has no global German translations', () => {
+  assert.equal(getMarketConfig('germany').enabled, true);
   assert.equal(existsSync(resolve(root, 'messages/de.json')), false);
 });
 

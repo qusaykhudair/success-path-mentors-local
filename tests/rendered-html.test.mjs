@@ -46,6 +46,18 @@ for (const page of [
     content: /أنشئ حساب الأسرة/i,
     direction: /<html[^>]+dir=["']rtl["']/i,
   },
+  {
+    name: "Germany homepage (DE)",
+    path: "/de/de",
+    content: /Online-Nachhilfe/i,
+    direction: /<html[^>]+lang=["']de["'][^>]*dir=["']ltr["']/i,
+  },
+  {
+    name: "Germany homepage (AR)",
+    path: "/de/ar",
+    content: /Success Path Mentors/i,
+    direction: /<html[^>]+lang=["']ar["'][^>]*dir=["']rtl["']/i,
+  },
 ]) {
   test(`renders ${page.name} with localized direction`, async () => {
     const worker = await loadWorker();

@@ -25,9 +25,13 @@ const CONTENT_SECURITY_POLICY = [
 ].join('; ');
 
 function applySecurityHeaders(response: NextResponse, isLocal = false): NextResponse {
-  const csp = isLocal
+  let csp = isLocal
     ? CONTENT_SECURITY_POLICY.replace(/;\s*upgrade-insecure-requests/, '')
     : CONTENT_SECURITY_POLICY;
+  
+  if (process.env.NODE_ENV === 'development') {
+    csp = csp.replace("script-src 'self' 'unsafe-inline'", "script-src 'self' 'unsafe-inline' 'unsafe-eval'");
+  }
   response.headers.set('Content-Security-Policy', csp);
   if (!isLocal) {
     response.headers.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
@@ -74,13 +78,13 @@ const HOLD_ROUTES = [
 ];
 
 export default function middleware(request: NextRequest) {
-  const host = request.headers.get('host') || '';
+  const host = request.headers?.get('host') || '';
   const isLocal = /^(localhost|127\.0\.0\.1|\[::1\])(:\d+)?$/i.test(host);
 
   const normalizedUrl = getNormalizedRequestUrl(
     request.url,
-    request.headers.get('host'),
-    request.headers.get('x-forwarded-proto')
+    request.headers?.get('host'),
+    request.headers?.get('x-forwarded-proto')
   );
   if (normalizedUrl) {
     return applySecurityHeaders(NextResponse.redirect(normalizedUrl, 301), isLocal);
@@ -131,5 +135,5 @@ export default function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/:path*'],
+  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
 };

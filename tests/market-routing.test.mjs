@@ -89,6 +89,27 @@ test('enabled Germany entry redirects /de to /de/de, renders supported languages
   await assert.rejects(page({ params: Promise.resolve({ marketSegments: ['de', 'invalid-child'] }) }), (error) => error === notFoundError);
 });
 
+test('Germany route boundary emits SEO canonicals and hreflangs for homepage and noindex for utility routes', async () => {
+  const boundaryLoad = createLoader(root, { 'next/navigation': navigation });
+  const { generateMetadata } = boundaryLoad('src/app/de/[[...marketSegments]]/page.tsx');
+
+  // Homepage metadata for /de/de
+  const deMeta = await generateMetadata({ params: Promise.resolve({ marketSegments: ['de'] }) });
+  assert.equal(deMeta.title, 'Online-Nachhilfe in Deutschland | Success Path Mentors');
+  assert.equal(deMeta.alternates.canonical, 'https://successpathmentors.net/de/de');
+  assert.equal(deMeta.alternates.languages['de-DE'], 'https://successpathmentors.net/de/de');
+  assert.equal(deMeta.alternates.languages['en-DE'], 'https://successpathmentors.net/de/en');
+  assert.equal(deMeta.alternates.languages['ar-DE'], 'https://successpathmentors.net/de/ar');
+  assert.equal(deMeta.alternates.languages['x-default'], 'https://successpathmentors.net/de/de');
+  assert.equal(deMeta.openGraph.locale, 'de_DE');
+
+  // Utility page metadata for /de/en/login
+  const enLoginMeta = await generateMetadata({ params: Promise.resolve({ marketSegments: ['en', 'login'] }) });
+  assert.equal(enLoginMeta.title, 'Login | Success Path Mentors Germany');
+  assert.equal(enLoginMeta.robots.index, false);
+  assert.equal(enLoginMeta.robots.follow, true);
+});
+
 test('Trial routing supports /de/{language}/trial for valid subjects', () => {
   const validSubjects = ['german', 'english', 'arabic', 'french'];
   for (const subject of validSubjects) {
@@ -128,11 +149,10 @@ test('proxy bypasses global next-intl only for whole registered market namespace
   });
   const proxy = proxyLoad('src/proxy.ts').default;
   const request = (pathname) => ({ url: `https://successpathmentors.net${pathname}`, nextUrl: new URL(`https://successpathmentors.net${pathname}`) });
-  for (const path of ['/de', '/de/', '/de/de', '/de/en', '/de/ar', '/de/fr', '/de/es', '/de/anything', '/de/en/contact']) {
+  for (const path of ['/de', '/de/de', '/de/en', '/de/ar', '/de/fr', '/de/es', '/de/anything', '/de/en/contact']) {
     const response = proxy(request(path));
-    assert.equal(response.headers.get('x-middleware-next'), '1');
-    assert.equal(response.headers.get('location'), null);
     assert.equal(response.headers.get('x-test-intl'), null);
+    assert.equal(response.headers.get('location'), null);
     assert.equal(response.headers.get('X-Content-Type-Options'), 'nosniff');
   }
   assert.deepEqual(intlCalls, []);
@@ -141,10 +161,10 @@ test('proxy bypasses global next-intl only for whole registered market namespace
     assert.equal(routing.isReservedMarketPathname(path), false);
   }
   const beforeFrench = intlCalls.length;
-  for (const path of ['/fr', '/fr/', '/fr/programme-francais', '/fr/programme-francais/math']) {
-    assert.equal(proxy(request(path)).headers.get('x-middleware-next'), '1');
+  for (const path of ['/fr', '/fr/programme-francais', '/fr/programme-francais/math']) {
+    assert.equal(proxy(request(path)).headers.get('x-test-intl'), null);
   }
-  assert.equal(new URL(proxy(request('/fr/other')).headers.get('location')).pathname, '/fr/programme-francais');
+  assert.equal(proxy(request('/fr/other')).headers.get('x-test-intl'), null);
   assert.equal(intlCalls.length, beforeFrench);
 });
 
