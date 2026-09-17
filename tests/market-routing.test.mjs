@@ -21,9 +21,9 @@ test('Germany market slug, languages, default entry and RTL are distinct concept
   assert.equal(germany.defaultLanguage, 'de');
   assert.deepEqual(germany.supportedLanguages, ['de', 'ar', 'en']);
   assert.equal(routing.getMarketRootPath('germany'), '/de');
-  assert.equal(routing.getMarketLocalePath('germany'), '/de/de');
+  assert.equal(routing.getMarketLocalePath('germany'), '/de');
   for (const [language, path, direction] of [
-    ['de', '/de/de', 'ltr'], ['en', '/de/en', 'ltr'], ['ar', '/de/ar', 'rtl'],
+    ['de', '/de', 'ltr'], ['en', '/de/en', 'ltr'], ['ar', '/de/ar', 'rtl'],
   ]) {
     assert.equal(routing.getMarketLocalePath('germany', language), path);
     const route = routing.resolveMarketRoute('germany', [language]);
@@ -32,14 +32,19 @@ test('Germany market slug, languages, default entry and RTL are distinct concept
     assert.equal(route.direction, direction);
     assert.equal(route.kind, 'locale');
   }
-  assert.equal(routing.resolveMarketRoute('germany').kind, 'entry');
+  assert.equal(routing.resolveMarketRoute('germany').kind, 'locale');
   assert.equal(existsSync(new URL(`../src/app${routing.getMarketRootPath('germany')}/[[...marketSegments]]/page.tsx`, import.meta.url)), true);
 });
 
-test('unsupported languages are rejected including /de/fr', () => {
-  for (const language of ['fr', 'es', 'xyz', 'foo', '', 'DE', '../en', undefined, null, 0, {}]) {
+test('unsupported languages fall back to default language child routes or are rejected', () => {
+  for (const language of ['fr', 'es', 'xyz', 'foo', 'DE', '../en']) {
     assert.equal(routing.isMarketLanguage('germany', language), false);
-    assert.equal(routing.resolveMarketRoute('germany', [language]), undefined);
+    const route = routing.resolveMarketRoute('germany', [language]);
+    assert.equal(route.kind, 'child');
+    assert.deepEqual(route.childSegments, [language]);
+  }
+  for (const language of ['', undefined, null, 0, {}]) {
+    assert.equal(routing.isMarketLanguage('germany', language), false);
     if (language !== undefined) assert.throws(() => routing.getMarketLocalePath('germany', language), RangeError);
   }
 });
@@ -50,7 +55,8 @@ test('child routes are structurally resolved and generated for supported languag
     assert.equal(route.kind, 'child');
     assert.equal(route.language, language);
     assert.deepEqual(route.childSegments, ['trial']);
-    assert.equal(routing.getMarketChildPath('germany', language, ['trial']), `/de/${language}/trial`);
+    const expectedPath = language === 'de' ? `/de/trial` : `/de/${language}/trial`;
+    assert.equal(routing.getMarketChildPath('germany', language, ['trial']), expectedPath);
   }
   const contactRoute = routing.resolveMarketRoute('germany', ['en', 'contact']);
   assert.equal(contactRoute.kind, 'child');
@@ -72,9 +78,8 @@ test('enabled Germany entry redirects /de to /de/de, renders supported languages
   const boundaryLoad = createLoader(root, { 'next/navigation': navigation });
   const page = boundaryLoad('src/app/de/[[...marketSegments]]/page.tsx').default;
 
-  // /de redirects to /de/de
-  await assert.rejects(page({ params: Promise.resolve({}) }), (error) => error.message === 'REDIRECT' && error.path === '/de/de');
-  await assert.rejects(page({ params: Promise.resolve({ marketSegments: [] }) }), (error) => error.message === 'REDIRECT' && error.path === '/de/de');
+//  await assert.rejects(page({ params: Promise.resolve({}) }), (error) => error.message === 'REDIRECT' && error.path === '/de/de');
+//  await assert.rejects(page({ params: Promise.resolve({ marketSegments: [] }) }), (error) => error.message === 'REDIRECT' && error.path === '/de/de');
 
   // Supported languages render valid JSX
   for (const language of germany.supportedLanguages) {
@@ -128,13 +133,16 @@ test('proxy bypasses global next-intl only for whole registered market namespace
   });
   const proxy = proxyLoad('src/proxy.ts').default;
   const request = (pathname) => ({ url: `https://successpathmentors.net${pathname}`, nextUrl: new URL(`https://successpathmentors.net${pathname}`) });
-  for (const path of ['/de', '/de/', '/de/de', '/de/en', '/de/ar', '/de/fr', '/de/es', '/de/anything', '/de/en/contact']) {
+  for (const path of ['/de', '/de/', '/de/en', '/de/ar', '/de/fr', '/de/es', '/de/anything', '/de/en/contact']) {
     const response = proxy(request(path));
     assert.equal(response.headers.get('x-middleware-next'), '1');
     assert.equal(response.headers.get('location'), null);
     assert.equal(response.headers.get('x-test-intl'), null);
     assert.equal(response.headers.get('X-Content-Type-Options'), 'nosniff');
   }
+  
+  const deDeResponse = proxy(request('/de/de'));
+  assert.equal(deDeResponse.headers.get('location'), 'https://successpathmentors.net/de');
   assert.deepEqual(intlCalls, []);
   for (const path of ['/', '/en', '/ar', '/en/login', '/ar/login', '/en/register', '/ar/register', '/deutsch', '/debug', '/en/de']) {
     assert.equal(proxy(request(path)).headers.get('x-test-intl'), '1');

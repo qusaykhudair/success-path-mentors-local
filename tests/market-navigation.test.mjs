@@ -70,14 +70,14 @@ test('getLanguageSwitchPath works correctly for North America', () => {
 });
 
 test('getLanguageSwitchPath works correctly for Germany', () => {
-  const ctxDeDe = parseNavigationContext('/de/de');
+  const ctxDeDe = parseNavigationContext('/de');
   assert.equal(getLanguageSwitchPath(ctxDeDe, 'en'), '/de/en');
 
   const ctxDeEnTrial = parseNavigationContext('/de/en/trial');
   assert.equal(getLanguageSwitchPath(ctxDeEnTrial, 'ar'), '/de/ar/trial');
 
   const ctxDeArTrial = parseNavigationContext('/de/ar/trial');
-  assert.equal(getLanguageSwitchPath(ctxDeArTrial, 'de'), '/de/de/trial');
+  assert.equal(getLanguageSwitchPath(ctxDeArTrial, 'de'), '/de/trial');
 });
 
 test('getLanguageSwitchPath handles unsupported and invalid cases deterministically', () => {

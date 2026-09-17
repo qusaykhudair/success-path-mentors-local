@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: {
         title: doc.seo.title,
         description: doc.seo.description,
         alternates: {
-          canonical: `https://successpathmentors.net/de/${locale}/privacy`,
+          canonical: locale === 'de' ? `https://successpathmentors.net/de/privacy` : `https://successpathmentors.net/de/${locale}/privacy`,
         },
       };
     }
@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: {
         title: doc.seo.title,
         description: doc.seo.description,
         alternates: {
-          canonical: `https://successpathmentors.net/de/${locale}/terms`,
+          canonical: locale === 'de' ? `https://successpathmentors.net/de/terms` : `https://successpathmentors.net/de/${locale}/terms`,
         },
       };
     }
@@ -69,7 +69,7 @@ export async function generateMetadata({ params }: {
         description: tutoringDoc.seo.description,
         keywords: tutoringDoc.seo.keywords as string[],
         alternates: {
-          canonical: `https://successpathmentors.net/de/${locale}/${childPath}`,
+          canonical: locale === 'de' ? `https://successpathmentors.net/de/${childPath}` : `https://successpathmentors.net/de/${locale}/${childPath}`,
         },
         openGraph: {
           title: tutoringDoc.seo.title,
@@ -113,12 +113,12 @@ export async function generateMetadata({ params }: {
       title: titles[locale],
       description: descriptions[locale],
       alternates: {
-        canonical: `https://successpathmentors.net/de/${locale}`,
+        canonical: locale === 'de' ? 'https://successpathmentors.net/de' : `https://successpathmentors.net/de/${locale}`,
         languages: {
-          'de-DE': 'https://successpathmentors.net/de/de',
+          'de-DE': 'https://successpathmentors.net/de',
           'en-DE': 'https://successpathmentors.net/de/en',
           'ar-DE': 'https://successpathmentors.net/de/ar',
-          'x-default': 'https://successpathmentors.net/de/de'
+          'x-default': 'https://successpathmentors.net/de'
         }
       },
       robots: { index: true, follow: true }
@@ -133,8 +133,6 @@ export default async function MarketPage({ params }: {
 }) {
   const { marketSegments } = await params;
   const route = requireMarketRoute('germany', marketSegments);
-  
-  if (route.kind === 'entry') redirect(getMarketLocalePath(route.market.id, route.language));
 
   // Handle market-scoped child routes
   if (route.kind === 'child' && route.childSegments && route.childSegments.length > 0) {

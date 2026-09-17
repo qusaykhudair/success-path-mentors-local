@@ -23,13 +23,13 @@ export function getMarketRootPath(id: MarketId): MarketPath {
   return slug ? `/${slug}` : '/';
 }
 
-/** Describes the contract, including disabled markets; it does not activate routes. */
 export function getMarketLocalePath(
   id: MarketId,
   language: MarketLanguage = getMarketConfig(id).defaultLanguage,
 ): MarketPath {
   if (!isMarketLanguage(id, language)) throw new RangeError(`Unsupported language for market ${id}`);
   const root = getMarketRootPath(id);
+  if (id === 'germany' && language === 'de') return '/de';
   return `${root === '/' ? '' : root}/${language}`;
 }
 
@@ -40,6 +40,7 @@ export function getMarketChildPath(
 ): MarketPath {
   if (!isMarketLanguage(id, language)) throw new RangeError(`Unsupported language for market ${id}`);
   const root = getMarketRootPath(id);
+  if (id === 'germany' && language === 'de') return `/de/${childSegments.join('/')}` as MarketPath;
   const base = `${root === '/' ? '' : root}/${language}`;
   return `${base}/${childSegments.join('/')}` as MarketPath;
 }
@@ -66,6 +67,32 @@ export function isReservedMarketPathname(pathname: string): boolean {
 /** Only entry and language roots exist in this unit; deeper content is not defined. */
 export function resolveMarketRoute(id: MarketId, segments: readonly string[] = []): MarketRoute | undefined {
   const market = getMarketConfig(id);
+  
+  if (id === 'germany') {
+    if (segments.length === 0) {
+      return { market, kind: 'locale', language: 'de', direction: 'ltr' };
+    }
+    const firstSegment = segments[0];
+    if (isMarketLanguage(id, firstSegment)) {
+      const language = firstSegment as MarketLanguage;
+      const childSegments = segments.slice(1);
+      return {
+        market,
+        kind: childSegments.length === 0 ? 'locale' : 'child',
+        language,
+        direction: getMarketLanguageDirection(language),
+        ...(childSegments.length > 0 ? { childSegments } : {}),
+      };
+    }
+    return {
+      market,
+      kind: 'child',
+      language: 'de',
+      direction: 'ltr',
+      childSegments: segments,
+    };
+  }
+
   const language = segments.length === 0 ? market.defaultLanguage : segments[0];
   if (language === undefined || !isMarketLanguage(id, language)) return undefined;
 
