@@ -3,6 +3,9 @@ import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 import { createLoader } from './helpers/ts-loader.mjs';
 
+import fs from 'node:fs';
+import path from 'node:path';
+
 const root = fileURLToPath(new URL('../', import.meta.url));
 const load = createLoader(root);
 
@@ -11,6 +14,7 @@ const { setAnalyticsConsent, getAnalyticsConsent } = load('src/lib/analytics/con
 const { captureAttribution, getAttribution, clearAttribution } = load('src/lib/analytics/attribution.ts');
 const { isAnalyticsEventName, sanitizeEventProperties } = load('src/lib/analytics/events.ts');
 const { getMarketChildPath, getMarketLocalePath } = load('src/lib/market-routing.ts');
+const { isValidGtmId, getAnalyticsPrivacyHref } = load('src/lib/analytics/config.ts');
 
 function setupMockWindow() {
   global.window = {
@@ -149,3 +153,46 @@ test('Analytics Foundation - Germany Fallback Routes', () => {
   assert.equal(getMarketChildPath('germany', 'ar', ['login']), '/de/ar/login');
   assert.equal(getMarketChildPath('germany', 'ar', ['privacy']), '/de/ar/privacy');
 });
+
+test('Analytics Foundation - GTM Config Validation', () => {
+  assert.equal(isValidGtmId(undefined), false);
+  assert.equal(isValidGtmId(''), false);
+  assert.equal(isValidGtmId('G-ABC'), false);
+  assert.equal(isValidGtmId('bad-id'), false);
+  assert.equal(isValidGtmId('GTM-TEST1234'), true);
+});
+
+test('Analytics Foundation - Privacy Route Resolution', () => {
+  assert.equal(getAnalyticsPrivacyHref('/en', 'en'), '/en/privacy');
+  assert.equal(getAnalyticsPrivacyHref('/ar', 'ar'), '/ar/privacy');
+  assert.equal(getAnalyticsPrivacyHref('/de', 'de'), '/de/privacy');
+  assert.equal(getAnalyticsPrivacyHref('/de/en', 'en'), '/de/en/privacy');
+  assert.equal(getAnalyticsPrivacyHref('/de/ar', 'ar'), '/de/ar/privacy');
+  
+  // ensure no /de/de
+  assert.doesNotMatch(getAnalyticsPrivacyHref('/de', 'de'), /\/de\/de/);
+});
+
+test('Analytics Foundation - Conversion Guards (Source Contract)', () => {
+  const regFormPath = path.join(root, 'src/features/auth/registration-form.tsx');
+  const regFormSrc = fs.readFileSync(regFormPath, 'utf8');
+
+  // Assert dedupe variables exist
+  assert.match(regFormSrc, /hasFiredFlowStart\.current/);
+  assert.match(regFormSrc, /hasFiredRegistrationComplete\.current/);
+
+  // Assert registration complete requires confirmation
+  assert.match(regFormSrc, /if\s*\(\s*confirmation\s*&&\s*!hasFiredRegistrationComplete\.current\s*\)/);
+  
+  // Assert flow start is guarded
+  assert.match(regFormSrc, /if\s*\(\s*verifiedTicket\s*&&\s*verifiedIdentity\s*&&\s*!hasFiredFlowStart\.current\s*\)/);
+});
+
+test('Analytics Foundation - Provider Pre-Consent Contract (Source Contract)', () => {
+  const providerPath = path.join(root, 'src/components/analytics/analytics-provider.tsx');
+  const providerSrc = fs.readFileSync(providerPath, 'utf8');
+
+  // Assert GTM script is guarded by both consent and gtmId
+  assert.match(providerSrc, /\{\s*consent\s*===\s*'granted'\s*&&\s*gtmId\s*&&/);
+});
+

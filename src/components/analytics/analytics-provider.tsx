@@ -6,6 +6,7 @@ import { getAnalyticsConsent, setAnalyticsConsent, type ConsentState } from '@/l
 import { captureAttribution } from '@/lib/analytics/attribution';
 import { trackEvent } from '@/lib/analytics/client';
 import { isAnalyticsEventName, type AnalyticsLocale } from '@/lib/analytics/events';
+import { getConfiguredGtmId, getAnalyticsPrivacyHref } from '@/lib/analytics/config';
 
 const consentCopy = {
   en: {
@@ -34,9 +35,8 @@ const consentCopy = {
   },
 };
 
-const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
-
 export function AnalyticsProvider() {
+  const gtmId = getConfiguredGtmId();
   const [consent, setConsent] = useState<ConsentState>('unset');
   const [mounted, setMounted] = useState(false);
 
@@ -84,8 +84,7 @@ export function AnalyticsProvider() {
   const locale = (typeof document !== 'undefined' ? document.documentElement.lang : 'en') as keyof typeof consentCopy;
   const safeLocale = consentCopy[locale] ? locale : 'en';
   const copy = consentCopy[safeLocale];
-  const isGermany = typeof window !== 'undefined' && window.location.pathname.startsWith('/de');
-  const privacyHref = isGermany ? (safeLocale === 'de' ? '/de/privacy' : `/de/${safeLocale}/privacy`) : `/${safeLocale}/privacy`;
+  const privacyHref = typeof window !== 'undefined' ? getAnalyticsPrivacyHref(window.location.pathname, safeLocale) : `/${safeLocale}/privacy`;
 
   return (
     <>

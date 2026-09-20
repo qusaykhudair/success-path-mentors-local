@@ -1,4 +1,5 @@
 import { type AnalyticsEventName, type AnalyticsEventMap, sanitizeEventProperties } from './events';
+import { getConfiguredGtmId } from './config';
 import { getAnalyticsConsent } from './consent';
 import { getAttribution } from './attribution';
 
@@ -14,8 +15,8 @@ export function trackEvent<K extends AnalyticsEventName>(
 ): void {
   if (typeof window === 'undefined') return;
 
-  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
-  if (!gtmId || gtmId.trim() === '') return;
+  const gtmId = getConfiguredGtmId();
+  if (!gtmId) return;
 
   // Check consent
   if (getAnalyticsConsent() !== 'granted') return;
