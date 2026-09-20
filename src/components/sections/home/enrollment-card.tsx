@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { ArrowRight, ArrowLeft, Check, Loader2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { trackEvent } from '@/lib/analytics/client';
 
 /* ────────────────────────────────────────────────────────────
    Data contract — this is the exact shape the frontend will POST.
@@ -90,15 +91,27 @@ export function EnrollmentCard({ copy, locale }: EnrollmentCardProps) {
   const [data, setData] = useState<EnrollmentPayload>(EMPTY);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [status, setStatus] = useState<'idle' | 'submitting'>('idle');
+  const [hasStarted, setHasStarted] = useState(false);
+
+  const market = locale === 'de' ? 'germany' : 'north-america';
+  
+  const handleInteraction = () => {
+    if (!hasStarted) {
+      setHasStarted(true);
+      trackEvent('trial_form_start', { market, locale, surface: 'hero' });
+    }
+  };
 
   const progress = Math.round((step / TOTAL_STEPS) * 100);
 
   function update<K extends keyof EnrollmentPayload>(key: K, value: EnrollmentPayload[K]) {
+    handleInteraction();
     setData((d) => ({ ...d, [key]: value }));
     setErrors((e) => ({ ...e, [key]: '' }));
   }
 
   function toggleSubject(value: string) {
+    handleInteraction();
     setData((d) => ({
       ...d,
       subjects: d.subjects.includes(value)
@@ -130,7 +143,10 @@ export function EnrollmentCard({ copy, locale }: EnrollmentCardProps) {
   }
 
   function next() {
-    if (validateStep(step)) setStep((s) => Math.min(s + 1, TOTAL_STEPS));
+    if (validateStep(step)) {
+      trackEvent('trial_form_step', { market, locale, surface: 'hero', step_number: step, action: 'completed' });
+      setStep((s) => Math.min(s + 1, TOTAL_STEPS));
+    }
   }
   function back() {
     setStep((s) => Math.max(s - 1, 1));
@@ -139,6 +155,7 @@ export function EnrollmentCard({ copy, locale }: EnrollmentCardProps) {
   async function handleSubmit() {
     if (!validateStep(3)) return;
     setStatus('submitting');
+    trackEvent('trial_registration_handoff', { market, locale, surface: 'hero' });
     router.push(`/${locale}/register`);
   }
 

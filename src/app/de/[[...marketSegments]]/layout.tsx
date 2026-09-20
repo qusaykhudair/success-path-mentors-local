@@ -9,6 +9,7 @@ import { N8nChat } from '@/components/chat/n8n-chat';
 import { getMarketMessages } from '@/lib/market-messages';
 import { cn } from '@/lib/utils';
 import '@n8n/chat/style.css';
+import { AnalyticsProvider } from '@/components/analytics/analytics-provider';
 
 import { resolveMarketRoute } from '@/lib/market-routing';
 
@@ -28,7 +29,7 @@ export default async function MarketSegmentsLayout({
   let messages;
   try {
     messages = await getMarketMessages('germany', locale as 'de' | 'en' | 'ar');
-  } catch (error) {
+  } catch {
     notFound();
   }
 
@@ -47,6 +48,7 @@ export default async function MarketSegmentsLayout({
           locale === 'ar' && 'font-arabic'
         )}
       >
+        <AnalyticsProvider />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <div className="flex min-h-screen flex-col relative">
             <MarketHeader />

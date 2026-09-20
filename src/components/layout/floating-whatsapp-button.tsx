@@ -46,6 +46,8 @@ export function FloatingWhatsAppButton({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      data-analytics-event="whatsapp_cta_clicked"
+      data-analytics-surface="floating_button"
       aria-label={copy.label}
       title={copy.label}
       className="fixed bottom-[calc(env(safe-area-inset-bottom,0px)+1rem)] left-4 z-[45] inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_10px_28px_rgba(37,211,102,0.3)] transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(37,211,102,0.38)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 sm:left-6 sm:h-14 sm:w-14 lg:bottom-7 lg:left-8"

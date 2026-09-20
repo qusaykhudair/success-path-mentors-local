@@ -183,6 +183,8 @@ export async function Hero({
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
+              data-analytics-event="whatsapp_cta_clicked"
+              data-analytics-surface="hero"
               variant="accent"
               size="lg"
               className="

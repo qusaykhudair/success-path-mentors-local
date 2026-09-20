@@ -120,6 +120,7 @@ export class AuthApiError extends Error {
   readonly fieldErrors: ApiFieldError[];
   readonly retryAfterSeconds?: number;
   readonly requestId?: string;
+  readonly status?: number;
 
   constructor(body: ApiErrorBody = {}, status = 500) {
     const detailsMessage = Array.isArray(body.details) && body.details.length > 0 && typeof body.details[0] === 'string'
@@ -133,5 +134,6 @@ export class AuthApiError extends Error {
       : (body.field_errors || []);
     this.retryAfterSeconds = body.retry_after_seconds;
     this.requestId = body.request_id;
+    this.status = status;
   }
 } 

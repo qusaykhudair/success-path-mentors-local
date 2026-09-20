@@ -504,6 +504,8 @@ export async function SiteFooter() {
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
+              data-analytics-event="whatsapp_cta_clicked"
+              data-analytics-surface="footer"
               className="
                 flex
                 min-h-11
@@ -540,6 +542,8 @@ export async function SiteFooter() {
 
             <a
               href={`mailto:${CONTACT_EMAIL}`}
+              data-analytics-event="contact_cta_clicked"
+              data-analytics-surface="footer"
               className="
                 flex
                 min-h-11
@@ -576,6 +580,8 @@ export async function SiteFooter() {
 
             <Link
               href={contactHref}
+              data-analytics-event="contact_cta_clicked"
+              data-analytics-surface="footer"
               className="
                 flex
                 min-h-11

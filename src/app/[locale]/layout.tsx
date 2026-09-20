@@ -20,6 +20,7 @@ import { BackToTopButton } from '@/components/layout/back-to-top-button';
 import { SiteFooter } from '@/components/layout/site-footer';
 import { SiteHeader } from '@/components/layout/site-header';
 import { N8nChat } from '@/components/chat/n8n-chat';
+import { AnalyticsProvider } from '@/components/analytics/analytics-provider';
 
 import {
   localeDirection,
@@ -257,6 +258,7 @@ export default async function LocaleLayout({
           antialiased
         "
       >
+        <AnalyticsProvider />
         <script
           id="organization-schema"
           type="application/ld+json"

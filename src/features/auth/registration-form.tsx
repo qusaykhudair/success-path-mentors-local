@@ -12,7 +12,7 @@ import {
   KeyRound,
   Mail,
   MapPin,
-  MessageCircleMore,
+
   ShieldAlert,
   ShieldCheck,
   UserRound,
@@ -23,14 +23,14 @@ import { z } from 'zod';
 
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { getDefaultMarket, getMarketConfig, type MarketId } from '@/config/markets';
+import { getMarketConfig, type MarketId } from '@/config/markets';
 import {
   getRegistrationCountries,
   getRegistrationTimezone,
   getRegistrationTimezones,
 } from './registration-options';
 
-import { authApi, isMockAuthApi } from './auth-api';
+import { authApi } from './auth-api';
 import { getAuthCopy } from './auth-copy';
 import { SignupMethods } from './signup-methods';
 import type { VerifiedIdentity } from './signup-transaction';
@@ -45,6 +45,7 @@ import {
   type RegistrationResult,
 } from './auth-contracts';
 import { authInputClass, FieldError, FieldLabel, Notice, SubmitLabel } from './auth-ui';
+import { trackEvent } from '@/lib/analytics/client';
 
 interface RegistrationFormValues {
   parent_name: string;
@@ -232,6 +233,12 @@ export function RegistrationForm({
   const BackIcon = isRtl ? ArrowRight : ArrowLeft;
   const languageIndex = locale === 'ar' ? 1 : locale === 'de' ? 2 : 0;
 
+  useEffect(() => {
+    if (verifiedTicket && verifiedIdentity) {
+      trackEvent('registration_flow_start', { market: marketId, locale });
+    }
+  }, [verifiedTicket, verifiedIdentity, marketId, locale]);
+
   const market = getMarketConfig(marketId);
   const detectedTimezone = useMemo(() => getRegistrationTimezone(market), [market]);
   const availableTimezones = useMemo(
@@ -306,6 +313,17 @@ export function RegistrationForm({
   const [resendSeconds, setResendSeconds] = useState(0);
 
   useEffect(() => {
+    if (confirmation) {
+      trackEvent('trial_registration_complete', {
+        market: marketId,
+        locale,
+        status: confirmation.status,
+        trial_status: confirmation.trial_status,
+      });
+    }
+  }, [confirmation, marketId, locale]);
+
+  useEffect(() => {
     if (resendSeconds <= 0) return;
     const interval = window.setInterval(
       () => setResendSeconds((current) => Math.max(0, current - 1)),
@@ -347,6 +365,7 @@ export function RegistrationForm({
   async function nextStep() {
     const valid = await form.trigger(stepFields[step], { shouldFocus: true });
     if (valid) {
+      trackEvent('registration_step', { market: marketId, locale, step_number: step + 1, action: 'completed' });
       setApiError('');
       setStep((current) => Math.min(3, current + 1));
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -376,6 +395,8 @@ export function RegistrationForm({
       signup_ticket: verifiedTicket || undefined,
     };
 
+    trackEvent('trial_registration_submit_started', { market: marketId, locale });
+
     try {
       const nextResult = await authApi.submitRegistration(payload);
       setResult(nextResult);
@@ -386,7 +407,7 @@ export function RegistrationForm({
         setConfirmation({
           registration_id: nextResult.registration_id,
           status: 'WAITING_FOR_ADMIN',
-          trial_status: nextResult.trial_status as any,
+          trial_status: nextResult.trial_status as RegistrationConfirmation['trial_status'],
           guardian_mid: nextResult.guardian_mid,
           student_mid: nextResult.student_mid,
         });
@@ -394,12 +415,15 @@ export function RegistrationForm({
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } catch (error) {
       if (error instanceof AuthApiError) {
+        trackEvent('trial_registration_failed', { market: marketId, locale, error_category: error.code, http_status: error.status });
         for (const fieldError of error.fieldErrors) {
           const field = fieldError.field as FieldPath<RegistrationFormValues>;
           if (field in form.getValues()) {
             form.setError(field, { type: 'server', message: fieldError.message });
           }
         }
+      } else {
+        trackEvent('trial_registration_failed', { market: marketId, locale, error_category: 'UNKNOWN' });
       }
       setApiError(friendlyError(error, copy));
     }

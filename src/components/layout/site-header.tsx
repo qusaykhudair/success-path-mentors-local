@@ -562,6 +562,8 @@ export async function SiteHeader() {
             href={whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
+            data-analytics-event="whatsapp_cta_clicked"
+            data-analytics-surface="header"
             className="hidden min-[1180px]:inline-flex h-10 items-center justify-center gap-2 rounded-full bg-accent px-5 text-sm font-semibold text-primary-950 shadow-sm hover:bg-accent-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap"
           >
             <svg
