@@ -134,7 +134,7 @@ test('Germany generateMetadata returns accurate SEO metadata for tutoring routes
   });
   assert.ok(metaDe.title?.includes('Deutschnachhilfe'));
   assert.ok(metaDe.description);
-  assert.equal(metaDe.alternates?.canonical, 'https://successpathmentors.net/de/de/languages/german');
+  assert.equal(metaDe.alternates?.canonical, 'https://successpathmentors.net/de/languages/german');
 
   const metaEn = await generateMetadata({
     params: Promise.resolve({ marketSegments: ['en', 'tutoring', 'one-to-one'] }),

@@ -30,9 +30,11 @@ test('Germany market routes resolve privacy and terms child routes for all suppo
     assert.deepEqual(termsRoute.childSegments, ['terms']);
   }
 
-  // Unsupported language /de/fr/privacy must be rejected
+  // Unsupported language /de/fr/privacy falls back to default language child route fr/privacy (will 404 in page.tsx)
   const frRoute = routing.resolveMarketRoute('germany', ['fr', 'privacy']);
-  assert.equal(frRoute, undefined, 'Unsupported locale fr should not resolve for germany');
+  assert.equal(frRoute.kind, 'child');
+  assert.equal(frRoute.language, 'de');
+  assert.deepEqual(frRoute.childSegments, ['fr', 'privacy']);
 });
 
 test('Germany central legal config contains required placeholders, contacts, and gate function', () => {

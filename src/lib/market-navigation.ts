@@ -147,7 +147,7 @@ export function getMarketSwitchPath(
   }
 
   if (targetMarketId === 'germany') {
-    return `/${market.publicSlug}/${market.defaultLanguage}`;
+    return getMarketLocalePath('germany', market.defaultLanguage);
   }
   // North America (Global)
   return `/${market.defaultLanguage}`;

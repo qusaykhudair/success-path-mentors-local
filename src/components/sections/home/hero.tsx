@@ -262,6 +262,7 @@ export async function Hero({
           "
         >
           <EnrollmentCard
+            locale={locale}
             copy={{
               title: t('enrollment.title'),
               reassurance: t('enrollment.reassurance'),

@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowRight, ArrowLeft, Check, Loader2, PartyPopper } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Check, Loader2 } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 /* ────────────────────────────────────────────────────────────
    Data contract — this is the exact shape the frontend will POST.
@@ -66,6 +67,7 @@ interface EnrollmentCardCopy {
 
 interface EnrollmentCardProps {
   copy: EnrollmentCardCopy;
+  locale: string;
 }
 
 const EMPTY: EnrollmentPayload = {
@@ -82,13 +84,14 @@ const EMPTY: EnrollmentPayload = {
 
 const TOTAL_STEPS = 3;
 
-export function EnrollmentCard({ copy }: EnrollmentCardProps) {
+export function EnrollmentCard({ copy, locale }: EnrollmentCardProps) {
+  const router = useRouter();
   const [step, setStep] = useState(1);
   const [data, setData] = useState<EnrollmentPayload>(EMPTY);
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [status, setStatus] = useState<'idle' | 'submitting'>('idle');
 
-  const progress = status === 'success' ? 100 : Math.round((step / TOTAL_STEPS) * 100);
+  const progress = Math.round((step / TOTAL_STEPS) * 100);
 
   function update<K extends keyof EnrollmentPayload>(key: K, value: EnrollmentPayload[K]) {
     setData((d) => ({ ...d, [key]: value }));
@@ -136,28 +139,7 @@ export function EnrollmentCard({ copy }: EnrollmentCardProps) {
   async function handleSubmit() {
     if (!validateStep(3)) return;
     setStatus('submitting');
-    try {
-      // ============================================================
-      // >>> BACKEND HOOK — replace this block with the real call.
-      // The endpoint must accept `data` (EnrollmentPayload) as JSON
-      // and persist it into the LMS. Frontend does NOT know the LMS
-      // schema; the backend maps this payload onto it.
-      //
-      // Example (to be implemented by backend):
-      //   const res = await fetch('/api/enrollment', {
-      //     method: 'POST',
-      //     headers: { 'Content-Type': 'application/json' },
-      //     body: JSON.stringify(data),
-      //   });
-      //   if (!res.ok) throw new Error('Request failed');
-      //
-      // For now, simulate a successful submit so the UI flow works:
-      await new Promise((r) => setTimeout(r, 900));
-      // ============================================================
-      setStatus('success');
-    } catch {
-      setStatus('error');
-    }
+    router.push(`/${locale}/register`);
   }
 
   const inputBase =
@@ -183,15 +165,6 @@ export function EnrollmentCard({ copy }: EnrollmentCardProps) {
         </div>
 
         <div className="p-6">
-          {status === 'success' ? (
-            <div className="flex flex-col items-center py-8 text-center">
-              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-green-50 text-green-600">
-                <PartyPopper className="h-7 w-7" strokeWidth={1.75} aria-hidden="true" />
-              </span>
-              <h2 className="mt-4 text-h4 font-bold text-primary">{copy.successTitle}</h2>
-              <p className="mt-2 text-small text-ink-secondary">{copy.successBody}</p>
-            </div>
-          ) : (
             <>
               {/* Progress */}
               <div className="mb-6">
@@ -367,12 +340,6 @@ export function EnrollmentCard({ copy }: EnrollmentCardProps) {
                 </div>
               )}
 
-              {status === 'error' && (
-                <p className="mt-3 text-caption text-red-600" role="alert">
-                  {copy.errors.required}
-                </p>
-              )}
-
               {/* Navigation */}
               <div className="mt-6 flex items-center gap-3">
                 {step > 1 && (
@@ -415,7 +382,6 @@ export function EnrollmentCard({ copy }: EnrollmentCardProps) {
 
               <p className="mt-4 text-center text-caption text-ink-secondary">{copy.reassurance}</p>
             </>
-          )}
         </div>
       </div>
     </div>

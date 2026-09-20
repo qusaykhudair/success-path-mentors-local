@@ -64,6 +64,24 @@ export default function proxy(request: NextRequest) {
 
   const pathname = request.nextUrl.pathname;
 
+  if (
+    pathname === '/en/exam-preparation' ||
+    pathname === '/services/exam-preparation' ||
+    pathname === '/exam-preparation'
+  ) {
+    const destinationUrl = new URL(
+      '/en/services/exam-preparation' + request.nextUrl.search,
+      request.url
+    );
+    return applySecurityHeaders(NextResponse.redirect(destinationUrl, 301));
+  }
+
+  if (pathname === '/de/de' || pathname.startsWith('/de/de/')) {
+    const newPath = pathname.replace(/^\/de\/de/, '/de');
+    const destinationUrl = new URL(newPath + request.nextUrl.search, request.url);
+    return applySecurityHeaders(NextResponse.redirect(destinationUrl, 301));
+  }
+
   if (isReservedMarketPathname(pathname)) {
     return applySecurityHeaders(NextResponse.next());
   }

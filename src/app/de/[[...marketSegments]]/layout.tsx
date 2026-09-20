@@ -10,6 +10,8 @@ import { getMarketMessages } from '@/lib/market-messages';
 import { cn } from '@/lib/utils';
 import '@n8n/chat/style.css';
 
+import { resolveMarketRoute } from '@/lib/market-routing';
+
 export default async function MarketSegmentsLayout({
   children,
   params,
@@ -18,9 +20,10 @@ export default async function MarketSegmentsLayout({
   params: Promise<{ marketSegments?: string[] }>;
 }) {
   const { marketSegments } = await params;
-  const locale = (marketSegments && marketSegments[0]) || 'de';
-
-  if (!['de', 'en', 'ar'].includes(locale)) notFound();
+  const route = resolveMarketRoute('germany', marketSegments || []);
+  if (!route) notFound();
+  
+  const locale = route.language;
 
   let messages;
   try {

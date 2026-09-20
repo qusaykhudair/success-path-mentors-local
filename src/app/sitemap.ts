@@ -267,9 +267,52 @@ export default function sitemap():
       })
     );
 
+  const germanyEntries = [
+    {
+      url: `${SITE_URL}/de`,
+      changeFrequency: 'weekly' as const,
+      priority: 1,
+      alternates: {
+        languages: {
+          'de-DE': `${SITE_URL}/de`,
+          'en-DE': `${SITE_URL}/de/en`,
+          'ar-DE': `${SITE_URL}/de/ar`,
+          'x-default': `${SITE_URL}/de`,
+        },
+      },
+    },
+    {
+      url: `${SITE_URL}/de/en`,
+      changeFrequency: 'weekly' as const,
+      priority: 1,
+      alternates: {
+        languages: {
+          'de-DE': `${SITE_URL}/de`,
+          'en-DE': `${SITE_URL}/de/en`,
+          'ar-DE': `${SITE_URL}/de/ar`,
+          'x-default': `${SITE_URL}/de`,
+        },
+      },
+    },
+    {
+      url: `${SITE_URL}/de/ar`,
+      changeFrequency: 'weekly' as const,
+      priority: 1,
+      alternates: {
+        languages: {
+          'de-DE': `${SITE_URL}/de`,
+          'en-DE': `${SITE_URL}/de/en`,
+          'ar-DE': `${SITE_URL}/de/ar`,
+          'x-default': `${SITE_URL}/de`,
+        },
+      },
+    },
+  ];
+
   return [
     ...localizedEntries,
     ...englishGapEntries,
     ...frenchEntries,
+    ...germanyEntries,
   ];
 }
