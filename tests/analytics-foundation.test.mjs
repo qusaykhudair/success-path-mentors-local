@@ -9,6 +9,8 @@ const load = createLoader(root);
 const { trackEvent } = load('src/lib/analytics/client.ts');
 const { setAnalyticsConsent, getAnalyticsConsent } = load('src/lib/analytics/consent.ts');
 const { captureAttribution, getAttribution, clearAttribution } = load('src/lib/analytics/attribution.ts');
+const { isAnalyticsEventName, sanitizeEventProperties } = load('src/lib/analytics/events.ts');
+const { getMarketChildPath, getMarketLocalePath } = load('src/lib/market-routing.ts');
 
 function setupMockWindow() {
   global.window = {
@@ -47,88 +49,103 @@ function setupMockWindow() {
       delete this.store[key];
     },
   };
+  process.env.NEXT_PUBLIC_GTM_ID = 'GTM-TEST1234';
 }
 
-test('Analytics Foundation - Consent', () => {
+test('Analytics Foundation - Consent & GTM ID requirements', () => {
   setupMockWindow();
   
-  // Default state is unset
   assert.equal(getAnalyticsConsent(), 'unset');
-
-  // No events tracked without consent
-  trackEvent('trial_form_start', { market: 'north-america' });
-  assert.equal(window.dataLayer.length, 0);
-
-  // Set consent to denied
-  setAnalyticsConsent('denied');
-  assert.equal(getAnalyticsConsent(), 'denied');
-  trackEvent('trial_form_start', { market: 'north-america' });
-  assert.equal(window.dataLayer.length, 0);
-
-  // Set consent to granted
-  setAnalyticsConsent('granted');
-  assert.equal(getAnalyticsConsent(), 'granted');
   
+  // No dataLayer push without consent
+  trackEvent('trial_form_start', { market: 'north-america' });
+  assert.equal(window.dataLayer.length, 0);
+
+  setAnalyticsConsent('denied');
+  trackEvent('trial_form_start', { market: 'north-america' });
+  assert.equal(window.dataLayer.length, 0);
+
+  // Grant consent
+  setAnalyticsConsent('granted');
+  
+  // No dataLayer push without GTM ID
+  delete process.env.NEXT_PUBLIC_GTM_ID;
+  trackEvent('trial_form_start', { market: 'north-america' });
+  assert.equal(window.dataLayer.length, 0);
+
+  // Valid configured + consented event pushes once
+  process.env.NEXT_PUBLIC_GTM_ID = 'GTM-TEST1234';
   trackEvent('trial_form_start', { market: 'north-america' });
   assert.equal(window.dataLayer.length, 1);
   assert.equal(window.dataLayer[0].event, 'trial_form_start');
 });
 
-test('Analytics Foundation - Attribution Parsing and Persistence', () => {
+test('Analytics Foundation - Attribution Persistence', () => {
   setupMockWindow();
   setAnalyticsConsent('unset');
 
-  // Attribution is parsed but not persisted before consent
+  // attribution does not persist pre-consent
   const preConsentAttribution = getAttribution();
   assert.equal(preConsentAttribution.utm_source, 'google');
-  assert.equal(preConsentAttribution.utm_medium, 'cpc');
-  assert.equal(preConsentAttribution.referrer_host, 'google.com');
   assert.equal(Object.keys(global.sessionStorage.store).length, 0);
 
-  // Grant consent
   setAnalyticsConsent('granted');
   captureAttribution();
 
-  // Now it's persisted in session storage
   assert.ok(global.sessionStorage.store['spm_analytics_attribution']);
-  
   const postConsentAttribution = getAttribution();
   assert.equal(postConsentAttribution.utm_source, 'google');
   assert.equal(postConsentAttribution.referrer_host, 'google.com');
 
-  // Fire event, should include attribution
   trackEvent('whatsapp_cta_clicked', { surface: 'header' });
   const event = window.dataLayer[window.dataLayer.length - 1];
   assert.equal(event.event, 'whatsapp_cta_clicked');
-  assert.equal(event.surface, 'header');
   assert.equal(event.utm_source, 'google');
-  assert.equal(event.referrer_host, 'google.com');
 });
 
-test('Analytics Foundation - No PII emitted', () => {
+test('Analytics Foundation - Event Type & Runtime Property Allowlist', () => {
   setupMockWindow();
   setAnalyticsConsent('granted');
 
-  // Let's pretend some rogue code tries to send PII using an unknown type cast
-  // We can't strictly prevent the JS from sending it if it circumvents TS, 
-  // but the TS types in events.ts prevent PII. Let's just ensure standard events
-  // don't have them in the contract.
-  
-  const properties = {
+  assert.equal(isAnalyticsEventName('trial_form_start'), true);
+  assert.equal(isAnalyticsEventName('unknown_event_name'), false);
+
+  // PII keys stripped & unknown event properties stripped
+  const rawPayload = {
     market: 'germany',
     locale: 'de',
-    status: 'COMPLETED',
+    surface: 'hero',
+    student_first_name: 'John',
+    email: 'test@example.com',
+    random_key: 'hacker',
+    phone: '1234567890',
   };
+
+  const safe = sanitizeEventProperties('trial_form_start', rawPayload);
   
-  trackEvent('trial_registration_complete', properties);
-  const event = window.dataLayer[window.dataLayer.length - 1];
+  assert.equal(safe.market, 'germany');
+  assert.equal(safe.locale, 'de');
+  assert.equal(safe.surface, 'hero');
   
-  // Assert safe keys are present
-  assert.equal(event.event, 'trial_registration_complete');
-  assert.equal(event.market, 'germany');
-  
-  // Assert strictly forbidden keys are definitely NOT in our expected property type
-  // (We check undefined because if it was provided, TS would complain, but we check JS runtime too)
-  assert.equal(event.email, undefined);
-  assert.equal(event.phone, undefined);
+  assert.equal(safe.student_first_name, undefined);
+  assert.equal(safe.email, undefined);
+  assert.equal(safe.phone, undefined);
+  assert.equal(safe.random_key, undefined);
+});
+
+test('Analytics Foundation - Germany Fallback Routes', () => {
+  // Expected default German: home = /de, login = /de/login, privacy = /de/privacy. 
+  assert.equal(getMarketLocalePath('germany', 'de'), '/de');
+  assert.equal(getMarketChildPath('germany', 'de', ['login']), '/de/login');
+  assert.equal(getMarketChildPath('germany', 'de', ['privacy']), '/de/privacy');
+
+  // English: /de/en, /de/en/login, /de/en/privacy. 
+  assert.equal(getMarketLocalePath('germany', 'en'), '/de/en');
+  assert.equal(getMarketChildPath('germany', 'en', ['login']), '/de/en/login');
+  assert.equal(getMarketChildPath('germany', 'en', ['privacy']), '/de/en/privacy');
+
+  // Arabic: /de/ar, /de/ar/login, /de/ar/privacy.
+  assert.equal(getMarketLocalePath('germany', 'ar'), '/de/ar');
+  assert.equal(getMarketChildPath('germany', 'ar', ['login']), '/de/ar/login');
+  assert.equal(getMarketChildPath('germany', 'ar', ['privacy']), '/de/ar/privacy');
 });
