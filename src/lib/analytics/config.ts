@@ -1,4 +1,4 @@
-import { getMarketChildPath } from '@/lib/market-routing';
+import { getMarketChildPath, type MarketLanguage } from '@/lib/market-routing';
 
 export function isValidGtmId(value: string | undefined | null): boolean {
   if (!value) return false;
@@ -17,9 +17,14 @@ export function getConfiguredGtmId(): string | null {
 }
 
 export function getAnalyticsPrivacyHref(pathname: string, locale: string): string {
+  if (pathname.startsWith('/fr')) {
+    // French programme fallback to global English privacy page
+    return '/en/privacy';
+  }
+
   if (pathname.startsWith('/de')) {
     // Germany market
-    return getMarketChildPath('germany', locale as any, ['privacy']);
+    return getMarketChildPath('germany', locale as MarketLanguage, ['privacy']);
   }
   // North America
   return `/${locale}/privacy`;

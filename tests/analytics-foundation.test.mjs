@@ -168,9 +168,14 @@ test('Analytics Foundation - Privacy Route Resolution', () => {
   assert.equal(getAnalyticsPrivacyHref('/de', 'de'), '/de/privacy');
   assert.equal(getAnalyticsPrivacyHref('/de/en', 'en'), '/de/en/privacy');
   assert.equal(getAnalyticsPrivacyHref('/de/ar', 'ar'), '/de/ar/privacy');
+  assert.equal(getAnalyticsPrivacyHref('/fr/programme-francais', 'fr'), '/en/privacy');
   
-  // ensure no /de/de
-  assert.doesNotMatch(getAnalyticsPrivacyHref('/de', 'de'), /\/de\/de/);
+  // ensure no /de/de or /fr/privacy
+  const dePrivacy = getAnalyticsPrivacyHref('/de', 'de');
+  assert.doesNotMatch(dePrivacy, /\/de\/de/);
+  
+  const frPrivacy = getAnalyticsPrivacyHref('/fr/programme-francais', 'fr');
+  assert.doesNotMatch(frPrivacy, /\/fr\/privacy/);
 });
 
 test('Analytics Foundation - Conversion Guards (Source Contract)', () => {
@@ -194,5 +199,24 @@ test('Analytics Foundation - Provider Pre-Consent Contract (Source Contract)', (
 
   // Assert GTM script is guarded by both consent and gtmId
   assert.match(providerSrc, /\{\s*consent\s*===\s*'granted'\s*&&\s*gtmId\s*&&/);
+});
+
+test('Analytics Foundation - French Programme Coverage (Source Contract)', () => {
+  const layoutPath = path.join(root, 'src/app/fr/layout.tsx');
+  const layoutSrc = fs.readFileSync(layoutPath, 'utf8');
+
+  // assert EXACTLY ONE AnalyticsProvider in layout
+  const providerMatches = layoutSrc.match(/<AnalyticsProvider\s*\/>/g);
+  assert.equal(providerMatches?.length, 1, 'French layout should contain exactly one AnalyticsProvider');
+
+  const footerPath = path.join(root, 'src/components/programme-francais/french-program-footer.tsx');
+  const footerSrc = fs.readFileSync(footerPath, 'utf8');
+
+  // Assert both Email and Booking CTAs have data-analytics-event="contact_cta_clicked" and data-analytics-surface="footer"
+  const eventMatches = footerSrc.match(/data-analytics-event="contact_cta_clicked"/g);
+  assert.equal(eventMatches?.length, 2, 'French footer should have exactly 2 contact_cta_clicked events');
+
+  const surfaceMatches = footerSrc.match(/data-analytics-surface="footer"/g);
+  assert.equal(surfaceMatches?.length, 2, 'French footer should have exactly 2 footer surface labels');
 });
 
