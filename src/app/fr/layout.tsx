@@ -19,6 +19,7 @@ import {
 import {
   dinNext,
 } from '@/lib/fonts';
+import { AnalyticsProvider } from '@/components/analytics/analytics-provider';
 
 import '../globals.css';
 
@@ -154,6 +155,8 @@ export default function FrenchLayout({
               ),
           }}
         />
+
+        <AnalyticsProvider />
 
         <a
           href="#main-content"

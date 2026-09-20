@@ -1,10 +1,11 @@
-import { type AnalyticsEventName, type AnalyticsEventMap } from './events';
+import { type AnalyticsEventName, type AnalyticsEventMap, sanitizeEventProperties } from './events';
+import { getConfiguredGtmId } from './config';
 import { getAnalyticsConsent } from './consent';
 import { getAttribution } from './attribution';
 
 declare global {
   interface Window {
-    dataLayer: any[];
+    dataLayer: Record<string, unknown>[];
   }
 }
 
@@ -14,6 +15,9 @@ export function trackEvent<K extends AnalyticsEventName>(
 ): void {
   if (typeof window === 'undefined') return;
 
+  const gtmId = getConfiguredGtmId();
+  if (!gtmId) return;
+
   // Check consent
   if (getAnalyticsConsent() !== 'granted') return;
 
@@ -22,14 +26,16 @@ export function trackEvent<K extends AnalyticsEventName>(
 
   const attribution = getAttribution();
 
-  const payload = {
-    event: eventName,
+  const rawPayload = {
     ...attribution,
     ...properties,
   };
 
+  const safePayload = sanitizeEventProperties(eventName, rawPayload);
+  safePayload.event = eventName;
+
   try {
-    window.dataLayer.push(payload);
+    window.dataLayer.push(safePayload);
   } catch (error) {
     console.warn('Analytics error', error);
   }

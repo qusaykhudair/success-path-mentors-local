@@ -203,6 +203,8 @@ export function FrenchProgramFooter() {
                 transition-colors
                 hover:text-[#67E8E5]
               "
+              data-analytics-event="contact_cta_clicked"
+              data-analytics-surface="footer"
             >
               <Mail
                 aria-hidden="true"
@@ -227,6 +229,8 @@ export function FrenchProgramFooter() {
                 transition-colors
                 hover:text-[#67E8E5]
               "
+              data-analytics-event="contact_cta_clicked"
+              data-analytics-surface="footer"
             >
               <MessageCircle
                 aria-hidden="true"

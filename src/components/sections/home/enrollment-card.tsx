@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ArrowRight, ArrowLeft, Check, Loader2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { trackEvent } from '@/lib/analytics/client';
+import { type AnalyticsLocale } from '@/lib/analytics/events';
 
 /* ────────────────────────────────────────────────────────────
    Data contract — this is the exact shape the frontend will POST.
@@ -98,7 +99,7 @@ export function EnrollmentCard({ copy, locale }: EnrollmentCardProps) {
   const handleInteraction = () => {
     if (!hasStarted) {
       setHasStarted(true);
-      trackEvent('trial_form_start', { market, locale, surface: 'hero' });
+      trackEvent('trial_form_start', { market, locale: locale as AnalyticsLocale, surface: 'hero' });
     }
   };
 
@@ -144,7 +145,7 @@ export function EnrollmentCard({ copy, locale }: EnrollmentCardProps) {
 
   function next() {
     if (validateStep(step)) {
-      trackEvent('trial_form_step', { market, locale, surface: 'hero', step_number: step, action: 'completed' });
+      trackEvent('trial_form_step', { market, locale: locale as AnalyticsLocale, surface: 'hero', step_number: step, action: 'completed' });
       setStep((s) => Math.min(s + 1, TOTAL_STEPS));
     }
   }
@@ -155,7 +156,7 @@ export function EnrollmentCard({ copy, locale }: EnrollmentCardProps) {
   async function handleSubmit() {
     if (!validateStep(3)) return;
     setStatus('submitting');
-    trackEvent('trial_registration_handoff', { market, locale, surface: 'hero' });
+    trackEvent('trial_registration_handoff', { market, locale: locale as AnalyticsLocale, surface: 'hero' });
     router.push(`/${locale}/register`);
   }
 

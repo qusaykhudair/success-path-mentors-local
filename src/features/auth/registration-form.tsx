@@ -17,13 +17,14 @@ import {
   ShieldCheck,
   UserRound,
 } from 'lucide-react';
-import { useEffect, useMemo, useState } from 'react';
+import { useRef, useEffect, useState, useMemo } from 'react';
 import { useForm, type FieldPath } from 'react-hook-form';
 import { z } from 'zod';
 
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { getMarketConfig, type MarketId } from '@/config/markets';
+import { getMarketChildPath, getMarketLocalePath, type MarketLanguage } from '@/lib/market-routing';
 import {
   getRegistrationCountries,
   getRegistrationTimezone,
@@ -213,7 +214,6 @@ export function RegistrationForm({
   marketId = 'north-america',
   loginHref,
   homeHref,
-  initialMethod = null,
   initialTicket = null,
   initialIdentity = null,
 }: {
@@ -221,7 +221,6 @@ export function RegistrationForm({
   marketId?: MarketId;
   loginHref?: string;
   homeHref?: string;
-  initialMethod?: 'email' | 'whatsapp' | null;
   initialTicket?: string | null;
   initialIdentity?: VerifiedIdentity | null;
 }) {
@@ -233,8 +232,12 @@ export function RegistrationForm({
   const BackIcon = isRtl ? ArrowRight : ArrowLeft;
   const languageIndex = locale === 'ar' ? 1 : locale === 'de' ? 2 : 0;
 
+  const hasFiredFlowStart = useRef(false);
+  const hasFiredRegistrationComplete = useRef(false);
+
   useEffect(() => {
-    if (verifiedTicket && verifiedIdentity) {
+    if (verifiedTicket && verifiedIdentity && !hasFiredFlowStart.current) {
+      hasFiredFlowStart.current = true;
       trackEvent('registration_flow_start', { market: marketId, locale });
     }
   }, [verifiedTicket, verifiedIdentity, marketId, locale]);
@@ -252,12 +255,12 @@ export function RegistrationForm({
   const marketOptions = optionSetsByMarket[marketId] || optionSetsByMarket['north-america'];
   const effectiveLoginHref =
     loginHref ||
-    (marketId === 'germany' ? `/de/${locale}/login` : `/${locale}/login`);
+    (marketId === 'germany' ? getMarketChildPath('germany', locale as MarketLanguage, ['login']) : `/${locale}/login`);
   const effectiveHomeHref =
     homeHref ||
-    (marketId === 'germany' ? `/de/${locale}` : `/${locale}`);
+    (marketId === 'germany' ? getMarketLocalePath('germany', locale as MarketLanguage) : `/${locale}`);
   const effectivePrivacyHref =
-    marketId === 'germany' ? `/de/${locale}/privacy` : `/${locale}/privacy`;
+    marketId === 'germany' ? getMarketChildPath('germany', locale as MarketLanguage, ['privacy']) : `/${locale}/privacy`;
 
   const [phoneCountry, setPhoneCountry] = useState<CountryCode>(marketId === 'germany' ? 'DE' : defaultPhoneCountry);
 
@@ -313,7 +316,8 @@ export function RegistrationForm({
   const [resendSeconds, setResendSeconds] = useState(0);
 
   useEffect(() => {
-    if (confirmation) {
+    if (confirmation && !hasFiredRegistrationComplete.current) {
+      hasFiredRegistrationComplete.current = true;
       trackEvent('trial_registration_complete', {
         market: marketId,
         locale,
