@@ -3,6 +3,9 @@ import type {
 } from 'next';
 
 import {
+  TUTORING_PAGES,
+} from '@/content/germany-tutoring/pages';
+import {
   approvedChemistryStrands,
 } from '@/content/subjects/chemistry/chemistry-strands';
 import {
@@ -29,6 +32,11 @@ import {
 import {
   SITE_URL,
 } from '@/lib/constants';
+import {
+  getMarketChildPath,
+  getMarketLocalePath,
+  type MarketLanguage,
+} from '@/lib/market-routing';
 import {
   buildAbsoluteUrl,
 } from '@/lib/seo/urls';
@@ -119,6 +127,12 @@ const frenchPaths = [
   ),
 ];
 
+const germanyLocales = [
+  'de',
+  'en',
+  'ar',
+] as const satisfies readonly MarketLanguage[];
+
 function getLocalizedPriority(
   path: string
 ): number {
@@ -191,6 +205,47 @@ function getFrenchPriority(
   }
 
   return 0.82;
+}
+
+function getGermanyLocalizedUrl(
+  locale: MarketLanguage,
+  slug?: string
+): string {
+  const path = slug
+    ? getMarketChildPath(
+        'germany',
+        locale,
+        slug.split('/')
+      )
+    : getMarketLocalePath(
+        'germany',
+        locale
+      );
+
+  return `${SITE_URL}${path}`;
+}
+
+function getGermanyAlternates(
+  slug?: string
+): Record<string, string> {
+  return {
+    'de-DE': getGermanyLocalizedUrl(
+      'de',
+      slug
+    ),
+    'en-DE': getGermanyLocalizedUrl(
+      'en',
+      slug
+    ),
+    'ar-DE': getGermanyLocalizedUrl(
+      'ar',
+      slug
+    ),
+    'x-default': getGermanyLocalizedUrl(
+      'de',
+      slug
+    ),
+  };
 }
 
 export default function sitemap():
@@ -267,52 +322,53 @@ export default function sitemap():
       })
     );
 
-  const germanyEntries = [
-    {
-      url: `${SITE_URL}/de`,
-      changeFrequency: 'weekly' as const,
-      priority: 1,
-      alternates: {
-        languages: {
-          'de-DE': `${SITE_URL}/de`,
-          'en-DE': `${SITE_URL}/de/en`,
-          'ar-DE': `${SITE_URL}/de/ar`,
-          'x-default': `${SITE_URL}/de`,
+  const germanyRootEntries =
+    germanyLocales.map(
+      (locale) => ({
+        url:
+          getGermanyLocalizedUrl(
+            locale
+          ),
+        changeFrequency:
+          'weekly' as const,
+        priority: 1,
+        alternates: {
+          languages:
+            getGermanyAlternates(),
         },
-      },
-    },
-    {
-      url: `${SITE_URL}/de/en`,
-      changeFrequency: 'weekly' as const,
-      priority: 1,
-      alternates: {
-        languages: {
-          'de-DE': `${SITE_URL}/de`,
-          'en-DE': `${SITE_URL}/de/en`,
-          'ar-DE': `${SITE_URL}/de/ar`,
-          'x-default': `${SITE_URL}/de`,
-        },
-      },
-    },
-    {
-      url: `${SITE_URL}/de/ar`,
-      changeFrequency: 'weekly' as const,
-      priority: 1,
-      alternates: {
-        languages: {
-          'de-DE': `${SITE_URL}/de`,
-          'en-DE': `${SITE_URL}/de/en`,
-          'ar-DE': `${SITE_URL}/de/ar`,
-          'x-default': `${SITE_URL}/de`,
-        },
-      },
-    },
-  ];
+      })
+    );
+
+  const germanyChildEntries =
+    Object.keys(
+      TUTORING_PAGES
+    ).flatMap(
+      (slug) =>
+        germanyLocales.map(
+          (locale) => ({
+            url:
+              getGermanyLocalizedUrl(
+                locale,
+                slug
+              ),
+            changeFrequency:
+              'monthly' as const,
+            priority: 0.9,
+            alternates: {
+              languages:
+                getGermanyAlternates(
+                  slug
+                ),
+            },
+          })
+        )
+    );
 
   return [
     ...localizedEntries,
     ...englishGapEntries,
     ...frenchEntries,
-    ...germanyEntries,
+    ...germanyRootEntries,
+    ...germanyChildEntries,
   ];
 }

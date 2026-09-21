@@ -24,9 +24,7 @@ const navigation = {
 };
 
 test('toAuthApiLocale maps UI locales cleanly to backend supported API locales', () => {
-  // de maps safely to en for backend contracts
   assert.equal(toAuthApiLocale('de'), 'en');
-  // en and ar stay identical
   assert.equal(toAuthApiLocale('en'), 'en');
   assert.equal(toAuthApiLocale('ar'), 'ar');
 });
@@ -42,7 +40,6 @@ test('authCopy contains complete German (de) copy with full parity', () => {
   assert.equal(deCopy.register.title, 'Familienkonto erstellen');
   assert.equal(deCopy.common.backHome, 'Zurück zur Website');
 
-  // Verify key structure parity between en and de
   function compareKeys(objA, objB, prefix = '') {
     const keysA = Object.keys(objA).sort();
     const keysB = Object.keys(objB).sort();
@@ -61,16 +58,13 @@ test('market-aware registration options provide Germany defaults while preservin
   const germanyConfig = markets.getMarketConfig('germany');
   const naConfig = markets.getMarketConfig('north-america');
 
-  // North America default preserves Canada and America/Toronto
   const naCountries = getRegistrationCountries(naConfig);
   assert.equal(naCountries[0][0], 'Canada');
   assert.equal(getRegistrationTimezone(() => '', naConfig), 'America/Toronto');
 
-  // Default call with no args preserves North America
   assert.deepEqual(getRegistrationCountries(), naCountries);
   assert.equal(getRegistrationTimezone(() => ''), 'America/Toronto');
 
-  // Germany market options
   const deCountries = getRegistrationCountries(germanyConfig, 'de');
   assert.equal(deCountries[0][0], 'Germany');
   assert.equal(deCountries[0][1], 'Deutschland');
@@ -92,7 +86,6 @@ test('Germany child routing serves login and register while rejecting invalid ch
   const boundaryLoad = createLoader(root, { 'next/navigation': navigation });
   const page = boundaryLoad('src/app/de/[[...marketSegments]]/page.tsx').default;
 
-  // Supported Germany auth routes render valid elements
   for (const lang of ['de', 'en', 'ar']) {
     const loginPage = await page({ params: Promise.resolve({ marketSegments: [lang, 'login'] }) });
     assert.ok(loginPage, `Expected login page to render for ${lang}`);
@@ -101,11 +94,8 @@ test('Germany child routing serves login and register while rejecting invalid ch
     assert.ok(registerPage, `Expected register page to render for ${lang}`);
   }
 
-  // /de/fr/login and /de/fr/register must return notFound (404)
   await assert.rejects(page({ params: Promise.resolve({ marketSegments: ['fr', 'login'] }) }), (err) => err === notFoundError);
   await assert.rejects(page({ params: Promise.resolve({ marketSegments: ['fr', 'register'] }) }), (err) => err === notFoundError);
-
-  // Unknown child route returns notFound (404)
   await assert.rejects(page({ params: Promise.resolve({ marketSegments: ['de', 'dashboard'] }) }), (err) => err === notFoundError);
 });
 
@@ -114,12 +104,15 @@ test('Germany Header and Footer route auth strictly within Germany market', asyn
   const headerContent = await readFile(new URL('../src/components/germany/market-header.tsx', import.meta.url), 'utf8');
   const footerContent = await readFile(new URL('../src/components/germany/market-footer.tsx', import.meta.url), 'utf8');
 
-  // Desktop and mobile header links route within market
-  assert.match(headerContent, /\/de\/\$\{locale\}\/login/);
-  assert.match(headerContent, /\/de\/\$\{locale\}\/trial/);
+  assert.match(headerContent, /getMarketChildPath/);
+  assert.match(footerContent, /getMarketChildPath/);
+  assert.doesNotMatch(headerContent, /`\/de\/\$\{locale\}/);
+  assert.doesNotMatch(footerContent, /`\/de\/\$\{locale\}/);
   assert.doesNotMatch(headerContent, /const authLocale =/);
 
-  // Footer account links route within market
-  assert.match(footerContent, /\/de\/\$\{locale\}\/login/);
-  assert.match(footerContent, /\/de\/\$\{locale\}\/register/);
+  assert.equal(routing.getMarketChildPath('germany', 'de', ['login']), '/de/login');
+  assert.equal(routing.getMarketChildPath('germany', 'de', ['register']), '/de/register');
+  assert.equal(routing.getMarketChildPath('germany', 'de', ['trial']), '/de/trial');
+  assert.equal(routing.getMarketChildPath('germany', 'en', ['login']), '/de/en/login');
+  assert.equal(routing.getMarketChildPath('germany', 'ar', ['register']), '/de/ar/register');
 });

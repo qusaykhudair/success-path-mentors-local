@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { redirect, notFound } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import { requireMarketRoute } from '@/lib/market-route-boundary';
 import { getMarketLocalePath, getMarketChildPath, resolveMarketRoute } from '@/lib/market-routing';
 
@@ -29,6 +29,31 @@ import { getTutoringPage } from '@/content/germany-tutoring/pages';
 import type { TutoringLocale } from '@/content/germany-tutoring/types';
 import type { AuthUiLocale } from '@/features/auth/auth-contracts';
 
+const SITE_URL = 'https://successpathmentors.net';
+const GERMANY_LOCALES = ['de', 'en', 'ar'] as const;
+
+function getGermanyAbsoluteUrl(
+  locale: TutoringLocale,
+  childSegments: readonly string[] = []
+): string {
+  const path = childSegments.length > 0
+    ? getMarketChildPath('germany', locale, childSegments)
+    : getMarketLocalePath('germany', locale);
+
+  return `${SITE_URL}${path}`;
+}
+
+function getGermanyLanguageAlternates(
+  childSegments: readonly string[] = []
+): Record<string, string> {
+  return {
+    'de-DE': getGermanyAbsoluteUrl('de', childSegments),
+    'en-DE': getGermanyAbsoluteUrl('en', childSegments),
+    'ar-DE': getGermanyAbsoluteUrl('ar', childSegments),
+    'x-default': getGermanyAbsoluteUrl('de', childSegments),
+  };
+}
+
 export async function generateMetadata({ params }: {
   params: Promise<{ marketSegments?: string[] }>;
 }): Promise<Metadata> {
@@ -37,8 +62,11 @@ export async function generateMetadata({ params }: {
   if (!route) return {};
 
   if (route.kind === 'child' && route.childSegments && route.childSegments.length > 0) {
-    const childPath = route.childSegments.join('/');
-    const locale = route.language as 'de' | 'en' | 'ar';
+    const childSegments = route.childSegments;
+    const childPath = childSegments.join('/');
+    const locale = route.language as TutoringLocale;
+    const canonical = getGermanyAbsoluteUrl(locale, childSegments);
+    const languages = getGermanyLanguageAlternates(childSegments);
 
     if (childPath === 'privacy') {
       const doc = getGermanyPrivacyPolicy(locale);
@@ -46,17 +74,20 @@ export async function generateMetadata({ params }: {
         title: doc.seo.title,
         description: doc.seo.description,
         alternates: {
-          canonical: locale === 'de' ? `https://successpathmentors.net/de/privacy` : `https://successpathmentors.net/de/${locale}/privacy`,
+          canonical,
+          languages,
         },
       };
     }
+
     if (childPath === 'terms') {
       const doc = getGermanyTerms(locale);
       return {
         title: doc.seo.title,
         description: doc.seo.description,
         alternates: {
-          canonical: locale === 'de' ? `https://successpathmentors.net/de/terms` : `https://successpathmentors.net/de/${locale}/terms`,
+          canonical,
+          languages,
         },
       };
     }
@@ -69,18 +100,23 @@ export async function generateMetadata({ params }: {
         description: tutoringDoc.seo.description,
         keywords: tutoringDoc.seo.keywords as string[],
         alternates: {
-          canonical: locale === 'de' ? `https://successpathmentors.net/de/${childPath}` : `https://successpathmentors.net/de/${locale}/${childPath}`,
+          canonical,
+          languages,
         },
         openGraph: {
           title: tutoringDoc.seo.title,
           description: tutoringDoc.seo.description,
-          url: locale === 'de' ? `https://successpathmentors.net/de/${childPath}` : `https://successpathmentors.net/de/${locale}/${childPath}`,
+          url: canonical,
           siteName: 'Success Path Mentors Europe',
-          locale: locale === 'de' ? 'de_DE' : locale === 'ar' ? 'ar_AR' : 'en_US',
+          locale: locale === 'de' ? 'de_DE' : locale === 'ar' ? 'ar_AR' : 'en_DE',
+          alternateLocale: GERMANY_LOCALES
+            .filter((item) => item !== locale)
+            .map((item) => item === 'de' ? 'de_DE' : item === 'ar' ? 'ar_AR' : 'en_DE'),
           type: 'website',
         },
       };
     }
+
     // Auth and utility pages metadata
     if (childPath === 'login') {
       const titles = { de: 'Anmelden', en: 'Login', ar: 'تسجيل الدخول' };
@@ -97,7 +133,7 @@ export async function generateMetadata({ params }: {
   }
 
   if (route.kind === 'locale') {
-    const locale = route.language as 'de' | 'en' | 'ar';
+    const locale = route.language as TutoringLocale;
     const titles = {
       de: 'Online-Nachhilfe in Deutschland | Success Path Mentors',
       en: 'Online Tutoring in Germany | Success Path Mentors',
@@ -108,18 +144,13 @@ export async function generateMetadata({ params }: {
       en: 'Personalized online tutoring in Germany for all grade levels.',
       ar: 'دروس خصوصية أونلاين مخصصة في ألمانيا لجميع المراحل الدراسية.'
     };
-    
+
     return {
       title: titles[locale],
       description: descriptions[locale],
       alternates: {
-        canonical: locale === 'de' ? 'https://successpathmentors.net/de' : `https://successpathmentors.net/de/${locale}`,
-        languages: {
-          'de-DE': 'https://successpathmentors.net/de',
-          'en-DE': 'https://successpathmentors.net/de/en',
-          'ar-DE': 'https://successpathmentors.net/de/ar',
-          'x-default': 'https://successpathmentors.net/de'
-        }
+        canonical: getGermanyAbsoluteUrl(locale),
+        languages: getGermanyLanguageAlternates(),
       },
       robots: { index: true, follow: true }
     };

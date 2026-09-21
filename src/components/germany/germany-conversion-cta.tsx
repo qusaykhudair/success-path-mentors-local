@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { Container } from '@/components/ui/container';
 import { getMarketConfig } from '@/config/markets';
 import { parseNavigationContext } from '@/lib/market-navigation';
+import { getMarketChildPath } from '@/lib/market-routing';
 import { ScrollReveal } from '@/components/germany/scroll-reveal';
 import {
   Sparkles,
@@ -26,6 +27,7 @@ export function GermanyConversionCTA() {
   const marketConfig = getMarketConfig('germany');
   const isRtl = locale === 'ar';
   const ArrowIcon = isRtl ? ArrowLeft : ArrowRight;
+  const trialHref = getMarketChildPath('germany', locale, ['trial']);
 
   const trustPoints = [
     t('trustPoints.0'),
@@ -67,7 +69,6 @@ export function GermanyConversionCTA() {
       <Container>
         <ScrollReveal>
           <div className="relative isolate overflow-hidden rounded-[2.5rem] border border-primary-800/40 bg-gradient-to-br from-primary-950 via-primary-900 to-primary-950 px-6 py-12 text-white shadow-2xl sm:px-10 sm:py-16 lg:px-14 lg:py-20">
-            {/* Background Ambient Effects */}
             <div
               aria-hidden="true"
               className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
@@ -79,7 +80,6 @@ export function GermanyConversionCTA() {
             </div>
 
             <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:gap-14 xl:gap-18">
-              {/* Left Column: Conversion Message */}
               <div className="flex flex-col items-start">
                 <span className="inline-flex items-center gap-2 rounded-full border border-accent-400/30 bg-accent-500/15 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-accent-300 backdrop-blur-sm">
                   <Sparkles className="h-3.5 w-3.5 text-accent-400" />
@@ -94,7 +94,6 @@ export function GermanyConversionCTA() {
                   {t('subheadline')}
                 </p>
 
-                {/* 3 Key Trust Badges */}
                 <ul className="mt-8 grid w-full gap-3 sm:grid-cols-3">
                   {trustPoints.map((point) => (
                     <li
@@ -107,10 +106,9 @@ export function GermanyConversionCTA() {
                   ))}
                 </ul>
 
-                {/* Action Buttons */}
                 <div className="mt-9 flex w-full flex-col gap-3.5 sm:w-auto sm:flex-row sm:items-center">
                   <a
-                    href={`/de/${locale}/trial`}
+                    href={trialHref}
                     className="inline-flex min-h-touch w-full items-center justify-center gap-2 rounded-xl bg-accent-500 px-8 py-3.5 text-sm font-bold text-primary-950 shadow-lg shadow-accent-500/25 transition-all duration-200 hover:bg-accent-400 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 sm:w-auto whitespace-nowrap"
                   >
                     <span>{t('primaryAction')}</span>
@@ -128,14 +126,12 @@ export function GermanyConversionCTA() {
                   </a>
                 </div>
 
-                {/* Reassurance Microcopy */}
                 <div className="mt-4 flex items-center gap-2 text-xs text-primary-300">
                   <ShieldCheck className="h-4 w-4 text-accent-400 shrink-0" />
                   <span>{t('reassurance')}</span>
                 </div>
               </div>
 
-              {/* Right Column: "What happens next?" step card */}
               <div className="relative overflow-hidden rounded-2xl border border-white/15 bg-white/[0.07] p-6 shadow-xl backdrop-blur-md sm:p-8">
                 <div
                   aria-hidden="true"
@@ -158,33 +154,28 @@ export function GermanyConversionCTA() {
                   </div>
 
                   <ol className="relative mt-7 flex flex-col gap-4">
-                    {/* Vertical connecting line */}
                     <span
                       aria-hidden="true"
                       className="absolute bottom-6 start-4 top-6 w-px bg-gradient-to-b from-accent-400 via-accent-300/40 to-transparent"
                     />
 
-                    {nextSteps.map((step, idx) => {
-                      const StepIcon = step.icon;
-                      return (
-                        <li key={step.title} className="relative flex items-start gap-4">
-                          <span className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-accent-400/40 bg-primary-900 text-accent-300 shadow-md text-xs font-bold">
-                            {idx + 1}
-                          </span>
-                          <div className="min-w-0 flex-1 rounded-xl border border-white/10 bg-white/5 p-3.5">
-                            <h4 className="text-xs font-bold text-white sm:text-sm">
-                              {step.title}
-                            </h4>
-                            <p className="mt-1 text-xs text-primary-200 leading-relaxed">
-                              {step.desc}
-                            </p>
-                          </div>
-                        </li>
-                      );
-                    })}
+                    {nextSteps.map((step, idx) => (
+                      <li key={step.title} className="relative flex items-start gap-4">
+                        <span className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-accent-400/40 bg-primary-900 text-accent-300 shadow-md text-xs font-bold">
+                          {idx + 1}
+                        </span>
+                        <div className="min-w-0 flex-1 rounded-xl border border-white/10 bg-white/5 p-3.5">
+                          <h4 className="text-xs font-bold text-white sm:text-sm">
+                            {step.title}
+                          </h4>
+                          <p className="mt-1 text-xs text-primary-200 leading-relaxed">
+                            {step.desc}
+                          </p>
+                        </div>
+                      </li>
+                    ))}
                   </ol>
 
-                  {/* Panel Guarantee Note */}
                   <div className="mt-6 flex items-start gap-2.5 rounded-xl border border-accent-400/20 bg-accent-500/10 p-3 text-xs text-primary-200">
                     <ShieldCheck className="h-4 w-4 shrink-0 text-accent-400 mt-0.5" />
                     <span>{t('panelNote')}</span>
