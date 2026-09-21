@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import { Container } from '@/components/ui/container';
 import { getMarketConfig } from '@/config/markets';
 import { parseNavigationContext } from '@/lib/market-navigation';
+import { getMarketChildPath, getMarketLocalePath } from '@/lib/market-routing';
 import { Phone, Mail } from 'lucide-react';
 
 export function MarketFooter() {
@@ -16,6 +17,9 @@ export function MarketFooter() {
   const pathname = usePathname() || '';
   const context = parseNavigationContext(pathname);
   const locale = (context.locale as 'de' | 'en' | 'ar') || 'de';
+  const homeHref = getMarketLocalePath('germany', locale);
+  const childHref = (...segments: string[]) =>
+    getMarketChildPath('germany', locale, segments);
 
   return (
     <footer className="border-t border-primary-900 bg-primary-950 text-white pt-20 pb-12">
@@ -23,7 +27,7 @@ export function MarketFooter() {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
           {/* Col 1: Brand & Identity */}
           <div className="flex flex-col gap-6 lg:col-span-2">
-            <Link href={`/de/${locale}`} className="inline-flex w-fit items-center">
+            <Link href={homeHref} className="inline-flex w-fit items-center">
               <Image
                 src="/images/Success_Path_Mentors_Europe_Logo_Transparent.png"
                 alt="Success Path Mentors Europe"
@@ -56,17 +60,17 @@ export function MarketFooter() {
             </h4>
             <ul className="flex flex-col gap-2.5 text-xs sm:text-sm text-primary-200">
               <li>
-                <Link href={`/de/${locale}/tutoring/one-to-one`} className="hover:text-white transition-colors">
+                <Link href={childHref('tutoring', 'one-to-one')} className="hover:text-white transition-colors">
                   {tHeader('tutoringOneToOne', { fallback: 'One-to-One Tutoring' })}
                 </Link>
               </li>
               <li>
-                <Link href={`/de/${locale}/tutoring/small-groups`} className="hover:text-white transition-colors">
+                <Link href={childHref('tutoring', 'small-groups')} className="hover:text-white transition-colors">
                   {tHeader('tutoringSmallGroups', { fallback: 'Small Groups (Up to 3)' })}
                 </Link>
               </li>
               <li>
-                <Link href={`/de/${locale}/tutoring/language-levels`} className="hover:text-white transition-colors">
+                <Link href={childHref('tutoring', 'language-levels')} className="hover:text-white transition-colors">
                   {tHeader('tutoringLanguageLevels', { fallback: 'Language Support by Level' })}
                 </Link>
               </li>
@@ -74,22 +78,22 @@ export function MarketFooter() {
                 {tHeader('schoolSupport', { fallback: 'School Support' })}
               </li>
               <li>
-                <Link href={`/de/${locale}/school/grades-1-6`} className="hover:text-white transition-colors">
+                <Link href={childHref('school', 'grades-1-6')} className="hover:text-white transition-colors">
                   {tHeader('schoolGrades1To6', { fallback: 'Grades 1–6' })}
                 </Link>
               </li>
               <li>
-                <Link href={`/de/${locale}/school/grades-7-9`} className="hover:text-white transition-colors">
+                <Link href={childHref('school', 'grades-7-9')} className="hover:text-white transition-colors">
                   {tHeader('schoolGrades7To9', { fallback: 'Grades 7–9' })}
                 </Link>
               </li>
               <li>
-                <Link href={`/de/${locale}/school/grades-10-12`} className="hover:text-white transition-colors">
+                <Link href={childHref('school', 'grades-10-12')} className="hover:text-white transition-colors">
                   {tHeader('schoolGrades10To12', { fallback: 'Grades 10–12' })}
                 </Link>
               </li>
               <li>
-                <Link href={`/de/${locale}/adults`} className="hover:text-white transition-colors">
+                <Link href={childHref('adults')} className="hover:text-white transition-colors">
                   {tHeader('adults', { fallback: 'Adults' })}
                 </Link>
               </li>
@@ -103,22 +107,22 @@ export function MarketFooter() {
             </h4>
             <ul className="flex flex-col gap-2.5 text-xs sm:text-sm text-primary-200">
               <li>
-                <Link href={`/de/${locale}/languages/german`} className="hover:text-white transition-colors">
+                <Link href={childHref('languages', 'german')} className="hover:text-white transition-colors">
                   {tHeader('langGerman', { fallback: 'German' })}
                 </Link>
               </li>
               <li>
-                <Link href={`/de/${locale}/languages/english`} className="hover:text-white transition-colors">
+                <Link href={childHref('languages', 'english')} className="hover:text-white transition-colors">
                   {tHeader('langEnglish', { fallback: 'English' })}
                 </Link>
               </li>
               <li>
-                <Link href={`/de/${locale}/languages/french`} className="hover:text-white transition-colors">
+                <Link href={childHref('languages', 'french')} className="hover:text-white transition-colors">
                   {tHeader('langFrench', { fallback: 'French' })}
                 </Link>
               </li>
               <li>
-                <Link href={`/de/${locale}/languages/arabic`} className="hover:text-white transition-colors">
+                <Link href={childHref('languages', 'arabic')} className="hover:text-white transition-colors">
                   {tHeader('langArabic', { fallback: 'Arabic' })}
                 </Link>
               </li>
@@ -126,22 +130,22 @@ export function MarketFooter() {
                 {t('aboutTitle')}
               </li>
               <li>
-                <a href={`/de/${locale}#why-spm`} className="hover:text-white transition-colors">
+                <a href={`${homeHref}#why-spm`} className="hover:text-white transition-colors">
                   {tHeader('whySpm')}
                 </a>
               </li>
               <li>
-                <a href={`/de/${locale}#teacher-quality`} className="hover:text-white transition-colors">
+                <a href={`${homeHref}#teacher-quality`} className="hover:text-white transition-colors">
                   {tHeader('teacherQuality')}
                 </a>
               </li>
               <li>
-                <a href={`/de/${locale}#how-it-works`} className="hover:text-white transition-colors">
+                <a href={`${homeHref}#how-it-works`} className="hover:text-white transition-colors">
                   {tHeader('howItWorks')}
                 </a>
               </li>
               <li>
-                <a href={`/de/${locale}#pricing`} className="hover:text-white transition-colors">
+                <a href={`${homeHref}#pricing`} className="hover:text-white transition-colors">
                   {tHeader('pricing')}
                 </a>
               </li>
@@ -155,27 +159,27 @@ export function MarketFooter() {
             </h4>
             <ul className="flex flex-col gap-2.5 text-xs sm:text-sm text-primary-200">
               <li>
-                <Link href={`/de/${locale}/login`} className="hover:text-white transition-colors">
+                <Link href={childHref('login')} className="hover:text-white transition-colors">
                   {tHeader('login')}
                 </Link>
               </li>
               <li>
-                <Link href={`/de/${locale}/register`} className="hover:text-white transition-colors">
+                <Link href={childHref('register')} className="hover:text-white transition-colors">
                   {tHeader('register')}
                 </Link>
               </li>
               <li>
-                <Link href={`/de/${locale}/trial`} className="hover:text-accent-300 font-semibold transition-colors">
+                <Link href={childHref('trial')} className="hover:text-accent-300 font-semibold transition-colors">
                   {t('freeTrial')}
                 </Link>
               </li>
               <li>
-                <Link href={`/de/${locale}/privacy`} className="hover:text-white transition-colors">
+                <Link href={childHref('privacy')} className="hover:text-white transition-colors">
                   {t('legal.privacy')}
                 </Link>
               </li>
               <li>
-                <Link href={`/de/${locale}/terms`} className="hover:text-white transition-colors">
+                <Link href={childHref('terms')} className="hover:text-white transition-colors">
                   {t('legal.terms')}
                 </Link>
               </li>
@@ -189,11 +193,11 @@ export function MarketFooter() {
             &copy; {new Date().getFullYear()} Success Path Mentors. {t('allRightsReserved')}
           </p>
           <div className="flex items-center gap-6 text-xs text-primary-300">
-            <Link href={`/de/${locale}/privacy`} className="hover:text-white transition-colors">
+            <Link href={childHref('privacy')} className="hover:text-white transition-colors">
               {t('legal.privacy')}
             </Link>
             <span>•</span>
-            <Link href={`/de/${locale}/terms`} className="hover:text-white transition-colors">
+            <Link href={childHref('terms')} className="hover:text-white transition-colors">
               {t('legal.terms')}
             </Link>
           </div>
