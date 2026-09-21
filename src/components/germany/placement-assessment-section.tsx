@@ -7,6 +7,7 @@ import { Container } from '@/components/ui/container';
 import { ScrollReveal } from './scroll-reveal';
 import { getMarketConfig } from '@/config/markets';
 import { parseNavigationContext } from '@/lib/market-navigation';
+import { getMarketChildPath } from '@/lib/market-routing';
 import type { TutoringLocale } from '@/content/germany-tutoring/types';
 
 export function PlacementAssessmentSection() {
@@ -17,7 +18,7 @@ export function PlacementAssessmentSection() {
   const ArrowIcon = isRtl ? ArrowLeft : ArrowRight;
   const marketConfig = getMarketConfig('germany');
 
-  const trialAssessmentHref = `/de/${locale}/trial?intent=assessment`;
+  const trialAssessmentHref = `${getMarketChildPath('germany', locale, ['trial'])}?intent=assessment`;
   const whatsappUrl = `https://wa.me/${marketConfig.contact.whatsapp}?text=${encodeURIComponent(
     locale === 'de'
       ? 'Hallo, ich möchte eine unverbindliche Einstufungsempfehlung erhalten.'
@@ -126,7 +127,6 @@ export function PlacementAssessmentSection() {
             </div>
           </div>
 
-          {/* Steps Timeline */}
           <div className="mt-14 pt-12 border-t border-primary-100">
             <h3 className="text-xs font-bold uppercase tracking-wider text-primary-400 mb-8 text-center sm:text-start">
               {locale === 'de' ? 'Der 5-Schritte-Ablauf zur idealen Förderung' : locale === 'ar' ? 'مسار التقييم في 5 خطوات ميسرة' : 'The 5-Step Path to Ideal Support'}
