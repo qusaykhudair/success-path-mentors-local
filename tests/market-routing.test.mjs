@@ -74,23 +74,22 @@ test('namespace classification reserves markets independently of language validi
   }
 });
 
-test('enabled Germany entry redirects /de to /de/de, renders supported languages, and rejects invalid /de/fr', async () => {
+test('enabled Germany entry serves the canonical default locale, renders supported languages, and rejects invalid /de/fr', async () => {
   const boundaryLoad = createLoader(root, { 'next/navigation': navigation });
   const page = boundaryLoad('src/app/de/[[...marketSegments]]/page.tsx').default;
 
-//  await assert.rejects(page({ params: Promise.resolve({}) }), (error) => error.message === 'REDIRECT' && error.path === '/de/de');
-//  await assert.rejects(page({ params: Promise.resolve({ marketSegments: [] }) }), (error) => error.message === 'REDIRECT' && error.path === '/de/de');
+  const defaultPage = await page({ params: Promise.resolve({}) });
+  assert.ok(defaultPage, 'Expected /de to render the default German market homepage');
 
-  // Supported languages render valid JSX
+  const emptySegmentsPage = await page({ params: Promise.resolve({ marketSegments: [] }) });
+  assert.ok(emptySegmentsPage, 'Expected an empty Germany segment list to render the default German market homepage');
+
   for (const language of germany.supportedLanguages) {
     const res = await page({ params: Promise.resolve({ marketSegments: [language] }) });
     assert.ok(res, `Expected page to render for ${language}`);
   }
 
-  // /de/fr must be rejected with notFound
   await assert.rejects(page({ params: Promise.resolve({ marketSegments: ['fr'] }) }), (error) => error === notFoundError);
-
-  // Unsupported child segment rejected with notFound
   await assert.rejects(page({ params: Promise.resolve({ marketSegments: ['de', 'invalid-child'] }) }), (error) => error === notFoundError);
 });
 
@@ -140,19 +139,26 @@ test('proxy bypasses global next-intl only for whole registered market namespace
     assert.equal(response.headers.get('x-test-intl'), null);
     assert.equal(response.headers.get('X-Content-Type-Options'), 'nosniff');
   }
-  
+
   const deDeResponse = proxy(request('/de/de'));
   assert.equal(deDeResponse.headers.get('location'), 'https://successpathmentors.net/de');
   assert.deepEqual(intlCalls, []);
+
   for (const path of ['/', '/en', '/ar', '/en/login', '/ar/login', '/en/register', '/ar/register', '/deutsch', '/debug', '/en/de']) {
     assert.equal(proxy(request(path)).headers.get('x-test-intl'), '1');
     assert.equal(routing.isReservedMarketPathname(path), false);
   }
+
   const beforeFrench = intlCalls.length;
-  for (const path of ['/fr', '/fr/', '/fr/programme-francais', '/fr/programme-francais/math']) {
-    assert.equal(proxy(request(path)).headers.get('x-middleware-next'), '1');
+  for (const path of ['/fr', '/fr/']) {
+    const response = proxy(request(path));
+    assert.equal(new URL(response.headers.get('location')).pathname, '/fr/programme-francais');
   }
-  assert.equal(new URL(proxy(request('/fr/other')).headers.get('location')).pathname, '/fr/programme-francais');
+  for (const path of ['/fr/programme-francais', '/fr/programme-francais/math', '/fr/other']) {
+    const response = proxy(request(path));
+    assert.equal(response.headers.get('x-middleware-next'), '1');
+    assert.equal(response.headers.get('location'), null);
+  }
   assert.equal(intlCalls.length, beforeFrench);
 });
 
