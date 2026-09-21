@@ -33,7 +33,7 @@ test('MARKET SWITCH: Germany market switch routes to /de', () => {
   assert.equal(getMarketSwitchPath('germany'), '/de');
 });
 
-test('GERMANY HOMEPAGE LINKS: rendered homepage components do not manually construct /de/de paths', () => {
+test('GERMANY PUBLIC LINKS: homepage and service templates do not manually construct default-locale /de/de paths', () => {
   const files = [
     'src/components/germany/market-header.tsx',
     'src/components/germany/market-footer.tsx',
@@ -47,6 +47,7 @@ test('GERMANY HOMEPAGE LINKS: rendered homepage components do not manually const
     'src/components/germany/pricing-section.tsx',
     'src/components/germany/contact-section.tsx',
     'src/components/germany/germany-conversion-cta.tsx',
+    'src/components/germany/tutoring-page-view.tsx',
   ];
 
   for (const relativePath of files) {
