@@ -20,13 +20,13 @@ import {
   ChevronDown,
   Info,
   Layers,
-  GraduationCap,
 } from 'lucide-react';
 import { Container } from '@/components/ui/container';
 import { ScrollReveal } from './scroll-reveal';
 import { getMarketConfig } from '@/config/markets';
 import { CEFR_DISCLAIMER } from '@/content/germany-tutoring/pages';
 import type { TutoringLocale, TutoringPageContent } from '@/content/germany-tutoring/types';
+import { getMarketChildPath, getMarketLocalePath } from '@/lib/market-routing';
 import { cn } from '@/lib/utils';
 
 interface TutoringPageViewProps {
@@ -53,8 +53,10 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
   const ArrowIcon = isRtl ? ArrowLeft : ArrowRight;
   const marketConfig = getMarketConfig('germany');
 
-  const trialHref = `/de/${locale}/trial?service=${encodeURIComponent(page.serviceId)}`;
-  const assessmentHref = `/de/${locale}/trial?service=${encodeURIComponent(page.serviceId)}&intent=assessment`;
+  const homeHref = getMarketLocalePath('germany', locale);
+  const trialBaseHref = getMarketChildPath('germany', locale, ['trial']);
+  const trialHref = `${trialBaseHref}?service=${encodeURIComponent(page.serviceId)}`;
+  const assessmentHref = `${trialBaseHref}?service=${encodeURIComponent(page.serviceId)}&intent=assessment`;
   const whatsappUrl = `https://wa.me/${marketConfig.contact.whatsapp}?text=${encodeURIComponent(
     locale === 'de'
       ? `Hallo, ich interessiere mich für: ${page.hero.title}`
@@ -102,12 +104,10 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
 
   return (
     <div className="flex flex-col bg-white">
-      {/* 1. HERO SECTION */}
       <section className="relative overflow-hidden bg-gradient-to-b from-primary-50/70 via-white to-white pt-10 pb-16 md:pt-16 md:pb-24 lg:pt-20 lg:pb-28">
         <Container className="relative z-10">
-          {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs font-semibold text-primary-500">
-            <Link href={`/de/${locale}`} className="hover:text-primary-900 transition-colors">
+            <Link href={homeHref} className="hover:text-primary-900 transition-colors">
               {locale === 'de' ? 'Startseite' : locale === 'ar' ? 'الرئيسية' : 'Home'}
             </Link>
             <span>/</span>
@@ -117,25 +117,20 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
           </nav>
 
           <div className="grid items-center gap-12 lg:grid-cols-12">
-            {/* Left Content Column */}
             <div className="flex flex-col gap-6 lg:col-span-7 xl:col-span-8">
-              {/* Badge */}
               <div className="inline-flex w-fit items-center gap-2 rounded-full border border-accent-200 bg-accent-50/80 px-4 py-1.5 text-xs font-bold text-accent-800 shadow-2xs">
                 <Sparkles className="h-3.5 w-3.5 text-accent-600" />
                 <span>{page.hero.badge}</span>
               </div>
 
-              {/* H1 Main Headline */}
               <h1 className="text-3xl font-extrabold tracking-tight text-primary-950 sm:text-4xl md:text-5xl lg:text-6xl text-balance leading-tight">
                 {page.hero.headline}
               </h1>
 
-              {/* Subheadline */}
               <p className="max-w-2xl text-lg text-primary-700 sm:text-xl leading-relaxed">
                 {page.hero.subheadline}
               </p>
 
-              {/* CTA Buttons */}
               <div className="mt-4 flex flex-wrap items-center gap-4">
                 <Link
                   href={trialHref}
@@ -156,7 +151,6 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
                 </a>
               </div>
 
-              {/* Value Signals */}
               <div className="mt-4 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs font-semibold text-primary-600">
                 <div className="flex items-center gap-1.5">
                   <CheckCircle2 className="h-4 w-4 text-accent-600 shrink-0" />
@@ -173,7 +167,6 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
               </div>
             </div>
 
-            {/* Right Card / Summary Panel */}
             <div className="lg:col-span-5 xl:col-span-4">
               <div className="relative rounded-3xl border border-primary-100 bg-white p-6 sm:p-8 shadow-xl">
                 <div className="mb-4 inline-flex items-center gap-2 rounded-xl bg-primary-50 px-3 py-1 text-xs font-bold text-primary-800">
@@ -181,9 +174,7 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
                   <span>{locale === 'de' ? 'Überblick & Eckdaten' : locale === 'ar' ? 'ملخص الخدمة' : 'Service Overview'}</span>
                 </div>
 
-                <h2 className="text-xl font-bold text-primary-950">
-                  {page.hero.title}
-                </h2>
+                <h2 className="text-xl font-bold text-primary-950">{page.hero.title}</h2>
                 <p className="mt-2 text-sm text-primary-600 leading-relaxed">
                   {locale === 'de'
                     ? 'Gezielte pädagogische Förderung, persönlicher Ansprechpartner und messbare Lernfortschritte.'
@@ -228,7 +219,6 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
         </Container>
       </section>
 
-      {/* 2. CEFR / ACCREDITATION DISCLAIMER BANNER */}
       {page.showCefrDisclaimer && (
         <section className="border-y border-amber-200/60 bg-amber-50/70 py-4">
           <Container>
@@ -245,7 +235,6 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
         </section>
       )}
 
-      {/* 3. HIGHLIGHTS & PILLARS GRID */}
       <section className="py-20 md:py-28 bg-white">
         <Container>
           <ScrollReveal className="mx-auto mb-16 flex max-w-3xl flex-col items-center gap-3 text-center">
@@ -269,20 +258,13 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
                       <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-accent-50 text-accent-600 transition-colors group-hover:bg-accent-600 group-hover:text-white">
                         <Icon className="h-6 w-6" />
                       </div>
-
                       {item.badge && (
                         <span className="mb-2 inline-block text-xs font-bold text-accent-700 uppercase tracking-wide">
                           {item.badge}
                         </span>
                       )}
-
-                      <h3 className="mb-2.5 text-lg font-bold text-primary-950">
-                        {item.title}
-                      </h3>
-
-                      <p className="text-sm text-primary-600 leading-relaxed">
-                        {item.description}
-                      </p>
+                      <h3 className="mb-2.5 text-lg font-bold text-primary-950">{item.title}</h3>
+                      <p className="text-sm text-primary-600 leading-relaxed">{item.description}</p>
                     </div>
                   </div>
                 </ScrollReveal>
@@ -292,7 +274,6 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
         </Container>
       </section>
 
-      {/* 4. CURRICULUM & CORE FOCUS AREAS */}
       <section className="bg-primary-50/50 py-20 md:py-28 border-y border-primary-100">
         <Container>
           <ScrollReveal className="mx-auto mb-16 flex max-w-3xl flex-col items-center gap-3 text-center">
@@ -300,12 +281,8 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
               <BookOpen className="h-3.5 w-3.5 text-accent-600" />
               <span>{locale === 'de' ? 'Strukturierter Lehrplan' : locale === 'ar' ? 'المحتوى والمسارات التعليمية' : 'Curriculum Structure'}</span>
             </div>
-            <h2 className="text-2xl font-bold tracking-tight text-primary-950 sm:text-3xl md:text-4xl text-balance">
-              {page.curriculumTitle}
-            </h2>
-            <p className="text-base text-primary-600 sm:text-lg leading-relaxed text-balance">
-              {page.curriculumSubheadline}
-            </p>
+            <h2 className="text-2xl font-bold tracking-tight text-primary-950 sm:text-3xl md:text-4xl text-balance">{page.curriculumTitle}</h2>
+            <p className="text-base text-primary-600 sm:text-lg leading-relaxed text-balance">{page.curriculumSubheadline}</p>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -313,13 +290,9 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
               <ScrollReveal key={idx} delay={idx * 0.08} yOffset={20}>
                 <div className="flex h-full flex-col rounded-2xl border border-primary-200/80 bg-white p-8 shadow-sm">
                   <div className="mb-6 flex items-center justify-between">
-                    <h3 className="text-xl font-bold text-primary-950">
-                      {pillar.title}
-                    </h3>
+                    <h3 className="text-xl font-bold text-primary-950">{pillar.title}</h3>
                     {pillar.badge && (
-                      <span className="rounded-full bg-accent-50 px-3 py-1 text-xs font-bold text-accent-700 border border-accent-200/80">
-                        {pillar.badge}
-                      </span>
+                      <span className="rounded-full bg-accent-50 px-3 py-1 text-xs font-bold text-accent-700 border border-accent-200/80">{pillar.badge}</span>
                     )}
                   </div>
 
@@ -333,10 +306,7 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
                   </ul>
 
                   <div className="mt-8 pt-6 border-t border-primary-100">
-                    <Link
-                      href={trialHref}
-                      className="group/btn inline-flex items-center gap-1.5 text-xs font-bold text-accent-700 hover:text-accent-800 transition-colors"
-                    >
+                    <Link href={trialHref} className="group/btn inline-flex items-center gap-1.5 text-xs font-bold text-accent-700 hover:text-accent-800 transition-colors">
                       <span>{locale === 'de' ? 'Hierzu beraten lassen' : locale === 'ar' ? 'استفسر عن هذا المسار' : 'Inquire About This Track'}</span>
                       <ArrowIcon className="h-3.5 w-3.5 transition-transform duration-150 group-hover/btn:translate-x-1 rtl:group-hover/btn:-translate-x-1" />
                     </Link>
@@ -348,7 +318,6 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
         </Container>
       </section>
 
-      {/* 5. DIAGNOSTIC ASSESSMENT JOURNEY */}
       <section className="py-20 md:py-28 bg-white">
         <Container>
           <div className="rounded-3xl bg-gradient-to-br from-primary-950 via-primary-900 to-primary-950 p-8 sm:p-12 lg:p-16 text-white shadow-2xl relative overflow-hidden">
@@ -374,13 +343,10 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
               </p>
             </div>
 
-            {/* Steps Row */}
             <div className="relative z-10 mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
               {placementSteps.map((s, idx) => (
                 <div key={idx} className="flex flex-col rounded-2xl bg-white/10 p-5 backdrop-blur-xs border border-white/10">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-500 text-sm font-black text-white mb-3">
-                    {s.step}
-                  </span>
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-500 text-sm font-black text-white mb-3">{s.step}</span>
                   <h4 className="text-base font-bold text-white mb-1.5">{s.title}</h4>
                   <p className="text-xs text-primary-200 leading-relaxed">{s.desc}</p>
                 </div>
@@ -388,10 +354,7 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
             </div>
 
             <div className="relative z-10 mt-10 flex flex-wrap items-center gap-4">
-              <Link
-                href={assessmentHref}
-                className="inline-flex min-h-[3.25rem] items-center justify-center gap-2 rounded-2xl bg-accent-500 px-8 text-base font-bold text-white shadow-lg hover:bg-accent-400 transition-all"
-              >
+              <Link href={assessmentHref} className="inline-flex min-h-[3.25rem] items-center justify-center gap-2 rounded-2xl bg-accent-500 px-8 text-base font-bold text-white shadow-lg hover:bg-accent-400 transition-all">
                 <span>
                   {locale === 'de'
                     ? 'Einstufungsempfehlung anfordern'
@@ -402,24 +365,17 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
                 <ArrowIcon className="h-4 w-4" />
               </Link>
 
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-[3.25rem] items-center justify-center gap-2 rounded-2xl border border-white/20 bg-white/10 px-6 text-sm font-semibold text-white hover:bg-white/20 transition-all"
-              >
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[3.25rem] items-center justify-center gap-2 rounded-2xl border border-white/20 bg-white/10 px-6 text-sm font-semibold text-white hover:bg-white/20 transition-all">
                 <Phone className="h-4 w-4 text-emerald-400" />
                 <span>{locale === 'de' ? 'Direkt auf WhatsApp beraten lassen' : locale === 'ar' ? 'استشارة فورية عبر واتساب' : 'Chat with an Advisor on WhatsApp'}</span>
               </a>
             </div>
 
-            {/* Background glow */}
             <div className="absolute -bottom-20 -right-20 h-96 w-96 rounded-full bg-accent-600/20 blur-3xl pointer-events-none" />
           </div>
         </Container>
       </section>
 
-      {/* 6. TRUST SECTION — MANAGED LEARNING JOURNEY */}
       <section className="py-20 md:py-28 bg-primary-50/40 border-t border-primary-100">
         <Container>
           <ScrollReveal className="mx-auto mb-16 flex max-w-3xl flex-col items-center gap-3 text-center">
@@ -480,7 +436,6 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
         </Container>
       </section>
 
-      {/* 7. FAQS */}
       <section className="py-20 md:py-28 bg-white">
         <Container className="max-w-4xl">
           <ScrollReveal className="mx-auto mb-14 flex flex-col items-center gap-3 text-center">
@@ -496,10 +451,7 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
             {page.faqs.map((faq, idx) => {
               const isOpen = openFaq === idx;
               return (
-                <div
-                  key={idx}
-                  className="rounded-2xl border border-primary-100 bg-white p-6 shadow-2xs transition-colors hover:border-primary-200"
-                >
+                <div key={idx} className="rounded-2xl border border-primary-100 bg-white p-6 shadow-2xs transition-colors hover:border-primary-200">
                   <button
                     type="button"
                     onClick={() => setOpenFaq(isOpen ? null : idx)}
@@ -507,9 +459,7 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
                     aria-expanded={isOpen}
                   >
                     <span className="text-base sm:text-lg">{faq.question}</span>
-                    <ChevronDown
-                      className={cn('h-5 w-5 text-primary-400 shrink-0 transition-transform duration-200', isOpen && 'rotate-180 text-accent-600')}
-                    />
+                    <ChevronDown className={cn('h-5 w-5 text-primary-400 shrink-0 transition-transform duration-200', isOpen && 'rotate-180 text-accent-600')} />
                   </button>
                   {isOpen && (
                     <div className="mt-4 border-t border-primary-50 pt-4 text-sm text-primary-600 leading-relaxed animate-in fade-in-50 duration-150">
@@ -523,7 +473,6 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
         </Container>
       </section>
 
-      {/* 8. BOTTOM CONVERSION CTA */}
       <section className="bg-primary-950 py-16 text-white text-center">
         <Container className="max-w-3xl">
           <h2 className="text-3xl font-extrabold sm:text-4xl tracking-tight leading-tight">
@@ -541,19 +490,11 @@ export function TutoringPageView({ page, locale }: TutoringPageViewProps) {
               : 'Experience our supportive tutoring firsthand with a 100% free trial session. No commitment required.'}
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href={trialHref}
-              className="inline-flex min-h-[3.25rem] items-center justify-center gap-2 rounded-2xl bg-accent-500 px-8 text-base font-bold text-white shadow-lg hover:bg-accent-400 transition-all"
-            >
+            <Link href={trialHref} className="inline-flex min-h-[3.25rem] items-center justify-center gap-2 rounded-2xl bg-accent-500 px-8 text-base font-bold text-white shadow-lg hover:bg-accent-400 transition-all">
               <span>{page.hero.primaryCta}</span>
               <ArrowIcon className="h-4 w-4" />
             </Link>
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex min-h-[3.25rem] items-center justify-center gap-2 rounded-2xl border border-white/20 bg-white/10 px-6 text-sm font-semibold text-white hover:bg-white/20 transition-all"
-            >
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[3.25rem] items-center justify-center gap-2 rounded-2xl border border-white/20 bg-white/10 px-6 text-sm font-semibold text-white hover:bg-white/20 transition-all">
               <Phone className="h-4 w-4 text-emerald-400" />
               <span>{locale === 'de' ? 'Fragen per WhatsApp stellen' : locale === 'ar' ? 'تحدث معنا عبر واتساب' : 'Ask on WhatsApp'}</span>
             </a>
