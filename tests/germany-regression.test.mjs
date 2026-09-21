@@ -51,8 +51,8 @@ test('GERMANY HOMEPAGE LINKS: rendered homepage components do not manually const
 
   for (const relativePath of files) {
     const source = readFileSync(`${root}${relativePath}`, 'utf8');
-    assert.equal(source.includes('`/de/${locale}'), false, `${relativePath} manually builds /de/${locale}`);
-    assert.equal(source.includes('`/de/${context.locale}'), false, `${relativePath} manually builds /de/${context.locale}`);
+    assert.equal(source.includes('`/de/${locale}'), false, `${relativePath} manually builds a locale-prefixed Germany URL`);
+    assert.equal(source.includes('`/de/${context.locale}'), false, `${relativePath} manually builds a context-locale Germany URL`);
   }
 });
 
