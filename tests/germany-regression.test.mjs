@@ -73,3 +73,26 @@ test('METADATA URL generation keeps German canonical path unprefixed by a second
   assert.equal(openGraphUrl, 'https://successpathmentors.net/de/tutoring/one-to-one');
   assert.equal(getMarketLocalePath('germany', 'de'), '/de');
 });
+
+test('FRENCH UNKNOWN PATHS: /fr redirects only at the root while unknown /fr/* falls through for a real 404', () => {
+  const intlCalls = [];
+  const proxyLoad = createLoader(root, {
+    'next-intl/middleware': () => (request) => {
+      intlCalls.push(request.nextUrl.pathname);
+      return new Response(null, { headers: { 'x-test-intl': '1' } });
+    },
+  });
+  const proxy = proxyLoad('src/proxy.ts').default;
+  const request = (pathname) => ({
+    url: `https://successpathmentors.net${pathname}`,
+    nextUrl: new URL(`https://successpathmentors.net${pathname}`),
+  });
+
+  const frenchRoot = proxy(request('/fr'));
+  assert.equal(new URL(frenchRoot.headers.get('location')).pathname, '/fr/programme-francais');
+
+  const unknownFrench = proxy(request('/fr/unknown-seo-path'));
+  assert.equal(unknownFrench.headers.get('location'), null);
+  assert.equal(unknownFrench.headers.get('x-middleware-next'), '1');
+  assert.deepEqual(intlCalls, []);
+});
