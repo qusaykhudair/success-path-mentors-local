@@ -86,20 +86,25 @@ export default function proxy(request: NextRequest) {
     return applySecurityHeaders(NextResponse.next());
   }
 
-  if (pathname === '/fr' || pathname.startsWith('/fr/')) {
-    const allowedFrenchPrefix = '/fr/programme-francais';
-    const isFrenchProgramRoute =
-      pathname === '/fr' ||
-      pathname === '/fr/' ||
-      pathname === allowedFrenchPrefix ||
-      pathname.startsWith(`${allowedFrenchPrefix}/`);
+  const frenchProgramPrefix = '/fr/programme-francais';
 
-    if (!isFrenchProgramRoute) {
-      return applySecurityHeaders(
-        NextResponse.redirect(new URL(allowedFrenchPrefix, request.url))
-      );
-    }
+  if (pathname === '/fr' || pathname === '/fr/') {
+    return applySecurityHeaders(
+      NextResponse.redirect(
+        new URL(frenchProgramPrefix + request.nextUrl.search, request.url),
+        301
+      )
+    );
+  }
 
+  if (
+    pathname === frenchProgramPrefix ||
+    pathname.startsWith(`${frenchProgramPrefix}/`) ||
+    pathname.startsWith('/fr/')
+  ) {
+    // Valid French-programme routes continue normally. Unknown /fr/* paths
+    // also fall through to Next.js so they return a real 404 instead of
+    // being redirected to the programme homepage (soft-404 behavior).
     return applySecurityHeaders(NextResponse.next());
   }
 
