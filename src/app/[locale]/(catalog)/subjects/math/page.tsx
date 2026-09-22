@@ -165,10 +165,10 @@ export default async function MathPage({
       <MathSubjectHero
         copy={content.hero}
         breadcrumbs={breadcrumbs}
-        primaryHref="#math-curriculum"
-        secondaryHref={
+        primaryHref={
           bookingHref
         }
+        secondaryHref="#math-curriculum"
         curriculumStats={{
           topicCount:
             overview.totals
