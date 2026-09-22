@@ -1,0 +1,35 @@
+name: Phase 4.3 Hamilton SEO QA
+
+on:
+  push:
+    branches:
+      - fix/seo-phase4-hamilton-internal-links
+  workflow_dispatch:
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Focused Phase 4.3 regression
+        run: node --test tests/phase4-hamilton-internal-authority.test.mjs
+
+      - name: TypeScript
+        run: npx tsc --noEmit
+
+      - name: Changed-file ESLint
+        run: npx eslint src/components/local/local-availability-block.tsx tests/phase4-hamilton-internal-authority.test.mjs
+
+      - name: Production build
+        run: npm run build
