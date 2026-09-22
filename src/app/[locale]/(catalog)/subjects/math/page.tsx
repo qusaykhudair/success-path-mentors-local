@@ -18,6 +18,9 @@ import {
   MathSubjectHero,
 } from '@/components/subjects/math/math-subject-hero';
 import {
+  OntarioCourseSupportBlock,
+} from '@/components/subjects/ontario-course-support-block';
+import {
   LocalAvailabilityBlock,
 } from '@/components/local/local-availability-block';
 import {
@@ -188,6 +191,11 @@ export default async function MathPage({
           bookingHref
         }
         locale={locale}
+      />
+
+      <OntarioCourseSupportBlock
+        locale={locale}
+        subject="math"
       />
 
       <LocalAvailabilityBlock
