@@ -1,0 +1,35 @@
+name: Phase 4.4 Course Owner SEO QA
+
+on:
+  push:
+    branches:
+      - fix/seo-phase4-course-owner-discovery
+  workflow_dispatch:
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Focused Phase 4.4 regression
+        run: node --test tests/phase4-course-owner-discovery.test.mjs
+
+      - name: TypeScript
+        run: npx tsc --noEmit
+
+      - name: Changed-file ESLint
+        run: npx eslint src/components/subjects/ontario-course-support-block.tsx src/app/[locale]/\(catalog\)/subjects/math/page.tsx src/app/[locale]/\(catalog\)/subjects/chemistry/page.tsx src/app/[locale]/\(catalog\)/subjects/physics/page.tsx tests/phase4-course-owner-discovery.test.mjs
+
+      - name: Production build
+        run: npm run build
