@@ -165,8 +165,8 @@ export default async function EnglishPage({
       <EnglishSubjectHero
         copy={content.hero}
         breadcrumbs={breadcrumbs}
-        primaryHref="#english-strands"
-        secondaryHref={bookingHref}
+        primaryHref={bookingHref}
+        secondaryHref="#english-strands"
       />
 
       <EnglishStrandGrid
