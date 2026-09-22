@@ -3,7 +3,7 @@
 **Project:** Success Path Mentors  
 **Domain:** `https://successpathmentors.net`  
 **Scope:** Reconcile Local Authority evidence against the production architecture after Phase 3 money-page changes.  
-**Status:** PATCH APPLIED / QA + PRODUCTION VALIDATION PENDING
+**Status:** PATCH APPLIED — release evidence tracked in PR #32 and Issue #31
 
 ## Baseline intent
 
@@ -33,7 +33,8 @@ Preserve the existing Phase 4 local-authority implementation while correcting do
 1. French is treated as an active Phase 3 money-page owner rather than HOLD/404.
 2. French receives the same shared local-authority block used by other priority subject hubs, without creating a new route.
 3. Facebook organic-social destination URLs are updated to the current Exam Preparation and Ontario Curriculum canonical owners.
-4. Phase 4 closure evidence is marked as superseded by this reconciliation until focused QA and live production validation are complete.
+4. The September 16 closure and QA snapshot is explicitly marked historical/superseded so it cannot be used as current post-Phase-3 evidence.
+5. Focused regression coverage verifies French local support, current canonical social destinations, and preserved geographic owners.
 
 ## Guardrails
 
@@ -43,11 +44,11 @@ Preserve the existing Phase 4 local-authority implementation while correcting do
 - No new SEO route without documented demand and cannibalization review.
 - No guaranteed academic-outcome claims.
 
-## Release gate
+## Release evidence
 
-This reconciliation is not final until:
+The authoritative release evidence for this reconciliation is tracked in:
 
-- focused regression checks pass;
-- TypeScript / lint / production build pass;
-- merged changes are confirmed on `main`;
-- live production reflects the reconciled French local-authority treatment and corrected canonical destinations.
+- GitHub PR #32 — branch QA, final diff, merge SHA, and release notes.
+- GitHub Issue #31 — production-validation outcome and Phase 4.0 closure decision.
+
+The release gate requires focused regression checks, TypeScript, changed-file lint, production build, merge to `main`, and live production validation before Issue #31 is closed.
