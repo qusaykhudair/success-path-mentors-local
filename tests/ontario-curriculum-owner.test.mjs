@@ -67,6 +67,26 @@ test('ONTARIO LEGACY: English location page permanently redirects while Arabic i
   );
 });
 
+test('ONTARIO LIVE ROUTING: proxy enforces the production legacy redirect and preserves query strings', () => {
+  const source = readFileSync(
+    `${root}src/proxy.ts`,
+    'utf8'
+  );
+
+  assert.match(
+    source,
+    /pathname === '\/en\/locations\/canada\/ontario\/curriculum'/
+  );
+  assert.match(
+    source,
+    /'\/en\/curriculum\/ontario' \+ request\.nextUrl\.search/
+  );
+  assert.match(
+    source,
+    /NextResponse\.redirect\(destinationUrl, 301\)/
+  );
+});
+
 test('ONTARIO SITEMAP: duplicate English location owner is excluded and locale-specific owners are explicit', () => {
   const source = readFileSync(
     `${root}src/app/sitemap.ts`,
