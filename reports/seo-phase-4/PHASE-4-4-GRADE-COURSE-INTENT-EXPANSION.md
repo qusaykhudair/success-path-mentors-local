@@ -4,7 +4,7 @@
 **Baseline:** `main @ 7bf718967e2d393bd0291f6bd358d0fa2265e2dd`  
 **Implementation date:** 2026-09-23  
 **Primary inputs:** Phase 4.1 Local Search Demand Map + Phase 4.2 Query Owner Map  
-**Status:** IMPLEMENTED — QA / merge / deployment validation required.
+**Status:** IMPLEMENTATION + QA PASS — merge / production deployment validation pending.
 
 ## 1. Decision
 
@@ -107,21 +107,36 @@ It verifies:
 - the block remains English-only while the owners are English-only;
 - common city-course doorway patterns are absent.
 
-## 7. Release gate
+## 7. QA evidence
 
-Before merge:
+Temporary branch-only workflow:
 
-- focused Phase 4.4 regression must pass;
-- TypeScript must pass;
-- changed-file ESLint must pass;
-- production build must pass;
-- temporary branch-only QA workflow must be removed from the final production diff.
+`Phase 4.4 Course Owner SEO QA`
 
-After merge:
+GitHub Actions run:
 
-- Hostinger must deploy the merge commit from `main`;
-- live smoke validation should confirm the Ontario course section appears on the Math, Chemistry and Physics English hubs.
+`35789335642`
+
+Results:
+
+- clean `npm ci` — PASS;
+- focused Phase 4.4 regression — PASS (5/5 tests);
+- TypeScript `npx tsc --noEmit` — PASS;
+- changed-file ESLint — PASS;
+- production `npm run build` — PASS;
+- optimized production build compiled successfully and generated all static pages.
+
+The temporary QA workflow was removed after the successful run and is not part of the intended production diff.
+
+## 8. Release gate
+
+Repository / QA state: **PASS**.
+
+After merge, final completion requires:
+
+1. Hostinger deployment of the merge commit from `main`;
+2. live smoke validation confirming the Ontario course-support section appears on the Math, Chemistry and Physics English hubs.
 
 Until deployment evidence exists, record Phase 4.4 as:
 
-**IMPLEMENTATION COMPLETE / QA + RELEASE VALIDATION PENDING**.
+**IMPLEMENTATION + QA PASS / RELEASE VALIDATION PENDING**.
