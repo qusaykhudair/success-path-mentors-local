@@ -1,0 +1,35 @@
+name: QA Phase 3 Exam Preparation Money Page
+
+on:
+  push:
+    branches:
+      - fix/seo-phase3-exam-preparation-money-page
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Clean install
+        run: npm ci
+
+      - name: Focused Exam Preparation regression test
+        run: node --test tests/exam-preparation-money-page-intent.test.mjs
+
+      - name: TypeScript
+        run: npx tsc --noEmit
+
+      - name: Changed-file ESLint
+        run: npx eslint "src/app/[locale]/(marketing)/services/exam-preparation/page.tsx"
+
+      - name: Production build
+        run: npm run build
