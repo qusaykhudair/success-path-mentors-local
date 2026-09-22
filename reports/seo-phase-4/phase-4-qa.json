@@ -1,10 +1,13 @@
 {
-  "timestamp": "2026-09-16T00:45:00+03:00",
+  "snapshotTimestamp": "2026-09-16T00:45:00+03:00",
   "project": "Success Path Mentors",
   "domain": "https://successpathmentors.net",
-  "status": "PASS",
+  "status": "SUPERSEDED",
+  "historicalStatus": "PASS",
   "phase": "Phase 4 Fast Track - Local SEO Authority",
-  "metrics": {
+  "supersededBy": "reports/seo-phase-4/PHASE-4-POST-PHASE3-RECONCILIATION.md",
+  "reason": "Phase 3 later changed canonical ownership for French tutoring, Exam Preparation, Ontario Curriculum, and Homework Help. The September 16 QA remains valid only as a historical snapshot and must not be used as current closure evidence.",
+  "historicalMetrics": {
     "newPagesCreated": 0,
     "locationPagesRestructured": 0,
     "subjectHubsEnhanced": 5,
@@ -13,52 +16,21 @@
     "localLinksAdded": 4,
     "cannibalizationRisks": 0
   },
-  "localKeywordOwnershipMap": [
-    {
-      "keyword": "online tutoring Milton",
-      "targetUrl": "https://successpathmentors.net/en/locations/canada/ontario/milton",
-      "status": "EXISTING OWNER"
-    },
-    {
-      "keyword": "tutoring Milton",
-      "targetUrl": "https://successpathmentors.net/en/locations/canada/ontario/milton",
-      "status": "EXISTING OWNER"
-    },
-    {
-      "keyword": "online tutoring Toronto",
-      "targetUrl": "https://successpathmentors.net/en/locations/canada/ontario/toronto",
-      "status": "EXISTING OWNER"
-    },
-    {
-      "keyword": "tutoring Toronto",
-      "targetUrl": "https://successpathmentors.net/en/locations/canada/ontario/toronto",
-      "status": "EXISTING OWNER"
-    },
-    {
-      "keyword": "online tutoring Ontario",
-      "targetUrl": "https://successpathmentors.net/en/locations/canada/ontario",
-      "status": "EXISTING OWNER"
-    },
-    {
-      "keyword": "online tutoring Canada",
-      "targetUrl": "https://successpathmentors.net/en/locations/canada",
-      "status": "EXISTING OWNER"
-    },
-    {
-      "keyword": "math tutor Milton / Toronto",
-      "targetUrl": "Supported via Math hub -> Milton/Toronto location internal links",
-      "status": "SUPPORTED VIA INTERNAL LINKING / FUTURE DATA REVIEW"
-    },
-    {
-      "keyword": "science tutor Milton / Toronto",
-      "targetUrl": "Supported via Science hub -> Milton/Toronto location internal links",
-      "status": "SUPPORTED VIA INTERNAL LINKING / FUTURE DATA REVIEW"
-    }
-  ],
-  "verification": {
-    "typecheck": "PASS",
-    "build": "PASS",
-    "liveProduction": "PASS",
-    "locationLock": "PASS"
+  "currentOwnerMap": {
+    "ontario": "/en/locations/canada/ontario",
+    "milton": "/en/locations/canada/ontario/milton",
+    "toronto": "/en/locations/canada/ontario/toronto",
+    "ontarioCurriculum": "/en/curriculum/ontario",
+    "frenchTutoring": "/en/subjects/french",
+    "examPreparation": "/en/services/exam-preparation",
+    "homeworkHelp": "/en/services/homework-help"
+  },
+  "releaseGate": {
+    "focusedRegression": "PENDING",
+    "typecheck": "PENDING",
+    "lint": "PENDING",
+    "build": "PENDING",
+    "mergedToMain": "PENDING",
+    "liveProduction": "PENDING"
   }
 }

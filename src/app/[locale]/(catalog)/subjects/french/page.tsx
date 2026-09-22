@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 import { SeoGapPageShell } from '@/components/internal/seo-gap-page-shell';
+import { LocalAvailabilityBlock } from '@/components/local/local-availability-block';
 import { routePath } from '@/config/routes';
 import { isSupportedLocale, siteConfig } from '@/config/site';
 import {
@@ -164,12 +165,19 @@ export default async function FrenchSubjectPage({
   ];
 
   return (
-    <SeoGapPageShell
-      content={content}
-      breadcrumbs={breadcrumbs}
-      canonicalUrl={canonicalUrl}
-      bookingHref={bookingHref}
-      schemaData={schemas}
-    />
+    <>
+      <SeoGapPageShell
+        content={content}
+        breadcrumbs={breadcrumbs}
+        canonicalUrl={canonicalUrl}
+        bookingHref={bookingHref}
+        schemaData={schemas}
+      />
+
+      <LocalAvailabilityBlock
+        locale={locale}
+        subjectName="French"
+      />
+    </>
   );
 }
