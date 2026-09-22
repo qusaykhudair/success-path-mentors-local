@@ -3,6 +3,7 @@ import type {
 } from 'next';
 import {
   notFound,
+  permanentRedirect,
 } from 'next/navigation';
 
 import {
@@ -15,6 +16,7 @@ import {
   getLocationStaticSegments,
 } from '@/content/locations/location-pages';
 import {
+  isOntarioCurriculumLocationSegments,
   routePath,
 } from '@/config/routes';
 import {
@@ -88,6 +90,19 @@ export default async function LocationPage({
 
   if (!isSupportedLocale(locale)) {
     notFound();
+  }
+
+  if (
+    locale === 'en' &&
+    isOntarioCurriculumLocationSegments(
+      segments
+    )
+  ) {
+    permanentRedirect(
+      routePath.ontarioCurriculum(
+        locale
+      )
+    );
   }
 
   const page =

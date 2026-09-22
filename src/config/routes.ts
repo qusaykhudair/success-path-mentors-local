@@ -3,6 +3,18 @@ import type {
 } from '@/config/site';
 import { buildTrialLessonMessage, buildWhatsAppHref } from '@/lib/whatsapp';
 
+const ONTARIO_CURRICULUM_LOCATION_PATH =
+  'canada/ontario/curriculum';
+
+export function isOntarioCurriculumLocationSegments(
+  segments: readonly string[]
+): boolean {
+  return segments
+    .filter(Boolean)
+    .join('/') ===
+    ONTARIO_CURRICULUM_LOCATION_PATH;
+}
+
 function localizedContactPath(
   locale: SiteLocale
 ): string {
@@ -66,6 +78,14 @@ export const routePath = {
     return locale === 'ar' ? '/ar/المواقع' : '/en/locations';
   },
 
+  ontarioCurriculum(
+    locale: SiteLocale
+  ): string {
+    return locale === 'ar'
+      ? '/ar/المواقع/canada/ontario/curriculum'
+      : '/en/curriculum/ontario';
+  },
+
   location(
     locale: SiteLocale,
     ...segments: string[]
@@ -76,6 +96,17 @@ export const routePath = {
 
     if (!path) {
       return locale === 'ar' ? '/ar/المواقع' : '/en/locations';
+    }
+
+    if (
+      locale === 'en' &&
+      isOntarioCurriculumLocationSegments(
+        segments
+      )
+    ) {
+      return routePath.ontarioCurriculum(
+        locale
+      );
     }
 
     return locale === 'ar' ? `/ar/المواقع/${path}` : `/en/locations/${path}`;

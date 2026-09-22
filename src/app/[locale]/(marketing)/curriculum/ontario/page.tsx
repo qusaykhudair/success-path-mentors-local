@@ -25,7 +25,14 @@ export async function generateMetadata({
     return {};
   }
 
-  const canonical = new URL(`/${locale}${content.pathname}`, siteConfig.url).toString();
+  const canonical = new URL(
+    routePath.ontarioCurriculum('en'),
+    siteConfig.url
+  ).toString();
+  const arabicUrl = new URL(
+    routePath.ontarioCurriculum('ar'),
+    siteConfig.url
+  ).toString();
 
   return buildPageMetadata({
     locale,
@@ -35,6 +42,7 @@ export async function generateMetadata({
       pathname: content.pathname,
       languages: {
         'en-CA': canonical,
+        'ar-CA': arabicUrl,
         'x-default': canonical,
       },
     },
@@ -56,7 +64,10 @@ export default async function OntarioCurriculumPage({
     { label: 'Ontario Curriculum' },
   ];
 
-  const canonicalUrl = new URL(`/${locale}${content.pathname}`, siteConfig.url).toString();
+  const canonicalUrl = new URL(
+    routePath.ontarioCurriculum(locale),
+    siteConfig.url
+  ).toString();
   const bookingHref = siteConfig.bookingUrl.trim() || routePath.contact(locale);
 
   const schemas = [
