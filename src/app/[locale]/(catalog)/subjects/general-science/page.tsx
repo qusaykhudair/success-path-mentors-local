@@ -1,6 +1,7 @@
 import type {
   Metadata,
 } from 'next';
+import Link from 'next/link';
 import {
   notFound,
 } from 'next/navigation';
@@ -102,6 +103,18 @@ export default async function GeneralSciencePage({
       'general-science'
     );
 
+  const chemistryHref =
+    routePath.subject(
+      locale,
+      'chemistry'
+    );
+
+  const physicsHref =
+    routePath.subject(
+      locale,
+      'physics'
+    );
+
   const breadcrumbs:
     BreadcrumbItem[] = [
       {
@@ -177,6 +190,66 @@ export default async function GeneralSciencePage({
         strands={overview.strands}
         copy={content.strands}
       />
+
+      <section
+        aria-labelledby="science-specialist-pathways"
+        className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8"
+      >
+        <div className="max-w-3xl">
+          <p className="text-sm font-semibold uppercase tracking-wide">
+            {locale === 'ar'
+              ? 'مسارات العلوم المتخصصة'
+              : 'Specialist science pathways'}
+          </p>
+          <h2
+            id="science-specialist-pathways"
+            className="mt-2 text-2xl font-bold sm:text-3xl"
+          >
+            {locale === 'ar'
+              ? 'هل يحتاج الطالب إلى دعم متخصص في الكيمياء أو الفيزياء؟'
+              : 'Need dedicated Chemistry or Physics support?'}
+          </h2>
+          <p className="mt-3 text-base leading-7 text-muted-foreground">
+            {locale === 'ar'
+              ? 'استخدم صفحة العلوم العامة للدعم العلمي المتكامل، أو انتقل إلى المسار المتخصص المناسب للمقرر الحالي للطالب.'
+              : 'Use this Science tutoring hub for integrated General Science support, or continue to the specialist page that matches the student’s current course.'}
+          </p>
+        </div>
+
+        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          <Link
+            href={chemistryHref}
+            className="rounded-2xl border p-5 transition-shadow hover:shadow-sm"
+          >
+            <span className="font-semibold">
+              {locale === 'ar'
+                ? 'تدريس الكيمياء'
+                : 'Chemistry Tutoring'}
+            </span>
+            <span className="mt-1 block text-sm text-muted-foreground">
+              {locale === 'ar'
+                ? 'انتقل إلى صفحة الكيمياء ومساراتها المتخصصة.'
+                : 'Explore the dedicated Chemistry curriculum and tutoring pathway.'}
+            </span>
+          </Link>
+
+          <Link
+            href={physicsHref}
+            className="rounded-2xl border p-5 transition-shadow hover:shadow-sm"
+          >
+            <span className="font-semibold">
+              {locale === 'ar'
+                ? 'تدريس الفيزياء'
+                : 'Physics Tutoring'}
+            </span>
+            <span className="mt-1 block text-sm text-muted-foreground">
+              {locale === 'ar'
+                ? 'انتقل إلى صفحة الفيزياء ومساراتها المتخصصة.'
+                : 'Explore the dedicated Physics curriculum and tutoring pathway.'}
+            </span>
+          </Link>
+        </div>
+      </section>
 
       <LocalAvailabilityBlock
         locale={locale}

@@ -6,31 +6,31 @@ const generalSciencePageContent = {
   en: {
     seo: {
       title:
-        'Online Science Tutoring Grades 5–10 | Middle School Science | Success Path Mentors',
+        'Online Science Tutoring Grades 5–12 | General Science | Success Path Mentors',
       description:
-        'Engaging one-to-one science tutoring for Grades 5–10. Strengthen scientific inquiry, biological systems, Earth science, and laboratory thinking before senior courses.',
+        'One-to-one online science tutoring for Grades 5–12 across life science, Earth and space science, scientific inquiry, laboratory skills, and engineering, with dedicated Chemistry and Physics tutoring available.',
       pathname:
         '/subjects/general-science',
     },
     hero: {
       eyebrow:
-        'One-to-one General Science tutoring',
+        'One-to-one science tutoring',
       title:
-        'Online Science Tutoring for Elementary & Middle School Learners',
+        'Online Science Tutoring for Grades 5–12',
       description:
-        'Personalized General Science support organized across life science, Earth and space science, scientific inquiry, laboratory skills, and structures and engineering.',
+        'Personalized General Science support across life science, Earth and space science, scientific inquiry, laboratory skills, and structures and engineering. Students who need dedicated Chemistry or Physics support can continue into those specialist subject pathways.',
       primaryAction:
         'Explore General Science strands',
       secondaryAction:
         'Book a free trial',
       breadcrumbLabel:
-        'General Science tutoring breadcrumb',
+        'Science tutoring breadcrumb',
       homeLabel:
         'Home',
       subjectsLabel:
         'Subjects',
       currentLabel:
-        'General Science',
+        'Science Tutoring',
       highlights: [
         {
           value:
@@ -110,9 +110,9 @@ const generalSciencePageContent = {
     },
     schema: {
       serviceName:
-        'Online General Science tutoring for Grades 5–12',
+        'Online science tutoring for Grades 5–12',
       serviceDescription:
-        'Personalized one-to-one General Science tutoring organized by grade and curriculum strand.',
+        'Personalized one-to-one science tutoring for Grades 5–12, with General Science curriculum strands and dedicated Chemistry and Physics subject pathways.',
     },
   },
   ar: {
