@@ -27,6 +27,10 @@ import {
   locationPages,
 } from '@/content/locations/location-pages';
 import {
+  isOntarioCurriculumLocationSegments,
+  routePath,
+} from '@/config/routes';
+import {
   routing,
 } from '@/i18n/routing';
 import {
@@ -59,7 +63,10 @@ const localizedPaths = [
   ...locationPages
     .filter(
       (page) =>
-        page.segments.length > 0
+        page.segments.length > 0 &&
+        !isOntarioCurriculumLocationSegments(
+          page.segments
+        )
     )
     .map(
       (page) =>
@@ -104,7 +111,6 @@ const englishOnlyGapPaths = [
   '/subjects/physics/senior-physics-sph3u-sph4u',
   '/services/homework-help',
   '/services/exam-preparation',
-  '/curriculum/ontario',
 ];
 
 const frenchPaths = [
@@ -207,6 +213,30 @@ function getFrenchPriority(
   return 0.82;
 }
 
+function getOntarioCurriculumUrl(
+  locale: 'en' | 'ar'
+): string {
+  return `${SITE_URL}${
+    routePath.ontarioCurriculum(
+      locale
+    )
+  }`;
+}
+
+function getOntarioCurriculumAlternates():
+  Record<string, string> {
+  const englishUrl =
+    getOntarioCurriculumUrl('en');
+  const arabicUrl =
+    getOntarioCurriculumUrl('ar');
+
+  return {
+    'en-CA': englishUrl,
+    'ar-CA': arabicUrl,
+    'x-default': englishUrl,
+  };
+}
+
 function getGermanyLocalizedUrl(
   locale: MarketLanguage,
   slug?: string
@@ -302,6 +332,26 @@ export default function sitemap():
       },
     }));
 
+  const ontarioCurriculumAlternates =
+    getOntarioCurriculumAlternates();
+
+  const ontarioCurriculumEntries =
+    (['en', 'ar'] as const).map(
+      (locale) => ({
+        url:
+          getOntarioCurriculumUrl(
+            locale
+          ),
+        changeFrequency:
+          'monthly' as const,
+        priority: 0.9,
+        alternates: {
+          languages:
+            ontarioCurriculumAlternates,
+        },
+      })
+    );
+
   const frenchEntries =
     frenchPaths.map(
       (path) => ({
@@ -367,6 +417,7 @@ export default function sitemap():
   return [
     ...localizedEntries,
     ...englishGapEntries,
+    ...ontarioCurriculumEntries,
     ...frenchEntries,
     ...germanyRootEntries,
     ...germanyChildEntries,
