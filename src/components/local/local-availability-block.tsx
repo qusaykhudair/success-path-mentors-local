@@ -25,6 +25,7 @@ export function LocalAvailabilityBlock({
   const ontarioHref = routePath.location(siteLocale, 'canada', 'ontario');
   const miltonHref = routePath.location(siteLocale, 'canada', 'ontario', 'milton');
   const torontoHref = routePath.location(siteLocale, 'canada', 'ontario', 'toronto');
+  const hamiltonHref = routePath.location(siteLocale, 'canada', 'ontario', 'hamilton');
   const curriculumHref = routePath.location(siteLocale, 'canada', 'ontario', 'curriculum');
 
   const content = {
@@ -34,7 +35,7 @@ export function LocalAvailabilityBlock({
         ? `Online ${subjectName} Tutoring for Students in Ontario`
         : 'Online Tutoring for Students in Ontario',
       description:
-        'Success Path Mentors provides personalized, one-to-one online tutoring tailored directly to the Ontario curriculum. Serving students online in Milton, Toronto, and communities across Ontario, our experienced mentors help learners strengthen foundational knowledge, build study confidence, and prepare for school exams with flexible scheduling from home.',
+        'Success Path Mentors provides personalized, one-to-one online tutoring tailored directly to the Ontario curriculum. Serving students online in Milton, Toronto, Hamilton, and communities across Ontario, our experienced mentors help learners strengthen foundational knowledge, build study confidence, and prepare for school exams with flexible scheduling from home.',
       curriculumLead: 'Aligned with Ontario Ministry of Education standards: ',
       curriculumLink: 'Ontario curriculum standards',
       communities: [
@@ -62,6 +63,14 @@ export function LocalAvailabilityBlock({
           actionText: 'online tutoring in Toronto',
           href: torontoHref,
         },
+        {
+          name: 'Hamilton',
+          headline: 'Online tutoring support in Hamilton',
+          description:
+            'One-to-one online academic support for Hamilton students working through school coursework, assessments, and subject-specific learning gaps.',
+          actionText: 'online tutoring in Hamilton',
+          href: hamiltonHref,
+        },
       ],
     },
     ar: {
@@ -70,7 +79,7 @@ export function LocalAvailabilityBlock({
         ? `دروس خصوصية عبر الإنترنت في ${subjectName} للطلاب في أونتاريو`
         : 'دروس خصوصية عبر الإنترنت للطلاب في أونتاريو',
       description:
-        'توفر Success Path Mentors تدريسًا فرديًا مخصصًا عبر الإنترنت متوافقًا مع المنهج الدراسي لمقاطعة أونتاريو. نخدم الطلاب عبر الإنترنت في ميلتون، وتورونتو، ومختلف المجتمعات عبر أونتاريو، لمساعدة المتعلمين على استيعاب المفاهيم الأكاديمية وبناء الثقة والاستعداد للاختبارات بمرونة تامة من المنزل.',
+        'توفر Success Path Mentors تدريسًا فرديًا مخصصًا عبر الإنترنت متوافقًا مع المنهج الدراسي لمقاطعة أونتاريو. نخدم الطلاب عبر الإنترنت في ميلتون، وتورونتو، وهاملتون، ومختلف المجتمعات عبر أونتاريو، لمساعدة المتعلمين على استيعاب المفاهيم الأكاديمية وبناء الثقة والاستعداد للاختبارات بمرونة تامة من المنزل.',
       curriculumLead: 'متوافق مع معايير وزارة التعليم في أونتاريو: ',
       curriculumLink: 'معايير منهج أونتاريو',
       communities: [
@@ -97,6 +106,14 @@ export function LocalAvailabilityBlock({
             'جلسات فردية مركزة للطلاب في تورونتو لمساعدتهم على التغلب على صعوبات المواد وتطوير مهارات دراسية متقدمة.',
           actionText: 'دروس خصوصية في تورونتو',
           href: torontoHref,
+        },
+        {
+          name: 'هاملتون',
+          headline: 'دعم دراسي عبر الإنترنت في هاملتون',
+          description:
+            'دعم أكاديمي فردي عبر الإنترنت لطلاب هاملتون في الواجبات والمراجعة للاختبارات ومعالجة الفجوات في المواد الدراسية.',
+          actionText: 'دروس خصوصية في هاملتون',
+          href: hamiltonHref,
         },
       ],
     },
@@ -150,7 +167,7 @@ export function LocalAvailabilityBlock({
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
           {content.communities.map((comm, idx) => (
             <div
               key={idx}
