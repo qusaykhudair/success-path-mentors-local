@@ -18,6 +18,9 @@ import {
   ScienceSubjectHero,
 } from '@/components/subjects/science/science-subject-hero';
 import {
+  OntarioCourseSupportBlock,
+} from '@/components/subjects/ontario-course-support-block';
+import {
   LocalAvailabilityBlock,
 } from '@/components/local/local-availability-block';
 import {
@@ -184,6 +187,11 @@ export default async function ChemistryPage({
         copy={
           content.strands
         }
+      />
+
+      <OntarioCourseSupportBlock
+        locale={locale}
+        subject="chemistry"
       />
 
       <LocalAvailabilityBlock
