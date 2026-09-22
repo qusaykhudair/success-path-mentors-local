@@ -6,22 +6,22 @@ const englishPageContent = {
   en: {
     seo: {
       title:
-        'Online English Tutoring Grades 1–12 | Reading, Writing & Literacy | Success Path Mentors',
+        'Online English Tutoring in Canada | Grades 1–12 | Success Path Mentors',
       description:
-        'One-to-one online English tutoring for Grades 1–12. Build lasting reading comprehension, academic writing, grammar, and literary analysis skills with dedicated mentors.',
+        'One-to-one online English tutoring for Grades 1–12 in Canada, including Ontario curriculum support for reading, writing, grammar, comprehension, and school assignments.',
       pathname: '/subjects/english',
     },
     hero: {
       eyebrow:
-        'One-to-one English tutoring',
+        'One-to-one online English tutoring in Canada',
       title:
-        'One-to-One Online English Tutoring for Grades 1–12',
+        'Online English Tutoring for Grades 1–12',
       description:
-        'Personalized English support for Grades 1–12, organized across reading, language, literature, communication, writing, and academic skills.',
+        'Personalized one-to-one English support for students in Canada, including Ontario curriculum needs, across reading comprehension, grammar, writing, communication, literature, and academic skills.',
       primaryAction:
-        'Explore English strands',
-      secondaryAction:
         'Book a free trial',
+      secondaryAction:
+        'Explore English strands',
       breadcrumbLabel:
         'English tutoring breadcrumb',
       homeLabel: 'Home',
@@ -47,11 +47,11 @@ const englishPageContent = {
     },
     strands: {
       eyebrow:
-        'English curriculum map',
+        'English tutoring by skill and grade',
       title:
-        'Explore English by learning strand',
+        'English Support by Grade and Learning Strand',
       description:
-        'All eleven English curriculum strands now have dedicated grade-level pages, organized from foundational skills through advanced reading, language, communication, and writing.',
+        'Explore eleven English learning strands with grade-level support for reading, language, literature, communication, writing, school assignments, and academic skill gaps.',
       openAction:
         'Open strand',
       pendingLabel:
@@ -66,7 +66,7 @@ const englishPageContent = {
       title:
         'Find the right English tutor for your learner',
       description:
-        'We match the lesson plan to the student’s grade, current skills, school assignments, and learning goals.',
+        'Tell us the student’s grade, curriculum, current reading or writing challenges, school assignments, and learning goals. We’ll help match them with an appropriate one-to-one English tutor.',
       primaryAction:
         'Book a free trial',
       secondaryAction:
@@ -74,9 +74,9 @@ const englishPageContent = {
     },
     schema: {
       serviceName:
-        'Online English Tutoring for Grades 1–12',
+        'One-to-one Online English Tutoring',
       serviceDescription:
-        'Personalized one-to-one online English tutoring organized by grade and curriculum strand.',
+        'Personalized one-to-one online English tutoring for Grades 1–12 in Canada, including Ontario curriculum support for reading, writing, grammar, comprehension, and academic skills.',
     },
   },
   ar: {
@@ -95,9 +95,9 @@ const englishPageContent = {
       description:
         'دعم مخصص للصفوف 1–12 عبر القراءة واللغة والأدب والتواصل والكتابة والمهارات الأكاديمية.',
       primaryAction:
-        'استكشف مسارات الإنجليزية',
-      secondaryAction:
         'احجز حصة تجريبية',
+      secondaryAction:
+        'استكشف مسارات الإنجليزية',
       breadcrumbLabel:
         'مسار التنقل لصفحة الإنجليزية',
       homeLabel:
