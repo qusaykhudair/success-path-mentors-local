@@ -64,6 +64,16 @@ export default function proxy(request: NextRequest) {
 
   const pathname = request.nextUrl.pathname;
 
+  if (pathname === '/en/locations/canada/ontario/curriculum') {
+    const destinationUrl = new URL(
+      '/en/curriculum/ontario' + request.nextUrl.search,
+      request.url
+    );
+    return applySecurityHeaders(
+      NextResponse.redirect(destinationUrl, 301)
+    );
+  }
+
   if (
     pathname === '/en/exam-preparation' ||
     pathname === '/services/exam-preparation' ||
