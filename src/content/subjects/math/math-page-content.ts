@@ -12,23 +12,23 @@ const mathPageContent: Record<
   en: {
     seo: {
       title:
-        'Online Math Tutoring Grades 2–12 | Personalized Math Mentors | Success Path Mentors',
+        'Online Math Tutoring in Canada | Grades 2–12 | Success Path Mentors',
       description:
-        'Personalized one-to-one online math tutoring for Grades 2–12 in Canada. Rebuild confidence, master homework, and excel from foundations to advanced calculus.',
+        'One-to-one online math tutoring for Grades 2–12 in Canada, with Ontario curriculum support for homework, algebra, functions, geometry, and senior math.',
       pathname: '/subjects/math',
     },
 
     hero: {
       eyebrow:
-        'One-to-one online mathematics',
+        'One-to-one online math tutoring in Canada',
       title:
-        'Personalized Online Math Tutoring for Elementary & High School',
+        'Online Math Tutoring for Grades 2–12',
       description:
-        'Explore a structured mathematics roadmap that grows from foundational number concepts to algebra, functions, geometry, statistics, financial literacy, and senior secondary mathematics.',
+        'Personalized one-to-one support for students in Canada, including Ontario curriculum needs, from number foundations and homework gaps to algebra, functions, geometry, statistics, and senior secondary math.',
       primaryAction:
-        'Explore the curriculum',
-      secondaryAction:
         'Book a free trial',
+      secondaryAction:
+        'Explore the curriculum',
       breadcrumbLabel:
         'Math page breadcrumb',
       homeLabel: 'Home',
@@ -46,9 +46,9 @@ const mathPageContent: Record<
             'Lessons matched to the student and curriculum',
         },
         {
-          value: 'Bilingual support',
+          value: 'Ontario support',
           label:
-            'Clear communication for multilingual families',
+            'Curriculum-aware help for Ontario students',
         },
       ],
       visualLabel:
@@ -70,11 +70,11 @@ const mathPageContent: Record<
 
     explorer: {
       sectionEyebrow:
-        'Math curriculum roadmap',
+        'Math tutoring by grade and pathway',
       sectionTitle:
-        'Explore what we support',
+        'Math Support by Grade and Learning Pathway',
       sectionDescription:
-        'Choose a learning pathway to see how mathematics topics progress, or browse by grade to review the curriculum areas relevant to the student.',
+        'Choose a learning pathway or grade to review the skills our tutors can support, from homework and concept gaps to course review and exam preparation.',
       pathwaysTab:
         'Browse by pathway',
       gradesTab:
@@ -98,7 +98,7 @@ const mathPageContent: Record<
       gradeOverviewDescription:
         'This summary shows the mathematics learning areas represented for the selected grade.',
       bookTrialLabel:
-        'Find a math tutor',
+        'Book a free math trial',
       detailsHeading:
         'Learning stages',
       gradesIncludedLabel:
@@ -147,9 +147,9 @@ const mathPageContent: Record<
       eyebrow:
         'Personalized math support',
       title:
-        'Not sure where the student should begin?',
+        'Find the right math tutor for your student',
       description:
-        'Share the grade, curriculum, and learning goals. Our team can help match the student with an appropriate mathematics tutor and starting point.',
+        'Tell us the student’s grade, curriculum, current challenges, and goals. We’ll match them with a one-to-one math tutor and a practical starting point.',
       primaryAction:
         'Book a free trial',
       secondaryAction:
@@ -160,7 +160,7 @@ const mathPageContent: Record<
       serviceName:
         'One-to-one Online Math Tutoring',
       serviceDescription:
-        'Personalized online mathematics tutoring for students in Grades 2–12.',
+        'Personalized one-to-one online math tutoring for Grades 2–12 in Canada, including Ontario curriculum support.',
     },
   },
 
@@ -181,9 +181,9 @@ const mathPageContent: Record<
       description:
         'استكشف خارطة رياضيات منظمة تتدرج من المفاهيم العددية الأساسية إلى الجبر والدوال والهندسة والإحصاء والثقافة المالية ورياضيات المرحلة الثانوية المتقدمة.',
       primaryAction:
-        'استكشف المنهج',
-      secondaryAction:
         'احجز حصة تجريبية',
+      secondaryAction:
+        'استكشف المنهج',
       breadcrumbLabel:
         'مسار صفحة الرياضيات',
       homeLabel:
