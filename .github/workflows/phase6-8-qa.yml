@@ -20,17 +20,17 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: npm run install:ci
 
       - name: Focused Phase 6.8 regression
         run: node --test tests/phase6-internal-authority-distribution.test.mjs
 
       - name: TypeScript
-        run: npx tsc --noEmit
+        run: npm run typecheck
 
       - name: Changed-file ESLint
         run: >-
-          npx eslint
+          bash scripts/sites-env.sh -- npx eslint
           src/components/internal/authority-distribution-links.tsx
           'src/app/[locale]/(catalog)/subjects/math/page.tsx'
           'src/app/[locale]/(catalog)/subjects/english/page.tsx'
@@ -40,4 +40,4 @@ jobs:
           'src/app/[locale]/(catalog)/subjects/french/page.tsx'
 
       - name: Production build
-        run: npm run build
+        run: bash scripts/sites-env.sh -- npm run build
