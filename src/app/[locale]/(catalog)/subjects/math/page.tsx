@@ -6,6 +6,9 @@ import {
 } from 'next/navigation';
 
 import {
+  AuthorityDistributionLinks,
+} from '@/components/internal/authority-distribution-links';
+import {
   JsonLd,
 } from '@/components/seo/json-ld';
 import {
@@ -196,6 +199,11 @@ export default async function MathPage({
       <OntarioCourseSupportBlock
         locale={locale}
         subject="math"
+      />
+
+      <AuthorityDistributionLinks
+        locale={locale}
+        context="math"
       />
 
       <LocalAvailabilityBlock
