@@ -20,7 +20,7 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm run install:ci
+        run: npm install --no-audit --no-fund
 
       - name: Focused Phase 6.8 regression
         run: node --test tests/phase6-internal-authority-distribution.test.mjs
