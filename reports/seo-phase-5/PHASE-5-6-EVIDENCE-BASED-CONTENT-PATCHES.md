@@ -5,7 +5,7 @@
 **Development repository baseline:** `main @ 73217ec3e388fbf6e9819ad5a521f22f4f6505e9`  
 **Issue:** #64  
 **Target owner:** `/en/locations/canada/british-columbia`  
-**Status:** PATCH READY — development-repo QA in progress
+**Status:** PASS / CLOSED — production verified 2026-09-23
 
 ## 1. Purpose
 
@@ -22,7 +22,7 @@ Phase 5.2 promoted the British Columbia owner because:
 - the production dashboard already contained QA-approved drafts `BC-002`, `BC-003` and `BC-004`;
 - the patch can improve factual relevance without changing metadata, H1 or canonical ownership.
 
-The current signal remains too small for a CTR verdict. This patch is justified by the independently verified content gap, not by an assumption that 0 clicks proves a title or snippet problem.
+The signal remains too small for a CTR verdict. This patch is justified by the independently verified content gap, not by an assumption that 0 clicks proves a title or snippet problem.
 
 ## 3. Approved patch records
 
@@ -72,7 +72,7 @@ Current government graduation materials identify the core Provincial Graduation 
 
 ## 5. Implementation
 
-A new focused content-patch layer is introduced in:
+A focused content-patch layer is implemented in:
 
 `src/content/locations/location-content-patches.ts`
 
@@ -103,7 +103,7 @@ It does **not** modify:
 - French programme routing;
 - Germany configuration.
 
-`src/lib/locations/get-location-page.ts` now finalizes localized pages by applying the patch after existing education-resource enrichment. This keeps generated location data immutable and avoids editing the multi-megabyte generated location definition file for a single controlled patch.
+`src/lib/locations/get-location-page.ts` finalizes localized pages by applying the patch after existing education-resource enrichment. This keeps generated location data immutable and avoids editing the multi-megabyte generated location definition file for a single controlled patch.
 
 ## 6. Official resource references
 
@@ -139,17 +139,40 @@ The active work repository for this SEO program is:
 
 The earlier assumption that Phase 5.6 also had to be mirrored to `qusaykhudair/success-path-mentors-local` was incorrect for this workstream. That repository is not a release blocker for Phase 5.6.
 
-The Phase 5.6 release decision is therefore based on QA and production verification in the development repository above.
+## 9. Release and production evidence
 
-## 9. Phase 5.6 decision
+- Phase 5.6 implementation PR: **#65**.
+- Phase 5.6 merge commit: `fe782a6fb3d60576ed79f91b624df9cb73f2e10b`.
+- Hostinger deployment source: `SuccessPathMentors/SuccessPath-Website-development-`, branch `main`.
+- Owner-provided Hostinger deployment evidence shows commit `e8b8257c...` as **Completed** and **Current** on 2026-09-23 20:39:49 Africa/Cairo time.
+- Fresh production verification confirms `/en/locations/canada/british-columbia` renders the new British Columbia curriculum copy beginning with the Know–Do–Understand model.
+- The canonical owner remains `/en/locations/canada/british-columbia`.
+- No new URL or doorway route was introduced.
 
-**PATCH READY.**
+## 10. Measurement handoff
 
-The content change is intentionally narrow and evidence-based. No speculative metadata, H1, CTA, form or URL change is included.
+The production verification date is the experiment start date for `EXP-002`:
 
-Release completion requires:
+**Start:** `2026-09-23`
+
+Readout checkpoints:
+- 14-day early monitor: `2026-10-07`;
+- 28-day performance checkpoint: `2026-10-21`, subject also to the existing `>=100 relevant impressions` readiness gate;
+- 56-day scale gate: `2026-11-18`.
+
+The baseline recorded for EXP-002 is **7 impressions / 0 clicks** from the short pre-patch sample. No performance conclusion is drawn from that baseline alone.
+
+## 11. Phase 5.6 decision
+
+**PASS / CLOSED.**
+
+Acceptance criteria are satisfied:
 1. focused regression PASS;
-2. focused TypeScript PASS;
-3. PR merge to `main` in the development repository;
-4. production verification of the British Columbia owner;
-5. dashboard status update from patch-ready to deployed/verified.
+2. focused TypeScript validation PASS;
+3. PR #65 merged to `main`;
+4. Hostinger deployment confirmed current;
+5. British Columbia owner verified live with the intended curriculum content;
+6. production dashboard updated from patch-ready to live/verified;
+7. EXP-002 measurement clock started from the live verification date.
+
+Phase 5.6 is complete. Performance interpretation now belongs to Phase 5.7 monitoring and Phase 5.8 mature review gates.
