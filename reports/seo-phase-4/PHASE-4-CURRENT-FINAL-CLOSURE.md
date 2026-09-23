@@ -4,7 +4,7 @@
 **Original record date:** 2026-09-23  
 **Original baseline:** `main @ 1baf17a2f0f85d239af6a640a956a791025e2fb0`  
 **Original issue:** #42  
-**Current status:** **SUPERSEDED — PHASE 4 IS STILL IN PROGRESS**
+**Current status:** **SUPERSEDED — PHASE 4 FINAL CLOSURE STILL PENDING EXTERNAL FACEBOOK ACTIVATION**
 
 > This file previously marked Phase 4 as `PASS / CLOSED` after the internally numbered Phase 4.5 work. That closure was premature when compared with the original Phase 4.1–4.10 roadmap agreed for the project. Keep this file only as an audit trail of that earlier closure decision.
 
@@ -14,6 +14,7 @@ Use the latest original-roadmap reports under `reports/seo-phase-4/`, including:
 
 - `PHASE-4-8-GBP-EXTERNAL-LOCAL-AUTHORITY.md`
 - `PHASE-4-9-FACEBOOK-ORGANIC-DISTRIBUTION-UTM-ACTIVATION.md`
+- `PHASE-4-10-FINAL-QA-PRODUCTION-MEASUREMENT-GATE.md`
 
 ## Correct original-roadmap status
 
@@ -28,7 +29,7 @@ Use the latest original-roadmap reports under `reports/seo-phase-4/`, including:
 | 4.7 Internal Linking Authority | PASS — completed under earlier internal numbering |
 | 4.8 GBP / External Local Authority | PASS |
 | 4.9 Facebook / Organic Distribution | TECHNICAL / DISTRIBUTION PACKAGE PASS — external Facebook activation pending |
-| 4.10 Final QA / Deploy / Measure | PENDING |
+| 4.10 Final QA / Deploy / Measure | TECHNICAL QA / PRODUCTION VALIDATION PASS — final measurement closure blocked by 4.9 external activation evidence |
 
 ## What remains valid from the earlier closure work
 
@@ -45,11 +46,24 @@ The earlier implementation evidence is still valid for the completed technical w
 
 The correction is about **project sequencing**, not a rollback of those completed implementations.
 
-## Formal closure rule
+## Phase 4.10 result
 
-Do not mark Phase 4 finally closed until:
+The live production owner architecture, robots/sitemap availability, legacy Exam Preparation and Ontario Curriculum redirects, and Phase 4.9 UTM destination behavior have passed the Phase 4.10 technical QA / production gate.
 
-1. **Phase 4.9 external activation evidence** confirms the approved Facebook Page Website/About UTM, at least one live organic UTM post, correct destination resolution, and analytics attribution; and
-2. **Phase 4.10 — Final Phase 4 QA / Production / Measurement Gate** passes.
+No new runtime patch is required from the Phase 4.10 review.
 
-Only after 4.10 passes should a new final Phase 4 closure record be issued.
+## Formal final-closure rule
+
+Do not mark Phase 4 finally closed until **Phase 4.9 external activation evidence** confirms all four items:
+
+1. approved Facebook Page Website/About UTM link is live;
+2. at least one approved organic UTM post is live;
+3. the shared URL resolves to the intended canonical owner;
+4. analytics records the expected `facebook / organic_social` campaign and content attribution.
+
+After those four checks pass:
+
+- close Issue #48;
+- close Issue #51;
+- issue a new final Phase 4 closure record;
+- only then formally activate Phase 5 using the preparatory measurement baseline already captured.
