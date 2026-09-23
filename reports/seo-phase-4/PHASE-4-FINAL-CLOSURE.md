@@ -5,9 +5,9 @@
 **Original Phase:** Phase 4 Fast Track — Build Local SEO Authority  
 **Original Snapshot Date:** September 16, 2026  
 **Historical Status:** CLOSED / PASS at the September 16 snapshot  
-**Current Status:** **SUPERSEDED — see `PHASE-4-POST-PHASE3-RECONCILIATION.md`**
+**Current Status:** **SUPERSEDED — see `PHASE-4-CURRENT-FINAL-CLOSURE.md`**
 
-> This file is retained as historical release evidence. It is no longer the current Phase 4 closure source because Phase 3 later changed canonical ownership for French tutoring, Exam Preparation, Ontario Curriculum, and Homework Help. Current Phase 4 evidence is maintained in `reports/seo-phase-4/PHASE-4-POST-PHASE3-RECONCILIATION.md` until the post-Phase-3 release gate is completed.
+> This file is retained as historical release evidence. It is no longer the current Phase 4 closure source because Phase 3 later changed canonical ownership for French tutoring, Exam Preparation, Ontario Curriculum, and Homework Help. The current post-Phase-3 Phase 4 closure record is `reports/seo-phase-4/PHASE-4-CURRENT-FINAL-CLOSURE.md`.
 
 ---
 
@@ -35,7 +35,7 @@ The following September 16 assumptions must **not** be used as current architect
 | French tutoring was HOLD / 404 | `/en/subjects/french` is now the active canonical French money-page owner |
 | Exam Preparation social destination could use `/en/exam-preparation` | Current canonical owner: `/en/services/exam-preparation` |
 | Ontario Curriculum social destination could use `/en/locations/canada/ontario/curriculum` | Current English canonical owner: `/en/curriculum/ontario` |
-| Phase 4 could be treated as fully closed without revalidation | Phase 4.0 reconciliation is required against the post-Phase-3 production architecture |
+| Phase 4 could be treated as fully closed without revalidation | Phase 4 was revalidated through Phase 4.0–4.5 and is now closed by the current final closure record |
 
 ---
 
@@ -44,15 +44,18 @@ The following September 16 assumptions must **not** be used as current architect
 - Ontario: `/en/locations/canada/ontario`
 - Milton: `/en/locations/canada/ontario/milton`
 - Toronto: `/en/locations/canada/ontario/toronto`
+- Hamilton: `/en/locations/canada/ontario/hamilton`
 - Ontario Curriculum: `/en/curriculum/ontario`
 - French Tutoring: `/en/subjects/french`
 - Exam Preparation: `/en/services/exam-preparation`
 - Homework Help: `/en/services/homework-help`
 
-No mass city pages or city-subject doorway pages are authorized by this reconciliation.
+No mass city pages or city-subject doorway pages are authorized by this historical document.
 
 ---
 
-## 4. Current release gate
+## 4. Current closure source
 
-Use `PHASE-4-POST-PHASE3-RECONCILIATION.md` as the active evidence source. Phase 4 may be marked current/closed again only after focused regression QA, merge to `main`, and live production validation of the reconciled implementation.
+Use `PHASE-4-CURRENT-FINAL-CLOSURE.md` as the active Phase 4 closure source.
+
+`PHASE-4-POST-PHASE3-RECONCILIATION.md` remains the Phase 4.0 reconciliation artifact that bridged the September 16 snapshot into the completed post-Phase-3 architecture.
