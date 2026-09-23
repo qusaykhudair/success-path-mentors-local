@@ -32,7 +32,7 @@ export function buildFrenchProgramMetadata({
     alternates: {
       canonical,
       languages: {
-        fr:
+        'fr-CA':
           canonical,
       },
     },
