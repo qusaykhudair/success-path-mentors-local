@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { ContentSection } from '@/components/internal/content-section';
@@ -8,11 +9,14 @@ import { InternalFaq } from '@/components/internal/internal-faq';
 import { InternalPageHero } from '@/components/internal/internal-page-hero';
 import { InternalPageShell } from '@/components/internal/internal-page-shell';
 import { ProcessSteps } from '@/components/internal/process-steps';
+import { getDefaultMarket } from '@/config/markets';
+import { routePath } from '@/config/routes';
 import {
   isSupportedLocale,
   siteConfig,
 } from '@/config/site';
 import { aboutPageContent } from '@/content/pages/about';
+import { trustTransparencyContent } from '@/content/pages/trust-transparency';
 import { buildPageMetadata } from '@/lib/seo/metadata';
 import { buildAboutPageSchema } from '@/lib/seo/schemas';
 
@@ -56,13 +60,11 @@ export default async function AboutPage({
 
   const content =
     aboutPageContent[locale];
+  const trustContent =
+    trustTransparencyContent[locale];
 
-  /*
-   * Keep the page independent from a shared routes object.
-   * This avoids runtime failures when an existing routes.ts
-   * in the project uses a different export shape.
-   */
-  const homeHref = `/${locale}`;
+  const homeHref =
+    routePath.home(locale);
 
   const bookingHref =
     siteConfig.bookingUrl.trim() ||
@@ -70,6 +72,46 @@ export default async function AboutPage({
 
   const emailHref =
     `mailto:${siteConfig.email}`;
+
+  const legalOrganizationName =
+    getDefaultMarket().organization.legalName ??
+    siteConfig.organizationName;
+
+  const heroDescription =
+    locale === 'ar'
+      ? 'تقدم Success Path Mentors حصصًا فردية أونلاين تراعي مادة الطالب وصفه الدراسي وأهدافه التعليمية وواجباته المدرسية والوقت المناسب للأسرة.'
+      : 'Success Path Mentors provides one-to-one online tutoring designed around the student’s subject, grade, learning goals, schoolwork, and preferred schedule.';
+
+  const trustLinks = [
+    {
+      href: routePath.howItWorks(locale),
+      title: trustContent.links.process.title,
+      description:
+        trustContent.links.process.description,
+      action: trustContent.links.process.action,
+    },
+    {
+      href: routePath.contact(locale),
+      title: trustContent.links.contact.title,
+      description:
+        trustContent.links.contact.description,
+      action: trustContent.links.contact.action,
+    },
+    {
+      href: routePath.terms(locale),
+      title: trustContent.links.terms.title,
+      description:
+        trustContent.links.terms.description,
+      action: trustContent.links.terms.action,
+    },
+    {
+      href: routePath.privacy(locale),
+      title: trustContent.links.privacy.title,
+      description:
+        trustContent.links.privacy.description,
+      action: trustContent.links.privacy.action,
+    },
+  ];
 
   const breadcrumbs = [
     {
@@ -108,9 +150,7 @@ export default async function AboutPage({
         }
         eyebrow={content.hero.eyebrow}
         title={content.hero.title}
-        description={
-          content.hero.description
-        }
+        description={heroDescription}
         primaryAction={{
           label:
             content.hero.primaryAction,
@@ -218,6 +258,125 @@ export default async function AboutPage({
         <ProcessSteps
           items={content.quality.steps}
         />
+      </ContentSection>
+
+      <ContentSection
+        id="trust-transparency"
+        eyebrow={trustContent.eyebrow}
+        title={trustContent.title}
+        description={trustContent.description}
+      >
+        <div
+          className="
+            mb-7
+            rounded-card
+            border
+            border-accent-200
+            bg-accent-50/70
+            p-6
+            sm:p-7
+          "
+        >
+          <p
+            className="
+              text-caption
+              font-bold
+              uppercase
+              tracking-wider
+              text-accent-800
+            "
+          >
+            {trustContent.legalLabel}
+          </p>
+
+          <p
+            className="
+              mt-2
+              text-body
+              font-black
+              text-primary-950
+            "
+          >
+            {legalOrganizationName}
+          </p>
+
+          <p
+            className="
+              mt-2
+              max-w-3xl
+              text-small
+              leading-7
+              text-muted-foreground
+            "
+          >
+            {trustContent.legalDescription}
+          </p>
+        </div>
+
+        <div
+          className="
+            grid
+            gap-5
+            md:grid-cols-2
+          "
+        >
+          {trustLinks.map((item) => (
+            <article
+              key={item.href}
+              className="
+                rounded-card
+                border
+                border-border
+                bg-background
+                p-6
+                shadow-sm
+                sm:p-7
+              "
+            >
+              <h3
+                className="
+                  text-h4
+                  font-black
+                  text-primary-950
+                "
+              >
+                {item.title}
+              </h3>
+
+              <p
+                className="
+                  mt-3
+                  text-small
+                  leading-7
+                  text-muted-foreground
+                "
+              >
+                {item.description}
+              </p>
+
+              <Link
+                href={item.href}
+                className="
+                  mt-5
+                  inline-flex
+                  min-h-touch
+                  items-center
+                  font-bold
+                  text-accent-800
+                  underline
+                  decoration-accent-300
+                  underline-offset-4
+                  hover:text-accent-900
+                  focus-visible:outline-none
+                  focus-visible:ring-2
+                  focus-visible:ring-ring
+                "
+              >
+                {item.action}
+              </Link>
+            </article>
+          ))}
+        </div>
       </ContentSection>
 
       <ContentSection
