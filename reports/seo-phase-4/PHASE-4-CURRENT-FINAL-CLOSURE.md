@@ -10,11 +10,10 @@
 
 ## Current source of truth
 
-Use:
+Use the latest original-roadmap reports under `reports/seo-phase-4/`, including:
 
-`reports/seo-phase-4/PHASE-4-8-GBP-EXTERNAL-LOCAL-AUTHORITY.md`
-
-for the current roadmap state after Phase 4.8.
+- `PHASE-4-8-GBP-EXTERNAL-LOCAL-AUTHORITY.md`
+- `PHASE-4-9-FACEBOOK-ORGANIC-DISTRIBUTION-UTM-ACTIVATION.md`
 
 ## Correct original-roadmap status
 
@@ -27,8 +26,8 @@ for the current roadmap state after Phase 4.8.
 | 4.5 Grade / Course Expansion | PASS |
 | 4.6 FAQs / Schema | PASS — completed under earlier internal numbering |
 | 4.7 Internal Linking Authority | PASS — completed under earlier internal numbering |
-| 4.8 GBP / External Local Authority | PASS — see Phase 4.8 report |
-| 4.9 Facebook / Organic Distribution | PENDING |
+| 4.8 GBP / External Local Authority | PASS |
+| 4.9 Facebook / Organic Distribution | TECHNICAL / DISTRIBUTION PACKAGE PASS — external Facebook activation pending |
 | 4.10 Final QA / Deploy / Measure | PENDING |
 
 ## What remains valid from the earlier closure work
@@ -48,9 +47,9 @@ The correction is about **project sequencing**, not a rollback of those complete
 
 ## Formal closure rule
 
-Do not mark Phase 4 finally closed until both remaining original-roadmap steps are completed:
+Do not mark Phase 4 finally closed until:
 
-1. **Phase 4.9 — Facebook / Organic Distribution & UTM Activation**;
-2. **Phase 4.10 — Final Phase 4 QA / Production / Measurement Gate**.
+1. **Phase 4.9 external activation evidence** confirms the approved Facebook Page Website/About UTM, at least one live organic UTM post, correct destination resolution, and analytics attribution; and
+2. **Phase 4.10 — Final Phase 4 QA / Production / Measurement Gate** passes.
 
 Only after 4.10 passes should a new final Phase 4 closure record be issued.
