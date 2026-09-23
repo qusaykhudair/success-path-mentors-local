@@ -1,0 +1,36 @@
+name: Phase 6.9 QA
+
+on:
+  push:
+    branches:
+      - seo/phase-6-9-multilingual-seo-expansion
+  workflow_dispatch:
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.13.0'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Focused Phase 6.9 regression
+        run: node --test tests/phase6-multilingual-seo-expansion.test.mjs
+
+      - name: TypeScript
+        run: npm run typecheck
+
+      - name: Changed-file ESLint
+        run: npx eslint src/app/sitemap.ts src/lib/programme-francais/metadata.ts tests/phase6-multilingual-seo-expansion.test.mjs
+
+      - name: Production build
+        run: npm run build
