@@ -3,7 +3,8 @@
 **Repository:** `SuccessPathMentors/SuccessPath-Website-development-`  
 **Baseline main:** `a7ebab5d8a10aa76349d3f5939726bc9f000c000`  
 **Control issue:** #89  
-**Status:** PATCH IMPLEMENTED — QA REQUIRED
+**Pull request:** #90  
+**Status:** PASS — QA GREEN / READY TO MERGE
 
 ## Objective
 
@@ -197,7 +198,52 @@ The focused guard verifies:
 6. Germany keeps `de-DE` / `en-DE` / `ar-DE` / `x-default`;
 7. no language-local doorway pattern is introduced in changed source.
 
-## Files changed
+## Dashboard control
+
+Production dashboard tab created and verified:
+
+`Phase6_Multilingual_SEO`
+
+The control records:
+
+- namespace;
+- language / hreflang;
+- primary owner pattern;
+- current demand;
+- canonical rule;
+- hreflang rule;
+- intent relationship;
+- Phase 6.9 state;
+- scale gate;
+- operational notes.
+
+It explicitly records the Arabic existing-owner signal, zero current `/fr/` and `/de/` GSC rows, English-only owner protection, French-programme separation and Germany market preservation.
+
+## QA evidence
+
+Temporary branch-only workflow:
+
+`Phase 6.9 QA`
+
+Run:
+
+`35923432633`
+
+Head tested:
+
+`83a61644147d15cd2114a3b17e6ce7633ee6d833`
+
+Result: **PASS**
+
+- dependency install — PASS;
+- focused Phase 6.9 regression — PASS;
+- TypeScript — PASS;
+- changed-file ESLint — PASS;
+- production build — PASS.
+
+The production build completed successfully on 2026-09-23 at 21:43:20 UTC. The temporary workflow was removed from the branch after the green run and is not part of the intended production diff.
+
+## Final intended production diff
 
 Runtime/SEO infrastructure:
 
@@ -212,24 +258,16 @@ Documentation:
 
 - `reports/seo-phase-6/PHASE-6-9-MULTILINGUAL-SEO-EXPANSION.md`
 
-## Dashboard control
+No new public route is introduced.
 
-A dedicated production-dashboard control tab is required:
+## Phase 6.9 release decision
 
-`Phase6_Multilingual_SEO`
+**PASS — QA GREEN / READY TO MERGE.**
 
-It records namespace, language/hreflang, owner pattern, current demand, canonical rule, hreflang rule, intent relationship, state and scale gate.
+The merge gate requires only:
 
-## Pre-QA decision
-
-**PATCH IMPLEMENTED — QA REQUIRED**
-
-Phase 6.9 may be closed only after:
-
-- dashboard control is written;
-- focused regression passes;
-- TypeScript passes;
-- changed-file ESLint passes;
-- production build passes;
-- final PR diff contains only the reviewed Phase 6.9 scope;
-- the merged `main` SHA is verified.
+- final PR #90 diff verification;
+- confirmation that the temporary QA workflow is absent;
+- merge into `main`;
+- merged `main` SHA verification;
+- Issue #89 closure with release evidence.
