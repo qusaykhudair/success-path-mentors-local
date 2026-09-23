@@ -5,6 +5,9 @@ import {
   getLocationEducationResources,
 } from '@/content/locations/education-resources';
 import {
+  applyLocationContentPatch,
+} from '@/content/locations/location-content-patches';
+import {
   getLocationDefinitionById,
   getLocationDefinitionBySegments,
   localizeLocationPage,
@@ -49,6 +52,16 @@ function withEducationResources(
   };
 }
 
+function finalizeLocationPage(
+  page: LocalizedLocationPage,
+  locale: SiteLocale
+): LocalizedLocationPage {
+  return applyLocationContentPatch(
+    withEducationResources(page, locale),
+    locale
+  );
+}
+
 export function getLocalizedLocationPage(
   locale: SiteLocale,
   segments: string[]
@@ -62,7 +75,7 @@ export function getLocalizedLocationPage(
     return null;
   }
 
-  return withEducationResources(
+  return finalizeLocationPage(
     localizeLocationPage(
       definition,
       locale
@@ -82,7 +95,7 @@ export function getLocalizedLocationPageById(
     return null;
   }
 
-  return withEducationResources(
+  return finalizeLocationPage(
     localizeLocationPage(
       definition,
       locale
