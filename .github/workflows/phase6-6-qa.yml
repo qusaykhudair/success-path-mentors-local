@@ -21,7 +21,7 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install --package-lock=false --no-audit --no-fund
 
       - name: Phase 6.6 focused regression
         run: node --test tests/phase6-eeat-trust-layer.test.mjs
