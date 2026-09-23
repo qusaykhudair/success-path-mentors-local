@@ -43,6 +43,7 @@ import {
 } from '@/lib/market-routing';
 import {
   buildAbsoluteUrl,
+  buildLanguageAlternates,
 } from '@/lib/seo/urls';
 import {
   programmeFrancaisRoutes,
@@ -297,24 +298,10 @@ export default function sitemap():
             path
           ),
         alternates: {
-          languages: {
-            ...Object.fromEntries(
-              routing.locales.map(
-                (locale) => [
-                  locale,
-                  buildAbsoluteUrl(
-                    locale,
-                    path
-                  ),
-                ]
-              )
+          languages:
+            buildLanguageAlternates(
+              path
             ),
-            'x-default':
-              buildAbsoluteUrl(
-                routing.defaultLocale,
-                path
-              ),
-          },
         },
       })
     );
@@ -326,7 +313,7 @@ export default function sitemap():
       priority: 0.88,
       alternates: {
         languages: {
-          en: `${SITE_URL}/en${path}`,
+          'en-CA': `${SITE_URL}/en${path}`,
           'x-default': `${SITE_URL}/en${path}`,
         },
       },
@@ -365,7 +352,7 @@ export default function sitemap():
           ),
         alternates: {
           languages: {
-            fr:
+            'fr-CA':
               `${SITE_URL}${path}`,
           },
         },
