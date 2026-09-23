@@ -6,6 +6,9 @@ import {
 } from 'next/navigation';
 
 import {
+  AuthorityDistributionLinks,
+} from '@/components/internal/authority-distribution-links';
+import {
   JsonLd,
 } from '@/components/seo/json-ld';
 import {
@@ -192,6 +195,11 @@ export default async function ChemistryPage({
       <OntarioCourseSupportBlock
         locale={locale}
         subject="chemistry"
+      />
+
+      <AuthorityDistributionLinks
+        locale={locale}
+        context="chemistry"
       />
 
       <LocalAvailabilityBlock

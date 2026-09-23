@@ -66,6 +66,29 @@ const content = {
     title:
       'One-to-One Support for French Immersion, Extended French & Core French',
   },
+  relatedLinks: [
+    {
+      title: 'Homework Help',
+      description:
+        'Use the dedicated Homework Help service when French support is focused on current assignments, schoolwork, and study routines.',
+      href: '/en/services/homework-help',
+      label: 'Homework Help',
+    },
+    {
+      title: 'Exam Preparation',
+      description:
+        'Use the Exam Preparation service when the immediate goal is structured review, practice, and assessment preparation.',
+      href: '/en/services/exam-preparation',
+      label: 'Exam Preparation',
+    },
+    {
+      title: 'Ontario Curriculum Tutoring',
+      description:
+        'Review the broader Ontario curriculum context while French tutoring remains owned by this subject page.',
+      href: '/en/curriculum/ontario',
+      label: 'Ontario Curriculum Support',
+    },
+  ],
 } satisfies SeoGapPageContent;
 
 export async function generateMetadata({

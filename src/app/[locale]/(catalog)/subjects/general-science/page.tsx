@@ -7,6 +7,9 @@ import {
 } from 'next/navigation';
 
 import {
+  AuthorityDistributionLinks,
+} from '@/components/internal/authority-distribution-links';
+import {
   JsonLd,
 } from '@/components/seo/json-ld';
 import {
@@ -250,6 +253,11 @@ export default async function GeneralSciencePage({
           </Link>
         </div>
       </section>
+
+      <AuthorityDistributionLinks
+        locale={locale}
+        context="general-science"
+      />
 
       <LocalAvailabilityBlock
         locale={locale}
