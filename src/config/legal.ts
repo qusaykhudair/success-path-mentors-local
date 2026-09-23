@@ -1,4 +1,13 @@
+import { getDefaultMarket } from '@/config/markets';
 import { siteConfig } from '@/config/site';
+
+const configuredMarketLegalName =
+  getDefaultMarket().organization.legalName;
+
+const configuredLegalEntityName =
+  configuredMarketLegalName
+    ?.replace(/\s+operating as\s+.+$/i, '')
+    .trim();
 
 export const legalConfig = {
   brandName: siteConfig.name,
@@ -6,12 +15,13 @@ export const legalConfig = {
   contactEmail: siteConfig.email,
 
   /*
-   * Confirm this exact entity before publishing.
-   * It should be the entity that receives payments and contracts
-   * with parents or guardians.
+   * Prefer an explicitly configured legal entity when supplied.
+   * Otherwise use the verified North America market organization
+   * instead of silently falling back to the public brand name.
    */
   legalEntityName:
     process.env.NEXT_PUBLIC_LEGAL_ENTITY_NAME?.trim() ||
+    configuredLegalEntityName ||
     siteConfig.organizationName,
 
   effectiveDate: 'August 5, 2026',
