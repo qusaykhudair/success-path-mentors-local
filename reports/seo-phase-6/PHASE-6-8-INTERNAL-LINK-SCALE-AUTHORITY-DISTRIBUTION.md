@@ -3,7 +3,7 @@
 **Repository:** `SuccessPathMentors/SuccessPath-Website-development-`  
 **Baseline main:** `6269cda1fb6fdb412face018045dcf4a5459f70b`  
 **Control issue:** #87  
-**Status:** IMPLEMENTED / QA PENDING
+**Status:** PASS — RUNTIME QA GREEN / READY TO MERGE
 
 ## Objective
 
@@ -128,19 +128,32 @@ Documentation:
 
 - `reports/seo-phase-6/PHASE-6-8-INTERNAL-LINK-SCALE-AUTHORITY-DISTRIBUTION.md`
 
-## QA gate
+## QA evidence
 
-Runtime changes require:
+Runtime QA was executed on branch head:
 
-- focused Phase 6.8 regression
-- TypeScript
-- changed-file ESLint
-- production build
+`edfb75e0f7d67ee36e14bf693ffbd582fac31b01`
 
-Results will be recorded here before merge.
+GitHub Actions run:
+
+`35921031252`
+
+Result: **SUCCESS**
+
+Successful steps:
+
+- dependency install — PASS
+- focused Phase 6.8 regression — PASS
+- TypeScript — PASS
+- changed-file ESLint — PASS
+- production build — PASS
+
+The successful workflow used the repository's standard dependency install (`npm install --no-audit --no-fund`) and completed the full runtime validation gate.
+
+After that green runtime run, only release-control housekeeping was allowed: this report was updated with the QA evidence and the temporary branch-only QA workflow was removed. No post-QA runtime source file was changed.
 
 ## Release decision
 
-**PENDING QA**
+**PASS — RUNTIME QA GREEN / READY TO MERGE**
 
-No release should be merged until the runtime validation gate is green.
+Phase 6.8 can be merged after confirming the final PR diff contains no temporary QA workflow and no unexpected runtime change beyond the reviewed authority-distribution scope.
