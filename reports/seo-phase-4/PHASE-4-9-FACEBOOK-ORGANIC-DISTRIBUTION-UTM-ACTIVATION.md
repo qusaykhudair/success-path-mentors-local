@@ -113,7 +113,29 @@ All organic posts must remain consistent with the current public tutoring propos
 
 Public search currently surfaces third-party references that contain older or inconsistent brand wording, including historical `Mustafa Academy` text. Phase 4.9 therefore treats the official website and approved Facebook Page content as the controlled source for current brand messaging. Third-party mirrors should not be copied back into current social content.
 
-## 8. Facebook Page profile activation
+## 8. First-wave live URL / canonical validation — PASS
+
+The six prepared first-wave UTM URLs were fetched against production after the activation package was prepared.
+
+Validated destinations:
+
+- Hamilton → `/en/locations/canada/ontario/hamilton`
+- Math → `/en/subjects/math`
+- Homework Help → `/en/services/homework-help`
+- Exam Preparation → `/en/services/exam-preparation`
+- French → `/en/subjects/french`
+- Ontario Curriculum → `/en/curriculum/ontario`
+
+For all six checks:
+
+- the UTM query string remained on the requested URL;
+- the page loaded successfully;
+- the page title matched the intended owner;
+- Open Graph URL metadata pointed to the clean canonical owner without UTM parameters.
+
+**Decision:** the first-wave links are production-safe for organic Facebook publishing.
+
+## 9. Facebook Page profile activation
 
 Approved permanent Page Website/About URL:
 
@@ -121,9 +143,9 @@ Approved permanent Page Website/About URL:
 
 The Page profile link intentionally points to the broad brand owner rather than a city page.
 
-## 9. External activation state
+## 10. External activation state
 
-The repository, owner map, UTM matrix, analytics capture path and ready-to-publish copy are complete.
+The repository, owner map, UTM matrix, analytics capture path, live destination validation and ready-to-publish copy are complete.
 
 Actual Facebook Page editing/publishing requires authenticated access to the official Facebook/Meta account. That authenticated external action has not been evidenced in this repository session.
 
@@ -138,7 +160,7 @@ Do not mark Phase 4.9 fully closed until all of the following are evidenced:
 3. the shared link resolves to the intended canonical page;
 4. a consented test visit appears in analytics with the expected Facebook source/medium/campaign/content values.
 
-## 10. Measurement framework
+## 11. Measurement framework
 
 Track the funnel as:
 
@@ -156,7 +178,7 @@ Primary Phase 4.9 dimensions:
 
 Facebook reactions/comments can be reviewed as content feedback, but they are not the primary business KPI.
 
-## 11. Phase 4.10 handoff condition
+## 12. Phase 4.10 handoff condition
 
 Phase 4.10 Final QA / Deploy / Measure should begin after Phase 4.9 external activation evidence is available.
 
@@ -168,9 +190,10 @@ At that point Phase 4.10 must validate:
 - published social copy accuracy;
 - final roadmap status for 4.1–4.10.
 
-## 12. Current decision
+## 13. Current decision
 
 **Phase 4.9 repository + analytics readiness: PASS.**  
+**Phase 4.9 first-wave URL/canonical validation: PASS.**  
 **Phase 4.9 external Facebook activation: PENDING.**
 
 The correct next action is not additional code or another landing page. It is authenticated Facebook Page activation using the prepared links/copy, followed by analytics evidence.
