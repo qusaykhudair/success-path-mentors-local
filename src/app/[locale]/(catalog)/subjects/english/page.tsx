@@ -6,6 +6,9 @@ import {
 } from 'next/navigation';
 
 import {
+  AuthorityDistributionLinks,
+} from '@/components/internal/authority-distribution-links';
+import {
   JsonLd,
 } from '@/components/seo/json-ld';
 import {
@@ -173,6 +176,11 @@ export default async function EnglishPage({
         locale={locale}
         strands={overview.strands}
         copy={content.strands}
+      />
+
+      <AuthorityDistributionLinks
+        locale={locale}
+        context="english"
       />
 
       <LocalAvailabilityBlock
