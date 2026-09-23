@@ -5,7 +5,7 @@
 **Implementation date:** 2026-09-23  
 **Primary inputs:** Phase 4.1 Local Search Demand Map, Phase 4.2 Query Owner Map, Phase 4.3 Hamilton internal-authority patch, current production source  
 **Issue:** #40  
-**Status:** AUDIT PASS — regression/QA and merge evidence pending.
+**Status:** AUDIT + QA PASS — merge pending.
 
 ## 1. Objective
 
@@ -124,17 +124,38 @@ The test verifies:
 4. visible dynamic Location FAQs and Location `FAQPage` schema both use `page.faqs`;
 5. common Hamilton doorway patterns remain absent from the shared local-authority implementation.
 
-## 9. Release gate
+## 9. QA evidence
 
-Before Phase 4.5 can be marked closed:
+Temporary branch-only workflow:
 
-1. focused regression test must pass;
-2. TypeScript must pass;
-3. changed-file lint must pass;
-4. production build must pass;
-5. the evidence-only PR must merge to `main`;
-6. Issue #40 may then be closed because no live UI/content behavior is changed by this Phase.
+`Phase 4.5 Local FAQ Schema QA`
 
-Until QA and merge are recorded, status is:
+GitHub Actions run:
 
-**AUDIT PASS / QA + MERGE PENDING**.
+`35882336586`
+
+Results:
+
+- clean `npm ci` — PASS;
+- focused Phase 4.5 regression — PASS;
+- TypeScript `npx tsc --noEmit` — PASS;
+- changed-file ESLint — PASS;
+- production `npm run build` — PASS.
+
+The temporary QA workflow was removed after the successful run and is not part of the intended production diff.
+
+## 10. Release gate
+
+Repository / audit / QA state: **PASS**.
+
+The final Phase 4.5 production diff is evidence-only and does not alter live page behavior. Completion therefore requires:
+
+1. merge the evidence-only PR to `main`;
+2. verify the merge commit is on `main`;
+3. close Issue #40 as completed.
+
+No separate Hostinger/live smoke gate is required for Phase 4.5 because no runtime, visible content, routing, metadata, schema-generation logic, or hosting configuration is being changed.
+
+Until merge is recorded, status is:
+
+**AUDIT + QA PASS / MERGE PENDING**.
