@@ -288,3 +288,7 @@ The campaign now follows a formally documented 3-phase model:
    - WhatsApp should be a priority conversion/lead-quality channel once properly defined and QA-tested.
 
 Full plan: `google-ads/3-PHASE-EXECUTION-PLAN.md`
+
+**Complete Working Units handoff:** `google-ads/FULL-WORKING-UNITS-HANDOFF.md`
+
+This handoff contains ADS-WU-001 through ADS-WU-014, optimization gates, multilingual controls, WhatsApp priority, Meta historical learning, cross-channel control and the current 3-phase execution model.
