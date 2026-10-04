@@ -17,10 +17,18 @@
 | ADS-EV-011 | Google Ads base tag | PASS — detected | 2026-10-04 | Google Ads “correctly detected” confirmation |
 | ADS-EV-012 | Website deployment | PASS after build fix | 2026-10-04 | Deployment succeeded |
 | ADS-EV-013 | Negative keyword baseline | PASS — campaign-level Phrase Match | 2026-10-04 | Google Ads negative keyword table |
+| ADS-EV-014 | Call asset configured | PASS — Canadian business number added; review pending | 2026-10-04 | Google Ads Assets screenshot |
+| ADS-EV-015 | WhatsApp Message asset configured | PASS — campaign-level WhatsApp asset added; review pending | 2026-10-04 | Google Ads Message asset screenshot |
+| ADS-EV-016 | Callouts configured | PASS — 4 campaign-level callouts added; review pending | 2026-10-04 | Google Ads Callouts screenshot |
+| ADS-EV-017 | Sitelinks configured | PASS — 4 campaign-level sitelinks added | 2026-10-04 | Google Ads Sitelink setup |
+| ADS-EV-018 | Structured snippet configured | PASS — Courses / subject tutoring values added | 2026-10-04 | Google Ads Structured Snippet setup |
 
 ## Evidence still required
 - Ad approval / serving evidence
-- Asset inventory
+- Asset approval/eligibility evidence after review
+- Primary responsive-search-ad final URL + display-path evidence
+- Conversion-goal QA: verify `Submit lead form` and `Leads from messages` are not steering bidding
+- Google auto-created asset audit
 - First Search Terms review
 - First Auction Insights snapshot
 - Conversion-event QA
