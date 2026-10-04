@@ -262,3 +262,29 @@ The learning-stage foundation is considered complete only when:
 - conversion-event design is documented before any switch to conversion bidding.
 
 Until then, remain in **Search / Clicks / Learning** mode.
+
+
+---
+
+## 10. Three-phase execution model
+
+The campaign now follows a formally documented 3-phase model:
+
+1. **Phase 1 — Baseline / Learning (Day 0–5+)**
+   - Maximize Clicks
+   - Gather clean baseline data
+   - No conversion-led bidding
+
+2. **Phase 2 — Search Term Cleanup / Traffic Quality (from around Day 5–7 through ~Day 30)**
+   - Search Terms: Keep / Add / Negative / Watch
+   - Negative keyword refinement
+   - High-intent query promotion
+   - Early Auction Insights
+   - WhatsApp lead-quality observation
+
+3. **Phase 3 — Maximize Conversions / Qualified Leads (around Day 30 only if evidence gate passes)**
+   - Day 30 is a decision gate, not an automatic switch.
+   - Requires trustworthy conversion actions, no duplicates, adequate volume, and business attribution.
+   - WhatsApp should be a priority conversion/lead-quality channel once properly defined and QA-tested.
+
+Full plan: `google-ads/3-PHASE-EXECUTION-PLAN.md`
