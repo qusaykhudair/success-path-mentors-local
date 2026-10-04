@@ -8,6 +8,8 @@ import { trackEvent } from '@/lib/analytics/client';
 import { isAnalyticsEventName, type AnalyticsLocale } from '@/lib/analytics/events';
 import { getConfiguredGtmId, getAnalyticsPrivacyHref } from '@/lib/analytics/config';
 
+const GOOGLE_ADS_ID = 'AW-18494343690';
+
 const consentCopy = {
   en: {
     message: 'We use cookies and similar technologies to measure site performance and improve your experience. By clicking "Accept", you consent to our use of these analytics tools.',
@@ -115,6 +117,28 @@ export function AnalyticsProvider() {
             </div>
           </div>
         </div>
+      )}
+
+      {consent === 'granted' && (
+        <>
+          <Script
+            id="google-ads-gtag-loader"
+            src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+            strategy="afterInteractive"
+          />
+          <Script
+            id="google-ads-gtag-config"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GOOGLE_ADS_ID}');
+              `,
+            }}
+          />
+        </>
       )}
 
       {consent === 'granted' && gtmId && (
