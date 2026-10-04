@@ -56,7 +56,21 @@
 - Added `.nvmrc` with Node 22.13.0.
 - Deployment succeeded.
 
+### Assets
+- Call asset added using the Canadian business number; pending Google review.
+- WhatsApp Message asset added at campaign level; pending Google review.
+- Callouts added: `1-to-1 Online Tutoring`, `Grades 1–12`, `Free Trial Lesson`, `Flexible Scheduling`.
+- Four sitelinks added: Math Tutoring, English Tutoring, How Tutoring Works, Explore All Subjects.
+- Structured snippet added using the Courses header with subject tutoring values.
+- No demographic restrictions or device bid adjustments were introduced while configuring assets.
+
+### QA gate identified
+- Campaign/ads were still under Google review at the latest captured state.
+- Campaign must not be considered fully launched/validated until ad + assets are approved and impressions begin.
+- Primary ad final URL/display path still requires explicit QA evidence.
+- Conversion-goal screen must be checked to ensure old `Submit lead form` and any `Leads from messages` action are not steering the current Maximize Clicks pilot.
+
 ### Current position at end of log
 - Campaign is in Search / Clicks / Learning stage.
-- Next operational checkpoint: review Assets.
+- Next operational checkpoint: approval/serving gate + final URL and conversion-goal QA.
 - Live Search Terms / Auction Insights / paid-student economics are still pending data.
