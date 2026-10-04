@@ -13,3 +13,6 @@
 | ADS-RISK-009 | Paid-student attribution unavailable from Ads alone | High | Active | Build privacy-safe business attribution bridge |
 | ADS-RISK-010 | Turbopack production build instability | High | Mitigated | Webpack build + Node 22.13.0 pin; deployment successful |
 | ADS-RISK-011 | Budget could be raised based on Google recommendation rather than economics | Medium | Controlled | Scale only after Lost IS + CAC/ROAS evidence |
+| ADS-RISK-012 | WhatsApp Message asset may create a `Leads from messages` conversion action that could later steer bidding | High | Active | Verify Goals/Conversions; keep current pilot on Maximize Clicks and do not mark message conversion primary for bidding without approval |
+| ADS-RISK-013 | Campaign/asset approval may be mistaken for live serving | Medium | Active | Require actual impression evidence after Google review before declaring pilot live |
+| ADS-RISK-014 | Primary ad final URL/display path not yet captured as QA evidence | Medium | Active | Verify responsive search ad destination before launch-stage sign-off |
