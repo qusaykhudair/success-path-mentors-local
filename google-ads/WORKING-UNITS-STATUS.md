@@ -14,6 +14,10 @@
 | ADS-WU-008 | Lead Quality & Trial Attribution | Not Started | Attribution design pending | Campaign → lead → trial reconciliation works |
 | ADS-WU-009 | Paid Student CAC & ROAS | Not Started | Requires paid-student reconciliation | Reproducible CAC/ROAS reporting |
 | ADS-WU-010 | Continuous Control & 30/60/90 Reviews | Ready | Framework ready | Recurring review cadence active |
+| ADS-WU-011 | Multilingual Search Expansion | Not Started | English pilot remains isolated | Language-specific AR/FR and separate DE market launch pass QA |
+| ADS-WU-012 | Optimization Learning, QA & Gate Control | Active | Governing current pilot | Gate status + numeric QA score documented for meaningful reviews |
+| ADS-WU-013 | Meta Ads Historical Learning & Benchmark Transfer | Not Started | Spec exists | Historical Meta evidence converted into labeled hypotheses |
+| ADS-WU-014 | Cross-Channel Learning Control | Not Started | Requires Google + Meta evidence | Controlled cross-channel tests and channel-specific CAC comparison |
 
 ## Current execution order
 1. Finish ADS-WU-003 approval/serving gate: ad + assets approved, primary final URL checked, and no conversion goal accidentally controls bidding.
@@ -35,3 +39,7 @@ Verify:
 - Primary final URL + display path are correct
 - Old `Submit lead form` and any `Leads from messages` action are not steering the Maximize Clicks pilot
 - No Google auto-created asset is accepted blindly
+
+
+## Full handoff
+See `google-ads/FULL-WORKING-UNITS-HANDOFF.md` for ADS-WU-001 through ADS-WU-014, phase mapping, optimization rules, QA gates, multilingual controls and WhatsApp priority.
