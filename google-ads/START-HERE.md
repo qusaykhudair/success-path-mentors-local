@@ -7,7 +7,7 @@
 **Business:** Success Path Mentors  
 **Campaign:** `SPM_ON_Search_Clicks_Learning_Oct2026`  
 **Stage:** Learning / Search Pilot  
-**Current Working Units:** ADS-WU-002 and ADS-WU-003 complete enough to run; ADS-WU-004 in progress.
+**Current Working Units:** ADS-WU-003 launch configuration and assets are substantially complete but still awaiting Google approval/serving evidence; ADS-WU-002 conversion architecture remains incomplete; ADS-WU-004 baseline negatives complete and live Search Terms pending.
 
 ---
 
@@ -128,14 +128,17 @@ Current baseline exclusions include:
 ## 4. Open / pending checkpoints
 
 ### ADS-WU-003 — Search Campaign Pilot
-- [ ] Review **Assets**:
-  - Sitelinks
-  - Call asset
-  - WhatsApp / Message asset availability
-  - Other auto-created assets
-- [ ] Confirm ads approved after Google review.
-- [ ] Confirm final ad URLs and display paths.
-- [ ] Confirm no accidental conversion-optimized campaign setting was enabled.
+- [x] Asset setup completed:
+  - Call asset added for Canadian business number; pending Google review.
+  - WhatsApp Message asset added; pending Google review.
+  - Callouts added: `1-to-1 Online Tutoring`, `Grades 1–12`, `Free Trial Lesson`, `Flexible Scheduling`.
+  - Sitelinks added for Math Tutoring, English Tutoring, How Tutoring Works, and Explore All Subjects.
+  - Structured snippet added using Courses with Math, English, Science, French, Physics and Chemistry tutoring.
+- [ ] Confirm ads and all assets approved after Google review.
+- [ ] Confirm campaign is actually serving impressions after approval.
+- [ ] Confirm final ad URL and display path for the primary responsive search ad.
+- [ ] Confirm the WhatsApp Message asset did **not** enable a conversion-optimized campaign setting or make `Leads from messages` a primary optimization goal.
+- [ ] Audit any Google auto-created assets before accepting them.
 
 ### ADS-WU-004 — Search Terms & Negative Keywords
 - [ ] Wait for real search-term data.
@@ -167,17 +170,16 @@ Pending:
 
 ## 5. Current next step
 
-**NEXT ACTION: Open Google Ads → Assets → Assets.**
+**NEXT ACTION: Approval + serving gate. Do not optimize yet.**
 
-Review the assets currently attached to `SPM_ON_Search_Clicks_Learning_Oct2026`.
+1. Wait for Google review to complete.
+2. Confirm the responsive search ad is **Approved / Eligible** and the campaign begins serving impressions.
+3. Confirm Call, WhatsApp Message, Callouts, Sitelinks and Structured Snippet are approved/eligible.
+4. Confirm the primary ad final URL and display path are correct.
+5. Open **Goals / Conversions** and verify that the old `Submit lead form` and any `Leads from messages` action are **not controlling bidding** during the Maximize Clicks learning stage.
+6. If the campaign is approved and serving, enter the observation-only learning window and make no structural changes for 5–7 days unless there is a policy/error issue.
 
-Do not add or remove anything blindly. First capture the current assets and verify:
-1. Sitelinks.
-2. Call asset.
-3. Whether WhatsApp / Message asset is available.
-4. Any Google auto-created assets.
-
-After that, continue to the first live-data checkpoint.
+After live data exists, the next optimization action is the first Search Terms review under ADS-WU-004.
 
 ---
 
@@ -236,7 +238,7 @@ Evaluate whether enough evidence exists to:
 |---|---|---|---|
 | ADS-WU-001 | Access & Baseline Capture | In Progress | Account created; live baseline awaits data |
 | ADS-WU-002 | Conversion Measurement Foundation | In Progress | Google tag installed/detected; business conversion events pending |
-| ADS-WU-003 | Search Campaign Pilot | In Progress | Core campaign setup complete; assets + ad approval pending |
+| ADS-WU-003 | Search Campaign Pilot | In Progress | Core setup + assets complete; approval/serving + URL/goal QA pending |
 | ADS-WU-004 | Search Terms & Negative Keywords | In Progress | Baseline negatives complete; live search terms pending |
 | ADS-WU-005 | Auction Insights Competitive Matrix | Not Started | Requires live auction data |
 | ADS-WU-006 | Ad & Landing Page Quality | Not Started | Review after initial traffic |
@@ -253,7 +255,7 @@ The learning-stage foundation is considered complete only when:
 - campaign is approved and serving;
 - Google Search only remains enforced;
 - Ontario presence targeting remains enforced;
-- initial assets are reviewed;
+- initial assets are configured and approved/eligible;
 - first search-term data is captured;
 - first negative-keyword optimization is documented;
 - first Auction Insights snapshot is available or explicitly noted as insufficient-data;
