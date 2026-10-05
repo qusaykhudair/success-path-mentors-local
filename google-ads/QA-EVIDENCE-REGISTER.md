@@ -49,6 +49,9 @@
 | ADS-EV-033 | Competitive baseline — overall rank loss | INFO — Search Impr. Share 20.11%, Search Lost IS (budget) 0.57%, Search Lost IS (rank) 79.31%, Search Lost Top IS (rank) 85.06%; 206 impressions, 10 clicks, 4.85% CTR, CA$19.34 cost | 2026-10-05 | Google Ads Campaigns table screenshot |
 | ADS-EV-034 | Budget vs Rank diagnosis | PASS — early evidence shows Rank is the dominant visibility constraint; budget loss is minimal. No budget increase justified from this snapshot. | 2026-10-05 | Derived from Google Ads competitive metrics |
 
+| ADS-EV-035 | First Quality Score diagnostics | INFO — `"online tutoring"` and broad `online tutoring` show Quality Score 3/10; Expected CTR = Below average; Ad relevance = Above average; Landing page experience = Below average. Most other keywords still show insufficient data (—). | 2026-10-05 | Google Ads Keywords quality columns screenshot |
+| ADS-EV-036 | Rank root-cause hypothesis | INFO — early diagnostics point more strongly to Expected CTR + Landing Page Experience than ad relevance. This aligns with high Search Lost IS (rank), but volume is still too low for major structural changes. | 2026-10-05 | Derived from Google Ads Quality Score diagnostics |
+
 ## Evidence still required
 - Ad approval / serving evidence
 - Asset approval/eligibility evidence after review
