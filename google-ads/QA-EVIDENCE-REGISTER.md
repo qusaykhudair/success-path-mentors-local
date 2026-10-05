@@ -33,6 +33,8 @@
 
 | ADS-EV-024 | Asset eligibility — visible set | PASS — Call, 4 Sitelinks, 4 Callouts and Structured Snippet all show Eligible | 2026-10-05 | Google Ads Assets table screenshot |
 
+| ADS-EV-025 | WhatsApp Message asset eligibility | PASS — campaign-level WhatsApp Message asset shows Eligible | 2026-10-05 | Google Ads Message asset screenshot |
+
 ## Evidence still required
 - Ad approval / serving evidence
 - Asset approval/eligibility evidence after review
