@@ -312,3 +312,19 @@ Observed campaign-row metrics:
 
 ### Decision
 Do not make structural changes from this first snapshot. Continue collecting baseline data and proceed to the first Search Terms quality review once sufficient query data is available.
+
+
+### First Budget-vs-Rank diagnosis — 2026-10-05
+
+Observed:
+- Search Impression Share: **20.11%**
+- Search Lost IS (Budget): **0.57%**
+- Search Lost IS (Rank): **79.31%**
+- Search Lost Top IS (Rank): **85.06%**
+
+Interpretation:
+- **Budget is not the current constraint.**
+- **Ad Rank is the dominant current visibility constraint.**
+- Do **not** raise budget based on this snapshot.
+- Because this is still Phase 1 with very low volume, do not make major structural changes yet.
+- Continue collecting data and use ADS-WU-006 later to diagnose Expected CTR, Ad Relevance, and Landing Page Experience before deciding whether rank should be addressed through ads, keywords, landing page, or bids.
