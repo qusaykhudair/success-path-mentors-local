@@ -29,6 +29,7 @@ import {
 import {
   routePath,
 } from '@/config/routes';
+import { SOCIAL } from '@/lib/constants';
 
 const CONTACT_EMAIL =
   getDefaultMarket().contact.publishedEmail;
@@ -224,7 +225,7 @@ export async function SiteFooter() {
       label:
         t('social.facebook'),
       href:
-        'https://www.facebook.com/SuccessPathMentors',
+        SOCIAL.facebook,
       icon:
         Facebook,
     },
@@ -234,7 +235,7 @@ export async function SiteFooter() {
       label:
         t('social.instagram'),
       href:
-        'https://www.instagram.com/successpathmentors',
+        SOCIAL.instagram,
       icon:
         Instagram,
     },
@@ -244,7 +245,7 @@ export async function SiteFooter() {
       label:
         t('social.youtube'),
       href:
-        'https://www.youtube.com/@SuccessPathMentors',
+        SOCIAL.youtube,
       icon:
         Youtube,
     },

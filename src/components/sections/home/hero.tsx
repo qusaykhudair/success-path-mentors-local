@@ -14,21 +14,25 @@ import {
 import { Container } from '@/components/ui/container';
 
 import { EnrollmentCard } from './enrollment-card';
+import { QuickStartCard } from './quick-start-card';
+import type { AcquisitionContext } from '@/config/acquisition-contexts';
 
 import { buildTrialLessonMessage, buildWhatsAppHref } from '@/lib/whatsapp';
 
 interface HeroProps {
   secondaryCtaTarget?: string;
+  acquisitionContext?: AcquisitionContext;
 }
 
 export async function Hero({
   secondaryCtaTarget = 'programs',
+  acquisitionContext,
 }: HeroProps = {}) {
   const t = await getTranslations('hero');
   const locale = (await getLocale()) === 'ar' ? 'ar' : 'en';
 
   const whatsappHref = buildWhatsAppHref(
-    buildTrialLessonMessage(locale)
+    buildTrialLessonMessage(locale, acquisitionContext ? { location: acquisitionContext.whatsapp.locationContext } : undefined)
   );
 
   return (
@@ -169,6 +173,12 @@ export async function Hero({
             {t('subheading')}
           </p>
 
+          {acquisitionContext?.reassurance && (
+            <p className="mt-4 font-semibold text-accent-700">
+              {acquisitionContext.reassurance}
+            </p>
+          )}
+
           {/* CTAs */}
           <div
             className="
@@ -222,7 +232,7 @@ export async function Hero({
             </ButtonLink>
 
             <ButtonLink
-              href={`#${secondaryCtaTarget}`}
+              href={acquisitionContext?.id === 'ontario' ? `/${locale}/register?ads_region=ontario` : `#${secondaryCtaTarget}`}
               variant="outline"
               size="lg"
               className="group w-full sm:w-auto"
@@ -251,7 +261,6 @@ export async function Hero({
 
         </div>
 
-        {/* Enrollment card */}
         <div
           className="
             relative
@@ -263,30 +272,34 @@ export async function Hero({
             lg:max-w-none
           "
         >
-          <EnrollmentCard
-            locale={locale}
-            copy={{
-              title: t('enrollment.title'),
-              reassurance: t('enrollment.reassurance'),
-              next: t('enrollment.next'),
-              back: t('enrollment.back'),
-              submit: t('enrollment.submit'),
-              submitting: t('enrollment.submitting'),
-              successTitle: t('enrollment.successTitle'),
-              successBody: t('enrollment.successBody'),
-              stepOf: t('enrollment.stepOf'),
-              labels: t.raw('enrollment.labels'),
-              placeholders: t.raw(
-                'enrollment.placeholders'
-              ),
-              errors: t.raw('enrollment.errors'),
-              countries: t.raw('enrollment.countries'),
-              subjectOptions: t.raw(
-                'enrollment.subjectOptions'
-              ),
-              languages: t.raw('enrollment.languages'),
-            }}
-          />
+          {acquisitionContext?.id === 'ontario' ? (
+            <QuickStartCard locale={locale} locationContext={acquisitionContext.whatsapp.locationContext} />
+          ) : (
+            <EnrollmentCard
+              locale={locale}
+              copy={{
+                title: t('enrollment.title'),
+                reassurance: t('enrollment.reassurance'),
+                next: t('enrollment.next'),
+                back: t('enrollment.back'),
+                submit: t('enrollment.submit'),
+                submitting: t('enrollment.submitting'),
+                successTitle: t('enrollment.successTitle'),
+                successBody: t('enrollment.successBody'),
+                stepOf: t('enrollment.stepOf'),
+                labels: t.raw('enrollment.labels'),
+                placeholders: t.raw(
+                  'enrollment.placeholders'
+                ),
+                errors: t.raw('enrollment.errors'),
+                countries: t.raw('enrollment.countries'),
+                subjectOptions: t.raw(
+                  'enrollment.subjectOptions'
+                ),
+                languages: t.raw('enrollment.languages'),
+              }}
+            />
+          )}
         </div>
       </Container>
     </section>

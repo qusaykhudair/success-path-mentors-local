@@ -80,10 +80,18 @@ export const ORGANIZATION = {
 
   description: SITE.description,
 
-  sameAs: [] as string[],
+  sameAs: [] as string[], // Will be assigned below
 
   founders: [] as string[],
-} as const;
+} as {
+  readonly name: string;
+  readonly legalName: string;
+  readonly url: string;
+  readonly logo: string;
+  readonly description: string;
+  sameAs: string[];
+  readonly founders: readonly string[];
+};
 
 /**
  * -----------------------------------------------------------------------------
@@ -114,18 +122,14 @@ export const CONTACT = {
  */
 
 export const SOCIAL = {
-  facebook: '',
+  facebook: 'https://www.facebook.com/SuccessPathMentors',
 
-  instagram: '',
+  instagram: 'https://www.instagram.com/successpathmentors',
 
-  linkedin: '',
-
-  youtube: '',
-
-  x: '',
-
-  tiktok: '',
+  youtube: 'https://www.youtube.com/@SuccessPathMentors',
 } as const;
+
+ORGANIZATION.sameAs = Object.values(SOCIAL).filter(Boolean) as string[];
 
 /**
  * -----------------------------------------------------------------------------

@@ -5,6 +5,7 @@ export interface BaseEventProperties {
   market?: AnalyticsMarket | string;
   locale?: AnalyticsLocale | string;
   surface?: string;
+  ads_region?: string;
 }
 
 export interface AttributionProperties {
@@ -15,6 +16,7 @@ export interface AttributionProperties {
   utm_term?: string;
   landing_path?: string;
   referrer_host?: string;
+  ads_region?: string;
 }
 
 export interface TrialFormStartProperties extends BaseEventProperties {}

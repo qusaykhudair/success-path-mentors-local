@@ -1,5 +1,6 @@
 import { type AttributionProperties } from './events';
 import { getAnalyticsConsent } from './consent';
+import { parseAcquisitionContext } from '@/config/acquisition-contexts';
 
 const ATTRIBUTION_SESSION_KEY = 'spm_analytics_attribution';
 
@@ -16,6 +17,7 @@ export function captureAttribution(): void {
     utm_content: searchParams.get('utm_content') || undefined,
     utm_term: searchParams.get('utm_term') || undefined,
     landing_path: window.location.pathname,
+    ads_region: parseAcquisitionContext(searchParams.get('ads_region'))?.id,
   };
 
   // Safe referrer
@@ -58,6 +60,7 @@ export function getAttribution(): AttributionProperties {
       utm_content: searchParams.get('utm_content') || undefined,
       utm_term: searchParams.get('utm_term') || undefined,
       landing_path: window.location.pathname,
+      ads_region: parseAcquisitionContext(searchParams.get('ads_region'))?.id,
     };
 
     if (document.referrer) {
