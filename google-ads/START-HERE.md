@@ -328,3 +328,16 @@ Interpretation:
 - Do **not** raise budget based on this snapshot.
 - Because this is still Phase 1 with very low volume, do not make major structural changes yet.
 - Continue collecting data and use ADS-WU-006 later to diagnose Expected CTR, Ad Relevance, and Landing Page Experience before deciding whether rank should be addressed through ads, keywords, landing page, or bids.
+
+
+### ADS-WU-006 landing-page audit — 2026-10-05
+
+Full audit: `google-ads/ADS-WU-006-LANDING-PAGE-AUDIT-2026-10-05.md`
+
+Key findings:
+- Current homepage is a strong broad corporate/SEO page, but too broad for an Ontario-only paid-search click.
+- Hero lacks explicit Ontario message match even though the ad/display path emphasize Ontario.
+- WhatsApp is already strongly represented across hero/header/floating CTA.
+- Critical UX issue: the 3-step hero EnrollmentCard collects user data but only routes to `/{locale}/register` on submit; entered state is not transferred.
+- Existing Ontario pages exist, but the preferred long-term solution is a controlled Ontario-focused paid landing experience that does not disturb locked SEO/location architecture.
+- Do not switch final URL during the initial baseline window without a documented change gate.
