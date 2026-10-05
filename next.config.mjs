@@ -32,6 +32,16 @@ const nextConfig = {
   async rewrites() {
     return {
       beforeFiles: [
+        {
+          source: '/',
+          has: [{ type: 'query', key: 'ads_region', value: 'ontario' }],
+          destination: '/en/landing/ontario',
+        },
+        {
+          source: '/en',
+          has: [{ type: 'query', key: 'ads_region', value: 'ontario' }],
+          destination: '/en/landing/ontario',
+        },
         { source: '/ar/%D8%B9%D9%86-%D8%A7%D9%84%D9%85%D9%86%D8%B5%D8%A9', destination: '/ar/about' },
         { source: '/ar/%D8%A2%D9%84%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D9%85%D9%84', destination: '/ar/how-it-works' },
         { source: '/ar/%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%AF-%D8%A7%D9%84%D8%AF%D8%B1%D8%A7%D8%B3%D9%8A%D8%A9', destination: '/ar/subjects' },

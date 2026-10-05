@@ -5,6 +5,7 @@ export interface BaseEventProperties {
   market?: AnalyticsMarket;
   locale?: AnalyticsLocale;
   surface?: string;
+  ads_region?: string;
 }
 
 export interface AttributionProperties {
@@ -15,6 +16,7 @@ export interface AttributionProperties {
   utm_term?: string;
   landing_path?: string;
   referrer_host?: string;
+  ads_region?: string;
 }
 
 export type TrialFormStartProperties = BaseEventProperties;
@@ -103,6 +105,7 @@ const ATTRIBUTION_KEYS = [
   'utm_term',
   'landing_path',
   'referrer_host',
+  'ads_region',
 ];
 
 const PII_KEYS = [
