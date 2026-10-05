@@ -31,6 +31,8 @@
 | ADS-EV-022 | Responsive Search Ad status | PASS — ad status shows Eligible after save | 2026-10-05 | Google Ads Ads table screenshot |
 | ADS-EV-023 | Responsive Search Ad destination | PASS — visible ad text reflects Ontario online tutoring and final URL was previously QA-verified | 2026-10-05 | Google Ads Ads table + ad editor QA |
 
+| ADS-EV-024 | Asset eligibility — visible set | PASS — Call, 4 Sitelinks, 4 Callouts and Structured Snippet all show Eligible | 2026-10-05 | Google Ads Assets table screenshot |
+
 ## Evidence still required
 - Ad approval / serving evidence
 - Asset approval/eligibility evidence after review
