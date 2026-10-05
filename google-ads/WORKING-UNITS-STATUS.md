@@ -9,7 +9,7 @@
 | ADS-WU-003 | Search Campaign Pilot | Done | Ad/assets eligible, final URL and conversion-goal QA passed, campaign serving live traffic | Complete |
 | ADS-WU-004 | Search Terms & Negative Keywords | In Progress | Baseline negatives complete | First live Search Terms optimization recorded |
 | ADS-WU-005 | Auction Insights Competitive Matrix | Done (initial baseline) | First auction snapshot + Budget-vs-Rank diagnosis captured | Complete for initial baseline; continue weekly monitoring |
-| ADS-WU-006 | Ad & Landing Page Quality | In Progress | Initial traffic exists; start keyword Quality Score diagnostics | Expected CTR, Ad Relevance and Landing Page Experience reviewed with corrective actions |
+| ADS-WU-006 | Ad & Landing Page Quality | In Progress | Full audit complete; Ontario message-match and hero intake continuity gaps documented; implementation gated until baseline checkpoint | Controlled corrective action/test completed and measured |
 | ADS-WU-007 | Conversion Bidding Transition | Blocked | No trustworthy conversion volume yet | Evidence supports conversion-led bidding |
 | ADS-WU-008 | Lead Quality & Trial Attribution | Not Started | Attribution design pending | Campaign → lead → trial reconciliation works |
 | ADS-WU-009 | Paid Student CAC & ROAS | Not Started | Requires paid-student reconciliation | Reproducible CAC/ROAS reporting |
