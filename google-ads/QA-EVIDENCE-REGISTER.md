@@ -43,6 +43,9 @@
 | ADS-EV-029 | First Auction Insights snapshot | PASS — data available for SPM and 4 competing domains. SPM Impression Share 19.89%, Top of page rate 71.43%, Abs. top of page rate 22.86%. Competitors: superprof.ca 32.95% IS; preply.com 30.11%; varsitytutors.com 10.80%; kumon.com <10%. | 2026-10-05 | Google Ads Auction insights screenshot |
 | ADS-EV-030 | Auction position interpretation | INFO — superprof.ca and preply.com currently have higher Impression Share than SPM; varsitytutors.com shows 100% position-above rate when overlapping, based on limited early volume | 2026-10-05 | Google Ads Auction insights screenshot |
 
+| ADS-EV-031 | Competitive baseline — impression share/budget/top-rank loss | INFO — 205 impressions, 10 clicks, 4.88% CTR, CA$19.34 cost, Search Impr. Share 20.11%, Search Lost IS (budget) 0.57%, Search Lost Top IS (rank) 85.06% | 2026-10-05 | Google Ads Campaigns table screenshot |
+| ADS-EV-032 | Competitive baseline interpretation | INFO — budget loss is currently minimal; the visible 85.06% metric is **Search Lost Top IS (rank)**, not overall Search Lost IS (rank), so overall rank loss still needs to be added before a full Budget-vs-Rank conclusion | 2026-10-05 | Google Ads Campaigns table screenshot |
+
 ## Evidence still required
 - Ad approval / serving evidence
 - Asset approval/eligibility evidence after review
