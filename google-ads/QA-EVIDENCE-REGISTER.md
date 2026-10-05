@@ -26,6 +26,8 @@
 | ADS-EV-019 | Conversion goals present | PASS — `Submit lead form` and `Leads from messages` are present at campaign level | 2026-10-05 | Google Ads Goals → Conversions → Summary screenshot |
 | ADS-EV-020 | Submit lead form goal optimization | PASS for current Phase 1 — Account default = Off and 0 campaigns use Submit lead forms as a campaign-specific goal. Two underlying conversion actions are marked Primary, but this goal category is not currently selected to steer the campaign. | 2026-10-05 | Google Ads Goal settings screenshot |
 
+| ADS-EV-021 | Leads from messages goal optimization | PASS for current Phase 1 — Account default = Off and 0 campaigns use Leads from messages as a campaign-specific goal. One underlying conversion action is marked Primary, but this goal category is not currently selected to steer the campaign. | 2026-10-05 | Google Ads Goal settings screenshot |
+
 ## Evidence still required
 - Ad approval / serving evidence
 - Asset approval/eligibility evidence after review
