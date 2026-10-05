@@ -23,6 +23,9 @@
 | ADS-EV-017 | Sitelinks configured | PASS — 4 campaign-level sitelinks added | 2026-10-04 | Google Ads Sitelink setup |
 | ADS-EV-018 | Structured snippet configured | PASS — Courses / subject tutoring values added | 2026-10-04 | Google Ads Structured Snippet setup |
 
+| ADS-EV-019 | Conversion goals present | PASS — `Submit lead form` and `Leads from messages` are present at campaign level | 2026-10-05 | Google Ads Goals → Conversions → Summary screenshot |
+| ADS-EV-020 | Conversion optimization mode | ATTENTION — both goal categories show Primary conversion actions; current campaign remains Maximize Clicks, but Phase 1 requires these not to become conversion-bidding drivers | 2026-10-05 | Google Ads Goals → Conversions → Summary screenshot |
+
 ## Evidence still required
 - Ad approval / serving evidence
 - Asset approval/eligibility evidence after review
