@@ -35,6 +35,9 @@
 
 | ADS-EV-025 | WhatsApp Message asset eligibility | PASS — campaign-level WhatsApp Message asset shows Eligible | 2026-10-05 | Google Ads Message asset screenshot |
 
+| ADS-EV-026 | Campaign serving / Phase 1 live | PASS — campaign status Eligible (Learning) / Bid strategy learning; 190 impressions, 9 clicks, 4.86% CTR, CA$17.39 cost shown at campaign row | 2026-10-05 | Google Ads Campaigns table screenshot |
+| ADS-EV-027 | Initial observed Avg CPC | INFO — approximately CA$1.93 from CA$17.39 / 9 clicks | 2026-10-05 | Derived from Google Ads Campaigns table screenshot |
+
 ## Evidence still required
 - Ad approval / serving evidence
 - Asset approval/eligibility evidence after review
