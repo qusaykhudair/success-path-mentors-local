@@ -24,7 +24,7 @@
 | ADS-EV-018 | Structured snippet configured | PASS — Courses / subject tutoring values added | 2026-10-04 | Google Ads Structured Snippet setup |
 
 | ADS-EV-019 | Conversion goals present | PASS — `Submit lead form` and `Leads from messages` are present at campaign level | 2026-10-05 | Google Ads Goals → Conversions → Summary screenshot |
-| ADS-EV-020 | Conversion optimization mode | ATTENTION — both goal categories show Primary conversion actions; current campaign remains Maximize Clicks, but Phase 1 requires these not to become conversion-bidding drivers | 2026-10-05 | Google Ads Goals → Conversions → Summary screenshot |
+| ADS-EV-020 | Submit lead form goal optimization | PASS for current Phase 1 — Account default = Off and 0 campaigns use Submit lead forms as a campaign-specific goal. Two underlying conversion actions are marked Primary, but this goal category is not currently selected to steer the campaign. | 2026-10-05 | Google Ads Goal settings screenshot |
 
 ## Evidence still required
 - Ad approval / serving evidence
