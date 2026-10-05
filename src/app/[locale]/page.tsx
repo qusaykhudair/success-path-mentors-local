@@ -8,10 +8,7 @@ import {
   setRequestLocale,
 } from 'next-intl/server';
 
-import { LocalAvailabilityBlock } from '@/components/local/local-availability-block';
 import { HomePageContent } from '@/components/sections/home/home-page-content';
-
-import { routing } from '@/i18n/routing';
 import { SITE, SITE_URL } from '@/lib/constants';
 
 interface HomePageProps {

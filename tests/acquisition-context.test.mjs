@@ -23,12 +23,26 @@ test('Acquisition Context - Falls back to undefined for unknown region', () => {
 
 test('Acquisition Context - Analytics allowlist prevents arbitrary ads_region values', () => {
   const { sanitizeEventProperties } = load('src/lib/analytics/events.ts');
-  const props = { ads_region: 'evil', foo: 'bar', utm_source: 'google' };
-  const sanitized = sanitizeEventProperties('trial_form_start', props);
-  assert.equal(sanitized.ads_region, 'evil');
-  assert.equal(sanitized.utm_source, 'google');
-  assert.equal(sanitized.foo, undefined);
-  // Wait, if sanitizeEventProperties only strips unknown keys, then the protection is at parseAcquisitionContext.
+  const props1 = { ads_region: 'ontario', foo: 'bar', utm_source: 'google' };
+  const sanitized1 = sanitizeEventProperties('trial_form_start', props1);
+  assert.equal(sanitized1.ads_region, 'ontario');
+  assert.equal(sanitized1.foo, undefined);
+  assert.equal(sanitized1.utm_source, 'google');
+
+  // evil -> rejected
+  const props2 = { ads_region: 'evil', foo: 'bar', utm_source: 'google' };
+  const sanitized2 = sanitizeEventProperties('trial_form_start', props2);
+  assert.equal(sanitized2.ads_region, undefined);
+
+  // random -> rejected
+  const props3 = { ads_region: 'random', foo: 'bar', utm_source: 'google' };
+  const sanitized3 = sanitizeEventProperties('trial_form_start', props3);
+  assert.equal(sanitized3.ads_region, undefined);
+
+  // <script> -> rejected
+  const props4 = { ads_region: '<script>', foo: 'bar', utm_source: 'google' };
+  const sanitized4 = sanitizeEventProperties('trial_form_start', props4);
+  assert.equal(sanitized4.ads_region, undefined);
 });
 
 test('Analytics Foundation - PII stripping', () => {

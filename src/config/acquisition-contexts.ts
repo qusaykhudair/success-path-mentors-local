@@ -1,5 +1,8 @@
+export const acquisitionContextIds = ['ontario'] as const;
+export type AcquisitionContextId = (typeof acquisitionContextIds)[number];
+
 export interface AcquisitionContext {
-  id: string;
+  id: AcquisitionContextId;
   whatsapp: {
     locationContext: string | undefined;
   };
@@ -16,7 +19,10 @@ export interface AcquisitionContext {
 export function parseAcquisitionContext(value: unknown): AcquisitionContext | undefined {
   if (typeof value !== 'string') return undefined;
 
-  const knownContexts: Record<string, AcquisitionContext> = {
+  const isKnown = acquisitionContextIds.includes(value as AcquisitionContextId);
+  if (!isKnown) return undefined;
+
+  const knownContexts: Record<AcquisitionContextId, AcquisitionContext> = {
     ontario: {
       id: 'ontario',
       whatsapp: { locationContext: 'Ontario' },
@@ -31,5 +37,5 @@ export function parseAcquisitionContext(value: unknown): AcquisitionContext | un
     },
   };
 
-  return knownContexts[value];
+  return knownContexts[value as AcquisitionContextId];
 }

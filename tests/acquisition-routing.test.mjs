@@ -83,9 +83,25 @@ test("canonical remains /en", async () => {
   assert.match(html, /<link[^>]+rel=["']canonical["'][^>]+href=["'][^"']*\/en["']/i);
 });
 
+test("internal Ontario paid route has noindex", async () => {
+  // We can query the underlying rewritten route directly to test its metadata
+  const { status, html } = await fetchRoute("/en/landing/ontario");
+  assert.equal(status, 200);
+  assert.match(html, /<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*noindex[^"']*["']/i);
+  assert.match(html, /<meta[^>]+name=["']googlebot["'][^>]+content=["'][^"']*noindex[^"']*["']/i);
+});
+
+test("/ar/landing/ontario falls back to global 404 (redirects to /)", async () => {
+  try {
+    await fetchRoute("/ar/landing/ontario");
+    assert.fail("Should have thrown a redirect error");
+  } catch (error) {
+    assert.match(error.digest || error.message, /NEXT_REDIRECT/);
+  }
+});
+
 test("Ontario paid route absent from sitemap", async () => {
   const { status, html } = await fetchRoute("/sitemap.xml");
-  // Assuming sitemap is generated/available. If not, we check robots or similar.
   if (status === 200) {
     assert.doesNotMatch(html, /\/landing\/ontario/i);
   }

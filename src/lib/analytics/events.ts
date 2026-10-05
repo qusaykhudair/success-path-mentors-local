@@ -65,6 +65,8 @@ export type AnalyticsEventMap = {
   contact_cta_clicked: ContactCtaClickedProperties;
 };
 
+import { parseAcquisitionContext } from '@/config/acquisition-contexts';
+
 export type AnalyticsEventName = keyof AnalyticsEventMap;
 
 export const ANALYTICS_EVENT_NAMES = [
@@ -140,7 +142,14 @@ export function sanitizeEventProperties(
   for (const [key, value] of Object.entries(properties)) {
     if (piiKeys.has(key)) continue;
     if (allowedKeys.has(key)) {
-      sanitized[key] = value;
+      if (key === 'ads_region') {
+        const parsedContext = parseAcquisitionContext(value);
+        if (parsedContext) {
+          sanitized[key] = parsedContext.id;
+        }
+      } else {
+        sanitized[key] = value;
+      }
     }
   }
 

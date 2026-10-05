@@ -11,7 +11,7 @@ const blockSource = readFileSync(
 );
 
 const authoritySurfacePaths = [
-  'src/app/[locale]/page.tsx',
+  'src/components/sections/home/home-page-content.tsx',
   'src/app/[locale]/(catalog)/subjects/math/page.tsx',
   'src/app/[locale]/(catalog)/subjects/english/page.tsx',
   'src/app/[locale]/(catalog)/subjects/french/page.tsx',

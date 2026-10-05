@@ -20,7 +20,7 @@ export function HomePageContent({
   acquisitionContext?: AcquisitionContext; 
 }) {
   return (
-    <>
+    <main className="flex flex-col gap-16 pb-16">
       <Hero acquisitionContext={acquisitionContext} />
       <SupportedCountries locale={locale as 'en' | 'ar'} />
       <Programs />
@@ -33,6 +33,6 @@ export function HomePageContent({
       <div className="content-auto"><LocalAvailabilityBlock locale={locale} /></div>
       <div className="content-auto"><Faq /></div>
       <div className="content-auto"><FinalCta /></div>
-    </>
+    </main>
   );
 }
