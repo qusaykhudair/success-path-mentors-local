@@ -28,6 +28,9 @@
 
 | ADS-EV-021 | Leads from messages goal optimization | PASS for current Phase 1 — Account default = Off and 0 campaigns use Leads from messages as a campaign-specific goal. One underlying conversion action is marked Primary, but this goal category is not currently selected to steer the campaign. | 2026-10-05 | Google Ads Goal settings screenshot |
 
+| ADS-EV-022 | Responsive Search Ad status | PASS — ad status shows Eligible after save | 2026-10-05 | Google Ads Ads table screenshot |
+| ADS-EV-023 | Responsive Search Ad destination | PASS — visible ad text reflects Ontario online tutoring and final URL was previously QA-verified | 2026-10-05 | Google Ads Ads table + ad editor QA |
+
 ## Evidence still required
 - Ad approval / serving evidence
 - Asset approval/eligibility evidence after review
