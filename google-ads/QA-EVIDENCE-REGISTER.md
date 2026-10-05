@@ -46,6 +46,9 @@
 | ADS-EV-031 | Competitive baseline — impression share/budget/top-rank loss | INFO — 205 impressions, 10 clicks, 4.88% CTR, CA$19.34 cost, Search Impr. Share 20.11%, Search Lost IS (budget) 0.57%, Search Lost Top IS (rank) 85.06% | 2026-10-05 | Google Ads Campaigns table screenshot |
 | ADS-EV-032 | Competitive baseline interpretation | INFO — budget loss is currently minimal; the visible 85.06% metric is **Search Lost Top IS (rank)**, not overall Search Lost IS (rank), so overall rank loss still needs to be added before a full Budget-vs-Rank conclusion | 2026-10-05 | Google Ads Campaigns table screenshot |
 
+| ADS-EV-033 | Competitive baseline — overall rank loss | INFO — Search Impr. Share 20.11%, Search Lost IS (budget) 0.57%, Search Lost IS (rank) 79.31%, Search Lost Top IS (rank) 85.06%; 206 impressions, 10 clicks, 4.85% CTR, CA$19.34 cost | 2026-10-05 | Google Ads Campaigns table screenshot |
+| ADS-EV-034 | Budget vs Rank diagnosis | PASS — early evidence shows Rank is the dominant visibility constraint; budget loss is minimal. No budget increase justified from this snapshot. | 2026-10-05 | Derived from Google Ads competitive metrics |
+
 ## Evidence still required
 - Ad approval / serving evidence
 - Asset approval/eligibility evidence after review
