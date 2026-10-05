@@ -4,9 +4,9 @@
 
 | WU | Name | Status | Current checkpoint | Exit condition |
 |---|---|---|---|---|
-| ADS-WU-001 | Access & Baseline Capture | In Progress | Account/campaign created; baseline awaits live data | Dated baseline metrics captured |
+| ADS-WU-001 | Access & Baseline Capture | In Progress | First live snapshot captured; continue baseline collection through Phase 1 | Dated multi-day baseline metrics captured |
 | ADS-WU-002 | Conversion Measurement Foundation | In Progress | Base tag installed and detected | Business conversion events defined + QA evidence |
-| ADS-WU-003 | Search Campaign Pilot | In Progress | Core configuration + initial assets complete; Google review pending | Ads/assets approved and serving + final URL/goal QA complete |
+| ADS-WU-003 | Search Campaign Pilot | Done | Ad/assets eligible, final URL and conversion-goal QA passed, campaign serving live traffic | Complete |
 | ADS-WU-004 | Search Terms & Negative Keywords | In Progress | Baseline negatives complete | First live Search Terms optimization recorded |
 | ADS-WU-005 | Auction Insights Competitive Matrix | Not Started | Waiting for auction volume | First competitive matrix captured |
 | ADS-WU-006 | Ad & Landing Page Quality | Not Started | Waiting for traffic | Quality diagnostics and landing review complete |
