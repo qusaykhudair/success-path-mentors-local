@@ -7,7 +7,7 @@
 **Business:** Success Path Mentors  
 **Campaign:** `SPM_ON_Search_Clicks_Learning_Oct2026`  
 **Stage:** Learning / Search Pilot  
-**Current Working Units:** ADS-WU-003 launch configuration and assets are substantially complete but still awaiting Google approval/serving evidence; ADS-WU-002 conversion architecture remains incomplete; ADS-WU-004 baseline negatives complete and live Search Terms pending.
+**Current Working Units:** ADS-WU-003 is complete and serving; ADS-WU-001 live baseline collection is active; ADS-WU-002 conversion architecture remains incomplete; ADS-WU-004 live Search Terms review is the next optimization gate.
 
 ---
 
@@ -292,3 +292,23 @@ Full plan: `google-ads/3-PHASE-EXECUTION-PLAN.md`
 **Complete Working Units handoff:** `google-ads/FULL-WORKING-UNITS-HANDOFF.md`
 
 This handoff contains ADS-WU-001 through ADS-WU-014, optimization gates, multilingual controls, WhatsApp priority, Meta historical learning, cross-channel control and the current 3-phase execution model.
+
+
+---
+
+## 11. First live campaign snapshot — 2026-10-05
+
+Campaign `SPM_ON_Search_Clicks_Learning_Oct2026` is officially live in **Phase 1 — Baseline / Learning**.
+
+Observed campaign-row metrics:
+- Status: **Eligible (Learning)**
+- Bid strategy: **Learning**
+- Impressions: **190**
+- Clicks: **9**
+- CTR: **4.86%**
+- Cost: **CA$17.39**
+- Derived Avg CPC: **~CA$1.93**
+- Conversions: **0** (expected at this stage; conversion-led optimization is not the current objective)
+
+### Decision
+Do not make structural changes from this first snapshot. Continue collecting baseline data and proceed to the first Search Terms quality review once sufficient query data is available.
