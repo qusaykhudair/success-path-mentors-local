@@ -52,6 +52,9 @@
 | ADS-EV-035 | First Quality Score diagnostics | INFO — `"online tutoring"` and broad `online tutoring` show Quality Score 3/10; Expected CTR = Below average; Ad relevance = Above average; Landing page experience = Below average. Most other keywords still show insufficient data (—). | 2026-10-05 | Google Ads Keywords quality columns screenshot |
 | ADS-EV-036 | Rank root-cause hypothesis | INFO — early diagnostics point more strongly to Expected CTR + Landing Page Experience than ad relevance. This aligns with high Search Lost IS (rank), but volume is still too low for major structural changes. | 2026-10-05 | Derived from Google Ads Quality Score diagnostics |
 
+| ADS-EV-037 | Full landing-page audit | PASS — current homepage audited against Ontario Search intent and WU-006 diagnostics; internal diagnostic 71/100; primary gap is Ontario message match + duplicate/disposable hero intake flow | 2026-10-05 | `ADS-WU-006-LANDING-PAGE-AUDIT-2026-10-05.md` |
+| ADS-EV-038 | Hero intake continuity | ISSUE — EnrollmentCard collects contact/student data but final submit only routes to `/{locale}/register`; collected state is not transferred to the registration page | 2026-10-05 | Website source QA |
+
 ## Evidence still required
 - Ad approval / serving evidence
 - Asset approval/eligibility evidence after review
