@@ -63,6 +63,7 @@
 | ADS-EV-044 | WU-002 source architecture audit | PASS — Google Ads base tag is consent-gated; custom analytics event contract exists; `trial_registration_complete` is back-end-confirmed and dedupe-guarded; attribution and PII allowlists are present. Production GTM/event delivery still requires runtime verification. | 2026-10-06 | Source audit + `google-ads/ADS-WU-002-CONVERSION-MEASUREMENT-FOUNDATION.md` |
 | ADS-EV-045 | WU-002 contact-event instrumentation hardening | PASS (implementation) — added `phone_cta_clicked`; instrumented mobile phone CTAs, mobile WhatsApp booking CTA, and final home WhatsApp CTA; source-contract tests updated. Runtime production verification pending. | 2026-10-06 | Branch `google-ads/wu002-conversion-foundation` |
 | ADS-EV-046 | WU-002 production GTM container runtime | PASS — live production Network trace shows `https://www.googletagmanager.com/gtm.js?id=GTM-TN4LKVW3`, confirming a GTM container is loaded after consent on the Ontario landing experience. | 2026-10-06 | User-provided Chrome DevTools Network screenshot |
+| ADS-EV-047 | WU-015 optimizer/control-tower pilot specification | PASS — controlled pilot scope documented for Optmyzr vs Adalysis, optional TrueClicks QA layer, 40–50 scenario matrix, Green/Yellow/Red governance, and business-funnel measurement dependency. No optimizer-driven account changes authorized. | 2026-10-06 | `google-ads/ADS-WU-015-OPTIMIZATION-CONTROL-TOWER-PILOT.md` |
 
 ## Evidence still required
 - Google auto-created asset audit before accepting any recommendation/asset automatically.
@@ -82,6 +83,7 @@
 - ADS-WU-002 Google Ads conversion actions created as Secondary for QA: trial registration complete, WhatsApp CTA click, website phone click.
 - ADS-WU-002 test-conversion evidence: exactly-once firing, no PII, no duplicate conversion path.
 - Lead/trial/paid-student attribution QA under ADS-WU-008/009.
+- ADS-WU-015: weighted 40–50 scenario matrix, comparable Optmyzr vs Adalysis pilot evidence, automation-control QA, workflow-time comparison, and final vendor/stack decision.
 
 ## Superseded pending items
 The following earlier pending checkpoints are already satisfied by ADS-EV-019 through ADS-EV-039 and should not be treated as open gates:
