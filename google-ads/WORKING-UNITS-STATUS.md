@@ -9,7 +9,7 @@
 | ADS-WU-003 | Search Campaign Pilot | Done | Ad/assets eligible, final URL and conversion-goal QA passed, campaign serving live traffic | Complete |
 | ADS-WU-004 | Search Terms & Negative Keywords | In Progress | Baseline negatives complete | First live Search Terms optimization recorded |
 | ADS-WU-005 | Auction Insights Competitive Matrix | Done (initial baseline) | First auction snapshot + Budget-vs-Rank diagnosis captured | Complete for initial baseline; continue weekly monitoring |
-| ADS-WU-006 | Ad & Landing Page Quality | In Progress | V5 activated; public destination QA passed; confirm RSA Eligible/serving, then collect measured validation | Post-activation quality/rank/engagement evidence reviewed and corrective action measured |
+| ADS-WU-006 | Ad & Landing Page Quality | In Progress | V5 activated; public destination QA passed; edited RSA confirmed Eligible; measured validation now in progress | Post-activation quality/rank/engagement evidence reviewed and corrective action measured |
 | ADS-WU-007 | Conversion Bidding Transition | Blocked | No trustworthy conversion volume yet | Evidence supports conversion-led bidding |
 | ADS-WU-008 | Lead Quality & Trial Attribution | Not Started | Attribution design pending | Campaign → lead → trial reconciliation works |
 | ADS-WU-009 | Paid Student CAC & ROAS | Not Started | Requires paid-student reconciliation | Reproducible CAC/ROAS reporting |
@@ -22,14 +22,14 @@
 ## Current execution order
 1. Continue ADS-WU-004 Search Terms cleanup from live query evidence.
 2. ADS-WU-005 initial Auction Insights baseline is complete; continue monitoring weekly.
-3. ADS-WU-006 V5 activation is complete (user-confirmed) and public destination QA passed; confirm the edited RSA is Eligible/serving in Google Ads.
+3. ADS-WU-006 V5 activation is complete; public destination QA passed and the edited RSA is confirmed Eligible.
 4. Collect measured WU-006 evidence for CTR, Quality Score components, Landing Page Experience, Search Lost IS (rank), Search Lost Top IS (rank), and WhatsApp inquiry quality.
 5. Complete ADS-WU-002 business conversion definitions and QA without changing the current Maximize Clicks strategy.
 6. Keep ADS-WU-007 blocked until the conversion-readiness evidence gate passes.
 7. Build offline/business attribution under ADS-WU-008/009 and run recurring reviews under ADS-WU-010.
 
 ## Current next action
-**ADS-WU-006 → Post-activation status check + measured validation**
+**ADS-WU-006 → Measured post-activation validation**
 
 Current verified state:
 - Responsive Search Ad and visible assets are Eligible and serving.
@@ -39,9 +39,8 @@ Current verified state:
 - Ontario contextual landing is deployed and V4 production QA passed.
 
 Next controlled action:
-- Confirm the edited RSA is **Eligible/serving** after Google review and the Final URL shown in the ad table is `https://successpathmentors.net/en?ads_region=ontario`.
 - Do **not** change bidding, budget, targeting, networks, devices, schedules, audiences, or conversion strategy.
-- Then collect measured post-activation WU-006 evidence.
+- Collect measured post-activation WU-006 evidence from a clean post-activation window.
 
 Reference: `google-ads/ADS-WU-006-V5-ACTIVATION-GATE.md`.
 
