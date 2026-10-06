@@ -18,11 +18,14 @@ export async function GET(request: Request) {
     return NextResponse.json({ code: 'UNSUPPORTED_PROVIDER' }, { status: 400, headers });
   }
 
-  const baseAuthorizationUrl = configuredSocialStartUrl(
-    provider === 'google'
-      ? process.env.GOOGLE_AUTH_START_URL
-      : process.env.FACEBOOK_AUTH_START_URL
-  );
+  // Google now uses Google Identity Services directly in the browser and is
+  // verified by POST /api/auth/social/google. This legacy start endpoint is
+  // retained only for Facebook.
+  if (provider === 'google') {
+    return NextResponse.json({ code: 'GOOGLE_AUTH_USES_GIS' }, { status: 410, headers });
+  }
+
+  const baseAuthorizationUrl = configuredSocialStartUrl(process.env.FACEBOOK_AUTH_START_URL);
 
   if (!baseAuthorizationUrl) {
     return NextResponse.json({ code: 'SOCIAL_AUTH_UNAVAILABLE' }, { status: 503, headers });
@@ -37,7 +40,6 @@ export async function GET(request: Request) {
     return NextResponse.json({ authorization_url: baseAuthorizationUrl }, { headers });
   }
 
-  // Parse and validate safe structured return context (no arbitrary redirect URLs)
   const market = sanitizeAuthMarket(url.searchParams.get('market'));
   const uiLocale = sanitizeAuthUiLocale(url.searchParams.get('ui_locale'));
   const mode = sanitizeAuthMode(url.searchParams.get('mode'));
@@ -51,7 +53,7 @@ export async function GET(request: Request) {
     return NextResponse.json(
       {
         authorization_url: authUrl.href,
-        context: { market, ui_locale: uiLocale, mode },
+        context: { provider: 'facebook', market, ui_locale: uiLocale, mode },
       },
       { headers }
     );

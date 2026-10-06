@@ -28,6 +28,7 @@ const { POST: postOtpRequest } = load('src/app/api/auth/signup/otp/request/route
 const { POST: postOtpVerify } = load('src/app/api/auth/signup/otp/verify/route.ts');
 const { GET: getSession } = load('src/app/api/auth/signup/session/route.ts');
 const { GET: getSocialCallback } = load('src/app/api/auth/social/callback/route.ts');
+const { POST: postGoogleAuth } = load('src/app/api/auth/social/google/route.ts');
 
 const notFoundError = new Error('NOT_FOUND');
 const navigation = {
@@ -62,45 +63,31 @@ test('social start accepts only google and facebook, rejects unknown providers',
   assert.equal(isSocialProvider(undefined), false);
 });
 
-test('entrypoint route selects configured provider, fails closed, and prevents open redirect', async () => {
-  const savedGoogle = process.env.GOOGLE_AUTH_START_URL;
+test('legacy social start retires Google and preserves configured Facebook flow', async () => {
   const savedFacebook = process.env.FACEBOOK_AUTH_START_URL;
   try {
-    delete process.env.GOOGLE_AUTH_START_URL;
     delete process.env.FACEBOOK_AUTH_START_URL;
-    assert.equal((await GET(new Request('http://localhost/api/auth/social/start?provider=google'))).status, 503);
+
+    assert.equal((await GET(new Request('http://localhost/api/auth/social/start?provider=google'))).status, 410);
+    assert.equal((await GET(new Request('http://localhost/api/auth/social/start?provider=facebook'))).status, 503);
     assert.equal((await GET(new Request('http://localhost/api/auth/social/start?provider=instagram'))).status, 400);
-    assert.equal((await GET(new Request('http://localhost/api/auth/social/start?provider=apple'))).status, 400);
 
-    for (const provider of ['google', 'facebook']) {
-      process.env[provider === 'google' ? 'GOOGLE_AUTH_START_URL' : 'FACEBOOK_AUTH_START_URL'] =
-        `https://identity.example.com/start/${provider}`;
-
-      // Open redirect attempt via return_to is ignored
-      const response = await GET(
-        new Request(`http://localhost/api/auth/social/start?provider=${provider}&return_to=https://attacker.example`)
-      );
-      assert.equal(response.status, 200);
-      assert.equal(response.headers.get('cache-control'), 'no-store');
-      const body = await response.json();
-      assert.deepEqual(body, { authorization_url: `https://identity.example.com/start/${provider}` });
-      assert.doesNotMatch(body.authorization_url, /attacker\.example/);
-
-      // Germany safe return context is preserved when provided
-      const deResponse = await GET(
-        new Request(`http://localhost/api/auth/social/start?provider=${provider}&market=germany&ui_locale=de&mode=login`)
-      );
-      assert.equal(deResponse.status, 200);
-      const deBody = await deResponse.json();
-      assert.equal(deBody.context.market, 'germany');
-      assert.equal(deBody.context.ui_locale, 'de');
-      assert.equal(deBody.context.mode, 'login');
-      assert.match(deBody.authorization_url, /market=germany/);
-      assert.match(deBody.authorization_url, /ui_locale=de/);
-    }
+    process.env.FACEBOOK_AUTH_START_URL = 'https://identity.example.com/start/facebook';
+    const response = await GET(
+      new Request('http://localhost/api/auth/social/start?provider=facebook&market=germany&ui_locale=de&mode=login&return_to=https://attacker.example')
+    );
+    assert.equal(response.status, 200);
+    const body = await response.json();
+    assert.equal(body.context.provider, 'facebook');
+    assert.equal(body.context.market, 'germany');
+    assert.equal(body.context.ui_locale, 'de');
+    assert.equal(body.context.mode, 'login');
+    assert.match(body.authorization_url, /market=germany/);
+    assert.match(body.authorization_url, /ui_locale=de/);
+    assert.doesNotMatch(body.authorization_url, /attacker\.example/);
   } finally {
-    if (savedGoogle === undefined) delete process.env.GOOGLE_AUTH_START_URL; else process.env.GOOGLE_AUTH_START_URL = savedGoogle;
-    if (savedFacebook === undefined) delete process.env.FACEBOOK_AUTH_START_URL; else process.env.FACEBOOK_AUTH_START_URL = savedFacebook;
+    if (savedFacebook === undefined) delete process.env.FACEBOOK_AUTH_START_URL;
+    else process.env.FACEBOOK_AUTH_START_URL = savedFacebook;
   }
 });
 
@@ -110,13 +97,21 @@ test('both localized provider buttons are rendered, and both authentication scre
     assert.match(html, /Google/);
     assert.match(html, /Facebook/);
     assert.equal((html.match(/type="button"/g) || []).length, 2);
-    assert.doesNotMatch(html, /disabled=""/);
+    // Google is briefly disabled during SSR until the GIS script is ready.
+    assert.ok((html.match(/disabled=""/g) || []).length <= 1);
   }
   for (const file of ['login-form.tsx', 'signup-methods.tsx']) {
     const source = readFileSync(new URL(`../src/features/auth/${file}`, import.meta.url), 'utf8');
     assert.match(source, /<SocialAuthButtons/);
     assert.doesNotMatch(source, /alert\(/);
   }
+  const socialButtonsSource = readFileSync(
+    new URL('../src/features/auth/social-auth-buttons.tsx', import.meta.url),
+    'utf8'
+  );
+  assert.match(socialButtonsSource, /https:\/\/accounts\.google\.com\/gsi\/client/);
+  assert.match(socialButtonsSource, /\/api\/auth\/social\/google/);
+  assert.doesNotMatch(socialButtonsSource, /start\('google'\)/);
   const regSource = readFileSync(new URL('../src/features/auth/registration-form.tsx', import.meta.url), 'utf8');
   assert.doesNotMatch(regSource, /<SocialAuthButtons/);
   assert.match(regSource, /<SignupMethods/);
@@ -351,26 +346,84 @@ test('signup session endpoint validates ticket from Authorization header or quer
   assert.equal((await resEmpty.json()).valid, false);
 });
 
-test('social callback establishes verified signup transaction and returns to profile completion', async () => {
-  const callbackUrl = 'http://localhost/api/auth/social/callback?provider=google&market=germany&ui_locale=de&mode=register&email=oauth@example.com&name=GoogleUser';
+test('legacy callback refuses Google query-string identity spoofing', async () => {
+  const callbackUrl =
+    'http://localhost/api/auth/social/callback?provider=google&market=germany&ui_locale=de&mode=register&email=forged@example.com&name=Forged';
   const res = await getSocialCallback(new Request(callbackUrl));
-  assert.equal(res.status, 307); // redirect
-  const location = res.headers.get('location');
-  assert.match(location, /\/de\/de\/register\?signup_ticket=/);
-  const cookie = res.headers.get('set-cookie');
-  assert.match(cookie, /spm_signup_ticket=/);
-  assert.match(cookie, /HttpOnly/);
+  assert.equal(res.status, 307);
+  const location = res.headers.get('location') || '';
+  assert.match(location, /\/de\/de\/register\?error=google_flow_updated/);
+  assert.doesNotMatch(location, /signup_ticket=/);
+  assert.equal(res.headers.get('set-cookie'), null);
+});
 
-  // Extract ticket from redirect url and verify
-  const redirectParams = new URL(location).searchParams;
-  const ticket = redirectParams.get('signup_ticket');
-  const payload = verifySignupTicket(ticket);
-  assert.ok(payload);
-  assert.equal(payload.identity.method, 'google');
-  assert.equal(payload.identity.identifier, 'oauth@example.com');
-  assert.equal(payload.identity.displayName, 'GoogleUser');
-  assert.equal(payload.market, 'germany');
-  assert.equal(payload.uiLocale, 'de');
+test('Google GIS token is verified server-side before creating the SPM identity ticket', async () => {
+  const originalFetch = globalThis.fetch;
+  const clientId = '541344539683-mfeio08fjgkh4fu2u1um2bqddt2h00cl.apps.googleusercontent.com';
+
+  try {
+    globalThis.fetch = async (input, init = {}) => {
+      const url = String(input);
+      if (url.startsWith('https://oauth2.googleapis.com/tokeninfo?access_token=')) {
+        return new Response(
+          JSON.stringify({
+            aud: clientId,
+            scope: 'openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile',
+            expires_in: '3600',
+          }),
+          { status: 200, headers: { 'Content-Type': 'application/json' } }
+        );
+      }
+      if (url === 'https://openidconnect.googleapis.com/v1/userinfo') {
+        assert.match(String(init.headers?.Authorization || ''), /^Bearer /);
+        return new Response(
+          JSON.stringify({
+            sub: 'google-sub-123',
+            email: 'oauth@example.com',
+            email_verified: true,
+            name: 'Google User',
+          }),
+          { status: 200, headers: { 'Content-Type': 'application/json' } }
+        );
+      }
+      throw new Error(`Unexpected fetch: ${url}`);
+    };
+
+    const req = new Request('http://localhost/api/auth/social/google', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Origin: 'http://localhost',
+        Host: 'localhost',
+      },
+      body: JSON.stringify({
+        access_token: 'valid-google-access-token-1234567890',
+        market: 'germany',
+        ui_locale: 'de',
+        mode: 'register',
+      }),
+    });
+
+    const res = await postGoogleAuth(req);
+    assert.equal(res.status, 200);
+    const data = await res.json();
+    assert.equal(data.success, true);
+    assert.equal(data.identity.method, 'google');
+    assert.equal(data.identity.identifier, 'oauth@example.com');
+    assert.match(data.redirect_to, /^\/de\/de\/register\?signup_ticket=/);
+
+    const cookie = res.headers.get('set-cookie') || '';
+    assert.match(cookie, /spm_signup_ticket=/);
+    assert.match(cookie, /HttpOnly/i);
+
+    const ticket = new URL(data.redirect_to, 'http://localhost').searchParams.get('signup_ticket');
+    const payload = verifySignupTicket(ticket);
+    assert.ok(payload);
+    assert.equal(payload.identity.method, 'google');
+    assert.equal(payload.identity.identifier, 'oauth@example.com');
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
 });
 
 test('Profile Completion view renders profile form with prefilled identifier without SocialAuthButtons in guardian step', () => {

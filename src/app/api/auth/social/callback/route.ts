@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import {
-  isSocialProvider,
   sanitizeAuthMarket,
   sanitizeAuthMode,
   sanitizeAuthUiLocale,
@@ -15,41 +14,55 @@ export async function GET(request: Request) {
   const market = sanitizeAuthMarket(url.searchParams.get('market'));
   const uiLocale = sanitizeAuthUiLocale(url.searchParams.get('ui_locale'));
   const mode = sanitizeAuthMode(url.searchParams.get('mode'));
-
-  const email = url.searchParams.get('email')?.trim() || '';
-  const name = url.searchParams.get('name')?.trim() || '';
-
   const basePath = market === 'germany' ? `/de/${uiLocale}` : `/${uiLocale}`;
 
-  if (!isSocialProvider(provider)) {
-    return NextResponse.redirect(new URL(`${basePath}/login?error=unsupported_provider`, request.url));
-  }
-
-  if (mode === 'register') {
-    // Generate verified signup transaction ticket for OAuth registration
-    const verifiedIdentifier = email || `${provider}-user@example.com`;
-    const ticket = createVerifiedSignupTicket(
-      {
-        method: provider,
-        identifier: verifiedIdentifier,
-        displayName: name,
-        maskedDestination: email ? undefined : `${provider.toUpperCase()} Identity`,
-      },
-      market,
-      uiLocale
+  // Google no longer uses this legacy callback. Google Identity Services
+  // tokens are verified server-side by POST /api/auth/social/google.
+  if (provider === 'google') {
+    return NextResponse.redirect(
+      new URL(`${basePath}/${mode === 'register' ? 'register' : 'login'}?error=google_flow_updated`, request.url)
     );
-
-    const targetUrl = new URL(`${basePath}/register`, request.url);
-    targetUrl.searchParams.set('signup_ticket', ticket);
-
-    const response = NextResponse.redirect(targetUrl);
-    const cookieValue = `spm_signup_ticket=${ticket}; Path=/; HttpOnly; SameSite=Lax; Max-Age=1800${
-      process.env.NODE_ENV === 'production' ? '; Secure' : ''
-    }`;
-    response.headers.set('Set-Cookie', cookieValue);
-    return response;
   }
 
-  // Mode === 'login'
-  return NextResponse.redirect(new URL(`${basePath}/login`, request.url));
+  if (provider !== 'facebook') {
+    return NextResponse.redirect(
+      new URL(`${basePath}/login?error=unsupported_provider`, request.url)
+    );
+  }
+
+  const email = url.searchParams.get('email')?.trim().toLowerCase() || '';
+  const name = url.searchParams.get('name')?.trim() || '';
+
+  if (mode !== 'register' || !email) {
+    return NextResponse.redirect(
+      new URL(
+        `${basePath}/${mode === 'register' ? 'register' : 'login'}?error=social_auth_unavailable`,
+        request.url
+      )
+    );
+  }
+
+  const ticket = createVerifiedSignupTicket(
+    {
+      method: 'facebook',
+      identifier: email,
+      displayName: name || undefined,
+    },
+    market,
+    uiLocale
+  );
+
+  const targetUrl = new URL(`${basePath}/register`, request.url);
+  targetUrl.searchParams.set('signup_ticket', ticket);
+
+  const response = NextResponse.redirect(targetUrl);
+  response.cookies.set('spm_signup_ticket', ticket, {
+    httpOnly: true,
+    sameSite: 'lax',
+    secure: process.env.NODE_ENV === 'production',
+    path: '/',
+    maxAge: 30 * 60,
+  });
+  response.headers.set('Cache-Control', 'no-store');
+  return response;
 }

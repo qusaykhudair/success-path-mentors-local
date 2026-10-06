@@ -12,7 +12,7 @@ import {
   ShieldCheck,
   Smartphone,
 } from 'lucide-react';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
@@ -108,6 +108,7 @@ export function LoginForm({
   const [secondsToResend, setSecondsToResend] = useState(0);
   const [isResending, setIsResending] = useState(false);
   const [socialPending, setSocialPending] = useState(false);
+  const googleLoginResumeRef = useRef(false);
 
   useEffect(() => {
     if (stage !== 'otp' || secondsToResend <= 0) return;
@@ -119,6 +120,83 @@ export function LoginForm({
 
     return () => window.clearInterval(interval);
   }, [secondsToResend, stage]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || googleLoginResumeRef.current) return;
+
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('social') !== 'google') return;
+
+    googleLoginResumeRef.current = true;
+    let cancelled = false;
+    setSocialPending(true);
+    setErrorMessage('');
+
+    const resumeGoogleLogin = async () => {
+      try {
+        const sessionResponse = await fetch('/api/auth/signup/session', {
+          headers: { Accept: 'application/json' },
+          credentials: 'include',
+          cache: 'no-store',
+        });
+        const session = (await sessionResponse.json().catch(() => ({}))) as {
+          valid?: boolean;
+          identity?: { method?: string; identifier?: string };
+        };
+
+        const identifier = session.identity?.identifier?.trim().toLowerCase() || '';
+        if (
+          !sessionResponse.ok ||
+          !session.valid ||
+          session.identity?.method !== 'google' ||
+          !identifier.includes('@') ||
+          !isLoginIdentifier(identifier)
+        ) {
+          throw new Error('Invalid Google login session');
+        }
+
+        if (cancelled) return;
+
+        setLoginMethod('email');
+        identifierForm.setValue('identifier', identifier, {
+          shouldDirty: false,
+          shouldTouch: false,
+          shouldValidate: true,
+        });
+
+        const nextChallenge = await authApi.requestLogin({
+          identifier,
+          locale: toAuthApiLocale(locale),
+        });
+
+        if (cancelled) return;
+
+        setChallenge(nextChallenge);
+        setSecondsToResend(nextChallenge.resend_after_seconds);
+        setStage('otp');
+        window.requestAnimationFrame(() => otpForm.setFocus('otp'));
+      } catch (error) {
+        if (!cancelled) setErrorMessage(friendlyError(error, copy));
+      } finally {
+        if (!cancelled) {
+          setSocialPending(false);
+          const cleanUrl = new URL(window.location.href);
+          cleanUrl.searchParams.delete('social');
+          window.history.replaceState(
+            {},
+            '',
+            `${cleanUrl.pathname}${cleanUrl.search}${cleanUrl.hash}`
+          );
+        }
+      }
+    };
+
+    void resumeGoogleLogin();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [copy, identifierForm, locale, otpForm]);
 
   async function requestCode(values: { identifier: string }) {
     setErrorMessage('');
