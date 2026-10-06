@@ -286,6 +286,8 @@ export async function FinalCta() {
                   href={whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-analytics-event="whatsapp_cta_clicked"
+                  data-analytics-surface="final_cta"
                   className={buttonVariants({
                     variant: 'accent',
                     size: 'lg',
