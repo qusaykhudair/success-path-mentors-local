@@ -7,7 +7,7 @@
 **Business:** Success Path Mentors  
 **Campaign:** `SPM_ON_Search_Clicks_Learning_Oct2026`  
 **Stage:** Learning / Search Pilot  
-**Current Working Units:** ADS-WU-003 is Done and serving; ADS-WU-004 is In Progress with the first live cleanup recorded; ADS-WU-005 initial baseline is Done and monitoring continues; ADS-WU-006 is implemented/deployed with V4 production QA passed and is awaiting the V5 Google Ads activation approval + measured validation gate; ADS-WU-007 remains Blocked.
+**Current Working Units:** ADS-WU-003 is Done and serving; ADS-WU-004 is In Progress with the first live cleanup recorded; ADS-WU-005 initial baseline is Done and monitoring continues; ADS-WU-006 V5 is activated with public destination QA passed and is now awaiting account-side Eligible/serving confirmation + measured validation; ADS-WU-007 remains Blocked.
 
 ---
 
@@ -157,8 +157,10 @@ Current baseline exclusions include:
 - [x] Ontario contextual paid-search experience implemented.
 - [x] Production deployment completed.
 - [x] V4 production QA passed.
-- [ ] V5 Google Ads destination activation requires explicit approval before execution.
-- [ ] After activation, collect measured evidence before WU-006 can be marked Done.
+- [x] V5 Google Ads destination activation completed after explicit approval (user-confirmed).
+- [x] Public Ontario destination + registration handoff QA passed.
+- [ ] Confirm edited RSA returns to Eligible/serving and the ad table shows the intended Final URL.
+- [ ] Collect measured evidence before WU-006 can be marked Done.
 
 Reference: `google-ads/ADS-WU-006-V5-ACTIVATION-GATE.md`.
 
@@ -177,34 +179,19 @@ Pending:
 
 ## 5. Current next step
 
-**NEXT ACTION: ADS-WU-006 V5 activation approval gate.**
+**NEXT ACTION: ADS-WU-006 post-activation status check + measured validation.**
 
-The Ontario contextual landing experience is already deployed and production-QA passed.
+V5 destination activation is complete (user-confirmed) and the public Ontario destination QA passed.
 
-No Google Ads setting is changed by this documentation step.
-
-The next controlled Google Ads action, **only after explicit approval**, is to use:
+Activated destination:
 
 `https://successpathmentors.net/en?ads_region=ontario`
 
-as the destination for the relevant Ontario paid-search ad.
-
-Activation must not include changes to:
-- Maximize Clicks;
-- CA$10/day budget;
-- Ontario presence-only targeting;
-- English language;
-- Google Search-only network;
-- devices;
-- schedules;
-- audiences;
-- conversion bidding.
-
-Immediately after approved activation:
-1. QA the real ad click-through.
-2. Verify Ontario hero/QuickStart/WhatsApp/registration handoff.
-3. Verify canonical/SEO/language isolation remains safe.
-4. Collect post-activation evidence for CTR, Quality Score components, Landing Page Experience, Search Lost IS (rank), Search Lost Top IS (rank), and WhatsApp inquiry quality.
+Immediate next account-side check:
+1. Confirm the edited responsive search ad is **Eligible/serving** after Google review.
+2. Confirm the ad table/editor still shows the intended Final URL.
+3. Do not modify Maximize Clicks, CA$10/day budget, Ontario presence-only targeting, English, Google Search-only network, devices, schedules, audiences, or conversion bidding.
+4. Begin post-activation measurement for CTR, Quality Score components, Landing Page Experience, Search Lost IS (rank), Search Lost Top IS (rank), Search Impression Share, Search Terms quality, and WhatsApp inquiry quality.
 5. Keep ADS-WU-006 In Progress until measured evidence is reviewed.
 
 Continue ADS-WU-004 Search Terms cleanup and ADS-WU-005 monitoring in parallel.
@@ -269,7 +256,7 @@ Evaluate whether enough evidence exists to:
 | ADS-WU-003 | Search Campaign Pilot | Done | Serving; ad/assets eligible; Phase-1 URL/goal QA recorded |
 | ADS-WU-004 | Search Terms & Negative Keywords | In Progress | First live cleanup recorded; continue query-quality learning |
 | ADS-WU-005 | Auction Insights Competitive Matrix | Done (initial baseline) | Initial auction/rank/budget baseline recorded; continue monitoring |
-| ADS-WU-006 | Ad & Landing Page Quality | In Progress | Implemented/deployed; V4 production QA passed; awaiting approved activation + measured validation |
+| ADS-WU-006 | Ad & Landing Page Quality | In Progress | V5 activated; public destination QA passed; awaiting RSA Eligible/serving confirmation + measured validation |
 | ADS-WU-007 | Conversion Bidding Transition | Blocked | Requires trustworthy conversion volume |
 | ADS-WU-008 | Lead Quality & Trial Attribution | Not Started | Requires operational attribution design |
 | ADS-WU-009 | Paid Student CAC & ROAS | Not Started | Requires trial/paid-student reconciliation |
