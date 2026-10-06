@@ -7,7 +7,7 @@
 **Business:** Success Path Mentors  
 **Campaign:** `SPM_ON_Search_Clicks_Learning_Oct2026`  
 **Stage:** Learning / Search Pilot  
-**Current Working Units:** ADS-WU-003 is Done and serving; ADS-WU-004 is In Progress with the first live cleanup recorded; ADS-WU-005 initial baseline is Done and monitoring continues; ADS-WU-006 V5 is activated with public destination QA passed and is now awaiting account-side Eligible/serving confirmation + measured validation; ADS-WU-007 remains Blocked.
+**Current Working Units:** ADS-WU-003 is Done and serving; ADS-WU-004 is In Progress; ADS-WU-005 initial baseline is Done and monitoring continues; ADS-WU-006 V5 is activated and the edited RSA is Eligible with measured validation in progress; ADS-WU-002 source/event architecture is now under active implementation and QA; ADS-WU-007 remains Blocked.
 
 ---
 
@@ -165,11 +165,18 @@ Current baseline exclusions include:
 Reference: `google-ads/ADS-WU-006-V5-ACTIVATION-GATE.md`.
 
 ### ADS-WU-002 — Conversion Measurement Foundation
-Google tag is installed, but business conversions are **not fully defined yet**.
+Google tag is installed. The source event architecture has now been audited and instrumentation gaps are being hardened under `google-ads/ADS-WU-002-CONVERSION-MEASUREMENT-FOUNDATION.md`.
+
+Current measurement design:
+- `trial_registration_complete` = strongest website business conversion candidate;
+- `whatsapp_cta_clicked` = Secondary intent signal, not a qualified lead;
+- `phone_cta_clicked` = Secondary website call-intent signal;
+- Trial Attended / Paid Student = offline downstream outcomes for later WU-008/009.
+
 Pending:
-- [ ] WhatsApp click / message conversion definition.
-- [ ] Phone call conversion definition.
-- [ ] Free Trial / registration conversion definition.
+- [x] WhatsApp click conversion definition: Secondary intent signal.
+- [x] Website phone-click conversion definition: Secondary intent signal.
+- [x] Free Trial / registration conversion definition: back-end confirmed `trial_registration_complete`, Secondary during QA and candidate Primary only after validation.
 - [ ] Trial Attended definition.
 - [ ] Paid Student / offline attribution method.
 - [ ] Verify no duplicate conversion events.
@@ -179,7 +186,7 @@ Pending:
 
 ## 5. Current next step
 
-**NEXT ACTION: ADS-WU-006 post-activation status check + measured validation.**
+**NEXT ACTION: Continue ADS-WU-006 measured validation while executing ADS-WU-002 conversion measurement foundation in parallel.**
 
 V5 destination activation is complete (user-confirmed) and the public Ontario destination QA passed.
 
