@@ -27,11 +27,17 @@ export interface VerifiedGoogleIdToken {
   hd?: string;
 }
 
-interface GoogleJwksResponse {
-  keys?: JsonWebKey[];
+interface GoogleJwk extends JsonWebKey {
+  kid?: string;
+  alg?: string;
+  use?: string;
 }
 
-let cachedKeys: { keys: JsonWebKey[]; expiresAt: number } | null = null;
+interface GoogleJwksResponse {
+  keys?: GoogleJwk[];
+}
+
+let cachedKeys: { keys: GoogleJwk[]; expiresAt: number } | null = null;
 
 function base64UrlJson<T>(value: string): T {
   return JSON.parse(Buffer.from(value, 'base64url').toString('utf8')) as T;
@@ -43,7 +49,7 @@ function cacheMaxAge(cacheControl: string | null): number {
   return Number.isFinite(seconds) && seconds > 0 ? seconds * 1000 : 3600_000;
 }
 
-async function getGoogleJwks(): Promise<JsonWebKey[]> {
+async function getGoogleJwks(): Promise<GoogleJwk[]> {
   const now = Date.now();
   if (cachedKeys && cachedKeys.expiresAt > now) return cachedKeys.keys;
 
