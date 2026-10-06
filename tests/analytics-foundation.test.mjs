@@ -112,6 +112,7 @@ test('Analytics Foundation - Event Type & Runtime Property Allowlist', () => {
   setAnalyticsConsent('granted');
 
   assert.equal(isAnalyticsEventName('trial_form_start'), true);
+  assert.equal(isAnalyticsEventName('phone_cta_clicked'), true);
   assert.equal(isAnalyticsEventName('unknown_event_name'), false);
 
   // PII keys stripped & unknown event properties stripped
@@ -220,3 +221,16 @@ test('Analytics Foundation - French Programme Coverage (Source Contract)', () =>
   assert.equal(surfaceMatches?.length, 2, 'French footer should have exactly 2 footer surface labels');
 });
 
+
+
+test('Analytics Foundation - Contact CTA instrumentation contract', () => {
+  const mobilePath = path.join(root, 'src/components/layout/mobile-nav.tsx');
+  const mobileSrc = fs.readFileSync(mobilePath, 'utf8');
+  assert.match(mobileSrc, /data-analytics-event="phone_cta_clicked"/);
+  assert.match(mobileSrc, /data-analytics-surface="mobile_nav_booking"/);
+
+  const finalCtaPath = path.join(root, 'src/components/sections/home/final-cta.tsx');
+  const finalCtaSrc = fs.readFileSync(finalCtaPath, 'utf8');
+  assert.match(finalCtaSrc, /data-analytics-event="whatsapp_cta_clicked"/);
+  assert.match(finalCtaSrc, /data-analytics-surface="final_cta"/);
+});

@@ -827,6 +827,8 @@ export function MobileNav({
             <a
               href={getDefaultTelephoneHref()}
               onClick={() => closeAll()}
+              data-analytics-event="phone_cta_clicked"
+              data-analytics-surface="mobile_nav_icon"
               aria-label={`${phoneLabel} ${phoneNumber}`}
               className="inline-flex min-h-touch min-w-touch items-center justify-center rounded-button border border-border bg-background text-accent transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
@@ -835,6 +837,8 @@ export function MobileNav({
             <a
               href={getDefaultTelephoneHref()}
               onClick={() => closeAll()}
+              data-analytics-event="phone_cta_clicked"
+              data-analytics-surface="mobile_nav_phone"
               className="flex min-h-touch flex-col items-start justify-center rounded-button border border-border bg-background px-3 text-start transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
               <span className="text-xs font-semibold text-muted-foreground">{phoneLabel}</span>
@@ -846,6 +850,8 @@ export function MobileNav({
             href={bookingHref}
             target="_blank"
             rel="noopener noreferrer"
+            data-analytics-event="whatsapp_cta_clicked"
+            data-analytics-surface="mobile_nav_booking"
             onClick={() =>
               closeAll()
             }

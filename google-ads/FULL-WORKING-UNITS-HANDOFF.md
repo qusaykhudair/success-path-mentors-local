@@ -118,9 +118,11 @@ Controls:
 - duplicate-conversion QA
 - no parent/student PII in analytics parameters
 
-**Current status:** In Progress. Base Google Ads tag is installed and detected; business conversion architecture is incomplete.
+**Current status:** In Progress. Base Google Ads tag is installed and detected; source event architecture is audited; contact-event instrumentation hardening is implemented on the WU-002 branch. Production GTM/event delivery and Google Ads conversion-action QA remain pending.
 
 **Exit:** intended conversions fire once, duplicates ruled out, definitions approved.
+
+Detailed execution spec: `google-ads/ADS-WU-002-CONVERSION-MEASUREMENT-FOUNDATION.md`.
 
 ---
 
@@ -206,7 +208,7 @@ Review:
 Constraint:
 - preserve existing SEO architecture and production quality
 
-**Current status:** In Progress. Quality diagnostics and full audit are complete; Ontario contextual landing is implemented and deployed; V4 production QA passed; V5 Google Ads destination activation requires explicit approval, followed by measured validation.
+**Current status:** In Progress. Quality diagnostics and full audit are complete; Ontario contextual landing is implemented/deployed; V4 production QA passed; V5 activation is complete; edited RSA is Eligible; measured post-activation validation is in progress.
 
 **Exit:** weak diagnostic components have named corrective actions and measured impact.
 

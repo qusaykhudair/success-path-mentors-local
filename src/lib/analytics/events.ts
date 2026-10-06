@@ -50,6 +50,8 @@ export interface TrialRegistrationCompleteProperties extends BaseEventProperties
 
 export type WhatsAppCtaClickedProperties = BaseEventProperties;
 
+export type PhoneCtaClickedProperties = BaseEventProperties;
+
 export type ContactCtaClickedProperties = BaseEventProperties;
 
 export type AnalyticsEventMap = {
@@ -62,6 +64,7 @@ export type AnalyticsEventMap = {
   trial_registration_complete: TrialRegistrationCompleteProperties;
   trial_registration_failed: TrialRegistrationFailedProperties;
   whatsapp_cta_clicked: WhatsAppCtaClickedProperties;
+  phone_cta_clicked: PhoneCtaClickedProperties;
   contact_cta_clicked: ContactCtaClickedProperties;
 };
 
@@ -79,6 +82,7 @@ export const ANALYTICS_EVENT_NAMES = [
   'trial_registration_complete',
   'trial_registration_failed',
   'whatsapp_cta_clicked',
+  'phone_cta_clicked',
   'contact_cta_clicked',
 ] as const;
 
@@ -96,6 +100,7 @@ const ALLOWED_PROPERTIES_BY_EVENT: Record<AnalyticsEventName, string[]> = {
   trial_registration_failed: ['market', 'locale', 'error_category', 'http_status'],
   trial_registration_complete: ['market', 'locale', 'status', 'trial_status', 'subject_category'],
   whatsapp_cta_clicked: ['market', 'locale', 'surface'],
+  phone_cta_clicked: ['market', 'locale', 'surface'],
   contact_cta_clicked: ['market', 'locale', 'surface'],
 };
 
