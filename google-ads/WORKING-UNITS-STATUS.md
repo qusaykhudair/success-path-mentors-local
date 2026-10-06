@@ -5,7 +5,7 @@
 | WU | Name | Status | Current checkpoint | Exit condition |
 |---|---|---|---|---|
 | ADS-WU-001 | Access & Baseline Capture | In Progress | First live snapshot captured; continue baseline collection through Phase 1 | Dated multi-day baseline metrics captured |
-| ADS-WU-002 | Conversion Measurement Foundation | In Progress | Base tag installed and detected | Business conversion events defined + QA evidence |
+| ADS-WU-002 | Conversion Measurement Foundation | In Progress | Event architecture audited; contact-event instrumentation hardened; production GTM/event delivery + Google Ads conversion-action QA pending | Business conversion events defined + QA evidence |
 | ADS-WU-003 | Search Campaign Pilot | Done | Ad/assets eligible, final URL and conversion-goal QA passed, campaign serving live traffic | Complete |
 | ADS-WU-004 | Search Terms & Negative Keywords | In Progress | Baseline negatives complete | First live Search Terms optimization recorded |
 | ADS-WU-005 | Auction Insights Competitive Matrix | Done (initial baseline) | First auction snapshot + Budget-vs-Rank diagnosis captured | Complete for initial baseline; continue weekly monitoring |
@@ -24,12 +24,12 @@
 2. ADS-WU-005 initial Auction Insights baseline is complete; continue monitoring weekly.
 3. ADS-WU-006 V5 activation is complete; public destination QA passed and the edited RSA is confirmed Eligible.
 4. Collect measured WU-006 evidence for CTR, Quality Score components, Landing Page Experience, Search Lost IS (rank), Search Lost Top IS (rank), and WhatsApp inquiry quality.
-5. Complete ADS-WU-002 business conversion definitions and QA without changing the current Maximize Clicks strategy.
+5. Execute ADS-WU-002 in parallel: verify production GTM/event delivery, then create/QA Secondary Google Ads actions for trial registration complete, WhatsApp CTA click and website phone click without changing Maximize Clicks.
 6. Keep ADS-WU-007 blocked until the conversion-readiness evidence gate passes.
 7. Build offline/business attribution under ADS-WU-008/009 and run recurring reviews under ADS-WU-010.
 
 ## Current next action
-**ADS-WU-006 → Measured post-activation validation**
+**Parallel controlled work: ADS-WU-006 measured validation + ADS-WU-002 conversion measurement foundation**
 
 Current verified state:
 - Responsive Search Ad and visible assets are Eligible and serving.
@@ -43,6 +43,8 @@ Next controlled action:
 - Collect measured post-activation WU-006 evidence from a clean post-activation window.
 
 Reference: `google-ads/ADS-WU-006-V5-ACTIVATION-GATE.md`.
+
+WU-002 reference: `google-ads/ADS-WU-002-CONVERSION-MEASUREMENT-FOUNDATION.md`.
 
 Remaining control:
 - Audit Google auto-created assets before accepting any recommendation or asset automatically.
