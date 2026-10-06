@@ -93,7 +93,7 @@ Track:
 - CPC
 - conversions/CVR/CPL when meaningful
 
-**Current status:** In Progress. Account/campaign exist; live baseline awaits data.
+**Current status:** In Progress. Live baseline exists and continues accumulating; first campaign, Search Terms, Auction Insights, rank/budget and Quality Score evidence has been captured.
 
 **Exit:** dated account-sourced baseline metrics documented.
 
@@ -146,7 +146,7 @@ Current implementation:
 - Sitelinks
 - Structured Snippet
 
-**Current status:** In Progress. Setup/assets substantially complete; approval/serving + URL/goal QA pending.
+**Current status:** Done. Campaign is serving; RSA and visible assets are Eligible; Phase-1 conversion-goal QA passed and evidence is recorded.
 
 **Exit:** ads/assets approved and serving; final URL verified; no accidental conversion-goal contamination.
 
@@ -162,7 +162,7 @@ Process:
 - promote proven high-intent queries
 - maintain irrelevant-spend trend
 
-**Current status:** In Progress. Baseline negatives complete; live Search Terms pending.
+**Current status:** In Progress. First live Search Terms cleanup is recorded; continue Keep / Add / Negative / Watch classification from evidence.
 
 **Exit:** first live search-term optimization recorded and versioned.
 
@@ -187,7 +187,7 @@ Management framing:
 - how many were lost to rank?
 - how often were competitors above us?
 
-**Current status:** Not Started — waiting for sufficient live auction volume.
+**Current status:** Done for the initial baseline. Auction Insights and Budget-vs-Rank evidence are recorded; continue monitoring on the established cadence.
 
 **Exit:** first evidence-based competitive matrix documented.
 
@@ -206,9 +206,16 @@ Review:
 Constraint:
 - preserve existing SEO architecture and production quality
 
-**Current status:** Not Started — execute after initial traffic/diagnostics.
+**Current status:** In Progress. Quality diagnostics and full audit are complete; Ontario contextual landing is implemented and deployed; V4 production QA passed; V5 Google Ads destination activation requires explicit approval, followed by measured validation.
 
 **Exit:** weak diagnostic components have named corrective actions and measured impact.
+
+---
+
+### WU-006 continuation control
+Production implementation is already live. The next gate is documented in `google-ads/ADS-WU-006-V5-ACTIVATION-GATE.md`.
+
+Do not change the Google Ads destination, bidding, budget, targeting, networks, devices, schedules, audiences, or conversion strategy from this handoff without the required approval/evidence gate. WU-006 is not Done until post-activation measured evidence is reviewed.
 
 ---
 
@@ -422,13 +429,12 @@ Rules:
 
 ## Current — Phase 1
 Primary focus:
-- approval/serving
-- clean baseline
-- Search Terms observation
-- CPC/CTR
-- geo/device/demographic observation
-- WhatsApp inquiry observation
-- no structural optimization unless policy/error issue
+- maintain the controlled Maximize Clicks baseline
+- continue Search Terms cleanup and traffic-quality learning
+- monitor Auction Insights / rank vs budget
+- complete WU-006 V5 activation only after explicit approval
+- after activation, measure CTR, Quality Score components, Landing Page Experience, rank-loss metrics and WhatsApp inquiry quality
+- no unrelated structural optimization unless policy/error issue or separately approved
 
 ## Phase 2
 Primary focus:

@@ -1,7 +1,7 @@
 # ADS-WU-006: Market-Aware Landing Page Implementation Report
 
 ## Status
-**Implemented / Awaiting activation and measured validation**
+**Implemented + deployed / Production QA passed / Awaiting Google Ads activation approval and measured validation**
 
 ## Overview
 This document records the implementation details for the market-aware landing page, driven by the findings in `ADS-WU-006-LANDING-PAGE-AUDIT-2026-10-05.md`.
@@ -43,7 +43,16 @@ The implementation is covered by a suite of tests that verify:
 
 All tests, type checking, and linting checks are currently passing on this branch.
 
+## Production / activation state
+- V3 implementation is already present in `main`.
+- Production deployment and runtime QA passed on 2026-10-06.
+- Reference: `google-ads/ADS-WU-006-V4-PRODUCTION-QA.md`.
+- The next gate is documented in `google-ads/ADS-WU-006-V5-ACTIVATION-GATE.md`.
+
 ## Next Steps
-- **Do not merge immediately.** Wait for the baseline learning window on the Google Ads campaign to finish.
-- Monitor `google-ads/QA-CURRENT-STAGE-2026-10-04.md` and standard analytics to confirm current baseline health.
-- When approved for launch, activate the parameterized URLs in Google Ads and merge the V3 branch to `main`.
+- Do **not** change the Google Ads Final URL without explicit approval.
+- Once approved, activate only the Ontario contextual destination: `https://successpathmentors.net/en?ads_region=ontario`.
+- Do not change bidding, budget, targeting, networks, devices, schedules, or conversion strategy as part of this activation.
+- Perform immediate destination/WhatsApp/registration/SEO QA after activation.
+- Collect post-activation evidence for CTR, Quality Score components, Landing Page Experience, Search Lost IS (rank), Search Lost Top IS (rank), and WhatsApp inquiry quality.
+- Keep WU-006 **In Progress** until measured post-activation evidence is reviewed.

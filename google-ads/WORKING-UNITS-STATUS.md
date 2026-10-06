@@ -9,7 +9,7 @@
 | ADS-WU-003 | Search Campaign Pilot | Done | Ad/assets eligible, final URL and conversion-goal QA passed, campaign serving live traffic | Complete |
 | ADS-WU-004 | Search Terms & Negative Keywords | In Progress | Baseline negatives complete | First live Search Terms optimization recorded |
 | ADS-WU-005 | Auction Insights Competitive Matrix | Done (initial baseline) | First auction snapshot + Budget-vs-Rank diagnosis captured | Complete for initial baseline; continue weekly monitoring |
-| ADS-WU-006 | Ad & Landing Page Quality | In Progress | Full audit complete; Ontario message-match and hero intake continuity gaps documented; implementation gated until baseline checkpoint | Controlled corrective action/test completed and measured |
+| ADS-WU-006 | Ad & Landing Page Quality | In Progress | V3 implementation is in main; V4 production QA passed; V5 Google Ads activation awaits explicit approval, then measured validation | Post-activation quality/rank/engagement evidence reviewed and corrective action measured |
 | ADS-WU-007 | Conversion Bidding Transition | Blocked | No trustworthy conversion volume yet | Evidence supports conversion-led bidding |
 | ADS-WU-008 | Lead Quality & Trial Attribution | Not Started | Attribution design pending | Campaign → lead → trial reconciliation works |
 | ADS-WU-009 | Paid Student CAC & ROAS | Not Started | Requires paid-student reconciliation | Reproducible CAC/ROAS reporting |
@@ -20,25 +20,34 @@
 | ADS-WU-014 | Cross-Channel Learning Control | Not Started | Requires Google + Meta evidence | Controlled cross-channel tests and channel-specific CAC comparison |
 
 ## Current execution order
-1. Finish ADS-WU-003 approval/serving gate: ad + assets approved, primary final URL checked, and no conversion goal accidentally controls bidding.
-2. Complete ADS-WU-002 business conversion definitions.
-3. Wait for live Search Terms, then execute ADS-WU-004.
-4. ADS-WU-005 initial Auction Insights baseline is complete; continue monitoring weekly.
-5. Execute ADS-WU-006 now: Quality Score diagnostics + ad/landing-page alignment. ADS-WU-007 remains blocked.
-6. Build offline/business attribution under ADS-WU-008/009.
-7. Run recurring reviews under ADS-WU-010.
+1. Continue ADS-WU-004 Search Terms cleanup from live query evidence.
+2. ADS-WU-005 initial Auction Insights baseline is complete; continue monitoring weekly.
+3. ADS-WU-006 is at V5 activation gate: production implementation/QA are complete; do not change the Google Ads destination until explicit approval is given.
+4. After approved activation, collect measured WU-006 evidence for CTR, Quality Score components, Landing Page Experience, Search Lost IS (rank), Search Lost Top IS (rank), and WhatsApp inquiry quality.
+5. Complete ADS-WU-002 business conversion definitions and QA without changing the current Maximize Clicks strategy.
+6. Keep ADS-WU-007 blocked until the conversion-readiness evidence gate passes.
+7. Build offline/business attribution under ADS-WU-008/009 and run recurring reviews under ADS-WU-010.
 
 ## Current next action
-**Google Ads → approval/serving + conversion-goal QA**
+**ADS-WU-006 → V5 activation approval gate**
 
-Verify:
-- Responsive Search Ad = Approved/Eligible and serving
-- Call asset = approved/eligible
-- WhatsApp Message asset = approved/eligible
-- Callouts / Sitelinks / Structured Snippet = approved/eligible
-- Primary final URL + display path are correct
-- Old `Submit lead form` and any `Leads from messages` action are not steering the Maximize Clicks pilot
-- No Google auto-created asset is accepted blindly
+Current verified state:
+- Responsive Search Ad and visible assets are Eligible and serving.
+- Conversion-goal QA passed for Phase 1: `Submit lead form` and `Leads from messages` are not steering the Maximize Clicks pilot.
+- First Search Terms cleanup is already recorded.
+- First Auction Insights / Budget-vs-Rank baseline is already recorded.
+- Ontario contextual landing is deployed and V4 production QA passed.
+
+Next controlled action:
+- Do **not** change any Google Ads setting without explicit approval.
+- When the destination change is explicitly approved, use `https://successpathmentors.net/en?ads_region=ontario` for the relevant paid-search ad only.
+- Do not change bidding, budget, targeting, networks, devices, or schedules as part of that activation.
+- Then collect measured post-activation WU-006 evidence.
+
+Reference: `google-ads/ADS-WU-006-V5-ACTIVATION-GATE.md`.
+
+Remaining control:
+- Audit Google auto-created assets before accepting any recommendation or asset automatically.
 
 
 ## Full handoff
