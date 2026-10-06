@@ -198,6 +198,17 @@ export function SocialAuthButtons({
                 market: marketId,
                 ui_locale: locale,
                 mode,
+                browser_timezone: (() => {
+                  try {
+                    return Intl.DateTimeFormat().resolvedOptions().timeZone || undefined;
+                  } catch {
+                    return undefined;
+                  }
+                })(),
+                browser_locale:
+                  typeof navigator !== 'undefined' && navigator.language
+                    ? navigator.language
+                    : locale,
               }),
             });
 

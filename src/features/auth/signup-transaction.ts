@@ -7,6 +7,14 @@ export interface VerifiedIdentity {
   identifier: string;
   displayName?: string;
   maskedDestination?: string;
+  providerSubject?: string;
+  givenName?: string;
+  familyName?: string;
+  avatarUrl?: string;
+  providerLocale?: string;
+  browserLocale?: string;
+  timezone?: string;
+  timezoneSource?: 'browser';
 }
 
 export interface SignupTicketPayload {
@@ -69,6 +77,14 @@ export function createVerifiedSignupTicket(
       identifier: identity.identifier.trim(),
       displayName: identity.displayName?.trim(),
       maskedDestination: identity.maskedDestination?.trim(),
+      providerSubject: identity.providerSubject?.trim(),
+      givenName: identity.givenName?.trim(),
+      familyName: identity.familyName?.trim(),
+      avatarUrl: identity.avatarUrl?.trim(),
+      providerLocale: identity.providerLocale?.trim(),
+      browserLocale: identity.browserLocale?.trim(),
+      timezone: identity.timezone?.trim(),
+      timezoneSource: identity.timezoneSource,
     },
     market,
     uiLocale,

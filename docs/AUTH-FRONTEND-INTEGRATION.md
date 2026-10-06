@@ -193,37 +193,62 @@ Validates ticket from:
 
 ## 5. Social OAuth Contracts (Google & Facebook)
 
-### 5.1 Start OAuth Flow
-`POST /api/auth/social/start` (or `GET /api/auth/social/start`)
+### 5.1 Google Identity Services Flow
 
-**Query Parameters:**
-- `provider`: `google` | `facebook`
-- `market`: `germany` | `north-america`
-- `ui_locale`: `de` | `en` | `ar`
-- `mode`: `register` | `login`
+Google uses the browser-based Google Identity Services (GIS) token client with:
 
-**Response (200 OK):**
-```json
-{
-  "authorization_url": "https://identity.example.com/start/google?market=germany&ui_locale=de&mode=register",
-  "context": {
-    "provider": "google",
-    "market": "germany",
-    "ui_locale": "de",
-    "mode": "register"
-  }
-}
-```
+`client_id=541344539683-mfeio08fjgkh4fu2u1um2bqddt2h00cl.apps.googleusercontent.com`
 
-### 5.2 OAuth Callback & Verified Signup Ticket Establishment
-`GET /api/auth/social/callback`
+Scopes:
+- `openid`
+- `email`
+- `profile`
 
-Callback handler invoked after OAuth identity verification:
-1. Extracts validated provider profile (`email`, `name`, `sub`).
-2. Issues short-lived verified signup ticket: `createVerifiedSignupTicket({ method: 'google', identifier: email, displayName: name }, market, ui_locale)`.
-3. Sets `Set-Cookie: spm_signup_ticket=<ticket>; Path=/; HttpOnly; SameSite=Lax; Max-Age=1800; Secure`.
-4. Redirects directly to the market-specific Profile Completion screen:
-   `307 Redirect -> /de/de/register?signup_ticket=<ticket>` (or `/en/register?signup_ticket=<ticket>`).
+The browser sends the Google access token to:
+
+`POST /api/auth/social/google`
+
+with the current market, UI locale, browser locale, and detected IANA browser timezone.
+
+The server then:
+1. Validates the access token with Google's token-info endpoint.
+2. Requires the token audience to match the Success Path Google client ID and requires a positive expiry.
+3. Fetches Google's OpenID userinfo.
+4. Requires `sub`, `email`, and `email_verified=true`.
+5. Creates a short-lived signed SPM signup ticket.
+
+The verified identity context may contain:
+- Google subject ID (`sub`) as `providerSubject`
+- verified email
+- display name
+- given name
+- family name
+- profile photo URL
+- Google locale
+- browser locale
+- browser IANA timezone
+- `timezoneSource=browser`
+
+Caller-supplied profile data is never trusted as Google identity data.
+
+### 5.2 Profile Prefill
+
+For Google registration, the shared Profile Completion screen automatically prefills supported LMS fields:
+- Guardian full name from the verified Google display name (or given/family name fallback)
+- Guardian email from the verified Google email
+- Registration timezone from the browser IANA timezone
+
+The user can still review or change editable registration values before submission.
+
+The existing LMS registration contract currently persists the supported fields above. Google-specific metadata such as `providerSubject`, avatar URL, and provider locale stays inside the signed signup identity context until corresponding backend/LMS fields are introduced; it is not injected into arbitrary LMS notes or undocumented fields.
+
+### 5.3 Existing Account Login
+
+For `mode=login`, Google verifies the email identity first and the website resumes the existing portal OTP challenge for that verified email. The portal backend remains the authority that issues the final portal/LMS token.
+
+### 5.4 Facebook
+
+Facebook keeps the existing configured social-start integration and is independent from the Google GIS flow.
 
 ---
 

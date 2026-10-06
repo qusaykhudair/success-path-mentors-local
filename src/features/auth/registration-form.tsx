@@ -244,9 +244,10 @@ export function RegistrationForm({
 
   const market = getMarketConfig(marketId);
   const detectedTimezone = useMemo(() => getRegistrationTimezone(market), [market]);
+  const effectiveTimezone = verifiedIdentity?.timezone || detectedTimezone;
   const availableTimezones = useMemo(
-    () => getRegistrationTimezones(detectedTimezone, market),
-    [detectedTimezone, market]
+    () => getRegistrationTimezones(effectiveTimezone, market),
+    [effectiveTimezone, market]
   );
   const availableCountries = useMemo(
     () => getRegistrationCountries(market, locale),
@@ -288,7 +289,10 @@ export function RegistrationForm({
     resolver: zodResolver(schema),
     mode: 'onTouched',
     defaultValues: {
-      parent_name: initialIdentity?.displayName || '',
+      parent_name:
+        initialIdentity?.displayName ||
+        [initialIdentity?.givenName, initialIdentity?.familyName].filter(Boolean).join(' ') ||
+        '',
       guardian_relationship: '',
       email: initialIdentity?.method === 'whatsapp' ? '' : initialIdentity?.identifier || '',
       whatsapp: initialIdentity?.method === 'whatsapp' ? initialIdentity?.identifier || '' : '',
@@ -298,7 +302,7 @@ export function RegistrationForm({
       curriculum: '',
       preferred_language: locale === 'de' ? 'German' : locale === 'ar' ? 'Arabic' : 'English',
       country: market.registration.countryValue,
-      timezone: detectedTimezone,
+      timezone: initialIdentity?.timezone || detectedTimezone,
       preferred_day: '',
       preferred_time: '',
       privacy_consent: false,
@@ -354,9 +358,18 @@ export function RegistrationForm({
               form.setValue('whatsapp', data.identity.identifier);
             } else {
               form.setValue('email', data.identity.identifier);
-              if (data.identity.displayName) {
-                form.setValue('parent_name', data.identity.displayName);
+              const identityName =
+                data.identity.displayName ||
+                [data.identity.givenName, data.identity.familyName].filter(Boolean).join(' ');
+              if (identityName) {
+                form.setValue('parent_name', identityName);
               }
+            }
+            if (data.identity.timezone) {
+              form.setValue('timezone', data.identity.timezone, {
+                shouldDirty: false,
+                shouldTouch: false,
+              });
             }
           }
         })
@@ -623,9 +636,18 @@ export function RegistrationForm({
             form.setValue('whatsapp', identity.identifier);
           } else {
             form.setValue('email', identity.identifier);
-            if (identity.displayName) {
-              form.setValue('parent_name', identity.displayName);
+            const identityName =
+              identity.displayName ||
+              [identity.givenName, identity.familyName].filter(Boolean).join(' ');
+            if (identityName) {
+              form.setValue('parent_name', identityName);
             }
+          }
+          if (identity.timezone) {
+            form.setValue('timezone', identity.timezone, {
+              shouldDirty: false,
+              shouldTouch: false,
+            });
           }
         }}
       />

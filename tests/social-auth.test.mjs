@@ -111,6 +111,8 @@ test('both localized provider buttons are rendered, and both authentication scre
   );
   assert.match(socialButtonsSource, /https:\/\/accounts\.google\.com\/gsi\/client/);
   assert.match(socialButtonsSource, /\/api\/auth\/social\/google/);
+  assert.match(socialButtonsSource, /browser_timezone/);
+  assert.match(socialButtonsSource, /browser_locale/);
   assert.doesNotMatch(socialButtonsSource, /start\('google'\)/);
   const regSource = readFileSync(new URL('../src/features/auth/registration-form.tsx', import.meta.url), 'utf8');
   assert.doesNotMatch(regSource, /<SocialAuthButtons/);
@@ -232,17 +234,37 @@ test('Germany child routing rejects /de/fr/login and /de/fr/register as invalid'
   await assert.rejects(page({ params: Promise.resolve({ marketSegments: ['fr', 'register'] }) }), (err) => err === notFoundError);
 });
 
-test('verified signup ticket creates, verifies, expires, and rejects tamper', () => {
-  const identity = { method: 'email', identifier: 'parent@example.com', displayName: 'Jane Doe' };
+test('verified signup ticket creates, verifies, enriches identity context, expires, and rejects tamper', () => {
+  const identity = {
+    method: 'google',
+    identifier: 'parent@example.com',
+    displayName: 'Jane Doe',
+    providerSubject: 'google-sub-123',
+    givenName: 'Jane',
+    familyName: 'Doe',
+    avatarUrl: 'https://lh3.googleusercontent.com/photo.jpg',
+    providerLocale: 'en-CA',
+    browserLocale: 'en-CA',
+    timezone: 'America/Toronto',
+    timezoneSource: 'browser',
+  };
   const ticket = createVerifiedSignupTicket(identity, 'germany', 'de');
   assert.ok(ticket && typeof ticket === 'string');
   assert.equal(ticket.split('.').length, 2);
 
   const payload = verifySignupTicket(ticket);
   assert.ok(payload);
-  assert.equal(payload.identity.method, 'email');
+  assert.equal(payload.identity.method, 'google');
   assert.equal(payload.identity.identifier, 'parent@example.com');
   assert.equal(payload.identity.displayName, 'Jane Doe');
+  assert.equal(payload.identity.providerSubject, 'google-sub-123');
+  assert.equal(payload.identity.givenName, 'Jane');
+  assert.equal(payload.identity.familyName, 'Doe');
+  assert.equal(payload.identity.avatarUrl, 'https://lh3.googleusercontent.com/photo.jpg');
+  assert.equal(payload.identity.providerLocale, 'en-CA');
+  assert.equal(payload.identity.browserLocale, 'en-CA');
+  assert.equal(payload.identity.timezone, 'America/Toronto');
+  assert.equal(payload.identity.timezoneSource, 'browser');
   assert.equal(payload.market, 'germany');
   assert.equal(payload.uiLocale, 'de');
   assert.ok(payload.expiresAt > Date.now());
@@ -382,6 +404,10 @@ test('Google GIS token is verified server-side before creating the SPM identity 
             email: 'oauth@example.com',
             email_verified: true,
             name: 'Google User',
+            given_name: 'Google',
+            family_name: 'User',
+            picture: 'https://lh3.googleusercontent.com/google-user.jpg',
+            locale: 'en_CA',
           }),
           { status: 200, headers: { 'Content-Type': 'application/json' } }
         );
@@ -401,6 +427,8 @@ test('Google GIS token is verified server-side before creating the SPM identity 
         market: 'germany',
         ui_locale: 'de',
         mode: 'register',
+        browser_timezone: 'America/Toronto',
+        browser_locale: 'en-CA',
       }),
     });
 
@@ -410,6 +438,14 @@ test('Google GIS token is verified server-side before creating the SPM identity 
     assert.equal(data.success, true);
     assert.equal(data.identity.method, 'google');
     assert.equal(data.identity.identifier, 'oauth@example.com');
+    assert.equal(data.identity.providerSubject, 'google-sub-123');
+    assert.equal(data.identity.givenName, 'Google');
+    assert.equal(data.identity.familyName, 'User');
+    assert.equal(data.identity.avatarUrl, 'https://lh3.googleusercontent.com/google-user.jpg');
+    assert.equal(data.identity.providerLocale, 'en-CA');
+    assert.equal(data.identity.browserLocale, 'en-CA');
+    assert.equal(data.identity.timezone, 'America/Toronto');
+    assert.equal(data.identity.timezoneSource, 'browser');
     assert.match(data.redirect_to, /^\/de\/de\/register\?signup_ticket=/);
 
     const cookie = res.headers.get('set-cookie') || '';
@@ -421,6 +457,9 @@ test('Google GIS token is verified server-side before creating the SPM identity 
     assert.ok(payload);
     assert.equal(payload.identity.method, 'google');
     assert.equal(payload.identity.identifier, 'oauth@example.com');
+    assert.equal(payload.identity.providerSubject, 'google-sub-123');
+    assert.equal(payload.identity.timezone, 'America/Toronto');
+    assert.equal(payload.identity.providerLocale, 'en-CA');
   } finally {
     globalThis.fetch = originalFetch;
   }

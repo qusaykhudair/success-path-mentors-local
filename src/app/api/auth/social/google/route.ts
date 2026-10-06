@@ -4,7 +4,10 @@ import {
   sanitizeAuthMode,
   sanitizeAuthUiLocale,
 } from '@/features/auth/social-auth';
-import { createVerifiedSignupTicket } from '@/features/auth/signup-transaction';
+import {
+  createVerifiedSignupTicket,
+  type VerifiedIdentity,
+} from '@/features/auth/signup-transaction';
 
 export const dynamic = 'force-dynamic';
 
@@ -26,6 +29,10 @@ interface GoogleUserInfo {
   email?: string;
   email_verified?: boolean;
   name?: string;
+  given_name?: string;
+  family_name?: string;
+  picture?: string;
+  locale?: string;
 }
 
 function authBasePath(
@@ -47,6 +54,46 @@ function sameOriginRequest(request: Request): boolean {
     return originHost === requestHost;
   } catch {
     return false;
+  }
+}
+
+function cleanText(value: unknown, maxLength: number): string | undefined {
+  if (typeof value !== 'string') return undefined;
+  const cleaned = value.trim();
+  if (!cleaned) return undefined;
+  return cleaned.slice(0, maxLength);
+}
+
+function cleanLocale(value: unknown): string | undefined {
+  const locale = cleanText(value, 35);
+  if (!locale) return undefined;
+  return /^[A-Za-z]{2,8}(?:[-_][A-Za-z0-9]{2,8})*$/.test(locale)
+    ? locale.replace(/_/g, '-')
+    : undefined;
+}
+
+function cleanHttpsUrl(value: unknown): string | undefined {
+  const candidate = cleanText(value, 2048);
+  if (!candidate) return undefined;
+
+  try {
+    const url = new URL(candidate);
+    return url.protocol === 'https:' ? url.href : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+function cleanTimezone(value: unknown): string | undefined {
+  const timezone = cleanText(value, 100);
+  if (!timezone) return undefined;
+
+  try {
+    // Validate against the runtime IANA time-zone database.
+    new Intl.DateTimeFormat('en-US', { timeZone: timezone }).format();
+    return timezone;
+  } catch {
+    return undefined;
   }
 }
 
@@ -77,6 +124,8 @@ export async function POST(request: Request) {
   const market = sanitizeAuthMarket(body.market);
   const uiLocale = sanitizeAuthUiLocale(body.ui_locale);
   const mode = sanitizeAuthMode(body.mode);
+  const browserTimezone = cleanTimezone(body.browser_timezone);
+  const browserLocale = cleanLocale(body.browser_locale);
 
   if (!accessToken || accessToken.length < 20 || accessToken.length > 4096) {
     return NextResponse.json({ code: 'INVALID_GOOGLE_TOKEN' }, { status: 400, headers });
@@ -132,15 +181,21 @@ export async function POST(request: Request) {
       return NextResponse.json({ code: 'GOOGLE_IDENTITY_UNVERIFIED' }, { status: 401, headers });
     }
 
-    const ticket = createVerifiedSignupTicket(
-      {
-        method: 'google',
-        identifier: email,
-        displayName: profile.name?.trim() || undefined,
-      },
-      market,
-      uiLocale
-    );
+    const identity: VerifiedIdentity = {
+      method: 'google',
+      identifier: email,
+      displayName: cleanText(profile.name, 100),
+      providerSubject: cleanText(profile.sub, 255),
+      givenName: cleanText(profile.given_name, 100),
+      familyName: cleanText(profile.family_name, 100),
+      avatarUrl: cleanHttpsUrl(profile.picture),
+      providerLocale: cleanLocale(profile.locale),
+      browserLocale,
+      timezone: browserTimezone,
+      timezoneSource: browserTimezone ? 'browser' : undefined,
+    };
+
+    const ticket = createVerifiedSignupTicket(identity, market, uiLocale);
 
     const basePath = authBasePath(market, uiLocale);
     const redirectTarget =
@@ -152,11 +207,7 @@ export async function POST(request: Request) {
       {
         success: true,
         redirect_to: redirectTarget,
-        identity: {
-          method: 'google',
-          identifier: email,
-          displayName: profile.name?.trim() || undefined,
-        },
+        identity,
       },
       { headers }
     );
