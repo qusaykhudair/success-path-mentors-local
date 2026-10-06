@@ -60,6 +60,8 @@
 | ADS-EV-041 | WU-006 V5 Google Ads destination activation | PASS (user-confirmed) — relevant paid-search Final URL changed to `https://successpathmentors.net/en?ads_region=ontario` after explicit approval; no bid/budget/targeting change authorized | 2026-10-06 | User confirmation + `google-ads/ADS-WU-006-V5-ACTIVATION-GATE.md` |
 | ADS-EV-042 | WU-006 post-activation public destination QA | PASS — live Ontario URL returns Ontario-specific hero, canonical `/en`, `noindex, follow`, Canadian WhatsApp destination, and registration route preserves `ads_region=ontario` | 2026-10-06 | Live production fetch of Ontario landing + registration route |
 | ADS-EV-043 | WU-006 account-side post-edit status | PASS — edited Responsive Search Ad shows `Eligible` after the Ontario Final URL change. Screenshot also shows 236 impressions, 14 clicks, 5.93% CTR, Avg. CPC CA$1.83, cost CA$25.60 for the mixed Oct 4–6 window; these mixed-window metrics are not used as post-activation impact evidence. | 2026-10-06 | Google Ads Ads table screenshot provided by user |
+| ADS-EV-044 | WU-002 source architecture audit | PASS — Google Ads base tag is consent-gated; custom analytics event contract exists; `trial_registration_complete` is back-end-confirmed and dedupe-guarded; attribution and PII allowlists are present. Production GTM/event delivery still requires runtime verification. | 2026-10-06 | Source audit + `google-ads/ADS-WU-002-CONVERSION-MEASUREMENT-FOUNDATION.md` |
+| ADS-EV-045 | WU-002 contact-event instrumentation hardening | PASS (implementation) — added `phone_cta_clicked`; instrumented mobile phone CTAs, mobile WhatsApp booking CTA, and final home WhatsApp CTA; source-contract tests updated. Runtime production verification pending. | 2026-10-06 | Branch `google-ads/wu002-conversion-foundation` |
 
 ## Evidence still required
 - Google auto-created asset audit before accepting any recommendation/asset automatically.
@@ -75,7 +77,9 @@
   - Search Lost IS (budget)
   - Search Terms quality
   - WhatsApp inquiry quality/relevance where operationally identifiable
-- Conversion-event QA under ADS-WU-002.
+- ADS-WU-002 production GTM/event-delivery verification after consent.
+- ADS-WU-002 Google Ads conversion actions created as Secondary for QA: trial registration complete, WhatsApp CTA click, website phone click.
+- ADS-WU-002 test-conversion evidence: exactly-once firing, no PII, no duplicate conversion path.
 - Lead/trial/paid-student attribution QA under ADS-WU-008/009.
 
 ## Superseded pending items
