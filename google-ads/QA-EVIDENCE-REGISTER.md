@@ -57,11 +57,12 @@
 | ADS-EV-039 | WU-006 V4 Production QA | PASS — Ready for V5 Activation | 2026-10-06 | `google-ads/ADS-WU-006-V4-PRODUCTION-QA.md` |
 
 | ADS-EV-040 | WU-006 V5 activation gate prepared | PASS — production implementation is live and QA-passed; Google Ads destination activation is explicitly separated from code deployment and requires approval before execution | 2026-10-06 | `google-ads/ADS-WU-006-V5-ACTIVATION-GATE.md` |
+| ADS-EV-041 | WU-006 V5 Google Ads destination activation | PASS (user-confirmed) — relevant paid-search Final URL changed to `https://successpathmentors.net/en?ads_region=ontario` after explicit approval; no bid/budget/targeting change authorized | 2026-10-06 | User confirmation + `google-ads/ADS-WU-006-V5-ACTIVATION-GATE.md` |
+| ADS-EV-042 | WU-006 post-activation public destination QA | PASS — live Ontario URL returns Ontario-specific hero, canonical `/en`, `noindex, follow`, Canadian WhatsApp destination, and registration route preserves `ads_region=ontario` | 2026-10-06 | Live production fetch of Ontario landing + registration route |
 
 ## Evidence still required
 - Google auto-created asset audit before accepting any recommendation/asset automatically.
-- Explicit approval evidence before changing the Google Ads paid-search destination to `https://successpathmentors.net/en?ads_region=ontario`.
-- WU-006 activation evidence: relevant paid-search ad destination changed and immediate click-through QA passed.
+- Google Ads account-side post-edit evidence: confirm the edited RSA returns to Eligible/serving and the ad table shows the intended Final URL.
 - WU-006 measured post-activation evidence:
   - CTR
   - Quality Score
