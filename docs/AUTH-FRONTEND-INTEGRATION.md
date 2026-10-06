@@ -211,7 +211,7 @@ The browser sends the Google access token to:
 with the current market, UI locale, browser locale, and detected IANA browser timezone.
 
 The server then:
-1. Validates the access token with Google's token-info endpoint.
+1. Validates the access token with Google's OAuth v3 tokeninfo endpoint (`https://www.googleapis.com/oauth2/v3/tokeninfo`) and requires the token audience/authorized presenter to match the SPM Google client.
 2. Requires the token audience to match the Success Path Google client ID and requires a positive expiry.
 3. Fetches Google's OpenID userinfo.
 4. Requires `sub`, `email`, and `email_verified=true`.
@@ -233,7 +233,7 @@ Caller-supplied profile data is never trusted as Google identity data.
 
 ### 5.2 Profile Prefill
 
-For Google registration, the shared Profile Completion screen automatically prefills supported LMS fields:
+For Google registration, the browser moves directly into the shared Profile Completion state after server verification (no full-page redirect is required). The signed ticket is also stored in an HttpOnly cookie so a refresh can safely restore the verified session. The form automatically prefills supported LMS fields:
 - Guardian full name from the verified Google display name (or given/family name fallback)
 - Guardian email from the verified Google email
 - Registration timezone from the browser IANA timezone

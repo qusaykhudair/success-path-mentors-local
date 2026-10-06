@@ -234,6 +234,7 @@ export function RegistrationForm({
 
   const hasFiredFlowStart = useRef(false);
   const hasFiredRegistrationComplete = useRef(false);
+  const hasAttemptedSessionRecovery = useRef(false);
 
   useEffect(() => {
     if (verifiedTicket && verifiedIdentity && !hasFiredFlowStart.current) {
@@ -342,39 +343,55 @@ export function RegistrationForm({
 
   useEffect(() => {
     if (verifiedTicket && verifiedIdentity) return;
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined' || hasAttemptedSessionRecovery.current) return;
+    hasAttemptedSessionRecovery.current = true;
 
     const params = new URLSearchParams(window.location.search);
     const urlTicket = params.get('signup_ticket') || params.get('ticket');
+    const sessionUrl = urlTicket
+      ? `/api/auth/signup/session?ticket=${encodeURIComponent(urlTicket)}`
+      : '/api/auth/signup/session';
 
-    if (urlTicket) {
-      fetch(`/api/auth/signup/session?ticket=${encodeURIComponent(urlTicket)}`)
-        .then((res) => (res.ok ? (res.json() as Promise<{ valid?: boolean; identity?: VerifiedIdentity }>) : null))
-        .then((data) => {
-          if (data?.valid && data.identity) {
-            setVerifiedTicket(urlTicket);
-            setVerifiedIdentity(data.identity);
-            if (data.identity.method === 'whatsapp') {
-              form.setValue('whatsapp', data.identity.identifier);
-            } else {
-              form.setValue('email', data.identity.identifier);
-              const identityName =
-                data.identity.displayName ||
-                [data.identity.givenName, data.identity.familyName].filter(Boolean).join(' ');
-              if (identityName) {
-                form.setValue('parent_name', identityName);
-              }
-            }
-            if (data.identity.timezone) {
-              form.setValue('timezone', data.identity.timezone, {
-                shouldDirty: false,
-                shouldTouch: false,
-              });
+    fetch(sessionUrl, {
+      headers: { Accept: 'application/json' },
+      credentials: 'same-origin',
+      cache: 'no-store',
+    })
+      .then((res) =>
+        res.ok
+          ? (res.json() as Promise<{
+              valid?: boolean;
+              signup_ticket?: string;
+              identity?: VerifiedIdentity;
+            }>)
+          : null
+      )
+      .then((data) => {
+        if (data?.valid && data.identity) {
+          const recoveredTicket = urlTicket || data.signup_ticket;
+          if (!recoveredTicket) return;
+          setVerifiedTicket(recoveredTicket);
+          setVerifiedIdentity(data.identity);
+          if (data.identity.method === 'whatsapp') {
+            form.setValue('whatsapp', data.identity.identifier);
+          } else {
+            form.setValue('email', data.identity.identifier);
+            const identityName =
+              data.identity.displayName ||
+              [data.identity.givenName, data.identity.familyName].filter(Boolean).join(' ');
+            if (identityName) {
+              form.setValue('parent_name', identityName);
             }
           }
-        })
-        .catch(() => {});
-    }
+          if (data.identity.timezone) {
+            form.setValue('timezone', data.identity.timezone, {
+              shouldDirty: false,
+              shouldTouch: false,
+            });
+          }
+        }
+      })
+      .catch(() => {});
   }, [form, verifiedTicket, verifiedIdentity]);
 
   const values = form.watch();

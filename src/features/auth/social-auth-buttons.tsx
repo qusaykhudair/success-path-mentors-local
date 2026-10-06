@@ -9,6 +9,7 @@ import type { AuthUiLocale } from './auth-contracts';
 import { getAuthCopy } from './auth-copy';
 import { configuredSocialStartUrl, type AuthMode, type SocialProvider } from './social-auth';
 import type { MarketId } from '@/config/markets';
+import type { VerifiedIdentity } from './signup-transaction';
 
 const GOOGLE_CLIENT_ID =
   '541344539683-mfeio08fjgkh4fu2u1um2bqddt2h00cl.apps.googleusercontent.com';
@@ -108,6 +109,7 @@ interface SocialAuthButtonsProps {
   mode?: AuthMode;
   disabled?: boolean;
   onPendingChange?: (pending: boolean) => void;
+  onGoogleVerified?: (params: { ticket: string; identity: VerifiedIdentity }) => void;
   showOrDivider?: boolean;
 }
 
@@ -117,6 +119,7 @@ export function SocialAuthButtons({
   mode = 'login',
   disabled = false,
   onPendingChange,
+  onGoogleVerified,
   showOrDivider = true,
 }: SocialAuthButtonsProps) {
   const copy = getAuthCopy(locale).social;
@@ -213,10 +216,28 @@ export function SocialAuthButtons({
             });
 
             const data = (await response.json().catch(() => ({}))) as {
+              signup_ticket?: unknown;
               redirect_to?: unknown;
+              identity?: VerifiedIdentity;
             };
 
             if (!response.ok) throw new Error('Google authentication failed');
+
+            if (
+              mode === 'register' &&
+              onGoogleVerified &&
+              typeof data.signup_ticket === 'string' &&
+              data.signup_ticket &&
+              data.identity?.method === 'google' &&
+              typeof data.identity.identifier === 'string'
+            ) {
+              onGoogleVerified({
+                ticket: data.signup_ticket,
+                identity: data.identity,
+              });
+              finish('google');
+              return;
+            }
 
             const redirectTo = safeLocalRedirect(data.redirect_to);
             if (!redirectTo) throw new Error('Invalid Google redirect');

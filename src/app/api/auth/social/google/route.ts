@@ -13,11 +13,12 @@ export const dynamic = 'force-dynamic';
 
 const GOOGLE_CLIENT_ID =
   '541344539683-mfeio08fjgkh4fu2u1um2bqddt2h00cl.apps.googleusercontent.com';
-const GOOGLE_TOKENINFO_ENDPOINT = 'https://oauth2.googleapis.com/tokeninfo';
+const GOOGLE_TOKENINFO_ENDPOINT = 'https://www.googleapis.com/oauth2/v3/tokeninfo';
 const GOOGLE_USERINFO_ENDPOINT = 'https://openidconnect.googleapis.com/v1/userinfo';
 
 interface GoogleTokenInfo {
   aud?: string;
+  azp?: string;
   scope?: string;
   expires_in?: string | number;
   error?: string;
@@ -142,15 +143,18 @@ export async function POST(request: Request) {
     const tokenInfo = (await tokenInfoResponse.json().catch(() => ({}))) as GoogleTokenInfo;
 
     const expiresIn = Number(tokenInfo.expires_in || 0);
+    const clientMatches =
+      tokenInfo.aud === GOOGLE_CLIENT_ID || tokenInfo.azp === GOOGLE_CLIENT_ID;
+
     if (
       !tokenInfoResponse.ok ||
-      tokenInfo.aud !== GOOGLE_CLIENT_ID ||
+      !clientMatches ||
       !Number.isFinite(expiresIn) ||
       expiresIn <= 0
     ) {
       console.warn('Rejected Google access token.', {
         status: tokenInfoResponse.status,
-        audienceMatches: tokenInfo.aud === GOOGLE_CLIENT_ID,
+        audienceMatches: clientMatches,
         expiresIn,
       });
       return NextResponse.json({ code: 'INVALID_GOOGLE_TOKEN' }, { status: 401, headers });
@@ -206,6 +210,7 @@ export async function POST(request: Request) {
     const response = NextResponse.json(
       {
         success: true,
+        signup_ticket: ticket,
         redirect_to: redirectTarget,
         identity,
       },

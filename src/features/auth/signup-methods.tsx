@@ -369,6 +369,7 @@ export function SignupMethods({
           marketId={marketId}
           mode="register"
           disabled={disabled || isSubmitting}
+          onGoogleVerified={onVerified}
           showOrDivider={true}
         />
 

@@ -113,6 +113,7 @@ test('both localized provider buttons are rendered, and both authentication scre
   assert.match(socialButtonsSource, /\/api\/auth\/social\/google/);
   assert.match(socialButtonsSource, /browser_timezone/);
   assert.match(socialButtonsSource, /browser_locale/);
+  assert.match(socialButtonsSource, /onGoogleVerified/);
   assert.doesNotMatch(socialButtonsSource, /start\('google'\)/);
   const regSource = readFileSync(new URL('../src/features/auth/registration-form.tsx', import.meta.url), 'utf8');
   assert.doesNotMatch(regSource, /<SocialAuthButtons/);
@@ -352,6 +353,7 @@ test('signup session endpoint validates ticket from Authorization header or quer
   assert.equal(resQuery.status, 200);
   const dataQuery = await resQuery.json();
   assert.equal(dataQuery.valid, true);
+  assert.equal(dataQuery.signup_ticket, ticket);
   assert.equal(dataQuery.identity.identifier, 'verified@example.com');
 
   // Valid via Bearer header
@@ -386,10 +388,11 @@ test('Google GIS token is verified server-side before creating the SPM identity 
   try {
     globalThis.fetch = async (input, init = {}) => {
       const url = String(input);
-      if (url.startsWith('https://oauth2.googleapis.com/tokeninfo?access_token=')) {
+      if (url.startsWith('https://www.googleapis.com/oauth2/v3/tokeninfo?access_token=')) {
         return new Response(
           JSON.stringify({
             aud: clientId,
+            azp: clientId,
             scope: 'openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile',
             expires_in: '3600',
           }),
@@ -446,6 +449,7 @@ test('Google GIS token is verified server-side before creating the SPM identity 
     assert.equal(data.identity.browserLocale, 'en-CA');
     assert.equal(data.identity.timezone, 'America/Toronto');
     assert.equal(data.identity.timezoneSource, 'browser');
+    assert.ok(typeof data.signup_ticket === 'string' && data.signup_ticket.includes('.'));
     assert.match(data.redirect_to, /^\/de\/de\/register\?signup_ticket=/);
 
     const cookie = res.headers.get('set-cookie') || '';

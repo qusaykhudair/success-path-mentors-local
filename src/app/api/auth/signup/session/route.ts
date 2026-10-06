@@ -38,6 +38,7 @@ export async function GET(request: Request) {
   return NextResponse.json(
     {
       valid: true,
+      signup_ticket: ticket,
       identity: payload.identity,
       market: payload.market,
       ui_locale: payload.uiLocale,
