@@ -18,6 +18,7 @@
 | ADS-WU-012 | Optimization Learning, QA & Gate Control | Active | Governing current pilot | Gate status + numeric QA score documented for meaningful reviews |
 | ADS-WU-013 | Meta Ads Historical Learning & Benchmark Transfer | Not Started | Spec exists | Historical Meta evidence converted into labeled hypotheses |
 | ADS-WU-014 | Cross-Channel Learning Control | Not Started | Requires Google + Meta evidence | Controlled cross-channel tests and channel-specific CAC comparison |
+| ADS-WU-015 | Google Ads Optimization Control Tower Pilot | Planned | Optmyzr vs Adalysis pilot spec prepared; shadow mode only until measurement baseline is stable | 40–50 scenario matrix completed + vendor/stack decision approved |
 
 ## Current execution order
 1. Continue ADS-WU-004 Search Terms cleanup from live query evidence.
@@ -27,6 +28,7 @@
 5. Execute ADS-WU-002 in parallel: verify production GTM/event delivery, then create/QA Secondary Google Ads actions for trial registration complete, WhatsApp CTA click and website phone click without changing Maximize Clicks.
 6. Keep ADS-WU-007 blocked until the conversion-readiness evidence gate passes.
 7. Build offline/business attribution under ADS-WU-008/009 and run recurring reviews under ADS-WU-010.
+8. Prepare ADS-WU-015 shadow-mode pilot once WU-002 measurement is stable enough and the first WU-006 post-activation window exists. No optimizer-driven account changes before governance gates pass.
 
 ## Current next action
 **Parallel controlled work: ADS-WU-006 measured validation + ADS-WU-002 conversion measurement foundation**
@@ -51,4 +53,4 @@ Remaining control:
 
 
 ## Full handoff
-See `google-ads/FULL-WORKING-UNITS-HANDOFF.md` for ADS-WU-001 through ADS-WU-014, phase mapping, optimization rules, QA gates, multilingual controls and WhatsApp priority.
+See `google-ads/FULL-WORKING-UNITS-HANDOFF.md` for ADS-WU-001 through ADS-WU-015, phase mapping, optimization rules, QA gates, multilingual controls, WhatsApp priority and the optimizer/control-tower pilot.

@@ -116,6 +116,29 @@ If the preconditions pass:
 
 ---
 
+
+## Parallel capability pilot — ADS-WU-015 Optimization Control Tower
+
+ADS-WU-015 is a supporting capability pilot, **not a fourth phase**.
+
+Purpose:
+- compare Optmyzr and Adalysis against the same Google Ads account/data where practical;
+- evaluate approximately 40–50 real optimization/intervention scenarios;
+- assess whether an independent optimizer detects useful issues/opportunities earlier or more efficiently than manual/native review;
+- evaluate TrueClicks only as a potential complementary QA layer.
+
+Phase relationship:
+- **Phase 1:** observation only; no optimizer-driven account changes.
+- **Phase 2:** shadow/recommendation mode may begin once measurement quality is sufficient; compare optimizer recommendations with manual Search Terms, Auction Insights, quality, placement, geo/device/time and landing-page analysis.
+- **Phase 3:** optimizer assistance may expand only after conversion-readiness gates pass; conversion-goal and bidding changes remain Red/human-approval actions.
+
+Governance:
+- Green = deterministic hygiene/monitoring with documented rollback/audit trail.
+- Yellow = recommendation + human approval.
+- Red = explicit human approval mandatory.
+
+Detailed spec: `google-ads/ADS-WU-015-OPTIMIZATION-CONTROL-TOWER-PILOT.md`.
+
 ## Control principle
 **Phase 1 → Learn**
 **Phase 2 → Clean and understand**

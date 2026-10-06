@@ -427,6 +427,52 @@ Rules:
 
 ---
 
+---
+
+## ADS-WU-015 — Google Ads Optimization Control Tower Pilot
+**Objective:** evaluate an advanced optimization/control layer that can monitor, diagnose, recommend, prioritize, and eventually automate selected low-risk Google Ads interventions while preserving human control over high-impact decisions.
+
+Primary trial:
+- Optmyzr
+- Adalysis
+
+Potential supporting QA layer:
+- TrueClicks
+
+Execution foundation:
+- Google Ads native capabilities remain essential and authoritative for account execution.
+
+Pilot scope:
+- Search Terms and keyword opportunities
+- negative-keyword mining
+- traffic routing/sculpting
+- PMax analysis
+- placement analysis
+- geography/device/daypart analysis
+- creative analysis
+- budget/bidding recommendations
+- landing-page relevance
+- anomaly detection
+- rules/automation
+- business-impact prioritization
+
+Governance:
+- **Green:** deterministic hygiene/monitoring; controlled automation may be tested with rollback/audit trail.
+- **Yellow:** recommendation + human approval.
+- **Red:** explicit human approval mandatory for bid strategy, major budget, conversion goals, geography, PMax structure, campaign launches/pauses, and other high-impact changes.
+
+The optimizer must never bypass ADS-WU-012 gates. WU-015 is not a fourth campaign phase.
+
+Business measurement target:
+**Ad spend → Click → Lead → Trial booked → Trial attended → Paid student → 4 classes → 8 classes → Retained student → LTV / profit**
+
+**Current status:** Planned. Pilot specification is prepared; execution should begin in shadow/recommendation mode once WU-002 measurement is stable enough and WU-006 has a clean post-activation measurement window.
+
+**Exit:** approximately 40–50 real intervention scenarios scored; Optmyzr vs Adalysis compared on equivalent workflows/data; TrueClicks overlap assessed if tested; Green/Yellow/Red controls validated; final adopt/reject/hybrid-stack decision approved.
+
+Detailed pilot spec: `google-ads/ADS-WU-015-OPTIMIZATION-CONTROL-TOWER-PILOT.md`.
+
+
 # Optimization control map
 
 ## Current — Phase 1
@@ -437,6 +483,7 @@ Primary focus:
 - complete WU-006 V5 activation only after explicit approval
 - after activation, measure CTR, Quality Score components, Landing Page Experience, rank-loss metrics and WhatsApp inquiry quality
 - no unrelated structural optimization unless policy/error issue or separately approved
+- WU-015 may be prepared in shadow mode only; no optimizer-driven execution during the baseline window
 
 ## Phase 2
 Primary focus:
@@ -446,6 +493,7 @@ Primary focus:
 - Auction Insights
 - quality diagnostics
 - WhatsApp lead-quality classification
+- optimizer shadow/recommendation comparison under WU-015, with Yellow/Red actions requiring human approval
 
 ## Phase 3
 Primary focus:
@@ -481,8 +529,8 @@ Phase 3:
 ---
 
 # Current handoff next action
-1. Google Ads → Goals → Conversions → Summary
-2. QA `Submit lead form` and any `Leads from messages` action
-3. Ensure neither is steering the current Maximize Clicks pilot
-4. Then confirm ad/assets Approved/Eligible and campaign serving
-5. Enter observation-only Phase 1 window
+1. Continue ADS-WU-006 measured post-activation validation.
+2. Continue ADS-WU-002 event-delivery / conversion-action QA without changing Maximize Clicks.
+3. Continue ADS-WU-004 Search Terms cleanup and ADS-WU-005 weekly Auction Insights monitoring.
+4. Keep ADS-WU-007 blocked until Gate 5 evidence passes.
+5. Prepare ADS-WU-015 in shadow/recommendation mode only after measurement quality is sufficient for a fair optimizer comparison.
