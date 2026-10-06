@@ -3,7 +3,7 @@
 **Date prepared:** 2026-10-06  
 **Campaign:** `SPM_ON_Search_Clicks_Learning_Oct2026`  
 **Working Unit:** ADS-WU-006 — Ad & Landing Page Quality  
-**Status:** READY FOR ACTIVATION APPROVAL — NOT YET ACTIVATED FROM GOOGLE ADS
+**Status:** ACTIVATED — PUBLIC DESTINATION QA PASSED / MEASURED VALIDATION IN PROGRESS
 
 ## Purpose
 
@@ -11,13 +11,14 @@ This gate continues WU-006 after implementation and production QA.
 
 The Ontario contextual landing experience is already deployed and production-QA passed. The remaining WU-006 work is:
 
-1. receive explicit approval before changing the Google Ads destination;
-2. activate the Ontario contextual destination only;
-3. perform immediate technical QA;
-4. collect measured post-activation evidence;
-5. keep WU-006 In Progress until the measured evidence is reviewed.
+1. explicit approval received;
+2. Ontario contextual destination activated in Google Ads (user-confirmed);
+3. public destination and registration handoff QA passed;
+4. confirm the edited ad returns to Eligible/serving after Google review;
+5. collect measured post-activation evidence;
+6. keep WU-006 In Progress until the measured evidence is reviewed.
 
-This document does **not** authorize or perform a Google Ads setting change.
+This document records the V5 activation after explicit approval. The user confirmed the relevant paid-search Final URL was changed to `https://successpathmentors.net/en?ads_region=ontario`. No bidding, budget, targeting, network, device, schedule, audience, or conversion-strategy change was authorized as part of V5.
 
 ## Current production state
 
@@ -87,6 +88,22 @@ After the destination is changed, verify:
 
 If any technical regression appears, revert the ad destination to the previously verified URL and keep WU-006 In Progress.
 
+## V5 activation record — 2026-10-06
+
+- Explicit approval: received in chat.
+- Google Ads Final URL activation: user-confirmed.
+- Activated destination: `https://successpathmentors.net/en?ads_region=ontario`.
+- Public destination QA: PASS.
+- Ontario hero/message match: PASS.
+- Registration destination `/en/register?ads_region=ontario`: PASS.
+- Canonical remains `https://successpathmentors.net/en`: PASS.
+- Robots for contextual landing: `noindex, follow`: PASS.
+- WhatsApp destination resolves to the Canadian business number `+1-647-787-5999`: PASS.
+- No Google Ads bid/budget/targeting change was requested or performed as part of this activation.
+- Remaining immediate account-side check: confirm the edited RSA returns to **Eligible/serving** after Google review and that the ad table shows the intended Final URL.
+
+Evidence classification: activation is user-confirmed; public destination QA was independently verified against the live production URLs. Actual Google Ads account-side post-edit status still requires account evidence/screenshot.
+
 ## Measured validation required before WU-006 can be Done
 
 Collect a comparable post-activation sample and compare:
@@ -112,7 +129,7 @@ Do not claim causality from a tiny sample. Record insufficient-data status where
 
 ## WU-006 completion rule
 
-WU-006 remains **In Progress — Implemented / Production-QA passed / Awaiting activation and measured validation** until post-activation evidence has been reviewed.
+WU-006 remains **In Progress — Activated / Public destination QA passed / Measured validation in progress** until account-side post-edit status and post-activation performance evidence have been reviewed.
 
 Code deployment alone is not sufficient to mark WU-006 Done.
 
