@@ -8,33 +8,9 @@ import {
   createVerifiedSignupTicket,
   type VerifiedIdentity,
 } from '@/features/auth/signup-transaction';
+import { verifyGoogleIdToken } from '@/features/auth/google-id-token';
 
 export const dynamic = 'force-dynamic';
-
-const GOOGLE_CLIENT_ID =
-  '541344539683-mfeio08fjgkh4fu2u1um2bqddt2h00cl.apps.googleusercontent.com';
-const GOOGLE_TOKENINFO_ENDPOINT = 'https://www.googleapis.com/oauth2/v3/tokeninfo';
-const GOOGLE_USERINFO_ENDPOINT = 'https://openidconnect.googleapis.com/v1/userinfo';
-
-interface GoogleTokenInfo {
-  aud?: string;
-  azp?: string;
-  scope?: string;
-  expires_in?: string | number;
-  error?: string;
-  error_description?: string;
-}
-
-interface GoogleUserInfo {
-  sub?: string;
-  email?: string;
-  email_verified?: boolean;
-  name?: string;
-  given_name?: string;
-  family_name?: string;
-  picture?: string;
-  locale?: string;
-}
 
 function authBasePath(
   market: 'germany' | 'north-america',
@@ -90,7 +66,6 @@ function cleanTimezone(value: unknown): string | undefined {
   if (!timezone) return undefined;
 
   try {
-    // Validate against the runtime IANA time-zone database.
     new Intl.DateTimeFormat('en-US', { timeZone: timezone }).format();
     return timezone;
   } catch {
@@ -120,70 +95,21 @@ export async function POST(request: Request) {
     return NextResponse.json({ code: 'INVALID_REQUEST' }, { status: 400, headers });
   }
 
-  const accessToken =
-    typeof body.access_token === 'string' ? body.access_token.trim() : '';
+  const credential =
+    typeof body.credential === 'string' ? body.credential.trim() : '';
   const market = sanitizeAuthMarket(body.market);
   const uiLocale = sanitizeAuthUiLocale(body.ui_locale);
   const mode = sanitizeAuthMode(body.mode);
   const browserTimezone = cleanTimezone(body.browser_timezone);
   const browserLocale = cleanLocale(body.browser_locale);
 
-  if (!accessToken || accessToken.length < 20 || accessToken.length > 4096) {
-    return NextResponse.json({ code: 'INVALID_GOOGLE_TOKEN' }, { status: 400, headers });
+  if (!credential || credential.length < 100 || credential.length > 16_384) {
+    return NextResponse.json({ code: 'INVALID_GOOGLE_CREDENTIAL' }, { status: 400, headers });
   }
 
   try {
-    const tokenInfoResponse = await fetch(
-      `${GOOGLE_TOKENINFO_ENDPOINT}?access_token=${encodeURIComponent(accessToken)}`,
-      {
-        headers: { Accept: 'application/json' },
-        cache: 'no-store',
-      }
-    );
-    const tokenInfo = (await tokenInfoResponse.json().catch(() => ({}))) as GoogleTokenInfo;
-
-    const expiresIn = Number(tokenInfo.expires_in || 0);
-    const clientMatches =
-      tokenInfo.aud === GOOGLE_CLIENT_ID || tokenInfo.azp === GOOGLE_CLIENT_ID;
-
-    if (
-      !tokenInfoResponse.ok ||
-      !clientMatches ||
-      !Number.isFinite(expiresIn) ||
-      expiresIn <= 0
-    ) {
-      console.warn('Rejected Google access token.', {
-        status: tokenInfoResponse.status,
-        audienceMatches: clientMatches,
-        expiresIn,
-      });
-      return NextResponse.json({ code: 'INVALID_GOOGLE_TOKEN' }, { status: 401, headers });
-    }
-
-    const profileResponse = await fetch(GOOGLE_USERINFO_ENDPOINT, {
-      headers: {
-        Accept: 'application/json',
-        Authorization: `Bearer ${accessToken}`,
-      },
-      cache: 'no-store',
-    });
-    const profile = (await profileResponse.json().catch(() => ({}))) as GoogleUserInfo;
-
-    const email = profile.email?.trim().toLowerCase() || '';
-    if (
-      !profileResponse.ok ||
-      !profile.sub ||
-      !email ||
-      profile.email_verified !== true
-    ) {
-      console.warn('Rejected Google profile.', {
-        status: profileResponse.status,
-        hasSubject: Boolean(profile.sub),
-        hasEmail: Boolean(email),
-        emailVerified: profile.email_verified === true,
-      });
-      return NextResponse.json({ code: 'GOOGLE_IDENTITY_UNVERIFIED' }, { status: 401, headers });
-    }
+    const profile = await verifyGoogleIdToken(credential);
+    const email = profile.email.trim().toLowerCase();
 
     const identity: VerifiedIdentity = {
       method: 'google',
@@ -200,7 +126,6 @@ export async function POST(request: Request) {
     };
 
     const ticket = createVerifiedSignupTicket(identity, market, uiLocale);
-
     const basePath = authBasePath(market, uiLocale);
     const redirectTarget =
       mode === 'register'
@@ -227,7 +152,12 @@ export async function POST(request: Request) {
 
     return response;
   } catch (error) {
-    console.error('Google authentication verification failed.', error);
-    return NextResponse.json({ code: 'GOOGLE_AUTH_UNAVAILABLE' }, { status: 502, headers });
+    console.warn('Google ID token verification failed.', {
+      error: error instanceof Error ? error.message : 'UNKNOWN_GOOGLE_AUTH_ERROR',
+    });
+    return NextResponse.json(
+      { code: 'GOOGLE_IDENTITY_UNVERIFIED' },
+      { status: 401, headers }
+    );
   }
 }

@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { fileURLToPath } from 'node:url';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
+import { createSign, generateKeyPairSync } from 'node:crypto';
 import { createLoader } from './helpers/ts-loader.mjs';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
@@ -111,6 +112,9 @@ test('both localized provider buttons are rendered, and both authentication scre
   );
   assert.match(socialButtonsSource, /https:\/\/accounts\.google\.com\/gsi\/client/);
   assert.match(socialButtonsSource, /\/api\/auth\/social\/google/);
+  assert.match(socialButtonsSource, /accounts\?\.id|accounts\.id/);
+  assert.match(socialButtonsSource, /renderButton/);
+  assert.doesNotMatch(socialButtonsSource, /initTokenClient/);
   assert.match(socialButtonsSource, /browser_timezone/);
   assert.match(socialButtonsSource, /browser_locale/);
   assert.match(socialButtonsSource, /onGoogleVerified/);
@@ -381,38 +385,53 @@ test('legacy callback refuses Google query-string identity spoofing', async () =
   assert.equal(res.headers.get('set-cookie'), null);
 });
 
-test('Google GIS token is verified server-side before creating the SPM identity ticket', async () => {
+test('Google ID credential is verified server-side before creating the SPM identity ticket', async () => {
   const originalFetch = globalThis.fetch;
   const clientId = '541344539683-mfeio08fjgkh4fu2u1um2bqddt2h00cl.apps.googleusercontent.com';
+  const { publicKey, privateKey } = generateKeyPairSync('rsa', { modulusLength: 2048 });
+  const publicJwk = publicKey.export({ format: 'jwk' });
+  publicJwk.kid = 'test-google-key';
+  publicJwk.alg = 'RS256';
+  publicJwk.use = 'sig';
+
+  const now = Math.floor(Date.now() / 1000);
+  const encode = (value) => Buffer.from(JSON.stringify(value)).toString('base64url');
+  const header = encode({ alg: 'RS256', typ: 'JWT', kid: 'test-google-key' });
+  const payloadPart = encode({
+    iss: 'https://accounts.google.com',
+    aud: clientId,
+    azp: clientId,
+    sub: 'google-sub-123',
+    email: 'oauth@example.com',
+    email_verified: true,
+    name: 'Google User',
+    given_name: 'Google',
+    family_name: 'User',
+    picture: 'https://lh3.googleusercontent.com/google-user.jpg',
+    locale: 'en_CA',
+    iat: now,
+    exp: now + 3600,
+  });
+  const signingInput = `${header}.${payloadPart}`;
+  const signer = createSign('RSA-SHA256');
+  signer.update(signingInput);
+  signer.end();
+  const signature = signer.sign(privateKey).toString('base64url');
+  const credential = `${signingInput}.${signature}`;
 
   try {
-    globalThis.fetch = async (input, init = {}) => {
+    globalThis.fetch = async (input) => {
       const url = String(input);
-      if (url.startsWith('https://www.googleapis.com/oauth2/v3/tokeninfo?access_token=')) {
+      if (url === 'https://www.googleapis.com/oauth2/v3/certs') {
         return new Response(
-          JSON.stringify({
-            aud: clientId,
-            azp: clientId,
-            scope: 'openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile',
-            expires_in: '3600',
-          }),
-          { status: 200, headers: { 'Content-Type': 'application/json' } }
-        );
-      }
-      if (url === 'https://openidconnect.googleapis.com/v1/userinfo') {
-        assert.match(String(init.headers?.Authorization || ''), /^Bearer /);
-        return new Response(
-          JSON.stringify({
-            sub: 'google-sub-123',
-            email: 'oauth@example.com',
-            email_verified: true,
-            name: 'Google User',
-            given_name: 'Google',
-            family_name: 'User',
-            picture: 'https://lh3.googleusercontent.com/google-user.jpg',
-            locale: 'en_CA',
-          }),
-          { status: 200, headers: { 'Content-Type': 'application/json' } }
+          JSON.stringify({ keys: [publicJwk] }),
+          {
+            status: 200,
+            headers: {
+              'Content-Type': 'application/json',
+              'Cache-Control': 'public, max-age=3600',
+            },
+          }
         );
       }
       throw new Error(`Unexpected fetch: ${url}`);
@@ -426,7 +445,7 @@ test('Google GIS token is verified server-side before creating the SPM identity 
         Host: 'localhost',
       },
       body: JSON.stringify({
-        access_token: 'valid-google-access-token-1234567890',
+        credential,
         market: 'germany',
         ui_locale: 'de',
         mode: 'register',
@@ -456,7 +475,7 @@ test('Google GIS token is verified server-side before creating the SPM identity 
     assert.match(cookie, /spm_signup_ticket=/);
     assert.match(cookie, /HttpOnly/i);
 
-    const ticket = new URL(data.redirect_to, 'http://localhost').searchParams.get('signup_ticket');
+    const ticket = data.signup_ticket;
     const payload = verifySignupTicket(ticket);
     assert.ok(payload);
     assert.equal(payload.identity.method, 'google');

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { FaFacebook } from 'react-icons/fa6';
 import { buttonVariants } from '@/components/ui/button';
@@ -16,33 +16,44 @@ const GOOGLE_CLIENT_ID =
 const GOOGLE_GIS_SCRIPT_ID = 'spm-google-gis';
 const GOOGLE_GIS_SCRIPT_SRC = 'https://accounts.google.com/gsi/client';
 
-interface GoogleTokenResponse {
-  access_token?: string;
-  expires_in?: number;
-  scope?: string;
-  token_type?: string;
-  error?: string;
-  error_description?: string;
+interface GoogleCredentialResponse {
+  credential?: string;
+  select_by?: string;
 }
 
-interface GoogleTokenClient {
-  requestAccessToken: (options?: { prompt?: string }) => void;
-}
-
-interface GoogleOAuth2 {
-  initTokenClient: (config: {
+interface GoogleAccountsId {
+  initialize: (config: {
     client_id: string;
-    scope: string;
-    callback: (response: GoogleTokenResponse) => void;
-    error_callback?: (error: { type?: string; message?: string }) => void;
-  }) => GoogleTokenClient;
+    callback: (response: GoogleCredentialResponse) => void;
+    auto_select?: boolean;
+    cancel_on_tap_outside?: boolean;
+    context?: 'signin' | 'signup' | 'use';
+    ux_mode?: 'popup';
+    itp_support?: boolean;
+    use_fedcm_for_prompt?: boolean;
+    use_fedcm_for_button?: boolean;
+  }) => void;
+  renderButton: (
+    parent: HTMLElement,
+    options: {
+      type: 'standard';
+      theme: 'outline';
+      size: 'large';
+      text: 'continue_with' | 'signup_with';
+      shape: 'pill';
+      logo_alignment: 'left';
+      width: number;
+      locale: string;
+    }
+  ) => void;
+  cancel: () => void;
 }
 
 declare global {
   interface Window {
     google?: {
       accounts?: {
-        oauth2?: GoogleOAuth2;
+        id?: GoogleAccountsId;
       };
     };
   }
@@ -55,7 +66,7 @@ function loadGoogleIdentityServices(): Promise<void> {
     return Promise.reject(new Error('Google Identity Services requires a browser'));
   }
 
-  if (window.google?.accounts?.oauth2) {
+  if (window.google?.accounts?.id) {
     return Promise.resolve();
   }
 
@@ -65,7 +76,7 @@ function loadGoogleIdentityServices(): Promise<void> {
     const existing = document.getElementById(GOOGLE_GIS_SCRIPT_ID) as HTMLScriptElement | null;
 
     const handleLoad = () => {
-      if (window.google?.accounts?.oauth2) {
+      if (window.google?.accounts?.id) {
         resolve();
       } else {
         googleScriptPromise = null;
@@ -78,9 +89,7 @@ function loadGoogleIdentityServices(): Promise<void> {
       reject(new Error('Unable to load Google Identity Services'));
     };
 
-    if (existing) {
-      existing.remove();
-    }
+    if (existing) existing.remove();
 
     const script = document.createElement('script');
     script.id = GOOGLE_GIS_SCRIPT_ID;
@@ -126,135 +135,177 @@ export function SocialAuthButtons({
   const [pending, setPending] = useState<SocialProvider | null>(null);
   const [error, setError] = useState(false);
   const [googleReady, setGoogleReady] = useState(false);
+  const [googleLoadFailed, setGoogleLoadFailed] = useState(false);
+  const [retryNonce, setRetryNonce] = useState(0);
   const requestRef = useRef<AbortController | null>(null);
-  const googleTimeoutRef = useRef<number | null>(null);
+  const googleButtonRef = useRef<HTMLDivElement | null>(null);
 
-  function finish(provider: SocialProvider, failed = false) {
-    if (provider === 'google' && googleTimeoutRef.current !== null) {
-      window.clearTimeout(googleTimeoutRef.current);
-      googleTimeoutRef.current = null;
-    }
-    if (failed) setError(true);
-    setPending(null);
-    onPendingChange?.(false);
-  }
+  const finish = useCallback(
+    (provider: SocialProvider, failed = false) => {
+      if (failed) setError(true);
+      setPending(null);
+      onPendingChange?.(false);
+    },
+    [onPendingChange]
+  );
+
+  const handleGoogleCredential = useCallback(
+    async (credentialResponse: GoogleCredentialResponse) => {
+      const credential = credentialResponse.credential?.trim();
+      if (!credential) {
+        finish('google', true);
+        return;
+      }
+
+      setPending('google');
+      onPendingChange?.(true);
+      setError(false);
+
+      try {
+        const response = await fetch('/api/auth/social/google', {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
+          credentials: 'same-origin',
+          cache: 'no-store',
+          body: JSON.stringify({
+            credential,
+            market: marketId,
+            ui_locale: locale,
+            mode,
+            browser_timezone: (() => {
+              try {
+                return Intl.DateTimeFormat().resolvedOptions().timeZone || undefined;
+              } catch {
+                return undefined;
+              }
+            })(),
+            browser_locale:
+              typeof navigator !== 'undefined' && navigator.language
+                ? navigator.language
+                : locale,
+          }),
+        });
+
+        const data = (await response.json().catch(() => ({}))) as {
+          code?: string;
+          signup_ticket?: unknown;
+          redirect_to?: unknown;
+          identity?: VerifiedIdentity;
+        };
+
+        if (!response.ok) {
+          console.warn('[SPM Google Auth] Server verification failed', {
+            status: response.status,
+            code: data.code || 'UNKNOWN',
+          });
+          throw new Error(data.code || 'Google authentication failed');
+        }
+
+        if (
+          mode === 'register' &&
+          onGoogleVerified &&
+          typeof data.signup_ticket === 'string' &&
+          data.signup_ticket &&
+          data.identity?.method === 'google' &&
+          typeof data.identity.identifier === 'string'
+        ) {
+          onGoogleVerified({
+            ticket: data.signup_ticket,
+            identity: data.identity,
+          });
+          finish('google');
+          return;
+        }
+
+        const redirectTo = safeLocalRedirect(data.redirect_to);
+        if (!redirectTo) throw new Error('Invalid Google redirect');
+
+        window.location.assign(redirectTo);
+      } catch (authError) {
+        console.warn('[SPM Google Auth] Sign-in failed', authError);
+        finish('google', true);
+      }
+    },
+    [finish, locale, marketId, mode, onGoogleVerified, onPendingChange]
+  );
 
   useEffect(() => {
     let cancelled = false;
 
-    void loadGoogleIdentityServices()
-      .then(() => {
-        if (!cancelled) setGoogleReady(true);
-      })
-      .catch(() => {
-        if (!cancelled) setError(true);
-      });
+    const mountGoogleButton = async () => {
+      try {
+        await loadGoogleIdentityServices();
+        if (cancelled) return;
+
+        const googleId = window.google?.accounts?.id;
+        const buttonRoot = googleButtonRef.current;
+        if (!googleId || !buttonRoot) {
+          throw new Error('Google Identity Services button unavailable');
+        }
+
+        googleId.initialize({
+          client_id: GOOGLE_CLIENT_ID,
+          callback: (response) => {
+            if (!cancelled) void handleGoogleCredential(response);
+          },
+          auto_select: false,
+          cancel_on_tap_outside: true,
+          context: mode === 'register' ? 'signup' : 'signin',
+          ux_mode: 'popup',
+          itp_support: true,
+          use_fedcm_for_prompt: true,
+          use_fedcm_for_button: true,
+        });
+
+        buttonRoot.replaceChildren();
+        const width = Math.min(
+          400,
+          Math.max(240, Math.round(buttonRoot.getBoundingClientRect().width || 334))
+        );
+
+        googleId.renderButton(buttonRoot, {
+          type: 'standard',
+          theme: 'outline',
+          size: 'large',
+          text: mode === 'register' ? 'signup_with' : 'continue_with',
+          shape: 'pill',
+          logo_alignment: 'left',
+          width,
+          locale,
+        });
+
+        if (!cancelled) {
+          setGoogleReady(true);
+          setGoogleLoadFailed(false);
+        }
+      } catch (loadError) {
+        console.warn('[SPM Google Auth] GIS load failed', loadError);
+        if (!cancelled) {
+          setGoogleReady(false);
+          setGoogleLoadFailed(true);
+        }
+      }
+    };
+
+    void mountGoogleButton();
 
     return () => {
       cancelled = true;
+      window.google?.accounts?.id?.cancel();
+    };
+  }, [handleGoogleCredential, locale, mode, retryNonce]);
+
+  useEffect(
+    () => () => {
       const controller = requestRef.current;
       requestRef.current = null;
       controller?.abort();
-
-      if (googleTimeoutRef.current !== null) {
-        window.clearTimeout(googleTimeoutRef.current);
-        googleTimeoutRef.current = null;
-      }
-    };
-  }, []);
-
-  function startGoogle() {
-    if (disabled || pending || !googleReady) return;
-
-    setPending('google');
-    onPendingChange?.(true);
-    setError(false);
-
-    try {
-      const oauth2 = window.google?.accounts?.oauth2;
-      if (!oauth2) throw new Error('Google Identity Services unavailable');
-
-      googleTimeoutRef.current = window.setTimeout(() => {
-        finish('google', true);
-      }, 60_000);
-
-      const client = oauth2.initTokenClient({
-        client_id: GOOGLE_CLIENT_ID,
-        scope: 'openid email profile',
-        callback: async (tokenResponse) => {
-          if (tokenResponse.error || !tokenResponse.access_token) {
-            finish('google', true);
-            return;
-          }
-
-          try {
-            const response = await fetch('/api/auth/social/google', {
-              method: 'POST',
-              headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json',
-              },
-              credentials: 'same-origin',
-              cache: 'no-store',
-              body: JSON.stringify({
-                access_token: tokenResponse.access_token,
-                market: marketId,
-                ui_locale: locale,
-                mode,
-                browser_timezone: (() => {
-                  try {
-                    return Intl.DateTimeFormat().resolvedOptions().timeZone || undefined;
-                  } catch {
-                    return undefined;
-                  }
-                })(),
-                browser_locale:
-                  typeof navigator !== 'undefined' && navigator.language
-                    ? navigator.language
-                    : locale,
-              }),
-            });
-
-            const data = (await response.json().catch(() => ({}))) as {
-              signup_ticket?: unknown;
-              redirect_to?: unknown;
-              identity?: VerifiedIdentity;
-            };
-
-            if (!response.ok) throw new Error('Google authentication failed');
-
-            if (
-              mode === 'register' &&
-              onGoogleVerified &&
-              typeof data.signup_ticket === 'string' &&
-              data.signup_ticket &&
-              data.identity?.method === 'google' &&
-              typeof data.identity.identifier === 'string'
-            ) {
-              onGoogleVerified({
-                ticket: data.signup_ticket,
-                identity: data.identity,
-              });
-              finish('google');
-              return;
-            }
-
-            const redirectTo = safeLocalRedirect(data.redirect_to);
-            if (!redirectTo) throw new Error('Invalid Google redirect');
-
-            window.location.assign(redirectTo);
-          } catch {
-            finish('google', true);
-          }
-        },
-        error_callback: () => finish('google', true),
-      });
-
-      client.requestAccessToken({ prompt: 'select_account' });
-    } catch {
-      finish('google', true);
-    }
-  }
+    },
+    []
+  );
 
   async function startFacebook() {
     if (disabled || requestRef.current || pending) return;
@@ -302,21 +353,49 @@ export function SocialAuthButtons({
     }
   }
 
+  function retryGoogle() {
+    setError(false);
+    setGoogleReady(false);
+    setGoogleLoadFailed(false);
+    googleScriptPromise = null;
+    setRetryNonce((value) => value + 1);
+  }
+
   return (
     <div className="mt-6 space-y-3" aria-busy={Boolean(pending)}>
-      <button
-        type="button"
-        disabled={disabled || Boolean(pending) || !googleReady}
-        onClick={startGoogle}
-        className={buttonVariants({ variant: 'outline', size: 'lg', className: 'w-full gap-3' })}
-      >
-        <FcGoogle aria-hidden="true" className="h-5 w-5 shrink-0" />
-        <SubmitLabel
-          loading={pending === 'google'}
-          idle={copy.continueWithGoogle}
-          pending={copy.connecting}
+      <div className="relative min-h-[44px] w-full overflow-hidden rounded-full">
+        <div
+          ref={googleButtonRef}
+          className={disabled || Boolean(pending) ? 'pointer-events-none opacity-60' : ''}
+          aria-hidden={!googleReady}
         />
-      </button>
+
+        {!googleReady ? (
+          <button
+            type="button"
+            disabled={disabled || Boolean(pending) || !googleLoadFailed}
+            onClick={retryGoogle}
+            className={buttonVariants({
+              variant: 'outline',
+              size: 'lg',
+              className: 'absolute inset-0 w-full gap-3',
+            })}
+          >
+            <FcGoogle aria-hidden="true" className="h-5 w-5 shrink-0" />
+            <SubmitLabel
+              loading={!googleLoadFailed}
+              idle={copy.continueWithGoogle}
+              pending={copy.connecting}
+            />
+          </button>
+        ) : null}
+
+        {pending === 'google' ? (
+          <div className="absolute inset-0 flex items-center justify-center rounded-full border border-border bg-background/95 text-sm font-bold text-primary-950">
+            {copy.connecting}
+          </div>
+        ) : null}
+      </div>
 
       <button
         type="button"
@@ -332,9 +411,7 @@ export function SocialAuthButtons({
         />
       </button>
 
-      {error ? (
-        <Notice variant="error">{copy.unavailableError}</Notice>
-      ) : null}
+      {error ? <Notice variant="error">{copy.unavailableError}</Notice> : null}
 
       {showOrDivider ? (
         <div
