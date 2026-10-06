@@ -56,13 +56,35 @@
 | ADS-EV-038 | Hero intake continuity | ISSUE — EnrollmentCard collects contact/student data but final submit only routes to `/{locale}/register`; collected state is not transferred to the registration page | 2026-10-05 | Website source QA |
 | ADS-EV-039 | WU-006 V4 Production QA | PASS — Ready for V5 Activation | 2026-10-06 | `google-ads/ADS-WU-006-V4-PRODUCTION-QA.md` |
 
+| ADS-EV-040 | WU-006 V5 activation gate prepared | PASS — production implementation is live and QA-passed; Google Ads destination activation is explicitly separated from code deployment and requires approval before execution | 2026-10-06 | `google-ads/ADS-WU-006-V5-ACTIVATION-GATE.md` |
+
 ## Evidence still required
-- Ad approval / serving evidence
-- Asset approval/eligibility evidence after review
-- Primary responsive-search-ad final URL + display-path evidence
-- Conversion-goal QA: verify `Submit lead form` and `Leads from messages` are not steering bidding
-- Google auto-created asset audit
-- First Search Terms review
-- First Auction Insights snapshot
-- Conversion-event QA
-- Lead/trial/paid-student attribution QA
+- Google auto-created asset audit before accepting any recommendation/asset automatically.
+- Explicit approval evidence before changing the Google Ads paid-search destination to `https://successpathmentors.net/en?ads_region=ontario`.
+- WU-006 activation evidence: relevant paid-search ad destination changed and immediate click-through QA passed.
+- WU-006 measured post-activation evidence:
+  - CTR
+  - Quality Score
+  - Expected CTR
+  - Ad relevance
+  - Landing Page Experience
+  - Search Impression Share
+  - Search Lost IS (rank)
+  - Search Lost Top IS (rank)
+  - Search Lost IS (budget)
+  - Search Terms quality
+  - WhatsApp inquiry quality/relevance where operationally identifiable
+- Conversion-event QA under ADS-WU-002.
+- Lead/trial/paid-student attribution QA under ADS-WU-008/009.
+
+## Superseded pending items
+The following earlier pending checkpoints are already satisfied by ADS-EV-019 through ADS-EV-039 and should not be treated as open gates:
+- ad approval / serving;
+- visible asset eligibility;
+- Phase-1 conversion-goal non-steering QA;
+- first Search Terms cleanup;
+- first Auction Insights snapshot;
+- initial Budget-vs-Rank diagnosis;
+- initial Quality Score diagnostics;
+- WU-006 landing audit;
+- WU-006 production deployment/QA.
