@@ -3,11 +3,11 @@
 > **Purpose:** This file is the authoritative handoff for the Google Ads setup.  
 > Any agent/developer must read this file before changing the Google Ads implementation, website tracking, campaign configuration, or Google Ads documentation.
 
-**Last updated:** 2026-10-04  
+**Last updated:** 2026-10-06  
 **Business:** Success Path Mentors  
 **Campaign:** `SPM_ON_Search_Clicks_Learning_Oct2026`  
 **Stage:** Learning / Search Pilot  
-**Current Working Units:** ADS-WU-003 is complete and serving; ADS-WU-001 live baseline collection is active; ADS-WU-002 conversion architecture remains incomplete; ADS-WU-004 live Search Terms review is the next optimization gate.
+**Current Working Units:** ADS-WU-003 is Done and serving; ADS-WU-004 is In Progress with the first live cleanup recorded; ADS-WU-005 initial baseline is Done and monitoring continues; ADS-WU-006 is implemented/deployed with V4 production QA passed and is awaiting the V5 Google Ads activation approval + measured validation gate; ADS-WU-007 remains Blocked.
 
 ---
 
@@ -128,32 +128,39 @@ Current baseline exclusions include:
 ## 4. Open / pending checkpoints
 
 ### ADS-WU-003 — Search Campaign Pilot
-- [x] Asset setup completed:
-  - Call asset added for Canadian business number; pending Google review.
-  - WhatsApp Message asset added; pending Google review.
-  - Callouts added: `1-to-1 Online Tutoring`, `Grades 1–12`, `Free Trial Lesson`, `Flexible Scheduling`.
-  - Sitelinks added for Math Tutoring, English Tutoring, How Tutoring Works, and Explore All Subjects.
-  - Structured snippet added using Courses with Math, English, Science, French, Physics and Chemistry tutoring.
-- [ ] Confirm ads and all assets approved after Google review.
-- [ ] Confirm campaign is actually serving impressions after approval.
-- [ ] Confirm final ad URL and display path for the primary responsive search ad.
-- [ ] Confirm the WhatsApp Message asset did **not** enable a conversion-optimized campaign setting or make `Leads from messages` a primary optimization goal.
+- [x] Search campaign pilot is serving.
+- [x] Responsive Search Ad is Eligible.
+- [x] Visible Call, Sitelink, Callout and Structured Snippet assets are Eligible.
+- [x] WhatsApp Message asset is Eligible.
+- [x] Phase-1 conversion-goal QA passed: `Submit lead form` and `Leads from messages` are not steering Maximize Clicks.
 - [ ] Audit any Google auto-created assets before accepting them.
 
 ### ADS-WU-004 — Search Terms & Negative Keywords
-- [ ] Wait for real search-term data.
-- [ ] First search-term review after enough data is available.
-- [ ] Add negatives from actual search-term evidence.
-- [ ] Promote proven high-intent search terms into controlled keyword targets.
-- [ ] Maintain an irrelevant-search-term log.
+- [x] Real Search Terms data exists.
+- [x] First live cleanup recorded: `online tutoring business`, `tvo mathify`, and `free math tutoring ontario` excluded.
+- [ ] Continue evidence-based Search Terms classification: Keep / Add / Negative / Watch.
+- [ ] Promote proven high-intent search terms into controlled keyword targets when justified.
+- [ ] Maintain the irrelevant-search-term log.
 
 ### ADS-WU-005 — Auction Insights
-- [ ] Capture Impression Share.
-- [ ] Capture Lost IS (Budget).
-- [ ] Capture Lost IS (Rank).
-- [ ] Capture Top of Page / Absolute Top metrics.
-- [ ] Identify recurring competitors.
-- [ ] Build “out of every 10 eligible opportunities” competitive matrix.
+- [x] First Auction Insights baseline captured.
+- [x] Search Impression Share captured.
+- [x] Search Lost IS (Budget) captured.
+- [x] Search Lost IS (Rank) captured.
+- [x] Top/Absolute Top evidence captured.
+- [x] Initial competitor baseline documented.
+- [ ] Continue monitoring on the established cadence.
+
+### ADS-WU-006 — Ad & Landing Page Quality
+- [x] Quality Score diagnostics captured.
+- [x] Full landing-page audit completed.
+- [x] Ontario contextual paid-search experience implemented.
+- [x] Production deployment completed.
+- [x] V4 production QA passed.
+- [ ] V5 Google Ads destination activation requires explicit approval before execution.
+- [ ] After activation, collect measured evidence before WU-006 can be marked Done.
+
+Reference: `google-ads/ADS-WU-006-V5-ACTIVATION-GATE.md`.
 
 ### ADS-WU-002 — Conversion Measurement Foundation
 Google tag is installed, but business conversions are **not fully defined yet**.
@@ -170,16 +177,37 @@ Pending:
 
 ## 5. Current next step
 
-**NEXT ACTION: Approval + serving gate. Do not optimize yet.**
+**NEXT ACTION: ADS-WU-006 V5 activation approval gate.**
 
-1. Wait for Google review to complete.
-2. Confirm the responsive search ad is **Approved / Eligible** and the campaign begins serving impressions.
-3. Confirm Call, WhatsApp Message, Callouts, Sitelinks and Structured Snippet are approved/eligible.
-4. Confirm the primary ad final URL and display path are correct.
-5. Open **Goals / Conversions** and verify that the old `Submit lead form` and any `Leads from messages` action are **not controlling bidding** during the Maximize Clicks learning stage.
-6. If the campaign is approved and serving, enter the observation-only learning window and make no structural changes for 5–7 days unless there is a policy/error issue.
+The Ontario contextual landing experience is already deployed and production-QA passed.
 
-After live data exists, the next optimization action is the first Search Terms review under ADS-WU-004.
+No Google Ads setting is changed by this documentation step.
+
+The next controlled Google Ads action, **only after explicit approval**, is to use:
+
+`https://successpathmentors.net/en?ads_region=ontario`
+
+as the destination for the relevant Ontario paid-search ad.
+
+Activation must not include changes to:
+- Maximize Clicks;
+- CA$10/day budget;
+- Ontario presence-only targeting;
+- English language;
+- Google Search-only network;
+- devices;
+- schedules;
+- audiences;
+- conversion bidding.
+
+Immediately after approved activation:
+1. QA the real ad click-through.
+2. Verify Ontario hero/QuickStart/WhatsApp/registration handoff.
+3. Verify canonical/SEO/language isolation remains safe.
+4. Collect post-activation evidence for CTR, Quality Score components, Landing Page Experience, Search Lost IS (rank), Search Lost Top IS (rank), and WhatsApp inquiry quality.
+5. Keep ADS-WU-006 In Progress until measured evidence is reviewed.
+
+Continue ADS-WU-004 Search Terms cleanup and ADS-WU-005 monitoring in parallel.
 
 ---
 
@@ -238,10 +266,10 @@ Evaluate whether enough evidence exists to:
 |---|---|---|---|
 | ADS-WU-001 | Access & Baseline Capture | In Progress | Account created; live baseline awaits data |
 | ADS-WU-002 | Conversion Measurement Foundation | In Progress | Google tag installed/detected; business conversion events pending |
-| ADS-WU-003 | Search Campaign Pilot | In Progress | Core setup + assets complete; approval/serving + URL/goal QA pending |
-| ADS-WU-004 | Search Terms & Negative Keywords | In Progress | Baseline negatives complete; live search terms pending |
-| ADS-WU-005 | Auction Insights Competitive Matrix | Not Started | Requires live auction data |
-| ADS-WU-006 | Ad & Landing Page Quality | Not Started | Review after initial traffic |
+| ADS-WU-003 | Search Campaign Pilot | Done | Serving; ad/assets eligible; Phase-1 URL/goal QA recorded |
+| ADS-WU-004 | Search Terms & Negative Keywords | In Progress | First live cleanup recorded; continue query-quality learning |
+| ADS-WU-005 | Auction Insights Competitive Matrix | Done (initial baseline) | Initial auction/rank/budget baseline recorded; continue monitoring |
+| ADS-WU-006 | Ad & Landing Page Quality | In Progress | Implemented/deployed; V4 production QA passed; awaiting approved activation + measured validation |
 | ADS-WU-007 | Conversion Bidding Transition | Blocked | Requires trustworthy conversion volume |
 | ADS-WU-008 | Lead Quality & Trial Attribution | Not Started | Requires operational attribution design |
 | ADS-WU-009 | Paid Student CAC & ROAS | Not Started | Requires trial/paid-student reconciliation |
