@@ -62,6 +62,33 @@ function friendlyError(error: unknown, copy: ReturnType<typeof getAuthCopy>): st
   return copy.common.apiError;
 }
 
+function isUnregisteredGoogleIdentity(error: unknown): boolean {
+  if (!(error instanceof AuthApiError)) return false;
+
+  const code = error.code.toUpperCase();
+  if (
+    [
+      'USER_NOT_FOUND',
+      'ACCOUNT_NOT_FOUND',
+      'IDENTITY_NOT_FOUND',
+      'CONTACT_NOT_FOUND',
+      'GUARDIAN_NOT_FOUND',
+      'NOT_REGISTERED',
+    ].includes(code)
+  ) {
+    return true;
+  }
+
+  if (error.status === 404) return true;
+
+  if (error.status === 400) {
+    const message = error.message.toLowerCase();
+    return /not found|no account|not registered|does not exist/.test(message);
+  }
+
+  return false;
+}
+
 export function LoginForm({
   locale,
   marketId = 'north-america',
@@ -133,6 +160,8 @@ export function LoginForm({
     setErrorMessage('');
 
     const resumeGoogleLogin = async () => {
+      let signupTicket = '';
+
       try {
         const sessionResponse = await fetch('/api/auth/signup/session', {
           headers: { Accept: 'application/json' },
@@ -141,8 +170,12 @@ export function LoginForm({
         });
         const session = (await sessionResponse.json().catch(() => ({}))) as {
           valid?: boolean;
+          signup_ticket?: string;
           identity?: { method?: string; identifier?: string };
         };
+
+        signupTicket =
+          typeof session.signup_ticket === 'string' ? session.signup_ticket : '';
 
         const identifier = session.identity?.identifier?.trim().toLowerCase() || '';
         if (
@@ -176,6 +209,24 @@ export function LoginForm({
         setStage('otp');
         window.requestAnimationFrame(() => otpForm.setFocus('otp'));
       } catch (error) {
+        if (!cancelled && isUnregisteredGoogleIdentity(error)) {
+          const registerPath =
+            registerHref ||
+            (marketId === 'germany'
+              ? `/de/${locale}/register`
+              : `/${locale}/register`);
+
+          const target = new URL(registerPath, window.location.origin);
+          if (signupTicket) {
+            target.searchParams.set('signup_ticket', signupTicket);
+          }
+
+          window.location.assign(
+            `${target.pathname}${target.search}${target.hash}`
+          );
+          return;
+        }
+
         if (!cancelled) setErrorMessage(friendlyError(error, copy));
       } finally {
         if (!cancelled) {
@@ -196,7 +247,7 @@ export function LoginForm({
     return () => {
       cancelled = true;
     };
-  }, [copy, identifierForm, locale, otpForm]);
+  }, [copy, identifierForm, locale, marketId, otpForm, registerHref]);
 
   async function requestCode(values: { identifier: string }) {
     setErrorMessage('');
