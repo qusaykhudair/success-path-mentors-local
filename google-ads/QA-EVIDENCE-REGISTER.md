@@ -54,6 +54,7 @@
 
 | ADS-EV-037 | Full landing-page audit | PASS — current homepage audited against Ontario Search intent and WU-006 diagnostics; internal diagnostic 71/100; primary gap is Ontario message match + duplicate/disposable hero intake flow | 2026-10-05 | `ADS-WU-006-LANDING-PAGE-AUDIT-2026-10-05.md` |
 | ADS-EV-038 | Hero intake continuity | ISSUE — EnrollmentCard collects contact/student data but final submit only routes to `/{locale}/register`; collected state is not transferred to the registration page | 2026-10-05 | Website source QA |
+| ADS-EV-039 | WU-006 V4 Production QA | PASS — Ready for V5 Activation | 2026-10-06 | `google-ads/ADS-WU-006-V4-PRODUCTION-QA.md` |
 
 ## Evidence still required
 - Ad approval / serving evidence
