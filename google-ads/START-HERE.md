@@ -164,6 +164,18 @@ Current baseline exclusions include:
 
 Reference: `google-ads/ADS-WU-006-V5-ACTIVATION-GATE.md`.
 
+
+### ADS-WU-015 — Optimization Control Tower Pilot
+- [x] Pilot scope and governance documented.
+- [x] Primary comparison defined: Optmyzr vs Adalysis.
+- [x] TrueClicks positioned as optional independent QA/monitoring layer.
+- [x] Green / Yellow / Red intervention controls defined.
+- [ ] Build the weighted 40–50 scenario evaluation matrix.
+- [ ] Start shadow-mode comparison only after WU-002 measurement quality is stable enough and WU-006 has a clean post-activation window.
+- [ ] Do not allow optimizer-driven bid strategy, major budget, conversion-goal, geography or structural PMax changes without explicit human approval.
+
+Reference: `google-ads/ADS-WU-015-OPTIMIZATION-CONTROL-TOWER-PILOT.md`.
+
 ### ADS-WU-002 — Conversion Measurement Foundation
 Google tag is installed. The source event architecture has now been audited and instrumentation gaps are being hardened under `google-ads/ADS-WU-002-CONVERSION-MEASUREMENT-FOUNDATION.md`.
 
@@ -313,7 +325,7 @@ Full plan: `google-ads/3-PHASE-EXECUTION-PLAN.md`
 
 **Complete Working Units handoff:** `google-ads/FULL-WORKING-UNITS-HANDOFF.md`
 
-This handoff contains ADS-WU-001 through ADS-WU-014, optimization gates, multilingual controls, WhatsApp priority, Meta historical learning, cross-channel control and the current 3-phase execution model.
+This handoff contains ADS-WU-001 through ADS-WU-015, optimization gates, multilingual controls, WhatsApp priority, Meta historical learning, cross-channel control, the optimizer/control-tower pilot, and the current 3-phase execution model.
 
 
 ---
