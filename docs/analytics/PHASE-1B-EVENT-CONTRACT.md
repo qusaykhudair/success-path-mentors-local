@@ -80,6 +80,14 @@ This document defines the strict, unified taxonomy for all Phase 1B analytics ev
 - **Conversion Status**: Secondary Conversion
 - **Market Coverage**: Global
 
+### `phone_cta_clicked`
+- **Business Meaning**: User clicked a website telephone link to initiate a call.
+- **Trigger**: `click` on an element with `data-analytics-event="phone_cta_clicked"`.
+- **Allowed Parameters**: `market`, `locale`, `surface`
+- **Forbidden Parameters**: phone number
+- **Conversion Status**: Secondary Conversion
+- **Market Coverage**: Global
+
 ### `contact_cta_clicked`
 - **Business Meaning**: User clicked a link to contact (email, contact page).
 - **Trigger**: `click` on an element with `data-analytics-event="contact_cta_clicked"`.
