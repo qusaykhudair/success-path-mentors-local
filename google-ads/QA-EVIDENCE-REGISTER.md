@@ -62,6 +62,7 @@
 | ADS-EV-043 | WU-006 account-side post-edit status | PASS — edited Responsive Search Ad shows `Eligible` after the Ontario Final URL change. Screenshot also shows 236 impressions, 14 clicks, 5.93% CTR, Avg. CPC CA$1.83, cost CA$25.60 for the mixed Oct 4–6 window; these mixed-window metrics are not used as post-activation impact evidence. | 2026-10-06 | Google Ads Ads table screenshot provided by user |
 | ADS-EV-044 | WU-002 source architecture audit | PASS — Google Ads base tag is consent-gated; custom analytics event contract exists; `trial_registration_complete` is back-end-confirmed and dedupe-guarded; attribution and PII allowlists are present. Production GTM/event delivery still requires runtime verification. | 2026-10-06 | Source audit + `google-ads/ADS-WU-002-CONVERSION-MEASUREMENT-FOUNDATION.md` |
 | ADS-EV-045 | WU-002 contact-event instrumentation hardening | PASS (implementation) — added `phone_cta_clicked`; instrumented mobile phone CTAs, mobile WhatsApp booking CTA, and final home WhatsApp CTA; source-contract tests updated. Runtime production verification pending. | 2026-10-06 | Branch `google-ads/wu002-conversion-foundation` |
+| ADS-EV-046 | WU-002 production GTM container runtime | PASS — live production Network trace shows `https://www.googletagmanager.com/gtm.js?id=GTM-TN4LKVW3`, confirming a GTM container is loaded after consent on the Ontario landing experience. | 2026-10-06 | User-provided Chrome DevTools Network screenshot |
 
 ## Evidence still required
 - Google auto-created asset audit before accepting any recommendation/asset automatically.
@@ -77,7 +78,7 @@
   - Search Lost IS (budget)
   - Search Terms quality
   - WhatsApp inquiry quality/relevance where operationally identifiable
-- ADS-WU-002 production GTM/event-delivery verification after consent.
+- ADS-WU-002 event-delivery verification in GTM/Tag Assistant after consent: confirm named events appear exactly once.
 - ADS-WU-002 Google Ads conversion actions created as Secondary for QA: trial registration complete, WhatsApp CTA click, website phone click.
 - ADS-WU-002 test-conversion evidence: exactly-once firing, no PII, no duplicate conversion path.
 - Lead/trial/paid-student attribution QA under ADS-WU-008/009.
