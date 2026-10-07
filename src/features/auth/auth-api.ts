@@ -11,7 +11,7 @@ import {
   type RegistrationVerification,
 } from './auth-contracts';
 
-const apiBaseUrl = (process.env.NEXT_PUBLIC_API_BASE_URL || '')
+const apiBaseUrl = (process.env.NEXT_PUBLIC_API_BASE_URL || 'http://143.244.170.205')
   .trim()
   .replace(/\/+$/, '');
 
