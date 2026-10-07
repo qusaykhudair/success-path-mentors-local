@@ -65,7 +65,8 @@
 | ADS-EV-046 | WU-002 production GTM container runtime | PASS — live production Network trace shows `https://www.googletagmanager.com/gtm.js?id=GTM-TN4LKVW3`, confirming a GTM container is loaded after consent on the Ontario landing experience. | 2026-10-06 | User-provided Chrome DevTools Network screenshot |
 | ADS-EV-047 | WU-015 optimizer/control-tower pilot specification | PASS — controlled pilot scope documented for Optmyzr vs Adalysis, optional TrueClicks QA layer, 40–50 scenario matrix, Green/Yellow/Red governance, and business-funnel measurement dependency. No optimizer-driven account changes authorized. | 2026-10-06 | `google-ads/ADS-WU-015-OPTIMIZATION-CONTROL-TOWER-PILOT.md` |
 | ADS-EV-048 | WU-002 WhatsApp event delivery + privacy QA | PASS — Tag Assistant on production GTM `GTM-TN4LKVW3` shows one `whatsapp_cta_clicked` event for the test click. Data Layer contains safe context only: `landing_path=/en`, `ads_region=ontario`, `referrer_host=tagassistant.google.com`, `market=north-america`, `locale=en`, `surface=floating_button`; no parent/student name, email, phone, WhatsApp number, message text, OTP, registration ID or MID visible. | 2026-10-07 | User-provided Tag Assistant screenshot |
-| ADS-EV-049 | WU-002 WhatsApp GA4 tag firing | PASS — for the `whatsapp_cta_clicked` event, Tag Assistant shows `GA4 Event - Funnel Events` under Tags Fired with `Succeeded`. The base `GA4 - Google Tag - Production` and dedicated `GA4 Event - trial_registration_complete` correctly do not fire on this WhatsApp event. Event-name/parameter mapping inside the fired GA4 tag remains to be inspected. | 2026-10-07 | User-provided Tag Assistant screenshot |
+| ADS-EV-049 | WU-002 WhatsApp GA4 tag firing | PASS — for the `whatsapp_cta_clicked` event, Tag Assistant shows `GA4 Event - Funnel Events` under Tags Fired with `Succeeded`. The base `GA4 - Google Tag - Production` and dedicated `GA4 Event - trial_registration_complete` correctly do not fire on this WhatsApp event. | 2026-10-07 | User-provided Tag Assistant screenshot |
+| ADS-EV-050 | WU-002 WhatsApp GA4 event mapping audit | PARTIAL PASS / GAP — fired tag uses the built-in Event value and the hit resolves to `whatsapp_cta_clicked`; Measurement ID is `G-00Z9YVT4ZW`; safe parameters include market, locale, surface, step/action/error/http and UTM/landing/referrer fields. `ads_region` is present in the Data Layer but is not visible in the GA4 event parameter table, so Ontario acquisition context may be lost in GA4 unless added. | 2026-10-07 | User-provided Tag Assistant tag-detail screenshots |
 
 ## Evidence still required
 - Google auto-created asset audit before accepting any recommendation/asset automatically.
@@ -81,7 +82,7 @@
   - Search Lost IS (budget)
   - Search Terms quality
   - WhatsApp inquiry quality/relevance where operationally identifiable
-- ADS-WU-002 WhatsApp mapping inspection: confirm the fired `GA4 Event - Funnel Events` tag sends event name `whatsapp_cta_clicked` with the expected safe parameters.
+- ADS-WU-002 WhatsApp GA4 mapping fix: add/verify `ads_region` as a Data Layer variable and GA4 event parameter, then re-test `whatsapp_cta_clicked` with variable display set to Values.
 - ADS-WU-002 remaining event-delivery verification: confirm `phone_cta_clicked` and `trial_registration_complete` appear exactly once; WhatsApp event delivery/privacy QA passed in ADS-EV-048/049.
 - ADS-WU-002 Google Ads conversion actions created as Secondary for QA: trial registration complete, WhatsApp CTA click, website phone click.
 - ADS-WU-002 test-conversion evidence: exactly-once firing, no PII, no duplicate conversion path.
