@@ -1,24 +1,8 @@
 import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
-  const apiKey = (process.env.REGISTRATION_API_KEY || 'ma_de5206975b70c38102c4ce171e087109f96e22b99efa1db4649b88c0b358e465').trim();
+  const apiKey = (process.env.REGISTRATION_API_KEY || '').trim();
   const baseUrl = (process.env.NEXT_PUBLIC_API_BASE_URL || 'http://143.244.170.205').trim().replace(/\/+$/, '');
-
-  if (!apiKey) {
-    console.error('REGISTRATION_API_KEY is not configured on the server.');
-    return NextResponse.json(
-      { error: 'Server misconfiguration: API key is missing' },
-      { status: 500 }
-    );
-  }
-
-  if (!baseUrl) {
-    console.error('NEXT_PUBLIC_API_BASE_URL is not configured on the server.');
-    return NextResponse.json(
-      { error: 'Server misconfiguration: API base URL is missing' },
-      { status: 500 }
-    );
-  }
 
   try {
     const body = await request.json();
@@ -57,6 +41,22 @@ export async function POST(request: Request) {
           { status: 400 }
         );
       }
+    }
+
+    if (!apiKey) {
+      console.error('REGISTRATION_API_KEY is not configured on the server.');
+      return NextResponse.json(
+        { error: 'Server misconfiguration: API key is missing' },
+        { status: 500 }
+      );
+    }
+
+    if (!baseUrl) {
+      console.error('NEXT_PUBLIC_API_BASE_URL is not configured on the server.');
+      return NextResponse.json(
+        { error: 'Server misconfiguration: API base URL is missing' },
+        { status: 500 }
+      );
     }
 
     const response = await fetch(`${baseUrl}/api/registrations`, {

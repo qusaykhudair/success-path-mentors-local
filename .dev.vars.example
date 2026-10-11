@@ -1,0 +1,11 @@
+# Cloudflare Wrangler local environment variable template
+# Copy to .dev.vars for local development. Never commit .dev.vars to version control.
+
+NEXT_PUBLIC_API_BASE_URL=https://api.successpathmentors.net
+REGISTRATION_API_KEY=your_registration_api_key_here
+NEXT_PUBLIC_AUTH_API_MODE=live
+NEXT_PUBLIC_CONTACT_EMAIL=contact@successpathmentors.net
+
+# Email Services (Server-Side Only)
+GMAIL_APP_PASSWORD=your_gmail_app_password_here
+SENDGRID_API_KEY=your_sendgrid_api_key_here

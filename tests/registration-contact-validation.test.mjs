@@ -279,6 +279,23 @@ test('Server-side POST /api/registrations enforces at-least-one-contact rule and
   assert.equal(resBadPhone.status, 400);
   const dataBadPhone = await resBadPhone.json();
   assert.equal(dataBadPhone.code, 'INVALID_PHONE');
+
+  // 5. Valid payload but missing server-side API key -> fails securely with 500 and no secret leaks
+  const originalKey = process.env.REGISTRATION_API_KEY;
+  delete process.env.REGISTRATION_API_KEY;
+  const reqValidMissingKey = new Request('http://localhost/api/registrations', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      guardian: { full_name: 'Jane Doe', email: 'jane@example.com', phone: '' },
+    }),
+  });
+  const resValidMissingKey = await postRegistration(reqValidMissingKey);
+  assert.equal(resValidMissingKey.status, 500);
+  const dataValidMissingKey = await resValidMissingKey.json();
+  assert.equal(dataValidMissingKey.error, 'Server misconfiguration: API key is missing');
+  assert.equal(JSON.stringify(dataValidMissingKey).includes('ma_'), false);
+  if (originalKey) process.env.REGISTRATION_API_KEY = originalKey;
 });
 
 test('TC-12 and TC-13: Preserves contact data for email-only and WhatsApp-only profiles', () => {
