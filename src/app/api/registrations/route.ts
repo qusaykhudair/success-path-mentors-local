@@ -5,7 +5,7 @@ export async function POST(request: Request) {
   const baseUrl = (process.env.NEXT_PUBLIC_API_BASE_URL || 'http://143.244.170.205').trim().replace(/\/+$/, '');
 
   try {
-    const body = await request.json();
+    const body = ((await request.json().catch(() => ({}))) || {}) as Record<string, any>;
 
     const guardian = body?.guardian;
     const email = typeof guardian?.email === 'string' ? guardian.email.trim() : '';
