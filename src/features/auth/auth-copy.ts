@@ -112,6 +112,7 @@ export const authCopy = {
         email: 'Enter a valid email address.',
         phone: 'Enter a valid international number with country code.',
         consent: 'Consent is required to create the account.',
+        contactRequired: 'Please provide at least one contact method: Email Address or WhatsApp Number.',
       },
     },
     social: {
@@ -255,6 +256,7 @@ export const authCopy = {
         email: 'أدخل بريداً إلكترونياً صحيحاً.',
         phone: 'أدخل رقماً دولياً صحيحاً مع رمز الدولة.',
         consent: 'الموافقة مطلوبة لإنشاء الحساب.',
+        contactRequired: 'يرجى إدخال البريد الإلكتروني أو رقم واتساب على الأقل.',
       },
     },
     social: {
@@ -398,6 +400,7 @@ export const authCopy = {
         email: 'Geben Sie eine gültige E-Mail-Adresse ein.',
         phone: 'Geben Sie eine gültige internationale Nummer mit Ländervorwahl ein.',
         consent: 'Die Einwilligung ist zur Kontoerstellung erforderlich.',
+        contactRequired: 'Bitte geben Sie mindestens eine Kontaktmethode an: E-Mail-Adresse oder WhatsApp-Nummer.',
       },
     },
     social: {

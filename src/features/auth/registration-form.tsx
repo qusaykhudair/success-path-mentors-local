@@ -12,6 +12,7 @@ import {
   KeyRound,
   Mail,
   MapPin,
+  Phone,
 
   ShieldAlert,
   ShieldCheck,
@@ -270,8 +271,14 @@ export function RegistrationForm({
     () => z.object({
       parent_name: z.string().trim().min(2, copy.register.errors.required).max(100),
       guardian_relationship: z.string().min(1, copy.register.errors.required),
-      email: z.string().trim().email(copy.register.errors.email).max(160),
-      whatsapp: z.string().trim().refine((value) => Boolean(localPhone(value, phoneCountry)) || phoneIsValid(value), copy.register.errors.phone),
+      email: z.string().trim().max(160).refine((value) => {
+        if (!value) return true;
+        return z.string().email().safeParse(value).success;
+      }, copy.register.errors.email),
+      whatsapp: z.string().trim().refine((value) => {
+        if (!value) return true;
+        return Boolean(localPhone(value, phoneCountry)) || phoneIsValid(value);
+      }, copy.register.errors.phone),
       student_first_name: z.string().trim().min(2, copy.register.errors.required).max(60),
       grade: z.string().min(1, copy.register.errors.required),
       subject: z.string().min(1, copy.register.errors.required),
@@ -282,6 +289,16 @@ export function RegistrationForm({
       preferred_day: z.string().min(1, copy.register.errors.required),
       preferred_time: z.string().min(1, copy.register.errors.required),
       privacy_consent: z.literal(true, { errorMap: () => ({ message: copy.register.errors.consent }) }),
+    }).superRefine((data, ctx) => {
+      const hasEmail = Boolean(data.email?.trim());
+      const hasWhatsApp = Boolean(data.whatsapp?.trim());
+      if (!hasEmail && !hasWhatsApp) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: copy.register.errors.contactRequired,
+          path: ['email'],
+        });
+      }
     }),
     [copy.register.errors, phoneCountry]
   );
@@ -742,7 +759,15 @@ export function RegistrationForm({
             <div className="mt-6 grid gap-5 sm:grid-cols-2">
               <div className="sm:col-span-2">
                 <FieldLabel htmlFor="parent_name" label={copy.register.parentName} requirement={copy.common.required} />
-                <input id="parent_name" autoComplete="name" aria-invalid={Boolean(form.formState.errors.parent_name)} aria-describedby="parent_name-error" className={authInputClass} {...form.register('parent_name')} />
+                <input
+                  id="parent_name"
+                  autoComplete="name"
+                  defaultValue={form.getValues('parent_name')}
+                  aria-invalid={Boolean(form.formState.errors.parent_name)}
+                  aria-describedby="parent_name-error"
+                  className={authInputClass}
+                  {...form.register('parent_name')}
+                />
                 <FieldError id="parent_name-error">{form.formState.errors.parent_name?.message}</FieldError>
               </div>
               <SelectField
@@ -756,15 +781,29 @@ export function RegistrationForm({
                 register={form.register}
               />
               <div>
-                <FieldLabel htmlFor="email" label={copy.register.email} requirement={copy.common.required} />
+                <FieldLabel htmlFor="email" label={copy.register.email} />
                 <div className="relative">
                   <Mail aria-hidden="true" className="pointer-events-none absolute start-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
-                  <input id="email" type="email" autoComplete="email" defaultValue={form.getValues('email')} dir="ltr" aria-invalid={Boolean(form.formState.errors.email)} aria-describedby="email-error" className={cn(authInputClass, 'ps-12')} {...form.register('email')} />
+                  <input
+                    id="email"
+                    type="email"
+                    autoComplete="email"
+                    defaultValue={form.getValues('email')}
+                    dir="ltr"
+                    aria-invalid={Boolean(form.formState.errors.email)}
+                    aria-describedby="email-error"
+                    className={cn(authInputClass, 'ps-12')}
+                    {...form.register('email', {
+                      onChange: () => {
+                        void form.trigger(['email', 'whatsapp']);
+                      },
+                    })}
+                  />
                 </div>
                 <FieldError id="email-error">{form.formState.errors.email?.message}</FieldError>
               </div>
               <div className="sm:col-span-2">
-                <FieldLabel htmlFor="whatsapp" label={copy.register.whatsapp} requirement={copy.common.required} />
+                <FieldLabel htmlFor="whatsapp" label={copy.register.whatsapp} />
                 <PhoneInput
                   id="whatsapp"
                   label={copy.register.whatsapp}
@@ -777,11 +816,13 @@ export function RegistrationForm({
                     form.setValue('country', defaults.country, { shouldDirty: true });
                     form.setValue('timezone', defaults.timezone, { shouldDirty: true });
                   }}
-                  onChange={(v) => form.setValue('whatsapp', v, { shouldDirty: true, shouldValidate: true })}
-                  onBlur={() => void form.trigger('whatsapp')}
+                  onChange={(v) => {
+                    form.setValue('whatsapp', v, { shouldDirty: true, shouldValidate: true });
+                    void form.trigger(['email', 'whatsapp']);
+                  }}
+                  onBlur={() => void form.trigger(['whatsapp', 'email'])}
                   inputRef={form.register('whatsapp').ref}
                   error={form.formState.errors.whatsapp?.message}
-                  required
                   className={authInputClass}
                 />
               </div>
@@ -841,7 +882,8 @@ export function RegistrationForm({
             <p className="mt-2 text-small leading-7 text-muted-foreground">{copy.register.reviewDescription}</p>
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               <ReviewRow label={copy.register.parentName} value={values.parent_name} icon={UserRound} />
-              <ReviewRow label={copy.register.email} value={values.email} icon={Mail} />
+              {values.email ? <ReviewRow label={copy.register.email} value={values.email} icon={Mail} /> : null}
+              {values.whatsapp ? <ReviewRow label={copy.register.whatsapp} value={values.whatsapp} icon={Phone} /> : null}
               <ReviewRow label={copy.register.studentName} value={`${values.student_first_name} · ${copy.register.grade} ${values.grade}`} icon={GraduationCap} />
               <ReviewRow label={copy.register.subject} value={`${values.subject} · ${values.curriculum}`} icon={CheckCircle2} />
               <ReviewRow label={copy.register.timezone} value={`${values.country} · ${values.timezone}`} icon={MapPin} />

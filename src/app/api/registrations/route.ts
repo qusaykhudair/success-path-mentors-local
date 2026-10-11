@@ -23,6 +23,42 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
 
+    const guardian = body?.guardian;
+    const email = typeof guardian?.email === 'string' ? guardian.email.trim() : '';
+    const phone = typeof guardian?.phone === 'string'
+      ? guardian.phone.trim()
+      : (typeof guardian?.whatsapp === 'string' ? guardian.whatsapp.trim() : '');
+
+    const hasEmail = Boolean(email);
+    const hasPhone = Boolean(phone);
+
+    if (!hasEmail && !hasPhone) {
+      return NextResponse.json(
+        {
+          error: 'Please provide at least one contact method: Email Address or WhatsApp Number.',
+          code: 'CONTACT_METHOD_REQUIRED',
+        },
+        { status: 400 }
+      );
+    }
+
+    if (hasEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return NextResponse.json(
+        { error: 'Enter a valid email address.', code: 'INVALID_EMAIL' },
+        { status: 400 }
+      );
+    }
+
+    if (hasPhone) {
+      const digits = phone.replace(/\D/g, '');
+      if (digits.length < 7 || digits.length > 20) {
+        return NextResponse.json(
+          { error: 'Enter a valid international number with country code.', code: 'INVALID_PHONE' },
+          { status: 400 }
+        );
+      }
+    }
+
     const response = await fetch(`${baseUrl}/api/registrations`, {
       method: 'POST',
       headers: {
