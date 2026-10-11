@@ -141,6 +141,14 @@ function normalizePhone(value: string): string {
   return value.trim().replace(/[\s().-]/g, '');
 }
 
+function formatWhatsappPayload(value: string, country: CountryCode): string {
+  const trimmed = value.trim();
+  if (!trimmed) return '';
+  const parsed = localPhone(trimmed, country);
+  if (parsed?.phoneE164) return parsed.phoneE164;
+  return normalizePhone(trimmed);
+}
+
 function friendlyError(error: unknown, copy: ReturnType<typeof getAuthCopy>): string {
   if (!(error instanceof AuthApiError)) return copy.common.apiError;
   if (error.code === 'OTP_INVALID') return copy.common.invalidOtp;
@@ -430,7 +438,7 @@ export function RegistrationForm({
       parent_name: formValues.parent_name.trim(),
       guardian_relationship: formValues.guardian_relationship,
       email: formValues.email.trim().toLowerCase(),
-      whatsapp: normalizePhone(formValues.whatsapp),
+      whatsapp: formatWhatsappPayload(formValues.whatsapp, phoneCountry),
       student_first_name: formValues.student_first_name.trim(),
       grade: formValues.grade,
       subject: formValues.subject,
