@@ -170,16 +170,12 @@ export const authApi = {
       contact_method_id?: number | string;
       contact_method?: string;
       message?: string;
-      _dev_otp?: string;
     }>(
       '/api/portal/auth/login/request',
       { method: 'POST', body: JSON.stringify({ identifier: payload.identifier }) },
       payload.locale,
       true
     ).then((res) => {
-      if (res._dev_otp) {
-        console.log('Backend returned DEV OTP code (Login):', res._dev_otp);
-      }
       return {
         challenge_id: res.contact_method_id != null ? String(res.contact_method_id) : '',
         channel: (res.contact_method as any) || (payload.identifier.includes('@') ? 'EMAIL' : 'WHATSAPP'),
@@ -326,7 +322,6 @@ export const authApi = {
           success: boolean;
           message: string;
           expires_in_minutes: number;
-          _dev_otp?: string;
         } | null = null;
 
         try {
@@ -335,7 +330,6 @@ export const authApi = {
             success: boolean;
             message: string;
             expires_in_minutes: number;
-            _dev_otp?: string;
           }>(
             '/api/otp/send',
             { method: 'POST', body: JSON.stringify({ contact_method_id: contact.contact_method_id }) },
@@ -344,10 +338,6 @@ export const authApi = {
           );
         } catch (err) {
           console.warn('Initial OTP send failed, but registration succeeded. Proceeding to verification screen.', err);
-        }
-
-        if (sendRes?._dev_otp) {
-          console.log('Backend returned DEV OTP code:', sendRes._dev_otp);
         }
 
         verification = {
@@ -435,16 +425,12 @@ export const authApi = {
       success: boolean;
       message: string;
       expires_in_minutes: number;
-      _dev_otp?: string;
     }>(
       `/api/otp/send`,
       { method: 'POST', body: JSON.stringify({ contact_method_id: contactMethodId }) },
       locale,
       true // use proxy
     ).then((res) => {
-      if (res._dev_otp) {
-        console.log('Backend returned DEV OTP code (Resend):', res._dev_otp);
-      }
       return {
         challenge_id: contactId,
         channel: 'EMAIL',

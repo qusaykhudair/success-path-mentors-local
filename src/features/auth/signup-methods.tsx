@@ -56,7 +56,7 @@ export function SignupMethods({
   const [secondsToResend, setSecondsToResend] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
-  const [devOtp, setDevOtp] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   const effectiveLoginHref =
     loginHref ||
@@ -73,6 +73,7 @@ export function SignupMethods({
 
   async function handleRequestOtp(channel: 'EMAIL' | 'WHATSAPP') {
     setErrorMessage('');
+    setSuccessMessage('');
     let identifier = '';
     if (channel === 'EMAIL') {
       identifier = email.trim();
@@ -107,14 +108,6 @@ export function SignupMethods({
         throw new Error(data.message || copy.common.apiError);
       }
 
-      if (data._dev_otp) {
-        setDevOtp(data._dev_otp);
-        console.log(
-          `%c[SPM SIGNUP OTP CODE]: ${data._dev_otp}`,
-          'background: #0b1f3a; color: #16c7c7; font-size: 18px; font-weight: bold; padding: 6px 14px; border-radius: 6px;'
-        );
-      }
-
       setChallenge({
         challenge_id: data.challenge_id,
         channel: data.channel,
@@ -124,6 +117,15 @@ export function SignupMethods({
       });
       setSecondsToResend(data.resend_after_seconds || 60);
       setOtp('');
+      if (step === 'otp_verify') {
+        setSuccessMessage(
+          locale === 'ar'
+            ? 'تم إرسال رمز تحقق جديد بنجاح إلى بريدك الإلكتروني.'
+            : locale === 'de'
+            ? 'Ein neuer Bestätigungscode wurde erfolgreich an Ihre E-Mail-Adresse gesendet.'
+            : 'A new verification code has been sent successfully to your email.'
+        );
+      }
       setStep('otp_verify');
     } catch (err: unknown) {
       setErrorMessage(err instanceof Error ? err.message : copy.common.apiError);
@@ -313,19 +315,9 @@ export function SignupMethods({
             />
           </div>
 
-          {devOtp && (
-            <div className="mt-3 flex items-center justify-between rounded-xl border border-accent/40 bg-accent/10 px-3.5 py-2.5 text-small">
-              <span className="font-semibold text-primary">
-                {locale === 'ar' ? 'رمز التحقق (للتطوير والعرض):' : 'Verification code (Dev / Demo):'}{' '}
-                <strong className="text-accent-800 font-mono text-base">{devOtp}</strong>
-              </span>
-              <button
-                type="button"
-                onClick={() => setOtp(devOtp)}
-                className="font-bold text-accent-700 hover:text-accent-900 underline text-xs cursor-pointer"
-              >
-                {locale === 'ar' ? 'تعبئة الرمز' : 'Fill code'}
-              </button>
+          {successMessage && (
+            <div className="mt-4">
+              <Notice variant="success">{successMessage}</Notice>
             </div>
           )}
 

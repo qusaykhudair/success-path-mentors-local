@@ -15,12 +15,13 @@ export interface SignupOtpChallenge {
 
 export interface SignupOtpRequestResult {
   success: boolean;
-  challenge_id: string;
-  channel: 'EMAIL' | 'WHATSAPP';
-  masked_destination: string;
-  expires_in_seconds: number;
-  resend_after_seconds: number;
-  _dev_otp?: string;
+  challenge_id?: string;
+  channel?: 'EMAIL' | 'WHATSAPP';
+  masked_destination?: string;
+  expires_in_seconds?: number;
+  resend_after_seconds?: number;
+  code?: string;
+  error?: string;
 }
 
 export interface SignupOtpVerifyResult {
@@ -72,11 +73,22 @@ function normalizeIdentifier(channel: 'EMAIL' | 'WHATSAPP', identifier: string):
   return hasPlus ? `+${digits}` : digits;
 }
 
-async function sendSendGridEmail(toEmail: string, otp: string, locale: 'de' | 'en' | 'ar') {
-  const apiKey = process.env.SENDGRID_API_KEY?.trim();
-  if (!apiKey) return false;
+async function sendSendGridEmail(
+  toEmail: string,
+  otp: string,
+  locale: 'de' | 'en' | 'ar'
+): Promise<{ ok: boolean; error?: string }> {
+  if (process.env.MOCK_AUTH_PROVIDERS === 'true') {
+    return { ok: true };
+  }
 
-  const fromEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || 'successpathmentors@gmail.com';
+  const apiKey = process.env.SENDGRID_API_KEY?.trim();
+  if (!apiKey) {
+    return { ok: false, error: 'Email delivery service is not configured.' };
+  }
+
+  // Use verified SendGrid sender identity
+  const fromEmail = process.env.SENDGRID_FROM_EMAIL?.trim() || 'engqusaykhudair@gmail.com';
   const subjects = {
     de: 'Ihr Bestätigungscode für Success Path Mentors',
     ar: 'رمز التحقق الخاص بك — مسار النجاح التعليمي',
@@ -100,14 +112,19 @@ async function sendSendGridEmail(toEmail: string, otp: string, locale: 'de' | 'e
       },
       body: JSON.stringify({
         personalizations: [{ to: [{ email: toEmail }] }],
-        from: { email: fromEmail },
+        from: { email: fromEmail, name: 'Success Path Mentors' },
         subject,
         content: [{ type: 'text/plain', value: textContent }],
       }),
     });
-    return res.ok;
+    if (!res.ok) {
+      console.error(`SendGrid email dispatch failed with status: ${res.status}`);
+      return { ok: false, error: 'Email delivery was rejected by the provider.' };
+    }
+    return { ok: true };
   } catch {
-    return false;
+    console.error('SendGrid network error during email dispatch.');
+    return { ok: false, error: 'Network error connecting to email provider.' };
   }
 }
 
@@ -140,10 +157,48 @@ export async function requestSignupOtp(params: {
     }
   }
 
+  // If WhatsApp requested, fail safely with explicit dependency report
+  if (channel === 'WHATSAPP') {
+    if (process.env.MOCK_AUTH_PROVIDERS !== 'true') {
+      return {
+        success: false,
+        code: 'WHATSAPP_UNAVAILABLE',
+        error:
+          uiLocale === 'ar'
+            ? 'خدمة إرسال الرمز عبر واتساب غير متوفرة حالياً. يرجى استخدام البريد الإلكتروني.'
+            : uiLocale === 'de'
+            ? 'Der WhatsApp-Verifizierungsdienst ist derzeit nicht verfügbar. Bitte verwenden Sie die E-Mail-Registrierung.'
+            : 'WhatsApp verification is currently unavailable. Please sign up using your email address.',
+      };
+    }
+  }
+
   // Generate cryptographically random 6-digit OTP
   const otpNumber = randomInt(100000, 1000000);
   const otp = String(otpNumber);
   const challengeId = `SIG-${randomUUID()}`;
+
+  // Attempt real delivery first: never store active challenge or start cooldown on failed delivery
+  if (channel === 'EMAIL') {
+    const delivery = await sendSendGridEmail(normalized, otp, uiLocale);
+    if (!delivery.ok) {
+      return {
+        success: false,
+        code: 'DELIVERY_FAILED',
+        error:
+          uiLocale === 'ar'
+            ? 'تعذر إرسال رمز التحقق إلى بريدك الإلكتروني. يرجى التحقق من العنوان والمحاولة مجدداً.'
+            : uiLocale === 'de'
+            ? 'Der Bestätigungscode konnte nicht gesendet werden. Bitte überprüfen Sie Ihre E-Mail-Adresse und versuchen Sie es erneut.'
+            : 'Unable to deliver verification code. Please check your email address and try again.',
+      };
+    }
+  }
+
+  // Delivery accepted by provider: invalidate any superseded challenge
+  if (existingCooldown?.challengeId) {
+    challengeStore.delete(existingCooldown.challengeId);
+  }
 
   const challenge: SignupOtpChallenge = {
     challengeId,
@@ -160,13 +215,6 @@ export async function requestSignupOtp(params: {
   challengeStore.set(challengeId, challenge);
   identifierCooldownStore.set(normalized, { lastSentAt: now, challengeId });
 
-  // Dispatch OTP
-  if (channel === 'EMAIL') {
-    await sendSendGridEmail(normalized, otp, uiLocale);
-  }
-
-  console.log(`\n========================================\n[SPM SIGNUP OTP CODE]: ${otp}\nDestination: ${normalized} (${channel})\n========================================\n`);
-
   return {
     success: true,
     challenge_id: challengeId,
@@ -174,7 +222,6 @@ export async function requestSignupOtp(params: {
     masked_destination: maskIdentifier(channel, normalized),
     expires_in_seconds: Math.round(OTP_EXPIRY_MS / 1000),
     resend_after_seconds: Math.round(RESEND_COOLDOWN_MS / 1000),
-    _dev_otp: otp,
   };
 }
 
@@ -221,4 +268,15 @@ export function verifySignupOtp(params: {
     signup_ticket: ticket,
     verified_identity: identity,
   };
+}
+
+export function __getTestOtp(challengeId: string): string | undefined {
+  if (process.env.NODE_ENV === 'production') return undefined;
+  return challengeStore.get(challengeId)?.otp;
+}
+
+export function __resetTestOtpStore(): void {
+  if (process.env.NODE_ENV === 'production') return;
+  challengeStore.clear();
+  identifierCooldownStore.clear();
 }

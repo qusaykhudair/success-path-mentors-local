@@ -24,7 +24,7 @@ const {
   getRegistrationOptions,
 } = load('src/features/auth/registration-options.ts');
 const { createVerifiedSignupTicket, verifySignupTicket } = load('src/features/auth/signup-transaction.ts');
-const { requestSignupOtp, verifySignupOtp } = load('src/features/auth/signup-otp-service.ts');
+const { requestSignupOtp, verifySignupOtp, __getTestOtp } = load('src/features/auth/signup-otp-service.ts');
 const { POST: postOtpRequest } = load('src/app/api/auth/signup/otp/request/route.ts');
 const { POST: postOtpVerify } = load('src/app/api/auth/signup/otp/verify/route.ts');
 const { GET: getSession } = load('src/app/api/auth/signup/session/route.ts');
@@ -289,6 +289,7 @@ test('verified signup ticket creates, verifies, enriches identity context, expir
 });
 
 test('signup OTP endpoints generate challenge, verify code, and set HttpOnly ticket cookie', async () => {
+  process.env.MOCK_AUTH_PROVIDERS = 'true';
   // 1. Email OTP request
   const emailReq = new Request('http://localhost/api/auth/signup/otp/request', {
     method: 'POST',
@@ -337,16 +338,18 @@ test('signup OTP endpoints generate challenge, verify code, and set HttpOnly tic
   // Incorrect code
   const badResult = verifySignupOtp({ challengeId: directChallenge.challenge_id, code: '999999' });
   assert.ok('error' in badResult && badResult.status === 400);
-  // Correct code using internal challenge
-  const validResult = verifySignupOtp({ challengeId: directChallenge.challenge_id, code: directChallenge._dev_otp || '123456' });
+  // Correct code using internal test helper
+  const validOtp = __getTestOtp(directChallenge.challenge_id) || '123456';
+  const validResult = verifySignupOtp({ challengeId: directChallenge.challenge_id, code: validOtp });
   if ('success' in validResult && validResult.success) {
     assert.ok(validResult.signup_ticket);
     assert.equal(validResult.verified_identity.identifier, 'direct@example.com');
 
     // Replay prevention: cannot reuse code
-    const secondUse = verifySignupOtp({ challengeId: directChallenge.challenge_id, code: directChallenge._dev_otp });
+    const secondUse = verifySignupOtp({ challengeId: directChallenge.challenge_id, code: validOtp });
     assert.ok('error' in secondUse);
   }
+  delete process.env.MOCK_AUTH_PROVIDERS;
 });
 
 test('signup session endpoint validates ticket from Authorization header or query', async () => {

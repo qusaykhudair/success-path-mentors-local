@@ -59,6 +59,14 @@ export async function POST(request: Request) {
       uiLocale,
     });
 
+    if (!result.success) {
+      const status = result.code === 'WHATSAPP_UNAVAILABLE' ? 503 : 502;
+      return NextResponse.json(
+        { code: result.code || 'DELIVERY_FAILED', message: result.error || 'Failed to deliver verification code' },
+        { status, headers }
+      );
+    }
+
     return NextResponse.json(result, { status: 200, headers });
   } catch (error) {
     console.error('Error in /api/auth/signup/otp/request:', error);
